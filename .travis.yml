@@ -1,0 +1,61 @@
+branches:
+  only:
+    - master
+    - "/^v.*$/"
+
+language: cpp
+
+matrix:
+  include:
+    - name: Linux x86_64
+      dist: bionic
+      script:
+        - make -C src/burner/libretro -j 4
+        - zip -j fbneo-Linux-x86_64.zip src/burner/libretro/fbneo_libretro.so
+    - name: Linux arm64
+      dist: bionic
+      arch: arm64
+      before_install:
+        - sudo apt-get install zip
+      script:
+        - make -C src/burner/libretro -j 4
+        - zip -j fbneo-Linux-arm64.zip src/burner/libretro/fbneo_libretro.so
+    - name: Linux armv7 neon
+      dist: bionic
+      services:
+        - docker
+      before_install:
+        - sudo apt-get install zip
+      script:
+        - docker pull dockcross/linux-armv7
+        - docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp dockcross/linux-armv7 make platform=unix-armv-neon-hardfloat -C src/burner/libretro -j 4
+        - zip -j fbneo-Linux-arm.zip src/burner/libretro/fbneo_libretro.so
+    - name: OSX x86_64
+      os: osx
+      osx_image: xcode11.2
+      script:
+        - make -C src/burner/libretro -j 4
+        - zip -j fbneo-OSX-x86_64.zip src/burner/libretro/fbneo_libretro.dylib
+    - name: Windows x86_64
+      os: windows
+      before_install:
+        - choco install make --ignore-checksums
+      script:
+        - bash -c "make platform=win -C src/burner/libretro -j 4"
+        - 7z a fbneo-Windows-x86_64.zip ./src/burner/libretro/fbneo_libretro.dll
+
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: PHwz9GiMKhI7NEWFOJSYnSItJQ4CQbNVKg0MFTahEh4A7BrOOU2sXE/MACbMvYchBGPNbHd5wXNIF7x+yNFlnPtso1kqm2pDP0poQz9KNynW2fhqEoCW2T7LRcXElaHmKyhXrQo2fA55BG/rbn6PH6I8ahtUV80k9IyXOjYtwTxFAqbME+4WRPwy8rNOljFTgTC9gtB6esScCheWwjIDVR6Ul3goRU795c5K2qPTZXVVxEfm1Na6EuQxI8TvQ6342XDX1+Yead9AbM7Uca5YhVMTN6cY4ILTNWskxdkpgPtmwhiVFRV5p1YZb7D44yvrXbzG4ZGUo2kUjFIPFYEmioq4m5Z61LkDKmVsJfJcFAQ/dA5LbFG8xnRmwxwcrGQ/lQzPyXLlTETECbVp29DdzuFVR5AgIAom7qs4GfH7osM0Njs7mjLYLYauO+MSctsjKSueMMForWnGQmA84h5XEsH9SczpG3gCl7FKJzLcaFMiL6F0KsvdslvXoGokIcmJY1cc8AhRIkh3u7gWE9piK83yJia/KURMvYwwJX6Z3ykgvcqcjvws9jmBJg7xmZA2CZ/SB0wsWQTSNfNoM46Py7jXd7soGomQRoxC2jkAnG//pWLrrSiyDMFm5XlciV5+kRVvMeDnDVG+vpR8NBR3SfzQAYpQ+d8BqFcT9aMOqaY=
+  file:
+  - fbneo-Linux-x86_64.zip
+  - fbneo-Linux-arm64.zip
+  - fbneo-Linux-arm.zip
+  - fbneo-OSX-x86_64.zip
+  - fbneo-Windows-x86_64.zip
+  on:
+    repo: piepacker/fbneo
+    tags: true
+

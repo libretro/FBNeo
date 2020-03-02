@@ -16,7 +16,6 @@ HAVE_NEON = 0
 USE_EXPERIMENTAL_FLAGS = 0
 USE_CYCLONE = 0
 HAVE_UWP = 0
-SPLIT_UP_LINK ?= 0
 
 SPACE :=
 SPACE := $(SPACE) $(SPACE)
@@ -469,12 +468,11 @@ else ifneq (,$(findstring windows_msvc2017,$(platform)))
 # Windows
 else
 	TARGET := $(TARGET_NAME)_libretro.dll
-	CC ?= gcc
-	CXX ?= g++
+	#CC ?= gcc
+	#CXX ?= g++
 	SHARED := -shared -Wl,-no-undefined -Wl,--version-script=$(VERSION_SCRIPT)
 	LDFLAGS += -static-libgcc -static-libstdc++
 	ENDIANNESS_DEFINES := -DLSB_FIRST
-	SPLIT_UP_LINK = 1
 endif
 
 CC_SYSTEM = gcc
@@ -687,34 +685,22 @@ $(MAIN_FBNEO_DIR)/cpu/mips3_intf.o: $(MAIN_FBNEO_DIR)/cpu/mips3_intf.cpp
 %.o: %.S
 	$(CC) $(CFLAGS) $(INCFLAGS) -c $< -o $@
 
-$(TARGET): $(OBJS)
+RESPF = $(CURDIR)/responsefile
+
+$(RESPF): $(OBJS)
+	$(foreach OBJ,$(OBJS),$(shell echo "$(OBJ)">>$@))
+
+$(TARGET): $(OBJS) $(RESPF)
 ifeq ($(STATIC_LINKING), 1)
-ifeq ($(SPLIT_UP_LINK), 1)
-	$(AR) rcs $@ $(foreach OBJS,$(OBJS),$(NEWLINE) $(AR) q $@ $(OBJS))
+	$(AR) rcs $@ @$(RESPF)
 else
-	$(AR) rcs $@ $(OBJS)
-endif
-else
-ifeq ($(SPLIT_UP_LINK), 1)
-	# Use a temporary file to hold the list of objects, as it can exceed windows shell command limits
-	$(file >$@.in,$(OBJS))
-	$(LD) $(LINKOUT)$@ $(SHARED) @$@.in $(LDFLAGS) $(LIBS)
-	@rm $@.in
-else
-	$(LD) $(LINKOUT)$@ $(SHARED) $^ $(LDFLAGS) $(LIBS)
-endif
+	$(LD) $(LINKOUT)$@ $(SHARED) @$(RESPF) $(LDFLAGS) $(LIBS)
 endif
 
 clean-objs:
 	rm -f $(OBJS)
 
 clean:
-ifeq ($(SPLIT_UP_LINK), 1)
-	# Use a temporary file to hold the list of objects, as it can exceed windows shell command limits
-	$(file >$@.in,$(OBJS))
-	rm -f @$@.in $(TARGET)
-	@rm $@.in
-endif
 	rm -f $(TARGET)
 	rm -f $(OBJS)
 	rm -f $(M68KMAKE_EXE)
