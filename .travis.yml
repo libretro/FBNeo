@@ -1,6 +1,5 @@
 branches:
   only:
-    - master
     - "/^v.*$/"
 
 language: cpp
