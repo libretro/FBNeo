@@ -13,6 +13,9 @@ slipstrm	- gets hung booting if irq changes during RMW operation (in handler)
 */
 
 //#define LOG_RW
+#ifdef __PSL1GHT__
+#pragma GCC optimize ("-O2")
+#endif
 
 #include "tiles_generic.h"
 #include "v60_intf.h"

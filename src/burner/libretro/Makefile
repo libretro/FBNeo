@@ -564,8 +564,13 @@ ifeq ($(DEBUG), 1)
 else
 	ifeq (,$(findstring msvc,$(platform)))
 		# sadly, we can't use -Os for memory constrained systems here, the performance impact is too big
-		CFLAGS += -O3 -DNDEBUG -fomit-frame-pointer
-		CXXFLAGS += -O3 -DNDEBUG -fomit-frame-pointer
+		ifneq (,$(findstring psl1ght,$(platform)))
+			CFLAGS += -O2 -DNDEBUG -fomit-frame-pointer
+			CXXFLAGS += -O2 -DNDEBUG -fomit-frame-pointer
+		else
+			CFLAGS += -O3 -DNDEBUG -fomit-frame-pointer
+			CXXFLAGS += -O3 -DNDEBUG -fomit-frame-pointer
+		endif
 	else
 		CFLAGS += -O2 -DNDEBUG
 		CXXFLAGS += -O2 -DNDEBUG
