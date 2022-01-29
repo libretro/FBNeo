@@ -67,25 +67,9 @@ ifneq (,$(findstring unix,$(platform)))
 	SHARED := -shared -Wl,-no-undefined -Wl,--version-script=$(VERSION_SCRIPT)
 	ENDIANNESS_DEFINES := -DLSB_FIRST
 
-	# Raspberry Pi
-	ifneq (,$(findstring rpi1,$(platform)))
-		PLATFORM_DEFINES := -marm -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard
-		HAVE_NEON = 0
-		USE_CYCLONE = 1
-	else ifneq (,$(findstring rpi2,$(platform)))
-		PLATFORM_DEFINES := -marm -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
-		HAVE_NEON = 1
-		USE_CYCLONE = 1
-	else ifneq (,$(findstring rpi3,$(platform)))
-		ifneq (,$(findstring rpi3_64,$(platform)))
-			PLATFORM_DEFINES := -march=armv8-a+crc+simd -mtune=cortex-a53
-		else
-			PLATFORM_DEFINES := -marm -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
-			HAVE_NEON = 1
-			USE_CYCLONE = 1
-		endif
-	else ifneq (,$(findstring rpi4_64,$(platform)))
-		PLATFORM_DEFINES := -march=armv8-a+crc+simd -mtune=cortex-a72
+	# Raspberry Pi: Modern GCC provides the right flags for each model.
+	ifneq (,$(findstring rpi,$(platform)))
+		PLATFORM_DEFINES := -march=native -mcpu=native -ftree-vectorize -pipe -fomit-frame-pointer
 	endif
 
 	# Solaris
