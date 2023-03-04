@@ -375,7 +375,7 @@ else ifneq (,$(filter $(platform), ngc wii wiiu))
 	CXX = powerpc-eabi-g++$(EXE_EXT)
 	AR = powerpc-eabi-ar$(EXE_EXT)
 	ENDIANNESS_DEFINES =  -DWORDS_BIGENDIAN
-	PLATFORM_DEFINES := -U__INT32_TYPE__ -U __UINT32_TYPE__ -D__INT32_TYPE__=int -UPPC
+	PLATFORM_DEFINES := -ffunction-sections -fdata-sections -D__wiiu__ -D__wut__ -UPPC
 	EXTERNAL_ZLIB = 1
 	STATIC_LINKING = 1
 
