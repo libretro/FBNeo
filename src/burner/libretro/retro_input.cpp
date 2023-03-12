@@ -1586,10 +1586,10 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 	// Robotron
 	// Joust
 	// Sinistar
-	if ((parentrom && strcmp(parent, "defender") == 0) ||
+	if ((parentrom && strcmp(parentrom, "defender") == 0) ||
 	  (drvname && strcmp(drvname, "defender") == 0) ||
 		(parentrom && strcmp(parentrom, "stargate") == 0) ||
-		(drvname && strpcmp(drvname, "stargate") == 0) ||
+		(drvname && strcmp(drvname, "stargate") == 0) ||
 		(parentrom && strcmp(parentrom, "robotron") == 0) ||
 		(drvname && strcmp(drvname, "robotron") == 0) ||
 		(parentrom && strcmp(parentrom, "joust") == 0) ||
