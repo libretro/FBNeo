@@ -1597,14 +1597,11 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 		(parentrom && strcmp(parentrom, "sinistar") == 0) ||
 		(drvname && strcmp(drvname, "sinistar") == 0)
 	) {
-		if (strcmp("Advance", description) == 0) {
-			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_L, description);
-		}
 		if (strcmp("Auto Up / Manual Down", description) == 0) {
-			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_L2, description);
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_L3, description);
 		}
 		if (strcmp("High Score Reset", description) == 0) {
-			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_R, description);
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_R3, description);
 		}
 	}
 
