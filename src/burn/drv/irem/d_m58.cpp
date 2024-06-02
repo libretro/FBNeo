@@ -38,6 +38,8 @@ static UINT8 DrvDips[2];
 static UINT8 DrvInputs[3];
 static UINT8 DrvReset;
 
+static INT32 nExtraCycles[2];
+
 static struct BurnInputInfo YardInputList[] = {
 	{"P1 Coin",			BIT_DIGITAL,	DrvJoy1 + 3,	"p1 coin"	},
 	{"P1 Start",		BIT_DIGITAL,	DrvJoy1 + 0,	"p1 start"	},
@@ -281,6 +283,10 @@ static INT32 DrvDoReset()
 	scrollx = 0;
 	scrolly = 0;
 	flipscreen = 0;
+
+	memset(nExtraCycles, 0, sizeof(nExtraCycles));
+
+	HiscoreReset();
 
 	return 0;
 }
@@ -568,7 +574,7 @@ static INT32 DrvFrame()
 
 	INT32 nInterleave = MSM5205CalcInterleave(0, 3072000);
 	INT32 nCyclesTotal[2] = { 3072000 / 60, 894886 / 60 };
-	INT32 nCyclesDone[2] = { 0, 0 };
+	INT32 nCyclesDone[2] = { nExtraCycles[0], nExtraCycles[1] };
 
 	ZetOpen(0);
 	M6803Open(0);
@@ -593,7 +599,10 @@ static INT32 DrvFrame()
 
 	M6803Close();
 	ZetClose();
-	
+
+	nExtraCycles[0] = nCyclesDone[0] - nCyclesTotal[0];
+	nExtraCycles[1] = nCyclesDone[1] - nCyclesTotal[1];
+
 	if (pBurnDraw) {
 		BurnDrvRedraw();
 	}
@@ -624,6 +633,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 		SCAN_VAR(scrolly);
 		SCAN_VAR(flipscreen);
 		SCAN_VAR(scrollx);
+
+		SCAN_VAR(nExtraCycles);
 	}
 
 	return 0;
@@ -668,7 +679,7 @@ struct BurnDriver BurnDrvyard10 = {
 	"10yard", NULL, NULL, NULL, "1983",
 	"10-Yard Fight (World, set 1)\0", NULL, "Irem", "M58",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
 	NULL, yard10RomInfo, yard10RomName, NULL, NULL, NULL, NULL, YardInputInfo, YardDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	256, 224, 4, 3
@@ -713,7 +724,7 @@ struct BurnDriver BurnDrvyardj10 = {
 	"10yardj", "10yard", NULL, NULL, "1983",
 	"10-Yard Fight (Japan)\0", NULL, "Irem", "M58",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
 	NULL, yardj10RomInfo, yardj10RomName, NULL, NULL, NULL, NULL, YardInputInfo, YardDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	256, 224, 4, 3
@@ -765,7 +776,7 @@ struct BurnDriver BurnDrvVs10yard = {
 	"vs10yard", "10yard", NULL, NULL, "1984",
 	"Vs 10-Yard Fight (World, 11/05/84)\0", NULL, "Irem", "M58",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
 	NULL, vs10yardRomInfo, vs10yardRomName, NULL, NULL, NULL, NULL, YardInputInfo, YardDIPInfo,
 	Vs10yard, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	256, 224, 4, 3
@@ -810,7 +821,7 @@ struct BurnDriver BurnDrvVs10yardj = {
 	"vs10yardj", "10yard", NULL, NULL, "1984",
 	"Vs 10-Yard Fight (Japan)\0", NULL, "Irem", "M58",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
 	NULL, vs10yardjRomInfo, vs10yardjRomName, NULL, NULL, NULL, NULL, YardInputInfo, Vs10yarjDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	256, 224, 4, 3
@@ -862,7 +873,7 @@ struct BurnDriver BurnDrvVs10yardu = {
 	"vs10yardu", "10yard", NULL, NULL, "1984",
 	"Vs 10-Yard Fight (US, Taito license)\0", NULL, "Irem (Taito license)", "M58",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
 	NULL, vs10yarduRomInfo, vs10yarduRomName, NULL, NULL, NULL, NULL, YardInputInfo, YardDIPInfo,
 	Vs10yarduInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	256, 224, 4, 3
@@ -907,7 +918,7 @@ struct BurnDriver BurnDrvyard1085 = {
 	"10yard85", "10yard", NULL, NULL, "1985",
 	"10-Yard Fight '85 (US, Taito license)\0", NULL, "Irem (Taito license)", "M58",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_MISC, GBF_SPORTSMISC, 0,
 	NULL, yard1085RomInfo, yard1085RomName, NULL, NULL, NULL, NULL, YardInputInfo, YardDIPInfo,
 	Vs10yarduInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	256, 224, 4, 3

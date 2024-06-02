@@ -36,8 +36,8 @@ INT32 nHasZet = -1;
 cpu_core_config ZetConfig =
 {
 	"Z80",
-	ZetOpen,
-	ZetClose,
+	ZetCPUPush, //ZetOpen,
+	ZetCPUPop, //ZetClose,
 	ZetCheatRead,
 	ZetCheatWriteROM,
 	ZetGetActive,
@@ -48,6 +48,8 @@ cpu_core_config ZetConfig =
 	ZetRun,
 	ZetRunEnd,
 	ZetReset,
+	ZetScan,
+	ZetExit,
 	0x10000,
 	0
 };
@@ -56,6 +58,8 @@ UINT8 __fastcall ZetDummyReadHandler(UINT16) { return 0; }
 void __fastcall ZetDummyWriteHandler(UINT16, UINT8) { }
 UINT8 __fastcall ZetDummyInHandler(UINT16) { return 0; }
 void __fastcall ZetDummyOutHandler(UINT16, UINT8) { }
+
+INT32 ZetInFetch = 0; // 1 = fetch op, 2 = arg
 
 UINT8 __fastcall ZetReadIO(UINT32 a)
 {
@@ -109,7 +113,10 @@ UINT8 __fastcall ZetReadOp(UINT32 a)
 	
 	// check read handler
 	if (ZetCPUContext[nOpenedCPU]->ZetRead != NULL) {
-		return ZetCPUContext[nOpenedCPU]->ZetRead(a);
+		ZetInFetch = 1;
+		const UINT8 r = ZetCPUContext[nOpenedCPU]->ZetRead(a);
+		ZetInFetch = 0;
+		return r;
 	}
 	
 	return 0;
@@ -125,7 +132,10 @@ UINT8 __fastcall ZetReadOpArg(UINT32 a)
 	
 	// check read handler
 	if (ZetCPUContext[nOpenedCPU]->ZetRead != NULL) {
-		return ZetCPUContext[nOpenedCPU]->ZetRead(a);
+		ZetInFetch = 2;
+		const UINT8 r = ZetCPUContext[nOpenedCPU]->ZetRead(a);
+		ZetInFetch = 0;
+		return r;
 	}
 	
 	return 0;

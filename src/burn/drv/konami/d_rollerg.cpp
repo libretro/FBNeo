@@ -320,6 +320,8 @@ static INT32 DrvDoReset()
 
 	readzoomroms = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -411,7 +413,7 @@ static INT32 DrvInit()
 	K051316SetOffset(0, -90, -15);
 
 	BurnYM3812Init(1, 3579545, NULL, DrvSynchroniseStream, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 3579545);
+	BurnTimerAttach(&ZetConfig, 3579545);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	K053260Init(0, 3579545, DrvSndROM, 0x80000);
@@ -485,19 +487,11 @@ static INT32 DrvFrame()
 	konamiOpen(0);
 
 	for (INT32 i = 0; i < nInterleave; i++) {
-		INT32 nNext, nCyclesSegment;
-
-		nNext = (i + 1) * nCyclesTotal[0] / nInterleave;
-		nCyclesSegment = nNext - nCyclesDone[0];
-		nCyclesSegment = konamiRun(nCyclesSegment);
-		nCyclesDone[0] += nCyclesSegment;
-
-		BurnTimerUpdateYM3812(i * (nCyclesTotal[1] / nInterleave));
+		CPU_RUN(0, konami);
+		CPU_RUN_TIMER(1);
 	}
 
 	konamiSetIrqLine(KONAMI_IRQ_LINE, CPU_IRQSTATUS_AUTO);
-	
-	BurnTimerEndFrameYM3812(nCyclesTotal[1]);
 
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
@@ -574,7 +568,7 @@ struct BurnDriver BurnDrvRollerg = {
 	"rollerg", NULL, NULL, NULL, "1991",
 	"Rollergames (US)\0", NULL, "Konami", "GX999",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
 	NULL, rollergRomInfo, rollergRomName, NULL, NULL, NULL, NULL, RollergInputInfo, RollergDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	288, 224, 4, 3
@@ -604,7 +598,7 @@ struct BurnDriver BurnDrvRollergj = {
 	"rollergj", "rollerg", NULL, NULL, "1991",
 	"Rollergames (Japan)\0", NULL, "Konami", "GX999",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
 	NULL, rollergjRomInfo, rollergjRomName, NULL, NULL, NULL, NULL, RollergInputInfo, RollergDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	288, 224, 4, 3

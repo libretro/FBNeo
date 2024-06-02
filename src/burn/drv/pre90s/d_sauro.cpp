@@ -1,4 +1,4 @@
-// FB Alpha Sauro driver module
+// FB Neo Sauro driver module
 // Based on MAME driver by Zsolt Vasvari
 
 #include "tiles_generic.h"
@@ -42,6 +42,8 @@ static UINT8 DrvDips[2];
 static UINT8 DrvInputs[2];
 static UINT8 DrvReset;
 
+static INT32 nCyclesExtra;
+
 static struct BurnInputInfo TecfriInputList[] = {
 	{"P1 Coin",			BIT_DIGITAL,	DrvJoy1 + 2,	"p1 coin"	},
 	{"P1 Start",		BIT_DIGITAL,	DrvJoy2 + 2,	"p1 start"	},
@@ -70,168 +72,171 @@ STDINPUTINFO(Tecfri)
 
 static struct BurnDIPInfo TecfriDIPList[]=
 {
-	{0x11, 0xff, 0xff, 0x66, NULL			},
-	{0x12, 0xff, 0xff, 0x2f, NULL			},
+	DIP_OFFSET(0x11)
+	{0x00, 0xff, 0xff, 0x66, NULL					},
+	{0x01, 0xff, 0xff, 0x2f, NULL					},
 
-	{0   , 0xfe, 0   ,    2, "Service Mode"		},
-	{0x11, 0x01, 0x01, 0x00, "Off"			},
-	{0x11, 0x01, 0x01, 0x01, "On"			},
+	{0   , 0xfe, 0   ,    2, "Service Mode"			},
+	{0x00, 0x01, 0x01, 0x00, "Off"					},
+	{0x00, 0x01, 0x01, 0x01, "On"					},
 
-	{0   , 0xfe, 0   ,    2, "Demo Sounds"		},
-	{0x11, 0x01, 0x02, 0x00, "Off"			},
-	{0x11, 0x01, 0x02, 0x02, "On"			},
+	{0   , 0xfe, 0   ,    2, "Demo Sounds"			},
+	{0x00, 0x01, 0x02, 0x00, "Off"					},
+	{0x00, 0x01, 0x02, 0x02, "On"					},
 
-	{0   , 0xfe, 0   ,    2, "Cabinet"		},
-	{0x11, 0x01, 0x04, 0x04, "Upright"		},
-	{0x11, 0x01, 0x04, 0x00, "Cocktail"		},
+	{0   , 0xfe, 0   ,    2, "Cabinet"				},
+	{0x00, 0x01, 0x04, 0x04, "Upright"				},
+	{0x00, 0x01, 0x04, 0x00, "Cocktail"				},
 
-	{0   , 0xfe, 0   ,    2, "Free Play"		},
-	{0x11, 0x01, 0x08, 0x00, "Off"			},
-	{0x11, 0x01, 0x08, 0x08, "On"			},
+	{0   , 0xfe, 0   ,    2, "Free Play"			},
+	{0x00, 0x01, 0x08, 0x00, "Off"					},
+	{0x00, 0x01, 0x08, 0x08, "On"					},
 
-	{0   , 0xfe, 0   ,    4, "Difficulty"		},
-	{0x11, 0x01, 0x30, 0x30, "Very Easy"		},
-	{0x11, 0x01, 0x30, 0x20, "Easy"			},
-	{0x11, 0x01, 0x30, 0x10, "Hard"			},
-	{0x11, 0x01, 0x30, 0x00, "Very Hard"		},
+	{0   , 0xfe, 0   ,    4, "Difficulty"			},
+	{0x00, 0x01, 0x30, 0x30, "Very Easy"			},
+	{0x00, 0x01, 0x30, 0x20, "Easy"					},
+	{0x00, 0x01, 0x30, 0x10, "Hard"					},
+	{0x00, 0x01, 0x30, 0x00, "Very Hard"			},
 
-	{0   , 0xfe, 0   ,    2, "Allow Continue"	},
-	{0x11, 0x01, 0x40, 0x00, "No"			},
-	{0x11, 0x01, 0x40, 0x40, "Yes"			},
+	{0   , 0xfe, 0   ,    2, "Allow Continue"		},
+	{0x00, 0x01, 0x40, 0x00, "No"					},
+	{0x00, 0x01, 0x40, 0x40, "Yes"					},
 
-	{0   , 0xfe, 0   ,    2, "Freeze"		},
-	{0x11, 0x01, 0x80, 0x00, "Off"			},
-	{0x11, 0x01, 0x80, 0x80, "On"			},
+	{0   , 0xfe, 0   ,    2, "Freeze"				},
+	{0x00, 0x01, 0x80, 0x00, "Off"					},
+	{0x00, 0x01, 0x80, 0x80, "On"					},
 
-	{0   , 0xfe, 0   ,    4, "Coin A"		},
-	{0x12, 0x01, 0x03, 0x00, "4 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x01, "3 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x02, "2 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x03, "1 Coin  1 Credits"	},
+	{0   , 0xfe, 0   ,    4, "Coin A"				},
+	{0x01, 0x01, 0x03, 0x00, "4 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x01, "3 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x02, "2 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x03, "1 Coin  1 Credits"	},
 
-	{0   , 0xfe, 0   ,    4, "Coin B"		},
-	{0x12, 0x01, 0x0c, 0x0c, "1 Coin  2 Credits"	},
-	{0x12, 0x01, 0x0c, 0x08, "1 Coin  3 Credits"	},
-	{0x12, 0x01, 0x0c, 0x04, "1 Coin  4 Credits"	},
-	{0x12, 0x01, 0x0c, 0x00, "1 Coin  5 Credits"	},
+	{0   , 0xfe, 0   ,    4, "Coin B"				},
+	{0x01, 0x01, 0x0c, 0x0c, "1 Coin  2 Credits"	},
+	{0x01, 0x01, 0x0c, 0x08, "1 Coin  3 Credits"	},
+	{0x01, 0x01, 0x0c, 0x04, "1 Coin  4 Credits"	},
+	{0x01, 0x01, 0x0c, 0x00, "1 Coin  5 Credits"	},
 
-	{0   , 0xfe, 0   ,    4, "Lives"		},
-	{0x12, 0x01, 0x30, 0x30, "2"			},
-	{0x12, 0x01, 0x30, 0x20, "3"			},
-	{0x12, 0x01, 0x30, 0x10, "4"			},
-	{0x12, 0x01, 0x30, 0x00, "5"			},
+	{0   , 0xfe, 0   ,    4, "Lives"				},
+	{0x01, 0x01, 0x30, 0x30, "2"					},
+	{0x01, 0x01, 0x30, 0x20, "3"					},
+	{0x01, 0x01, 0x30, 0x10, "4"					},
+	{0x01, 0x01, 0x30, 0x00, "5"					},
 };
 
 STDDIPINFO(Tecfri)
 
 static struct BurnDIPInfo TrckydocaDIPList[]=
 {
-	{0x11, 0xff, 0xff, 0x66, NULL			},
-	{0x12, 0xff, 0xff, 0x2f, NULL			},
+	DIP_OFFSET(0x11)
+	{0x00, 0xff, 0xff, 0x66, NULL					},
+	{0x01, 0xff, 0xff, 0x2f, NULL					},
 
-	{0   , 0xfe, 0   ,    2, "Service Mode"		},
-	{0x11, 0x01, 0x01, 0x00, "Off"			},
-	{0x11, 0x01, 0x01, 0x01, "On"			},
+	{0   , 0xfe, 0   ,    2, "Service Mode"			},
+	{0x00, 0x01, 0x01, 0x00, "Off"					},
+	{0x00, 0x01, 0x01, 0x01, "On"					},
 
-	{0   , 0xfe, 0   ,    2, "Demo Sounds"		},
-	{0x11, 0x01, 0x02, 0x00, "Off"			},
-	{0x11, 0x01, 0x02, 0x02, "On"			},
+	{0   , 0xfe, 0   ,    2, "Demo Sounds"			},
+	{0x00, 0x01, 0x02, 0x00, "Off"					},
+	{0x00, 0x01, 0x02, 0x02, "On"					},
 
-	{0   , 0xfe, 0   ,    2, "Cabinet"		},
-	{0x11, 0x01, 0x04, 0x04, "Upright"		},
-	{0x11, 0x01, 0x04, 0x00, "Cocktail"		},
+	{0   , 0xfe, 0   ,    2, "Cabinet"				},
+	{0x00, 0x01, 0x04, 0x04, "Upright"				},
+	{0x00, 0x01, 0x04, 0x00, "Cocktail"				},
 
-	{0   , 0xfe, 0   ,    2, "Free Play"		},
-	{0x11, 0x01, 0x08, 0x00, "Off"			},
-	{0x11, 0x01, 0x08, 0x08, "On"			},
+	{0   , 0xfe, 0   ,    2, "Free Play"			},
+	{0x00, 0x01, 0x08, 0x00, "Off"					},
+	{0x00, 0x01, 0x08, 0x08, "On"					},
 
-	{0   , 0xfe, 0   ,    4, "Difficulty"		},
-	{0x11, 0x01, 0x30, 0x30, "Very Easy"		},
-	{0x11, 0x01, 0x30, 0x20, "Easy"			},
-	{0x11, 0x01, 0x30, 0x10, "Hard"			},
-	{0x11, 0x01, 0x30, 0x00, "Very Hard"		},
+	{0   , 0xfe, 0   ,    4, "Difficulty"			},
+	{0x00, 0x01, 0x30, 0x30, "Very Easy"			},
+	{0x00, 0x01, 0x30, 0x20, "Easy"					},
+	{0x00, 0x01, 0x30, 0x10, "Hard"					},
+	{0x00, 0x01, 0x30, 0x00, "Very Hard"			},
 
-	{0   , 0xfe, 0   ,    2, "Allow Continue"	},
-	{0x11, 0x01, 0x40, 0x00, "No"			},
-	{0x11, 0x01, 0x40, 0x40, "Yes"			},
+	{0   , 0xfe, 0   ,    2, "Allow Continue"		},
+	{0x00, 0x01, 0x40, 0x00, "No"					},
+	{0x00, 0x01, 0x40, 0x40, "Yes"					},
 
-	{0   , 0xfe, 0   ,    2, "Freeze"		},
-	{0x11, 0x01, 0x80, 0x00, "Off"			},
-	{0x11, 0x01, 0x80, 0x80, "On"			},
+	{0   , 0xfe, 0   ,    2, "Freeze"				},
+	{0x00, 0x01, 0x80, 0x00, "Off"					},
+	{0x00, 0x01, 0x80, 0x80, "On"					},
 
-	{0   , 0xfe, 0   ,    4, "Coin A"		},
-	{0x12, 0x01, 0x03, 0x00, "4 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x01, "3 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x02, "2 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x03, "1 Coin  1 Credits"	},
+	{0   , 0xfe, 0   ,    4, "Coin A"				},
+	{0x01, 0x01, 0x03, 0x00, "4 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x01, "3 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x02, "2 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x03, "1 Coin  1 Credits"	},
 
-	{0   , 0xfe, 0   ,    4, "Coin B"		},
-	{0x12, 0x01, 0x0c, 0x00, "1 Coin  1 Credits"	},
-	{0x12, 0x01, 0x0c, 0x0c, "1 Coin  2 Credits"	},
-	{0x12, 0x01, 0x0c, 0x08, "1 Coin  3 Credits"	},
-	{0x12, 0x01, 0x0c, 0x04, "1 Coin  4 Credits"	},
+	{0   , 0xfe, 0   ,    4, "Coin B"				},
+	{0x01, 0x01, 0x0c, 0x00, "1 Coin  1 Credits"	},
+	{0x01, 0x01, 0x0c, 0x0c, "1 Coin  2 Credits"	},
+	{0x01, 0x01, 0x0c, 0x08, "1 Coin  3 Credits"	},
+	{0x01, 0x01, 0x0c, 0x04, "1 Coin  4 Credits"	},
 
-	{0   , 0xfe, 0   ,    4, "Lives"		},
-	{0x12, 0x01, 0x30, 0x30, "2"			},
-	{0x12, 0x01, 0x30, 0x20, "3"			},
-	{0x12, 0x01, 0x30, 0x10, "4"			},
-	{0x12, 0x01, 0x30, 0x00, "5"			},
+	{0   , 0xfe, 0   ,    4, "Lives"				},
+	{0x01, 0x01, 0x30, 0x30, "2"					},
+	{0x01, 0x01, 0x30, 0x20, "3"					},
+	{0x01, 0x01, 0x30, 0x10, "4"					},
+	{0x01, 0x01, 0x30, 0x00, "5"					},
 };
 
 STDDIPINFO(Trckydoca)
 
 static struct BurnDIPInfo SaurobDIPList[]=
 {
-	{0x11, 0xff, 0xff, 0x99, NULL			},
-	{0x12, 0xff, 0xff, 0xd0, NULL			},
+	DIP_OFFSET(0x11)
+	{0x00, 0xff, 0xff, 0x99, NULL					},
+	{0x01, 0xff, 0xff, 0xd0, NULL					},
 
-	{0   , 0xfe, 0   ,    2, "Service Mode"		},
-	{0x11, 0x01, 0x01, 0x01, "Off"			},
-	{0x11, 0x01, 0x01, 0x00, "On"			},
+	{0   , 0xfe, 0   ,    2, "Service Mode"			},
+	{0x00, 0x01, 0x01, 0x01, "Off"					},
+	{0x00, 0x01, 0x01, 0x00, "On"					},
 
-	{0   , 0xfe, 0   ,    2, "Demo Sounds"		},
-	{0x11, 0x01, 0x02, 0x00, "On"			},
-	{0x11, 0x01, 0x02, 0x02, "Off"			},
+	{0   , 0xfe, 0   ,    2, "Demo Sounds"			},
+	{0x00, 0x01, 0x02, 0x00, "On"					},
+	{0x00, 0x01, 0x02, 0x02, "Off"					},
 
-	{0   , 0xfe, 0   ,    2, "Cabinet"		},
-	{0x11, 0x01, 0x04, 0x04, "Cocktail"		},
-	{0x11, 0x01, 0x04, 0x00, "Upright"		},
+	{0   , 0xfe, 0   ,    2, "Cabinet"				},
+	{0x00, 0x01, 0x04, 0x04, "Cocktail"				},
+	{0x00, 0x01, 0x04, 0x00, "Upright"				},
 
-	{0   , 0xfe, 0   ,    2, "Free Play"		},
-	{0x11, 0x01, 0x08, 0x00, "On"			},
-	{0x11, 0x01, 0x08, 0x08, "Off"			},
+	{0   , 0xfe, 0   ,    2, "Free Play"			},
+	{0x00, 0x01, 0x08, 0x00, "On"					},
+	{0x00, 0x01, 0x08, 0x08, "Off"					},
 
-	{0   , 0xfe, 0   ,    4, "Difficulty"		},
-	{0x11, 0x01, 0x30, 0x30, "Very Hard"		},
-	{0x11, 0x01, 0x30, 0x20, "Hard"			},
-	{0x11, 0x01, 0x30, 0x10, "Easy"			},
-	{0x11, 0x01, 0x30, 0x00, "Very Easy"		},
+	{0   , 0xfe, 0   ,    4, "Difficulty"			},
+	{0x00, 0x01, 0x30, 0x30, "Very Hard"			},
+	{0x00, 0x01, 0x30, 0x20, "Hard"					},
+	{0x00, 0x01, 0x30, 0x10, "Easy"					},
+	{0x00, 0x01, 0x30, 0x00, "Very Easy"			},
 
-	{0   , 0xfe, 0   ,    2, "Allow Continue"	},
-	{0x11, 0x01, 0x40, 0x00, "Yes"			},
-	{0x11, 0x01, 0x40, 0x40, "No"			},
+	{0   , 0xfe, 0   ,    2, "Allow Continue"		},
+	{0x00, 0x01, 0x40, 0x00, "Yes"					},
+	{0x00, 0x01, 0x40, 0x40, "No"					},
 
-	{0   , 0xfe, 0   ,    2, "Freeze"		},
-	{0x11, 0x01, 0x80, 0x00, "On"			},
-	{0x11, 0x01, 0x80, 0x80, "Off"			},
+	{0   , 0xfe, 0   ,    2, "Freeze"				},
+	{0x00, 0x01, 0x80, 0x00, "On"					},
+	{0x00, 0x01, 0x80, 0x80, "Off"					},
 
-	{0   , 0xfe, 0   ,    4, "Coin A"		},
-	{0x12, 0x01, 0x03, 0x00, "1 Coin  1 Credits"	},
-	{0x12, 0x01, 0x03, 0x01, "2 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x02, "3 Coins 1 Credits"	},
-	{0x12, 0x01, 0x03, 0x03, "4 Coins 1 Credits"	},
+	{0   , 0xfe, 0   ,    4, "Coin A"				},
+	{0x01, 0x01, 0x03, 0x00, "1 Coin  1 Credits"	},
+	{0x01, 0x01, 0x03, 0x01, "2 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x02, "3 Coins 1 Credits"	},
+	{0x01, 0x01, 0x03, 0x03, "4 Coins 1 Credits"	},
 
-	{0   , 0xfe, 0   ,    4, "Coin B"		},
-	{0x12, 0x01, 0x0c, 0x0c, "1 Coin  5 Credits"	},
-	{0x12, 0x01, 0x0c, 0x08, "1 Coin  4 Credits"	},
-	{0x12, 0x01, 0x0c, 0x04, "1 Coin  3 Credits"	},
-	{0x12, 0x01, 0x0c, 0x00, "1 Coin  2 Credits"	},
+	{0   , 0xfe, 0   ,    4, "Coin B"				},
+	{0x01, 0x01, 0x0c, 0x0c, "1 Coin  5 Credits"	},
+	{0x01, 0x01, 0x0c, 0x08, "1 Coin  4 Credits"	},
+	{0x01, 0x01, 0x0c, 0x04, "1 Coin  3 Credits"	},
+	{0x01, 0x01, 0x0c, 0x00, "1 Coin  2 Credits"	},
 
-	{0   , 0xfe, 0   ,    4, "Lives"		},
-	{0x12, 0x01, 0x30, 0x30, "5"			},
-	{0x12, 0x01, 0x30, 0x20, "4"			},
-	{0x12, 0x01, 0x30, 0x10, "3"			},
-	{0x12, 0x01, 0x30, 0x00, "2"			},
+	{0   , 0xfe, 0   ,    4, "Lives"				},
+	{0x01, 0x01, 0x30, 0x30, "5"					},
+	{0x01, 0x01, 0x30, 0x20, "4"					},
+	{0x01, 0x01, 0x30, 0x10, "3"					},
+	{0x01, 0x01, 0x30, 0x00, "2"					},
 };
 
 STDDIPINFO(Saurob)
@@ -408,7 +413,7 @@ static tilemap_callback( foreground )
 	TILE_SET_INFO(1, code, color, flipx ? TILE_FLIPX : 0);
 }
 
-static int DrvDoReset(INT32 clear_mem)
+static INT32 DrvDoReset(INT32 clear_mem)
 {
 	if (clear_mem) {
 		memset (AllRam, 0, RamEnd - AllRam);
@@ -430,6 +435,10 @@ static int DrvDoReset(INT32 clear_mem)
 	fg_scrollx = 0;
 	palette_bank = 0;
 	watchdog = 0;
+
+	nCyclesExtra = 0;
+
+	HiscoreReset();
 
 	return 0;
 }
@@ -549,11 +558,11 @@ static INT32 SauroInit()
 	ZetSetReadHandler(sauro_sound_read);
 	ZetClose();
 
-	BurnYM3812Init(1, 2500000, NULL, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 4000000);
+	BurnYM3812Init(1, 4000000, NULL, 0);
+	BurnTimerAttach(&ZetConfig, 4000000);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
-	sp0256_init(DrvSndROM, 3120000);
+	sp0256_init(DrvSndROM, 4000000);
 	sp0256_set_drq_cb(sauro_drq_cb);
 	sp0256_inuse = 1;
 
@@ -611,7 +620,7 @@ static INT32 TrckydocInit()
 	ZetInit(1); // Just here to let us use same reset routine
 
 	BurnYM3812Init(1, 2500000, NULL, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 5000000);
+	BurnTimerAttach(&ZetConfig, 5000000);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	GenericTilesInit();
@@ -785,7 +794,7 @@ static INT32 SauroFrame()
 
 	INT32 nInterleave = 128;
 	INT32 nCyclesTotal[2] = { 5000000 / 56, 4000000 / 56 };
-	INT32 nCyclesDone[2] = { 0, 0 };
+	INT32 nCyclesDone[2] = { nCyclesExtra, 0 };
 
 	for (INT32 i = 0; i < nInterleave; i++)
 	{
@@ -795,21 +804,21 @@ static INT32 SauroFrame()
 		ZetClose();
 
 		ZetOpen(1);
-		BurnTimerUpdateYM3812((nCyclesTotal[1] / nInterleave) * (i + 1));
+		CPU_RUN_TIMER(1);
 		if ((i & 0xf) == 0xf) ZetSetIRQLine(0, CPU_IRQSTATUS_HOLD); // 8x per frame
 		ZetClose();
 	}
 
-	ZetOpen(1);
-
-	BurnTimerEndFrameYM3812(nCyclesTotal[1]);
+	nCyclesExtra = nCyclesDone[0] - nCyclesTotal[0];
 
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
-		if (sp0256_inuse) sp0256_update(pBurnSoundOut, nBurnSoundLen);
+		if (sp0256_inuse) {
+			ZetOpen(1);
+			sp0256_update(pBurnSoundOut, nBurnSoundLen);
+			ZetClose();
+		}
 	}
-
-	ZetClose();
 
 	if (pBurnDraw) {
 		BurnDrvRedraw();
@@ -841,22 +850,21 @@ static INT32 TrckydocFrame()
 
 	INT32 nInterleave = 128;
 	INT32 nCyclesTotal[1] = { 5000000 / 56 };
+	//INT32 nCyclesDone[1] = { 0 };
 
 	ZetOpen(0);
 
 	for (INT32 i = 0; i < nInterleave; i++)
 	{
-		BurnTimerUpdateYM3812((nCyclesTotal[0] / nInterleave) * (i + 1));
+		CPU_RUN_TIMER(0);
 		if (i == 120) ZetSetIRQLine(0, CPU_IRQSTATUS_HOLD); // vblank
 	}
 
-	BurnTimerEndFrameYM3812(nCyclesTotal[0]);
+	ZetClose();
 
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
 	}
-
-	ZetClose();
 
 	if (pBurnDraw) {
 		BurnDrvRedraw();
@@ -893,6 +901,9 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 		SCAN_VAR(bg_scrollx);
 		SCAN_VAR(fg_scrollx);
 		SCAN_VAR(palette_bank);
+		SCAN_VAR(watchdog);
+
+		SCAN_VAR(nCyclesExtra);
 	}
 
 	if (nAction & ACB_NVRAM) {
@@ -940,7 +951,7 @@ struct BurnDriver BurnDrvSauro = {
 	"sauro", NULL, NULL, NULL, "1987",
 	"Sauro (set 1)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, sauroRomInfo, sauroRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -980,7 +991,7 @@ struct BurnDriver BurnDrvSauroa = {
 	"sauroa", "sauro", NULL, NULL, "1987",
 	"Sauro (set 2)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, sauroaRomInfo, sauroaRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -1020,8 +1031,48 @@ struct BurnDriver BurnDrvSaurob = {
 	"saurob", "sauro", NULL, NULL, "1987",
 	"Sauro (set 3)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, saurobRomInfo, saurobRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
+	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
+	240, 224, 4, 3
+};
+
+
+// Sauro (set 4, easier)
+
+static struct BurnRomInfo saurocRomDesc[] = {
+	{ "sauro_facil.2",	0x8000, 0xac2e1290, 1 | BRF_PRG | BRF_ESS }, //  0 Z80 #0 Code
+	{ "sauro_facil.1",	0x8000, 0xc7705d1d, 1 | BRF_PRG | BRF_ESS }, //  1
+
+	{ "sauro-3.bin",	0x8000, 0x0d501e1b, 2 | BRF_PRG | BRF_ESS }, //  2 Z80 #1 Code
+
+	{ "sauro-6.bin",	0x8000, 0x4b77cb0f, 3 | BRF_GRA },           //  3 Background Tiles
+	{ "sauro-7.bin",	0x8000, 0x187da060, 3 | BRF_GRA },           //  4
+
+	{ "sauro-4.bin",	0x8000, 0x9b617cda, 4 | BRF_GRA },           //  5 Foreground Tiles
+	{ "sauro-5.bin",	0x8000, 0xa6e2640d, 4 | BRF_GRA },           //  6
+
+	{ "sauro-8.bin",	0x8000, 0xe08b5d5e, 5 | BRF_GRA },           //  7 Sprites
+	{ "sauro-9.bin",	0x8000, 0x7c707195, 5 | BRF_GRA },           //  8
+	{ "sauro-10.bin",	0x8000, 0xc93380d1, 5 | BRF_GRA },           //  9
+	{ "sauro-11.bin",	0x8000, 0xf47982a8, 5 | BRF_GRA },           // 10
+
+	{ "82s137-3.bin",	0x0400, 0xd52c4cd0, 6 | BRF_GRA },           // 11 Color data
+	{ "82s137-2.bin",	0x0400, 0xc3e96d5d, 6 | BRF_GRA },           // 12
+	{ "82s137-1.bin",	0x0400, 0xbdfcf00c, 6 | BRF_GRA },           // 13
+
+	{ "sp0256-al2.bin",	0x0800, 0xb504ac15, 7 | BRF_GRA },           // 14 Speech data
+};
+
+STD_ROM_PICK(sauroc)
+STD_ROM_FN(sauroc)
+
+struct BurnDriver BurnDrvSauroc = {
+	"sauroc", "sauro", NULL, NULL, "1987",
+	"Sauro (set 4, easier)\0", NULL, "Tecfri", "Miscellaneous",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	NULL, saurocRomInfo, saurocRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
 };
@@ -1060,7 +1111,7 @@ struct BurnDriver BurnDrvSaurop = {
 	"saurop", "sauro", NULL, NULL, "1987",
 	"Sauro (Philko license)\0", NULL, "Tecfri (Philko license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, sauropRomInfo, sauropRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -1100,7 +1151,7 @@ struct BurnDriver BurnDrvSaurorr = {
 	"saurorr", "sauro", NULL, NULL, "1987",
 	"Sauro (Recreativos Real S.A. license)\0", NULL, "Tecfri (Recreativos Real S.A. license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, saurorrRomInfo, saurorrRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -1140,7 +1191,7 @@ struct BurnDriver BurnDrvSaurobl = {
 	"saurobl", "sauro", NULL, NULL, "1987",
 	"Sauro (bootleg)\0", "Missing speech is normal", "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, sauroblRomInfo, sauroblRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, SaurobDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -1182,7 +1233,7 @@ struct BurnDriver BurnDrvSeawolft = {
 	"seawolft", "sauro", NULL, NULL, "1987",
 	"Sea Wolf (Tecfri)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, seawolftRomInfo, seawolftRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	SauroInit, DrvExit, SauroFrame, SauroDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -1217,7 +1268,7 @@ struct BurnDriver BurnDrvTrckydoc = {
 	"trckydoc", NULL, NULL, NULL, "1987",
 	"Tricky Doc (set 1)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, trckydocRomInfo, trckydocRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TecfriDIPInfo,
 	TrckydocInit, DrvExit, TrckydocFrame, TrckydocDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3
@@ -1252,7 +1303,7 @@ struct BurnDriver BurnDrvTrckydoca = {
 	"trckydoca", "trckydoc", NULL, NULL, "1987",
 	"Tricky Doc (set 2)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, trckydocaRomInfo, trckydocaRomName, NULL, NULL, NULL, NULL, TecfriInputInfo, TrckydocaDIPInfo,
 	TrckydocInit, DrvExit, TrckydocFrame, TrckydocDraw, DrvScan, &DrvRecalc, 0x400,
 	240, 224, 4, 3

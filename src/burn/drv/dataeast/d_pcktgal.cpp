@@ -39,6 +39,8 @@ static UINT8 DrvDips[1];
 static UINT8 DrvInputs[2];
 static UINT8 DrvReset;
 
+static INT32 nCyclesExtra;
+
 static struct BurnInputInfo PcktgalInputList[] = {
 	{"P1 Coin",			BIT_DIGITAL,	DrvJoy2 + 4,	"p1 coin"	},
 	{"P1 Start",		BIT_DIGITAL,	DrvJoy1 + 4,	"p1 start"	},
@@ -253,6 +255,10 @@ static INT32 DrvDoReset()
 	msm5205next = 0;
 	memset (pf_control, 0, sizeof(pf_control));
 
+	nCyclesExtra = 0;
+
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -358,14 +364,13 @@ static INT32 CommonInit(INT32 is_pcktgal)
 	M6502Close();
 
 	BurnYM2203Init(1, 1500000, NULL, 0);
-	BurnTimerAttachM6502(2000000);
 	BurnYM2203SetRoute(0, BURN_SND_YM2203_YM2203_ROUTE, 0.60, BURN_SND_ROUTE_BOTH);
 	BurnYM2203SetRoute(0, BURN_SND_YM2203_AY8910_ROUTE_1, 0.15, BURN_SND_ROUTE_BOTH);
 	BurnYM2203SetRoute(0, BURN_SND_YM2203_AY8910_ROUTE_2, 0.15, BURN_SND_ROUTE_BOTH);
 	BurnYM2203SetRoute(0, BURN_SND_YM2203_AY8910_ROUTE_3, 0.15, BURN_SND_ROUTE_BOTH);
 
 	BurnYM3812Init(1, 3000000, NULL, 1);
-	BurnTimerAttachYM3812(&M6502Config, 1500000);
+	BurnTimerAttach(&M6502Config, 1500000);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	MSM5205Init(0, SynchroniseStream, 384000, msm5205_interrupt, MSM5205_S48_4B, 1);
@@ -482,19 +487,22 @@ static INT32 DrvFrame()
 
 	INT32 nInterleave = MSM5205CalcInterleave(0, 1500000);
 	INT32 nCyclesTotal[2] = { 2000000 / 60, 1500000 / 60 };
+	INT32 nCyclesDone[2] = { nCyclesExtra, 0 };
 
 	for (INT32 i = 0; i < nInterleave; i++)
 	{
 		M6502Open(0);
-		CPU_RUN_TIMER(0);
+		CPU_RUN(0, M6502);
 		if (i == (nInterleave - 1)) M6502SetIRQLine(CPU_IRQLINE_NMI, CPU_IRQSTATUS_AUTO);
 		M6502Close();
 
 		M6502Open(1);
-		CPU_RUN_TIMER_YM3812(1);
+		CPU_RUN_TIMER(1);
 		MSM5205Update();
 		M6502Close();
 	}
+
+	nCyclesExtra = nCyclesDone[0] - nCyclesTotal[0];
 
 	if (pBurnSoundOut) {
 		BurnYM2203Update(pBurnSoundOut, nBurnSoundLen);
@@ -536,6 +544,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 		SCAN_VAR(soundtoggle);
 		SCAN_VAR(msm5205next);
 		SCAN_VAR(pf_control);
+
+		SCAN_VAR(nCyclesExtra);
 	}
 
 	if (nAction & ACB_WRITE)
@@ -581,7 +591,7 @@ struct BurnDriver BurnDrvPcktgal = {
 	"pcktgal", NULL, NULL, NULL, "1987",
 	"Pocket Gal (Japan)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, pcktgalRomInfo, pcktgalRomName, NULL, NULL, NULL, NULL, PcktgalInputInfo, PcktgalDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x200,
 	256, 224, 4, 3
@@ -615,7 +625,7 @@ struct BurnDriver BurnDrvPcktgalb = {
 	"pcktgalb", "pcktgal", NULL, NULL, "1987",
 	"Pocket Gal (Yada East bootleg)\0", NULL, "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, pcktgalbRomInfo, pcktgalbRomName, NULL, NULL, NULL, NULL, PcktgalInputInfo, PcktgalDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x200,
 	256, 224, 4, 3
@@ -691,7 +701,7 @@ struct BurnDriver BurnDrvPcktgal2 = {
 	"pcktgal2", "pcktgal", NULL, NULL, "1989",
 	"Pocket Gal 2 (English)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, pcktgal2RomInfo, pcktgal2RomName, NULL, NULL, NULL, NULL, PcktgalInputInfo, PcktgalDIPInfo,
 	Drv2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x200,
 	256, 224, 4, 3
@@ -721,7 +731,7 @@ struct BurnDriver BurnDrvPcktgal2j = {
 	"pcktgal2j", "pcktgal", NULL, NULL, "1989",
 	"Pocket Gal 2 (Japanese)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, pcktgal2jRomInfo, pcktgal2jRomName, NULL, NULL, NULL, NULL, PcktgalInputInfo, PcktgalDIPInfo,
 	Drv2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x200,
 	256, 224, 4, 3
@@ -751,7 +761,7 @@ struct BurnDriver BurnDrvSpool3 = {
 	"spool3", "pcktgal", NULL, NULL, "1989",
 	"Super Pool III (English)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, spool3RomInfo, spool3RomName, NULL, NULL, NULL, NULL, PcktgalInputInfo, PcktgalDIPInfo,
 	Drv2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x200,
 	256, 224, 4, 3
@@ -781,7 +791,7 @@ struct BurnDriver BurnDrvSpool3i = {
 	"spool3i", "pcktgal", NULL, NULL, "1990",
 	"Super Pool III (I-Vics)\0", NULL, "Data East Corporation (I-Vics license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SPORTSMISC, 0,
 	NULL, spool3iRomInfo, spool3iRomName, NULL, NULL, NULL, NULL, PcktgalInputInfo, PcktgalDIPInfo,
 	Drv2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x200,
 	256, 224, 4, 3

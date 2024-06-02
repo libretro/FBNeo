@@ -4404,7 +4404,7 @@ struct BurnDriver BurnDrvOoparts = {
 	"ooparts", NULL, NULL, NULL, "1992",
 	"OOPArts (prototype, joystick hack)\0", NULL, "hack", "C2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_PROTOTYPE | BDF_HACK | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_SEGA_MISC, GBF_BREAKOUT, 0,
+	BDF_GAME_WORKING | BDF_PROTOTYPE | BDF_HACK | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SEGA_MISC, GBF_BREAKOUT, 0,
 	NULL, oopartsRomInfo, oopartsRomName, NULL, NULL, NULL, NULL, OopartsInputInfo, OopartsDIPInfo,
 	NoProtectionInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1800,
 	224, 320, 3, 4
@@ -4784,6 +4784,28 @@ struct BurnDriver BurnDrvWwmarine = {
 	320, 224, 4, 3
 };
 
+// Waku Waku Anpanman (Rev A)
+
+static struct BurnRomInfo wwanpanmRomDesc[] = {
+	{ "epr-14123a.ic32",		0x40000, 0x0e4f38c6, 1 | BRF_PRG | BRF_ESS }, //  0 68K Code
+	{ "epr-14122a.ic31",		0x40000, 0x01b8fe20, 1 | BRF_PRG | BRF_ESS }, //  1
+
+	{ "epr-14121.ic4",			0x40000, 0x69adf3a1, 2 | BRF_SND },           //  2 UPD Samples
+};
+
+STD_ROM_PICK(wwanpanm)
+STD_ROM_FN(wwanpanm)
+
+struct BurnDriver BurnDrvwwanpanm = {
+	"wwanpanm", NULL, NULL, NULL, "1992",
+	"Waku Waku Anpanman (Rev A)\0", NULL, "Sega", "C2",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING, 1, HARDWARE_SEGA_MISC, GBF_MISC, 0,
+	NULL, wwanpanmRomInfo, wwanpanmRomName, NULL, NULL, NULL, NULL, WwmarineInputInfo, WwmarineDIPInfo,
+	WwmarineInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1800,
+	320, 224, 4, 3
+};
+
 
 // SegaSonic Cosmo Fighter (World)
 
@@ -4830,31 +4852,6 @@ struct BurnDriver BurnDrvSonicfgtj = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SEGA_MISC, GBF_VERSHOOT, 0,
 	NULL, sonicfgtjRomInfo, sonicfgtjRomName, NULL, NULL, NULL, NULL, SonicfgtInputInfo, SonicfgtDIPInfo,
-	NoProtectionInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1800,
-	320, 224, 4, 3
-};
-
-
-// SegaSonic Cosmo Fighter (US)
-
-static struct BurnRomInfo sonicfgtuRomDesc[] = {
-	{ "epr-17778.ic32",			0x40000, 0xe05b7388, 1 | BRF_PRG | BRF_ESS }, //  0 68K Code
-	{ "epr-17177.ic31",			0x40000, 0x7c2ec4eb, 1 | BRF_PRG | BRF_ESS }, //  1
-	{ "epr-17180.ic34",			0x40000, 0x8933e91c, 1 | BRF_PRG | BRF_ESS }, //  2
-	{ "epr-17179.ic33",			0x40000, 0x0ae979cd, 1 | BRF_PRG | BRF_ESS }, //  3
-
-	{ "epr-17176.ic4",			0x40000, 0x4211745d, 2 | BRF_SND },           //  4 UPD Samples
-};
-
-STD_ROM_PICK(sonicfgtu)
-STD_ROM_FN(sonicfgtu)
-
-struct BurnDriver BurnDrvSonicfgtu = {
-	"sonicfgtu", "sonicfgt", NULL, NULL, "1993",
-	"SegaSonic Cosmo Fighter (US)\0", NULL, "Sega", "C2",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SEGA_MISC, GBF_VERSHOOT, 0,
-	NULL, sonicfgtuRomInfo, sonicfgtuRomName, NULL, NULL, NULL, NULL, SonicfgtInputInfo, SonicfgtDIPInfo,
 	NoProtectionInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1800,
 	320, 224, 4, 3
 };
@@ -5093,7 +5090,7 @@ struct BurnDriver BurnDrvIchirbl = {
 	"ichirbl", "ichir", NULL, NULL, "1994",
 	"Puzzle & Action: Ichidant-R (World) (bootleg)\0", NULL, "bootleg", "C2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SEGA_MISC, GBF_MINIGAMES | GBF_PUZZLE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SEGA_MISC, GBF_MINIGAMES | GBF_PUZZLE, 0,
 	NULL, ichirblRomInfo, ichirblRomName, NULL, NULL, NULL, NULL, SegaC2_1ButtonInputInfo, IchirDIPInfo,
 	NoProtectionInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1800,
 	320, 224, 4, 3
@@ -5383,6 +5380,31 @@ struct BurnDriverD BurnDrvAnpanman = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 2, HARDWARE_SEGA_MISC, GBF_MISC, 0,
 	NULL, anpanmanRomInfo, anpanmanRomName, NULL, NULL, NULL, NULL, AnpanmanInputInfo, AnpanmanDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, NULL, &DrvRecalc, 0,
+	320, 224, 4, 3
+};
+
+
+// Soreike! Anpanman Popcorn Koujou (Rev A)
+
+static struct BurnRomInfo anpanmanaRomDesc[] = {
+	{ "epr-14804a.ic32",		0x40000, 0xa80bd024, 1 | BRF_PRG | BRF_ESS }, //  0 68K Code
+	{ "epr-14803a.ic31",		0x40000, 0x32e1f248, 1 | BRF_PRG | BRF_ESS }, //  1
+	{ "epr-14806.ic34",			0x40000, 0x40f398db, 1 | BRF_PRG | BRF_ESS }, //  2
+	{ "epr-14805.ic33",			0x40000, 0xf27229ed, 1 | BRF_PRG | BRF_ESS }, //  3
+
+	{ "epr-14807.ic4",			0x40000, 0x9827549f, 2 | BRF_SND },           //  4 UPD Samples
+};
+
+STD_ROM_PICK(anpanmana)
+STD_ROM_FN(anpanmana)
+
+struct BurnDriverD BurnDrvAnpanmana = {
+	"anpanmana", "anpanman", NULL, NULL, "1992",
+	"Soreike! Anpanman Popcorn Koujou (Rev A)\0", NULL, "Sega", "C2",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING| BDF_CLONE, 2, HARDWARE_SEGA_MISC, GBF_MISC, 0,
+	NULL, anpanmanRomaInfo, anpanmanaRomName, NULL, NULL, NULL, NULL, AnpanmanInputInfo, AnpanmanDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, NULL, &DrvRecalc, 0,
 	320, 224, 4, 3
 };

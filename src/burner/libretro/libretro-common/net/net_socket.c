@@ -182,7 +182,7 @@ bool socket_set_block(int fd, bool block)
    u_long i = !block;
 
    return !ioctlsocket(fd, FIONBIO, &i);
-#elif !defined(__PSL1GHT__) && defined(__PS3__) || defined(VITA) || defined(WIIU)
+#elif defined(__PS3__) || defined(VITA) || defined(WIIU)
    int i = !block;
 
    return !setsockopt(fd, SOL_SOCKET, SO_NBIO, &i, sizeof(i));
@@ -212,7 +212,7 @@ int socket_close(int fd)
 #if defined(_WIN32) && !defined(_XBOX360)
    /* WinSock has headers from the stone age. */
    return closesocket(fd);
-#elif !defined(__PSL1GHT__) && defined(__PS3__) || defined(WIIU)
+#elif defined(__PS3__) || defined(WIIU)
    return socketclose(fd);
 #elif defined(VITA)
    return sceNetSocketClose(fd);
@@ -224,7 +224,7 @@ int socket_close(int fd)
 int socket_select(int nfds, fd_set *readfds, fd_set *writefds,
       fd_set *errorfds, struct timeval *timeout)
 {
-#if !defined(__PSL1GHT__) && defined(__PS3__)
+#if defined(__PS3__)
    return socketselect(nfds, readfds, writefds, errorfds, timeout);
 #elif defined(VITA)
    int i, j;
@@ -762,7 +762,13 @@ bool socket_connect_with_timeout(int fd, void *data, int timeout)
       return false;
 #elif defined(_3DS)
    /* libctru getsockopt does not return expected value */
-   if (connect(fd, addr->ai_addr, addr->ai_addrlen) < 0 && errno != EISCONN)
+   if ((connect(fd, addr->ai_addr, addr->ai_addrlen) < 0) && errno != EISCONN)
+      return false;
+#elif defined(WIIU)
+   /* On WiiU, getsockopt() returns -1 and sets lastsocketerr() (Wii's
+    * equivalent to errno) to 16. */
+   if ((connect(fd, addr->ai_addr, addr->ai_addrlen) == -1)
+         && socketlasterr() != SO_EISCONN)
       return false;
 #else
    {

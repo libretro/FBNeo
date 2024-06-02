@@ -2,7 +2,7 @@
  Newer Seta Hardware
  MAME driver by Luca Elia (l.elia@tin.it)
  ********************************************************************************
- port to Finalburn Alpha by OopsWare. 2007
+ port to Finalburn Neo by OopsWare. 2007
  ********************************************************************************/
 
 #include "tiles_generic.h"
@@ -49,6 +49,7 @@ static UINT8 HasNVRam = 0;
 static INT32 nRomGfxLen;
 
 static INT32 is_samshoot;
+static INT32 grdiansbl = 0;
 
 static INT32 nExtraCycles = 0;
 
@@ -911,115 +912,48 @@ static struct BurnRomInfo grdiansRomDesc[] = {
 	{ "u21.bin",	  0x400000, 0x6f95e466,	BRF_GRA },
 
 	{ "u32.bin",      0x100000, 0xcf0f3017, BRF_SND },				// PCM
-
 };
 
 STD_ROM_PICK(grdians)
 STD_ROM_FN(grdians)
 
-// Denjin Makai II (Shen Yue, Hack)
-// Hack by Gu Shen Gan Yue
-// GOTVG 20220705
+static struct BurnRomInfo grdiansaRomDesc[] = {
+	{ "ka2_001_001.u2",		  0x080000, 0x36adc6f2, BRF_ESS | BRF_PRG },	// 68000 code
+	{ "ka2_001_004.u3",		  0x080000, 0x2704f416, BRF_ESS | BRF_PRG },
+	{ "ka2_001_002.u4",		  0x080000, 0xbb52447b, BRF_ESS | BRF_PRG },
+	{ "ka2_001_003.u5",		  0x080000, 0x9c164a3b, BRF_ESS | BRF_PRG },
 
-static struct BurnRomInfo grdianssyRomDesc[] = {
-	{ "u2_sy.bin",		0x080000, 0xe9898c17, BRF_ESS | BRF_PRG },	// 68000 code
-	{ "u3_sy.bin",		0x080000, 0x330337db, BRF_ESS | BRF_PRG },
-	{ "u4.bin",			0x080000, 0xbb52447b, BRF_ESS | BRF_PRG },
-	{ "u5.bin",			0x080000, 0x9c164a3b, BRF_ESS | BRF_PRG },
+	{ "ka2-001-010.u18",	  0x200000, 0xb3e6e95f,	BRF_GRA },				// GFX
+	{ "ka2-001-011.u20",	  0x200000, 0x676edca6,	BRF_GRA },
+	{ "ka2-001-013.u17",	  0x200000, 0x9f7feb13,	BRF_GRA },
+	{ "ka2-001-014.u19",	  0x200000, 0x5465ef1b,	BRF_GRA },
+	{ "ka2-001-007.u22",	  0x200000, 0xd1035051,	BRF_GRA },
+	{ "ka2-001-008.u23",	  0x200000, 0xb2c94f31,	BRF_GRA },
+	{ "ka2-001-016.u1",		  0x200000, 0x99fc8efa,	BRF_GRA },
+	{ "ka2-001-017.u2",		  0x200000, 0x60ad7a2b,	BRF_GRA },
 
-	{ "u16.bin",		0x400000, 0x6a65f265, BRF_GRA },			// GFX
-	{ "u20.bin",		0x400000, 0xa7226ab7, BRF_GRA },
-	{ "u15.bin",		0x400000, 0x01672dcd, BRF_GRA },
-	{ "u19.bin",		0x400000, 0xc0c998a0, BRF_GRA },
-	{ "u18.bin",		0x400000, 0x967babf4, BRF_GRA },
-	{ "u22.bin",		0x400000, 0x6239997a, BRF_GRA },
-	{ "u17.bin",		0x400000, 0x0fad0629, BRF_GRA },
-	{ "u21.bin",		0x400000, 0x6f95e466, BRF_GRA },
-
-	{ "u32.bin",		0x100000, 0xcf0f3017, BRF_SND },			// PCM
-
+	{ "ka2-001-015.u28",      0x200000, 0xfa97cc54, BRF_SND },				// PCM
 };
 
-STD_ROM_PICK(grdianssy)
-STD_ROM_FN(grdianssy)
+STD_ROM_PICK(grdiansa)
+STD_ROM_FN(grdiansa)
 
-// Denjin Makai II (LBS Edition, Hack)
-// Hack by Bindi
-// GOTVG 20221014
+// bootleg PCB based on the P-FG01-1 PCB, still has the X1-010, DX-101 and DX-102 customs. Pressing start in-game changes character.
+static struct BurnRomInfo grdiansblRomDesc[] = {
+	{ "p1.u4",		0x200000, 0x4ba24d02, BRF_ESS | BRF_PRG },     // 68000 code
 
-static struct BurnRomInfo grdianslbsRomDesc[] = {
-	{ "u2_lbs.bin",		0x080000, 0xa2e89715, BRF_ESS | BRF_PRG },	// 68000 code
-	{ "u3_lbs.bin",		0x080000, 0xdf5b58bc, BRF_ESS | BRF_PRG },
-	{ "u4.bin",			0x080000, 0xbb52447b, BRF_ESS | BRF_PRG },
-	{ "u5.bin",			0x080000, 0x9c164a3b, BRF_ESS | BRF_PRG },
+	{ "u16.u16",	0x400000, 0xd24e007f, BRF_GRA },               // GFX
+	{ "u15.u15",	0x400000, 0x2a92b8de, BRF_GRA },
+	{ "u18.u18",	0x400000, 0xa3d0ba96, BRF_GRA },
+	{ "u17.u17",	0x400000, 0x020ee44f, BRF_GRA },
 
-	{ "u16.bin",		0x400000, 0x6a65f265, BRF_GRA },			// GFX
-	{ "u20.bin",		0x400000, 0xa7226ab7, BRF_GRA },
-	{ "u15.bin",		0x400000, 0x01672dcd, BRF_GRA },
-	{ "u19.bin",		0x400000, 0xc0c998a0, BRF_GRA },
-	{ "u18.bin",		0x400000, 0x967babf4, BRF_GRA },
-	{ "u22.bin",		0x400000, 0x6239997a, BRF_GRA },
-	{ "u17.bin",		0x400000, 0x0fad0629, BRF_GRA },
-	{ "u21.bin",		0x400000, 0x6f95e466, BRF_GRA },
+	{ "u32.u32",	0x200000, 0xfa97cc54, BRF_SND },               // PCM
 
-	{ "u32.bin",		0x100000, 0xcf0f3017, BRF_SND },			// PCM
-
+	{ "ke-001.u38",	0x000117, 0x00000000, BRF_OPT | BRF_NODUMP },  // PLDs
 };
 
-STD_ROM_PICK(grdianslbs)
-STD_ROM_FN(grdianslbs)
-
-// Denjin Makai II (Field Edition, Hack)
-// Hack by Bindi
-// GOTVG 20210429
-
-static struct BurnRomInfo grdianslbssRomDesc[] = {
-	{ "u2_lbss.bin",	0x080000, 0xe8c9fb0f, BRF_ESS | BRF_PRG },	// 68000 code
-	{ "u3_lbss.bin",	0x080000, 0xd4dac047, BRF_ESS | BRF_PRG },
-	{ "u4.bin",			0x080000, 0xbb52447b, BRF_ESS | BRF_PRG },
-	{ "u5.bin",			0x080000, 0x9c164a3b, BRF_ESS | BRF_PRG },
-
-	{ "u16.bin",		0x400000, 0x6a65f265, BRF_GRA },			// GFX
-	{ "u20.bin",		0x400000, 0xa7226ab7, BRF_GRA },
-	{ "u15.bin",		0x400000, 0x01672dcd, BRF_GRA },
-	{ "u19.bin",		0x400000, 0xc0c998a0, BRF_GRA },
-	{ "u18.bin",		0x400000, 0x967babf4, BRF_GRA },
-	{ "u22.bin",		0x400000, 0x6239997a, BRF_GRA },
-	{ "u17.bin",		0x400000, 0x0fad0629, BRF_GRA },
-	{ "u21.bin",		0x400000, 0x6f95e466, BRF_GRA },
-
-	{ "u32.bin",		0x100000, 0xcf0f3017, BRF_SND },			// PCM
-
-};
-
-STD_ROM_PICK(grdianslbss)
-STD_ROM_FN(grdianslbss)
-
-// Denjin Makai II (Heart Dream)
-// Hack by Bindi
-// GOTVG 20220606
-
-static struct BurnRomInfo grdianskeRomDesc[] = {
-	{ "u2_ke.bin",		0x080000, 0xba4a9452, BRF_ESS | BRF_PRG },	// 68000 code
-	{ "u3_ke.bin",		0x080000, 0xd1713d73, BRF_ESS | BRF_PRG },
-	{ "u4.bin",			0x080000, 0xbb52447b, BRF_ESS | BRF_PRG },
-	{ "u5.bin",			0x080000, 0x9c164a3b, BRF_ESS | BRF_PRG },
-
-	{ "u16.bin",		0x400000, 0x6a65f265, BRF_GRA },			// GFX
-	{ "u20.bin",		0x400000, 0xa7226ab7, BRF_GRA },
-	{ "u15.bin",		0x400000, 0x01672dcd, BRF_GRA },
-	{ "u19.bin",		0x400000, 0xc0c998a0, BRF_GRA },
-	{ "u18.bin",		0x400000, 0x967babf4, BRF_GRA },
-	{ "u22.bin",		0x400000, 0x6239997a, BRF_GRA },
-	{ "u17.bin",		0x400000, 0x0fad0629, BRF_GRA },
-	{ "u21.bin",		0x400000, 0x6f95e466, BRF_GRA },
-
-	{ "u32.bin",		0x100000, 0xcf0f3017, BRF_SND },			// PCM
-
-};
-
-STD_ROM_PICK(grdianske)
-STD_ROM_FN(grdianske)
+STD_ROM_PICK(grdiansbl)
+STD_ROM_FN(grdiansbl)
 
 static struct BurnRomInfo mj4simaiRomDesc[] = {
 	{ "ll.u2",		  0x080000, 0x7be9c781, BRF_ESS | BRF_PRG },	// 68000 code
@@ -1035,7 +969,6 @@ static struct BurnRomInfo mj4simaiRomDesc[] = {
 	{ "cha-02.u22",	  0x400000, 0xf6346860,	BRF_GRA },
 
 	{ "cha-07.u32",	  0x400000, 0x817519ee, BRF_SND },				// PCM
-
 };
 
 STD_ROM_PICK(mj4simai)
@@ -1057,7 +990,6 @@ static struct BurnRomInfo myangelRomDesc[] = {
 	{ "kq1-cg5.u17",  0x200000, 0xa4bc4516,	BRF_GRA },
 
 	{ "kq1-snd.u32",  0x200000, 0x8ca1b449, BRF_SND },				// PCM
-
 };
 
 STD_ROM_PICK(myangel)
@@ -1094,7 +1026,6 @@ static struct BurnRomInfo pzlbowlRomDesc[] = {
 	{ "kuc-u41-i00.u41", 0x400000, 0x2febf19b,	BRF_GRA },
 
 	{ "kus-u18-i00.u18", 0x400000, 0xe2b1dfcf, BRF_SND },				// PCM
-
 };
 
 STD_ROM_PICK(pzlbowl)
@@ -1773,6 +1704,8 @@ static INT32 DrvDoReset()
 		}
 	}
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -1819,7 +1752,6 @@ static void loadDecodeGfx(UINT8 *p, INT32 cnt, INT32 offset2x)
 		*(d+6) |= (( (*p >> 1) & 1 ) << offset2x) | (( (*q >> 1) & 1 ) << (offset2x + 1));
 		*(d+7) |= (( (*p >> 0) & 1 ) << offset2x) | (( (*q >> 0) & 1 ) << (offset2x + 1));
 	}
-
 }
 
 static INT32 grdiansInit()
@@ -1905,6 +1837,110 @@ static INT32 grdiansInit()
 	
 	GenericTilesInit();
 
+	x1010_sound_init(M68K_CYCS, 0x0000);
+	x1010_set_route(BURN_SND_X1010_ROUTE_1, 1.00, BURN_SND_ROUTE_LEFT);
+	x1010_set_route(BURN_SND_X1010_ROUTE_2, 1.00, BURN_SND_ROUTE_RIGHT);
+
+	DrvDoReset();
+
+	return 0;
+}
+
+static INT32 grdiansaInit()
+{
+	INT32 nRet;
+
+	Mem = NULL;
+	MemIndex(0x0200000, 0x2000000, 0x0200000, 0x00C000);
+	INT32 nLen = MemEnd - (UINT8 *)0;
+	if ((Mem = (UINT8 *)BurnMalloc(nLen)) == NULL) return 1;
+	memset(Mem, 0, nLen);										// blank all memory
+	MemIndex(0x0200000, 0x2000000, 0x0200000, 0x00C000);
+
+	UINT8* tmpGfx = (UINT8*)BurnMalloc(0x0600000);
+
+	if (1 == grdiansbl) {
+		// Load 68000 Program rom
+		nRet = BurnLoadRom(Rom68K + 0x000000, 0, 1); if (nRet != 0) return 1;
+
+		// Load Gfx
+		for (INT32 i = 0; i < 4; i++) {
+			BurnLoadRom(tmpGfx, i + 1, 1);
+			memmove(tmpGfx + 0x400000, tmpGfx, 0x200000);
+			memset(tmpGfx, 0, 0x200000);
+			loadDecodeGfx(tmpGfx, 0x0600000 / 2, i * 2);
+		}
+	} else {
+		// Load and byte-swap 68000 Program roms
+		nRet = BurnLoadRom(Rom68K + 0x000001, 0, 2); if (nRet != 0) return 1;
+		nRet = BurnLoadRom(Rom68K + 0x000000, 1, 2); if (nRet != 0) return 1;
+		nRet = BurnLoadRom(Rom68K + 0x100001, 2, 2); if (nRet != 0) return 1;
+		nRet = BurnLoadRom(Rom68K + 0x100000, 3, 2); if (nRet != 0) return 1;
+
+		// Load Gfx
+		for (INT32 i = 0; i < 8; i += 2) {
+			BurnLoadRom(tmpGfx + 0x0200000, i + 4, 1);
+			BurnLoadRom(tmpGfx + 0x0400000, i + 5, 1);
+			loadDecodeGfx(tmpGfx, 0x0600000 / 2, i);
+		}
+	}
+
+	BurnFree(tmpGfx);
+
+	BurnLoadRom(X1010SNDROM + 0x000000, (1 == grdiansbl) ? 5 : 12, 1);
+
+	{
+		SekInit(0, 0x68000);										// Allocate 68000
+	    SekOpen(0);
+
+		// Map 68000 memory:
+		SekMapMemory(Rom68K,		0x000000, 0x1FFFFF, MAP_ROM);	// CPU 0 ROM
+		SekMapMemory(Ram68K,		0x200000, 0x20FFFF, MAP_RAM);	// CPU 0 RAM
+		SekMapMemory(RamUnknown,	0x304000, 0x30FFFF, MAP_RAM);	// ? seems tile data
+
+		SekMapMemory((UINT8 *)RamSpr,
+									0xC00000, 0xC3FFFF, MAP_RAM);	// sprites
+		SekMapMemory((UINT8 *)RamPal,
+									0xC40000, 0xC4FFFF, MAP_ROM);	// Palette
+		SekMapMemory((UINT8 *)RamVReg,
+									0xC60000, 0xC6003F, MAP_READ | MAP_FETCH);	// Video Registers
+		SekMapMemory((UINT8 *)RamTMP68301,
+									0xFFFC00, 0xFFFFFF, MAP_ROM);	// TMP68301 Registers
+
+		SekMapHandler(1,			0xB00000, 0xB03FFF, MAP_READ | MAP_WRITE);
+		SekMapHandler(2,			0xC40000, 0xC4FFFF, MAP_WRITE);	// Palette
+		SekMapHandler(3,			0xC50000, 0xC5FFFF, MAP_WRITE);
+		SekMapHandler(4,			0xC60000, 0xC6003F, MAP_WRITE);
+		SekMapHandler(5,			0xFFFC00, 0xFFFFFF, MAP_WRITE);
+
+		SekSetReadWordHandler(0, grdiansReadWord);
+		SekSetReadByteHandler(0, grdiansReadByte);
+		SekSetWriteWordHandler(0, grdiansWriteWord);
+		SekSetWriteByteHandler(0, grdiansWriteByte);
+
+		SekSetReadWordHandler (1, setaSoundRegReadWord);
+		SekSetReadByteHandler (1, setaSoundRegReadByte);
+		SekSetWriteWordHandler(1, setaSoundRegWriteWord);
+		SekSetWriteByteHandler(1, setaSoundRegWriteByte);
+
+		SekSetWriteWordHandler(2, grdiansPaletteWriteWord);
+		SekSetWriteByteHandler(2, grdiansPaletteWriteByte);
+
+		SekSetWriteWordHandler(3, grdiansClearWriteWord);
+		SekSetWriteByteHandler(3, grdiansClearWriteByte);
+
+		SekSetWriteWordHandler(4, setaVideoRegWriteWord);
+
+		SekSetWriteWordHandler(5, Tmp68301WriteWord);
+		SekSetWriteByteHandler(5, Tmp68301WriteByte);
+
+		SekSetIrqCallback( grdiansSekIrqCallback );
+
+		SekClose();
+	}
+	
+	GenericTilesInit();
+
 	M68K_CYCS = 32530470 / 2;
 	x1010_sound_init(M68K_CYCS, 0x0000);
 	x1010_set_route(BURN_SND_X1010_ROUTE_1, 1.00, BURN_SND_ROUTE_LEFT);
@@ -1913,6 +1949,13 @@ static INT32 grdiansInit()
 	DrvDoReset();
 
 	return 0;
+}
+
+static INT32 grdiansblInit()
+{
+	grdiansbl = 1;
+
+	return grdiansaInit();
 }
 
 // -- mj4simai -----------------------------------------------------------
@@ -3012,6 +3055,7 @@ static INT32 grdiansExit()
 	
 	HasNVRam = 0;
 	is_samshoot = 0;
+	grdiansbl = 0;
 
 	M68K_CYCS = 50000000 / 3;
 
@@ -3826,51 +3870,31 @@ static INT32 grdiansScan(INT32 nAction,INT32 *pnMin)
 
 struct BurnDriver BurnDrvGrdians = {
 	"grdians", NULL, NULL, NULL, "1995",
-	"Guardians\0Denjin Makai II\0", NULL, "Banpresto", "Newer Seta",
-	L"Guardians\0\u96FB\u795E\u9B54\u584A \uFF29\uFF29\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	"Guardians / Denjin Makai II (P-FG01-1 PCB)\0", NULL, "Winkysoft (Banpresto license)", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (P-FG01-1 PCB)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
 	NULL, grdiansRomInfo, grdiansRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
 	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	304, 232, 4, 3
 };
 
-struct BurnDriver BurnDrvGrdianssy = {
-	"grdianssy", "grdians", NULL, NULL, "2022-01-26",
-	"Guardians (Shen Yue Edition, Hack)\0Denjin Makai II (Shen Yue Edition, Hack)\0", NULL, "Hack", "Newer Seta",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
-	NULL, grdianssyRomInfo, grdianssyRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
-	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+struct BurnDriver BurnDrvGrdiansa = {
+	"grdiansa", "grdians", NULL, NULL, "1995",
+	"Guardians / Denjin Makai II (P0-113A PCB)\0", NULL, "Winkysoft (Banpresto license)", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (P0-113A PCB)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdiansaRomInfo, grdiansaRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansaInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	304, 232, 4, 3
 };
 
-struct BurnDriver BurnDrvGrdianslbs = {
-	"grdianslbs", "grdians", NULL, NULL, "2022",
-	"Guardians (LBS Edition, Hack)\0Denjin Makai II (LBS Edition, Hack)\0", NULL, "Hack", "Newer Seta",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
-	NULL, grdianslbsRomInfo, grdianslbsRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
-	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
-	304, 232, 4, 3
-};
-
-struct BurnDriver BurnDrvGrdianslbss = {
-	"grdianslbss", "grdians", NULL, NULL, "2021",
-	"Guardians (Field Edition, Hack)\0Denjin Makai II (Field Edition, Hack)\0", NULL, "Hack", "Newer Seta",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
-	NULL, grdianslbssRomInfo, grdianslbssRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
-	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
-	304, 232, 4, 3
-};
-
-struct BurnDriver BurnDrvGrdianske = {
-	"grdianske", "grdians", NULL, NULL, "2022",
-	"Guardians (Heart Dream)\0Denjin Makai II (Heart Dream)\0", NULL, "Hack", "Newer Seta",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
-	NULL, grdianskeRomInfo, grdianskeRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
-	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+struct BurnDriver BurnDrvGrdiansbl = {
+	"grdiansbl", "grdians", NULL, NULL, "1998",
+	"Guardians / Denjin Makai II - Cho Kyoka Ban (bootleg)\0", NULL, "bootleg (Intac Japan)", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 - \u8d85\u7d1a\u52a0\u5f37\u7248 (bootleg)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdiansblRomInfo, grdiansblRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansblInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	304, 232, 4, 3
 };
 
@@ -3878,7 +3902,7 @@ struct BurnDriver BurnDrvMj4simai = {
 	"mj4simai", NULL, NULL, NULL, "1996",
 	"Wakakusamonogatari Mahjong Yonshimai (Japan)\0", NULL, "Maboroshi Ware", "Newer Seta",
 	L"\u82E5\u8349\u7269\u8A9E \u9EBB\u96C0\u56DB\u59C9\u59B9 (Japan)\0Wakakusamonogatari Mahjong Yonshimai\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 1, HARDWARE_SETA2, GBF_MAHJONG, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_MAHJONG, 0,
 	NULL, mj4simaiRomInfo, mj4simaiRomName, NULL, NULL, NULL, NULL, mj4simaiInputInfo, mj4simaiDIPInfo,
 	mj4simaiInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	384, 240, 4, 3
@@ -3886,19 +3910,19 @@ struct BurnDriver BurnDrvMj4simai = {
 
 struct BurnDriver BurnDrvMyangel = {
 	"myangel", NULL, NULL, NULL, "1996",
-	"Kosodate Quiz My Angel (Japan)\0", NULL, "Namco", "Newer Seta",
+	"Kosodate Quiz My Angel (Japan)\0", NULL, "MOSS / Namco", "Newer Seta",
 	L"\u5B50\u80B2\u3066\u30AF\u30A4\u30BA \u30DE\u30A4 \u30A8\u30F3\u30B8\u30A7\u30EB (Japan)\0Kosodate Quiz My Angel\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_QUIZ, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_QUIZ, 0,
 	NULL, myangelRomInfo, myangelRomName, NULL, NULL, NULL, NULL, myangelInputInfo, myangelDIPInfo,
 	myangelInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	376, 240, 4, 3
 };
 
 struct BurnDriver BurnDrvMyangel2 = {
-	"myangel2", NULL, NULL, NULL, "1996",
-	"Kosodate Quiz My Angel 2 (Japan)\0", NULL, "Namco", "Newer Seta",
+	"myangel2", NULL, NULL, NULL, "1997",
+	"Kosodate Quiz My Angel 2 (Japan)\0", NULL, "MOSS / Namco", "Newer Seta",
 	L"\u5B50\u80B2\u3066\u30AF\u30A4\u30BA \u30DE\u30A4 \u30A8\u30F3\u30B8\u30A7\u30EB \uFF12 (Japan)\0Kosodate Quiz My Angel 2\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_QUIZ, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_QUIZ, 0,
 	NULL, myangel2RomInfo, myangel2RomName, NULL, NULL, NULL, NULL, myangelInputInfo, myangel2DIPInfo,
 	myangel2Init, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	376, 240, 4, 3
@@ -3906,9 +3930,9 @@ struct BurnDriver BurnDrvMyangel2 = {
 
 struct BurnDriver BurnDrvPzlbowl = {
 	"pzlbowl", NULL, NULL, NULL, "1999",
-	"Puzzle De Bowling (Japan)\0", NULL, "Nihon System / Moss", "Newer Seta",
-	L"Puzzle De Bowling\0\u30D1\u30BA\u30EB \uFF24\uFF25 \u30DC\u30FC\u30EA\u30F3\u30B0\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_PUZZLE, 0,
+	"Puzzle De Bowling (Japan)\0", NULL, "MOSS / Nihon System", "Newer Seta",
+	L"Puzzle De Bowling (Japan)\0\u30D1\u30BA\u30EB \uFF24\uFF25 \u30DC\u30FC\u30EA\u30F3\u30B0\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_PUZZLE, 0,
 	NULL, pzlbowlRomInfo, pzlbowlRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, pzlbowlDIPInfo,
 	pzlbowlInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	384, 240, 4, 3
@@ -3917,8 +3941,8 @@ struct BurnDriver BurnDrvPzlbowl = {
 struct BurnDriver BurnDrvPenbros = {
 	"penbros", NULL, NULL, NULL, "2000",
 	"Penguin Brothers (Japan)\0", NULL, "Subsino", "Newer Seta",
-	L"\u30DA\u30F3\u30AE\u30F3 \u30D6\u30E9\u30B6\u30FC\u30BA (Japan)\0Penguin Brothers\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_PLATFORM, 0,
+	L"Penguin Brothers (Japan)\0\u30DA\u30F3\u30AE\u30F3 \u30D6\u30E9\u30B6\u30FC\u30BA\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_PLATFORM, 0,
 	NULL, penbrosRomInfo, penbrosRomName, NULL, NULL, NULL, NULL, penbrosInputInfo, penbrosDIPInfo,
 	penbrosInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 224, 4, 3
@@ -3926,9 +3950,9 @@ struct BurnDriver BurnDrvPenbros = {
 
 struct BurnDriver BurnDrvAblast = {
 	"ablast", "penbros", NULL, NULL, "2000",
-	"A-Blast (Japan)\0", NULL, "Subsino", "Newer Seta",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_SETA2, GBF_PLATFORM, 0,
+	"Hong Tian Lei (A-Blast) (Japan)\0", NULL, "Subsino", "Newer Seta",
+	L"Hong Tian Lei (A-Blast) (Japan)\0\u8f5f\u5929\u96f7\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_PLATFORM, 0,
 	NULL, ablastRomInfo, ablastRomName, NULL, NULL, NULL, NULL, penbrosInputInfo, penbrosDIPInfo,
 	penbrosInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 224, 4, 3
@@ -3938,7 +3962,7 @@ struct BurnDriver BurnDrvGundamex = {
 	"gundamex", NULL, NULL, NULL, "1994",
 	"Mobile Suit Gundam EX Revue\0", NULL, "Banpresto", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_VSFIGHT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_VSFIGHT, 0,
 	NULL, gundamexRomInfo, gundamexRomName, NULL, NULL, NULL, NULL, GundamexInputInfo, GundamexDIPInfo,
 	gundamexInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	384, 224, 4, 3
@@ -3948,7 +3972,7 @@ struct BurnDriver BurnDrvDeerhunt = {
 	"deerhunt", NULL, NULL, NULL, "2000",
 	"Deer Hunting USA V4.3\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhuntRomInfo, deerhuntRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -3958,7 +3982,7 @@ struct BurnDriver BurnDrvDeerhuna = {
 	"deerhunta", "deerhunt", NULL, NULL, "2000",
 	"Deer Hunting USA V4.2\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhunaRomInfo, deerhunaRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -3968,7 +3992,7 @@ struct BurnDriver BurnDrvDeerhunb = {
 	"deerhuntb", "deerhunt", NULL, NULL, "2000",
 	"Deer Hunting USA V4.0\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhunbRomInfo, deerhunbRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -3976,9 +4000,9 @@ struct BurnDriver BurnDrvDeerhunb = {
 
 struct BurnDriver BurnDrvDeerhunc = {
 	"deerhuntc", "deerhunt", NULL, NULL, "2000",
-	"Deer Hunting USA V3.0\0", NULL, "Sammy USA Corporation", "Newer Seta",
+	"Deer Hunting USA V3\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhuncRomInfo, deerhuncRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -3988,7 +4012,7 @@ struct BurnDriver BurnDrvDeerhund = {
 	"deerhuntd", "deerhunt", NULL, NULL, "2000",
 	"Deer Hunting USA V2\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhundRomInfo, deerhundRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -3998,7 +4022,7 @@ struct BurnDriver BurnDrvDeerhune = {
 	"deerhunte", "deerhunt", NULL, NULL, "2000",
 	"Deer Hunting USA V1\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhuneRomInfo, deerhuneRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4008,7 +4032,7 @@ struct BurnDriver BurnDrvDeerhunj = {
 	"deerhuntj", "deerhunt", NULL, NULL, "2000",
 	"Deer Hunting USA V4.4.1 (Japan)\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, deerhunjRomInfo, deerhunjRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, DeerhuntDIPInfo,
 	deerhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4018,7 +4042,7 @@ struct BurnDriver BurnDrvTurkhunt = {
 	"turkhunt", NULL, NULL, NULL, "2001",
 	"Turkey Hunting USA V1.00\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 1, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, turkhuntRomInfo, turkhuntRomName, NULL, NULL, NULL, NULL, DeerhuntInputInfo, TurkhuntDIPInfo,
 	turkhuntInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4028,7 +4052,7 @@ struct BurnDriver BurnDrvWschamp = {
 	"wschamp", NULL, NULL, NULL, "2001",
 	"Wing Shooting Championship V2.00\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, wschampRomInfo, wschampRomName, NULL, NULL, NULL, NULL, WschampInputInfo, WschampDIPInfo,
 	wschampInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4038,7 +4062,7 @@ struct BurnDriver BurnDrvWschampa = {
 	"wschampa", "wschamp", NULL, NULL, "2001",
 	"Wing Shooting Championship V1.01\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, wschampaRomInfo, wschampaRomName, NULL, NULL, NULL, NULL, WschampInputInfo, WschampDIPInfo,
 	wschampInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4048,7 +4072,7 @@ struct BurnDriver BurnDrvWschampb = {
 	"wschampb", "wschamp", NULL, NULL, "2001",
 	"Wing Shooting Championship V1.00\0", NULL, "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, wschampbRomInfo, wschampbRomName, NULL, NULL, NULL, NULL, WschampInputInfo, WschampDIPInfo,
 	wschampInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4058,7 +4082,7 @@ struct BurnDriver BurnDrvTrophyh = {
 	"trophyh", NULL, NULL, NULL, "2002",
 	"Trophy Hunting - Bear & Moose V1.00\0", "Hangs are normal, just wait it out.", "Sammy USA Corporation", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SHOOT, 0,
 	NULL, trophyhRomInfo, trophyhRomName, NULL, NULL, NULL, NULL, WschampInputInfo, TrophyhDIPInfo,
 	trophyhInit, grdiansExit, samshootFrame, samshootDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4073,7 +4097,7 @@ struct BurnDriverD BurnDrvFuncube2 = {
 	"funcube2", NULL, NULL, NULL, "2001",
 	"Funcube 2 (v1.1)\0", "Unemulated Sub CPU", "Namco", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	0, 2, HARDWARE_SETA2, GBF_PUZZLE, 0,
+	0 | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_PUZZLE, 0,
 	NULL, funcube2RomInfo, funcube2RomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
 	funcubeInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
@@ -4083,8 +4107,165 @@ struct BurnDriverD BurnDrvFuncube4 = {
 	"funcube4", NULL, NULL, NULL, "2001",
 	"Funcube 4 (v1.0)\0", "Unemulated Sub CPU", "Namco", "Newer Seta",
 	NULL, NULL, NULL, NULL,
-	0, 2, HARDWARE_SETA2, GBF_PUZZLE, 0,
+	0 | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_PUZZLE, 0,
 	NULL, funcube4RomInfo, funcube4RomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
 	funcubeInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
 	320, 240, 4, 3
 };
+
+
+// -----------------------------------------------------------------------------
+// Guardians / Denjin Makai II Series
+// -----------------------------------------------------------------------------
+
+#define GRDIANS_COMPONENT										\
+	{ "u4.bin",		0x080000, 0xbb52447b, BRF_ESS | BRF_PRG },	\
+	{ "u5.bin",		0x080000, 0x9c164a3b, BRF_ESS | BRF_PRG },	\
+	{ "u16.bin",	0x400000, 0x6a65f265, BRF_GRA },			\
+	{ "u20.bin",	0x400000, 0xa7226ab7, BRF_GRA },			\
+	{ "u15.bin",	0x400000, 0x01672dcd, BRF_GRA },			\
+	{ "u19.bin",	0x400000, 0xc0c998a0, BRF_GRA },			\
+	{ "u18.bin",	0x400000, 0x967babf4, BRF_GRA },			\
+	{ "u22.bin",	0x400000, 0x6239997a, BRF_GRA },			\
+	{ "u17.bin",	0x400000, 0x0fad0629, BRF_GRA },			\
+	{ "u21.bin",	0x400000, 0x6f95e466, BRF_GRA },			\
+	{ "u32.bin",	0x100000, 0xcf0f3017, BRF_SND },
+
+// Guardians / Denjin Makai II (Pro, Hack)
+// GOTVG 20240204
+
+static struct BurnRomInfo grdiandsRomDesc[] = {
+	{ "u2_ds.bin",	0x080000, 0x3e62b0f2, BRF_ESS | BRF_PRG },
+	{ "u3_ds.bin",	0x080000, 0x46111562, BRF_ESS | BRF_PRG },
+	GRDIANS_COMPONENT
+};
+
+STD_ROM_PICK(grdiands)
+STD_ROM_FN(grdiands)
+
+struct BurnDriver BurnDrvGrdiands = {
+	"grdiands", "grdians", NULL, NULL, "2024",
+	"Guardians / Denjin Makai II (Pro, Hack)\0", NULL, "hack", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (Pro, Hack)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdiandsRomInfo, grdiandsRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+	304, 232, 4, 3
+};
+
+
+// Guardians / Denjin Makai II (Evil, Hack)
+// GOTVG 20240204
+
+static struct BurnRomInfo grdiansyRomDesc[] = {
+	{ "u2_ds.bin",	0x080000, 0x3e62b0f2, BRF_ESS | BRF_PRG },
+	{ "u3_sy.bin",	0x080000, 0x28ae495d, BRF_ESS | BRF_PRG },
+	GRDIANS_COMPONENT
+};
+
+STD_ROM_PICK(grdiansy)
+STD_ROM_FN(grdiansy)
+
+struct BurnDriver BurnDrvGrdiansy = {
+	"grdiansy", "grdians", NULL, NULL, "2024",
+	"Guardians / Denjin Makai II (Evil, Hack)\0", NULL, "hack", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (Evil, Hack)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdiansyRomInfo, grdiansyRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+	304, 232, 4, 3
+};
+
+
+// Guardians / Denjin Makai II Plus (Hack)
+// GOTVG 20231008
+
+static struct BurnRomInfo grdianspRomDesc[] = {
+	{ "u2_pls.bin",	0x080000, 0xa920eea9, BRF_ESS | BRF_PRG },
+	{ "u3_pls.bin",	0x080000, 0x4b98155f, BRF_ESS | BRF_PRG },
+	GRDIANS_COMPONENT
+};
+
+STD_ROM_PICK(grdiansp)
+STD_ROM_FN(grdiansp)
+
+struct BurnDriver BurnDrvGrdiansp = {
+	"grdiansp", "grdians", NULL, NULL, "2023",
+	"Guardians / Denjin Makai II (Plus, Hack)\0", NULL, "hack", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (Plus, Hack)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdianspRomInfo, grdianspRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+	304, 232, 4, 3
+};
+
+
+// Guardians / Denjin Makai II (LBS, Hack)
+// GOTVG 20231030
+
+static struct BurnRomInfo grdianslRomDesc[] = {
+	{ "u2_lbs.bin",	0x080000, 0xaf77f6dd, BRF_ESS | BRF_PRG },
+	{ "u3_lbs.bin",	0x080000, 0x9f6433df, BRF_ESS | BRF_PRG },
+	GRDIANS_COMPONENT
+};
+
+STD_ROM_PICK(grdiansl)
+STD_ROM_FN(grdiansl)
+
+struct BurnDriver BurnDrvGrdiansl = {
+	"grdiansl", "grdians", NULL, NULL, "2023",
+	"Guardians / Denjin Makai II (LBS, Hack)\0", NULL, "hack", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (LBS, Hack)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdianslRomInfo, grdianslRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+	304, 232, 4, 3
+};
+
+
+// Guardians / Denjin Makai II (LBS Super, Hack)
+// GOTVG 20210419
+
+static struct BurnRomInfo grdianlsRomDesc[] = {
+	{ "u2_lbss.bin",	0x080000, 0xe8c9fb0f, BRF_ESS | BRF_PRG },
+	{ "u3_lbss.bin",	0x080000, 0xd4dac047, BRF_ESS | BRF_PRG },
+	GRDIANS_COMPONENT
+};
+
+STD_ROM_PICK(grdianls)
+STD_ROM_FN(grdianls)
+
+struct BurnDriver BurnDrvGrdianls = {
+	"grdianls", "grdians", NULL, NULL, "2021",
+	"Guardians / Denjin Makai II (LBS Super, Hack)\0", NULL, "hack", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (LBS Super, Hack)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdianlsRomInfo, grdianlsRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+	304, 232, 4, 3
+};
+
+
+// Guardians / Denjin Makai II (Reverie, Hack)
+// GOTVG 20220606
+
+static struct BurnRomInfo grdiankeRomDesc[] = {
+	{ "u2_ke.bin",	0x080000, 0xba4a9452, BRF_ESS | BRF_PRG },
+	{ "u3_ke.bin",	0x080000, 0xd1713d73, BRF_ESS | BRF_PRG },
+	GRDIANS_COMPONENT
+};
+
+STD_ROM_PICK(grdianke)
+STD_ROM_FN(grdianke)
+
+struct BurnDriver BurnDrvGrdianke = {
+	"grdianke", "grdians", NULL, NULL, "2022",
+	"Guardians / Denjin Makai II (Reverie, Hack)\0", NULL, "hack", "Newer Seta",
+	L"Guardians\0\u96fb\u795e\u9b54\u5080\u2161 (Reverie, Hack)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_SETA2, GBF_SCRFIGHT, 0,
+	NULL, grdiankeRomInfo, grdiankeRomName, NULL, NULL, NULL, NULL, grdiansInputInfo, grdiansDIPInfo,
+	grdiansInit, grdiansExit, grdiansFrame, DrvDraw, grdiansScan, &bRecalcPalette, 0x8000,
+	304, 232, 4, 3
+};
+
+#undef GRDIANS_COMPONENT

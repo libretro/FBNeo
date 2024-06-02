@@ -52,6 +52,8 @@ static INT32 sy_offset;
 static INT32 char_color_offset;
 static INT32 sound_interrupt_count;
 
+static INT32 nExtraCycles[2];
+
 static struct BurnInputInfo WilytowrInputList[] = {
 	{"P1 Coin",			BIT_DIGITAL,	DrvJoy1 + 7,	"p1 coin"	},
 	{"P1 Start",		BIT_DIGITAL,	DrvJoy1 + 6,	"p1 start"	},
@@ -479,6 +481,10 @@ static INT32 DrvDoReset()
 
 	DrvRecalc = 1;
 
+	memset(nExtraCycles, 0, sizeof(nExtraCycles));
+
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -824,9 +830,9 @@ static INT32 DrvFrame()
 	I8039NewFrame();
 	ZetNewFrame();
 
-	INT32 nCyclesTotal[2] = { 3000000 / 60, 3000000 / 60 };
-	INT32 nCyclesDone[2]  = { 0, 0 };
 	INT32 nInterleave = 256;
+	INT32 nCyclesTotal[2] = { 3000000 / 60, 3000000 / 60 };
+	INT32 nCyclesDone[2] = { nExtraCycles[0], nExtraCycles[1] };
 
 	ZetOpen(0);
 	I8039Open(0);
@@ -853,6 +859,9 @@ static INT32 DrvFrame()
 
 	I8039Close();
 	ZetClose();
+
+	nExtraCycles[0] = nCyclesDone[0] - nCyclesTotal[0];
+	nExtraCycles[1] = nCyclesDone[1] - nCyclesTotal[1];
 
 	if (pBurnDraw) {
 		DrvDraw();
@@ -888,6 +897,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 		SCAN_VAR(sample_pos);
 		SCAN_VAR(sample_end);
 		SCAN_VAR(sample_sel);
+
+		SCAN_VAR(nExtraCycles);
 	}
 
 	return 0;
@@ -935,7 +946,7 @@ struct BurnDriver BurnDrvWilytowr = {
 	"wilytowr", NULL, NULL, NULL, "1984",
 	"Wily Tower\0", NULL, "Irem", "Irem M63",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_IREM_M63, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_M63, GBF_PLATFORM, 0,
 	NULL, wilytowrRomInfo, wilytowrRomName, NULL, NULL, NULL, NULL, WilytowrInputInfo, WilytowrDIPInfo,
 	wilytowrInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x104,
 	256, 224, 4, 3
@@ -983,7 +994,7 @@ struct BurnDriver BurnDrvAtomboy = {
 	"atomboy", "wilytowr", NULL, NULL, "1985",
 	"Atomic Boy (revision B)\0", NULL, "Irem (Memetron license)", "Irem M63",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_IREM_M63, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_M63, GBF_PLATFORM, 0,
 	NULL, atomboyRomInfo, atomboyRomName, NULL, NULL, NULL, NULL, WilytowrInputInfo, WilytowrDIPInfo,
 	atomboyInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x104,
 	256, 224, 4, 3
@@ -1031,7 +1042,7 @@ struct BurnDriver BurnDrvAtomboya = {
 	"atomboya", "wilytowr", NULL, NULL, "1985",
 	"Atomic Boy (revision A)\0", NULL, "Irem (Memetron license)", "Irem M63",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_IREM_M63, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_M63, GBF_PLATFORM, 0,
 	NULL, atomboyaRomInfo, atomboyaRomName, NULL, NULL, NULL, NULL, WilytowrInputInfo, WilytowrDIPInfo,
 	atomboyInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x104,
 	256, 224, 4, 3
@@ -1082,7 +1093,7 @@ struct BurnDriver BurnDrvFghtbskt = {
 	"fghtbskt", NULL, NULL, NULL, "1984",
 	"Fighting Basketball\0", NULL, "Paradise Co. Ltd.", "Irem M63",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_IREM_M63, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_IREM_M63, GBF_SPORTSMISC, 0,
 	NULL, fghtbsktRomInfo, fghtbsktRomName, NULL, NULL, NULL, NULL, FghtbsktInputInfo, FghtbsktDIPInfo,
 	fghtbsktInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 224, 4, 3

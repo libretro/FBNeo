@@ -289,6 +289,8 @@ static INT32 DrvDoReset()
 	BurnYM3526Reset();
 	M6809Close();
 
+	HiscoreReset();
+
 	soundlatch = 0;
 	protection_value = 0;
 	flipscreen = 0;
@@ -435,12 +437,11 @@ static INT32 DrvInit()
 	M6809Close();
 
 	BurnYM2203Init(1, 1500000, NULL, 0);
-	BurnTimerAttach(&M6502Config, 1500000);
 	BurnYM2203SetAllRoutes(0, 0.30, BURN_SND_ROUTE_BOTH);
 	BurnYM2203SetPSGVolume(0, 0.12);
 
 	BurnYM3526Init(3000000, &DrvFMIRQHandler, 1);
-	BurnTimerAttachYM3526(&M6809Config, 2000000);
+	BurnTimerAttach(&M6809Config, 2000000);
 	BurnYM3526SetRoute(BURN_SND_YM3526_ROUTE, 0.60, BURN_SND_ROUTE_BOTH);
 
 	GenericTilesInit();
@@ -609,27 +610,25 @@ static INT32 DrvFrame()
 
 	INT32 nInterleave = 262;
 	INT32 nCyclesTotal[2] = { 1500000 / 60, 2000000 / 60 };
+	INT32 nCyclesDone[2] = { 0, 0 };
 
 	*vblank = 0;
 
 	for (INT32 i = 0; i < nInterleave; i++)
 	{
-		BurnTimerUpdate(i * (nCyclesTotal[0] / nInterleave));
-		BurnTimerUpdateYM3526((i + 1) * (nCyclesTotal[1] / nInterleave));
+		CPU_RUN(0, M6502);
+		CPU_RUN_TIMER(1);
 
 		if (i == 247) *vblank = 0xff;
 	}
 
-	BurnTimerEndFrame(nCyclesTotal[0]);
-	BurnTimerEndFrameYM3526(nCyclesTotal[1]);
+	M6809Close();
+	M6502Close();
 
 	if (pBurnSoundOut) {
 		BurnYM2203Update(pBurnSoundOut, nBurnSoundLen);
 		BurnYM3526Update(pBurnSoundOut, nBurnSoundLen);
 	}
-
-	M6809Close();
-	M6502Close();
 
 	if (pBurnDraw) {
 		BurnDrvRedraw();
@@ -691,7 +690,7 @@ static struct BurnRomInfo exprraidRomDesc[] = {
 	{ "cz05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cz06.8h",		0x8000, 0xb9bb448b, 5 | BRF_GRA },           // 12
 
-	{ "cz03.12d",		0x8000, 0x6ce11971, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "cz03.12f",		0x8000, 0x6ce11971, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -710,7 +709,7 @@ struct BurnDriver BurnDrvExprraid = {
 	"exprraid", NULL, NULL, NULL, "1986",
 	"Express Raider (World, Rev 4)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, exprraidRomInfo, exprraidRomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3
@@ -738,7 +737,7 @@ static struct BurnRomInfo exprraiduRomDesc[] = {
 	{ "cz05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cz06.8h",		0x8000, 0xb9bb448b, 5 | BRF_GRA },           // 12
 
-	{ "cz03.12d",		0x8000, 0x6ce11971, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "cz03.12f",		0x8000, 0x6ce11971, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -757,7 +756,7 @@ struct BurnDriver BurnDrvExprraidu = {
 	"exprraidu", "exprraid", NULL, NULL, "1986",
 	"Express Raider (US, rev 5)\0", NULL, "Data East USA", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, exprraiduRomInfo, exprraiduRomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3
@@ -785,7 +784,7 @@ static struct BurnRomInfo exprraidiRomDesc[] = {
 	{ "cz05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cz06.8h",		0x8000, 0xb9bb448b, 5 | BRF_GRA },           // 12
 
-	{ "cz03.12d",		0x8000, 0x6ce11971, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "cz03.12f",		0x8000, 0x6ce11971, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -804,7 +803,7 @@ struct BurnDriver BurnDrvExprraidi = {
 	"exprraidi", "exprraid", NULL, NULL, "1986",
 	"Express Raider (Italy)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, exprraidiRomInfo, exprraidiRomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3
@@ -832,7 +831,7 @@ static struct BurnRomInfo wexpressRomDesc[] = {
 	{ "cy05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cy06.8h",		0x8000, 0xc3a56de5, 5 | BRF_GRA },           // 12
 
-	{ "cy03.12d",		0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "cy03.12f",		0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -851,7 +850,7 @@ struct BurnDriver BurnDrvWexpress = {
 	"wexpress", "exprraid", NULL, NULL, "1986",
 	"Western Express (Japan, rev 4)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, wexpressRomInfo, wexpressRomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3
@@ -879,7 +878,7 @@ static struct BurnRomInfo wexpressb1RomDesc[] = {
 	{ "cy05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cy06.8h",		0x8000, 0xc3a56de5, 5 | BRF_GRA },           // 12
 
-	{ "cy03.12d",		0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "cy03.12f",		0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -904,7 +903,7 @@ struct BurnDriver BurnDrvWexpressb1 = {
 	"wexpressb1", "exprraid", NULL, NULL, "1986",
 	"Western Express (bootleg set 1)\0", NULL, "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, wexpressb1RomInfo, wexpressb1RomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	Wexpressb1Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3
@@ -932,7 +931,7 @@ static struct BurnRomInfo wexpressb2RomDesc[] = {
 	{ "cy05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cy06.8h",		0x8000, 0xc3a56de5, 5 | BRF_GRA },           // 12
 
-	{ "cy03.12d",		0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "cy03.12f",		0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -954,7 +953,7 @@ struct BurnDriver BurnDrvWexpressb2 = {
 	"wexpressb2", "exprraid", NULL, NULL, "1986",
 	"Western Express (bootleg set 2)\0", NULL, "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, wexpressb2RomInfo, wexpressb2RomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	Wexpressb2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3
@@ -982,7 +981,7 @@ static struct BurnRomInfo wexpressb3RomDesc[] = {
 	{ "cy05.8f",		0x8000, 0xc44570bf, 5 | BRF_GRA },           // 11
 	{ "cy06.8h",		0x8000, 0xc3a56de5, 5 | BRF_GRA },           // 12
 
-	{ "3.12d",			0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
+	{ "3.12f",			0x8000, 0x242e3e64, 6 | BRF_GRA },           // 13 Background Tile Map
 
 	{ "cy-17.5b",		0x0100, 0xda31dfbc, 7 | BRF_GRA },           // 14 Color Data
 	{ "cy-16.6b",		0x0100, 0x51f25b4c, 7 | BRF_GRA },           // 15
@@ -1004,7 +1003,7 @@ struct BurnDriver BurnDrvWexpressb3 = {
 	"wexpressb3", "exprraid", NULL, NULL, "1986",
 	"Western Express (bootleg set 3)\0", NULL, "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_SCRFIGHT, 0,
 	NULL, wexpressb3RomInfo, wexpressb3RomName, NULL, NULL, NULL, NULL, ExprraidInputInfo, ExprraidDIPInfo,
 	Wexpressb3Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	256, 240, 4, 3

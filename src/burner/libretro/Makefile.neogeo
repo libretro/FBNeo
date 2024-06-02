@@ -294,12 +294,8 @@ ifeq ($(INCLUDE_7Z_SUPPORT), 1)
 	SOURCES_CXX += $(FBNEO_BURNER_DIR)/un7z.cpp
 endif
 
-SOURCES_C += $(FBNEO_BURN_SND_DIR)/fm.c \
-	$(M68K_CPU_DIR)/m68kcpu.c \
-	$(M68K_CPU_DIR)/m68kops.c \
-	$(FBNEO_BURN_SND_DIR)/ay8910.c \
-	$(FBNEO_BURN_SND_DIR)/ymdeltat.c \
-	$(FBNEO_BURNER_DIR)/ioapi.c \
+# FBNeo framework
+SOURCES_C += $(FBNEO_BURNER_DIR)/ioapi.c \
 	$(FBNEO_BURNER_DIR)/unzip.c
 
 SOURCES_CXX += $(FBNEO_BURN_DIR)/burn.cpp \
@@ -314,10 +310,29 @@ SOURCES_CXX += $(FBNEO_BURN_DIR)/burn.cpp \
 	$(FBNEO_BURNER_DIR)/conc.cpp \
 	$(FBNEO_BURNER_DIR)/statec.cpp \
 	$(FBNEO_BURNER_DIR)/zipfn.cpp \
-	$(FBNEO_CPU_DIR)/z80_intf.cpp \
+	$(FBNEO_BURNER_DIR)/nvram.cpp \
 	$(FBNEO_INTERFACE_DIR)/audio/aud_dsp.cpp \
 	$(FBNEO_INTERFACE_DIR)/audio/lowpass2.cpp \
-	$(FBNEO_BURN_DEVICES_DIR)/joyprocess.cpp \
+	$(FBNEO_BURN_DEVICES_DIR)/joyprocess.cpp
+
+# libretro port
+SOURCES_CXX += $(LIBRETRO_DIR)/libretro.cpp \
+	$(LIBRETRO_DIR)/retro_cdemu.cpp \
+	$(LIBRETRO_DIR)/retro_common.cpp \
+	$(LIBRETRO_DIR)/retro_input.cpp \
+	$(LIBRETRO_DIR)/retro_memory.cpp
+
+SOURCES_C += $(UGUI_DIR)/ugui.c \
+	$(LIBRETRO_DIR)/ugui_tools.c
+
+# Drivers, cpus and devices for this subset
+SOURCES_C += $(FBNEO_BURN_SND_DIR)/fm.c \
+	$(M68K_CPU_DIR)/m68kcpu.c \
+	$(M68K_CPU_DIR)/m68kops.c \
+	$(FBNEO_BURN_SND_DIR)/ay8910.c \
+	$(FBNEO_BURN_SND_DIR)/ymdeltat.c
+
+SOURCES_CXX += $(FBNEO_CPU_DIR)/z80_intf.cpp \
 	$(Z80_CPU_DIR)/z80.cpp \
 	$(Z80_CPU_DIR)/z80ctc.cpp \
 	$(Z80_CPU_DIR)/z80daisy.cpp \
@@ -335,16 +350,7 @@ SOURCES_CXX += $(FBNEO_BURN_DIR)/burn.cpp \
 	$(NEOGEO_DIR)/neo_upd4990a.cpp \
 	$(NEOGEO_DIR)/neogeo.cpp
 
-SOURCES_CXX += $(LIBRETRO_DIR)/libretro.cpp \
-	$(LIBRETRO_DIR)/retro_cdemu.cpp \
-	$(LIBRETRO_DIR)/retro_common.cpp \
-	$(LIBRETRO_DIR)/retro_input.cpp \
-	$(LIBRETRO_DIR)/retro_memory.cpp
-
-SOURCES_C += $(UGUI_DIR)/ugui.c \
-	$(LIBRETRO_DIR)/ugui_tools.c
-
-CXXFLAGS += -DNO_NES -DSUBSET=\"$(subset)\"
+CXXFLAGS += -DSUBSET=\"$(subset)\"
 
 # GIT HASH
 GIT_VERSION := " $(shell git rev-parse --short HEAD || echo unknown)"

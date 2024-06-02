@@ -3,7 +3,7 @@
 #include "neogeo.h"
 #include "bitswap.h"
 
-UINT8 nNeoProtectionXor;
+INT32 nNeoProtectionXor = -1;
 
 // This function loads the 68K ROMs
 INT32 NeoLoadCode(INT32 nOffset, INT32 nNum, UINT8* pDest)
@@ -397,7 +397,7 @@ INT32 NeoLoadADPCM(INT32 nOffset, INT32 nNum, UINT8* pDest)
 // This function fills the screen with the first palette entry
 void NeoClearScreen()
 {
-	UINT32 nColour = NeoPalette[0x0FFF];
+	UINT32 nColour = (nSpriteEnable == 0xff && (nBurnLayer & 0x10)) ? NeoPalette[0x0FFF] : BurnHighCol(0xff, 0, 0xff, 0);
 
 	if (nColour) {
 		switch (nBurnBpp) {

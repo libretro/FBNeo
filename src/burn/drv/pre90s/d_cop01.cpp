@@ -468,6 +468,8 @@ static INT32 DrvDoReset()
 		BurnYM3526Reset();
 	}
 
+	HiscoreReset();
+
 	soundlatch = 0;
 	timer_pulse = 0;
 
@@ -668,7 +670,7 @@ static INT32 MightguyInit()
 	ZetClose();
 
 	BurnYM3526Init(4000000, NULL, 0);
-	BurnTimerAttachYM3526(&ZetConfig, 4000000);
+	BurnTimerAttach(&ZetConfig, 4000000);
 	BurnYM3526SetRoute(BURN_SND_YM3526_ROUTE, 0.85, BURN_SND_ROUTE_BOTH);
 
 	DACInit(0, 0, 1, ZetTotalCycles, 4000000);
@@ -767,7 +769,7 @@ static void draw_sprites()
 
 		if (code & 0x80) code += bank;
 
-		Draw16x16MaskTile(pTransDraw, code, sx, sy - 16, flipx, flipy, color, 4, 0, 0x200, DrvGfxROM2);
+		RenderTileTranstabOffset(pTransDraw, DrvGfxROM2, code, color << 4, 0xf, sx, sy - 16, flipx, flipy, 16, 16, DrvColPROM + 0x400, 0x200);
 	}
 }
 
@@ -875,7 +877,7 @@ static INT32 MightguyFrame()
 
 		ZetOpen(1);
 		INT32 lastcyc = ZetTotalCycles();
-		BurnTimerUpdateYM3526((i + 1) * (nCyclesTotal[1] / nInterleave));
+		CPU_RUN_TIMER(1);
 
 		if (dac_intrl_table[i]) { // clock-in the dac @ prot_dac_freq (see dac_recalc_freq())
 			mightguy_prot_dac_clk();
@@ -891,16 +893,10 @@ static INT32 MightguyFrame()
 		ZetClose();
 	}
 
-	ZetOpen(1);
-
-	BurnTimerEndFrameYM3526(nCyclesTotal[1]);
-
 	if (pBurnSoundOut) {
 		BurnYM3526Update(pBurnSoundOut, nBurnSoundLen);
 		DACUpdate(pBurnSoundOut, nBurnSoundLen);
 	}
-
-	ZetClose();
 
 	if (pBurnDraw) {
 		DrvDraw();
@@ -999,7 +995,7 @@ struct BurnDriver BurnDrvCop01 = {
 	"cop01", NULL, NULL, NULL, "1985",
 	"Cop 01 (set 1)\0", NULL, "Nichibutsu", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, cop01RomInfo, cop01RomName, NULL, NULL, NULL, NULL, Cop01InputInfo, Cop01DIPInfo,
 	Cop01Init, DrvExit, Cop01Frame, DrvDraw, DrvScan, &DrvRecalc, 0x190,
 	256, 224, 4, 3
@@ -1045,7 +1041,7 @@ struct BurnDriver BurnDrvCop01a = {
 	"cop01a", "cop01", NULL, NULL, "1985",
 	"Cop 01 (set 2)\0", NULL, "Nichibutsu", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, cop01aRomInfo, cop01aRomName, NULL, NULL, NULL, NULL, Cop01InputInfo, Cop01DIPInfo,
 	Cop01Init, DrvExit, Cop01Frame, DrvDraw, DrvScan, &DrvRecalc, 0x190,
 	256, 224, 4, 3
@@ -1088,8 +1084,8 @@ struct BurnDriver BurnDrvMightguy = {
 	"mightguy", NULL, NULL, NULL, "1986",
 	"Mighty Guy\0", NULL, "Nichibutsu", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_RUNGUN, 0,
 	NULL, mightguyRomInfo, mightguyRomName, NULL, NULL, NULL, NULL, Cop01InputInfo, MightguyDIPInfo,
-	MightguyInit, DrvExit, MightguyFrame, DrvDraw, DrvScan, &DrvRecalc, 0x190,
+	MightguyInit, DrvExit, MightguyFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	224, 256, 3, 4
 };

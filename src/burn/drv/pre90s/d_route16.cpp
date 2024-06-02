@@ -1,4 +1,4 @@
-// FB Alpha Route 16 driver module
+// FB Neo Route 16 driver module
 // Based on MAME driver by Zsolt Vasvari
 
 // Todo: revise route16 protection
@@ -482,6 +482,8 @@ static INT32 DrvDoReset()
 	ttmahjng_port_select = 0;
 	protection_data = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -824,11 +826,11 @@ static struct BurnRomInfo route16RomDesc[] = {
 	{ "stvg56.a2",     	0x0800, 0xa8e92871, 1 | BRF_ESS | BRF_PRG }, 	//  2
 	{ "stvg57.a3",     	0x0800, 0xa0fc9fc5, 1 | BRF_ESS | BRF_PRG },    //  3
 	{ "stvg58.a4",     	0x0800, 0xcc95c02c, 1 | BRF_ESS | BRF_PRG },    //  4
-	{ "tvg59.a5",     	0x0800, 0xa39ef648, 1 | BRF_ESS | BRF_PRG },    //  5
+	{ "stvg59.a5",     	0x0800, 0xa39ef648, 1 | BRF_ESS | BRF_PRG },    //  5
 
 	{ "stvg60.b0",     	0x0800, 0xfef605f3, 2 | BRF_ESS | BRF_PRG },    //  6 Z80 #1 Code
 	{ "stvg61.b1",     	0x0800, 0xd0d6c189, 2 | BRF_ESS | BRF_PRG },    //  7
-	{ "tsvg62.b2",     	0x0800, 0xdefc5797, 2 | BRF_ESS | BRF_PRG },    //  8
+	{ "stvg62.b2",     	0x0800, 0xdefc5797, 2 | BRF_ESS | BRF_PRG },    //  8
 	{ "stvg63.b3",     	0x0800, 0x88d94a66, 2 | BRF_ESS | BRF_PRG },    //  9
 
 	{ "mb7052.59",    	0x0100, 0x08793ef7, 3 | BRF_GRA },	     	    // 10 Graphics
@@ -844,7 +846,7 @@ struct BurnDriver BurnDrvroute16 = {
 	"route16", NULL, NULL, NULL, "1981",
 	"Route 16 (Sun Electronics, set 1)\0", NULL, "Sun Electronics", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, route16RomInfo, route16RomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	DrvInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -904,7 +906,7 @@ struct BurnDriver BurnDrvroute16a = {
 	"route16a", "route16", NULL, NULL, "1981",
 	"Route 16 (Centuri license, set 1)\0", NULL, "Tehkan / Sun Electronics (Centuri license)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, route16aRomInfo, route16aRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	route16aInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -964,7 +966,7 @@ struct BurnDriver BurnDrvroute16b = {
 	"route16b", "route16", NULL, NULL, "1981",
 	"Route 16 (Centuri license, set 2)\0", NULL, "Tehkan / Sun Electronics (Centuri license)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, route16bRomInfo, route16bRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	route16bInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1016,7 +1018,7 @@ struct BurnDriver BurnDrvroute16c = {
 	"route16c", "route16", NULL, NULL, "1981",
 	"Route 16 (Centuri license, set 3, bootleg?)\0", NULL, "Tehkan / Sun Electronics (Centuri license)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, route16cRomInfo, route16cRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	route16cInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1081,7 +1083,7 @@ struct BurnDriver BurnDrvroute16d = {
 	"route16d", "route16", NULL, NULL, "1981",
 	"Route 16 (Sun Electronics, set 2)\0", NULL, "Sun Electronics", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, route16dRomInfo, route16dRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	route16dInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1114,7 +1116,7 @@ struct BurnDriver BurnDrvroute16bl = {
 	"route16bl", "route16", NULL, NULL, "1981",
 	"Route 16 (bootleg)\0", NULL, "bootleg (Leisure and Allied)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, route16blRomInfo, route16blRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	DrvInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1148,7 +1150,7 @@ struct BurnDriver BurnDrvroutex = {
 	"routex", "route16", NULL, NULL, "1981",
 	"Route X (bootleg, set 1)\0", NULL, "bootleg", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, routexRomInfo, routexRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	DrvInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1182,7 +1184,7 @@ struct BurnDriver BurnDrvroutexa = {
 	"routexa", "route16", NULL, NULL, "1981",
 	"Route X (bootleg, set 2)\0", NULL, "bootleg", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_MAZE, 0,
 	NULL, routexaRomInfo, routexaRomName, NULL, NULL, NULL, NULL, Route16InputInfo, Route16DIPInfo,
 	DrvInit, DrvExit, DrvFrame, Route16Draw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1213,7 +1215,7 @@ struct BurnDriver BurnDrvspeakres = {
 	"speakres", NULL, NULL, NULL, "1980",
 	"Speak & Rescue\0", NULL, "Sun Electronics", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, speakresRomInfo, speakresRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, SpeakresDIPInfo,
 	DrvInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1244,14 +1246,14 @@ struct BurnDriver BurnDrvspeakresb = {
 	"speakresb", "speakres", NULL, NULL, "1980",
 	"Speak & Rescue (bootleg)\0", NULL, "bootleg", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, speakresbRomInfo, speakresbRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, SpeakresDIPInfo,
 	DrvInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
 };
 
 
-// Stratovox
+// Stratovox (set 1)
 
 static struct BurnRomInfo stratvoxRomDesc[] = {
 	{ "ls01.bin",     	0x0800, 0xbf4d582e, 1 | BRF_ESS | BRF_PRG }, //  0 Z80 #0 Code
@@ -1273,10 +1275,41 @@ STD_ROM_FN(stratvox)
 
 struct BurnDriver BurnDrvstratvox = {
 	"stratvox", "speakres", NULL, NULL, "1980",
-	"Stratovox\0", NULL, "[Sun Electronics] (Taito license)", "Route 16",
+	"Stratovox (set 1)\0", NULL, "Sun Electronics (Taito license)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, stratvoxRomInfo, stratvoxRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, StratvoxDIPInfo,
+	DrvInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
+	256, 256, 3, 4
+};
+
+
+// Stratovox (set 2)
+
+static struct BurnRomInfo stratvoxaRomDesc[] = {
+	{ "sv-1",         	0x0800, 0xbf4d582e, 1 | BRF_ESS | BRF_PRG }, //  0 Z80 #0 Code
+	{ "sv-2",         	0x0800, 0x16739dd4, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "sv-3",         	0x0800, 0x083c28de, 1 | BRF_ESS | BRF_PRG }, //  2
+	{ "sv-4",         	0x0800, 0xb0927e3b, 1 | BRF_ESS | BRF_PRG }, //  3
+	{ "sv-5",         	0x0800, 0xccd25c4e, 1 | BRF_ESS | BRF_PRG }, //  4
+	{ "sv-6",         	0x0800, 0x07a907a7, 1 | BRF_ESS | BRF_PRG }, //  5
+
+	{ "sv-7",         	0x0800, 0x4d333985, 2 | BRF_ESS | BRF_PRG }, //  6 Z80 #1 Code
+	{ "sv-8",         	0x0800, 0x9b2377e0, 2 | BRF_ESS | BRF_PRG }, //  7
+
+	{ "im5623.f10",   	0x0100, 0x08793ef7, 3 | BRF_GRA },	     //  8 Graphics
+	{ "im5623.f12",   	0x0100, 0x08793ef7, 3 | BRF_GRA },	     //  9
+};
+
+STD_ROM_PICK(stratvoxa)
+STD_ROM_FN(stratvoxa)
+
+struct BurnDriver BurnDrvstratvoxa = {
+	"stratvoxa", "speakres", NULL, NULL, "1980",
+	"Stratovox (set 2)\0", NULL, "Sun Electronics (Taito license)", "Route 16",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	NULL, stratvoxaRomInfo, stratvoxaRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, StratvoxDIPInfo,
 	DrvInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
 };
@@ -1306,7 +1339,7 @@ struct BurnDriver BurnDrvstratvob = {
 	"stratvoxb", "speakres", NULL, NULL, "1980",
 	"Stratovox (bootleg)\0", NULL, "bootleg", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, stratvobRomInfo, stratvobRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, StratvoxDIPInfo,
 	DrvInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1345,7 +1378,7 @@ struct BurnDriver BurnDrvspacecho = {
 	"spacecho", "speakres", NULL, NULL, "1980",
 	"Space Echo (set 1)\0", NULL, "bootleg (Gayton Games)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, spacechoRomInfo, spacechoRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, SpacechoDIPInfo,
 	SpaceechoInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
@@ -1377,8 +1410,40 @@ struct BurnDriver BurnDrvspacecho2 = {
 	"spacecho2", "speakres", NULL, NULL, "1980",
 	"Space Echo (set 2)\0", NULL, "bootleg (Gayton Games)", "Route 16",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, spacecho2RomInfo, spacecho2RomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, SpacechoDIPInfo,
+	SpaceechoInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
+	256, 256, 3, 4
+};
+
+
+// Speak & Help
+
+static struct BurnRomInfo speakhlpRomDesc[] = {
+	{ "b1.56t",      0x0800, 0xce009d85, 1 | BRF_ESS | BRF_PRG }, //  0 Z80 #0 Code
+	{ "b2.5t",       0x0800, 0x935219f1, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "b3.45t",      0x0800, 0x083c28de, 1 | BRF_ESS | BRF_PRG }, //  2
+	{ "b4.4t",       0x0800, 0xb0927e3b, 1 | BRF_ESS | BRF_PRG }, //  3
+	{ "b5.3t",       0x0800, 0xccd25c4e, 1 | BRF_ESS | BRF_PRG }, //  4
+	{ "b6.23t",      0x0800, 0xa657dd4b, 1 | BRF_ESS | BRF_PRG }, //  5
+
+	{ "b07.5b",      0x0800, 0xc9317d91, 2|8|BRF_ESS | BRF_PRG }, //  6 Z80 #1 Code
+	{ "b09.4b",      0x0800, 0x29310c32, 2 | BRF_ESS | BRF_PRG }, //  7
+	{ "b010.3b",     0x0800, 0x4d567bc9, 2 | BRF_ESS | BRF_PRG }, //  8
+
+	{ "prom.6k",     0x0100, 0x08793ef7, 3 | BRF_GRA },	     //  9 Graphics
+	{ "prom.6m",     0x0100, 0x08793ef7, 3 | BRF_GRA },	     // 10
+};
+
+STD_ROM_PICK(speakhlp)
+STD_ROM_FN(speakhlp)
+
+struct BurnDriver BurnDrvspeakhlp = {
+	"speakhlp", "speakres", NULL, NULL, "1980",
+	"Speak & Help\0", NULL, "bootleg", "Route 16",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	NULL, speakhlpRomInfo, speakhlpRomName, NULL, NULL, NULL, NULL, StratvoxInputInfo, SpacechoDIPInfo,
 	SpaceechoInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
 	256, 256, 3, 4
 };
@@ -1404,8 +1469,8 @@ STD_ROM_PICK(jongpute)
 STD_ROM_FN(jongpute)
 
 struct BurnDriver BurnDrvjongpute = {
-	"jongpute", NULL, NULL, NULL, "1980",
-	"Jongputer\0", NULL, "Taito", "Route 16",
+	"jongpute", NULL, NULL, NULL, "1981",
+	"Jongputer\0", NULL, "Alpha Denshi Co.", "Route 16",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_NOT_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_MAHJONG, 0,
 	NULL, jongputeRomInfo, jongputeRomName, NULL, NULL, NULL, NULL, TtmahjngInputInfo, NULL,
@@ -1434,11 +1499,11 @@ STD_ROM_PICK(ttmahjng)
 STD_ROM_FN(ttmahjng)
 
 struct BurnDriver BurnDrvttmahjng = {
-	"ttmahjng", "jongpute", NULL, NULL, "1980",
-	"T.T Mahjong\0", NULL, "Taito", "Route 16",
+	"ttmahjng", "jongpute", NULL, NULL, "1981",
+	"T.T Mahjong\0", NULL, "Alpha Denshi Co. (Taito license)", "Route 16",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_MAHJONG, 0,
 	NULL, ttmahjngRomInfo, ttmahjngRomName, NULL, NULL, NULL, NULL, TtmahjngInputInfo, NULL,
 	DrvInit, DrvExit, DrvFrame, TtmahjngDraw, DrvScan, &DrvRecalc, 0x8,
-	256, 256, 3, 4
+	256, 256, 4, 3
 };

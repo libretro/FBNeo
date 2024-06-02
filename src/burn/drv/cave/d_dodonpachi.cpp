@@ -8,6 +8,8 @@ static UINT8 DrvJoy1[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 static UINT8 DrvJoy2[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 static UINT16 DrvInput[2] = {0x0000, 0x0000};
 
+static HoldCoin<2, UINT16> hold_coin;
+
 static UINT8 *Mem = NULL, *MemEnd = NULL;
 static UINT8 *RamStart, *RamEnd;
 static UINT8 *Rom01;
@@ -275,6 +277,8 @@ static INT32 DrvDoReset()
 	nIRQPending = 0;
 	nCyclesExtra = 0;
 
+	hold_coin.reset();
+
 	HiscoreReset();
 
 	return 0;
@@ -308,6 +312,9 @@ static INT32 DrvFrame()
 	}
 	CaveClearOpposites(&DrvInput[0]);
 	CaveClearOpposites(&DrvInput[1]);
+
+	hold_coin.check(0, DrvInput[0], 1 << 8, 1);
+	hold_coin.check(1, DrvInput[1], 1 << 8, 1);
 
 	SekNewFrame();
 
@@ -483,6 +490,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 		SCAN_VAR(nCyclesExtra);
 
 		CaveScanGraphics();
+
+		hold_coin.scan();
 	}
 
 	return 0;
@@ -645,8 +654,8 @@ struct BurnDriver BurnDrvDoDonpachi = {
 
 struct BurnDriver BurnDrvDoDonpachiJ = {
 	"ddonpachj", "ddonpach", NULL, NULL, "1997",
-	"DoDonPachi (DoDonPachi (Japan, 1997 2/ 5 Master Ver.)\0", NULL, "Cave (Atlus license)", "Cave",
-	L"\u6012\u9996\u9818\u8702 DoDonPachi (DoDonPachi (Japan, 1997 2/ 5 Master Ver.)\0", NULL, NULL, NULL,
+	"DoDonPachi (Japan, 1997 2/ 5 Master Ver.)\0", NULL, "Cave (Atlus license)", "Cave",
+	L"\u6012\u9996\u9818\u8702 DoDonPachi (Japan, 1997 2/ 5 Master Ver.)\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_16BIT_ONLY | BDF_HISCORE_SUPPORTED, 2, HARDWARE_CAVE_68K_ONLY, GBF_VERSHOOT, FBF_DONPACHI,
 	NULL, ddonpachjRomInfo, ddonpachjRomName, NULL, NULL, NULL, NULL, ddonpachInputInfo, NULL,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan,

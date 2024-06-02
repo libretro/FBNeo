@@ -1,39 +1,118 @@
-# FBNeo-libretro
+# FinalBurn Neo
 
-## How to build
+## Background
 
-From the root of the repository, run 
+FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arcade, consoles and computers) under active development. Unlike MAME it's more focused on playability and advanced features than preservation.
+It is the follow-up of the FinalBurn and FinalBurn Alpha emulators.
+The libretro core provides wide compatibility with platforms and features supported by libretro.
+
+## Difference from MAME
+
+FBNeo strives for accuracy, just like MAME. There are some arcade boards where one or the other will be more accurate, but for the most part they should be equally accurate.
+The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is about absolute preservation. "Quality of life" hacks include things like :
+
+* improving original game's sound (some games like "Burger Time" have noise which was clearly unintended by their developpers, we are removing it)
+* implementing alternative colors for games where the colors don't look right (sometimes there are controversies about which colors are right for an arcade board, like "Tropical Angel", we implement alternative colors as dipswitches)
+* having control alternatives that didn't exist on original cabinet (play rotary stick games like twin-stick shooters, use lightguns in "Rambo 3", use simplified 8-way directional controls for "Battlezone", ...)
+* improving the gaming experience by cutting what we deem as unnecessary aspect of emulation (you don't have to spend 20 minutes "installing" CPS-3 games, neither 100s loading Deco Cassette games)
+* reducing hardware requirements by cutting what we deem as unnecessary corners in the emulation code
+* supporting popular romhacks
+
+Note: some of those "quality of life" hacks might be doable with programming skills and lua language on MAME
+
+## License and changelog
+
+It's distributed under a non-commercial license, see [LICENSE.md](https://github.com/finalburnneo/FBNeo/blob/master/LICENSE.md) and [whatsnew.html](https://github.com/finalburnneo/FBNeo/blob/master/whatsnew.html).
+
+There are controversies about whether libretro's patreon and retroarch's GPL license breaks FBNeo's non-commercial license or not. This is what you should know :
+
+* **"Redistributions may not be sold, nor may they be used in a commercial product or activity."** : By definition, a commercial activity is an activity involving the sale of goods or services. The libretro project does none of that, and it is unclear whether a patreon should be treated as a commercial activity or not when no goods or services are provided in exchange of the donations.
+* **"You may not ask for donations to support your work on any project that uses the FB Neo source code."** : This FBNeo port is using libretro code, not the other way around. This port is directly authored/maintained/supported by members of the FBNeo team, and none of them is receiving donations. Interestingly, if receiving donations was de facto a commercial activity, this term shouldn't be required.
+* *If* the libretro project was a commercial activity, it would still be unclear how it does affect this port. Our win32 standalone builds use the directx api, which belongs to a commercial company. Using the libretro api, which would belong to a commercial activity, wouldn't be any different. Furthermore, in all likeliness, there would still be alternative libretro frontends that don't belong to the libretro project and are not commercial. 
+* Actually, alternative commercial libretro frontends already exist, and we consider we are not concerned as long as they neither redistribute FBNeo nor use it as some mean of advertisement. In this scenario, only a manual installation of the core by the user will be considered legal and supported.
+* While GPL code can't be mixed with non-commercial code, this is a non-issue since this port doesn't contain any GPL-licensed code.
+* Under european law, where the libretro buildbots are located, linking GPL and non-commercial softwares doesn't produce a derivative work, and doesn't extend the GPL license to the non-commercial work (source [here](https://joinup.ec.europa.eu/collection/eupl/licence-compatibility-permissivity-reciprocity-and-interoperability)). It is unclear whether the same applies in non-EU countries or not.
+
+## Extensions
+
+zip, 7z
+
+## Building this core manually
+
+From the root of the repository, run
 ```
+make -j5 -C src/burner/libretro clean
 make -j5 -C src/burner/libretro generate-files
 make -j5 -C src/burner/libretro
 ```
+Note : `-j5` is to optimize build time on cpus with 4 cores (X+1 cores), you can rise or reduce that value to match your own, however a value too high will increase ram usage and might even cause your system to become unstable.
+
 Note : if you need additional parameters, they must be added to both commands.
 
-## Roms
+## Building romsets for FBNeo
 
-Use clrmamepro (which runs fine on linux with wine and on mac with crossover) to build valid romsets with dats from the [dats](/dats/) directory.
-Don't report issues if you didn't build a valid romset.
-Also, i don't provide a "parent-only" dat file, because i don't recommend using only parent roms (some don't work, and some clones are really different from their parent)
+Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game. **All of this is to offer you the best gaming experience possible, because older bad dumps can prevent the game from working as it should**.
 
-## Emulating consoles
+Don't expect things to work properly if you didn't build valid romsets, and don't report issues because your romsets are invalid.
 
-You can emulate consoles (with specific romsets, dats are also in the [dats](/dats/) directory) by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension, or using the `--subsystem XXX` argument in the command line, here is the list of available prefixes :
-* CBS ColecoVision : `cv`
-* Fairchild ChannelF : `chf`
-* MSX 1 : `msx`
-* Nec PC-Engine : `pce`
-* Nec SuperGrafX : `sgx`
-* Nec TurboGrafx-16 : `tg`
-* Nintendo Entertainment System : `nes`
-* Nintendo Family Disk System : `fds`
-* Sega GameGear : `gg`
-* Sega Master System : `sms`
-* Sega Megadrive : `md`
-* Sega SG-1000 : `sg1k`
-* SNK Neo-Geo Pocket : `ngp`
-* ZX Spectrum : `spec`
+### Step 1: Obtaining an XML DAT
 
-It's also possible to use folder's name for detection (this second method was added because some devices aren't compatible with subsystems) :
+You can download the dat files for the latest version of the core from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory. Note that some devices (Nintendo 3DS) are running a "light" build with fewer supported games due to memory limitation, the dat files for that build are available from the [light](https://github.com/libretro/FBNeo/tree/master/dats/light/) subdirectory.
+
+### Step 2: Gathering the ingredients
+
+It mostly consists of latest dumps available for MAME.
+The other romsets are usually a mix of hacks and homebrews, most of them can be found in HBMAME dumps.
+Having an older FBAlpha/FBNeo set among your ingredients will also help a lot.
+
+### Step 3: Building the romsets
+
+Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting-started/#optional-clrmamepro-tutorial) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
+
+## Features
+
+| Feature           | Supported |
+|-------------------|-----------|
+| Saves             | ✔         |
+| States            | ✔         |
+| Rewind            | ✔         |
+| Run-Ahead         | ✔         |
+| Preemptive Frames | ✔         |
+| Netplay           | ✔         |
+| RetroAchievements | ✔         |
+| RetroArch Cheats  | ✔         |
+| Native Cheats     | ✔         |
+| Controllers       | ✔         |
+| Multi-Mouse       | ✔         |
+| Rumble            | ✕         |
+| Sensors           | ✕         |
+| Camera            | ✕         |
+| Location          | ✕         |
+| Subsystem         | ✔         |
+
+## Mapping
+
+We don't have a convenient tool like the MAME OSD, instead we use the libretro api to announce buttons and let the frontend customize mapping, this is done through `Quick Menu > Controls`.
+
+For those who don't want to fully customize their mapping, there are 2 convenient presets you can apply by changing the "device type" for a player in this menu :
+
+* **Classic** : it will apply the original neogeo layout from neogeo cd gamepads for neogeo games, and use L/R as 5th and 6th button for 6 buttons games like Street Fighter II.
+* **Modern** : it will apply the modern neogeo layout from neogeo arcade stick pro and mini pad for neogeo games, and use R1/R2 as 5th and 6th button for 6 buttons games like Street Fighter II (because it's also their modern layout), this is really convenient with most arcade sticks.
+
+The following "device type" also exist, but they won't be compatible with every games :
+
+* **Mouse (ball only)** : it will use mouse/trackball for analog movements, buttons will stay on retropad
+* **Mouse (full)** : same as above, but the buttons will be on the mouse
+* **Pointer** : it will use "pointer" device (can be a mouse/trackball) to determine coordinates on screen, buttons will stay on retropad
+* **Lightgun** : it will use lightgun to determine coordinates on screen, buttons will be on the lightgun too.
+* **Analog Arcade Gun** : it will use the analog stick for gun games but in a different way than "Classic" and "Modern", it is particularily useful if you have a "fixed arcade gun" (arcade gun mounted on an analog control).
+
+## Emulating consoles and computers
+
+It also requires usage of specific romsets, meaning the rom must have the expected crc/size, and be packaged in an archive with a specific name (the instructions to build those romsets don't differ from arcade's).
+
+You can use specific folder's name for detection, it's the easiest and recommended method, especially if you are using RetroArch playlists or if your device is not compatible with subsystems (android and consoles) :
+
 * CBS ColecoVision : `coleco` | `colecovision`
 * Fairchild ChannelF : `chf` | `channelf`
 * MSX 1 : `msx` | `msx1`
@@ -47,104 +126,279 @@ It's also possible to use folder's name for detection (this second method was ad
 * Sega Megadrive : `megadriv` | `megadrive` | `genesis`
 * Sega SG-1000 : `sg1000`
 * SNK Neo-Geo Pocket : `ngp`
+* SNK Neo-Geo CD : `neocd`
 * ZX Spectrum : `spectrum` | `zxspectrum`
+
+You can also emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension in the command line, or adding the `--subsystem XXX` argument, here is the list of available prefixes :
+
+* CBS ColecoVision : `cv`
+* Fairchild ChannelF : `chf`
+* MSX 1 : `msx`
+* Nec PC-Engine : `pce`
+* Nec SuperGrafX : `sgx`
+* Nec TurboGrafx-16 : `tg`
+* Nintendo Entertainment System : `nes`
+* Nintendo Family Disk System : `fds`
+* Sega GameGear : `gg`
+* Sega Master System : `sms`
+* Sega Megadrive : `md`
+* Sega SG-1000 : `sg1k`
+* SNK Neo-Geo Pocket : `ngp`
+* SNK Neo-Geo CD : `neocd`
+* ZX Spectrum : `spec`
+
+## BIOS
+
+Bioses will be searched through 3 folders :
+
+* the folder of the current romset
+* the `SYSTEM_DIRECTORY/fbneo/` folder
+* the `SYSTEM_DIRECTORY/` folder
+
+The following bioses are required for some of the emulated systems :
+
+* neogeo.zip (Neo Geo BIOS)
+* neocdz.zip (Neo Geo CDZ System BIOS)
+* decocass.zip (DECO Cassette System BIOS)
+* isgsm.zip (ISG Selection Master Type 2006 System BIOS)
+* midssio.zip (Midway SSIO Sound Board Internal ROM)
+* nmk004.zip (NMK004 Internal ROM)
+* pgm.zip (PGM System BIOS)
+* skns.zip (Super Kaneko Nova System BIOS)
+* ym2608.zip (YM2608 Internal ROM)
+* cchip.zip (C-Chip Internal ROM)
+* bubsys.zip (Bubble System BIOS)
+* namcoc69.zip (Namco C69 BIOS)
+* namcoc70.zip (Namco C70 BIOS)
+* namcoc75.zip (Namco C75 BIOS)
+* coleco.zip (ColecoVision System BIOS)
+* fdsbios.zip (FDS System BIOS)
+* msx.zip (MSX1 System BIOS)
+* ngp.zip (NeoGeo Pocket BIOS)
+* spectrum.zip (ZX Spectrum BIOS)
+* spec128.zip (ZX Spectrum 128 BIOS)
+* spec1282a.zip (ZX Spectrum 128 +2a BIOS)
+* channelf.zip (Fairchild Channel F BIOS)
 
 ## Samples
 
-Samples should be put under `SYSTEM_DIRECTORY/fbneo/samples`
+Samples should be put under `SYSTEM_DIRECTORY/fbneo/samples`.
 
-## Mapping
+Here is a list of samples currently in use :
 
-We don't have a convenient tool like the MAME OSD, instead we use the retroarch api to customize mappings, you can do that by going into `Quick menu > Controls`.
-For those who don't want to fully customize their mapping, there are 2 convenient presets you can apply by changing the "device type" for a player in this menu :
-* **Classic** : it will apply the original neogeo layout from neogeo cd gamepads for neogeo games, and use L/R as 5th and 6th button for 6 buttons games like Street Fighter II.
-* **Modern** : it will apply the modern neogeo layout from neogeo arcade stick pro and mini pad for neogeo games, and use R1/R2 as 5th and 6th button for 6 buttons games like Street Fighter II (because it's also their modern layout), this is really convenient with most arcade sticks.
+* blockade.zip
+* buckrog.zip
+* carnival.zip
+* cheekyms.zip
+* congo.zip
+* dkongjr.zip
+* dkong.zip
+* donpachi.zip
+* elim2.zip
+* fantasy.zip
+* galaga.zip
+* gaplus.zip
+* gridlee.zip
+* heiankyo.zip
+* invaders.zip
+* journey.zip
+* mario.zip
+* mmagic.zip
+* natodef.zip
+* nitedrvr.zip
+* nsub.zip
+* qbert.zip
+* radarscp.zip
+* rallyx.zip
+* reactor.zip
+* safarir.zip
+* sasuke.zip
+* sfz3mix.zip
+* sharkatt.zip
+* spacefb.zip
+* spacfury.zip
+* stinger.zip
+* subroc3d.zip
+* thehand.zip
+* thief.zip
+* tr606drumkit.zip
+* turbo.zip
+* twotiger.zip
+* vanguard.zip
+* xevious.zip
+* zaxxon.zip
+* zektor.zip
+* zerohour.zip
 
-The following "device type" also exist, but they won't be compatible with every games :
-* **Mouse (ball only)** : it will use mouse/trackball for analog movements, buttons will stay on retropad
-* **Mouse (full)** : same as above, but the buttons will be on the mouse
-* **Pointer** : it will use "pointer" device (can be a mouse/trackball) to determine coordinates on screen, buttons will stay on retropad
-* **Lightgun** : it will use lightgun to determine coordinates on screen, buttons will be on the lightgun too.
+## Hiscores
+
+Copy [hiscore.dat](https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have the hiscore core option enabled.
+
+It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for this feature, or `hiscore.dat` might have a missing or broken entry for that romset. You can request support in the issue tracker. 
+
+Runahead now works with hiscores, it'll require fairly recent version of the core AND RetroArch though (support was added after 1.10.3).
+
+## Input lag reduction
+
+This core widely supports the RetroArch input latency reduction features, with **runahead single instance** and **preemptive frames** being the recommended methods. 
+
+Proper support for **runahead second instance** is not guaranteed because it doesn't exist in standalone FBNeo unlike the other methods.
+
+Note : There seems to be possible conflicts when rewind is active simultanneously, see https://github.com/libretro/RetroArch/issues/16374.
+
+## RetroAchievements
+
+This core provides support for RetroAchievements, and some were added for popular games.
+
+## Dipswitches
+
+They are either directly available from `Quick Menu > Core Options`, or from the service menu after setting its shortcut in the `Diagnostic Input` core option.
+
+## Cheats
+
+This core supports the RetroArch cheat feature with the `.cht` files. However it is recommended to use FBNeo's native cheat support instead :
+
+* Download the pack of cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip)
+* Uncompress **all of them** into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder (which is **NOT** the same folder as the RetroArch feature with the `.cht` files)
+* Cheats will become available through core options (`Quick Menu > Options`, **NOT** `Quick Menu > Cheats`) afterward.
 
 ## Frequently asked questions
 
 ### Where can i find the XXX roms ?
+
 As far as we are concerned, you are supposed to dump your own games, so we can't help you with acquiring romsets.
 
-### Game XXX is not launching, why ?
-It is either not supported or you have a bad rom, your logs will give you more details. Build a valid romset with clrmamepro as said above.
-There is also a few games marked as not working, try one of their clones.
+### Why am i getting a white screen ?
 
-### I patched game XXX and can't run it, why ?
-Because it's considered a bad rom since the crcs won't match, however there is a method to use a patched romset, if you put the patched version of the romset into `SYSTEM_DIRECTORY/fbneo/patched` it will work (NB: you can strip it of any file that don't differ from non-patched romset if you want). **The romset you must launch is still the original non-patched romset though (its content will be overrided by the content of the patched one)**, you can disable that override by toggling off the `Allow patched romsets` core option.
+Refer to [getting started with arcade emulation](https://docs.libretro.com/guides/arcade-getting-started/#step-3-use-the-correct-version-romsets-for-that-emulator) to understand how romsets work.
 
-### I bought unibios from http://unibios.free.fr/ and can't run it, why ?
-Same as above.
+The white screen tells you if the romset is supported at all and which files are wrong or missing.
+Exceptionally there might be a false positive due to your file being unreadable for some reason.
 
-### Game XXX has graphical glitches, why ?
-Write a report with details on the issue and your platform.
+### How can i run that romhack i found ?
 
-### Game XXX runs slowly, why ?
-Your hardware is probably too slow to run the game with normal settings. Try the following :
+A lot of romhacks are supported natively, so your romhack might already be supported under a specific romset name.
+
+For the unsupported romhacks, you can put the patched version of the romset into `SYSTEM_DIRECTORY/fbneo/patched` (NB: you can strip it of any file that don't differ from non-patched romset if you want), that method will only work if the sizes and names matches with the original romset. 
+**The romset you must launch is still the original non-patched romset (its content will be overrided at runtime by the content of the patched one)**, you can disable that behavior by toggling off the `Allow patched romsets` core option.
+
+### How can i run that unibios i bought from http://unibios.free.fr/ ?
+
+Same answer as above.
+
+### I think i found a glitch, how do i report it ?
+
+Write a report [here](https://github.com/finalburnneo/FBNeo/issues) with details on the issue and your platform.
+If the issue is not self-explanatory, it is important to provide a video of the PCB (meaning real hardware), any other material (remakes, other emulators, fpga, game rips, ...) will be ignored.
+If the issue doesn't happen right from the beginning, please try to provide a savestate from right before the issue.
+
+### Why does game XXX run slowly ?
+
+Your hardware is probably too slow to run the game with your current settings. Try the following :
+
 * Check if there is a speedhack dipswitch in the core options, set it to "yes".
-* Try disabling rewind, runahead, or any other retroarch setting known for increasing overhead.
+* Try disabling rewind, runahead, pre-emptive frames, shaders, or any other retroarch setting known for increasing requirements.
 * Try enabling "Threaded Video" in retroarch settings.
 * Try changing "Max swapchain images" in retroarch settings (higher values gave a small performance benefit on my setup).
 * Try setting a value for frameskip in core options (note : "Fixed" frameskip is recommended, the other methods don't seem to be nearly as reliable).
 * Try lowering CPU clock in core options (note : some games don't support this feature).
 * Try lowering audio settings in the core options.
-* A last resort on arm platforms would be to enable cyclone in core options, however keep in mind some games will stop working from this, so it's recommended to only enable it per-game if it's actually helping with performance on that specific game.
+* With m68k games (most boards from the late 80s and early 90s) on arm platforms, you can try enabling cyclone in core options, however this is really a last resort since some games won't work properly with this, furthermore it's causing savestates incompatibilities.
 * If it is not enough, upgrade/overclock your hardware, or use another core.
 
-We won't accept requests for "making the core faster", as far as we are concerned this core has a good balance between accuracy & speed, and for the most part will already run really well on cheap arm socs (rpi3, ...).
+We won't accept requests for "making the core faster", as far as we are concerned this core has a good balance between accuracy & speed, and for the most part will already run really well on low-end devices (rpi3, ...).
 
-### Game XXX has choppy sound, why ?
+### Why does game XXX have choppy sound ?
+
 Most likely for the same reason as above.
 
-### Game XXX runs faster in MAME2003/MAME2010, why ?
+### Why does game XXX run faster in MAME2003/MAME2010 ?
+
 Overall, FBNeo is slower than old MAME version, because it's more accurate, meaning graphics, sound and gameplay are more likely to be faithful to the real machine.
-This libretro port also supports various features which are usually buggy or totally absent in MAME cores (runahead, netplay, rewind, retroachievements, ...), those features might use additional resources.
+This libretro port also supports various features which are usually buggy or totally missing in MAME cores (runahead, netplay, rewind, retroachievements, ...), those features might require additional resources.
 
-### How do i use cheat code ?
-From a libretro point of view, there should be partial support through the API relying on main ram exposition. 
-Otherwise if you put native FBNeo cheat .ini files (there is a pack available [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip)) into `SYSTEM_DIRECTORY/fbneo/cheats`, they will be translated to core options, using a MAME `cheat.dat` file should also work.
+### How do i launch a neogeo CD game ?
 
-### Neogeo CD doesn't work, why ?
 There are several things to know :
-* You need a copy of neocdz.zip and neogeo.zip in your libretro system directory
-* You need to add `--subsystem neocd` to the command line, or to place your games in a `neocd` folder
-* Supported format are ccd/sub/img (trurip), and single file MODE1/2352 cue/bin (use utilities like "CDmage" to convert your iso if needed), **they must not be compressed**
 
-You can convert your unsupported isos by following this tutorial :
+* You need to follow the instructions about [emulating consoles](#emulating-consoles-and-computers)
+* You need a copy of the `neocdz.zip` and `neogeo.zip` bioses
+* The supported format is single file MODE1/2352 cue/bin (use "CDmage" to convert your iso if needed), **they must not be compressed**
+
+You can convert your unsupported cd images by following this tutorial :
+
 * Get [CDMage 1.02.1 (beta)](https://www.videohelp.com/software/CDMage) (freeware & no ads). **Don't get CDMage 1.01.5, it doesn't have the "Save As" function**
 * File > Open > select your iso (NB : for multi-track, select the .cue file, not the .iso file)
 * File > Save As > write the name of your new file
 * Make sure you select MODE1/2352 in the second drop-down
 * Press OK, wait for the process to finish (a few seconds on my computer), and it’s done !
 
-### Killer instinct won't work, why ?
-That driver was disabled for now, it doesn't meet our quality criteria.
+### Why can't i launch Killer instinct ? I heard it's supported.
 
-~~There are several things to know :~~
-* ~~It is only running at playable speed on x86_64 (other arch will basically need a cpu at 4Ghz because they lack a mips3 dynarec), and the core needs to be built like this to enable this dynarec : `make -j5 -C src/burner/libretro USE_X64_DRC=1`~~
-* ~~If your rom is at `ROM_DIRECTORY/kinst.zip`, you'll need the uncompressed disc image at `ROM_DIRECTORY/kinst/kinst.img`~~
-* ~~To get the uncompressed disc image, you'll need to use the chdman tool from MAME on the chd from mame, the command looks like this : `chdman extracthd -i kinst.chd -o kinst.img`~~
+That driver was disabled for now, it didn't meet our quality criteria.
 
-### Hiscore won't save, why ?
-You need to copy [hiscore.dat](/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and to have the hiscore core option enabled. It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for hiscores (or hiscore.dat might not be listing the romset). You can request support in the issue tracker as long as the request is reasonable (avoid making a list of several dozens/hundreds of games if you don't want to be ignored). There were also issues with libretro features preventing hiscores from working properly (like runahead), it should now work properly if your libretro frontend handles `RETRO_ENVIRONMENT_GET_SAVESTATE_CONTEXT` (you'll get a warning in logs if it doesn't).
+### Why are vertical games not working properly ?
 
-### Vertical games don't work properly, why ?
 2 settings are required when running vertical games in FBNeo :
+
 * `Settings > Core > Allow rotation` must be enabled  (`video_allow_rotate = "true"` in `retroarch.cfg`)
 * `Settings > Video > Scaling > Aspect Ratio` should be set to `Core Provided` (`aspect_ratio_index = "22"` in `retroarch.cfg`)
 
 If you are wondering why this isn't required for the MAME core, you can find more information about it [here](https://github.com/libretro/mame/issues/261)
 
 Additionally :
-* If you are playing on a vertical screen, you'll want to use the `Vertical Mode` core option to rotate the display for your needs, while it's also possible to rotate display from `Settings > Video > Output > Video Rotation`, that method is not recommended because it doesn't rotate the aspect ratio.
-* If you are using a bezel pack, it seems you need to enable `Settings > On-Screen Display > On-Screen Overlay > Auto-Scale Overlay` (`input_overlay_auto_scale = "true"` in `retroarch.cfg`)
 
-### Music is high-pitched, too fast and/or different from FBNeo standalone, why ?
-For better or worse, it was decided to use different default audio settings from standalone in the libretro port. By default standalone has 44100 samplerate and both interpolations off and that's what you should set in libretro's core options if you want the same audio output.
+* If you are playing on a vertical screen, you'll want to use the `Vertical Mode` core option to rotate the display for your needs, it should also be possible to rotate display from `Settings > Video > Output > Video Rotation` but that method might handle the aspect ratio incorrectly.
+* If you are using a bezel pack, make sure it's compatible with FBNeo (apparently, some were written specifically to work with MAME's internal rotation) and to follow its official instructions. In some case it seems enabling `Settings > On-Screen Display > On-Screen Overlay > Auto-Scale Overlay` (`input_overlay_auto_scale = "true"` in `retroarch.cfg`) can help.
 
-You might also want to make sure you are running the game at the correct speed, many arcade machines don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). Please note that your screen might not handle well the correct refresh rate, in which case you'll have to make a choice between smoothness and correct refresh rate.
+### Why is the music high-pitched, too fast and/or different from upstream ?
+
+For better or worse, it was decided to use different default audio settings from standalone in the libretro port. 
+By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.
+
+You might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). Please note that your screen might not handle well the correct refresh rate, in which case you'll have to make a choice between smoothness and correct refresh rate.
+
+### Why do i get a black screen and/or can't i change bios in neogeo games ?
+
+The `neogeo` romset is a collection of neogeo bioses, and most of them are considered as optional so they won't cause a "white screen" when missing. Only `MVS Asia/Europe ver. 6 (1 slot)` is mandatory.
+
+However, having an incomplete romset can still cause various issues :
+
+* If you are using the "Use bios set in BIOS dipswitch" as "Neo-Geo mode" and the bios set in dipswitches is missing, you'll have a black screen where you can hear some sound playing.
+* If you are using any of the other choices available in "Neo-Geo mode" and a corresponding bios can't be found, the core will fallback to one of the available bioses.
+
+Obviously, none of this is supposed to ever happen if you followed the instructions about romsets as you are supposed to.
+
+### Why do i get some weird transparent effects in game XXX ?
+
+You probably installed some `.bld` files in the `SYSTEM_DIRECTORY/fbneo/blend` folder. Those files are meant to create such effects but some of them are very broken. I'd recommend removing them.
+
+### Why is my favorite combo button not available ?
+
+Libretro doesn't allow cores to declare more buttons and map them later, meaning the number of different "actions" available is limited by the number of buttons available on the retropad model.
+
+Removing that limitation was asked in https://github.com/libretro/RetroArch/issues/6718, then again in https://github.com/libretro/RetroArch/issues/11273, it's not possible to add more macros as long as this limitation exists. If you want more macros, go support those issues, preferably the later.
+
+The currently available neogeo combos were decided in https://github.com/libretro/FBNeo/issues/51, they won't be replaced, but they might totally disappear if users keep complaining about them.
+
+Note that there was also a request to add a retroarch macro mapper in https://github.com/libretro/RetroArch/issues/8209.
+
+### Why can't i enable hardcore mode in RetroAchievements ?
+
+This feature doesn't accept achievements made with any kind of cheat, meaning unibios, cheats, and patched romsets must be disabled in core options.
+
+### Why do i need to re-enable cheats every time i boot a game ?
+
+It is common for arcade machines to execute self-tests at boot, and in many cases they won't boot if unexpected values have been injected into their memory, which is exactly what cheats do. Disabling cheats at boot is a safety mecanism to prevent those boot issues.
+
+### Where is SYSTEM_DIRECTORY ?
+
+Open your `retroarch.cfg` file and look for `system_directory`, or check `Settings > Directory > System/BIOS`.
+
+## External Links
+
+- [Official FBNeo forum](https://neo-source.com/)
+- [Official FBNeo github repository](https://github.com/finalburnneo/FBNeo)
+- [Libretro FBNeo github repository](https://github.com/libretro/FBNeo)
+- [[GUIDE] Setting up RetroArch playlists with FBNeo](https://neo-source.com/index.php?topic=3725.0)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfsAHeGqGD-DkRzI87q7V_Q)

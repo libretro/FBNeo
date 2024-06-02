@@ -239,6 +239,8 @@ static INT32 DrvDoReset()
 	MSM6295Reset(0);
 	BurnYM3812Reset();
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -369,7 +371,7 @@ static INT32 DrvInit(INT32 select)
 	ZetClose();
 
 	BurnYM3812Init(1, 3579545, &DrvYM3812IrqHandler, &DrvSynchroniseStream, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 4000000);
+	BurnTimerAttach(&ZetConfig, 4000000);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	MSM6295Init(0, 1056000 / 132, 1);
@@ -540,23 +542,19 @@ static INT32 DrvFrame()
 	ZetOpen(0);
 
 	for (INT32 i = 0; i < nInterleave; i++) {
-		INT32 nSegment = nCyclesTotal[0] / nInterleave;
-		nCyclesDone[0] += SekRun(nSegment);
+		CPU_RUN(0, Sek);
 		if (i == (nInterleave - 1)) SekSetIRQLine(3, CPU_IRQSTATUS_AUTO);
 
-		nSegment = nCyclesTotal[1] / nInterleave;
-		BurnTimerUpdateYM3812((1 + i) * nSegment);
+		CPU_RUN_TIMER(1);
 	}
 
-	BurnTimerEndFrameYM3812(nCyclesTotal[1]);
+	ZetClose();
+	SekClose();
 
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
 		MSM6295Render(0, pBurnSoundOut, nBurnSoundLen);
 	}
-
-	ZetClose();
-	SekClose();
 
 	if (pBurnDraw) {
 		DrvDraw();
@@ -627,7 +625,7 @@ struct BurnDriver BurnDrvGalspnbl = {
 	"galspnbl", NULL, NULL, NULL, "1996",
 	"Gals Pinball\0", NULL, "Comad", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 1, HARDWARE_MISC_POST90S, GBF_PINBALL, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 1, HARDWARE_MISC_POST90S, GBF_PINBALL, 0,
 	NULL, galspnblRomInfo, galspnblRomName, NULL, NULL, NULL, NULL, GalspnblInputInfo, GalspnblDIPInfo,
 	galspnblInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8400,
 	224, 512, 3, 4
@@ -669,7 +667,7 @@ struct BurnDriver BurnDrvHotpinbl = {
 	"hotpinbl", NULL, NULL, NULL, "1995",
 	"Hot Pinball\0", NULL, "Comad & New Japan System", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 1, HARDWARE_MISC_POST90S, GBF_PINBALL, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 1, HARDWARE_MISC_POST90S, GBF_PINBALL, 0,
 	NULL, hotpinblRomInfo, hotpinblRomName, NULL, NULL, NULL, NULL, GalspnblInputInfo, GalspnblDIPInfo,
 	hotpinblInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8400,
 	224, 512, 3, 4

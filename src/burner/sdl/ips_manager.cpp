@@ -197,15 +197,14 @@ static void DoPatchGame(const char* patch_name, char* game_name, UINT8* base, bo
 #endif
 }
 
-void GetIpsDrvDefine()
+void IpsPatchInit()
 {
 	if (!bDoIpsPatch)
 		return;
 
+#if 0
 	nIpsDrvDefine = 0;
 	memset(nIpsMemExpLen, 0, sizeof(nIpsMemExpLen));
-
-#if 0
 
 	char ips_data[MAX_PATH];
 	INT32 nActivePatches = GetIpsNumActivePatches();
@@ -320,7 +319,7 @@ void GetIpsDrvDefine()
 #endif
 }
 
-void IpsApplyPatches(UINT8* base, char* rom_name, bool readonly)
+void IpsApplyPatches(UINT8* base, char* rom_name, UINT32 crc, bool readonly)
 {
 	if (!bDoIpsPatch)
 		return;

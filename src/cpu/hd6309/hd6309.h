@@ -33,7 +33,6 @@ typedef struct
 	UINT8	ireg;		/* First opcode */
 	UINT8	irq_state[2];
 	UINT8	irq_hold[2];
-	INT32 	extra_cycles; /* cycles used up by interrupts */
 
 	INT32   ICount;
 	INT32   segmentcycles;
@@ -57,6 +56,7 @@ int hd6309_segmentcycles();
 void hd6309_set_irq_line(int irqline, int state);
 void hd6309_get_context(void *dst);
 void hd6309_set_context(void *src);
+void hd6309_set_callback(int (*cb)(int));
 
 
 /* PUBLIC FUNCTIONS */

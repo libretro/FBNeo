@@ -37,46 +37,23 @@ INT32 nSekCPUOffsetAddress[SEK_MAX];
 
 static UINT32 nSekAddressMask[SEK_MAX], nSekAddressMaskActive;
 
-static INT32 core_idle(INT32 cycles)
-{
-	SekRunAdjust(cycles);
-
-	return cycles;
-}
-
-static void core_set_irq(INT32 cpu, INT32 line, INT32 state)
-{
-	INT32 active = nSekActive;
-	if (active != cpu)
-	{
-		if (active != -1) SekClose();
-		SekOpen(cpu);
-	}
-
-	SekSetIRQLine(line, state);
-
-	if (active != cpu)
-	{
-		SekClose();
-		if (active != -1) SekOpen(active);
-	}
-}
-
 cpu_core_config SekConfig =
 {
 	"68k",
-	SekOpen,
-	SekClose,
+	SekCPUPush, //SekOpen,
+	SekCPUPop, //SekClose,
 	SekCheatRead,
 	SekWriteByteROM,
 	SekGetActive,
 	SekTotalCycles,
 	SekNewFrame,
-	core_idle,
-	core_set_irq,
+	SekIdle,
+	SekSetIRQLine,
 	SekRun,
 	SekRunEnd,
 	SekReset,
+	SekScan,
+	SekExit,
 	0x1000000,
 	1 // big endian
 };
@@ -1283,13 +1260,13 @@ static void SekCPUExitM68K(INT32 i)
 #endif
 
 
-INT32 SekExit()
+void SekExit()
 {
 #if defined FBNEO_DEBUG
 	if (!DebugCPU_SekInitted) bprintf(PRINT_ERROR, _T("SekExit called without init\n"));
 #endif
 
-	if (!DebugCPU_SekInitted) return 1;
+	if (!DebugCPU_SekInitted) return;
 
 	// Deallocate cpu extenal data (memory map etc)
 	for (INT32 i = 0; i <= nSekCount; i++) {
@@ -1319,8 +1296,6 @@ INT32 SekExit()
 	nSekCount = -1;
 	
 	DebugCPU_SekInitted = 0;
-
-	return 0;
 }
 
 void SekReset()
@@ -2042,6 +2017,7 @@ INT32 SekMapMemory(UINT8* pMemory, UINT32 nStart, UINT32 nEnd, INT32 nType)
 #if defined FBNEO_DEBUG
 	if (!DebugCPU_SekInitted) bprintf(PRINT_ERROR, _T("SekMapMemory called without init\n"));
 	if (nSekActive == -1) bprintf(PRINT_ERROR, _T("SekMapMemory called when no CPU open\n"));
+	if (pMemory == NULL) bprintf(0, _T("SekMapMemory() mapped NULL block!  start, end, type:  %x - %x  0x%x\n"), nStart, nEnd, nType);
 #endif
 
 	UINT8* Ptr = pMemory - nStart;

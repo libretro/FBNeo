@@ -41,6 +41,8 @@ static UINT8 DrvSoundLatch;
 typedef INT32 (*SidePcktLoadRoms)();
 static SidePcktLoadRoms LoadRomsFunction;
 
+static INT32 nCyclesExtra[3];
+
 static struct BurnInputInfo DrvInputList[] =
 {
 	{"Coin 1"            , BIT_DIGITAL  , DrvInputPort1 + 7, "p1 coin"   },
@@ -561,16 +563,20 @@ static INT32 DrvDoReset()
 {
 	M6809Open(0);
 	M6809Reset();
-	BurnYM2203Reset();
 	DrvMCUReset();
 	M6809Close();
 
 	M6502Open(0);
 	M6502Reset();
+	BurnYM2203Reset();
 	BurnYM3526Reset();
 	M6502Close();
 
 	DrvSoundLatch = 0;
+
+	memset(nCyclesExtra, 0, sizeof(nCyclesExtra));
+
+	HiscoreReset();
 
 	return 0;
 }
@@ -684,11 +690,10 @@ static INT32 DrvInit()
 	}
 
 	BurnYM2203Init(1, 1500000, NULL, 0);
-	BurnTimerAttachM6809(2000000);
 	BurnYM2203SetAllRoutes(0, 0.25, BURN_SND_ROUTE_BOTH);
+	BurnTimerAttach(&M6502Config, 1500000);
 
 	BurnYM3526Init(3000000, &DrvFMIRQHandler, 1);
-	BurnTimerAttachYM3526(&M6502Config, 1500000);
 	BurnYM3526SetRoute(BURN_SND_YM3526_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	GenericTilesInit();
@@ -857,7 +862,7 @@ static INT32 DrvDraw()
 static INT32 DrvFrame()
 {
 	INT32 nCyclesTotal[3] = { 2000000 / 58, 1500000 / 58, 8000000 / 12 / 58 };
-	INT32 nCyclesDone[3] = { 0, 0, 0 };
+	INT32 nCyclesDone[3] = { nCyclesExtra[0], 0, nCyclesExtra[2] };
 	INT32 nInterleave = 100;
 
 	if (DrvReset) DrvDoReset();
@@ -872,32 +877,26 @@ static INT32 DrvFrame()
 	M6502Open(0);
 
 	for (INT32 i = 0; i < nInterleave; i++) {
-		INT32 nCurrentCPU, nNext;
-
-		nCurrentCPU = 0;
-		nNext = (i + 1) * nCyclesTotal[nCurrentCPU] / nInterleave;
-		BurnTimerUpdate(nNext);
+		CPU_RUN(0, M6809);
 		if (i == (nInterleave - 1)) M6809SetIRQLine(0x20, CPU_IRQSTATUS_AUTO);
 
-		nCurrentCPU = 1;
-		nNext = (i + 1) * nCyclesTotal[nCurrentCPU] / nInterleave;
-		BurnTimerUpdateYM3526(nNext);
+		CPU_RUN_TIMER(1);
 
 		if (realMCU) {
 			CPU_RUN(2, DrvMCU);
 		}
 	}
 
-	BurnTimerEndFrame(nCyclesTotal[0]);
-	BurnTimerEndFrameYM3526(nCyclesTotal[1]);
+	M6809Close();
+	M6502Close();
+
+	nCyclesExtra[0] = nCyclesDone[0] - nCyclesTotal[0];
+	nCyclesExtra[2] = nCyclesDone[2] - nCyclesTotal[2];
 
 	if (pBurnSoundOut) {
 		BurnYM2203Update(pBurnSoundOut, nBurnSoundLen);
 		BurnYM3526Update(pBurnSoundOut, nBurnSoundLen);
 	}
-
-	M6809Close();
-	M6502Close();
 
 	if (pBurnDraw) DrvDraw();
 
@@ -932,6 +931,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 		BurnYM3526Scan(nAction, pnMin);
 
 		SCAN_VAR(DrvSoundLatch);
+
+		SCAN_VAR(nCyclesExtra);
 	}
 
 	return 0;
@@ -941,7 +942,7 @@ struct BurnDriver BurnDrvSidepckt = {
 	"sidepckt", NULL, NULL, NULL, "1986",
 	"Side Pocket (World)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 3, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 3, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, DrvRomInfo, DrvRomName, NULL, NULL, NULL, NULL, DrvInputInfo, DrvDIPInfo,
 	SidepcktInit, DrvExit, DrvFrame, DrvDraw, DrvScan,
 	NULL, 0x100, 256, 224, 4, 3
@@ -951,7 +952,7 @@ struct BurnDriver BurnDrvSidepcktj = {
 	"sidepcktj", "sidepckt", NULL, NULL, "1986",
 	"Side Pocket (Japan, Cocktail)\0", NULL, "Data East Corporation", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 3, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 3, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, DrvjRomInfo, DrvjRomName, NULL, NULL, NULL, NULL, DrvInputInfo, DrvjDIPInfo,
 	SidepcktjInit, DrvExit, DrvFrame, DrvDraw, DrvScan,
 	NULL, 0x100, 256, 224, 4, 3
@@ -961,7 +962,7 @@ struct BurnDriver BurnDrvSidepcktb = {
 	"sidepcktb", "sidepckt", NULL, NULL, "1986",
 	"Side Pocket (bootleg, set 1)\0", NULL, "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 3, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 3, HARDWARE_PREFIX_DATAEAST, GBF_SPORTSMISC, 0,
 	NULL, DrvbRomInfo, DrvbRomName, NULL, NULL, NULL, NULL, DrvInputInfo, DrvbDIPInfo,
 	SidepcktbInit, DrvExit, DrvFrame, DrvDraw, DrvScan,
 	NULL, 0x100, 256, 224, 4, 3

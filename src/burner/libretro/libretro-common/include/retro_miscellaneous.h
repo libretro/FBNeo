@@ -49,6 +49,10 @@
 #include <compat/msvc.h>
 #endif
 
+#ifdef IOS
+#include <sys/param.h>
+#endif
+
 static INLINE void bits_or_bits(uint32_t *a, uint32_t *b, uint32_t count)
 {
    uint32_t i;
@@ -69,6 +73,17 @@ static INLINE bool bits_any_set(uint32_t* ptr, uint32_t count)
    for (i = 0; i < count; i++)
    {
       if (ptr[i] != 0)
+         return true;
+   }
+   return false;
+}
+
+static INLINE bool bits_any_different(uint32_t *a, uint32_t *b, uint32_t count)
+{
+   uint32_t i;
+   for (i = 0; i < count; i++)
+   {
+      if (a[i] != b[i])
          return true;
    }
    return false;

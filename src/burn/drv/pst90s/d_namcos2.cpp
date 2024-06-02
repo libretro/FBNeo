@@ -1537,6 +1537,8 @@ static INT32 DrvDoReset()
 	c355_obj_position[0] = c355_obj_position[1] = 0;
 	c355_obj_position[2] = c355_obj_position[3] = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -3860,7 +3862,7 @@ struct BurnDriver BurnDrvAssault = {
 	"assault", NULL, NULL, NULL, "1988",
 	"Assault (Rev B)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, assaultRomInfo, assaultRomName, NULL, NULL, NULL, NULL, AssaultInputInfo, AssaultDIPInfo,
 	AssaultInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -3919,7 +3921,7 @@ struct BurnDriver BurnDrvAssaultj = {
 	"assaultj", "assault", NULL, NULL, "1988",
 	"Assault (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, assaultjRomInfo, assaultjRomName, NULL, NULL, NULL, NULL, AssaultInputInfo, AssaultDIPInfo,
 	AssaultInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -3983,7 +3985,7 @@ struct BurnDriver BurnDrvAssaultp = {
 	"assaultp", "assault", NULL, NULL, "1988",
 	"Assault Plus (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, assaultpRomInfo, assaultpRomName, NULL, NULL, NULL, NULL, AssaultInputInfo, AssaultDIPInfo,
 	AssaultpInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -4083,7 +4085,7 @@ struct BurnDriver BurnDrvOrdyne = {
 	"ordyne", NULL, NULL, NULL, "1988",
 	"Ordyne (World)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, ordyneRomInfo, ordyneRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	OrdyneInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4146,7 +4148,7 @@ struct BurnDriver BurnDrvOrdynej = {
 	"ordynej", "ordyne", NULL, NULL, "1988",
 	"Ordyne (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, ordynejRomInfo, ordynejRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	OrdynejInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4209,7 +4211,7 @@ struct BurnDriver BurnDrvOrdyneje = {
 	"ordyneje", "ordyne", NULL, NULL, "1988",
 	"Ordyne (Japan, English Version)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_HORSHOOT, 0,
 	NULL, ordynejeRomInfo, ordynejeRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	OrdyneInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4251,6 +4253,8 @@ static struct BurnRomInfo cosmogngRomDesc[] = {
 
 	{ "co2voi1.bin",	0x80000, 0x5a301349, 0x0a | BRF_SND },           // 19 C140 Samples
 	{ "co2voi2.bin",	0x80000, 0xa27cb45a, 0x0a | BRF_SND },           // 20
+
+	{ "04544191.6n",	0x02000, 0x90db1bf6, 0x00 | BRF_OPT },           // 21 Zoom table
 };
 
 STD_ROM_PICK(cosmogng)
@@ -4272,7 +4276,7 @@ struct BurnDriver BurnDrvCosmogng = {
 	"cosmogng", NULL, NULL, NULL, "1991",
 	"Cosmo Gang the Video (US)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, cosmogngRomInfo, cosmogngRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	CosmogngInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -4344,7 +4348,7 @@ struct BurnDriver BurnDrvMirninja = {
 	"mirninja", NULL, NULL, NULL, "1988",
 	"Mirai Ninja (Japan, set 1)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, mirninjaRomInfo, mirninjaRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	MirninjaInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4404,7 +4408,7 @@ struct BurnDriver BurnDrvMirninjaa = {
 	"mirninjaa", "mirninja", NULL, NULL, "1988",
 	"Mirai Ninja (Japan, set 2)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, mirninjaaRomInfo, mirninjaaRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	MirninjaInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4490,7 +4494,7 @@ struct BurnDriver BurnDrvPhelios = {
 	"phelios", NULL, NULL, NULL, "1988",
 	"Phelios\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, pheliosRomInfo, pheliosRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	PheliosInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -4553,7 +4557,7 @@ struct BurnDriver BurnDrvPheliosj = {
 	"pheliosj", "phelios", NULL, NULL, "1988",
 	"Phelios (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, pheliosjRomInfo, pheliosjRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	PheliosInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -4561,7 +4565,7 @@ struct BurnDriver BurnDrvPheliosj = {
 
 
 
-// Marvel Land (US, prototype?)
+// Marvel Land (US, prototype)
 
 static struct BurnRomInfo marvlandupRomDesc[] = {
 	{ "mv2_mpr0",		0x20000, 0xd8b14fee, 0x01 | BRF_PRG | BRF_ESS }, //  0 Main 68K Code
@@ -4634,9 +4638,9 @@ static INT32 MarvlandInit()
 
 struct BurnDriver BurnDrvMarvlandup = {
 	"marvlandup", "marvland", NULL, NULL, "1989",
-	"Marvel Land (US, prototype?)\0", "Bad music - use the Japan version", "Namco", "System 2",
+	"Marvel Land (US, prototype)\0", "Bad music - use the Japan version", "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_PROTOTYPE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, marvlandupRomInfo, marvlandupRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	MarvlandInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4690,7 +4694,7 @@ struct BurnDriver BurnDrvMarvland = {
 	"marvland", NULL, NULL, NULL, "1989",
 	"Marvel Land (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, marvlandRomInfo, marvlandRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	MarvlandInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4766,7 +4770,7 @@ struct BurnDriver BurnDrvValkyrie = {
 	"valkyrie", NULL, NULL, NULL, "1989",
 	"Valkyrie no Densetsu (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, valkyrieRomInfo, valkyrieRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	ValkyrieInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -4845,7 +4849,7 @@ struct BurnDriver BurnDrvRthun2 = {
 	"rthun2", NULL, NULL, NULL, "1990",
 	"Rolling Thunder 2\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_RUNGUN, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_RUNGUN, 0,
 	NULL, rthun2RomInfo, rthun2RomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	Rthun2Init, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4903,7 +4907,7 @@ struct BurnDriver BurnDrvRthun2j = {
 	"rthun2j", "rthun2", NULL, NULL, "1990",
 	"Rolling Thunder 2 (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_RUNGUN, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_RUNGUN, 0,
 	NULL, rthun2jRomInfo, rthun2jRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	Rthun2Init, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -4976,7 +4980,7 @@ struct BurnDriver BurnDrvDsaber = {
 	"dsaber", NULL, NULL, NULL, "1990",
 	"Dragon Saber (World, DO2)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
 	NULL, dsaberRomInfo, dsaberRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	DsaberInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -5084,7 +5088,7 @@ struct BurnDriver BurnDrvDsaberj = {
 	"dsaberj", "dsaber", NULL, NULL, "1990",
 	"Dragon Saber (Japan, Rev B)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
 	NULL, dsaberjRomInfo, dsaberjRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	DsaberInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	224, 288, 3, 4
@@ -5160,7 +5164,7 @@ struct BurnDriver BurnDrvBurnforc = {
 	"burnforc", NULL, NULL, NULL, "1989",
 	"Burning Force (Japan, new version (Rev C))\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, burnforcRomInfo, burnforcRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	BurnforcInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -5218,7 +5222,7 @@ struct BurnDriver BurnDrvBurnforco = {
 	"burnforco", "burnforc", NULL, NULL, "1989",
 	"Burning Force (Japan, old version)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, burnforcoRomInfo, burnforcoRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	BurnforcInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -5299,7 +5303,7 @@ struct BurnDriver BurnDrvFinehour = {
 	"finehour", NULL, NULL, NULL, "1989",
 	"Finest Hour (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_RUNGUN, 0,
 	NULL, finehourRomInfo, finehourRomName, NULL, NULL, NULL, NULL, DefaultInputInfo, DefaultDIPInfo,
 	FinehourInit, Namcos2Exit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -5724,7 +5728,7 @@ struct BurnDriver BurnDrvSgunner = {
 	"sgunner", NULL, NULL, NULL, "1990",
 	"Steel Gunner (Rev B)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, sgunnerRomInfo, sgunnerRomName, NULL, NULL, NULL, NULL, SgunnerInputInfo, SgunnerDIPInfo,
 	SgunnerInit, Namcos2Exit, DrvFrame, SgunnerDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -5777,7 +5781,7 @@ struct BurnDriver BurnDrvSgunnerj = {
 	"sgunnerj", "sgunner", NULL, NULL, "1990",
 	"Steel Gunner (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, sgunnerjRomInfo, sgunnerjRomName, NULL, NULL, NULL, NULL, SgunnerInputInfo, SgunnerDIPInfo,
 	SgunnerInit, Namcos2Exit, DrvFrame, SgunnerDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -5847,7 +5851,7 @@ struct BurnDriver BurnDrvSgunner2 = {
 	"sgunner2", NULL, NULL, NULL, "1991",
 	"Steel Gunner 2 (US)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, sgunner2RomInfo, sgunner2RomName, NULL, NULL, NULL, NULL, SgunnerInputInfo, SgunnerDIPInfo,
 	Sgunner2Init, Namcos2Exit, DrvFrame, SgunnerDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -5907,7 +5911,7 @@ struct BurnDriver BurnDrvSgunner2j = {
 	"sgunner2j", "sgunner2", NULL, NULL, "1991",
 	"Steel Gunner 2 (Japan, Rev A)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, sgunner2jRomInfo, sgunner2jRomName, NULL, NULL, NULL, NULL, SgunnerInputInfo, SgunnerDIPInfo,
 	Sgunner2Init, Namcos2Exit, DrvFrame, SgunnerDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -6379,7 +6383,7 @@ struct BurnDriver BurnDrvLuckywld = {
 	"luckywld", NULL, NULL, NULL, "1992",
 	"Lucky & Wild\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, luckywldRomInfo, luckywldRomName, NULL, NULL, NULL, NULL, LuckywldInputInfo, LuckywldDIPInfo,
 	LuckywldInit, Namcos2Exit, DrvFrame, LuckywldDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -6445,7 +6449,7 @@ struct BurnDriver BurnDrvLuckywldj = {
 	"luckywldj", "luckywld", NULL, NULL, "1992",
 	"Lucky & Wild (Japan)\0", NULL, "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, luckywldjRomInfo, luckywldjRomName, NULL, NULL, NULL, NULL, LuckywldInputInfo, LuckywldDIPInfo,
 	LuckywldInit, Namcos2Exit, DrvFrame, LuckywldDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -7022,7 +7026,7 @@ struct BurnDriver BurnDrvFinalap2 = {
 	"finalap2", NULL, NULL, NULL, "1990",
 	"Final Lap 2\0", "Imperfect graphics", "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
 	NULL, finalap2RomInfo, finalap2RomName, NULL, NULL, NULL, NULL, FourtraxInputInfo, FourtraxDIPInfo,
 	Finalap2Init, Namcos2Exit, DrvFrame, FinallapDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -7083,14 +7087,14 @@ struct BurnDriver BurnDrvFinalap2j = {
 	"finalap2j", "finalap2", NULL, NULL, "1990",
 	"Final Lap 2 (Japan)\0", "Imperfect graphics", "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
 	NULL, finalap2jRomInfo, finalap2jRomName, NULL, NULL, NULL, NULL, FourtraxInputInfo, FourtraxDIPInfo,
 	Finalap2Init, Namcos2Exit, DrvFrame, FinallapDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
 };
 
 
-// Final Lap 3 (World, set 1)
+// Final Lap 3 (World, Rev C)
 
 static struct BurnRomInfo finalap3RomDesc[] = {
 	{ "flt2_mpr0c.11d",	0x20000, 0x9ff361ff, 0x01 | BRF_PRG | BRF_ESS }, //  0 Main 68K Code
@@ -7144,9 +7148,9 @@ STD_ROM_FN(finalap3)
 
 struct BurnDriver BurnDrvFinalap3 = {
 	"finalap3", NULL, NULL, NULL, "1992",
-	"Final Lap 3 (World, set 1)\0", "Imperfect graphics", "Namco", "System 2",
+	"Final Lap 3 (World, Rev C)\0", "Imperfect graphics", "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
 	NULL, finalap3RomInfo, finalap3RomName, NULL, NULL, NULL, NULL, FourtraxInputInfo, FourtraxDIPInfo,
 	Finalap2Init, Namcos2Exit, DrvFrame, FinallapDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
@@ -7274,14 +7278,14 @@ struct BurnDriver BurnDrvFinalap3j = {
 	"finalap3j", "finalap3", NULL, NULL, "1992",
 	"Final Lap 3 (Japan)\0", "Imperfect graphics", "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
 	NULL, finalap3jRomInfo, finalap3jRomName, NULL, NULL, NULL, NULL, FourtraxInputInfo, FourtraxDIPInfo,
 	Finalap2Init, Namcos2Exit, DrvFrame, FinallapDraw, DrvScan, &DrvRecalc, 0x4000,
 	288, 224, 4, 3
 };
 
 
-// Final Lap 3 (Japan - Rev C)
+// Final Lap 3 (Japan, Rev C)
 
 static struct BurnRomInfo finalap3jcRomDesc[] = {
 	{ "flt1_mp0c.11d",	0x20000, 0xebe1bff8, 0x01 | BRF_PRG | BRF_ESS }, //  0 Main 68K Code
@@ -7335,7 +7339,7 @@ STD_ROM_FN(finalap3jc)
 
 struct BurnDriver BurnDrvFinalap3jc = {
 	"finalap3jc", "finalap3", NULL, NULL, "1992",
-	"Final Lap 3 (Japan - Rev C)\0", "Imperfect graphics", "Namco", "System 2",
+	"Final Lap 3 (Japan, Rev C)\0", "Imperfect graphics", "Namco", "System 2",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_RACING, 0,
 	NULL, finalap3jcRomInfo, finalap3jcRomName, NULL, NULL, NULL, NULL, FourtraxInputInfo, FourtraxDIPInfo,

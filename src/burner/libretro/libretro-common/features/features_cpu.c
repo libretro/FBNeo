@@ -627,17 +627,12 @@ uint64_t cpu_features_get(void)
    size_t len          = sizeof(size_t);
 
    if (sysctlbyname("hw.optional.floatingpoint", NULL, &len, NULL, 0) == 0)
-   {
       cpu |= RETRO_SIMD_CMOV;
-   }
 
 #if defined(CPU_X86)
    len            = sizeof(size_t);
    if (sysctlbyname("hw.optional.mmx", NULL, &len, NULL, 0) == 0)
-   {
-      cpu |= RETRO_SIMD_MMX;
-      cpu |= RETRO_SIMD_MMXEXT;
-   }
+      cpu |= RETRO_SIMD_MMX | RETRO_SIMD_MMXEXT;
 
    len            = sizeof(size_t);
    if (sysctlbyname("hw.optional.sse", NULL, &len, NULL, 0) == 0)
@@ -693,15 +688,12 @@ uint64_t cpu_features_get(void)
       cpu |= RETRO_SIMD_VFPV4;
 #endif
 #elif defined(_XBOX1)
-   cpu |= RETRO_SIMD_MMX;
-   cpu |= RETRO_SIMD_SSE;
-   cpu |= RETRO_SIMD_MMXEXT;
+   cpu |= RETRO_SIMD_MMX | RETRO_SIMD_SSE | RETRO_SIMD_MMXEXT;
 #elif defined(CPU_X86)
    unsigned max_flag   = 0;
    int flags[4];
    int vendor_shuffle[3];
    char vendor[13];
-   uint64_t cpu_flags  = 0;
    x86_cpuid(0, flags);
    vendor_shuffle[0] = flags[1];
    vendor_shuffle[1] = flags[3];
@@ -729,12 +721,9 @@ uint64_t cpu_features_get(void)
    if (flags[3] & (1 << 23))
       cpu |= RETRO_SIMD_MMX;
 
+   /* SSE also implies MMXEXT (according to FFmpeg source). */
    if (flags[3] & (1 << 25))
-   {
-      /* SSE also implies MMXEXT (according to FFmpeg source). */
-      cpu |= RETRO_SIMD_SSE;
-      cpu |= RETRO_SIMD_MMXEXT;
-   }
+      cpu |= RETRO_SIMD_SSE | RETRO_SIMD_MMXEXT;
 
    if (flags[3] & (1 << 26))
       cpu |= RETRO_SIMD_SSE2;
@@ -844,11 +833,12 @@ void cpu_features_get_model_name(char *name, int len)
 {
 #if defined(CPU_X86) && !defined(__MACH__)
    union {
-      int i[4];
-      unsigned char s[16];
+      int32_t i[4];
+      uint32_t u[4];
+      uint8_t s[16];
    } flags;
    int i, j;
-   size_t pos = 0;
+   int pos = 0;
    bool start = false;
 
    if (!name)
@@ -856,7 +846,8 @@ void cpu_features_get_model_name(char *name, int len)
 
    x86_cpuid(0x80000000, flags.i);
 
-   if (flags.i[0] < 0x80000004)
+   /* Check for additional cpuid attributes availability */
+   if (flags.u[0] < 0x80000004)
       return;
 
    for (i = 0; i < 3; i++)
@@ -864,7 +855,7 @@ void cpu_features_get_model_name(char *name, int len)
       memset(flags.i, 0, sizeof(flags.i));
       x86_cpuid(0x80000002 + i, flags.i);
 
-      for (j = 0; j < sizeof(flags.s); j++)
+      for (j = 0; j < (int)sizeof(flags.s); j++)
       {
          if (!start && flags.s[j] == ' ')
             continue;
@@ -883,7 +874,7 @@ void cpu_features_get_model_name(char *name, int len)
    }
 end:
    /* terminate our string */
-   if (pos < (size_t)len)
+   if (pos < len)
       name[pos] = '\0';
 #elif defined(__MACH__)
    if (!name)

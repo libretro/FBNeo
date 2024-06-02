@@ -442,6 +442,8 @@ static INT32 DrvDoReset()
 	zoomreadroms = 0;
 	K052109_selected = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -719,7 +721,7 @@ static INT32 DrvScan(INT32 nAction,INT32 *pnMin)
 }
 
 
-// Bottom of the Ninth (ver. T)
+// Bottom of the Ninth (version T)
 
 static struct BurnRomInfo bottom9RomDesc[] = {
 	{ "891n03.k17",		0x10000, 0x8b083ff3, 1 | BRF_PRG | BRF_ESS }, //  0 M6809 Code
@@ -774,16 +776,16 @@ STD_ROM_FN(bottom9)
 
 struct BurnDriver BurnDrvBottom9 = {
 	"bottom9", NULL, NULL, NULL, "1989",
-	"Bottom of the Ninth (ver. T)\0", NULL, "Konami", "GX891",
+	"Bottom of the Ninth (version T)\0", NULL, "Konami", "GX891",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
 	NULL, bottom9RomInfo, bottom9RomName, NULL, NULL, NULL, NULL, Bottom9InputInfo, Bottom9DIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	288, 224, 4, 3
 };
 
 
-// Bottom of the Ninth (ver. N)
+// Bottom of the Ninth (version N)
 
 static struct BurnRomInfo bottom9nRomDesc[] = {
 	{ "891n03.k17",		0x10000, 0x8b083ff3, 1 | BRF_PRG | BRF_ESS }, //  0 M6809 Code
@@ -838,16 +840,16 @@ STD_ROM_FN(bottom9n)
 
 struct BurnDriver BurnDrvBottom9n = {
 	"bottom9n", "bottom9", NULL, NULL, "1989",
-	"Bottom of the Ninth (ver. N)\0", NULL, "Konami", "GX891",
+	"Bottom of the Ninth (version N)\0", NULL, "Konami", "GX891",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
 	NULL, bottom9nRomInfo, bottom9nRomName, NULL, NULL, NULL, NULL, Bottom9InputInfo, Bottom9DIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	288, 224, 4, 3
 };
 
 
-// Main Stadium (Japan ver. 4)
+// Main Stadium (Japan)
 
 static struct BurnRomInfo mstadiumRomDesc[] = {
 	{ "891-403.k17",	0x10000, 0x1c00c4e8, 1 | BRF_PRG | BRF_ESS }, //  0 M6809 Code
@@ -902,9 +904,9 @@ STD_ROM_FN(mstadium)
 
 struct BurnDriver BurnDrvMstadium = {
 	"mstadium", "bottom9", NULL, NULL, "1989",
-	"Main Stadium (Japan ver. 4)\0", NULL, "Konami", "GX891",
+	"Main Stadium (Japan)\0", NULL, "Konami", "GX891",
 	L"Main Stadium\0\u30E1\u30A4\u30F3\u30B9\u30BF\u30B8\u30A2\u30E0 (Japan ver. 4)\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SPORTSMISC, 0,
 	NULL, mstadiumRomInfo, mstadiumRomName, NULL, NULL, NULL, NULL, Bottom9InputInfo, MstadiumDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	288, 224, 4, 3

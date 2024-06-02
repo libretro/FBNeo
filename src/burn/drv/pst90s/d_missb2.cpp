@@ -287,6 +287,8 @@ static INT32 DrvDoReset()
 	sound_cpu_in_reset = 0;
 	video_enable = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -424,7 +426,7 @@ static INT32 DrvInit(INT32 type)
 	ZetClose();
 
 	BurnYM3526Init(3000000, NULL, 0);
-	BurnTimerAttachYM3526(&ZetConfig, 3000000);
+	BurnTimerAttach(&ZetConfig, 3000000);
 	BurnYM3526SetRoute(BURN_SND_YM3526_ROUTE, 0.40, BURN_SND_ROUTE_BOTH);
 
 	MSM6295Init(0, 1056000 / 132, 1);
@@ -571,36 +573,29 @@ static INT32 DrvFrame()
 	for (INT32 i = 0; i < nInterleave; i++)
 	{
 		ZetOpen(0);
-		nCyclesDone[0] += ZetRun(nCyclesTotal[0] / nInterleave);
+		CPU_RUN(0, Zet);
 		if (i == nInterleave - 1) ZetSetIRQLine(0, CPU_IRQSTATUS_HOLD);
 		ZetClose();
 
 		ZetOpen(1);
 		if (sound_cpu_in_reset) {
-			nCyclesDone[1] += nCyclesTotal[1] / nInterleave;
-			ZetIdle(nCyclesTotal[1] / nInterleave);
+			CPU_IDLE(1, Zet);
 		} else {
-			nCyclesDone[1] += ZetRun(nCyclesTotal[1] / nInterleave);
+			CPU_RUN(1, Zet);
 		}
 		if (i == nInterleave - 1) ZetSetIRQLine(0, CPU_IRQSTATUS_HOLD);
 		ZetClose();
 
 		ZetOpen(2);
-		BurnTimerUpdateYM3526((i + 1) * (nCyclesTotal[2] / nInterleave));
+		CPU_RUN_TIMER(2);
 		if (i == nInterleave - 1) ZetSetIRQLine(0, CPU_IRQSTATUS_HOLD);
 		ZetClose();
 	}
-
-	ZetOpen(2);
-
-	BurnTimerEndFrameYM3526(nCyclesTotal[2]);
 
 	if (pBurnSoundOut) {
 		BurnYM3526Update(pBurnSoundOut, nBurnSoundLen);
 		MSM6295Render(0, pBurnSoundOut, nBurnSoundLen);
 	}
-
-	ZetClose();
 
 	if (pBurnDraw) {
 		DrvDraw();
@@ -691,7 +686,7 @@ struct BurnDriver BurnDrvMissb2 = {
 	"missb2", NULL, NULL, NULL, "1996",
 	"Miss Bubble II\0", NULL, "Alpha Co.", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_PLATFORM, 0,
 	NULL, missb2RomInfo, missb2RomName, NULL, NULL, NULL, NULL, Missb2InputInfo, Missb2DIPInfo,
 	missb2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x200,
 	256, 224, 4, 3
@@ -735,7 +730,7 @@ struct BurnDriver BurnDrvBublpong = {
 	"bublpong", "missb2", NULL, NULL, "1996",
 	"Bubble Pong Pong\0", NULL, "Top Ltd.", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_PLATFORM, 0,
 	NULL, bublpongRomInfo, bublpongRomName, NULL, NULL, NULL, NULL, Missb2InputInfo, Missb2DIPInfo,
 	bublpongInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x200,
 	256, 224, 4, 3

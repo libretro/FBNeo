@@ -12,8 +12,8 @@
 		<url>https://neo-source.com/</url>
 		<clrmamepro forcenodump="ignore"/>
 	</header>
-	<game name="bakumats" cloneof="lastblad" romof="lastblad">
-		<description>Bakumatsu Rouman Tokubetsu Hen - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana (Jpn)</description>
+	<game name="bakumats" cloneof="lastblad" romof="lastblad" sourcefile="pst90s/d_ngp.cpp">
+		<description>Bakumatsu Rouman Tokubetsu Hen - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="bakumatsu rouman tokubetsu hen - gekka no kenshi - tsuki ni saku hana, chiri yuku hana (japan).bin" size="2097152" crc="12afacb0"/>
@@ -22,8 +22,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bigbang" cloneof="wrestmad" romof="wrestmad">
-		<description>Big Bang Pro Wrestling (Jpn)</description>
+	<game name="bigbang" cloneof="wrestmad" romof="wrestmad" sourcefile="pst90s/d_ngp.cpp">
+		<description>Big Bang Pro Wrestling (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="big bang pro wrestling (japan) (en,ja).bin" size="2097152" crc="b783c372"/>
@@ -32,8 +32,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bikkuri" romof="ngp">
-		<description>Bikkuriman 2000 - Viva! Pocket Festiva! (Jpn)</description>
+	<game name="bikkuri" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Bikkuriman 2000 - Viva! Pocket Festiva! (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Sega Toys</manufacturer>
 		<rom name="bikkuriman 2000 - viva pocket festiva (japan).bin" size="1048576" crc="7a2d7635"/>
@@ -42,7 +42,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="biomotor" romof="ngp">
+	<game name="biomotor" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>BioMotor Unitron (Euro, USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -52,8 +52,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="biomotorj" cloneof="biomotor" romof="biomotor">
-		<description>BioMotor Unitron (Jpn)</description>
+	<game name="biomotorj" cloneof="biomotor" romof="biomotor" sourcefile="pst90s/d_ngp.cpp">
+		<description>BioMotor Unitron (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="biomotor unitron (japan).bin" size="1048576" crc="ecee99f3"/>
@@ -62,17 +62,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bamp" cloneof="pbobble" romof="pbobble">
-		<description>Bust-A-Move Pocket (Prototype)</description>
-		<year>1999</year>
-		<manufacturer>SNK</manufacturer>
-		<rom name="bustmove.bin" size="1048576" crc="78a1361d"/>
-		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
-		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
-		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="bam" cloneof="pbobble" romof="pbobble">
+	<game name="bam" cloneof="pbobble" romof="pbobble" sourcefile="pst90s/d_ngp.cpp">
 		<description>Bust-A-Move Pocket (USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -82,8 +72,19 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="coolboar" romof="ngp">
-		<description>Cool Boarders Pocket (Euro, Jpn)</description>
+	<game name="bamp" cloneof="pbobble" romof="pbobble" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Bust-A-Move Pocket (USA, Prototype)</description>
+		<year>1999</year>
+		<manufacturer>SNK</manufacturer>
+		<rom name="bustmove.bin" size="1048576" crc="78a1361d"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="coolboar" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Cool Boarders Pocket (Euro, Japan)</description>
 		<year>2000</year>
 		<manufacturer>UEP Systems</manufacturer>
 		<rom name="cool boarders pocket (japan, europe) (en,ja).bin" size="1048576" crc="833f9c22"/>
@@ -92,8 +93,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="coolcool" romof="ngp">
-		<description>Cool Cool Jam (Euro, USA, Sample)</description>
+	<game name="coolcool" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Cool Cool Jam (Euro, USA, Sample-Demo)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="cool cool jam (usa, europe) (sample).bin" size="2097152" crc="4d8d27f0"/>
@@ -102,8 +103,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="coolcoolj" cloneof="coolcool" romof="coolcool">
-		<description>Cool Cool Jam (Jpn)</description>
+	<game name="coolcoolj" cloneof="coolcool" romof="coolcool" sourcefile="pst90s/d_ngp.cpp">
+		<description>Cool Cool Jam (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="cool cool jam (japan).bin" size="2097152" crc="4fda5d8a"/>
@@ -112,7 +113,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="crushrol" romof="ngp">
+	<game name="crushrol" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Crush Roller (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -122,8 +123,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="darkarms" romof="ngp">
-		<description>Dark Arms - Beast Buster 1999 (Euro, USA) ~ Beast Buster - Yami no Seitai Heiki (Jpn)</description>
+	<game name="darkarms" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Dark Arms - Beast Buster 1999 (Euro, USA) ~ Beast Buster - Yami no Seitai Heiki (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="dark arms - beast buster 1999 (world) (en,ja).bin" size="2097152" crc="6f353f34"/>
@@ -132,7 +133,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="darkarmsp" cloneof="darkarms" romof="darkarms">
+	<game name="darkarmsp" cloneof="darkarms" romof="darkarms" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
 		<description>Dark Arms - Beast Buster 1999 (Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -142,7 +144,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="deltawrp" romof="ngp">
+	<game name="deltawrp" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Delta Warp (Jpn)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -152,8 +154,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="ogrebatl" romof="ngp">
-		<description>Densetsu no Ogre Battle Gaiden - Zenobia no Ouji (Jpn)</description>
+	<game name="ogrebatl" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Densetsu no Ogre Battle Gaiden - Zenobia no Ouji (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="densetsu no ogre battle gaiden - zenobia no ouji (japan).bin" size="2097152" crc="eeeefd6a"/>
@@ -162,8 +164,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dendego2" romof="ngp">
-		<description>Densha de Go! 2 on Neo Geo Pocket (Jpn)</description>
+	<game name="dendego2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Densha de Go! 2 on Neo Geo Pocket (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="densha de go 2 on neo geo pocket (japan).bin" size="4194304" crc="d5ced9e9"/>
@@ -172,8 +174,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dendego2p" cloneof="dendego2" romof="dendego2">
-		<description>Densha de Go! 2 on Neo Geo Pocket (Jpn, Prototype)</description>
+	<game name="dendego2p" cloneof="dendego2" romof="dendego2" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Densha de Go! 2 on Neo Geo Pocket (Japan, Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="densha de go 2 on neo geo pocket (japan) (beta).bin" size="4194304" crc="2fc4623e"/>
@@ -182,8 +185,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="divealrmj" cloneof="divealrm" romof="divealrm">
-		<description>Dive Alert - Barn Hen (Jpn)</description>
+	<game name="divealrmj" cloneof="divealrm" romof="divealrm" sourcefile="pst90s/d_ngp.cpp">
+		<description>Dive Alert - Barn Hen (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="dive alert - burn hen (japan).bin" size="2097152" crc="c213941d"/>
@@ -192,8 +195,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="divealrmjp" cloneof="divealrm" romof="divealrm">
-		<description>Dive Alert - Barn Hen (Jpn, Prototype)</description>
+	<game name="divealrmjp" cloneof="divealrm" romof="divealrm" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Dive Alert - Barn Hen (Japan, Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="divealert.bin" size="2097152" crc="d9817a88"/>
@@ -202,7 +206,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="divealrb" romof="ngp">
+	<game name="divealrb" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Dive Alert - Becky's Version (Euro, USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -212,7 +216,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="divealrm" romof="ngp">
+	<game name="divealrm" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Dive Alert - Matt's Version (Euro, USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -222,8 +226,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="divealrbj" cloneof="divealrb" romof="divealrb">
-		<description>Dive Alert - Rebecca Hen (Jpn)</description>
+	<game name="divealrbj" cloneof="divealrb" romof="divealrb" sourcefile="pst90s/d_ngp.cpp">
+		<description>Dive Alert - Rebecca Hen (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="dive alert - rebecca hen (japan).bin" size="2097152" crc="3c4af4f5"/>
@@ -232,8 +236,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dokodemo" romof="ngp">
-		<description>Dokodemo Mahjong (Jpn)</description>
+	<game name="dokodemo" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Dokodemo Mahjong (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="dokodemo mahjong (japan).bin" size="524288" crc="78c21b5e"/>
@@ -242,8 +246,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dynaslug" romof="ngp">
-		<description>Dynamite Slugger (Euro, Jpn)</description>
+	<game name="dynaslug" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Dynamite Slugger (Euro, Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="dynamite slugger (japan, europe) (en,ja).bin" size="1048576" crc="7f1779cd"/>
@@ -252,7 +256,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="evolutn" romof="ngp">
+	<game name="evolutn" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Evolution - Eternal Dungeons (Euro)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -262,7 +266,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="cotton" romof="ngp">
+	<game name="cotton" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Fantastic Night Dreams Cotton (Euro)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -272,8 +276,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="cottonj" cloneof="cotton" romof="cotton">
-		<description>Fantastic Night Dreams Cotton (Jpn)</description>
+	<game name="cottonj" cloneof="cotton" romof="cotton" sourcefile="pst90s/d_ngp.cpp">
+		<description>Fantastic Night Dreams Cotton (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Success</manufacturer>
 		<rom name="fantastic night dreams cotton (japan).bin" size="1048576" crc="b8a12409"/>
@@ -282,7 +286,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="faselei" romof="ngp">
+	<game name="faselei" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Faselei! (Euro)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -292,8 +296,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="faseleij" cloneof="faselei" romof="faselei">
-		<description>Faselei! (Jpn)</description>
+	<game name="faseleij" cloneof="faselei" romof="faselei" sourcefile="pst90s/d_ngp.cpp">
+		<description>Faselei! (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="faselei (japan).bin" size="2097152" crc="8f585838"/>
@@ -302,8 +306,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="ganbaren" romof="ngp">
-		<description>Ganbare Neo Poke-kun (Jpn)</description>
+	<game name="ganbaren" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Ganbare Neo Poke-kun (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="ganbare neo poke-kun (ka) (japan).bin" size="2097152" crc="6df986a3"/>
@@ -312,7 +316,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="gearsoffate" romof="ngp">
+	<game name="gearsoffate" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
 		<description>Gears of Fate (HB)</description>
 		<year>2000</year>
@@ -323,8 +327,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="infinity" romof="ngp">
-		<description>Infinity Cure (Jpn)</description>
+	<game name="infinity" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Infinity Cure (Japan)</description>
 		<year>2000</year>
 		<manufacturer>KID</manufacturer>
 		<rom name="infinity cure (japan).bin" size="1048576" crc="32dc2aa2"/>
@@ -333,8 +337,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kikousei" romof="ngp">
-		<description>Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori. (Jpn)</description>
+	<game name="kikousei" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori. (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="kikou seiki unitron - sono tsuide. hikari umareru chi yori. (japan).bin" size="2097152" crc="84580d66"/>
@@ -343,8 +347,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kof_mlon" romof="ngp">
-		<description>King of Fighters R-1 &amp; Melon-chan no Seichou Nikki (Jpn, Prototype)</description>
+	<game name="kof_mlon" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>King of Fighters R-1 &amp; Melon-chan no Seichou Nikki (Japan, Prototype)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="king of fighters r-1 &amp; melon-chan no seichou nikki (japan) (beta).bin" size="2097152" crc="2660bfc4"/>
@@ -353,8 +358,19 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="koikoi" romof="ngp">
-		<description>Koi Koi Mahjong (Jpn)</description>
+	<game name="kofpara" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Force B&amp;W mode to unlock the hidden game 'Yosaku'</comment>
+		<description>King of Fighters, The - Battle de Paradise (Japan)</description>
+		<year>2000</year>
+		<manufacturer>SNK</manufacturer>
+		<rom name="king of fighters, the - battle de paradise (japan).bin" size="2097152" crc="77e37bac"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="koikoi" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Koi Koi Mahjong (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="koi koi mahjong (japan).bin" size="524288" crc="b51c3eba"/>
@@ -363,7 +379,17 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="magdropjd" cloneof="magdrop" romof="magdrop">
+	<game name="lastblad" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Last Blade, The - Beyond the Destiny (Euro)</description>
+		<year>2000</year>
+		<manufacturer>SNK</manufacturer>
+		<rom name="last blade, the - beyond the destiny (europe).bin" size="2097152" crc="94fcfd1e"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="magdropjd" cloneof="magdrop" romof="magdrop" sourcefile="pst90s/d_ngp.cpp">
 		<description>Magical Drop Pocket (Demo)</description>
 		<year>1999</year>
 		<manufacturer>Data East</manufacturer>
@@ -373,7 +399,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="magdrop" romof="ngp">
+	<game name="magdrop" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Magical Drop Pocket (Euro, USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -383,8 +409,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="magdropj" cloneof="magdrop" romof="magdrop">
-		<description>Magical Drop Pocket (Jpn)</description>
+	<game name="magdropj" cloneof="magdrop" romof="magdrop" sourcefile="pst90s/d_ngp.cpp">
+		<description>Magical Drop Pocket (Japan)</description>
 		<year>1999</year>
 		<manufacturer>Data East</manufacturer>
 		<rom name="magical drop pocket (japan).bin" size="1048576" crc="694ce2dc"/>
@@ -393,8 +419,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="melonchn" romof="ngp">
-		<description>Melon-chan no Seichou Nikki (Jpn)</description>
+	<game name="melonchn" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Melon-chan no Seichou Nikki (Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="melon-chan no seichou nikki (japan).bin" size="1048576" crc="cb42cfa4"/>
@@ -403,8 +429,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="memories" romof="ngp">
-		<description>Memories Off - Pure (Jpn)</description>
+	<game name="memories" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Memories Off - Pure (Japan)</description>
 		<year>2000</year>
 		<manufacturer>KID</manufacturer>
 		<rom name="memories off - pure (japan).bin" size="1048576" crc="a7926e90"/>
@@ -413,7 +439,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mslug1st" romof="ngp">
+	<game name="mslug1st" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Metal Slug - 1st Mission (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -423,7 +449,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mslug2ndd" cloneof="mslug2nd" romof="mslug2nd">
+	<game name="mslug2ndd" cloneof="mslug2nd" romof="mslug2nd" sourcefile="pst90s/d_ngp.cpp">
 		<description>Metal Slug - 2nd Mission (Demo)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -433,7 +459,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mslug2nd" romof="ngp">
+	<game name="mslug2nd" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Metal Slug - 2nd Mission (World)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -443,8 +469,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mezase" romof="ngp">
-		<description>Mezase! Kanji Ou (Jpn)</description>
+	<game name="mezase" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Mezase! Kanji Ou (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="mezase kanji ou (japan).bin" size="2097152" crc="a52e1c82"/>
@@ -453,8 +479,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mizuki" romof="ngp">
-		<description>Mizuki Shigeru no Youkai Shashinkan (Jpn)</description>
+	<game name="mizuki" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Mizuki Shigeru no Youkai Shashinkan (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="mizuki shigeru no youkai shashinkan (japan).bin" size="2097152" crc="dde08335"/>
@@ -463,8 +489,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neoderby" romof="ngp">
-		<description>Neo Derby Champ Daiyosou (Jpn)</description>
+	<game name="neoderby" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Neo Derby Champ Daiyosou (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="neo derby champ daiyosou (japan).bin" size="2097152" crc="5a053559"/>
@@ -473,7 +499,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="nigeronpe" cloneof="nigeronp" romof="nigeronp">
+	<game name="nigeronpe" cloneof="nigeronp" romof="nigeronp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Hack</comment>
 		<description>Nige-ron-pa (Hack, English)</description>
 		<year>2018</year>
 		<manufacturer>SNK</manufacturer>
@@ -483,8 +510,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="nigeronp" romof="ngp">
-		<description>Nige-ron-pa (Jpn)</description>
+	<game name="nigeronp" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Nige-ron-pa (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="nigeronpa (japan).bin" size="1048576" crc="3cc3e269"/>
@@ -493,8 +520,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="oekakip" cloneof="picturep" romof="picturep">
-		<description>Oekaki Puzzle (Jpn)</description>
+	<game name="oekakip" cloneof="picturep" romof="picturep" sourcefile="pst90s/d_ngp.cpp">
+		<description>Oekaki Puzzle (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Success</manufacturer>
 		<rom name="oekaki puzzle (japan).bin" size="524288" crc="59ab1e0f"/>
@@ -503,7 +530,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pacman" romof="ngp">
+	<game name="pacman" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pac-Man (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -513,8 +540,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotazt" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Azteca (Jpn)</description>
+	<game name="pslotazt" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Azteca (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - azteca (japan).bin" size="524288" crc="c56ef8c3"/>
@@ -523,8 +550,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotdk2" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Dekahel 2 (Jpn)</description>
+	<game name="pslotdk2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Dekahel 2 (Japan)</description>
 		<year>2001</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - dekahel 2 (japan).bin" size="1048576" crc="346f3c46"/>
@@ -533,8 +560,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotds2" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Delsol 2 (Jpn)</description>
+	<game name="pslotds2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Delsol 2 (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - delsol 2 (japan).bin" size="1048576" crc="1ea69db1"/>
@@ -543,8 +570,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotecp" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - e-Cup (Jpn)</description>
+	<game name="pslotecp" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - e-Cup (Japan)</description>
 		<year>2001</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - e-cup (japan).bin" size="1048576" crc="0a7c32df"/>
@@ -553,8 +580,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslothana" cloneof="pslothan" romof="pslothan">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Hanabi (Jpn, v3)</description>
+	<game name="pslothana" cloneof="pslothan" romof="pslothan" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Hanabi (Japan, v3)</description>
 		<year>1999</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - hanabi (japan) (v1.02).bin" size="524288" crc="cfd1c8f2"/>
@@ -563,8 +590,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslothan" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Hanabi (Jpn, v5)</description>
+	<game name="pslothan" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Hanabi (Japan, v5)</description>
 		<year>1999</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - hanabi (japan) (v1.04).bin" size="524288" crc="a0c26f9b"/>
@@ -573,8 +600,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotooh" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Oohanabi (Jpn)</description>
+	<game name="pslotooh" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Oohanabi (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - oohanabi (japan).bin" size="1048576" crc="8a88c50f"/>
@@ -583,8 +610,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotpc2" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Porcano 2 (Jpn)</description>
+	<game name="pslotpc2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Porcano 2 (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - porcano 2 (japan).bin" size="1048576" crc="96ddfbe3"/>
@@ -593,8 +620,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pslotwrd" romof="ngp">
-		<description>Pachi-Slot Aruze Oukoku Pocket - Ward of Lights (Jpn)</description>
+	<game name="pslotwrd" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachi-Slot Aruze Oukoku Pocket - Ward of Lights (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Aruze</manufacturer>
 		<rom name="pachi-slot aruze oukoku pocket - ward of lights (japan).bin" size="524288" crc="d46cbc54"/>
@@ -603,8 +630,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pachinko" romof="ngp">
-		<description>Pachinko Hisshou Guide - Pocket Parlor (Jpn)</description>
+	<game name="pachinko" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pachinko Hisshou Guide - Pocket Parlor (Japan)</description>
 		<year>1999</year>
 		<manufacturer>Japan Vistec</manufacturer>
 		<rom name="pachinko hisshou guide - pocket parlor (japan).bin" size="1048576" crc="c3d6b28b"/>
@@ -613,8 +640,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="prtymail" romof="ngp">
-		<description>Party Mail (Jpn)</description>
+	<game name="prtymail" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Party Mail (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="party mail (japan).bin" size="1048576" crc="4da8a1c0"/>
@@ -623,8 +650,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="prtymailp" cloneof="prtymail" romof="prtymail">
-		<description>Party Mail (Prototype)</description>
+	<game name="prtymailp" cloneof="prtymail" romof="prtymail" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Party Mail (Japan, Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="partymail.bin" size="2097152" crc="f2284a95"/>
@@ -633,7 +661,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="picturep" romof="ngp">
+	<game name="picturep" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Picture Puzzle (Euro, USA)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -643,7 +671,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neo21" romof="ngp">
+	<game name="neo21" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Casino Series - Neo 21 (Euro, USA)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -653,8 +681,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neobacca" romof="ngp">
-		<description>Pocket Casino Series - Neo Baccarat (Euro)</description>
+	<game name="neobacca" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Casino Series - Neo Baccarat (World)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="neo baccarat - real casino series (world).bin" size="1048576" crc="22aab454"/>
@@ -663,8 +691,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neobaccap" cloneof="neobacca" romof="neobacca">
-		<description>Pocket Casino Series - Neo Baccarat (Prototype)</description>
+	<game name="neobaccap" cloneof="neobacca" romof="neobacca" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Pocket Casino Series - Neo Baccarat (World, Prototype)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="baccarat.bin" size="1048576" crc="80880498"/>
@@ -673,8 +702,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neocher" romof="ngp">
-		<description>Pocket Casino Series - Neo Cherry Master (Euro, Jpn)</description>
+	<game name="neocher" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Casino Series - Neo Cherry Master (Euro, Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="neo cherry master - real casino series (japan, europe) (en,ja).bin" size="1048576" crc="5c067579"/>
@@ -683,7 +712,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neocherc" romof="ngp">
+	<game name="neocherc" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Casino Series - Neo Cherry Master Color (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -693,7 +722,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neochercp" cloneof="neocherc" romof="neocherc">
+	<game name="neochercp" cloneof="neocherc" romof="neocherc" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
 		<description>Pocket Casino Series - Neo Cherry Master Color (World, Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -703,7 +733,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neodraga" cloneof="neodrag" romof="neodrag">
+	<game name="neodraga" cloneof="neodrag" romof="neodrag" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Casino Series - Neo Dragon's Wild (World, v11)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -713,7 +743,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neodrag" romof="ngp">
+	<game name="neodrag" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Casino Series - Neo Dragon's Wild (World, v13)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -723,7 +753,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neomystr" romof="ngp">
+	<game name="neomystr" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Casino Series - Neo Mystery Bonus (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -733,7 +763,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="fatfury" romof="ngp">
+	<game name="fatfury" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Fighting Series - Garou Densetsu First Contact ~ Fatal Fury F-Contact (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -743,7 +773,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="fatfuryd" cloneof="fatfury" romof="fatfury">
+	<game name="fatfuryd" cloneof="fatfury" romof="fatfury" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Fighting Series - Garou Densetsu First Contact ~ Fatal Fury F-Contact (World, Demo)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -753,8 +783,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kofr1" romof="ngp">
-		<description>Pocket Fighting Series - King of Fighters R-1 (Euro, Jpn)</description>
+	<game name="kofr1" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Fighting Series - King of Fighters R-1 (Euro, Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="king of fighters r-1 (japan, europe) (en,ja).bin" size="2097152" crc="dceb7e11"/>
@@ -763,7 +793,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kofr2" romof="ngp">
+	<game name="kofr2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Fighting Series - King of Fighters R-2 (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -773,7 +803,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kofr2d2" cloneof="kofr2" romof="kofr2">
+	<game name="kofr2d2" cloneof="kofr2" romof="kofr2" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Fighting Series - King of Fighters R-2 (World, Demo Version 2)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -783,7 +813,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kofr2d" cloneof="kofr2" romof="kofr2">
+	<game name="kofr2d" cloneof="kofr2" romof="kofr2" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Fighting Series - King of Fighters R-2 (World, Demo)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -793,7 +823,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="samsho2" romof="ngp">
+	<game name="samsho2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Fighting Series - Samurai Shodown! 2 (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -803,8 +833,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="samsho" romof="ngp">
-		<description>Pocket Fighting Series - Samurai Spirit! (Jpn) ~ Samurai Shodown! (Euro)</description>
+	<game name="samsho" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Fighting Series - Samurai Spirit! (Japan) ~ Samurai Shodown! (Euro)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="samurai shodown - pocket fighting series (japan, europe) (en,ja).bin" size="2097152" crc="32e4696a"/>
@@ -813,8 +843,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="poktlove" romof="ngp">
-		<description>Pocket Love if (Jpn)</description>
+	<game name="poktlove" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Love if (Japan)</description>
 		<year>1999</year>
 		<manufacturer>KID</manufacturer>
 		<rom name="pocket love if (japan).bin" size="2097152" crc="c2ee1ee5"/>
@@ -823,7 +853,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pockrev" romof="ngp">
+	<game name="pockrev" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Reversi (Euro)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -833,8 +863,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pockrevj" cloneof="pockrev" romof="pockrev">
-		<description>Pocket Reversi (Jpn)</description>
+	<game name="pockrevj" cloneof="pockrev" romof="pockrev" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Reversi (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Success</manufacturer>
 		<rom name="pocket reversi (japan).bin" size="524288" crc="fb0b55b8"/>
@@ -843,7 +873,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bstarsc" romof="ngp">
+	<game name="bstarsc" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Sport Series - Baseball Stars Color (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -853,7 +883,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neoturfm" romof="ngp">
+	<game name="neoturfm" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Sport Series - Big Tournament Golf ~ Neo Turf Masters (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -863,7 +893,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neocuppl" romof="ngp">
+	<game name="neocuppl" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Sport Series - Neo Geo Cup '98 Plus (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -873,8 +903,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neoproyk" romof="ngp">
-		<description>Pocket Sport Series - Neo Poke Pro Yakyuu (Jpn)</description>
+	<game name="neoproyk" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Sport Series - Neo Poke Pro Yakyuu (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="neo poke pro yakyuu (japan).bin" size="1048576" crc="f4d78f12"/>
@@ -883,7 +913,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="ptennisc" romof="ngp">
+	<game name="ptennisc" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Pocket Sport Series - Pocket Tennis Color (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -893,8 +923,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bstars" romof="ngp">
-		<description>Pocket Sports Series - Baseball Stars (Euro, Jpn)</description>
+	<game name="bstars" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Sports Series - Baseball Stars (Euro, Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="baseball stars (japan, europe) (en,ja).bin" size="1048576" crc="4781ae84"/>
@@ -903,8 +933,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="neocup98" romof="ngp">
-		<description>Pocket Sports Series - Neo Geo Cup '98 (Euro, Jpn)</description>
+	<game name="neocup98" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Sports Series - Neo Geo Cup '98 (Euro, Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="neo geo cup '98 (japan, europe) (en,ja).bin" size="1048576" crc="33add5bd"/>
@@ -913,8 +943,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="ptennis" romof="ngp">
-		<description>Pocket Sports Series - Pocket Tennis (Euro, Jpn)</description>
+	<game name="ptennis" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Pocket Sports Series - Pocket Tennis (Euro, Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="pocket tennis - pocket sports series (japan, europe) (en,ja).bin" size="524288" crc="4b1eed05"/>
@@ -923,8 +953,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="puyopopa" cloneof="puyopop" romof="puyopop">
-		<description>Puyo Pop (World, v5) ~ Puyo Pyuo Tsuu (Jpn, v5)</description>
+	<game name="puyopopa" cloneof="puyopop" romof="puyopop" sourcefile="pst90s/d_ngp.cpp">
+		<description>Puyo Pop (World, v5) ~ Puyo Pyuo Tsuu (Japan, v5)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="puyo pop (world) (en,ja) (v1.05).bin" size="1048576" crc="3090b2fd"/>
@@ -933,8 +963,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="puyopop" romof="ngp">
-		<description>Puyo Pop (World, v6) ~ Puyo Pyuo Tsuu (Jpn, v6)</description>
+	<game name="puyopop" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Puyo Pop (World, v6) ~ Puyo Pyuo Tsuu (Japan, v6)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="puyo pop (world) (en,ja) (v1.06).bin" size="1048576" crc="5c649d1e"/>
@@ -943,8 +973,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pbobbleb" cloneof="pbobble" romof="pbobble">
-		<description>Puzzle Bobble Mini (Euro, Jpn, v09 Prototype?)</description>
+	<game name="pbobbleb" cloneof="pbobble" romof="pbobble" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Puzzle Bobble Mini (Euro, Japan, v09 Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="puzzle bobble mini (japan, europe) (en,ja) (beta).bin" size="1048576" crc="e3d9f38e"/>
@@ -953,8 +984,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pbobblea" cloneof="pbobble" romof="pbobble">
-		<description>Puzzle Bobble Mini (Euro, Jpn, v09)</description>
+	<game name="pbobblea" cloneof="pbobble" romof="pbobble" sourcefile="pst90s/d_ngp.cpp">
+		<description>Puzzle Bobble Mini (Euro, Japan, v09)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="puzzle bobble mini (japan, europe) (v1.09).bin" size="1048576" crc="c94b173a"/>
@@ -963,8 +994,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pbobble" romof="ngp">
-		<description>Puzzle Bobble Mini (Euro, Jpn, v10)</description>
+	<game name="pbobble" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Puzzle Bobble Mini (Euro, Japan, v10)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="puzzle bobble mini (japan, europe) (v1.10).bin" size="1048576" crc="e69eae3e"/>
@@ -973,7 +1004,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="puzzlink" romof="ngp">
+	<game name="puzzlink" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Puzzle Link (Euro)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -983,7 +1014,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="puzzlnk2" romof="ngp">
+	<game name="puzzlnk2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Puzzle Link 2 (Euro, USA)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -993,8 +1024,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="tsunapn" romof="ngp">
-		<description>Renketsu Puzzle Tsunagete Pon! (Jpn)</description>
+	<game name="tsunapn" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Renketsu Puzzle Tsunagete Pon! (Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="renketsu puzzle tsunagete pon (japan).bin" size="524288" crc="ce09f534"/>
@@ -1003,8 +1034,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="tsunapnc" cloneof="puzzlink" romof="puzzlink">
-		<description>Renketsu Puzzle Tsunagete Pon! Color (Jpn)</description>
+	<game name="tsunapnc" cloneof="puzzlink" romof="puzzlink" sourcefile="pst90s/d_ngp.cpp">
+		<description>Renketsu Puzzle Tsunagete Pon! Color (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="renketsu puzzle tsunagete pon color (japan).bin" size="524288" crc="c3f3e83c"/>
@@ -1013,8 +1044,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="rockmanb" romof="ngp">
-		<description>Rockman - Battle &amp; Fighters (Jpn)</description>
+	<game name="rockmanb" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Rockman - Battle &amp; Fighters (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="rockman - battle &amp; fighters (japan).bin" size="2097152" crc="9c861e49"/>
@@ -1023,8 +1054,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="rockmanbd" cloneof="rockmanb" romof="rockmanb">
-		<description>Rockman - Battle &amp; Fighters (Jpn, Demo)</description>
+	<game name="rockmanbd" cloneof="rockmanb" romof="rockmanb" sourcefile="pst90s/d_ngp.cpp">
+		<description>Rockman - Battle &amp; Fighters (Japan, Demo)</description>
 		<year>2000</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="rockman battle &amp; fighters (japan) (demo).bin" size="2097152" crc="16a98ac4"/>
@@ -1033,8 +1064,9 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="shanghaipj" cloneof="shanghai" romof="shanghai">
-		<description>Shanghai Mini (Jpn, Prototype)</description>
+	<game name="shanghaipj" cloneof="shanghai" romof="shanghai" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
+		<description>Shanghai Mini (Japan, Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="shminijpp.bin" size="1048576" crc="79620c3f"/>
@@ -1043,7 +1075,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="shanghaipu" cloneof="shanghai" romof="shanghai">
+	<game name="shanghaipu" cloneof="shanghai" romof="shanghai" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
 		<description>Shanghai Mini (USA, Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -1053,7 +1086,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="shanghai" romof="ngp">
+	<game name="shanghai" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Shanghai Mini (World)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -1063,8 +1096,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="evolutnj" cloneof="evolutn" romof="evolutn">
-		<description>Shinki Sekai Evolution - Hateshinai Dungeon (Jpn)</description>
+	<game name="evolutnj" cloneof="evolutn" romof="evolutn" sourcefile="pst90s/d_ngp.cpp">
+		<description>Shinki Sekai Evolution - Hateshinai Dungeon (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="shinki sekai evolution - hateshinai dungeon (japan).bin" size="2097152" crc="e006f42f"/>
@@ -1073,8 +1106,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="shougi" romof="ngp">
-		<description>Shougi no Tatsujin (Jpn)</description>
+	<game name="shougi" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Shougi no Tatsujin (Japan)</description>
 		<year>1998</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="shougi no tatsujin (japan).bin" size="524288" crc="f34d0c9b"/>
@@ -1083,8 +1116,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="shougic" romof="ngp">
-		<description>Shougi no Tatsujin Color (Jpn)</description>
+	<game name="shougic" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Shougi no Tatsujin Color (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="shougi no tatsujin color (japan).bin" size="524288" crc="1f2872ed"/>
@@ -1093,7 +1126,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="snkgals" romof="ngp">
+	<game name="snkgals" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>SNK Gals' Fighters (Euro, USA)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -1103,8 +1136,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="snkgalsj" cloneof="snkgals" romof="snkgals">
-		<description>SNK Gals' Fighters (Jpn)</description>
+	<game name="snkgalsj" cloneof="snkgals" romof="snkgals" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK Gals' Fighters (Japan)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk gals' fighters (japan).bin" size="2097152" crc="6a9ffa47"/>
@@ -1113,7 +1146,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccard2e" cloneof="svccard2" romof="svccard2">
+	<game name="svccard2e" cloneof="svccard2" romof="svccard2" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Hack</comment>
 		<description>SNK vs. Capcom - Card Fighters 2 - Expand Edition (Hack, English)</description>
 		<year>2017</year>
 		<manufacturer>SNK</manufacturer>
@@ -1123,8 +1157,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccard2" romof="ngp">
-		<description>SNK vs. Capcom - Card Fighters 2 - Expand Edition (Jpn)</description>
+	<game name="svccard2" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK vs. Capcom - Card Fighters 2 - Expand Edition (Japan)</description>
 		<year>2001</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk vs. capcom - card fighters 2 - expand edition (japan).bin" size="2097152" crc="ccbcfda7"/>
@@ -1133,7 +1167,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccardc" romof="ngp">
+	<game name="svccardc" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>SNK vs. Capcom - Card Fighters' Clash - Capcom Cardfighter's Version (Euro, USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -1143,7 +1177,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccards" romof="ngp">
+	<game name="svccards" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>SNK vs. Capcom - Card Fighters' Clash - SNK Cardfighter's Version (Euro, USA)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -1153,8 +1187,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccardp" cloneof="svccards" romof="svccards">
-		<description>SNK vs. Capcom - Gekitotsu Card Fighters (Jpn, Demo)</description>
+	<game name="svccardp" cloneof="svccards" romof="svccards" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK vs. Capcom - Gekitotsu Card Fighters (Japan, Demo)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk vs. capcom - gekitotsu card fighters (japan) (beta).bin" size="2097152" crc="4a41a56e"/>
@@ -1163,8 +1197,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccardcj" cloneof="svccardc" romof="svccardc">
-		<description>SNK vs. Capcom - Gekitotsu Card Fighters - Capcom Supporters Version (Jpn)</description>
+	<game name="svccardcj" cloneof="svccardc" romof="svccardc" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK vs. Capcom - Gekitotsu Card Fighters - Capcom Supporters Version (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk vs. capcom - gekitotsu card fighters - capcom supporter version (japan).bin" size="2097152" crc="9217159b"/>
@@ -1173,8 +1207,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccardsja" cloneof="svccards" romof="svccards">
-		<description>SNK vs. Capcom - Gekitotsu Card Fighters - SNK Supporters Version (Jpn, v6)</description>
+	<game name="svccardsja" cloneof="svccards" romof="svccards" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK vs. Capcom - Gekitotsu Card Fighters - SNK Supporters Version (Japan, v6)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk vs. capcom - gekitotsu card fighters - snk supporter version (japan) (beta).bin" size="2097152" crc="e70e3f1a"/>
@@ -1183,8 +1217,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svccardsj" cloneof="svccards" romof="svccards">
-		<description>SNK vs. Capcom - Gekitotsu Card Fighters - SNK Supporters Version (Jpn, v7)</description>
+	<game name="svccardsj" cloneof="svccards" romof="svccards" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK vs. Capcom - Gekitotsu Card Fighters - SNK Supporters Version (Japan, v7)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk vs. capcom - gekitotsu card fighters - snk supporter version (japan).bin" size="2097152" crc="7065295c"/>
@@ -1193,8 +1227,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="svc" romof="ngp">
-		<description>SNK vs. Capcom - The Match of the Millennium (World) ~ Choujou Kessen Saikyou Fighters - SNK vs Capcom (Jpn)</description>
+	<game name="svc" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>SNK vs. Capcom - The Match of the Millennium (World) ~ Choujou Kessen Saikyou Fighters - SNK vs Capcom (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="snk vs. capcom - the match of the millennium (world) (en,ja).bin" size="4194304" crc="b173030a"/>
@@ -1203,7 +1237,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="sonic" romof="ngp">
+	<game name="sonic" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Sonic the Hedgehog - Pocket Adventure (World)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -1213,7 +1247,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="sonicp2" cloneof="sonic" romof="sonic">
+	<game name="sonicp2" cloneof="sonic" romof="sonic" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
 		<description>Sonic the Hedgehog - Pocket Adventure (World, Oct 22 1999 Prototype)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
@@ -1223,7 +1258,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="sonicp" cloneof="sonic" romof="sonic">
+	<game name="sonicp" cloneof="sonic" romof="sonic" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
 		<description>Sonic the Hedgehog - Pocket Adventure (World, Prototype)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -1233,8 +1269,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="hanadojo" romof="ngp">
-		<description>Soreike!! Hanafuda Doujou (Jpn)</description>
+	<game name="hanadojo" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Soreike!! Hanafuda Doujou (Japan)</description>
 		<year>1999</year>
 		<manufacturer>Dyna</manufacturer>
 		<rom name="soreike hanafuda doujou (japan).bin" size="524288" crc="05fa3eb0"/>
@@ -1243,8 +1279,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="srmp" romof="ngp">
-		<description>Super Real Mahjong - Premium Collection (Jpn)</description>
+	<game name="srmp" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<description>Super Real Mahjong - Premium Collection (Japan)</description>
 		<year>2001</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="super real mahjong - premium collection (japan).bin" size="2097152" crc="c6e620c3"/>
@@ -1253,28 +1289,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kofpara" romof="ngp">
-		<description>The King of Fighters - Battle de Paradise (Jpn)</description>
-		<year>2000</year>
-		<manufacturer>SNK</manufacturer>
-		<rom name="king of fighters, the - battle de paradise (japan).bin" size="2097152" crc="77e37bac"/>
-		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
-		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
-		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="lastblad" romof="ngp">
-		<description>The Last Blade - Beyond the Destiny (Euro)</description>
-		<year>2000</year>
-		<manufacturer>SNK</manufacturer>
-		<rom name="last blade, the - beyond the destiny (europe).bin" size="2097152" crc="94fcfd1e"/>
-		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
-		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
-		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="tsunapn2" cloneof="puzzlnk2" romof="puzzlnk2">
-		<description>Tsunagete Pon! 2 (Jpn)</description>
+	<game name="tsunapn2" cloneof="puzzlnk2" romof="puzzlnk2" sourcefile="pst90s/d_ngp.cpp">
+		<description>Tsunagete Pon! 2 (Japan)</description>
 		<year>1999</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="tsunagete pon 2 (japan).bin" size="1048576" crc="129091bb"/>
@@ -1283,7 +1299,8 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="wrestmad" romof="ngp">
+	<game name="wrestmad" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Prototype</comment>
 		<description>Wrestling Madness (Euro, USA, Prototype)</description>
 		<year>2000</year>
 		<manufacturer>SNK</manufacturer>
@@ -1293,7 +1310,7 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game isbios="yes" name="ngp">
+	<game isbios="yes" name="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>BIOS only</comment>
 		<description>NeoGeo Pocket (Bios)</description>
 		<year>1998</year>

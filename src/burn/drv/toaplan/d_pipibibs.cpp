@@ -156,7 +156,7 @@ static INT32 DrvScan(INT32 nAction,INT32 *pnMin)
 
 	if (nAction & ACB_VOLATILE) {		// Scan volatile ram
 		memset(&ba, 0, sizeof(ba));
-    		ba.Data		= RamStart;
+		ba.Data		= RamStart;
 		ba.nLen		= RamEnd-RamStart;
 		ba.szName	= "All Ram";
 		BurnAcb(&ba);
@@ -176,20 +176,20 @@ static INT32 LoadRoms()
 {
 	if (!strcmp(BurnDrvGetTextA(DRV_NAME), "pipibibsp")) {
 		// Load 68000 ROM
-		ToaLoadCode(Rom01, 0, 2);
+		if (ToaLoadCode(Rom01, 0, 2)) return 1;
 
 		// Load GP9001 tile data
 		ToaLoadGP9001Tiles(GP9001ROM[0], 2, 4, nGP9001ROMSize[0]);
 
-		BurnLoadRom(RomZ80, 6, 1);
+		if (BurnLoadRom(RomZ80, 6, 1)) return 1;
 	} else {
 		// Load 68000 ROM
-		ToaLoadCode(Rom01, 0, 2);
+		if (ToaLoadCode(Rom01, 0, 2)) return 1;
 
 		// Load GP9001 tile data
 		ToaLoadGP9001Tiles(GP9001ROM[0], 2, 2, nGP9001ROMSize[0]);
 
-		BurnLoadRom(RomZ80, 4, 1);
+		if (BurnLoadRom(RomZ80, 4, 1)) return 1;
 	}
 
 	return 0;
@@ -323,6 +323,8 @@ inline static INT32 pipibibsSynchroniseStream(INT32 nSoundRate)
 
 static INT32 DrvDoReset()
 {
+	memset(RamStart, 0, RamEnd-RamStart);
+
 	SekOpen(0);
 	SekReset();
 	SekClose();
@@ -331,6 +333,8 @@ static INT32 DrvDoReset()
 	ZetReset();
 	BurnYM3812Reset();
 	ZetClose();
+
+	HiscoreReset();
 
 	return 0;
 }
@@ -394,7 +398,7 @@ static INT32 DrvInit()
 
 	nToa1Cycles68KSync = 0;
 	BurnYM3812Init(1, 3375000, &toaplan1FMIRQHandler, pipibibsSynchroniseStream, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 3375000);
+	BurnTimerAttach(&ZetConfig, 3375000);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	nSpriteYOffset =  0x0001;
@@ -499,11 +503,11 @@ static INT32 DrvFrame()
 		nCyclesSegment = nNext - SekTotalCycles();
 		SekRun(nCyclesSegment);
 
-		BurnTimerUpdateYM3812(i * (nCyclesTotal[1] / nInterleave));
+		BurnTimerUpdate(i * (nCyclesTotal[1] / nInterleave));
 	}
 
 	nToa1Cycles68KSync = SekTotalCycles();
-	BurnTimerEndFrameYM3812(nCyclesTotal[1]);
+	BurnTimerEndFrame(nCyclesTotal[1]);
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
 	}
@@ -540,7 +544,7 @@ struct BurnDriver BurnDrvPipibibs = {
 	"pipibibs", NULL, NULL, NULL, "1991",
 	"Pipi & Bibis / Whoopee!! (Z80 sound cpu, set 1)\0", NULL, "Toaplan", "Toaplan GP9001 based",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_TOAPLAN_68K_Zx80, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_TOAPLAN_68K_Zx80, GBF_PLATFORM, 0,
 	NULL, pipibibsRomInfo, pipibibsRomName, NULL, NULL, NULL, NULL, PipibibsInputInfo, PipibibsDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &ToaRecalcPalette, 0x800,
 	320, 240, 4, 3
@@ -566,7 +570,7 @@ struct BurnDriver BurnDrvPipibibsa = {
 	"pipibibsa", "pipibibs", NULL, NULL, "1991",
 	"Pipi & Bibis / Whoopee!! (Z80 sound cpu, set 2)\0", NULL, "Toaplan", "Toaplan GP9001 based",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_TOAPLAN_68K_Zx80, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_TOAPLAN_68K_Zx80, GBF_PLATFORM, 0,
 	NULL, pipibibsaRomInfo, pipibibsaRomName, NULL, NULL, NULL, NULL, PipibibsInputInfo, PipibibsDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &ToaRecalcPalette, 0x800,
 	320, 240, 4, 3
@@ -594,7 +598,7 @@ struct BurnDriver BurnDrvPipibibsp = {
 	"pipibibsp", "pipibibs", NULL, NULL, "1991",
 	"Pipi & Bibis / Whoopee!! (prototype)\0", NULL, "Toaplan", "Toaplan GP9001 based",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_PROTOTYPE, 2, HARDWARE_TOAPLAN_68K_Zx80, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_PROTOTYPE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_TOAPLAN_68K_Zx80, GBF_PLATFORM, 0,
 	NULL, pipibibspRomInfo, pipibibspRomName, NULL, NULL, NULL, NULL, PipibibsInputInfo, PipibibsDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &ToaRecalcPalette, 0x800,
 	320, 240, 4, 3

@@ -215,10 +215,10 @@ libretro-build-ctr:
       artifacts: true
 
 # Nintendo WiiU
-libretro-build-wiiu:
-  extends:
-    - .libretro-wiiu-static-retroarch-master
-    - .core-defs
+#libretro-build-wiiu:
+#  extends:
+#    - .libretro-wiiu-static-retroarch-master
+#    - .core-defs
 
 # Nintendo Switch
 libretro-build-libnx-aarch64:

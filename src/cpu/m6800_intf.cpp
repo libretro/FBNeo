@@ -17,8 +17,8 @@ INT32 nM6800CyclesTotal;
 cpu_core_config M6800Config =  // M6802, M6808
 {
 	"M6800",
-	M6800Open,
-	M6800Close,
+	M6800CPUPush, //M6800Open,
+	M6800CPUPop, //M6800Close,
 	M6800CheatRead,
 	M6800WriteRom,
 	M6800GetActive,
@@ -29,6 +29,8 @@ cpu_core_config M6800Config =  // M6802, M6808
 	M6800Run,		// different
 	M6800RunEnd,
 	M6800Reset,
+	M6800Scan,
+	M6800Exit,
 	0x10000,
 	0
 };
@@ -36,8 +38,8 @@ cpu_core_config M6800Config =  // M6802, M6808
 cpu_core_config HD63701Config =
 {
 	"HD63701",
-	M6800Open,
-	M6800Close,
+	M6800CPUPush, //M6800Open,
+	M6800CPUPop, //M6800Close,
 	M6800CheatRead,
 	M6800WriteRom,
 	M6800GetActive,
@@ -48,6 +50,8 @@ cpu_core_config HD63701Config =
 	HD63701Run,		// different
 	M6800RunEnd,
 	M6800Reset,
+	M6800Scan,
+	M6800Exit,
 	0x10000,
 	0
 };
@@ -55,8 +59,8 @@ cpu_core_config HD63701Config =
 cpu_core_config M6803Config =  // M6801, M6803
 {
 	"M6803",
-	M6800Open,
-	M6800Close,
+	M6800CPUPush, //M6800Open,
+	M6800CPUPop, //M6800Close,
 	M6800CheatRead,
 	M6800WriteRom,
 	M6800GetActive,
@@ -67,6 +71,8 @@ cpu_core_config M6803Config =  // M6801, M6803
 	M6803Run,		// different
 	M6800RunEnd,
 	M6800Reset,
+	M6800Scan,
+	M6800Exit,
 	0x10000,
 	0
 };
@@ -74,8 +80,8 @@ cpu_core_config M6803Config =  // M6801, M6803
 cpu_core_config M6801Config =
 {
 	"M6801",
-	M6800Open,
-	M6800Close,
+	M6800CPUPush, //M6800Open,
+	M6800CPUPop, //M6800Close,
 	M6800CheatRead,
 	M6800WriteRom,
 	M6800GetActive,
@@ -86,6 +92,8 @@ cpu_core_config M6801Config =
 	M6803Run,		// different
 	M6800RunEnd,
 	M6800Reset,
+	M6800Scan,
+	M6800Exit,
 	0x10000,
 	0
 };
@@ -93,8 +101,8 @@ cpu_core_config M6801Config =
 cpu_core_config NSC8105Config =
 {
 	"NSC8015",
-	M6800Open,
-	M6800Close,
+	M6800CPUPush, //M6800Open,
+	M6800CPUPop, //M6800Close,
 	M6800CheatRead,
 	M6800WriteRom,
 	M6800GetActive,
@@ -105,6 +113,8 @@ cpu_core_config NSC8105Config =
 	NSC8105Run,		// different
 	M6800RunEnd,
 	M6800Reset,
+	M6800Scan,
+	M6800Exit,
 	0x10000,
 	0
 };
@@ -195,6 +205,60 @@ void M6800Reset(INT32 nCPU)
 	M6800Reset();
 
 	M6800CPUPop();
+}
+
+void M6800SetRESETLine(INT32 nStatus)
+{
+#if defined FBNEO_DEBUG
+	if (!DebugCPU_M6800Initted) bprintf(PRINT_ERROR, _T("M6800SetRESETLine called without init\n"));
+	if (nActiveCPU == -1) bprintf(PRINT_ERROR, _T("M6800SetRESETLine called when no CPU open\n"));
+#endif
+
+	if (nActiveCPU < 0) return;
+
+	if (M6800CPUContext[nActiveCPU].bResetLine && nStatus == 0) {
+		M6800Reset();
+	}
+
+	M6800CPUContext[nActiveCPU].bResetLine = nStatus;
+}
+
+void M6800SetRESETLine(INT32 nCPU, INT32 nStatus)
+{
+#if defined FBNEO_DEBUG
+	if (!DebugCPU_M6800Initted) bprintf(PRINT_ERROR, _T("M6800SetRESETLine called without init\n"));
+#endif
+
+	M6800CPUPush(nCPU);
+
+	M6800SetRESETLine(nStatus);
+
+	M6800CPUPop();
+}
+
+INT32 M6800GetRESETLine()
+{
+#if defined FBNEO_DEBUG
+	if (!DebugCPU_M6800Initted) bprintf(PRINT_ERROR, _T("M6800GetRESETLine called without init\n"));
+	if (nActiveCPU == -1) bprintf(PRINT_ERROR, _T("M6800GetRESETLine called when no CPU open\n"));
+#endif
+
+	return M6800CPUContext[nActiveCPU].bResetLine;
+}
+
+INT32 M6800GetRESETLine(INT32 nCPU)
+{
+#if defined FBNEO_DEBUG
+	if (!DebugCPU_M6800Initted) bprintf(PRINT_ERROR, _T("M6800GetRESETLine called without init\n"));
+#endif
+
+	M6800CPUPush(nCPU);
+
+	INT32 nRet = M6800GetRESETLine();
+
+	M6800CPUPop();
+
+	return nRet;
 }
 
 void M6800ResetSoft()
@@ -315,6 +379,7 @@ INT32 M6800CoreInit(INT32 num, INT32 type)
 			M6800CPUContext[i].ReadPort = M6800ReadPortDummyHandler;
 			M6800CPUContext[i].WritePort = M6800WritePortDummyHandler;
 
+			M6800CPUContext[i].bResetLine = 0;
 			nM6800CyclesDone[i] = 0;
 
 			for (INT32 j = 0; j < (0x0100 * 3); j++) {
@@ -458,7 +523,9 @@ INT32 M6800Run(INT32 cycles)
 	if (nActiveCPU == -1) bprintf(PRINT_ERROR, _T("M6800Run called when no CPU open\n"));
 #endif
 
-	cycles = cpu_execute[nActiveCPU](cycles);
+	if (!M6800CPUContext[nActiveCPU].bResetLine) {
+		cycles = cpu_execute[nActiveCPU](cycles);
+	}
 
 	nM6800CyclesTotal += cycles;
 
@@ -703,6 +770,7 @@ INT32 M6800Scan(INT32 nAction)
 			SCAN_VAR(M6800CPUContext[i].nCyclesSegment);
 			SCAN_VAR(M6800CPUContext[i].nCyclesLeft);
 			SCAN_VAR(nM6800CyclesDone[i]);
+			SCAN_VAR(M6800CPUContext[i].bResetLine);
 		}
 
 		SCAN_VAR(nM6800CyclesTotal);

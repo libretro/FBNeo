@@ -113,6 +113,8 @@ static INT32 DrvDoReset()
 	AY8910Reset(0);
 	AY8910Reset(1);
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -533,11 +535,11 @@ static struct BurnRomInfo mouserRomDesc[] = {
 	{ "m3.11h",	0x2000, 0xaca2834e, 3 }, //  4 gfx1
 	{ "m4.11k",	0x2000, 0x943ab2e2, 3 }, //  5
 
-	{ "bprom.4b",	0x0100, 0xdd233851, 4 }, //  6 user1
-	{ "bprom.4c",	0x0100, 0x60aaa686, 4 }, //  7
+	{ "tbp24s10n.4b",	0x0100, 0xdd233851, 4 }, //  6 user1
+	{ "tbp24s10n.4c",	0x0100, 0x60aaa686, 4 }, //  7
 
-	{ "bprom.5v",	0x0020, 0x7f8930b2, 5 }, //  8 proms
-	{ "bprom.5u",	0x0020, 0x0086feed, 5 }, //  9
+	{ "tbp18s030n.5v",	0x0020, 0x7f8930b2, 5 }, //  8 proms
+	{ "tbp18s030n.5u",	0x0020, 0x0086feed, 5 }, //  9
 };
 
 STD_ROM_PICK(mouser)
@@ -547,7 +549,7 @@ struct BurnDriver BurnDrvMouser = {
 	"mouser", NULL, NULL, NULL, "1983",
 	"Mouser\0", NULL, "UPL", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, mouserRomInfo, mouserRomName, NULL, NULL, NULL, NULL, MouserInputInfo, MouserDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x40,
 	224, 256, 3, 4
@@ -556,20 +558,20 @@ struct BurnDriver BurnDrvMouser = {
 // Mouser (Cosmos)
 
 static struct BurnRomInfo mousercRomDesc[] = {
-	{ "83001.0",	0x2000, 0xe20f9601, 1 }, //  0 maincpu
-	{ "m1.5f",	0x2000, 0xae375d49, 1 }, //  1
-	{ "m2.5j",	0x2000, 0xef5817e4, 1 }, //  2
+	{ "83001.0",		0x2000, 0xe20f9601, 1 }, //  0 maincpu
+	{ "83001.1",		0x2000, 0xae375d49, 1 }, //  1
+	{ "83001.2",		0x2000, 0xef5817e4, 1 }, //  2
 
-	{ "m5.3v",	0x1000, 0x50705eec, 2 }, //  3 audiocpu
+	{ "83001.5",		0x1000, 0x50705eec, 2 }, //  3 audiocpu
 
-	{ "m3.11h",	0x2000, 0xaca2834e, 3 }, //  4 gfx1
-	{ "m4.11k",	0x2000, 0x943ab2e2, 3 }, //  5
+	{ "83001.3",		0x2000, 0xaca2834e, 3 }, //  4 gfx1
+	{ "83001.4",		0x2000, 0x943ab2e2, 3 }, //  5
 
-	{ "bprom.4b",	0x0100, 0xdd233851, 4 }, //  6 user1
-	{ "bprom.4c",	0x0100, 0x60aaa686, 4 }, //  7
+	{ "tbp24s10n.4b",	0x0100, 0xdd233851, 4 }, //  6 user1
+	{ "tbp24s10n.4c",	0x0100, 0x60aaa686, 4 }, //  7
 
-	{ "bprom.5v",	0x0020, 0x7f8930b2, 5 }, //  8 proms
-	{ "bprom.5u",	0x0020, 0x0086feed, 5 }, //  9
+	{ "tbp18s030n.5v",	0x0020, 0x7f8930b2, 5 }, //  8 proms
+	{ "tbp18s030n.5u",	0x0020, 0x0086feed, 5 }, //  9
 };
 
 STD_ROM_PICK(mouserc)
@@ -579,7 +581,7 @@ struct BurnDriver BurnDrvMouserc = {
 	"mouserc", "mouser", NULL, NULL, "1983",
 	"Mouser (Cosmos)\0", NULL, "UPL (Cosmos license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_PLATFORM, 0,
 	NULL, mousercRomInfo, mousercRomName, NULL, NULL, NULL, NULL, MouserInputInfo, MouserDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x40,
 	224, 256, 3, 4

@@ -261,6 +261,8 @@ static INT32 DrvDoReset(INT32 full_reset)
 	soundlatch = 0;
 	watchdog = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -356,7 +358,7 @@ static INT32 DrvInit()
 	ZetClose();
 
 	BurnYM3812Init(1, 4000000, &DrvFMIRQHandler, &DrvSynchroniseStream, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 4000000);
+	BurnTimerAttach(&ZetConfig, 4000000);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	MSM6295Init(0, 1056000 * 2 / 132, 1);
@@ -461,20 +463,14 @@ static INT32 DrvFrame()
 		ZetClose();
 
 		ZetOpen(1);
-		BurnTimerUpdateYM3812((i + 1) * (nCyclesTotal[1] / nInterleave));
+		CPU_RUN_TIMER(1);
 		ZetClose();
 	}
-
-	ZetOpen(1);
-
-	BurnTimerEndFrameYM3812(nCyclesTotal[1]);
 
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
 		MSM6295Render(0, pBurnSoundOut, nBurnSoundLen);
 	}
-
-	ZetClose();
 
 	if (pBurnDraw) {
 		DrvDraw();
@@ -542,7 +538,7 @@ struct BurnDriver BurnDrvOnetwo = {
 	"onetwo", NULL, NULL, NULL, "1997",
 	"One + Two\0", NULL, "Barko", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
 	NULL, onetwoRomInfo, onetwoRomName, NULL, NULL, NULL, NULL, OnetwoInputInfo, OnetwoDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x80,
 	512, 256, 4, 3
@@ -570,7 +566,7 @@ struct BurnDriver BurnDrvOnetwoe = {
 	"onetwoe", "onetwo", NULL, NULL, "1997",
 	"One + Two (earlier)\0", NULL, "Barko", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
 	NULL, onetwoeRomInfo, onetwoeRomName, NULL, NULL, NULL, NULL, OnetwoInputInfo, OnetwoDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x80,
 	512, 256, 4, 3

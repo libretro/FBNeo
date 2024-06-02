@@ -240,6 +240,7 @@ static INT32 DrvDoReset()
 	M6809Reset();
 	BurnYM3526Reset();
 	M6809Close();
+	HiscoreReset();
 
 	scrollx = 0;
 	scrollxhi = 0;
@@ -351,7 +352,7 @@ static INT32 DrvInit()
 	DrvCpuMap(1);
 
 	BurnYM3526Init(3000000, DrvYM3526IRQHandler, &DrvYM3526SynchroniseStream, 0);
-	BurnTimerAttachYM3526(&M6809Config, 1500000);
+	BurnTimerAttach(&M6809Config, 1500000);
 	BurnYM3526SetRoute(BURN_SND_YM3526_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	GenericTilesInit();
@@ -515,7 +516,7 @@ static INT32 DrvFrame()
 	for (INT32 i = 0; i < nInterleave; i++)
 	{
 		M6809Open(0);
-		BurnTimerUpdateYM3526((i + 1) * (nCyclesTotal[0] / nInterleave));
+		CPU_RUN_TIMER(0);
 		if (i == 240 && (~cpu_ctrl & 0x08)) M6809SetIRQLine(0x20, CPU_IRQSTATUS_AUTO);
 		M6809Close();
 
@@ -533,15 +534,9 @@ static INT32 DrvFrame()
 		}
 	}
 
-	M6809Open(0);
-
-	BurnTimerEndFrameYM3526(nCyclesTotal[0]);
-
 	if (pBurnSoundOut) {
 		BurnYM3526Update(pBurnSoundOut, nBurnSoundLen);
 	}
-
-	M6809Close();
 
 	return 0;
 }
@@ -605,7 +600,7 @@ struct BurnDriver BurnDrvBattlane = {
 	"battlane", NULL, NULL, NULL, "1986",
 	"Battle Lane! Vol. 5 (set 1)\0", NULL, "Technos Japan (Taito license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, battlaneRomInfo, battlaneRomName, NULL, NULL, NULL, NULL, DrvInputInfo, DrvDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x40,
 	256, 240, 3, 4
@@ -639,7 +634,7 @@ struct BurnDriver BurnDrvBattlane2 = {
 	"battlane2", "battlane", NULL, NULL, "1986",
 	"Battle Lane! Vol. 5 (set 2)\0", NULL, "Technos Japan (Taito license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, battlane2RomInfo, battlane2RomName, NULL, NULL, NULL, NULL, DrvInputInfo, DrvDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x40,
 	256, 240, 3, 4
@@ -673,7 +668,7 @@ struct BurnDriver BurnDrvBattlane3 = {
 	"battlane3", "battlane", NULL, NULL, "1986",
 	"Battle Lane! Vol. 5 (set 3)\0", NULL, "Technos Japan (Taito license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT, 0,
 	NULL, battlane3RomInfo, battlane3RomName, NULL, NULL, NULL, NULL, DrvInputInfo, DrvDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x40,
 	256, 240, 3, 4

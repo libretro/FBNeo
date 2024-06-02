@@ -250,6 +250,8 @@ static INT32 DrvDoReset()
 
 	BurnYM2203Reset();
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -560,7 +562,7 @@ struct BurnDriver BurnDrvSkyfox = {
 	"skyfox", NULL, NULL, NULL, "1987",
 	"Sky Fox\0", NULL, "Jaleco (Nichibutsu USA license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 1, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 1, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, skyfoxRomInfo, skyfoxRomName, NULL, NULL, NULL, NULL, SkyfoxInputInfo, SkyfoxDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 320, 3, 4
@@ -596,14 +598,14 @@ struct BurnDriver BurnDrvExerizer = {
 	"exerizer", "skyfox", NULL, NULL, "1987",
 	"Exerizer (Japan)\0", NULL, "Jaleco", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 1, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 1, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, exerizerRomInfo, exerizerRomName, NULL, NULL, NULL, NULL, SkyfoxInputInfo, SkyfoxDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 320, 3, 4
 };
 
 
-// Exerizer (Japan) (bootleg)
+// Exerizer (bootleg)
 
 static struct BurnRomInfo exerizrbRomDesc[] = {
 	{ "1-a",			0x08000, 0x5df72a5d, 1 | BRF_PRG | BRF_ESS }, //  0 Z80 #0 Code
@@ -630,9 +632,9 @@ STD_ROM_FN(exerizrb)
 
 struct BurnDriver BurnDrvExerizrb = {
 	"exerizerb", "skyfox", NULL, NULL, "1987",
-	"Exerizer (Japan) (bootleg)\0", NULL, "Jaleco", "Miscellaneous",
+	"Exerizer (bootleg)\0", NULL, "bootleg", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 1, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_BOOTLEG | BDF_HISCORE_SUPPORTED, 1, HARDWARE_MISC_PRE90S, GBF_VERSHOOT, 0,
 	NULL, exerizrbRomInfo, exerizrbRomName, NULL, NULL, NULL, NULL, SkyfoxInputInfo, SkyfoxDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, NULL, &DrvRecalc, 0x100,
 	224, 320, 3, 4

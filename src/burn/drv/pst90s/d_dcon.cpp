@@ -37,6 +37,8 @@ static UINT8 DrvReset;
 
 static INT32 is_sdgndmps = 0;
 
+static INT32 nExtraCycles;
+
 static struct BurnInputInfo DconInputList[] = {
 	{"P1 Coin",		BIT_DIGITAL,	DrvJoy1 + 0,	"p1 coin"	},
 	{"P1 Start",	BIT_DIGITAL,	DrvJoy3 + 0,	"p1 start"	},
@@ -270,6 +272,10 @@ static INT32 DrvDoReset()
 
 	gfx_bank = 0;
 	gfx_enable = 0;
+
+	nExtraCycles = 0;
+
+	HiscoreReset();
 
 	return 0;
 }
@@ -550,7 +556,7 @@ static INT32 DrvFrame()
 
 	INT32 nInterleave = 256;
 	INT32 nCyclesTotal[2] = { 10000000 / 60, 3579545 / 60 };
-	INT32 nCyclesDone[2] = { 0, 0 };
+	INT32 nCyclesDone[2] = { nExtraCycles, 0 };
 
 	SekOpen(0);
 	ZetOpen(0);
@@ -561,20 +567,18 @@ static INT32 DrvFrame()
 
 		if (i == 255) SekSetIRQLine(4, CPU_IRQSTATUS_AUTO);
 
-		if (is_sdgndmps) {
-			CPU_RUN_TIMER(1);
-		} else {
-			CPU_RUN_TIMER_YM3812(1);
-		}
+		CPU_RUN_TIMER(1);
 	}
+
+	ZetClose();
+	SekClose();
+
+	nExtraCycles = nCyclesDone[0] - nCyclesTotal[0];
 
 	if (pBurnSoundOut) {
 		seibu_sound_update(pBurnSoundOut, nBurnSoundLen);
 		BurnSoundDCFilter();
 	}
-
-	ZetClose();
-	SekClose();
 
 	if (pBurnDraw) {
 		BurnDrvRedraw();
@@ -606,6 +610,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 
 		SCAN_VAR(gfx_bank);
 		SCAN_VAR(gfx_enable);
+
+		SCAN_VAR(nExtraCycles);
 	}
 
 	return 0;
@@ -646,7 +652,7 @@ struct BurnDriver BurnDrvDcon = {
 	"dcon", NULL, NULL, NULL, "1992",
 	"D-Con\0", NULL, "Success", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_SHOOT, 0,
 	NULL, dconRomInfo, dconRomName, NULL, NULL, NULL, NULL, DconInputInfo, DconDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x800,
 	320, 224, 4, 3
@@ -687,7 +693,7 @@ struct BurnDriver BurnDrvSdgndmps = {
 	"sdgndmps", NULL, NULL, NULL, "1991",
 	"SD Gundam Psycho Salamander no Kyoui\0", NULL, "Banpresto / Bandai", "Miscellaneous",
 	L"\u30AC\u30F3\u30C0\u30E0 \u30B5\u30A4\u30B3\u30B5\u30E9\u30DE\uF303\u30C0\u30FC\u306E\u8105\u5A01\0SD Gundam Psycho Salamander no Kyoui\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_HORSHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_HORSHOOT, 0,
 	NULL, sdgndmpsRomInfo, sdgndmpsRomName, NULL, NULL, NULL, NULL, SdgndmpsInputInfo, SdgndmpsDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &BurnRecalc, 0x800,
 	320, 224, 4, 3

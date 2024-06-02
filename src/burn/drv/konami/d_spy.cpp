@@ -465,6 +465,8 @@ static int DrvDoReset()
 	Drv3f90old = 0;
 	nRamBank = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -565,7 +567,7 @@ static INT32 DrvInit()
 	K051960SetSpriteOffset(0, 0);
 
 	BurnYM3812Init(1, 3579545, &DrvFMIRQHandler, DrvSynchroniseStream, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 3579545);
+	BurnTimerAttach(&ZetConfig, 3579545);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	K007232Init(0, 3579545, DrvSndROM0, 0x40000);
@@ -643,7 +645,6 @@ static INT32 DrvFrame()
 		if ((DrvInputs[1] & 0x18) == 0) DrvInputs[1] |= 0x18;
 	}
 
-	INT32 nCyclesSegment;
 	INT32 nInterleave = 100;
 	INT32 nCyclesTotal[2] = { (((3000000 / 60) * 133) / 100) /* 33% overclock */, 3579545 / 60 };
 	INT32 nCyclesDone[2] = { 0, 0 };
@@ -652,26 +653,21 @@ static INT32 DrvFrame()
 	ZetOpen(0);
 
 	for (INT32 i = 0; i < nInterleave; i++) {
-		nCyclesSegment = (nCyclesTotal[0] / nInterleave) * (i + 1);
-		nCyclesDone[0] += M6809Run(nCyclesSegment - nCyclesDone[0]);
-
-		nCyclesSegment = (nCyclesTotal[1] / nInterleave) * (i + 1);
-		nCyclesDone[1] += BurnTimerUpdateYM3812(nCyclesSegment - nCyclesDone[1]);
+		CPU_RUN(0, M6809);
+		CPU_RUN_TIMER(1);
 	}
 
 	if (K052109_irq_enabled) M6809SetIRQLine(0, CPU_IRQSTATUS_AUTO);
-	
-	BurnTimerEndFrameYM3812(nCyclesTotal[1]);
 
-	if (pBurnSoundOut) {		
+	ZetClose();
+	M6809Close();
+
+	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
 		K007232Update(0, pBurnSoundOut, nBurnSoundLen);
 		K007232Update(1, pBurnSoundOut, nBurnSoundLen);
 	}
 
-	ZetClose();
-	M6809Close();
-	
 	if (pBurnDraw) {
 		DrvDraw();
 	}
@@ -749,7 +745,7 @@ struct BurnDriver BurnDrvSpy = {
 	"spy", NULL, NULL, NULL, "1989",
 	"S.P.Y. - Special Project Y (World ver. N)\0", NULL, "Konami", "GX857",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_PREFIX_KONAMI, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SHOOT, 0,
 	NULL, spyRomInfo, spyRomName, NULL, NULL, NULL, NULL, SpyInputInfo, SpyDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	304, 216, 4, 3
@@ -784,7 +780,7 @@ struct BurnDriver BurnDrvSpyu = {
 	"spyu", "spy", NULL, NULL, "1989",
 	"S.P.Y. - Special Project Y (US ver. M)\0", NULL, "Konami", "GX857",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_KONAMI, GBF_SHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_KONAMI, GBF_SHOOT, 0,
 	NULL, spyuRomInfo, spyuRomName, NULL, NULL, NULL, NULL, SpyInputInfo, SpyDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x400,
 	304, 216, 4, 3

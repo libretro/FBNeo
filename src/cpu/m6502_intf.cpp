@@ -13,8 +13,8 @@ static M6502Ext *pCurrentCPU;
 cpu_core_config M6502Config =
 {
 	"M6502",
-	M6502Open,
-	M6502Close,
+	M6502CPUPush, //M6502Open,
+	M6502CPUPop, //M6502Close,
 	M6502CheatRead,
 	M6502WriteRom,
 	M6502GetActive,
@@ -25,6 +25,8 @@ cpu_core_config M6502Config =
 	M6502Run,
 	M6502RunEnd,
 	M6502Reset,
+	M6502Scan,
+	M6502Exit,
 	0x10000,
 	0
 };
@@ -58,7 +60,7 @@ struct m6809pstack {
 static m6809pstack pstack[MAX_PSTACK];
 static INT32 pstacknum = 0;
 
-static void M6502CPUPush(INT32 nCPU)
+void M6502CPUPush(INT32 nCPU)
 {
 	m6809pstack *p = &pstack[pstacknum++];
 
@@ -76,7 +78,7 @@ static void M6502CPUPush(INT32 nCPU)
 	}
 }
 
-static void M6502CPUPop()
+void M6502CPUPop()
 {
 	m6809pstack *p = &pstack[--pstacknum];
 
@@ -697,6 +699,16 @@ void M6502WriteRom(UINT32 Address, UINT8 Data)
 		pCurrentCPU->WriteByte(Address, Data);
 		return;
 	}
+}
+
+void M6502SetPC(INT32 pc)
+{
+#if defined FBNEO_DEBUG
+	if (!DebugCPU_M6502Initted) bprintf(PRINT_ERROR, _T("M6502SetPC called without init\n"));
+	if (nActiveCPU == -1) bprintf(PRINT_ERROR, _T("M6502SetPC called with no CPU open\n"));
+#endif
+
+	m6502_set_pc(pc);
 }
 
 UINT32 M6502GetPC(INT32)

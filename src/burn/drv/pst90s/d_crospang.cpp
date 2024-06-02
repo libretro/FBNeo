@@ -389,6 +389,8 @@ static INT32 DrvDoReset()
 	tile_bank[2] = 2;
 	tile_bank[3] = 3;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -559,7 +561,7 @@ static INT32 DrvInit(INT32 (*pRomLoadCallback)())
 	ZetClose();
 
 	BurnYM3812Init(1, 3579545, &crospangYM3812IrqHandler, 0);
-	BurnTimerAttachYM3812(&ZetConfig, 3579545);
+	BurnTimerAttach(&ZetConfig, 3579545);
 	BurnYM3812SetRoute(0, BURN_SND_YM3812_ROUTE, 1.00, BURN_SND_ROUTE_BOTH);
 
 	MSM6295Init(0, 1056000 / 132, 1);
@@ -723,7 +725,7 @@ static INT32 DrvFrame()
 
 	SekRun(nTotalCycles[0]);
 	SekSetIRQLine(6, CPU_IRQSTATUS_AUTO);
-	BurnTimerEndFrameYM3812(nTotalCycles[1]);
+	BurnTimerEndFrame(nTotalCycles[1]);
 
 	if (pBurnSoundOut) {
 		BurnYM3812Update(pBurnSoundOut, nBurnSoundLen);
@@ -833,7 +835,7 @@ static INT32 heuksunInit()
 }
 
 struct BurnDriver BurnDrvHeuksun = {
-	"heuksun", NULL, NULL, NULL, "199?",
+	"heuksun", NULL, NULL, NULL, "1997",
 	"Heuk Sun Baek Sa (Korea)\0", NULL, "Oksan / F2 System", "Miscellaneous",
 	L"\uD751\uC120\uBC31\uC0AC (Korea)\0Heuk Sun Baek Sa\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
@@ -960,7 +962,7 @@ struct BurnDriver BurnDrvPitapat = {
 	"pitapat", NULL, NULL, NULL, "1997",
 	"Pitapat Puzzle (set 1)\0", NULL, "F2 System", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
 	NULL, pitapatRomInfo, pitapatRomName, NULL, NULL, NULL, NULL, PitapatInputInfo, PitapatDIPInfo,
 	pitapatInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x300,
 	320, 240, 4, 3

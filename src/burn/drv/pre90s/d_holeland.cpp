@@ -393,10 +393,14 @@ static INT32 DrvDoReset(INT32 clear_mem)
 
 	BurnWatchdogReset();
 
+	HiscoreReset();
+
 	scrollx = 0;
 	flipscreen[0] = 0;
 	flipscreen[1] = 0;
 	palette_offset = 0;
+
+	HiscoreReset();
 
 	return 0;
 }
@@ -855,7 +859,7 @@ struct BurnDriver BurnDrvHoleland = {
 	"holeland", NULL, NULL, NULL, "1984",
 	"Hole Land (Japan)\0", NULL, "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT | GBF_ACTION, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT | GBF_ACTION, 0,
 	NULL, holelandRomInfo, holelandRomName, NULL, NULL, NULL, NULL, HolelandInputInfo, HolelandDIPInfo,
 	HolelandInit, DrvExit, DrvFrame, HolelandDraw, DrvScan, &DrvRecalc, 0x100,
 	512, 448, 4, 3
@@ -939,7 +943,7 @@ struct BurnDriver BurnDrvCrzrally = {
 	"crzrally", NULL, NULL, NULL, "1985",
 	"Crazy Rally (set 1)\0", "Graphics issues on some levels", "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
 	NULL, crzrallyRomInfo, crzrallyRomName, NULL, NULL, NULL, NULL, CrzrallyInputInfo, CrzrallyDIPInfo,
 	CrzrallyInit, DrvExit, DrvFrame, CrzrallyDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 256, 3, 4
@@ -980,7 +984,7 @@ struct BurnDriver BurnDrvCrzrallya = {
 	"crzrallya", "crzrally", NULL, NULL, "1985",
 	"Crazy Rally (set 2)\0", "Graphics issues on some levels", "Tecfri", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
 	NULL, crzrallyaRomInfo, crzrallyaRomName, NULL, NULL, NULL, NULL, CrzrallyInputInfo, CrzrallyDIPInfo,
 	CrzrallyInit, DrvExit, DrvFrame, CrzrallyDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 256, 3, 4
@@ -1021,8 +1025,49 @@ struct BurnDriver BurnDrvCrzrallyg = {
 	"crzrallyg", "crzrally", NULL, NULL, "1985",
 	"Crazy Rally (Gecas license)\0", "Graphics issues on some levels", "Tecfri (Gecas license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
 	NULL, crzrallygRomInfo, crzrallygRomName, NULL, NULL, NULL, NULL, CrzrallyInputInfo, CrzrallyDIPInfo,
+	CrzrallyInit, DrvExit, DrvFrame, CrzrallyDraw, DrvScan, &DrvRecalc, 0x100,
+	224, 256, 3, 4
+};
+
+
+// Crazy Rally (Recreativos Franco license)
+
+static struct BurnRomInfo crzrallyrfRomDesc[] = {
+	{ "crzrallyrf_1.7g",			0x4000, 0xc49ec48e, 1 | BRF_PRG | BRF_ESS }, //  0 Z80 Code
+	{ "crzrallyrf_2.7f",			0x4000, 0x8a594a0e, 1 | BRF_PRG | BRF_ESS }, //  1
+	{ "crzrallyrf_3.7d",			0x4000, 0x01ed44dc, 1 | BRF_PRG | BRF_ESS }, //  2
+
+	{ "crzrallyrf_4.5h",			0x2000, 0x68ec2811, 2 | BRF_GRA },           //  3 Background Tiles
+	{ "crzrallyrf_5.5g",			0x2000, 0x81e9b043, 2 | BRF_GRA },           //  4
+
+	{ "crzrallyrf_6.1n",			0x2000, 0x985ed5c8, 3 | BRF_GRA },           //  5 Sprites
+	{ "crzrallyrf_7.1l",			0x2000, 0xc02ddda2, 3 | BRF_GRA },           //  6
+	{ "crzrallyrf_8.1k",			0x2000, 0x2a0d5bca, 3 | BRF_GRA },           //  7
+	{ "crzrallyrf_9.1i",			0x2000, 0x49c0c2b8, 3 | BRF_GRA },           //  8
+
+	{ "82s129.9n",		0x0100, 0x98ff725a, 4 | BRF_GRA },           //  9 Color Data
+	{ "82s129.9m",		0x0100, 0xd41f5800, 4 | BRF_GRA },           // 10
+	{ "82s129.9l",		0x0100, 0x9ed49cb4, 4 | BRF_GRA },           // 11
+
+	{ "82s147.1f",		0x0200, 0x5261bc11, 5 | BRF_OPT },           // 12 Unknown
+
+	{ "pal16r6a.5k",	0x0104, 0x3d12afba, 6 | BRF_OPT },           // 13 plds
+	{ "pal16r4a.5l",	0x0104, 0x00000000, 6 | BRF_NODUMP | BRF_OPT },           // 14
+	{ "pal16r4a.5m",	0x0104, 0x00000000, 6 | BRF_NODUMP | BRF_OPT },           // 15
+	{ "pal16r8a.1d",	0x0104, 0x00000000, 6 | BRF_NODUMP | BRF_OPT },           // 16
+};
+
+STD_ROM_PICK(crzrallyrf)
+STD_ROM_FN(crzrallyrf)
+
+struct BurnDriver BurnDrvCrzrallyrf = {
+	"crzrallyrf", "crzrally", NULL, NULL, "1985",
+	"Crazy Rally (Recreativos Franco license)\0", "Graphics issues on some levels", "Tecfri (Recreativos Franco license)", "Miscellaneous",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_RACING, 0,
+	NULL, crzrallyrfRomInfo, crzrallyrfRomName, NULL, NULL, NULL, NULL, CrzrallyInputInfo, CrzrallyDIPInfo,
 	CrzrallyInit, DrvExit, DrvFrame, CrzrallyDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 256, 3, 4
 };

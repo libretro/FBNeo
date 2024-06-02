@@ -450,6 +450,8 @@ static INT32 DrvDoReset()
 	irq[0] = irq[1] = 0;
 	nmi[0] = nmi[1] = 0;
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -1226,9 +1228,9 @@ static INT32 ChinheroInit()
 
 struct BurnDriver BurnDrvChinhero = {
 	"chinhero", NULL, NULL, NULL, "1984",
-	"Chinese Hero\0", NULL, "Taiyo", "Miscellaneous",
+	"Chinese Hero\0", NULL, "Taiyo System", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, chinheroRomInfo, chinheroRomName, NULL, NULL, NULL, NULL, ChinheroInputInfo, ChinheroDIPInfo,
 	ChinheroInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 288, 3, 4
@@ -1281,9 +1283,9 @@ static INT32 Chinhero2Init()
 
 struct BurnDriver BurnDrvChinhero2 = {
 	"chinhero2", "chinhero", NULL, NULL, "1984",
-	"Chinese Hero (older, set 1)\0", NULL, "Taiyo", "Miscellaneous",
+	"Chinese Hero (older, set 1)\0", NULL, "Taiyo System", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, chinhero2RomInfo, chinhero2RomName, NULL, NULL, NULL, NULL, ChinheroInputInfo, ChinheroDIPInfo,
 	Chinhero2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 288, 3, 4
@@ -1331,9 +1333,9 @@ STD_ROM_FN(chinhero3)
 
 struct BurnDriver BurnDrvChinhero3 = {
 	"chinhero3", "chinhero", NULL, NULL, "1984",
-	"Chinese Hero (older, set 2)\0", NULL, "Taiyo", "Miscellaneous",
+	"Chinese Hero (older, set 2)\0", NULL, "Taiyo System", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, chinhero3RomInfo, chinhero3RomName, NULL, NULL, NULL, NULL, ChinheroInputInfo, ChinheroDIPInfo,
 	Chinhero2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 288, 3, 4
@@ -1381,9 +1383,9 @@ STD_ROM_FN(chinherot)
 
 struct BurnDriver BurnDrvChinherot = {
 	"chinherot", "chinhero", NULL, NULL, "1984",
-	"Chinese Heroe (Taito)\0", NULL, "Taiyo (Taito license)", "Miscellaneous",
+	"Chinese Heroe (Taito)\0", NULL, "Taiyo System (Taito license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SCRFIGHT, 0,
 	NULL, chinherotRomInfo, chinherotRomName, NULL, NULL, NULL, NULL, ChinheroInputInfo, ChinheroDIPInfo,
 	Chinhero2Init, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	224, 288, 3, 4
@@ -1445,9 +1447,9 @@ static INT32 ShangkidInit()
 
 struct BurnDriver BurnDrvShangkid = {
 	"shangkid", NULL, NULL, NULL, "1985",
-	"Shanghai Kid\0", NULL, "Taiyo (Data East license)", "Miscellaneous",
+	"Shanghai Kid\0", NULL, "Taiyo System (Data East license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_VSFIGHT, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VSFIGHT, 0,
 	NULL, shangkidRomInfo, shangkidRomName, NULL, NULL, NULL, NULL, ShangkidInputInfo, ShangkidDIPInfo,
 	ShangkidInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	288, 224, 4, 3
@@ -1507,9 +1509,9 @@ static INT32 HiryukenInit()
 
 struct BurnDriver BurnDrvHiryuken = {
 	"hiryuken", "shangkid", NULL, NULL, "1985",
-	"Hokuha Syourin Hiryu no Ken\0", NULL, "Taiyo (Taito license)", "Miscellaneous",
+	"Hokuha Syourin Hiryu no Ken\0", NULL, "Taiyo System (Taito license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_MISC_PRE90S, GBF_VSFIGHT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_VSFIGHT, 0,
 	NULL, hiryukenRomInfo, hiryukenRomName, NULL, NULL, NULL, NULL, ShangkidInputInfo, ShangkidDIPInfo,
 	HiryukenInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
 	288, 224, 4, 3
@@ -1546,9 +1548,9 @@ STD_ROM_FN(dynamski)
 
 struct BurnDriver BurnDrvDynamski = {
 	"dynamski", NULL, NULL, NULL, "1984",
-	"Dynamic Ski\0", NULL, "Taiyo", "Miscellaneous",
+	"Dynamic Ski\0", NULL, "Taiyo System (Nichibutsu license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED, 2, HARDWARE_MISC_PRE90S, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SPORTSMISC, 0,
 	NULL, dynamskiRomInfo, dynamskiRomName, NULL, NULL, NULL, NULL, DynamskiInputInfo, DynamskiDIPInfo,
 	DynamskiInit, DrvExit, DynamskiFrame, DynamskiDraw, DrvScan, &DrvRecalc, 0x80,
 	224, 288, 3, 4

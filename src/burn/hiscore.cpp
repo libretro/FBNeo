@@ -28,12 +28,6 @@ static INT32 WriteCheck1;
 static INT32 LetsTryToApply = 0;
 static INT32 nLoadingFrameDelay = 0;
 
-struct cheat_core {
-	cpu_core_config *cpuconfig;
-
-	INT32 nCPU;			// which cpu
-};
-
 static cheat_core *cheat_ptr;
 static cpu_core_config *cheat_subptr;
 extern cheat_core *GetCpuCheatRegister(INT32 nCPU);
@@ -134,6 +128,7 @@ static INT32 cpustr2num(char *pCpu)
 { // all known versions of the first cpu as of May 15, 2017
 	return (strstr(pCpu, "maincpu") ||
 		    strstr(pCpu, "cpu1") ||
+		    strstr(pCpu, "alpha") ||
 			strstr(pCpu, "master") ||
 			strstr(pCpu, "fgcpu") ||
 			strstr(pCpu, "cpua") ||
@@ -233,6 +228,11 @@ void HiscoreSearch_internal(FILE *fp, const char *name)
 							HiscoreMemRange[nHiscoreNumRanges].NoConfirm = 1;
 						}
 
+						if (!strcmp(name, "quantum") && HiscoreMemRange[nHiscoreNumRanges].Address == 0x1b5aa) {
+							bprintf(0, _T("-- dbreed noConfirm hack for address range %x\n"), HiscoreMemRange[nHiscoreNumRanges].Address);
+							HiscoreMemRange[nHiscoreNumRanges].NoConfirm = 1;
+						}
+
 						// same thing, with ledstorm, ledstorm 2011[u,p] & madgear[j]
 						if ((!strcmp(name, "leds2011") || !strcmp(name, "leds2011u") || !strcmp(name, "leds2011p") || !strcmp(name, "ledstorm") || !strcmp(name, "madgear") || !strcmp(name, "madgearj")) && HiscoreMemRange[nHiscoreNumRanges].Address == 0xff87c9) {
 							bprintf(0, _T("-- leds2011 noConfirm hack for address range %x\n"), HiscoreMemRange[nHiscoreNumRanges].Address);
@@ -243,6 +243,18 @@ void HiscoreSearch_internal(FILE *fp, const char *name)
 						if ((!strcmp(name, "gradius2") || !strcmp(name, "gradius2a") || !strcmp(name, "gradius2b") || !strcmp(name, "vulcan") || !strcmp(name, "vulcana") || !strcmp(name, "vulcanb"))
 							&& HiscoreMemRange[nHiscoreNumRanges].Address == 0x60008) {
 							bprintf(0, _T("-- gradius2/vulcan noConfirm hack for address range %x\n"), HiscoreMemRange[nHiscoreNumRanges].Address);
+							HiscoreMemRange[nHiscoreNumRanges].NoConfirm = 1;
+						}
+
+						// mhavoc (same comment as above, 0x0095 is a timer)
+						if (!strcmp(name, "mhavoc") && HiscoreMemRange[nHiscoreNumRanges].Address == 0x0095) {
+							bprintf(0, _T("-- mhavoc noConfirm hack for address range %x\n"), HiscoreMemRange[nHiscoreNumRanges].Address);
+							HiscoreMemRange[nHiscoreNumRanges].NoConfirm = 1;
+						}
+
+						// amspdwy e3de block is suspect -dink
+						if (!strcmp(name, "amspdwy") && HiscoreMemRange[nHiscoreNumRanges].Address == 0xe3de) {
+							bprintf(0, _T("-- amspdwy noConfirm hack for address range %x\n"), HiscoreMemRange[nHiscoreNumRanges].Address);
 							HiscoreMemRange[nHiscoreNumRanges].NoConfirm = 1;
 						}
 						// end NoConfirm "feature"

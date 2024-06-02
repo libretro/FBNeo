@@ -756,6 +756,8 @@ static INT32 DrvDoReset(INT32 clear_mem)
 
 	res_check();
 
+	HiscoreReset();
+
 	return 0;
 }
 
@@ -1149,7 +1151,7 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 }
 
 
-// Star Wars (rev 1)
+// Star Wars (set 1)
 
 static struct BurnRomInfo starwarsRomDesc[] = {
 	{ "136021-105.1l",	0x1000, 0x538e7d2f, 1 | BRF_PRG | BRF_ESS }, //  0 M6809 #0 Code
@@ -1180,7 +1182,7 @@ static INT32 StarwarsInit()
 
 struct BurnDriver BurnDrvStarwars = {
 	"starwars", NULL, NULL, NULL, "1983",
-	"Star Wars (rev 1)\0", NULL, "Atari", "Miscellaneous",
+	"Star Wars (set 1)\0", NULL, "Atari", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT | GBF_VECTOR, 0,
 	NULL, starwarsRomInfo, starwarsRomName, NULL, NULL, NULL, NULL, StarwarsInputInfo, StarwarsDIPInfo,
@@ -1333,7 +1335,7 @@ struct BurnDriver BurnDrvEsb = {
 	"esb", NULL, NULL, NULL, "1985",
 	"The Empire Strikes Back\0", NULL, "Atari Games", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT | GBF_VECTOR, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_PRE90S, GBF_SHOOT | GBF_VECTOR, 0,
 	NULL, esbRomInfo, esbRomName, NULL, NULL, NULL, NULL, StarwarsInputInfo, EsbDIPInfo,
 	EsbInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 32 * 256,
 	640, 480, 4, 3

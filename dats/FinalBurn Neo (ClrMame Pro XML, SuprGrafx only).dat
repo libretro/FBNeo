@@ -12,39 +12,31 @@
 		<url>https://neo-source.com/</url>
 		<clrmamepro forcenodump="ignore"/>
 	</header>
-	<game name="1941">
-		<description>1941 - Counter Attack</description>
+	<game name="1941" sourcefile="pce/d_pce.cpp">
+		<description>1941 - Counter Attack (Japan, SGX)</description>
 		<year>1991</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="1941 - counter attack (japan).pce" size="1048576" crc="8c4588e2"/>
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="aldynes">
-		<description>Aldynes</description>
+	<game name="aldynes" sourcefile="pce/d_pce.cpp">
+		<description>Aldynes (Japan, SGX)</description>
 		<year>1991</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="aldynes (japan).pce" size="1048576" crc="4c2126b0"/>
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="battlace">
-		<description>Battle Ace</description>
+	<game name="battlace" sourcefile="pce/d_pce.cpp">
+		<description>Battle Ace (Japan, SGX)</description>
 		<year>1989</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="battle ace (japan).pce" size="524288" crc="3b13af61"/>
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="daimakai1" cloneof="daimakai" romof="daimakai">
-		<description>Dai Makaimura (Alt)</description>
-		<year>1990</year>
-		<manufacturer>NEC Avenue</manufacturer>
-		<rom name="daimakai mura (japan)[a].pce" size="1049088" crc="8e961f63"/>
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="daimakaid" cloneof="daimakai" romof="daimakai">
+	<game name="daimakaid" cloneof="daimakai" romof="daimakai" sourcefile="pce/d_pce.cpp">
 		<comment>Hack</comment>
 		<description>Dai Makaimura (Debug Menu Hack)</description>
 		<year>2007</year>
@@ -53,23 +45,31 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="daimakai">
-		<description>Dai Makaimura</description>
+	<game name="daimakai1" cloneof="daimakai" romof="daimakai" sourcefile="pce/d_pce.cpp">
+		<description>Dai Makaimura (Japan, SGX) (Alt)</description>
+		<year>1990</year>
+		<manufacturer>NEC Avenue</manufacturer>
+		<rom name="daimakai mura (japan)[a].pce" size="1049088" crc="8e961f63"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="daimakai" sourcefile="pce/d_pce.cpp">
+		<description>Dai Makaimura (Japan, SGX)</description>
 		<year>1990</year>
 		<manufacturer>NEC Avenue</manufacturer>
 		<rom name="daimakai mura (japan).pce" size="1048576" crc="b486a8ed"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="granzort">
-		<description>Madou Ou Granzort</description>
+	<game name="granzort" sourcefile="pce/d_pce.cpp">
+		<description>Madou Ou Granzort (Japan, SGX)</description>
 		<year>1990</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="madou ou granzort (japan).pce" size="524288" crc="1f041166"/>
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="rtypeuh">
+	<game name="rtypeuh" sourcefile="pce/d_pce.cpp">
 		<comment>Hack</comment>
 		<description>R-Type (Unfinished SGX Hack)</description>
 		<year>2019</year>
@@ -78,8 +78,9 @@
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="rta2">
-		<description>RTA2 - Homebrew conversion of RTA2</description>
+	<game name="rta2" sourcefile="pce/d_pce.cpp">
+		<comment>Homebrew</comment>
+		<description>RTA2 - Homebrew conversion of RTA2 (HB)</description>
 		<year>2016</year>
 		<manufacturer>REVIVAL GAMES</manufacturer>
 		<rom name="rta2.sgx" size="164352" crc="4a4db3da"/>

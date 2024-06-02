@@ -56,6 +56,7 @@ M6800_CPU_DIR			:= $(FBNEO_CPU_DIR)/m6800
 M6805_CPU_DIR			:= $(FBNEO_CPU_DIR)/m6805
 M6809_CPU_DIR			:= $(FBNEO_CPU_DIR)/m6809
 M68K_CPU_DIR			:= $(FBNEO_CPU_DIR)/m68k
+MB88XX_CPU_DIR			:= $(FBNEO_CPU_DIR)/mb88xx
 MIPS3_CPU_DIR			:= $(FBNEO_CPU_DIR)/mips3
 MIPS3_X64_DRC_CPU_DIR	:= $(MIPS3_CPU_DIR)/x64
 NEC_CPU_DIR				:= $(FBNEO_CPU_DIR)/nec
@@ -299,6 +300,7 @@ ifeq ($(LIGHT), 1)
 		$(PST90S_DIR)/d_galpani3.cpp \
 		$(PST90S_DIR)/d_mirage.cpp \
 		$(PST90S_DIR)/d_seta2.cpp \
+		$(PST90S_DIR)/d_itech8.cpp \
 		$(SEGA_DIR)/d_segas32.cpp \
 		$(SEGA_DIR)/d_sys24.cpp \
 		$(SPECTRUM_DIR)/d_spectrum.cpp \
@@ -313,7 +315,7 @@ ifeq ($(LIGHT), 1)
 		$(TAITO_DIR)/d_gunbuster.cpp \
 		$(TAITO_DIR)/d_undrfire.cpp \
 		$(TAITO_DIR)/d_galastrm.cpp
-	FBNEO_DEFINES += -DLIGHT -DNO_NES
+	FBNEO_DEFINES += -DLIGHT
 endif
 
 ifeq ($(AUTOGEN_DATS), 0)
@@ -367,6 +369,7 @@ FBNEO_CPU_DIRS := $(FBNEO_CPU_DIR) \
 	$(M377_CPU_DIR) \
 	$(M6502_CPU_DIR) \
 	$(M68K_CPU_DIR) \
+	$(MB88XX_CPU_DIR) \
 	$(MIPS3_CPU_DIR) \
 	$(NEC_CPU_DIR) \
 	$(PIC16C5X_CPU_DIR) \
@@ -532,6 +535,10 @@ ifeq ($(EXTERNAL_ZLIB), 1)
 	LDFLAGS += -lz
 else
 	FBNEO_SRC_DIRS += $(FBNEO_LIB_DIR)/zlib
+	# only msvc doesn't have unistd.h ?
+	ifeq (,$(findstring msvc,$(platform)))
+		FBNEO_DEFINES += -DHAVE_UNISTD_H
+	endif
 endif
 
 ifeq ($(INCLUDE_7Z_SUPPORT), 1)

@@ -821,7 +821,9 @@ static INT32 DrvDoReset(INT32 clear_mem)
 
 	BurnWatchdogReset();
 
-    if (has_shift) BurnShiftReset();
+	if (has_shift) BurnShiftReset();
+
+	HiscoreReset();
 
 	input_mux = 0;
 	flipscreen = 0;
@@ -829,16 +831,18 @@ static INT32 DrvDoReset(INT32 clear_mem)
 	scrolly = 0;
 	latched_input = 0;
 
-    lamp = 0;
-    last_op4 = 0;
+	lamp = 0;
+	last_op4 = 0;
 
 	// powerdrv shifters
 	memset(pd_shift, 0, sizeof(pd_shift));
 	memset(pd_shift_prev, 0, sizeof(pd_shift_prev));
 
-    nExtraCycles[0] = nExtraCycles[1] = nExtraCycles[2] = 0;
+	nExtraCycles[0] = nExtraCycles[1] = nExtraCycles[2] = 0;
 
-    return 0;
+	HiscoreReset();
+
+	return 0;
 }
 
 static INT32 MemIndex()
@@ -1830,9 +1834,9 @@ static struct BurnRomInfo sargeRomDesc[] = {
 	{ "spr_5e.bin",									0x8000, 0xc832375c, 2 | BRF_GRA },           //  8
 	{ "spr_4e.bin",									0x8000, 0xc382267d, 2 | BRF_GRA },           //  9
 
-	{ "a59a26axlcxhd.13j.bin",						0x0001, 0x00000000, 5 | BRF_NODUMP | BRF_OPT },           // 10 PALs
-	{ "a59a26axlbxhd.2j.bin",						0x0001, 0x00000000, 5 | BRF_NODUMP | BRF_OPT },           // 11
-	{ "a59a26axlaxhd.3j.bin",						0x0001, 0x00000000, 5 | BRF_NODUMP | BRF_OPT },           // 12
+	{ "a59a26axlcxhd.13j.bin",						0x00eb, 0xd4203273, 5 | BRF_OPT },           // 10 PALs
+	{ "a59a26axlbxhd.2j.bin",						0x00eb, 0xf857b484, 5 | BRF_OPT },           // 11
+	{ "a59a26axlaxhd.3j.bin",						0x00eb, 0x4f54e696, 5 | BRF_OPT },           // 12
 	{ "0066-314bx-xxqx.6h.bin",						0x0001, 0x00000000, 5 | BRF_NODUMP | BRF_OPT },           // 13
 	{ "0066-316bx-xxqx.5h.bin",						0x0001, 0x00000000, 5 | BRF_NODUMP | BRF_OPT },           // 14
 	{ "0066-315bx-xxqx.5g.bin",						0x0001, 0x00000000, 5 | BRF_NODUMP | BRF_OPT },           // 15

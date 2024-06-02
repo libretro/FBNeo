@@ -16,6 +16,8 @@ static UINT8 DrvJoy2[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 static UINT16 DrvInput[2] = {0x0000, 0x0000};
 static UINT8 DrvDips[1];
 
+static HoldCoin<2, UINT16> hold_coin;
+
 static UINT8 *Mem = NULL, *MemEnd = NULL;
 static UINT8 *RamStart, *RamEnd;
 static UINT8 *Rom01;
@@ -398,6 +400,9 @@ static INT32 DrvDoReset()
 	DrvSampleReset();
 	memset (previous_sound_write, 0, 3);
 #endif
+
+	hold_coin.reset();
+
 	HiscoreReset();
 	return 0;
 }
@@ -449,6 +454,9 @@ static INT32 DrvFrame()
 	CaveClearOpposites(&DrvInput[0]);
 	CaveClearOpposites(&DrvInput[1]);
 
+	hold_coin.check(0, DrvInput[0], 1 << 8, 1);
+	hold_coin.check(1, DrvInput[1], 1 << 8, 1);
+
 	SekNewFrame();
 
 	nCyclesTotal[0] = (INT32)((INT64)16000000 * nBurnCPUSpeedAdjust / (0x0100 * CAVE_REFRESHRATE));
@@ -465,6 +473,19 @@ static INT32 DrvFrame()
 	for (INT32 i = 1; i <= nInterleave; i++) {
     	INT32 nCurrentCPU = 0;
 		INT32 nNext = i * nCyclesTotal[nCurrentCPU] / nInterleave;
+
+		// Render sound segment
+		if ((i & 1) == 0) {
+			if (pBurnSoundOut) {
+				INT32 nSegmentEnd = nBurnSoundLen * i / nInterleave;
+				INT16* pSoundBuf = pBurnSoundOut + (nSoundBufferPos << 1);
+				MSM6295Render(pSoundBuf, nSegmentEnd - nSoundBufferPos);
+#ifdef USE_SAMPLE_HACK
+				BurnSampleRender(pSoundBuf, nSegmentEnd - nSoundBufferPos);
+#endif
+				nSoundBufferPos = nSegmentEnd;
+			}
+		}
 
 		// Run 68000
 
@@ -610,6 +631,8 @@ static INT32 DrvScan(INT32 nAction, INT32 *pnMin)
 #ifdef USE_SAMPLE_HACK
 		BurnSampleScan(nAction, pnMin); // Must be at the end to maintain compatibility between sample and non-sample mode.
 #endif
+
+		hold_coin.scan();
 	}
 
 	if (nAction & ACB_WRITE) {

@@ -1177,7 +1177,7 @@ static INT32 DrvInit(INT32 bios)
 
 	GenericTilesInit();
 
-	BurnTrackballInit(1); // vblokbrk/sarukani paddle
+	BurnTrackballInit(1); // vblokbrk/sarukani/puzzloop paddle
 
 	{ // filter (for cyvern)
 		LP1 = new LowPass2(10900, nBurnSoundRate, 0.13, 1.0, 2300, 0.01, 1.0);
@@ -1878,7 +1878,7 @@ struct BurnDriver BurnDrvSkns = {
 };
 
 
-// Cyvern (US)
+// Cyvern - The Dragon Weapons (US)
 
 static struct BurnRomInfo cyvernRomDesc[] = {
 	{ "cv-usa.u10",	        0x100000, 0x1023ddca, 1 | BRF_PRG | BRF_ESS }, //  0 SH2 Code
@@ -1910,7 +1910,7 @@ static INT32 CyvernInit()
 
 struct BurnDriver BurnDrvCyvern = {
 	"cyvern", NULL, "skns", NULL, "1998",
-	"Cyvern (US)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	"Cyvern - The Dragon Weapons (US)\0", NULL, "Kaneko", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_VERSHOOT, 0,
 	NULL, cyvernRomInfo, cyvernRomName, NULL, NULL, NULL, NULL, CyvernInputInfo, CyvernDIPInfo,
@@ -1919,7 +1919,7 @@ struct BurnDriver BurnDrvCyvern = {
 };
 
 
-// Cyvern (Japan)
+// Cyvern - The Dragon Weapons (Japan)
 
 static struct BurnRomInfo cyvernjRomDesc[] = {
 	{ "cvj-even.u10",	0x100000, 0x802fadb4, 1 | BRF_PRG | BRF_ESS }, //  0 SH2 Code
@@ -1951,7 +1951,7 @@ static INT32 CyvernJInit()
 
 struct BurnDriver BurnDrvCyvernJ = {
 	"cyvernj", "cyvern", "skns", NULL, "1998",
-	"Cyvern (Japan)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	"Cyvern - The Dragon Weapons (Japan)\0", NULL, "Kaneko", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_ORIENTATION_FLIPPED | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_VERSHOOT, 0,
 	NULL, cyvernjRomInfo, cyvernjRomName, NULL, NULL, NULL, NULL, CyvernInputInfo, CyvernDIPInfo,
@@ -2117,7 +2117,7 @@ struct BurnDriver BurnDrvPuzzloop = {
 	"Puzz Loop (Europe, v0.94)\0", NULL, "Mitchell", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
-	NULL, puzzloopRomInfo, puzzloopRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
+	NULL, puzzloopRomInfo, puzzloopRomName, NULL, NULL, NULL, NULL, VblokbrkInputInfo, VblokbrkDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
 	PuzzloopInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
 	320, 240, 4, 3
 };
@@ -2146,7 +2146,7 @@ struct BurnDriver BurnDrvPuzzloope = {
 	"Puzz Loop (Europe, v0.93)\0", NULL, "Mitchell", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
-	NULL, puzzloopeRomInfo, puzzloopeRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
+	NULL, puzzloopeRomInfo, puzzloopeRomName, NULL, NULL, NULL, NULL, VblokbrkInputInfo, VblokbrkDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
 	PuzzloopInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
 	320, 240, 4, 3
 };
@@ -2186,7 +2186,7 @@ struct BurnDriver BurnDrvPuzzloopj = {
 	"Puzz Loop (Japan)\0", NULL, "Mitchell", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
-	NULL, puzzloopjRomInfo, puzzloopjRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
+	NULL, puzzloopjRomInfo, puzzloopjRomName, NULL, NULL, NULL, NULL, VblokbrkInputInfo, VblokbrkDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
 	PuzzloopjInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
 	320, 240, 4, 3
 };
@@ -2226,7 +2226,7 @@ struct BurnDriver BurnDrvPuzzloopa = {
 	"Puzz Loop (Asia)\0", NULL, "Mitchell", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
-	NULL, puzzloopaRomInfo, puzzloopaRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
+	NULL, puzzloopaRomInfo, puzzloopaRomName, NULL, NULL, NULL, NULL, VblokbrkInputInfo, VblokbrkDIPInfo, //PuzzloopInputInfo, PuzzloopDIPInfo,
 	PuzzloopaInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
 	320, 240, 4, 3
 };
@@ -2543,6 +2543,39 @@ struct BurnDriver BurnDrvGalpaniex = {
 };
 
 
+// Gals Panic SU (Korea, Gals Panic 4 re-release)
+
+static struct BurnRomInfo galpanisuRomDesc[] = {
+	{ "gpsu_e_1q07_00.6.5.u10",	0x100000, 0x3bf4c440, 1 | BRF_PRG | BRF_ESS }, //  0 user1
+	{ "gpsu_o_16d1_00.6.5.u8",	0x100000, 0xd4fef828, 1 | BRF_PRG | BRF_ESS }, //  1
+
+	{ "gp4-100-00.u24",			0x200000, 0x1df61f01, 2 | BRF_GRA },           //  2 gfx1
+	{ "gp4-101-00.u20",			0x100000, 0x8e2c9349, 2 | BRF_GRA },           //  3
+
+	{ "gp4-200-00.u16",			0x200000, 0xf0781376, 3 | BRF_GRA },           //  4 gfx2
+	{ "gp4-201-00.u18",			0x200000, 0x10c4b183, 3 | BRF_GRA },           //  5
+
+	{ "gp4-300-00.u4",			0x200000, 0x8374663a, 5 | BRF_SND },           //  6 ymz
+	{ "gp4-301-01.u7",			0x200000, 0x886ef77f, 5 | BRF_SND },           //  7
+
+	{ "skns-r09.u9",			0x000117, 0xb02058d9, 0 | BRF_OPT },           //  8 plds
+	{ "skns-r11.u11",			0x000117, 0xa9f05af4, 0 | BRF_OPT },           //  9
+};
+
+STDROMPICKEXT(galpanisu, galpanisu, skns)
+STD_ROM_FN(galpanisu)
+
+struct BurnDriver BurnDrvGalpanisu = {
+	"galpanisu", "galpani4", "skns", NULL, "2000",
+	"Gals Panic SU (Korea, Gals Panic 4 re-release)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
+	NULL, galpanisuRomInfo, galpanisuRomName, NULL, NULL, NULL, NULL, CyvernInputInfo, CyvernNoSpeedhackDIPInfo,
+	Galpani4kInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
+	320, 240, 4, 3
+};
+
+
 // Gals Panic DX (Asia)
 
 static struct BurnRomInfo galpanidxRomDesc[] = {
@@ -2562,6 +2595,8 @@ static struct BurnRomInfo galpanidxRomDesc[] = {
 STDROMPICKEXT(galpanidx, galpanidx, skns)
 STD_ROM_FN(galpanidx)
 
+// Same as GalpaniexInit()
+#if 0
 static INT32 GalpanidxInit()
 {
 	sprite_kludge_x = -5;
@@ -2569,6 +2604,7 @@ static INT32 GalpanidxInit()
 
 	return DrvInit(2 /*Asia*/);
 }
+#endif
 
 struct BurnDriver BurnDrvGalpanidx = {
 	"galpanidx", "galpani4", "skns", NULL, "2001",
@@ -2576,7 +2612,7 @@ struct BurnDriver BurnDrvGalpanidx = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
 	NULL, galpanidxRomInfo, galpanidxRomName, NULL, NULL, NULL, NULL, CyvernInputInfo, CyvernNoSpeedhackDIPInfo,
-	GalpanidxInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
+	GalpaniexInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
 	320, 240, 4, 3
 };
 
@@ -2793,7 +2829,7 @@ struct BurnDriver BurnDrvGalpaniska = {
 };
 
 
-// Gals Panic S2 (Europe)
+// Gals Panic S2 (Europe, version 3)
 // only the 2 program ROMs were dumped, but mask ROMs are supposed to match.
 
 static struct BurnRomInfo galpans2RomDesc[] = {
@@ -2829,7 +2865,7 @@ static INT32 Galpans2Init()
 
 struct BurnDriver BurnDrvGalpans2 = {
 	"galpans2", NULL, "skns", NULL, "1999",
-	"Gals Panic S2 (Europe)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	"Gals Panic S2 (Europe, version 3)\0", NULL, "Kaneko", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
 	NULL, galpans2RomInfo, galpans2RomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //GalpanisInputInfo, GalpanisDIPInfo,
@@ -2882,7 +2918,7 @@ struct BurnDriver BurnDrvGalpans2j = {
 };
 
 
-// Gals Panic S2 (Asia)
+// Gals Panic S2 (Asia, version 1.1)
 
 static struct BurnRomInfo galpans2aRomDesc[] = {
 	{ "gps2av11.u6",	0x100000, 0x61c05d5f, 1 | BRF_PRG | BRF_ESS }, //  0 SH2 Code
@@ -2917,7 +2953,7 @@ static INT32 Galpans2aInit()
 
 struct BurnDriver BurnDrvGalpans2a = {
 	"galpans2a", "galpans2", "skns", NULL, "1999",
-	"Gals Panic S2 (Asia)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	"Gals Panic S2 (Asia, version 1.1)\0", NULL, "Kaneko", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
 	NULL, galpans2aRomInfo, galpans2aRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //GalpanisInputInfo, GalpanisDIPInfo,
@@ -2926,23 +2962,23 @@ struct BurnDriver BurnDrvGalpans2a = {
 };
 
 
-// Gals Panic SU (Korea)
+// Gals Panic SU (Korea, version 5)
 
 static struct BurnRomInfo galpansuRomDesc[] = {
-	{ "su.u10",		0x100000, 0x5ae66218, 1 | BRF_PRG | BRF_ESS }, //  0 SH2 Code
-	{ "su.u8",		0x100000, 0x10977a03, 1 | BRF_PRG | BRF_ESS }, //  1
+	{ "gps2k_u6_ver.5.u6",	0x100000, 0x18ffb6d3, 1 | BRF_PRG | BRF_ESS }, //  0 SH2 Code
+	{ "gps2k_u4_ver.5.u4",	0x100000, 0x211f3c7c, 1 | BRF_PRG | BRF_ESS }, //  1
 
-	{ "24",			0x400000, 0x294b2f14, 2 | BRF_GRA },           //  2 Sprites
-	{ "20",			0x400000, 0xf75c5a9a, 2 | BRF_GRA },           //  3
-	{ "17",			0x400000, 0x25b4f56b, 2 | BRF_GRA },           //  4
-	{ "32",			0x400000, 0xdb6d4424, 2 | BRF_GRA },           //  5
+	{ "gs210000.u21",		0x400000, 0x294b2f14, 2 | BRF_GRA },           //  2 Sprites
+	{ "gs210100.u20",		0x400000, 0xf75c5a9a, 2 | BRF_GRA },           //  3
+	{ "gs210200.u8",		0x400000, 0x25b4f56b, 2 | BRF_GRA },           //  4
+	{ "gs210300.u32",		0x400000, 0xdb6d4424, 2 | BRF_GRA },           //  5
 
-	{ "16",			0x400000, 0x5caae1c0, 3 | BRF_GRA },           //  6 Background Tiles
-	{ "13",			0x400000, 0x8d51f197, 3 | BRF_GRA },           //  7
+	{ "gs220000.u17",		0x400000, 0x5caae1c0, 3 | BRF_GRA },           //  6 Background Tiles
+	{ "gs220100.u9",		0x400000, 0x8d51f197, 3 | BRF_GRA },           //  7
 
-	{ "7",			0x400000, 0x58800a18, 4 | BRF_GRA },           //  8 Foreground Tiles
+	{ "gs221000.u3",		0x400000, 0x58800a18, 4 | BRF_GRA },           //  8 Foreground Tiles
 
-	{ "4",			0x400000, 0x0348e8e1, 5 | BRF_SND },           //  9 YMZ280b Samples
+	{ "gs230000.u1",		0x400000, 0x0348e8e1, 5 | BRF_SND },           //  9 YMZ280b Samples
 
 #if !defined (ROM_VERIFY)
 	{ "bios.u10",		0x80000, 0x161fb79e, BRF_BIOS | BRF_OPT},      //  10 Korea Bios
@@ -2965,10 +3001,47 @@ static INT32 GalpansuInit()
 
 struct BurnDriver BurnDrvGalpansu = {
 	"galpansu", "galpans2", "skns", NULL, "1999",
-	"Gals Panic SU (Korea)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	"Gals Panic SU (Korea, version 5)\0", NULL, "Kaneko", "Super Kaneko Nova System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
 	NULL, galpansuRomInfo, galpansuRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //GalpanisInputInfo, GalpanisDIPInfo,
+	GalpansuInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
+	320, 240, 4, 3
+};
+
+
+// Gals Panic SU (Korea)
+
+static struct BurnRomInfo galpansuaRomDesc[] = {
+	{ "su.u10",		0x100000, 0x5ae66218, 1 | BRF_PRG | BRF_ESS }, //  0 SH2 Code
+	{ "su.u8",		0x100000, 0x10977a03, 1 | BRF_PRG | BRF_ESS }, //  1
+
+	{ "24",			0x400000, 0x294b2f14, 2 | BRF_GRA },           //  2 Sprites
+	{ "20",			0x400000, 0xf75c5a9a, 2 | BRF_GRA },           //  3
+	{ "17",			0x400000, 0x25b4f56b, 2 | BRF_GRA },           //  4
+	{ "32",			0x400000, 0xdb6d4424, 2 | BRF_GRA },           //  5
+
+	{ "16",			0x400000, 0x5caae1c0, 3 | BRF_GRA },           //  6 Background Tiles
+	{ "13",			0x400000, 0x8d51f197, 3 | BRF_GRA },           //  7
+
+	{ "7",			0x400000, 0x58800a18, 4 | BRF_GRA },           //  8 Foreground Tiles
+
+	{ "4",			0x400000, 0x0348e8e1, 5 | BRF_SND },           //  9 YMZ280b Samples
+
+#if !defined (ROM_VERIFY)
+	{ "bios.u10",		0x80000, 0x161fb79e, BRF_BIOS | BRF_OPT},      //  10 Korea Bios
+#endif
+};
+
+STDROMPICKEXT(galpansua, galpansua, skns)
+STD_ROM_FN(galpansua)
+
+struct BurnDriver BurnDrvGalpansua = {
+	"galpansua", "galpans2", "skns", NULL, "1999",
+	"Gals Panic SU (Korea)\0", NULL, "Kaneko", "Super Kaneko Nova System",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HISCORE_SUPPORTED, 2, HARDWARE_KANEKO_SKNS, GBF_PUZZLE, 0,
+	NULL, galpansuaRomInfo, galpansuaRomName, NULL, NULL, NULL, NULL, SknsInputInfo, SknsDIPInfo, //GalpanisInputInfo, GalpanisDIPInfo,
 	GalpansuInit, DrvExit, DrvFrame, DrvDraw, DrvScan, NULL, 0x8000,
 	320, 240, 4, 3
 };

@@ -22,6 +22,20 @@
 ; This hiscore.dat is only usable with lua enabled versions of mame since 0.172
 ; For examples of @delay & shared memory see: Gorf/Missile Command (share) & blastoff (@delay)
 
+;******* start of FBNeo additions *****************
+
+;dkchrmx:***Donkey Kong Christmas & Spooky Remix (hack). dink aug'21
+dkchrmx:
+dkspkyrmx:
+@:maincpu,program,6100,aa,94,76
+@:maincpu,program,60b8,03,65,00
+@:maincpu,program,7641,01,00,00
+@:maincpu,program,7621,01,00,00
+@:maincpu,program,7601,01,07,07
+@:maincpu,program,75e1,01,06,06
+@:maincpu,program,75c1,01,05,05
+@:maincpu,program,75a1,01,00,00
+
 ;******* start of mame 2.48 additions *************
 
 monkelf:
@@ -3675,6 +3689,7 @@ willowuo:
 @:maincpu,program,fff03e,04,00,00
 
 
+kod:
 kodb:
 kodj:
 kodja:
@@ -3703,7 +3718,6 @@ cworld2j:
 @:maincpu,program,ff0f6c,9c,00,00
 
 
-kod:
 kodr1:
 @:maincpu,program,ff9d94,28,01,04
 
@@ -4695,8 +4709,7 @@ darktowr:
 ;(super toffy) (by GeoMan)
 stoffy:
 stoffyu:
-@:maincpu,program,833,e0,00,f2
-@:maincpu,program,913,f0,20,00
+@:maincpu,program,913,a0,20,ff
 
 
 ;@s:ddragon3.cpp
@@ -15471,7 +15484,6 @@ wbmljb:
 wbmljo:
 wbmlvc:
 @:maincpu,program,c101,1,24,24
-@:maincpu,program,072f,1,03,03
 @:maincpu,program,c179,1,00,00
 @:maincpu,program,c17a,1,00,00
 @:maincpu,program,c17b,1,00,00
