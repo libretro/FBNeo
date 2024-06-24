@@ -972,7 +972,9 @@ INT32 ConfigCheatLoad() {
 					if (ret != 0) {
 						sprintf(szFilename, "%s%s.dat", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
 						ret = ConfigParseNebulaFile(szFilename);
-						usedCheatType = 6;
+						if (ret != 0) {
+							usedCheatType = 6;
+						}
 					}
 				}
 			}
