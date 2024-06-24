@@ -1,6 +1,11 @@
 #include "burner.h"
+#include <vector>
+#include <string>
 
 #define HW_NES ( ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_NES) || ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_FDS) )
+std::vector<char> CurrentMameCheatContent; // Global
+std::vector<char> CurrentIniCheatContent; // Global
+int usedCheatType = 0; //Global so we'll know if cheatload is already done or which cheat type it uses? 
 
 static bool SkipComma(TCHAR** s)
 {
@@ -56,7 +61,9 @@ static void CheatError(TCHAR* pszFilename, INT32 nLineNumber, CheatInfo* pCheat,
 #endif
 }
 
-static INT32 ConfigParseFile(TCHAR* pszFilename)
+// pszFilename only uses for cheaterror as string while iniContent,not as file
+// while no iniContent,process ini File
+static INT32 ConfigParseFile(TCHAR* pszFilename, const std::vector<char>* iniContent = NULL)
 {
 #define INSIDE_NOTHING (0xFFFF & (1 << ((sizeof(TCHAR) * 8) - 1)))
 
@@ -70,14 +77,35 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 
 	CheatInfo* pCurrentCheat = NULL;
 
-	FILE* h = _tfopen(pszFilename, _T("rt"));
-	if (h == NULL) {
-		return 1;
+	FILE* h = NULL;
+	const char* iniPtr = NULL;
+
+	if (iniContent) {
+		iniPtr = iniContent->data();
+	} else {
+		h = _tfopen(pszFilename, _T("rt"));
+		if (h == NULL) {
+			return 1;
+		}
 	}
 
 	while (1) {
-		if (_fgetts(szLine, 8192, h) == NULL) {
-			break;
+		if (iniContent) {
+			if (*iniPtr == '\0') {
+				break;
+			}
+			char* s = szLine;
+			while (*iniPtr && *iniPtr != '\n') {
+				*s++ = *iniPtr++;
+			}
+			if (*iniPtr == '\n') {
+				*s++ = *iniPtr++;
+			}
+			*s = '\0';
+		} else {
+			if (_fgetts(szLine, 8192, h) == NULL) {
+				break;
+			}
 		}
 
 		nLine++;
@@ -96,25 +124,27 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 			continue;
 		}
 
-		if ((t = LabelCheck(s, _T("include"))) != 0) {				// Include a file
-			s = t;
+		if (!iniContent) {
+			if ((t = LabelCheck(s, _T("include"))) != 0) {				// Include a file
+				s = t;
 
-			TCHAR szFilename[MAX_PATH] = _T("");
+				TCHAR szFilename[MAX_PATH] = _T("");
 
-			// Read name of the cheat file
-			TCHAR* szQuote = NULL;
-			QuoteRead(&szQuote, NULL, s);
+				// Read name of the cheat file
+				TCHAR* szQuote = NULL;
+				QuoteRead(&szQuote, NULL, s);
 
-			_stprintf(szFilename, _T("%s%s.dat"), szAppCheatsPath, szQuote);
-
-			if (ConfigParseFile(szFilename)) {
-				_stprintf(szFilename, _T("%s%s.ini"), szAppCheatsPath, szQuote);
+				_stprintf(szFilename, _T("%s%s.dat"), szAppCheatsPath, szQuote);	// Is it a fault?Why do we read a NebulaDatCheat here?
+																					// Never mind,we already checked included ini before read to inicontent.
 				if (ConfigParseFile(szFilename)) {
-					CheatError(pszFilename, nLine, NULL, _T("included file doesn't exist"), szLine);
+					_stprintf(szFilename, _T("%s%s.ini"), szAppCheatsPath, szQuote);
+					if (ConfigParseFile(szFilename)) {
+						CheatError(pszFilename, nLine, NULL, _T("included file doesn't exist"), szLine);
+					}
 				}
-			}
 
-			continue;
+				continue;
+			}
 		}
 
 		if ((t = LabelCheck(s, _T("cheat"))) != 0) {				// Add new cheat
@@ -317,11 +347,13 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 
 	if (h) {
 		fclose(h);
+		usedCheatType = 4; // see usedCheatType define
+	} else {
+		usedCheatType = 3; // see usedCheatType define
 	}
 
 	return 0;
 }
-
 
 //TODO: make cross platform
 static INT32 ConfigParseNebulaFile(TCHAR* pszFilename)
@@ -447,13 +479,13 @@ static INT32 ConfigParseNebulaFile(TCHAR* pszFilename)
 	}
 
 	fclose (fp);
-
+	usedCheatType = 5;// see usedCheatType define
 	return 0;
 }
 
 #define IS_MIDWAY ((BurnDrvGetHardwareCode() & HARDWARE_PREFIX_MIDWAY) == HARDWARE_PREFIX_MIDWAY)
 
-static INT32 ConfigParseMAMEFile_internal(FILE *fz, const TCHAR *name)
+static INT32 ConfigParseMAMEFile_internal(const TCHAR *name)
 {
 #define AddressInfo()	\
 	INT32 k = (flags >> 20) & 3;	\
@@ -504,10 +536,18 @@ static INT32 ConfigParseMAMEFile_internal(FILE *fz, const TCHAR *name)
 	CheatInfo* pCurrentCheat = NULL;
 	_stprintf(gName, _T(":%s:"), name);
 
-	while (1)
+	const char* iniPtr = CurrentMameCheatContent.data();
+	while (*iniPtr)
 	{
-		if (_fgetts(szLine, 1024, fz) == NULL)
-			break;
+		char* s = szLine;
+		while (*iniPtr && *iniPtr != '\n') {
+			*s++ = *iniPtr++;
+		}
+		// szLine should include '\n'
+		if (*iniPtr == '\n') {
+			*s++ = *iniPtr++;
+		}
+		*s = '\0';
 
 		nLen = _tcslen (szLine);
 
@@ -612,7 +652,7 @@ static INT32 ConfigParseMAMEFile_internal(FILE *fz, const TCHAR *name)
 			}
 
 			// Fill in defaults
-			pCurrentCheat->nType = 0;							    // Default to cheat type 0 (apply each frame)
+			pCurrentCheat->nType = 0;								// Default to cheat type 0 (apply each frame)
 			pCurrentCheat->nStatus = -1;							// Disable cheat
 			pCurrentCheat->nDefault = 0;							// Set default option
 			pCurrentCheat->bOneShot = 0;							// Set default option (off)
@@ -718,6 +758,38 @@ static INT32 ConfigParseMAMEFile_internal(FILE *fz, const TCHAR *name)
 
 	// if no cheat was found, don't return success code
 	if (pCurrentCheat == NULL) return 1;
+	return 0;
+}
+
+static INT32 ExtractMameCheatFromDat(FILE* MameDatCheat, const TCHAR* matchDrvName) {
+
+	CurrentMameCheatContent.clear();
+	TCHAR szLine[1024];
+	TCHAR gName[64];
+	_stprintf(gName, _T(":%s:"), matchDrvName);
+
+	bool foundData = false;
+
+	while (_fgetts(szLine, 1024, MameDatCheat) != NULL) {
+		// Check if the current line contains matchDrvName
+#if defined(BUILD_WIN32)
+		if (_tcsncmp(szLine, gName, lstrlen(gName)) == 0) {
+#else
+		if (_tcsncmp(szLine, gName, strlen(gName)) == 0) {
+#endif
+			if (!foundData) {
+				foundData = true;
+			}
+			// Add the current line to CurrentMameCheatContent
+			for (TCHAR* p = szLine; *p; ++p) {
+				CurrentMameCheatContent.push_back(*p);
+			}
+		}
+	}
+
+	if (!foundData) {
+		return 1;
+	}
 
 	return 0;
 }
@@ -728,36 +800,205 @@ static INT32 ConfigParseMAMEFile()
 	_stprintf(szFileName, _T("%scheat.dat"), szAppCheatsPath);
 
 	FILE *fz = _tfopen(szFileName, _T("rt"));
-
 	INT32 ret = 1;
 
+	const TCHAR* DrvName = BurnDrvGetText(DRV_NAME);
+
 	if (fz) {
-		ret = ConfigParseMAMEFile_internal(fz, BurnDrvGetText(DRV_NAME));
+		ret = ExtractMameCheatFromDat(fz, DrvName);
+		if (ret == 0) {
+			ret = ConfigParseMAMEFile_internal(DrvName);
+			usedCheatType = (ret == 0) ? 1 : usedCheatType;	// see usedCheatType define
+		}
 		// let's try using parent entry as a fallback if no cheat was found for this romset
-		if (ret && (BurnDrvGetFlags() & BDF_CLONE) && BurnDrvGetText(DRV_PARENT)) {
+		if (ret > 0 && (BurnDrvGetFlags() & BDF_CLONE) && BurnDrvGetText(DRV_PARENT)) {
 			fseek(fz, 0, SEEK_SET);
-			ret = ConfigParseMAMEFile_internal(fz, BurnDrvGetText(DRV_PARENT));
+			DrvName = BurnDrvGetText(DRV_PARENT);
+			ret = ExtractMameCheatFromDat(fz, DrvName);
+			if (ret == 0) {
+				ret = ConfigParseMAMEFile_internal(DrvName);
+				usedCheatType = (ret == 0) ? 2 : usedCheatType; // see usedCheatType define
+			}
 		}
 
 		fclose(fz);
 	}
 
+	if (ret) {
+		CurrentMameCheatContent.clear();
+	}
+
 	return ret;
 }
 
+static INT32 LoadIniContentFromZip(const char* DrvName, const char* zipFileName, std::vector<char>& iniContent) {
+	TCHAR iniFileName[MAX_PATH] = "";
+	sprintf(iniFileName, "%s.ini", DrvName);
 
-INT32 ConfigCheatLoad()
-{
-	TCHAR szFilename[MAX_PATH] = _T("");
+	TCHAR zipCheatPath[MAX_PATH];
+	sprintf(zipCheatPath, "%s%s", szAppCheatsPath, zipFileName);
 
-	if (ConfigParseMAMEFile()) {
-		_stprintf(szFilename, _T("%s%s.ini"), szAppCheatsPath, BurnDrvGetText(DRV_NAME));
-		if (ConfigParseFile(szFilename)) {
-			_stprintf(szFilename, _T("%s%s.dat"), szAppCheatsPath, BurnDrvGetText(DRV_NAME));
-			if (ConfigParseNebulaFile(szFilename)) {
-				return 1;
+	if (ZipOpen((char*)zipCheatPath) != 0) {
+		ZipClose();
+		return 1;
+	}
+
+	struct ZipEntry* pList = NULL;
+	INT32 pnListCount = 0;
+
+	if (ZipGetList(&pList, &pnListCount) != 0) {
+		ZipClose();
+		return 1;
+	}
+
+	INT32 ret = 1;
+
+	for (int i = 0; i < pnListCount; i++) {
+		if (strcmp(pList[i].szName, iniFileName) == 0) {
+			void* dest = malloc(pList[i].nLen);
+			if (dest == NULL) {
+				break;
+			}
+
+			INT32 pnWrote = 0;
+			if (ZipLoadFile((UINT8*)dest, pList[i].nLen, &pnWrote, i) == 0) {
+				char* content = (char*)dest;
+				content[pnWrote / sizeof(char)] = 0;
+
+				iniContent.insert(iniContent.end(), content, content + pnWrote);
+
+				free(dest);
+				ret = 0;
+			}
+			break;
+		}
+	}
+
+	for (int i = 0; i < pnListCount; i++) {
+		free(pList[i].szName);
+	}
+
+	free(pList);
+
+	ZipClose();
+
+	return ret;
+}
+
+ //Extract matched INI in cheat.zip or 7z
+static INT32 ExtractIniFromZip(const char* DrvName, const char* zipFileName, std::vector<char>& CurrentIniCheat) {
+
+	if (LoadIniContentFromZip(DrvName, zipFileName, CurrentIniCheatContent) != 0) {
+		return 1;
+	}
+
+	int depth = 0;
+	bool processInclude = true;
+	//max searching included files 5 depth
+	while (processInclude && depth < 5) {
+		processInclude = false;
+		std::vector<char> newContent;
+		const char* iniPtr = CurrentIniCheatContent.data();
+		char szLine[1024];
+
+		// Let's check each line of CurrentIniCheatContent
+		// Looking for include file and hooking them to CurrentIniCheatContent
+		while (*iniPtr) {
+			char* s = szLine;
+			while (*iniPtr && *iniPtr != '\n') {
+				*s++ = *iniPtr++;
+			}
+			if (*iniPtr == '\n') {
+				*s++ = *iniPtr++;
+			}
+			*s = '\0';
+
+			char* t;
+			if ((t = LabelCheck(szLine, "include")) != 0) {
+				processInclude = true;
+				char* szQuote = NULL;
+				QuoteRead(&szQuote, NULL, t);
+
+				if (szQuote) {
+					std::vector<char> includedContent;
+
+					if (LoadIniContentFromZip(szQuote, zipFileName, includedContent) == 0) {
+						newContent.insert(newContent.end(), includedContent.begin(), includedContent.end());
+						newContent.push_back('\n');
+					}
+				}
+			} else {
+#if defined(BUILD_WIN32)
+				newContent.insert(newContent.end(), szLine, szLine + lstrlen(szLine));
+#else
+				newContent.insert(newContent.end(), szLine, szLine + strlen(szLine));
+#endif
 			}
 		}
+
+		CurrentIniCheatContent = newContent;
+		depth++;
+	}
+
+	return 0;
+}
+
+INT32 ConfigCheatLoad() {
+	TCHAR szFilename[MAX_PATH] = "";
+	INT32 ret = 1;
+
+	// During running game,while ConfigCheatLoad is called the second time or more,
+	// Try to load cheat directly,skip unnecessary steps.
+	// usedCheatType define:
+	// 0:first ConfigCheatLoad() while launching game
+	// 1:first ConfigCheatLoad() used MameDatCheat,we directly reload existing cache(DRV_NAME) from cheat.dat
+	// 2:first ConfigCheatLoad() used MameDatCheat,we directly reload existing cache(DRV_PARENT) from cheat.dat
+	// 3:first ConfigCheatLoad() used ini cheat in Zip/7Z,we directly reload existing cache from cheat.zip/7z
+	// 4:first ConfigCheatLoad() used ini cheat in folder,we directly reload from <drvname>.ini
+	// 5:first ConfigCheatLoad() used NebulaDatCheat in folder,we directly reload from <drvname>.dat
+	// 6:first ConfigCheatLoad() no cheats found,we do nothing,never check again.
+	switch (usedCheatType) {
+		case 0:
+			if (ConfigParseMAMEFile()) {
+				ret = ExtractIniFromZip(BurnDrvGetText(DRV_NAME), "cheat", CurrentIniCheatContent);
+				if (ret == 0) {
+					// pszFilename only uses for cheaterror as string,not a file
+					sprintf(szFilename, "%s%s.ini(cheat.zip/7z)", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
+					ret = ConfigParseFile(szFilename, &CurrentIniCheatContent);
+				}
+				if (ret > 0) {
+					sprintf(szFilename, "%s%s.ini", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
+					ret = ConfigParseFile(szFilename,NULL);
+					if (ret != 0) {
+						sprintf(szFilename, "%s%s.dat", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
+						ret = ConfigParseNebulaFile(szFilename);
+						usedCheatType = 6;
+					}
+				}
+			}
+			break;
+		case 1:
+			ret = ConfigParseMAMEFile_internal(BurnDrvGetText(DRV_NAME));
+			break;
+		case 2:
+			ret = ConfigParseMAMEFile_internal(BurnDrvGetText(DRV_PARENT));
+			break;
+		case 3:
+			// pszFilename only uses for cheaterror as string, not a file in this step
+			sprintf(szFilename, "%s%s.ini(cheat.zip/7z)", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
+			ret = ConfigParseFile(szFilename, &CurrentIniCheatContent);
+			break;
+		case 4:
+			sprintf(szFilename, "%s%s.ini", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
+			ret = ConfigParseFile(szFilename, NULL);
+			break;
+		case 5:
+			sprintf(szFilename, "%s%s.dat", szAppCheatsPath, BurnDrvGetText(DRV_NAME));
+			ret = ConfigParseNebulaFile(szFilename);
+			break;
+		default: //case 6 aswell
+			ret = 1;
+			break;
 	}
 
 	if (pCheatInfo) {
@@ -769,5 +1010,5 @@ INT32 ConfigCheatLoad()
 		CheatUpdate();
 	}
 
-	return 0;
+	return ret;
 }
