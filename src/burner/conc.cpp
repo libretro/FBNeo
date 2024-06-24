@@ -899,7 +899,7 @@ static INT32 ExtractIniFromZip(const char* DrvName, const char* zipFileName, std
 		processInclude = false;
 		std::vector<char> newContent;
 		const char* iniPtr = CurrentIniCheatContent.data();
-		char szLine[1024];
+		char szLine[8192];
 
 		// Let's check each line of CurrentIniCheatContent
 		// Looking for include file and hooking them to CurrentIniCheatContent
