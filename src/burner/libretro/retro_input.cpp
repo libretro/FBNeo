@@ -2547,29 +2547,29 @@ static INT32 GameInpStandardOne(struct GameInp* pgi, INT32 nPlayer, char* szb, c
 		if (strcmp("mah n", szb) == 0)
 			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_n, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah kan", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_LCTRL, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_RIGHT, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah pon", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_LALT, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_DOWN, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah chi", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_SPACE, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_LEFT, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah reach", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_LSHIFT, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_UP, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah ron", szb) == 0)
 			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_z, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah ff", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_y, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_1, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah lc", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_RALT, szn, RETRO_DEVICE_KEYBOARD);
-		if (strcmp("mah bet", szb) == 0)
 			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_2, szn, RETRO_DEVICE_KEYBOARD);
+		if (strcmp("mah bet", szb) == 0)
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_3, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah score", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_RCTRL, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_4, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah big", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_RETURN, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_5, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah wup", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_RSHIFT, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_6, szn, RETRO_DEVICE_KEYBOARD);
 		if (strcmp("mah small", szb) == 0)
-			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_BACKSPACE, szn, RETRO_DEVICE_KEYBOARD);
+			GameInpDigital2RetroInpKey(pgi, mahjongKeyboardPort, RETROK_7, szn, RETRO_DEVICE_KEYBOARD);
 	}
 
 	return 0;
