@@ -1967,7 +1967,7 @@ static bool retro_load_game_common()
 	// Initialize Ipses path
 	snprintf_nowarn(szAppIpsesPath, sizeof(szAppIpsesPath), "%s%cfbneo%cips%c", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C());
 
-	// Initialize Ipses path
+	// Initialize Romdata path
 	snprintf_nowarn(szAppRomdatasPath, sizeof(szAppRomdatasPath), "%s%cfbneo%cromdata%c", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C());
 
 	// Initialize Multipath definition path
