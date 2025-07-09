@@ -322,13 +322,14 @@ static struct retro_core_option_v2_definition var_fbneo_socd = {
 	NULL,
 	NULL,
 	{
-		{ "0", "disabled" },
-		{ "1", "Simultaneous Neutral" },
-		{ "2", "Last Input Priority (4 Way)" },
-		{ "3", "Last Input Priority (8 Way)" },
-		{ "4", "First Input Priority" },
-		{ "5", "Up Priority (Up-override Down)" },
-		{ "6", "Down Priority (Left/Right Last Input Priority)" },
+		{ "0",  "disabled" },
+		{ "1",  "Simultaneous Neutral" },
+		{ "2",  "Last Input Priority (4 Way)" },
+		{ "3",  "Last Input Priority (8 Way)" },
+		{ "4",  "First Input Priority" },
+		{ "5",  "Up Priority (Up-override Down)" },
+		{ "6",  "Down Priority (Left/Right Last Input Priority)" },
+		{ NULL, NULL },
 	},
 	"3"
 };
@@ -937,10 +938,15 @@ void set_environment()
 	var_fbneo_analog_speed.info                            = RETRO_ANALOG_CAT_INFO;
 	vars_systems.push_back(&var_fbneo_analog_speed);
 
-	var_fbneo_socd.desc                                    = "SOCD Mode";
-	var_fbneo_socd.info                                    = "Change ULDR priority handling";
+	var_fbneo_socd.desc                                    = RETRO_SOCD_DESC;
+	var_fbneo_socd.info                                    = RETRO_SOCD_INFO;
+	var_fbneo_socd.values[1].label                         = RETRO_SOCD_LABEL_1;
+	var_fbneo_socd.values[2].label                         = RETRO_SOCD_LABEL_2;
+	var_fbneo_socd.values[3].label                         = RETRO_SOCD_LABEL_3;
+	var_fbneo_socd.values[4].label                         = RETRO_SOCD_LABEL_4;
+	var_fbneo_socd.values[5].label                         = RETRO_SOCD_LABEL_5;
+	var_fbneo_socd.values[6].label                         = RETRO_SOCD_LABEL_6;
 	vars_systems.push_back(&var_fbneo_socd);
-
 
 	var_fbneo_lightgun_crosshair_emulation.desc            = RETRO_CROSSHAIR_CAT_DESC;
 	var_fbneo_lightgun_crosshair_emulation.info            = RETRO_CROSSHAIR_CAT_INFO;
