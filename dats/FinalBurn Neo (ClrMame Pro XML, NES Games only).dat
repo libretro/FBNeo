@@ -3925,7 +3925,7 @@
 		<comment>Homebrew</comment>
 		<description>CNESS (HB)</description>
 		<year>2025</year>
-		<manufacturer>Johnynot</manufacturer>
+		<manufacturer>Johnybot</manufacturer>
 		<rom name="CNESS (2025)(Johnybot).nes" size="24592" crc="caa8924e"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
@@ -6246,6 +6246,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="drollball" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Droll Ball (HB)</description>
+		<year>2025</year>
+		<manufacturer>Adam Pankiewicz</manufacturer>
+		<rom name="Droll Ball (2025)(Adam Pankiewicz).nes" size="131088" crc="5ee90cb2"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="dropzone" sourcefile="nes/d_nes.cpp">
 		<description>Dropzone (Euro)</description>
 		<year>1992</year>
@@ -6759,7 +6768,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="exodus" sourcefile="nes/d_nes.cpp">
-		<description>Exodus - Journey to the Promised Land (USA) (Unl)</description>
+		<description>Exodus: Journey to the Promised Land (USA) (Unl)</description>
 		<year>1991</year>
 		<manufacturer>Wisdom Tree</manufacturer>
 		<rom name="Exodus - Journey to the Promised Land (USA)(Unl)(1991)(Wisdom Tree).nes" size="262160" crc="4b334bdf"/>
@@ -6911,8 +6920,16 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="famicjumii" sourcefile="nes/d_nes.cpp">
+		<description>Famicom Jump II: Saikyou no 7 Nin (Japan)</description>
+		<year>1991</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Famicom Jump II - Saikyou no 7 Nin (Japan)(1991)(Bandai).nes" size="524304" crc="6b41421c"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="famicjum" cloneof="famicjump" romof="famicjump" sourcefile="nes/d_nes.cpp">
-		<description>Famicom Jump - Eiyuu Retsuden (Japan)</description>
+		<description>Famicom Jump: Eiyuu Retsuden (Japan)</description>
 		<year>1989</year>
 		<manufacturer>Bandai</manufacturer>
 		<rom name="Famicom Jump - Eiyuu Retsuden (Japan)(1989)(Bandai).nes" size="393232" crc="b91afcaf"/>
@@ -6921,18 +6938,10 @@
 	</game>
 	<game name="famicjump" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Famicom Jump - Heroes History (Hack, English v1.03)</description>
+		<description>Famicom Jump: Heroes History (Hack, English v1.03)</description>
 		<year>2025</year>
 		<manufacturer>BlackPaladin</manufacturer>
 		<rom name="Famicom Jump - Heroes History T-Eng v1.03 (2025)(BlackPaladin).nes" size="393232" crc="cae47c21"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="famicjumii" sourcefile="nes/d_nes.cpp">
-		<description>Famicom Jump II - Saikyou no 7 Nin (Japan)</description>
-		<year>1991</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Famicom Jump II - Saikyou no 7 Nin (Japan)(1991)(Bandai).nes" size="524304" crc="6b41421c"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -9242,6 +9251,24 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="halloween86sped" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Haunted Halloween '86 - Spirit Edition (HB)</description>
+		<year>2025</year>
+		<manufacturer>Retrotainment Games</manufacturer>
+		<rom name="Haunted Halloween '86 - Spirit Edition (2025)(Retrotainment Games).nes" size="524304" crc="078ac1d7"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="halloween86spex" cloneof="halloween86sped" romof="halloween86sped" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Haunted Halloween '86 - Spirit Exclusive (HB)</description>
+		<year>2025</year>
+		<manufacturer>Retrotainment Games</manufacturer>
+		<rom name="Haunted Halloween '86 - Spirit Exclusive (2025)(Retrotainment Games).nes" size="524304" crc="db33ba0f"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="hauntedadv" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Haunted House Adventure (HB)</description>
@@ -9793,6 +9820,15 @@
 		<year>2021</year>
 		<manufacturer>Evan C. Wright</manufacturer>
 		<rom name="Hunt the Wumpus (2021)(Evan C. Wright).nes" size="24592" crc="2b7b6285"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="hurdles" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Hurdles (HB)</description>
+		<year>2025</year>
+		<manufacturer>AUVIMA Software</manufacturer>
+		<rom name="Hurdles! (2025)(AUVIMA Software).nes" size="40976" crc="4b724112"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -12714,6 +12750,15 @@
 		<year>2010</year>
 		<manufacturer>2CH</manufacturer>
 		<rom name="Makaimura Arcade (2010)(2CH).nes" size="131088" crc="b523b441"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="malasombra" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Malasombra (HB)</description>
+		<year>2025</year>
+		<manufacturer>4MHz</manufacturer>
+		<rom name="Malasombra (2025)(4MHz).nes" size="524304" crc="2f99c445"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -17951,7 +17996,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="shancaraj" cloneof="shancara" romof="shancara" sourcefile="nes/d_nes.cpp">
-		<description>Seiryaku Simulation - Inbou no Wakusei - Shancara (Japan)</description>
+		<description>Seiryaku Simulation: Inbou no Wakusei - Shancara (Japan)</description>
 		<year>1992</year>
 		<manufacturer>IGS Corporation</manufacturer>
 		<rom name="Seiryaku Simulation - Inbou no Wakusei - Shancara (Japan)(1992)(IGS).nes" size="262160" crc="dcfe4112"/>
@@ -17960,7 +18005,7 @@
 	</game>
 	<game name="shancara" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Seiryaku Simulation - Planet of Conspiracy - Shancara (Hack, English v1.01)</description>
+		<description>Seiryaku Simulation: Planet of Conspiracy - Shancara (Hack, English v1.01)</description>
 		<year>2024</year>
 		<manufacturer>BlackPaladin</manufacturer>
 		<rom name="Seiryaku Simulation - Planet of Conspiracy - Shancara T-Eng v1.01 (2024)(BlackPaladin).nes" size="262160" crc="7ea7e5df"/>
@@ -20032,6 +20077,15 @@
 		<year>2016</year>
 		<manufacturer>NESRocks</manufacturer>
 		<rom name="Super Pitfall 30th AE (2016)(NESRocks).nes" size="131088" crc="e55ba70d"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="superquarti" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Quarti (HB)</description>
+		<year>2025</year>
+		<manufacturer>Johnybot</manufacturer>
+		<rom name="Super Quarti (2025)(Johnybot).nes" size="40976" crc="c5b6687f"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

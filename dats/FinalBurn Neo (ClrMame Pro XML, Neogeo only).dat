@@ -4547,10 +4547,10 @@
 	</game>
 	<game name="doubled1" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
-		<description>Double Dragon One (Beta Version)</description>
+		<description>Double Dragon One (Beta2 Version)</description>
 		<year>2025</year>
 		<manufacturer>OzzyOuzo</manufacturer>
-		<rom name="doubled-p1.bin" size="1048576" crc="83d2ec24"/>
+		<rom name="doubled-p1.bin" size="1048576" crc="e7923280"/>
 		<rom name="doubled-p2.bin" size="4194304" crc="7e5ed6b8"/>
 		<rom name="doubled-s1.bin" size="131072" crc="714afb4b"/>
 		<rom name="doubled-c1.bin" size="16777216" crc="fd883db8"/>

@@ -552,7 +552,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="excitsoc" romof="fdsbios" sourcefile="nes/d_nes.cpp">
-		<description>Exciting Soccer - Konami Cup (Japan)</description>
+		<description>Exciting Soccer: Konami Cup (Japan)</description>
 		<year>1988</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Exciting Soccer - Konami Cup (Japan)(1988)(Konami).fds" size="131016" crc="43ccd4ba"/>
@@ -561,7 +561,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fairypin" romof="fdsbios" sourcefile="nes/d_nes.cpp">
-		<description>Fairy Pinball - Yousei Tachi no Pinball (Japan)</description>
+		<description>Fairy Pinball: Yousei Tachi no Pinball (Japan)</description>
 		<year>1987</year>
 		<manufacturer>Hacker International</manufacturer>
 		<rom name="Fairy Pinball - Yousei Tachi no Pinball (Japan)(1987)(Hacker International).fds" size="131016" crc="1ce10f77"/>
@@ -696,7 +696,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fuuunankoku" romof="fdsbios" sourcefile="nes/d_nes.cpp">
-		<description>Fuuun Shourin Ken - Ankoku no Maou (Japan)</description>
+		<description>Fuuun Shourin Ken: Ankoku no Maou (Japan)</description>
 		<year>1988</year>
 		<manufacturer>Jaleco</manufacturer>
 		<rom name="Fuuun Shourinken - Ankoku no Maou (Japan)(1988)(Jaleco).fds" size="131000" crc="3c5f6468"/>
@@ -724,7 +724,7 @@
 	</game>
 	<game name="gallfor" romof="fdsbios" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Gall Force - Eternal Story (Hack, English)</description>
+		<description>Gall Force: Eternal Story (Hack, English)</description>
 		<year>2008</year>
 		<manufacturer>Gil Galad</manufacturer>
 		<rom name="Gall Force - Eternal Story T-Eng (2008)(Gil Galad).fds" size="131000" crc="d66e007f"/>
@@ -733,7 +733,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gallforj" cloneof="gallfor" romof="gallfor" sourcefile="nes/d_nes.cpp">
-		<description>Gall Force - Eternal Story (Japan)</description>
+		<description>Gall Force: Eternal Story (Japan)</description>
 		<year>1986</year>
 		<manufacturer>HAL Laboratory</manufacturer>
 		<rom name="Gall Force - Eternal Story (Japan)(1986)(HAL Laboratory).fds" size="131016" crc="51ef74fb"/>
@@ -860,21 +860,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="hikarshi" romof="fdsbios" sourcefile="nes/d_nes.cpp">
-		<comment>Hack, Myth of Light Palutena's Mirror, The</comment>
-		<description>Hikari Shinwa: Palutena no Kagami (Hack, English)</description>
-		<year>2023</year>
-		<manufacturer>BlackPaladin</manufacturer>
-		<rom name="Hikari Shinwa - Palutena no Kagami T-Eng (2023)(BlackPaladin).fds" size="131000" crc="78a03745"/>
-		<rom name="fdsbios.nes" merge="fdsbios.nes" size="8192" crc="5e607dcf"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
 	<game name="hikarshij" cloneof="hikarshi" romof="hikarshi" sourcefile="nes/d_nes.cpp">
 		<description>Hikari Shinwa: Palutena no Kagami (Japan)</description>
 		<year>1986</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Hikari Shinwa - Palutena no Kagami (Japan)(1986)(Nintendo).fds" size="131000" crc="32516fcf"/>
+		<rom name="fdsbios.nes" merge="fdsbios.nes" size="8192" crc="5e607dcf"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="hikarshi" romof="fdsbios" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Hikari Shinwa: Palutena's Mirror (Hack, English) </description>
+		<year>2023</year>
+		<manufacturer>BlackPaladin</manufacturer>
+		<rom name="Hikari Shinwa - Palutena no Kagami T-Eng (2023)(BlackPaladin).fds" size="131000" crc="78a03745"/>
 		<rom name="fdsbios.nes" merge="fdsbios.nes" size="8192" crc="5e607dcf"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
@@ -1009,21 +1009,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="kikikai" romof="fdsbios" sourcefile="nes/d_nes.cpp">
-		<comment>Hack, Mysterious Ghost World - The Turbulent Chapters</comment>
-		<description>Kiki Kaikai - Dotou Hen (Hack, English)</description>
-		<year>2024</year>
-		<manufacturer>BlackPaladin</manufacturer>
-		<rom name="Kiki Kaikai Dotou Hen T-Eng (2024)(BlackPaladin).fds" size="131000" crc="61d3af7e"/>
+	<game name="kikikaij" cloneof="kikikai" romof="kikikai" sourcefile="nes/d_nes.cpp">
+		<description>Kiki Kaikai: Dotou-hen (Japan, Rev. 1)</description>
+		<year>1987</year>
+		<manufacturer>Taito Corp.</manufacturer>
+		<rom name="Kiki Kaikai Dotou-hen (Japan, Rev 1)(1987)(Taito).fds" size="131000" crc="007aa4fd"/>
 		<rom name="fdsbios.nes" merge="fdsbios.nes" size="8192" crc="5e607dcf"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="kikikaij" cloneof="kikikai" romof="kikikai" sourcefile="nes/d_nes.cpp">
-		<description>Kiki Kaikai - Dotou Hen (Japan, Rev. 1)</description>
-		<year>1987</year>
-		<manufacturer>Taito Corp.</manufacturer>
-		<rom name="Kiki Kaikai Dotou Hen (Japan, Rev 1)(1987)(Taito).fds" size="131000" crc="007aa4fd"/>
+	<game name="kikikai" romof="fdsbios" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Kiki Kaikai: Dotou-hen ~ Mysterious Ghost World (Hack, English)</description>
+		<year>2024</year>
+		<manufacturer>BlackPaladin</manufacturer>
+		<rom name="Kiki Kaikai Dotou-hen T-Eng (2024)(BlackPaladin).fds" size="131000" crc="61d3af7e"/>
 		<rom name="fdsbios.nes" merge="fdsbios.nes" size="8192" crc="5e607dcf"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
