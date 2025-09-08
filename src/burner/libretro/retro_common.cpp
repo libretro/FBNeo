@@ -57,6 +57,8 @@ UINT32 nLightgunCrosshairEmulation    = 0;
 UINT8 *diag_input;
 uint32_t g_opt_neo_geo_mode           = 0;
 
+UINT32 nMahjongKeyMap                 = 0;
+
 #ifdef USE_CYCLONE
 // 0 - c68k, 1 - m68k
 // we don't use cyclone by default because it breaks savestates cross-platform compatibility (including netplay)
@@ -226,6 +228,20 @@ static struct retro_core_option_v2_definition var_fbneo_hiscores = {
 		{ "disabled", NULL },
 		{ "enabled",  NULL },
 		{ NULL,       NULL },
+	},
+	"enabled"
+};
+static struct retro_core_option_v2_definition var_fbneo_mahjong_keymap = {
+	"mahjong-keymap",
+	"Mahjong key mapping",
+	NULL,
+	"Select the key mapping for Mahjong games. Default is compatible with MAME. Custom1 assigns kan, chi, pon and reach to the arrows keys. Requires core reload.",
+	NULL,
+	NULL,
+	{
+		{ "Default", NULL },
+		{ "Custom1", NULL },
+		{ NULL,      NULL },
 	},
 	"enabled"
 };
@@ -971,6 +987,8 @@ void set_environment()
 		var_fbneo_hiscores.info = RETRO_HISCORES_CAT_INFO;
 		vars_systems.push_back(&var_fbneo_hiscores);
 	}
+
+    vars_systems.push_back(&var_fbneo_mahjong_keymap);
 
 	if (pgi_diag)
 	{
@@ -1852,6 +1870,15 @@ void check_variables(void)
 	else
 	{
 		EnableHiscores = false;
+	}
+
+	var.key = var_fbneo_mahjong_keymap.key;
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+	{
+		if (     strcmp(var.value, "Default") == 0)
+			nMahjongKeyMap = 0;
+		else if (strcmp(var.value, "Custom1") == 0)
+			nMahjongKeyMap = 1;
 	}
 
 	var.key = var_fbneo_allow_patched_romsets.key;
