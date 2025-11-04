@@ -1,6 +1,10 @@
 #include "retro_common.h"
 #include "retro_input.h"
 
+#include <file/file_path.h>
+#include <retro_dirent.h>
+#include <streams/file_stream.h>
+
 struct RomBiosInfo neogeo_bioses[] = {
 	{"sp-s3.sp1",         0x91b64be3, 0x00, "MVS Asia/Europe ver. 6 (1 slot)", NEOGEO_MVS | NEOGEO_EUR, 0 },
 	{"sp-s2.sp1",         0x9036d879, 0x01, "MVS Asia/Europe ver. 5 (1 slot)", NEOGEO_MVS | NEOGEO_EUR, 0 },
