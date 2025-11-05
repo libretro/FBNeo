@@ -100,12 +100,21 @@ void EEPROMInit(const eeprom_interface *interface)
 
 	INT32 len = ((1 << intf->address_bits) * (intf->data_bits >> 3)) & (MEMORY_SIZE-1);
 
+#ifdef __LIBRETRO__
+	RFILE *rfz = filestream_open(output, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (rfz != NULL) {
+		neeprom_available = 1;
+		filestream_read (rfz, eeprom_data, len);
+		filestream_close (rfz);
+	}
+#else
 	FILE *fz = _tfopen(output, _T("rb"));
 	if (fz != NULL) {
 		neeprom_available = 1;
 		fread (eeprom_data, len, 1, fz);
 		fclose (fz);
 	}
+#endif
 }
 
 void EEPROMExit()
@@ -123,11 +132,19 @@ void EEPROMExit()
 
 	INT32 len = ((1 << intf->address_bits) * (intf->data_bits >> 3)) & (MEMORY_SIZE-1);
 
+#ifdef __LIBRETRO__
+	RFILE *rfz = filestream_open(output, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (rfz) {
+		filestream_write (rfz, eeprom_data, len);
+		filestream_close (rfz);
+	}
+#else
 	FILE *fz = _tfopen(output, _T("wb"));
 	if (fz) {
 		fwrite (eeprom_data, len, 1, fz);
 		fclose (fz);
 	}
+#endif
 
 	overrun_errmsg_ignore = 0;
 

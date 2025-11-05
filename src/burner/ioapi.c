@@ -82,6 +82,23 @@ void fill_zlib_filefunc64_32_def_from_filefunc32(zlib_filefunc64_32_def* p_filef
 
 
 static voidpf ZCALLBACK fopen_file_func(voidpf opaque, const char* filename, int mode) {
+#ifdef __LIBRETRO__
+    RFILE* rfile = NULL;
+    unsigned int mode_filestream_open = 0;
+    (void)opaque;
+    if ((mode & ZLIB_FILEFUNC_MODE_READWRITEFILTER)==ZLIB_FILEFUNC_MODE_READ)
+        mode_filestream_open = RETRO_VFS_FILE_ACCESS_READ;
+    else
+    if (mode & ZLIB_FILEFUNC_MODE_EXISTING)
+        mode_filestream_open = RETRO_VFS_FILE_ACCESS_READ_WRITE | RETRO_VFS_FILE_ACCESS_UPDATE_EXISTING;
+    else
+    if (mode & ZLIB_FILEFUNC_MODE_CREATE)
+        mode_filestream_open = RETRO_VFS_FILE_ACCESS_WRITE;
+
+    if ((filename!=NULL) && (mode_filestream_open != 0))
+        rfile = filestream_open(filename, mode_filestream_open, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+    return rfile;
+#else
     FILE* file = NULL;
     const char* mode_fopen = NULL;
     (void)opaque;
@@ -97,9 +114,13 @@ static voidpf ZCALLBACK fopen_file_func(voidpf opaque, const char* filename, int
     if ((filename!=NULL) && (mode_fopen != NULL))
         file = fopen(filename, mode_fopen);
     return file;
+#endif
 }
 
 static voidpf ZCALLBACK fopen64_file_func(voidpf opaque, const void* filename, int mode) {
+#ifdef __LIBRETRO__
+    return fopen_file_func(opaque, filename, mode);
+#else
     FILE* file = NULL;
     const char* mode_fopen = NULL;
     (void)opaque;
@@ -115,27 +136,40 @@ static voidpf ZCALLBACK fopen64_file_func(voidpf opaque, const void* filename, i
     if ((filename!=NULL) && (mode_fopen != NULL))
         file = FOPEN_FUNC((const char*)filename, mode_fopen);
     return file;
+#endif
 }
 
 
 static uLong ZCALLBACK fread_file_func(voidpf opaque, voidpf stream, void* buf, uLong size) {
     uLong ret;
     (void)opaque;
+#ifdef __LIBRETRO__
+    ret = (uLong)filestream_read((RFILE *)stream, buf, (int64_t)size);
+#else
     ret = (uLong)fread(buf, 1, (size_t)size, (FILE *)stream);
+#endif
     return ret;
 }
 
 static uLong ZCALLBACK fwrite_file_func(voidpf opaque, voidpf stream, const void* buf, uLong size) {
     uLong ret;
     (void)opaque;
+#ifdef __LIBRETRO__
+    ret = (uLong)filestream_write((RFILE *)stream, buf, (int64_t)size);
+#else
     ret = (uLong)fwrite(buf, 1, (size_t)size, (FILE *)stream);
+#endif
     return ret;
 }
 
 static long ZCALLBACK ftell_file_func(voidpf opaque, voidpf stream) {
     long ret;
     (void)opaque;
+#ifdef __LIBRETRO__
+    ret = filestream_tell((RFILE *)stream);
+#else
     ret = ftell((FILE *)stream);
+#endif
     return ret;
 }
 
@@ -143,7 +177,11 @@ static long ZCALLBACK ftell_file_func(voidpf opaque, voidpf stream) {
 static ZPOS64_T ZCALLBACK ftell64_file_func(voidpf opaque, voidpf stream) {
     ZPOS64_T ret;
     (void)opaque;
+#ifdef __LIBRETRO__
+    ret = (ZPOS64_T)filestream_tell((RFILE *)stream);
+#else
     ret = (ZPOS64_T)FTELLO_FUNC((FILE *)stream);
+#endif
     return ret;
 }
 
@@ -154,18 +192,34 @@ static long ZCALLBACK fseek_file_func(voidpf opaque, voidpf stream, uLong offset
     switch (origin)
     {
     case ZLIB_FILEFUNC_SEEK_CUR :
+#ifdef __LIBRETRO__
+        fseek_origin = RETRO_VFS_SEEK_POSITION_CURRENT;
+#else
         fseek_origin = SEEK_CUR;
+#endif
         break;
     case ZLIB_FILEFUNC_SEEK_END :
+#ifdef __LIBRETRO__
+        fseek_origin = RETRO_VFS_SEEK_POSITION_END;
+#else
         fseek_origin = SEEK_END;
+#endif
         break;
     case ZLIB_FILEFUNC_SEEK_SET :
+#ifdef __LIBRETRO__
+        fseek_origin = RETRO_VFS_SEEK_POSITION_START;
+#else
         fseek_origin = SEEK_SET;
+#endif
         break;
     default: return -1;
     }
     ret = 0;
+#ifdef __LIBRETRO__
+    if (filestream_seek((RFILE *)stream, (int64_t)offset, fseek_origin) != 0)
+#else
     if (fseek((FILE *)stream, (long)offset, fseek_origin) != 0)
+#endif
         ret = -1;
     return ret;
 }
@@ -177,19 +231,35 @@ static long ZCALLBACK fseek64_file_func(voidpf opaque, voidpf stream, ZPOS64_T o
     switch (origin)
     {
     case ZLIB_FILEFUNC_SEEK_CUR :
+#ifdef __LIBRETRO__
+        fseek_origin = RETRO_VFS_SEEK_POSITION_CURRENT;
+#else
         fseek_origin = SEEK_CUR;
+#endif
         break;
     case ZLIB_FILEFUNC_SEEK_END :
+#ifdef __LIBRETRO__
+        fseek_origin = RETRO_VFS_SEEK_POSITION_END;
+#else
         fseek_origin = SEEK_END;
+#endif
         break;
     case ZLIB_FILEFUNC_SEEK_SET :
+#ifdef __LIBRETRO__
+        fseek_origin = RETRO_VFS_SEEK_POSITION_START;
+#else
         fseek_origin = SEEK_SET;
+#endif
         break;
     default: return -1;
     }
     ret = 0;
 
+#ifdef __LIBRETRO__
+    if (filestream_seek((RFILE *)stream, (int64_t)offset, fseek_origin) != 0)
+#else
     if(FSEEKO_FUNC((FILE *)stream, (z_off64_t)offset, fseek_origin) != 0)
+#endif
                         ret = -1;
 
     return ret;
@@ -199,14 +269,22 @@ static long ZCALLBACK fseek64_file_func(voidpf opaque, voidpf stream, ZPOS64_T o
 static int ZCALLBACK fclose_file_func(voidpf opaque, voidpf stream) {
     int ret;
     (void)opaque;
+#ifdef __LIBRETRO__
+    ret = filestream_close((RFILE *)stream);
+#else
     ret = fclose((FILE *)stream);
+#endif
     return ret;
 }
 
 static int ZCALLBACK ferror_file_func(voidpf opaque, voidpf stream) {
     int ret;
     (void)opaque;
+#ifdef __LIBRETRO__
+    ret = filestream_error((RFILE *)stream);
+#else
     ret = ferror((FILE *)stream);
+#endif
     return ret;
 }
 

@@ -1614,10 +1614,17 @@ static INT32 MegadriveResetDo()
 	}
 
 #if 0
+#ifdef __LIBRETRO__
     BurnDump("Megadrive.bin", RomMain, 0x200000);
-    //FILE * f = fopen("Megadrive.bin", "wb+");
+    //RFILE * rf = filestream_open("Megadrive.bin", RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	//filestream_write(rf, RomMain, 0x200000);
+	//filestream_close(rf);
+#else
+    BurnDump("Megadrive.bin", RomMain, 0x200000);
+    //FILE * f = fopen("Megadrive.bin", "wb");
 	//fwrite(RomMain, 1, 0x200000, f);
 	//fclose(f);
+#endif
 #endif
 
 	MegadriveCheckHardware();

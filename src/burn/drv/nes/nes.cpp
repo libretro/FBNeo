@@ -614,10 +614,23 @@ static INT32 cartridge_load(UINT8* ROMData, UINT32 ROMSize, UINT32 ROMCRC)
 
 static INT32 filediff(TCHAR *file1, TCHAR *file2)
 {
+#ifdef __LIBRETRO__
+	RFILE *rfp1, *rfp2;
+#else
 	FILE *fp1, *fp2;
+#endif
 	INT32 len1, len2;
 	UINT8 c1, c2;
 
+#ifdef __LIBRETRO__
+	rfp1 = filestream_open(file1, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (!rfp1) return -1;
+	rfp2 = filestream_open(file2, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (!rfp2) {
+		filestream_close(rfp1);
+		return -2;
+	}
+#else
 	fp1 = _tfopen(file1, _T("rb"));
 	if (!fp1) return -1;
 	fp2 = _tfopen(file2, _T("rb"));
@@ -625,7 +638,12 @@ static INT32 filediff(TCHAR *file1, TCHAR *file2)
 		fclose(fp1);
 		return -2;
 	}
+#endif
 
+#ifdef __LIBRETRO__
+	len1 = filestream_get_size(rfp1);
+	len2 = filestream_get_size(rfp2);
+#else
 	fseek(fp1, 0, SEEK_END);
 	len1 = ftell(fp1);
 	fseek(fp1, 0, SEEK_SET);
@@ -633,27 +651,48 @@ static INT32 filediff(TCHAR *file1, TCHAR *file2)
 	fseek(fp2, 0, SEEK_END);
 	len2 = ftell(fp2);
 	fseek(fp2, 0, SEEK_SET);
+#endif
 
 	if (!len1 || !len2 || len1 != len2) {
+#ifdef __LIBRETRO__
+		filestream_close(rfp1);
+		filestream_close(rfp2);
+#else
 		fclose(fp1);
 		fclose(fp2);
+#endif
 		bprintf(0, _T("filediff(): length mismatch\n"));
 		return -3;
 	}
 
 	for (INT32 i = 0; i < len1; i++) {
+#ifdef __LIBRETRO__
+		filestream_read(rfp1, &c1, 1);
+		filestream_read(rfp2, &c2, 1);
+#else
 		fread(&c1, 1, 1, fp1);
 		fread(&c2, 1, 1, fp2);
+#endif
 		if (c1 != c2) {
+#ifdef __LIBRETRO__
+			filestream_close(rfp1);
+			filestream_close(rfp2);
+#else
 			fclose(fp1);
 			fclose(fp2);
+#endif
 			bprintf(0, _T("filediff(): difference at offset $%x\n"));
 			return -3;
 		}
 	}
 
+#ifdef __LIBRETRO__
+	filestream_close(rfp1);
+	filestream_close(rfp2);
+#else
 	fclose(fp1);
 	fclose(fp2);
+#endif
 
 	return 0; // file1 == file2
 }
@@ -693,10 +732,19 @@ static INT32 ips_make(UINT8 *orig_data, UINT8 *new_data, INT32 size_data, TCHAR 
 	_stprintf(ips_path_fn_temp, _T("%s%s.temp"), ips_dir, ips_fn);
 
 	bprintf(0, _T("ips_make() writing to [%s]\n"), ips_path_fn_temp);
+#ifdef __LIBRETRO__
+	RFILE *rf = filestream_open(ips_path_fn_temp, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (!rf) return -1; // uhoh! (can't open file for writing)
+#else
 	FILE *f = _tfopen(ips_path_fn_temp, _T("wb"));
 	if (!f) return -1; // uhoh! (can't open file for writing)
+#endif
 
+#ifdef __LIBRETRO__
+	filestream_write(rf, &iPATCH, 5);
+#else
 	fwrite(&iPATCH, 1, 5, f);
+#endif
 	for (INT32 i = 0; i < size_data; i++)
 	{
 		if (orig_data[i] == new_data[i]) continue;
@@ -760,21 +808,43 @@ static INT32 ips_make(UINT8 *orig_data, UINT8 *new_data, INT32 size_data, TCHAR 
 		ips_length_c[0] = (ips_length >> 8) & 0xff;
 		ips_length_c[1] = (ips_length >> 0) & 0xff;
 
+#ifdef __LIBRETRO__
+		filestream_write(rf, &ips_address_c, 3);
+		filestream_write(rf, &ips_length_c, 2);
+#else
 		fwrite(&ips_address_c, 1, 3, f);
 		fwrite(&ips_length_c, 1, 2, f);
+#endif
 		if (rle_good) {
 			ips_length_c[0] = (rle_length >> 8) & 0xff;
 			ips_length_c[1] = (rle_length >> 0) & 0xff;
+#ifdef __LIBRETRO__
+			filestream_write(rf, &ips_length_c, 2);
+			filestream_write(rf, &rle_byte, 1);
+#else
 			fwrite(&ips_length_c, 1, 2, f);
 			fwrite(&rle_byte, 1, 1, f);
+#endif
 		} else {
+#ifdef __LIBRETRO__
+			filestream_write(rf, &new_data[ips_address], ips_length);
+#else
 			fwrite(&new_data[ips_address], 1, ips_length, f);
+#endif
 		}
 	}
 
+#ifdef __LIBRETRO__
+	filestream_write(rf, &iEOF, 3);
+#else
 	fwrite(&iEOF, 1, 3, f);
+#endif
 
+#ifdef __LIBRETRO__
+	filestream_close(rf);
+#else
 	fclose(f);
+#endif
 
 	// Check if the newly written patch is the same as previously written..
 	if (filediff(ips_path_fn_temp, ips_path_fn)) {
@@ -819,30 +889,59 @@ static INT32 ips_patch(UINT8 *data, INT32 size_data, TCHAR *ips_fn)
 	INT32 rle_repeat;
 	UINT8 rle_byte;
 
+#ifdef __LIBRETRO__
+	RFILE *rf = filestream_open(ips_fn, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (!rf) return -1;
+#else
 	FILE *f = _tfopen(ips_fn, _T("rb"));
 	if (!f) return -1;
+#endif
 
+#ifdef __LIBRETRO__
+	filestream_read(rf, &buf, 5);
+#else
 	fread(&buf, 1, 5, f);
+#endif
 	if (memcmp(&buf, "PATCH", 5) != 0) {
+#ifdef __LIBRETRO__
+		filestream_close(rf);
+#else
 		fclose(f);
+#endif
 		return -2;
 	}
 
+#ifdef __LIBRETRO__
+	while (!filestream_eof(rf))
+#else
 	while (!feof(f))
+#endif
 	{
 		memset(&buf, 0, 3);
+#ifdef __LIBRETRO__
+		filestream_read(rf, buf, 3);
+#else
 		fread(buf, 1, 3, f);
+#endif
 		if (memcmp(&buf, "EOF", 3) == 0) {
 			break;
 		}
 		ips_address = ((buf[0] << 16) & 0xff0000) | ((buf[1] << 8) & 0xff00) | (buf[2] & 0xff);
 
 		memset(&buf, 0, 3);
+#ifdef __LIBRETRO__
+		filestream_read(rf, buf, 2);
+#else
 		fread(buf, 1, 2, f);
+#endif
 		ips_length = ((buf[0] << 8) & 0xff00) | (buf[1] & 0xff);
 
 		if (ips_length == 0) { // RLE chunk
+#ifdef __LIBRETRO__
+			filestream_read(rf, buf, 3);
+#else
 			fread(buf, 1, 3, f);
+#endif
 			rle_repeat = ((buf[0] << 8) & 0xff00) | (buf[1] & 0xff);
 			rle_byte = buf[2];
 
@@ -854,7 +953,11 @@ static INT32 ips_patch(UINT8 *data, INT32 size_data, TCHAR *ips_fn)
 			}
 		} else { // normal chunk
 			if (ips_address + ips_length <= size_data) { // ok to patch
+#ifdef __LIBRETRO__
+				filestream_read(rf, &data[ips_address], ips_length);
+#else
 				fread(&data[ips_address], 1, ips_length, f);
+#endif
 			} else {
 				//printf("patch grow disabled, aborting.\n");
 				break;
@@ -862,7 +965,11 @@ static INT32 ips_patch(UINT8 *data, INT32 size_data, TCHAR *ips_fn)
 		}
 	}
 
+#ifdef __LIBRETRO__
+	filestream_close(rf);
+#else
 	fclose(f);
+#endif
 
 	return 0;
 }

@@ -549,6 +549,25 @@ static INT32 lfo_pm_table[128*8*32]; /* 128 combinations of 7 bits meaningful (o
 /* #define SAVE_SAMPLE */
 
 #ifdef SAVE_SAMPLE
+#ifdef __LIBRETRO__
+static RFILE *rsample[1];
+	#if 1	/*save to MONO file */
+		#define SAVE_ALL_CHANNELS \
+		{	signed int pom = lt; \
+			filestream_putc(rsample[0],(unsigned short)pom&0xff); \
+			filestream_putc(rsample[0],((unsigned short)pom>>8)&0xff); \
+		}
+	#else	/*save to STEREO file */
+		#define SAVE_ALL_CHANNELS \
+		{	signed int pom = lt; \
+			filestream_putc(rsample[0],(unsigned short)pom&0xff); \
+			filestream_putc(rsample[0],((unsigned short)pom>>8)&0xff); \
+			pom = rt; \
+			filestream_putc(rsample[0],(unsigned short)pom&0xff); \
+			filestream_putc(rsample[0],((unsigned short)pom>>8)&0xff); \
+		}
+	#endif
+#else
 static FILE *sample[1];
 	#if 1	/*save to MONO file */
 		#define SAVE_ALL_CHANNELS \
@@ -566,6 +585,7 @@ static FILE *sample[1];
 			fputc(((unsigned short)pom>>8)&0xff,sample[0]); \
 		}
 	#endif
+#endif
 #endif
 
 
@@ -1802,7 +1822,11 @@ static int init_tables(void)
 
 
 #ifdef SAVE_SAMPLE
+#ifdef __LIBRETRO__
+	rsample[0]=filestream_open("sampsum.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
+#else
 	sample[0]=fopen("sampsum.pcm","wb");
+#endif
 #endif
 
 	return 1;
@@ -1814,7 +1838,11 @@ static int init_tables(void)
 static void FMCloseTable( void )
 {
 #ifdef SAVE_SAMPLE
+#ifdef __LIBRETRO__
+	filestream_close(rsample[0]);
+#else
 	fclose(sample[0]);
+#endif
 #endif
 	return;
 }

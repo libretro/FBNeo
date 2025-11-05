@@ -118,9 +118,18 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 	TCHAR* pszReadMode = AdaptiveEncodingReads(pszFilename);
 	if (NULL == pszReadMode) pszReadMode = _T("rt");
 
+#ifdef __LIBRETRO__
+	RFILE* rfp = filestream_open(pszFilename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+#else
 	FILE* h = _tfopen(pszFilename, pszReadMode);
+#endif
 	TCHAR* pszFileHeading = getFilenameFromPath(pszFilename);
-	if (h == NULL) {
+#ifdef __LIBRETRO__
+	if (rfp == NULL)
+#else
+	if (h == NULL)
+#endif
+	{
 		if ((BurnDrvGetFlags() & BDF_CLONE) && BurnDrvGetText(DRV_PARENT)) {
 			TCHAR szAlternative[MAX_PATH] = { 0 };
 			_stprintf(szAlternative, _T("%s%s.ini"), szAppCheatsPath, BurnDrvGetText(DRV_PARENT));
@@ -128,7 +137,11 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 			pszReadMode = AdaptiveEncodingReads(szAlternative);
 			if (NULL == pszReadMode) pszReadMode = _T("rt");
 
+#ifdef __LIBRETRO__
+			if (NULL == (rfp = filestream_open(szAlternative, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+#else
 			if (NULL == (h = _tfopen(szAlternative, pszReadMode)))
+#endif
 				return 1;
 			pszFileHeading = getFilenameFromPath(szAlternative);
 		} else {
@@ -137,7 +150,12 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 	}
 
 	while (1) {
-		if (_fgetts(szLine, 8192, h) == NULL) {
+#ifdef __LIBRETRO__
+		if (filestream_gets(rfp, szLine, 8192) == NULL)
+#else
+		if (_fgetts(szLine, 8192, h) == NULL)
+#endif
+		{
 			break;
 		}
 
@@ -372,9 +390,15 @@ static INT32 ConfigParseFile(TCHAR* pszFilename)
 
 	}
 
+#ifdef __LIBRETRO__
+	if (rfp) {
+		filestream_close(rfp);
+	}
+#else
 	if (h) {
 		fclose(h);
 	}
+#endif
 
 	return 0;
 }

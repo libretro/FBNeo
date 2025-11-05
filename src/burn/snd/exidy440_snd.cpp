@@ -105,7 +105,11 @@ static Stream m_stream;
 static sound_channel_data m_sound_channel[4];
 
 /* debugging */
+#ifdef __LIBRETRO__
+static RFILE *m_debuglog_libretro;
+#else
 static FILE *m_debuglog;
+#endif
 
 /* channel frequency is configurable */
 static int m_channel_frequency[4];
@@ -213,7 +217,11 @@ void exidy440_init(UINT8 *samples_rom, INT32 samples_len, INT32 (*pCPUCyclesCB)(
 	m_mixer_buffer_right = (INT32*)BurnMalloc(clock() * 2 * sizeof(INT32));
 
 	if (SOUND_LOG)
+#ifdef __LIBRETRO__
+		m_debuglog_libretro = filestream_open("sound.log", RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+#else
 		m_debuglog = fopen("sound.log", "w");
+#endif
 }
 
 void exidy440_update(INT16 *output, INT32 samples_len)
@@ -237,8 +245,13 @@ void exidy440_exit()
 	BurnFree(m_mixer_buffer_left);
 	BurnFree(m_mixer_buffer_right);
 
+#ifdef __LIBRETRO__
+	if (SOUND_LOG && m_debuglog_libretro)
+		filestream_close(m_debuglog_libretro);
+#else
 	if (SOUND_LOG && m_debuglog)
 		fclose(m_debuglog);
+#endif
 }
 
 /*************************************
@@ -361,8 +374,13 @@ UINT8 exidy440_sound_volume_read(INT32 offset)
 
 void exidy440_sound_volume_write(INT32 offset, UINT8 data)
 {
+#ifdef __LIBRETRO__
+	if (SOUND_LOG && m_debuglog_libretro)
+		filestream_printf(m_debuglog_libretro, "Volume %02X=%02X\n", offset, data);
+#else
 	if (SOUND_LOG && m_debuglog)
 		fprintf(m_debuglog, "Volume %02X=%02X\n", offset, data);
+#endif
 
 	/* update the stream */
 	m_stream.update();
@@ -708,8 +726,14 @@ static void play_cvsd(int ch)
 				m_m6844_channel[ch].address, m_m6844_channel[ch].counter,
 				m_sound_volume[ch * 2], m_sound_volume[ch * 2 + 1]);
 */
+#ifdef __LIBRETRO__
+	if (SOUND_LOG && m_debuglog_libretro)
+		filestream_printf(m_debuglog_libretro,
+#else
 	if (SOUND_LOG && m_debuglog)
-		fprintf(m_debuglog, "Sound channel %d play at %02X,%04X, length = %04X, volume = %02X/%02X\n",
+		fprintf(m_debuglog,
+#endif
+				"Sound channel %d play at %02X,%04X, length = %04X, volume = %02X/%02X\n",
 				ch, m_sound_banks[ch],
 				m_m6844_channel[ch].address, m_m6844_channel[ch].counter,
 				m_sound_volume[ch * 2], m_sound_volume[ch * 2 + 1]);
@@ -758,8 +782,13 @@ static void stop_cvsd(int ch)
 	m_sound_channel[ch].remaining = 0;
 	m_stream.update();
 
+#ifdef __LIBRETRO__
+	if (SOUND_LOG && m_debuglog_libretro)
+		filestream_printf(m_debuglog_libretro, "Channel %d stop\n", ch);
+#else
 	if (SOUND_LOG && m_debuglog)
 		fprintf(m_debuglog, "Channel %d stop\n", ch);
+#endif
 }
 
 
@@ -978,8 +1007,13 @@ static void stream_update(INT16 **streams, INT32 samples)
 		m_m6844_channel[ch].counter = m_m6844_channel[ch].start_counter - effective_offset / 8;
 		if (m_m6844_channel[ch].counter <= 0)
 		{
+#ifdef __LIBRETRO__
+			if (SOUND_LOG && m_debuglog_libretro)
+				filestream_printf(m_debuglog_libretro, "Channel %d finished\n", ch);
+#else
 			if (SOUND_LOG && m_debuglog)
 				fprintf(m_debuglog, "Channel %d finished\n", ch);
+#endif
 			m6844_finished(&m_m6844_channel[ch]);
 		}
 	}

@@ -642,18 +642,34 @@ static INT32 nvram_load_save(INT32 save)
 	_stprintf(szFilename, _T("%s%s.nvram"), szAppEEPROMPath, (color_mode) ? _T("ngpc") : _T("ngp"));
 
 	if (save) {
+#ifdef __LIBRETRO__
+		RFILE *rfp = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+		if (!rfp) return -1;
+
+		filestream_write(rfp, DrvMainRAM, 0x3000);
+		filestream_close(rfp);
+#else
 		FILE *fp = _tfopen(szFilename, _T("wb"));
 		if (!fp) return -1;
 
 		fwrite(DrvMainRAM, 1, 0x3000, fp);
 		fclose(fp);
+#endif
 		bprintf(0, _T("*   NeoGeo Pocket: nvram save OK!\n"));
 	} else {
+#ifdef __LIBRETRO__
+		RFILE *rfp = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+		if (!rfp) return -1;
+
+		filestream_read(rfp, DrvMainRAM, 0x3000);
+		filestream_close(rfp);
+#else
 		FILE *fp = _tfopen(szFilename, _T("rb"));
 		if (!fp) return -1;
 
 		fread(DrvMainRAM, 1, 0x3000, fp);
 		fclose(fp);
+#endif
 		bprintf(0, _T("*   NeoGeo Pocket: nvram load OK!\n"));
 	}
 

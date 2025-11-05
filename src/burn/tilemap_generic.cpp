@@ -1722,7 +1722,11 @@ void GenericTilemapDumpToBitmap()
 		char tmp[256];
 		sprintf (tmp, "%s_layer%2.2d_dump.bmp", BurnDrvGetTextA(DRV_NAME), i);
 
+#ifdef __LIBRETRO__
+		RFILE *rfa = filestream_open(tmp, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+#else
 		FILE *fa = fopen(tmp, "wb");
+#endif
 
 		INT32 wide = cur_map->mwidth * cur_map->twidth;
 		INT32 high = cur_map->mheight * cur_map->theight;
@@ -1732,7 +1736,11 @@ void GenericTilemapDumpToBitmap()
 		SET_BITMAP_WIDTH(wide);
 		SET_BITMAP_HEIGHT(high);
 
+#ifdef __LIBRETRO__
+		filestream_write (rfa, bmp_data, 54);
+#else
 		fwrite (bmp_data, 54, 1, fa);
+#endif
 
 		UINT32 *bitmap = (UINT32*)BurnMalloc(wide*high*4);
 
@@ -1777,9 +1785,17 @@ void GenericTilemapDumpToBitmap()
 			}
 		}
 
+#ifdef __LIBRETRO__
+		filestream_write (rfa, bitmap, wide*high*4);
+#else
 		fwrite (bitmap, wide*high*4, 1, fa);
+#endif
 
+#ifdef __LIBRETRO__
+		filestream_close (rfa);
+#else
 		fclose (fa);
+#endif
 		BurnFree (bitmap);
 	}
 

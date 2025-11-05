@@ -1782,15 +1782,27 @@ static INT32 DrvExit()
 #if 0
 		char name[128];
 		sprintf (name, "%s-flash0.bin", BurnDrvGetTextA(DRV_NAME));
+#ifdef __LIBRETRO__
+		RFILE *rfa = filestream_open(name, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+		filestream_write (rfa, DrvSndROM[0] + 0xa00000, 0x100000);
+		filestream_close (rfa);
+#else
 		FILE *fa = fopen(name, "wb");
 		fwrite (DrvSndROM[0] + 0xa00000, 0x100000, 1, fa);
 		fclose (fa);
+#endif
 
 		sprintf (name, "%s-flash1.bin", BurnDrvGetTextA(DRV_NAME));
 
+#ifdef __LIBRETRO__
+		rfa = filestream_open(name, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+		filestream_write (rfa, DrvSndROM[0] + 0xb00000, 0x100000);
+		filestream_close (rfa);
+#else
 		fa = fopen(name, "wb");
 		fwrite (DrvSndROM[0] + 0xb00000, 0x100000, 1, fa);
 		fclose (fa);
+#endif
 #endif
 		ZetExit();
 		BurnYMF271Exit();

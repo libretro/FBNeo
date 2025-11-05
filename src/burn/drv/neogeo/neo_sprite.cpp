@@ -254,14 +254,32 @@ static void NeoBlendInit(INT32 nSlot)
 
 	_stprintf(filename, _T("%s%s.bld"), szAppBlendPath, BurnDrvGetText(DRV_NAME));
 	
+#ifdef __LIBRETRO__
+	RFILE *rfa = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+#else
 	FILE *fa = _tfopen(filename, _T("rt"));
+#endif
 
-	if (fa == NULL) {
+#ifdef __LIBRETRO__
+	if (rfa == NULL)
+#else
+	if (fa == NULL)
+#endif
+	{
 		_stprintf(filename, _T("%s%s.bld"), szAppBlendPath, BurnDrvGetText(DRV_PARENT));
 
+#ifdef __LIBRETRO__
+		rfa = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+#else
 		fa = _tfopen(filename, _T("rt"));
+#endif
 
-		if (fa == NULL) {
+#ifdef __LIBRETRO__
+		if (rfa == NULL)
+#else
+		if (fa == NULL)
+#endif
+		{
 			return;
 		}
 	}
@@ -274,7 +292,11 @@ static void NeoBlendInit(INT32 nSlot)
 
 	while (1)
 	{
+#ifdef __LIBRETRO__
+		if (filestream_gets (rfa, szLine, 64) == NULL) break;
+#else
 		if (fgets (szLine, 64, fa) == NULL) break;
+#endif
 
 		if (strncmp ("Game", szLine, 4) == 0) continue; 	// don't care
 		if (strncmp ("Name", szLine, 4) == 0) continue; 	// don't care
@@ -301,7 +323,11 @@ static void NeoBlendInit(INT32 nSlot)
 		}
 	}
 
+#ifdef __LIBRETRO__
+	filestream_close (rfa);
+#else
 	fclose (fa);
+#endif
 }
 
 INT32 NeoInitSprites(INT32 nSlot)

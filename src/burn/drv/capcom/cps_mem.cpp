@@ -443,11 +443,19 @@ INT32 CpsMemInit()
 INT32 CpsMemExit()
 {
 #if 0
+#ifdef __LIBRETRO__
+	RFILE* rfp = filestream_open("mem.raw", RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	if (rfp) {
+		filestream_write(rfp, CpsRam660, 0x4000);
+		filestream_close(rfp);
+	}
+#else
 	FILE* fp = fopen("mem.raw", "wb");
 	if (fp) {
 		fwrite(CpsRam660, 1, 0x4000, fp);
 		fclose(fp);
 	}
+#endif
 #endif
 
 	// Deallocate all used memory

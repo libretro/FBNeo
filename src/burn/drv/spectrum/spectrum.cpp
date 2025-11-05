@@ -28,7 +28,11 @@ static INT32 SpecMode = 0;
 #define TAPE_TO_WAV 0 // outputs zxout.pcm (2ch/stereo/sound rate hz)
 #if TAPE_TO_WAV
 static INT32 tape_to_wav_startup_pause;
+#ifdef __LIBRETRO__
+static RFILE *tape_dump_rfp = NULL;
+#else
 static FILE *tape_dump_fp = NULL;
+#endif
 #endif
 
 UINT8 SpecInputKbd[0x10][0x05] = {
@@ -1292,12 +1296,21 @@ static void pulse_reset()
 		bprintf(0, _T("DUMPING TAPE TO zxout.pcm.\n"));
 		tape_to_wav_startup_pause = 20;
 
+#ifdef __LIBRETRO__
+		if (tape_dump_rfp) {
+			filestream_close(tape_dump_rfp);
+			tape_dump_rfp = NULL;
+		}
+		tape_dump_rfp = filestream_open("zxout.pcm", RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+		if (!tape_dump_rfp) bprintf(0, _T("Can't open zxout.pcm for writing!\n"));
+#else
 		if (tape_dump_fp) {
 			fclose(tape_dump_fp);
 			tape_dump_fp = NULL;
 		}
-		tape_dump_fp = fopen("zxout.pcm", "wb+");
+		tape_dump_fp = fopen("zxout.pcm", "wb");
 		if (!tape_dump_fp) bprintf(0, _T("Can't open zxout.pcm for writing!\n"));
+#endif
 #endif
 	}
 }
@@ -2157,8 +2170,13 @@ INT32 SpecExit()
 	if (SpecMode & SPEC_AY8910) AY8910Exit(0);
 
 #if TAPE_TO_WAV
+#ifdef __LIBRETRO__
+	filestream_close(tape_dump_rfp);
+	tape_dump_rfp = NULL;
+#else
 	fclose(tape_dump_fp);
 	tape_dump_fp = NULL;
+#endif
 #endif
 	BuzzerExit();
 
@@ -2350,7 +2368,11 @@ static void DumpTape()
 	INT16 *buf = (INT16*)BurnMalloc(nBurnSoundLen*2*2*2);
 	BuzzerRender(buf);
 	//	BurnDumpAppend("out.pcm", (UINT8*)buf, nBurnSoundLen*2*2); - kinda slow for this
+#ifdef __LIBRETRO__
+	filestream_write(tape_dump_rfp, (UINT8*)buf, nBurnSoundLen*2*2);
+#else
 	fwrite((UINT8*)buf, 1, nBurnSoundLen*2*2, tape_dump_fp);
+#endif
 	BurnFree(buf);
 	return;
 }

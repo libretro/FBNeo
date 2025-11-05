@@ -98,59 +98,67 @@ static void ReplaceGreaterThan(char *szBuffer, char *szGameName)
 			}																						\
 		}
 
+#ifdef __LIBRETRO__
+#define WRITE_DATFILE_FPRINTF(...) filestream_printf(rfDat, __VA_ARGS__)
+#define WRITE_DATFILE_FTPRINTF(...) filestream_printf(rfDat, __VA_ARGS__)
+INT32 write_datfile(INT32 bType, RFILE* rfDat)
+#else
+#define WRITE_DATFILE_FPRINTF(...) fprintf(fDat, __VA_ARGS__)
+#define WRITE_DATFILE_FTPRINTF(...) _ftprintf(fDat, __VA_ARGS__)
 INT32 write_datfile(INT32 bType, FILE* fDat)
+#endif
 {
 	INT32 nRet=0;
 	UINT32 nOldSelect=0;
 	UINT32 nGameSelect=0;
 	UINT32 nParentSelect,nBoardROMSelect,nParentBoardROMSelect;
 
-	fprintf(fDat, "<?xml version=\"1.0\"?>\n");
-	fprintf(fDat, "<!DOCTYPE datafile PUBLIC \"-//FinalBurn Neo//DTD ROM Management Datafile//EN\" \"http://www.logiqx.com/Dats/datafile.dtd\">\n\n");
-	fprintf(fDat, "<datafile>\n");
-	fprintf(fDat, "\t<header>\n");
-	if (bType == DAT_ARCADE_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Arcade Games</name>\n");
-	if (bType == DAT_MEGADRIVE_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Megadrive Games</name>\n");
-	if (bType == DAT_PCENGINE_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - PC-Engine Games</name>\n");
-	if (bType == DAT_TG16_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - TurboGrafx 16 Games</name>\n");
-	if (bType == DAT_SGX_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - SuprGrafx Games</name>\n");
-	if (bType == DAT_SG1000_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Sega SG-1000 Games</name>\n");
-	if (bType == DAT_COLECO_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - ColecoVision Games</name>\n");
-	if (bType == DAT_MASTERSYSTEM_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Master System Games</name>\n");
-	if (bType == DAT_GAMEGEAR_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Game Gear Games</name>\n");
-	if (bType == DAT_MSX_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - MSX 1 Games</name>\n");
-	if (bType == DAT_SPECTRUM_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - ZX Spectrum Games</name>\n");
-	if (bType == DAT_NEOGEO_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Neo Geo Games</name>\n");
-	if (bType == DAT_NES_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - NES Games</name>\n");
-	if (bType == DAT_FDS_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - FDS Games</name>\n");
-	if (bType == DAT_SNES_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - SNES Games</name>\n");
-	if (bType == DAT_NGP_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Neo Geo Pocket Games</name>\n");
-	if (bType == DAT_CHANNELF_ONLY) fprintf(fDat, "\t\t<name>" APP_TITLE " - Fairchild Channel F Games</name>\n");
+	WRITE_DATFILE_FPRINTF("<?xml version=\"1.0\"?>\n");
+	WRITE_DATFILE_FPRINTF("<!DOCTYPE datafile PUBLIC \"-//FinalBurn Neo//DTD ROM Management Datafile//EN\" \"http://www.logiqx.com/Dats/datafile.dtd\">\n\n");
+	WRITE_DATFILE_FPRINTF("<datafile>\n");
+	WRITE_DATFILE_FPRINTF("\t<header>\n");
+	if (bType == DAT_ARCADE_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Arcade Games</name>\n");
+	if (bType == DAT_MEGADRIVE_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Megadrive Games</name>\n");
+	if (bType == DAT_PCENGINE_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - PC-Engine Games</name>\n");
+	if (bType == DAT_TG16_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - TurboGrafx 16 Games</name>\n");
+	if (bType == DAT_SGX_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - SuprGrafx Games</name>\n");
+	if (bType == DAT_SG1000_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Sega SG-1000 Games</name>\n");
+	if (bType == DAT_COLECO_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - ColecoVision Games</name>\n");
+	if (bType == DAT_MASTERSYSTEM_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Master System Games</name>\n");
+	if (bType == DAT_GAMEGEAR_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Game Gear Games</name>\n");
+	if (bType == DAT_MSX_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - MSX 1 Games</name>\n");
+	if (bType == DAT_SPECTRUM_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - ZX Spectrum Games</name>\n");
+	if (bType == DAT_NEOGEO_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Neo Geo Games</name>\n");
+	if (bType == DAT_NES_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - NES Games</name>\n");
+	if (bType == DAT_FDS_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - FDS Games</name>\n");
+	if (bType == DAT_SNES_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - SNES Games</name>\n");
+	if (bType == DAT_NGP_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Neo Geo Pocket Games</name>\n");
+	if (bType == DAT_CHANNELF_ONLY) WRITE_DATFILE_FPRINTF("\t\t<name>" APP_TITLE " - Fairchild Channel F Games</name>\n");
 
-	if (bType == DAT_ARCADE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Arcade Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_MEGADRIVE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Megadrive Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_PCENGINE_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" PC-Engine Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_TG16_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" TurboGrafx 16 Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_SGX_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" SuprGrafx Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_SG1000_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Sega SG-1000 Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_COLECO_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" ColecoVision Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_MASTERSYSTEM_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Master System Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_GAMEGEAR_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Game Gear Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_MSX_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" MSX 1 Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_SPECTRUM_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" ZX Spectrum Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_NEOGEO_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Neo Geo Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_NES_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" NES Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_FDS_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" FDS Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_SNES_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" SNES Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_NGP_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Neo Geo Pocket Games</description>\n"), szAppBurnVer);
-	if (bType == DAT_CHANNELF_ONLY) _ftprintf(fDat, _T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Fairchild Channel F Games</description>\n"), szAppBurnVer);
-	fprintf(fDat, "\t\t<category>Standard DatFile</category>\n");
-	_ftprintf(fDat, _T("\t\t<version>%s</version>\n"), szAppBurnVer);
-	fprintf(fDat, "\t\t<author>" APP_TITLE "</author>\n");
-	fprintf(fDat, "\t\t<homepage>https://neo-source.com/</homepage>\n");
-	fprintf(fDat, "\t\t<url>https://neo-source.com/</url>\n");
-	fprintf(fDat, "\t\t<clrmamepro forcenodump=\"ignore\"/>\n");
-	fprintf(fDat, "\t</header>\n");
+	if (bType == DAT_ARCADE_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Arcade Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_MEGADRIVE_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Megadrive Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_PCENGINE_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" PC-Engine Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_TG16_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" TurboGrafx 16 Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_SGX_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" SuprGrafx Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_SG1000_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Sega SG-1000 Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_COLECO_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" ColecoVision Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_MASTERSYSTEM_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Master System Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_GAMEGEAR_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Game Gear Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_MSX_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" MSX 1 Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_SPECTRUM_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" ZX Spectrum Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_NEOGEO_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Neo Geo Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_NES_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" NES Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_FDS_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" FDS Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_SNES_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" SNES Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_NGP_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Neo Geo Pocket Games</description>\n"), szAppBurnVer);
+	if (bType == DAT_CHANNELF_ONLY) WRITE_DATFILE_FTPRINTF(_T("\t\t<description>") _T(APP_TITLE) _T(" v%s") _T(" Fairchild Channel F Games</description>\n"), szAppBurnVer);
+	WRITE_DATFILE_FPRINTF("\t\t<category>Standard DatFile</category>\n");
+	WRITE_DATFILE_FTPRINTF(_T("\t\t<version>%s</version>\n"), szAppBurnVer);
+	WRITE_DATFILE_FPRINTF("\t\t<author>" APP_TITLE "</author>\n");
+	WRITE_DATFILE_FPRINTF("\t\t<homepage>https://neo-source.com/</homepage>\n");
+	WRITE_DATFILE_FPRINTF("\t\t<url>https://neo-source.com/</url>\n");
+	WRITE_DATFILE_FPRINTF("\t\t<clrmamepro forcenodump=\"ignore\"/>\n");
+	WRITE_DATFILE_FPRINTF("\t</header>\n");
 
 	nOldSelect=nBurnDrvActive;										// preserve the currently selected driver
 
@@ -347,17 +355,17 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 
 		// Report problems
 		if (nParentSelect==-1U)
-			fprintf(fDat, "# Missing parent %s. It needs to be added to " APP_TITLE "!\n\n", spName);
+			WRITE_DATFILE_FPRINTF("# Missing parent %s. It needs to be added to " APP_TITLE "!\n\n", spName);
 		if (nBoardROMSelect==-1U)
-			fprintf(fDat, "# Missing boardROM %s. It needs to be added to " APP_TITLE "!\n\n", sbName);
+			WRITE_DATFILE_FPRINTF("# Missing boardROM %s. It needs to be added to " APP_TITLE "!\n\n", sbName);
 
 		// Write the header
 		if (nParentSelect!=nGameSelect && nParentSelect!=-1U)
 		{
 			if (!strcmp(ssName, "") || !strcmp(ssName, sgName)) {
-				fprintf(fDat, "\t<game name=\"%s\" cloneof=\"%s\" romof=\"%s\" sourcefile=\"%s\">\n", sgName, spName, spName, sfName);
+				WRITE_DATFILE_FPRINTF("\t<game name=\"%s\" cloneof=\"%s\" romof=\"%s\" sourcefile=\"%s\">\n", sgName, spName, spName, sfName);
 			} else {
-				fprintf(fDat, "\t<game name=\"%s\" cloneof=\"%s\" romof=\"%s\" sampleof=\"%s\" sourcefile=\"%s\">\n", sgName, spName, spName, ssName, sfName);
+				WRITE_DATFILE_FPRINTF("\t<game name=\"%s\" cloneof=\"%s\" romof=\"%s\" sampleof=\"%s\" sourcefile=\"%s\">\n", sgName, spName, spName, ssName, sfName);
 			}
 		}
 		else
@@ -365,12 +373,12 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 			// Add "romof" (but not 'cloneof') line for games that have boardROMs
 			if (nBoardROMSelect!=nGameSelect && nBoardROMSelect!=-1U)
 			{
-				fprintf(fDat, "\t<game name=\"%s\" romof=\"%s\" sourcefile=\"%s\">\n", sgName, sbName, sfName);
+				WRITE_DATFILE_FPRINTF("\t<game name=\"%s\" romof=\"%s\" sourcefile=\"%s\">\n", sgName, sbName, sfName);
 			} else {
 				if (!strcmp(ssName, "") || !strcmp(ssName, sgName)) {
-					fprintf(fDat, "\t<game name=\"%s\" sourcefile=\"%s\">\n", sgName, sfName);
+					WRITE_DATFILE_FPRINTF("\t<game name=\"%s\" sourcefile=\"%s\">\n", sgName, sfName);
 				} else {
-					fprintf(fDat, "\t<game name=\"%s\" sampleof=\"%s\" sourcefile=\"%s\">\n", sgName, ssName, sfName);
+					WRITE_DATFILE_FPRINTF("\t<game name=\"%s\" sampleof=\"%s\" sourcefile=\"%s\">\n", sgName, ssName, sfName);
 				}
 			}
 		}
@@ -423,11 +431,11 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 		ReplaceGreaterThan(szGameDecorationBuffer, szGameDecoration);
 
 		if (strlen(szGameDecoration) > 0) {
-			fprintf(fDat, "\t\t<comment>%s</comment>\n", szGameDecoration);
+			WRITE_DATFILE_FPRINTF("\t\t<comment>%s</comment>\n", szGameDecoration);
 		}
-		fprintf(fDat, "\t\t<description>%s</description>\n", szGameNameBuffer);
-		fprintf(fDat, "\t\t<year>%s</year>\n", BurnDrvGetTextA(DRV_DATE));
-		fprintf(fDat, "\t\t<manufacturer>%s</manufacturer>\n", szManufacturerBuffer);
+		WRITE_DATFILE_FPRINTF("\t\t<description>%s</description>\n", szGameNameBuffer);
+		WRITE_DATFILE_FPRINTF("\t\t<year>%s</year>\n", BurnDrvGetTextA(DRV_DATE));
+		WRITE_DATFILE_FPRINTF("\t\t<manufacturer>%s</manufacturer>\n", szManufacturerBuffer);
 
 		// Write the individual ROM info
 		for (nPass=0; nPass<2; nPass++)
@@ -559,12 +567,12 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 				// File info
 				if (nPass==1) {
 					if (ri.nType & BRF_NODUMP) {
-						fprintf(fDat, "\t\t<rom name=\"%s\" size=\"%d\" status=\"nodump\"/>\n", szPossibleNameBuffer, ri.nLen);
+						WRITE_DATFILE_FPRINTF("\t\t<rom name=\"%s\" size=\"%d\" status=\"nodump\"/>\n", szPossibleNameBuffer, ri.nLen);
 					} else {
 						if (nMerged) {
-							fprintf(fDat, "\t\t<rom name=\"%s\" merge=\"%s\" size=\"%d\" crc=\"%08x\"/>\n", szPossibleNameBuffer, szMergeNameBuffer, ri.nLen, ri.nCrc);
+							WRITE_DATFILE_FPRINTF("\t\t<rom name=\"%s\" merge=\"%s\" size=\"%d\" crc=\"%08x\"/>\n", szPossibleNameBuffer, szMergeNameBuffer, ri.nLen, ri.nCrc);
 						} else {
-							fprintf(fDat, "\t\t<rom name=\"%s\" size=\"%d\" crc=\"%08x\"/>\n", szPossibleNameBuffer, ri.nLen, ri.nCrc);
+							WRITE_DATFILE_FPRINTF("\t\t<rom name=\"%s\" size=\"%d\" crc=\"%08x\"/>\n", szPossibleNameBuffer, ri.nLen, ri.nCrc);
 						}
 					}
 				}
@@ -608,7 +616,7 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 						memset(szPossibleNameBuffer, 0, 255);
 						ReplaceGreaterThan(szPossibleNameBuffer, szPossibleNameBuffer2);
 
-						fprintf(fDat, "\t\t<sample name=\"%s\" />\n", szPossibleNameBuffer);
+						WRITE_DATFILE_FPRINTF("\t\t<sample name=\"%s\" />\n", szPossibleNameBuffer);
 					}
 				}
 			}
@@ -617,10 +625,10 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 		INT32 nGameWidth, nGameHeight, nGameAspectX, nGameAspectY;
 		BurnDrvGetVisibleSize(&nGameWidth, &nGameHeight);
 		BurnDrvGetAspect(&nGameAspectX, &nGameAspectY);
-		fprintf(fDat, "\t\t<video type=\"%s\" orientation=\"%s\" width=\"%d\" height=\"%d\" aspectx=\"%d\" aspecty=\"%d\"/>\n", (BurnDrvGetGenreFlags() & GBF_VECTOR ? "vector" : "raster"), (BurnDrvGetFlags() & BDF_ORIENTATION_VERTICAL ? "vertical" : "horizontal"), nGameWidth, nGameHeight, nGameAspectX, nGameAspectY);
-		fprintf(fDat, "\t\t<driver status=\"%s\"/>\n", (BurnDrvGetFlags() & BDF_GAME_WORKING ? "good" : "preliminary"));
+		WRITE_DATFILE_FPRINTF("\t\t<video type=\"%s\" orientation=\"%s\" width=\"%d\" height=\"%d\" aspectx=\"%d\" aspecty=\"%d\"/>\n", (BurnDrvGetGenreFlags() & GBF_VECTOR ? "vector" : "raster"), (BurnDrvGetFlags() & BDF_ORIENTATION_VERTICAL ? "vertical" : "horizontal"), nGameWidth, nGameHeight, nGameAspectX, nGameAspectY);
+		WRITE_DATFILE_FPRINTF("\t\t<driver status=\"%s\"/>\n", (BurnDrvGetFlags() & BDF_GAME_WORKING ? "good" : "preliminary"));
 
-		fprintf(fDat, "\t</game>\n");
+		WRITE_DATFILE_FPRINTF("\t</game>\n");
 	}
 
 	// Do another pass over each of the games to find boardROMs
@@ -742,16 +750,16 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 		remove_driver_leader(HARDWARE_SNK_NGP, 4, 0)
 		remove_driver_leader(HARDWARE_CHANNELF, 4, 0)
 
-		fprintf(fDat, "\t<game isbios=\"yes\" name=\"%s\" sourcefile=\"%s\">\n", sgName, sfName);
+		WRITE_DATFILE_FPRINTF("\t<game isbios=\"yes\" name=\"%s\" sourcefile=\"%s\">\n", sgName, sfName);
 		char szGameDecoration[255];
 		memset(szGameDecoration, 0, 255);
 		strcpy(szGameDecoration, GameDecoration(nBurnDrvActive));
 		if (strlen(szGameDecoration) > 0) {
-			fprintf(fDat, "\t\t<comment>%s</comment>\n", szGameDecoration);
+			WRITE_DATFILE_FPRINTF("\t\t<comment>%s</comment>\n", szGameDecoration);
 		}
-		fprintf(fDat, "\t\t<description>%s</description>\n", BurnDrvGetTextA(DRV_FULLNAME));
-		fprintf(fDat, "\t\t<year>%s</year>\n", BurnDrvGetTextA(DRV_DATE));
-		fprintf(fDat, "\t\t<manufacturer>%s</manufacturer>\n", BurnDrvGetTextA(DRV_MANUFACTURER));
+		WRITE_DATFILE_FPRINTF("\t\t<description>%s</description>\n", BurnDrvGetTextA(DRV_FULLNAME));
+		WRITE_DATFILE_FPRINTF("\t\t<year>%s</year>\n", BurnDrvGetTextA(DRV_DATE));
+		WRITE_DATFILE_FPRINTF("\t\t<manufacturer>%s</manufacturer>\n", BurnDrvGetTextA(DRV_MANUFACTURER));
 
 		for (nPass=0; nPass<2; nPass++)
 		{
@@ -788,36 +796,52 @@ INT32 write_datfile(INT32 bType, FILE* fDat)
 					ReplaceGreaterThan(szPossibleNameBuffer, szPossibleNameBuffer2);
 
 					if (ri.nType & BRF_NODUMP) {
-						fprintf(fDat, "\t\t<rom name=\"%s\" size=\"%d\" status=\"nodump\"/>\n", szPossibleNameBuffer, ri.nLen);
+						WRITE_DATFILE_FPRINTF("\t\t<rom name=\"%s\" size=\"%d\" status=\"nodump\"/>\n", szPossibleNameBuffer, ri.nLen);
 					} else {
-						fprintf(fDat, "\t\t<rom name=\"%s\" size=\"%d\" crc=\"%08x\"/>\n", szPossibleNameBuffer, ri.nLen, ri.nCrc);
+						WRITE_DATFILE_FPRINTF("\t\t<rom name=\"%s\" size=\"%d\" crc=\"%08x\"/>\n", szPossibleNameBuffer, ri.nLen, ri.nCrc);
 					}
 				}
 			}
 		}
 
-		fprintf(fDat, "\t</game>\n");
+		WRITE_DATFILE_FPRINTF("\t</game>\n");
 	}
 
 	// Restore current driver
 	nBurnDrvActive=nOldSelect;
 
-	fprintf(fDat, "</datafile>");
+	WRITE_DATFILE_FPRINTF("</datafile>");
 
 	return 0;
 }
 
 INT32 create_datfile(TCHAR* szFilename, INT32 bType)
 {
+#ifdef __LIBRETRO__
+	RFILE *rfDat=0;
+#else
 	FILE *fDat=0;
+#endif
 	INT32 nRet=0;
 
+#ifdef __LIBRETRO__
+	if ((rfDat = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE))==0)
+#else
 	if ((fDat = _tfopen(szFilename, _T("wt")))==0)
+#endif
 		return -1;
 
+#ifdef __LIBRETRO__
+	nRet =  write_datfile(bType, rfDat);
+#else
 	nRet =  write_datfile(bType, fDat);
+#endif
 
+#ifdef __LIBRETRO__
+	filestream_close(rfDat);
+#else
 	fclose(fDat);
+#endif
 
 	return nRet;
 }

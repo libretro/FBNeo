@@ -54,6 +54,7 @@
 #include "driver.h"
 
 #ifdef __LIBRETRO__
+ #include <streams/file_stream.h>
  #include <streams/file_stream_transforms.h>
 #endif
 
@@ -71,7 +72,11 @@ typedef struct
 {
 	long _7z_currfpos;
 	UINT64			_7z_length;
+#ifdef __LIBRETRO__
+	RFILE *			_7z_osdfile_libretro;					/* OSD file handle */
+#else
 	FILE *			_7z_osdfile;					/* OSD file handle */
+#endif
 
 } CSzFile;
 
