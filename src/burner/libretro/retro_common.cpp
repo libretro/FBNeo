@@ -907,17 +907,7 @@ void set_environment()
 {
 	std::vector<const retro_core_option_v2_definition*> vars_systems;
 	struct retro_core_option_v2_definition *option_defs_us;
-#ifdef _MSC_VER
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-	#ifndef FORCE_USE_VFS
-	#define FORCE_USE_VFS
-	#endif
-#endif
-#endif
-
-#ifdef FORCE_USE_VFS
 	struct retro_vfs_interface_info vfs_iface_info;
-#endif
 
 	// Add the Global core options
 	var_fbneo_allow_depth_32.desc                          = RETRO_DEPTH32_CAT_DESC;
@@ -1493,9 +1483,6 @@ error:
 		}
 	}
 
-	// Initialize VFS
-	// Only on UWP for now, since EEPROM saving is not VFS aware
-#ifdef FORCE_USE_VFS
 	vfs_iface_info.required_interface_version = FILESTREAM_REQUIRED_VFS_VERSION;
 	vfs_iface_info.iface                      = NULL;
 	if (environ_cb(RETRO_ENVIRONMENT_GET_VFS_INTERFACE, &vfs_iface_info))
@@ -1504,7 +1491,6 @@ error:
 		filestream_vfs_init(&vfs_iface_info);
 		path_vfs_init(&vfs_iface_info);
 	}
-#endif
 }
 
 TCHAR* AdaptiveEncodingReads(const TCHAR* pszFileName)
