@@ -202,7 +202,7 @@ const int nConfigMinVersion = 0x020921;
 INT32 CoreRomPathsLoad()
 {
 	TCHAR szConfig[MAX_PATH] = { 0 }, szLine[1024] = { 0 };
-	RFILE* h = NULL;
+	FILE* h = NULL;
 
 #ifdef _UNICODE
 	setlocale(LC_ALL, "");
@@ -213,16 +213,16 @@ INT32 CoreRomPathsLoad()
 
 	snprintf(szConfig, MAX_PATH - 1, "%srom_path.opt", szAppPathDefPath);
 
-	if (NULL == (h = filestream_open(szConfig, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE))) {
+	if (NULL == (h = fopen(szConfig, "rt"))) {
 		memset(szConfig, 0, MAX_PATH * sizeof(TCHAR));
 		snprintf(szConfig, MAX_PATH - 1, "%s%crom_path.opt", g_rom_dir, PATH_DEFAULT_SLASH_C());
 
-		if (NULL == (h = filestream_open(szConfig, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+		if (NULL == (h = fopen(szConfig, "rt")))
 			return 1;
 	}
 
 	// Go through each line of the config file
-	while (filestream_gets(h, szLine, 1024)) {
+	while (_fgetts(szLine, 1024, h)) {
 		int nLen = _tcslen(szLine);
 
 		// Get rid of the linefeed at the end
@@ -257,7 +257,7 @@ INT32 CoreRomPathsLoad()
 #undef STR
 	}
 
-	filestream_close(h);
+	fclose(h);
 	return 0;
 }
 
@@ -338,19 +338,15 @@ static INT32 __cdecl libretro_bprintf(INT32 nStatus, TCHAR* szFormat, ...)
 		// Let's send errors to a file
 		if (nStatus == PRINT_ERROR)
 		{
-			RFILE * error_file;
+			FILE * error_file;
 			char error_path[MAX_PATH];
 			char error_path_to_create[MAX_PATH];
 			snprintf_nowarn (error_path_to_create, sizeof(error_path_to_create), "%s%cfbneo%cerrors", g_save_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C());
 			path_mkdir(error_path_to_create);
 			snprintf_nowarn (error_path, sizeof(error_path), "%s%cfbneo%cerrors%c%s.txt", g_save_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), BurnDrvGetTextA(DRV_NAME));
-			error_file = filestream_open(error_path, RETRO_VFS_FILE_ACCESS_WRITE | RETRO_VFS_FILE_ACCESS_UPDATE_EXISTING, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-			if (error_file)
-			{
-				filestream_seek(error_file, 0, RETRO_VFS_SEEK_POSITION_END);
-				filestream_write(error_file, buf, strlen(buf));
-				filestream_close(error_file);
-			}
+			error_file = fopen(error_path, filestream_exists(error_path) ? "a" : "w");
+			fwrite(buf , strlen(buf), 1, error_file);
+			fclose(error_file);
 		}
 #endif
 
@@ -1772,12 +1768,12 @@ static int MemCardRead(TCHAR* szFilename, unsigned char* pData, int nSize)
 
 	bMemCardFC1Format = false;
 
-	RFILE* fp = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	FILE* fp = fopen(szFilename, _T("rb"));
 	if (fp == NULL) {
 		return 1;
 	}
 
-	filestream_read(fp, szReadHeader, 8);					// Read identifiers
+	fread(szReadHeader, 1, 8, fp);					// Read identifiers
 	if (memcmp(szReadHeader, szHeader, 8) == 0) {
 
 		// FB Alpha memory card file
@@ -1787,28 +1783,28 @@ static int MemCardRead(TCHAR* szFilename, unsigned char* pData, int nSize)
 
 		bMemCardFC1Format = true;
 
-		filestream_read(fp, &nChunkSize, 4);				// Read chunk size
+		fread(&nChunkSize, 1, 4, fp);				// Read chunk size
 		if (nSize < nChunkSize - 32) {
-			filestream_close(fp);
+			fclose(fp);
 			return 1;
 		}
 
-		filestream_read(fp, &nVersion, 4);					// Read version
+		fread(&nVersion, 1, 4, fp);					// Read version
 		if (nVersion < nMinVersion) {
-			filestream_close(fp);
+			fclose(fp);
 			return 1;
 		}
-		filestream_read(fp, &nVersion, 4);
+		fread(&nVersion, 1, 4, fp);
 #if 0
 		if (nVersion < nBurnVer) {
-			filestream_close(fp);
+			fclose(fp);
 			return 1;
 		}
 #endif
 
-		filestream_seek(fp, 0x0C, RETRO_VFS_SEEK_POSITION_CURRENT);					// Move file pointer to the start of the data block
+		fseek(fp, 0x0C, SEEK_CUR);					// Move file pointer to the start of the data block
 
-		filestream_read(fp, pData, nChunkSize - 32);		// Read the data
+		fread(pData, 1, nChunkSize - 32, fp);		// Read the data
 	} else {
 
 		// MAME or old FB Alpha memory card file
@@ -1816,10 +1812,10 @@ static int MemCardRead(TCHAR* szFilename, unsigned char* pData, int nSize)
 		unsigned char* pTemp = (unsigned char*)malloc(nSize >> 1);
 
 		memset(pData, 0, nSize);
-		filestream_rewind(fp);
+		fseek(fp, 0x00, SEEK_SET);
 
 		if (pTemp) {
-			filestream_read(fp, pTemp, nSize >> 1);
+			fread(pTemp, 1, nSize >> 1, fp);
 
 			for (int i = 1; i < nSize; i += 2) {
 				pData[i] = pTemp[i >> 1];
@@ -1830,14 +1826,14 @@ static int MemCardRead(TCHAR* szFilename, unsigned char* pData, int nSize)
 		}
 	}
 
-	filestream_close(fp);
+	fclose(fp);
 
 	return 0;
 }
 
 static int MemCardWrite(TCHAR* szFilename, unsigned char* pData, int nSize)
 {
-	RFILE* fp = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	FILE* fp = _tfopen(szFilename, _T("wb"));
 	if (fp == NULL) {
 		return 1;
 	}
@@ -1852,19 +1848,19 @@ static int MemCardWrite(TCHAR* szFilename, unsigned char* pData, int nSize)
 
 		int nChunkSize = nSize + 32;
 
-		filestream_write(fp, szFileHeader, 4);
-		filestream_write(fp, szChunkHeader, 4);
+		fwrite(szFileHeader, 1, 4, fp);
+		fwrite(szChunkHeader, 1, 4, fp);
 
-		filestream_write(fp, &nChunkSize, 4);					// Chunk size
+		fwrite(&nChunkSize, 1, 4, fp);					// Chunk size
 
-		filestream_write(fp, &nBurnVer, 4);					// Version of FBA this was saved from
-		filestream_write(fp, &nMinVersion, 4);					// Min version of FBA data will work with
+		fwrite(&nBurnVer, 1, 4, fp);					// Version of FBA this was saved from
+		fwrite(&nMinVersion, 1, 4, fp);					// Min version of FBA data will work with
 
-		filestream_write(fp, &nZero, 4);						// Reserved
-		filestream_write(fp, &nZero, 4);						//
-		filestream_write(fp, &nZero, 4);						//
+		fwrite(&nZero, 1, 4, fp);						// Reserved
+		fwrite(&nZero, 1, 4, fp);						//
+		fwrite(&nZero, 1, 4, fp);						//
 
-		filestream_write(fp, pData, nSize);
+		fwrite(pData, 1, nSize, fp);
 	} else {
 
 		// MAME or old FB Alpha memory card file
@@ -1875,14 +1871,14 @@ static int MemCardWrite(TCHAR* szFilename, unsigned char* pData, int nSize)
 				pTemp[i >> 1] = pData[i];
 			}
 
-			filestream_write(fp, pTemp, nSize >> 1);
+			fwrite(pTemp, 1, nSize >> 1, fp);
 
 			free(pTemp);
 			pTemp = NULL;
 		}
 	}
 
-	filestream_close(fp);
+	fclose(fp);
 
 	return 0;
 }
@@ -2648,32 +2644,32 @@ INT32 BurnStateLoadEmbed(FILE* fp, INT32 nOffset, INT32 bAll, INT32 (*pLoadGame)
 	INT32 nRet = 0;
 
 	if (nOffset >= 0) {
-		filestream_seek(fp, nOffset, RETRO_VFS_SEEK_POSITION_START);
+		fseek(fp, nOffset, SEEK_SET);
 	} else {
 		if (nOffset == -2) {
-			filestream_seek(fp, 0, RETRO_VFS_SEEK_POSITION_END);
+			fseek(fp, 0, SEEK_END);
 		} else {
-			filestream_seek(fp, 0, RETRO_VFS_SEEK_POSITION_CURRENT);
+			fseek(fp, 0, SEEK_CUR);
 		}
 	}
 
 	memset(ReadHeader, 0, 4);
-	filestream_read(fp, ReadHeader, 4);                  // Read identifier
+	fread(ReadHeader, 1, 4, fp);                  // Read identifier
 	if (memcmp(ReadHeader, szHeader, 4)) {            // Not the right file type
 		return -2;
 	}
 
-	filestream_read(fp, &nChunkSize, 4);
+	fread(&nChunkSize, 1, 4, fp);
 	if (nChunkSize <= 0x40) {                     // Not big enough
 		return -1;
 	}
 
-	INT32 nChunkData = filestream_tell(fp);
+	INT32 nChunkData = ftell(fp);
 
-	filestream_read(fp, &nFileVer, 4);                     // Version of FB that this file was saved from
+	fread(&nFileVer, 1, 4, fp);                     // Version of FB that this file was saved from
 
-	filestream_read(fp, &t1, 4);                        // Min version of FB that NV  data will work with
-	filestream_read(fp, &t2, 4);                        // Min version of FB that All data will work with
+	fread(&t1, 1, 4, fp);                        // Min version of FB that NV  data will work with
+	fread(&t2, 1, 4, fp);                        // Min version of FB that All data will work with
 
 	if (bAll) {                                 // Get the min version number which applies to us
 		nFileMin = t2;
@@ -2681,10 +2677,10 @@ INT32 BurnStateLoadEmbed(FILE* fp, INT32 nOffset, INT32 bAll, INT32 (*pLoadGame)
 		nFileMin = t1;
 	}
 
-	filestream_read(fp, &nDefLen, 4);                     // Get the size of the compressed data block
+	fread(&nDefLen, 1, 4, fp);                     // Get the size of the compressed data block
 
 	memset(szForName, 0, sizeof(szForName));
-	filestream_read(fp, szForName, 32);
+	fread(szForName, 1, 32, fp);
 
 	if (nBurnVer < nFileMin) {                     // Error - emulator is too old to load this state
 		return -5;
@@ -2735,16 +2731,16 @@ INT32 BurnStateLoadEmbed(FILE* fp, INT32 nOffset, INT32 bAll, INT32 (*pLoadGame)
 		return -4;
 	}
 
-	filestream_seek(fp, nChunkData + 0x30, RETRO_VFS_SEEK_POSITION_START);            // Read current frame
-	filestream_read(fp, &nCurrentFrame, 4);               //
+	fseek(fp, nChunkData + 0x30, SEEK_SET);            // Read current frame
+	fread(&nCurrentFrame, 1, 4, fp);               //
 
-	filestream_seek(fp, 0x0C, RETRO_VFS_SEEK_POSITION_CURRENT);                     // Move file pointer to the start of the compressed block
+	fseek(fp, 0x0C, SEEK_CUR);                     // Move file pointer to the start of the compressed block
 	Def = (UINT8*)malloc(nDefLen);
 	if (Def == NULL) {
 		return -1;
 	}
 	memset(Def, 0, nDefLen);
-	filestream_read(fp, Def, nDefLen);                     // Read in deflated block
+	fread(Def, 1, nDefLen, fp);                     // Read in deflated block
 
 	nRet = BurnStateDecompress(Def, nDefLen, bAll);      // Decompress block into driver
 	if (Def) {
@@ -2752,7 +2748,7 @@ INT32 BurnStateLoadEmbed(FILE* fp, INT32 nOffset, INT32 bAll, INT32 (*pLoadGame)
 		Def = NULL;
 	}
 
-	filestream_seek(fp, nChunkData + nChunkSize, RETRO_VFS_SEEK_POSITION_START);
+	fseek(fp, nChunkData + nChunkSize, SEEK_SET);
 
 	if (nRet) {
 		return -1;
@@ -2768,16 +2764,16 @@ INT32 BurnStateLoad(TCHAR* szName, INT32 bAll, INT32 (*pLoadGame)())
 	char szReadHeader[4] = "";
 	INT32 nRet = 0;
 
-	RFILE* fp = filestream_open(szName, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	FILE* fp = _tfopen(szName, _T("rb"));
 	if (fp == NULL) {
 		return 1;
 	}
 
-	filestream_read(fp, szReadHeader, 4);                  // Read identifier
+	fread(szReadHeader, 1, 4, fp);                  // Read identifier
 	if (memcmp(szReadHeader, szHeader, 4) == 0) {      // Check filetype
 		nRet = BurnStateLoadEmbed(fp, -1, bAll, pLoadGame);
 	}
-	filestream_close(fp);
+	fclose(fp);
 
 	if (nRet < 0) {
 		return -nRet;
@@ -2817,41 +2813,41 @@ INT32 BurnStateSaveEmbed(FILE* fp, INT32 nOffset, INT32 bAll)
 	}
 
 	if (nOffset >= 0) {
-		filestream_seek(fp, nOffset, RETRO_VFS_SEEK_POSITION_START);
+		fseek(fp, nOffset, SEEK_SET);
 	} else {
 		if (nOffset == -2) {
-			filestream_seek(fp, 0, RETRO_VFS_SEEK_POSITION_END);
+			fseek(fp, 0, SEEK_END);
 		} else {
-			filestream_seek(fp, 0, RETRO_VFS_SEEK_POSITION_CURRENT);
+			fseek(fp, 0, SEEK_CUR);
 		}
 	}
 
-	filestream_write(fp, szHeader, 4);                     // Chunk identifier
-	INT32 nSizeOffset = filestream_tell(fp);                  // Reserve space to write the size of this chunk
-	filestream_write(fp, &nZero, 4);                     //
+	fwrite(szHeader, 1, 4, fp);                     // Chunk identifier
+	INT32 nSizeOffset = ftell(fp);                  // Reserve space to write the size of this chunk
+	fwrite(&nZero, 1, 4, fp);                     //
 
-	filestream_write(fp, &nBurnVer, 4);                  // Version of FB this was saved from
-	filestream_write(fp, &nNvMin, 4);                     // Min version of FB NV  data will work with
-	filestream_write(fp, &nAMin, 4);                     // Min version of FB All data will work with
+	fwrite(&nBurnVer, 1, 4, fp);                  // Version of FB this was saved from
+	fwrite(&nNvMin, 1, 4, fp);                     // Min version of FB NV  data will work with
+	fwrite(&nAMin, 1, 4, fp);                     // Min version of FB All data will work with
 
-	filestream_write(fp, &nZero, 4);                     // Reserve space to write the compressed data size
+	fwrite(&nZero, 1, 4, fp);                     // Reserve space to write the compressed data size
 
 	memset(szGame, 0, sizeof(szGame));               // Game name
 	sprintf(szGame, "%.32s", BurnDrvGetTextA(DRV_NAME));         //
-	filestream_write(fp, szGame, 32);                     //
+	fwrite(szGame, 1, 32, fp);                     //
 
-	filestream_write(fp, &nCurrentFrame, 4);               // Current frame
+	fwrite(&nCurrentFrame, 1, 4, fp);               // Current frame
 
-	filestream_write(fp, &nZero, 4);                     // Reserved
-	filestream_write(fp, &nZero, 4);                     //
-	filestream_write(fp, &nZero, 4);                     //
+	fwrite(&nZero, 1, 4, fp);                     // Reserved
+	fwrite(&nZero, 1, 4, fp);                     //
+	fwrite(&nZero, 1, 4, fp);                     //
 
 	nRet = BurnStateCompress(&Def, &nDefLen, bAll);      // Compress block from driver and return deflated buffer
 	if (Def == NULL) {
 		return -1;
 	}
 
-	nRet = filestream_write(fp, Def, nDefLen);               // Write block to disk
+	nRet = fwrite(Def, 1, nDefLen, fp);               // Write block to disk
 	if (Def) {
 		free(Def);                                 // free deflated block and close file
 		Def = NULL;
@@ -2862,18 +2858,18 @@ INT32 BurnStateSaveEmbed(FILE* fp, INT32 nOffset, INT32 bAll)
 	}
 
 	if (nDefLen & 3) {                           // Chunk size must be a multiple of 4
-		filestream_write(fp, &nZero, 4 - (nDefLen & 3));      // Pad chunk if needed
+		fwrite(&nZero, 1, 4 - (nDefLen & 3), fp);      // Pad chunk if needed
 	}
 
-	filestream_seek(fp, nSizeOffset + 0x10, RETRO_VFS_SEEK_POSITION_START);         // Write size of the compressed data
-	filestream_write(fp, &nDefLen, 4);                     //
+	fseek(fp, nSizeOffset + 0x10, SEEK_SET);         // Write size of the compressed data
+	fwrite(&nDefLen, 1, 4, fp);                     //
 
 	nDefLen = (nDefLen + 0x43) & ~3;               // Add for header size and align
 
-	filestream_seek(fp, nSizeOffset, RETRO_VFS_SEEK_POSITION_START);               // Write size of the chunk
-	filestream_write(fp, &nDefLen, 4);                     //
+	fseek(fp, nSizeOffset, SEEK_SET);               // Write size of the chunk
+	fwrite(&nDefLen, 1, 4, fp);                     //
 
-	filestream_seek (fp, 0, RETRO_VFS_SEEK_POSITION_END);                     // Set file pointer to the end of the chunk
+	fseek (fp, 0, SEEK_END);                     // Set file pointer to the end of the chunk
 
 	return nDefLen;
 }
@@ -2894,14 +2890,14 @@ INT32 BurnStateSave(TCHAR* szName, INT32 bAll)
 		return 1;                              // Return an error code so we know no savestate was created
 	}
 
-	RFILE* fp = filestream_open(szName, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	FILE* fp = fopen(szName, _T("wb"));
 	if (fp == NULL) {
 		return 1;
 	}
 
-	filestream_write(fp, &szHeader, 4);
+	fwrite(&szHeader, 1, 4, fp);
 	nRet = BurnStateSaveEmbed(fp, -1, bAll);
-	filestream_close(fp);
+	fclose(fp);
 
 	if (nRet < 0) {
 		return 1;

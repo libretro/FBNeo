@@ -528,20 +528,6 @@ static void pgm_dump_sprite(INT32 wide, INT32 high, INT32 palt, INT32 boffset, I
 
 	char output[256];
 	sprintf (output, "blendbmp/%8.8x_%dx%d.bmp", boffset_initial,wide,high);
-#ifdef __LIBRETRO__
-	RFILE *rfa;
-	rfa = filestream_open(output, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (rfa) {
-		filestream_close (rfa);
-		return;
-	}
-	rfa = filestream_open(output, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	filestream_write (rfa,bmp_data,0x36);
-	for (INT32 y = high-1; y >= 0; y--) { // bitmap format is flipped
-		filestream_write (rfa,pTempDraw32 + 1024 * y,wide*4);
-	}
-	filestream_close (rfa);
-#else
 	FILE *fa;
 	fa = fopen(output, "rb");
 	if (fa) {
@@ -554,7 +540,6 @@ static void pgm_dump_sprite(INT32 wide, INT32 high, INT32 palt, INT32 boffset, I
 		fwrite (pTempDraw32 + 1024 * y,wide*4,1,fa);
 	}
 	fclose (fa);
-#endif
 }
 #endif
 
@@ -1152,33 +1137,15 @@ static void pgmBlendInit()
 
 	_stprintf(filename, _T("%s%s.bld"), szAppBlendPath, BurnDrvGetText(DRV_NAME));
 	
-#ifdef __LIBRETRO__
-	RFILE *rfa = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 	FILE *fa = _tfopen(filename, _T("rt"));
-#endif
 
-#ifdef __LIBRETRO__
-	if (rfa == NULL)
-#else
-	if (fa == NULL)
-#endif
-	{
+	if (fa == NULL) {
 		bprintf (0, _T("can't find: %s\n"), filename);
 		_stprintf(filename, _T("%s%s.bld"), szAppBlendPath, BurnDrvGetText(DRV_PARENT));
 
-#ifdef __LIBRETRO__
-		rfa = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 		fa = _tfopen(filename, _T("rt"));
-#endif
 
-#ifdef __LIBRETRO__
-		if (rfa == NULL)
-#else
-		if (fa == NULL)
-#endif
-		{
+		if (fa == NULL) {
 			bprintf (0, _T("can't find: %s\n"), filename);
 			return;
 		}
@@ -1198,11 +1165,7 @@ static void pgmBlendInit()
 
 	while (1)
 	{
-#ifdef __LIBRETRO__
-		if (filestream_gets (rfa, szLine, 64) == NULL) break;
-#else
 		if (fgets (szLine, 64, fa) == NULL) break;
-#endif
 
 		if (strncmp ("Game", szLine, 4) == 0) continue; 	// don't care
 		if (strncmp ("Name", szLine, 4) == 0) continue; 	// don't care
@@ -1228,11 +1191,7 @@ static void pgmBlendInit()
 		}
 	}
 
-#ifdef __LIBRETRO__
-	filestream_close (rfa);
-#else
 	fclose (fa);
-#endif
 
 	enable_blending = 1;
 }

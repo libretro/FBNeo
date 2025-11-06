@@ -160,22 +160,13 @@ static INT32 CheckHiscoreAllowed()
 	return Allowed;
 }
 
-#ifdef __LIBRETRO__
-void HiscoreSearch_internal(RFILE *rfp, const char *name)
-#else
 void HiscoreSearch_internal(FILE *fp, const char *name)
-#endif
 {
 	char buffer[MAX_CONFIG_LINE_SIZE];
 	enum { FIND_NAME, FIND_DATA, FETCH_DATA } mode;
 	mode = FIND_NAME;
 
-#ifdef __LIBRETRO__
-	while (filestream_gets(rfp, buffer, MAX_CONFIG_LINE_SIZE))
-#else
-	while (fgets(buffer, MAX_CONFIG_LINE_SIZE, fp))
-#endif
-	{
+	while (fgets(buffer, MAX_CONFIG_LINE_SIZE, fp)) {
 		if (mode == FIND_NAME) {
 			if (matching_game_name(buffer, name)) {
 				mode = FIND_DATA;
@@ -388,11 +379,7 @@ static game_replace_entry replace_table[] = {
 	{ "\0", 			"\0"			}
 };
 
-#ifdef __LIBRETRO__
-void HiscoreSearch(RFILE *rfp, const char *name)
-#else
 void HiscoreSearch(FILE *fp, const char *name)
-#endif
 {
 	const char *game = name; // default to passed name
 
@@ -404,11 +391,7 @@ void HiscoreSearch(FILE *fp, const char *name)
 		}
 	}
 
-#ifdef __LIBRETRO__
-	HiscoreSearch_internal(rfp, game);
-#else
 	HiscoreSearch_internal(fp, game);
-#endif
 }
 
 void HiscoreInit()
@@ -422,39 +405,20 @@ void HiscoreInit()
 	TCHAR szDatFilename[MAX_PATH];
 	_stprintf(szDatFilename, _T("%shiscore.dat"), szAppHiscorePath);
 
-#ifdef __LIBRETRO__
-	RFILE *rfp = filestream_open(szDatFilename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (rfp)
-#else
 	FILE *fp = _tfopen(szDatFilename, _T("r"));
-	if (fp)
-#endif
-	{
-#ifdef __LIBRETRO__
-		HiscoreSearch(rfp, BurnDrvGetTextA(DRV_NAME));
-#else
+	if (fp) {
 		HiscoreSearch(fp, BurnDrvGetTextA(DRV_NAME));
-#endif
 		if (nHiscoreNumRanges) HiscoresInUse = 1;
 
 		// no hiscore entry for this game in hiscore.dat, and the game is a clone (probably a hack)
 		// let's try using parent entry as a fallback, the success rate seems reasonably good
 		if ((BurnDrvGetFlags() & BDF_CLONE) && BurnDrvGetTextA(DRV_PARENT) && HiscoresInUse == 0) {
-#ifdef __LIBRETRO__
-			filestream_rewind(rfp);
-			HiscoreSearch(rfp, BurnDrvGetTextA(DRV_PARENT));
-#else
 			fseek(fp, 0, SEEK_SET);
 			HiscoreSearch(fp, BurnDrvGetTextA(DRV_PARENT));
-#endif
 			if (nHiscoreNumRanges) HiscoresInUse = 1;
 		}
 
-#ifdef __LIBRETRO__
-		filestream_close(rfp);
-#else
 		fclose(fp);
-#endif
 	}
 
 	TCHAR szFilename[MAX_PATH];
@@ -464,44 +428,20 @@ void HiscoreInit()
 	_stprintf(szFilename, _T("%s%s.hi"), szAppEEPROMPath, BurnDrvGetText(DRV_NAME));
 #endif
 
-#ifdef __LIBRETRO__
-	rfp = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 	fp = _tfopen(szFilename, _T("rb"));
-#endif
 	INT32 Offset = 0;
-#ifdef __LIBRETRO__
-	if (rfp)
-#else
-	if (fp)
-#endif
-	{
+	if (fp) {
 		UINT32 nSize = 0;
 		
-#ifdef __LIBRETRO__
-		while (!filestream_eof(rfp)) {
-			filestream_getc(rfp);
-			nSize++;
-		}
-#else
 		while (!feof(fp)) {
 			fgetc(fp);
 			nSize++;
 		}
-#endif
 		
 		UINT8 *Buffer = (UINT8*)BurnMalloc(nSize);
-#ifdef __LIBRETRO__
-		filestream_rewind(rfp);
-#else
 		fseek(fp, 0, SEEK_SET);
-#endif
 
-#ifdef __LIBRETRO__
-		filestream_read(rfp, (char *)Buffer, nSize);
-#else
 		fread((char *)Buffer, 1, nSize, fp);
-#endif
 
 		for (UINT32 i = 0; i < nHiscoreNumRanges; i++) {
 			for (UINT32 j = 0; j < HiscoreMemRange[i].NumBytes; j++) {
@@ -518,11 +458,7 @@ void HiscoreInit()
 		
 		BurnFree(Buffer);
 
-#ifdef __LIBRETRO__
-		filestream_close(rfp);
-#else
 		fclose(fp);
-#endif
 	}
 
 	WriteCheck1 = 0;
@@ -733,14 +669,8 @@ void HiscoreExit()
 		_stprintf(szFilename, _T("%s%s.hi"), szAppEEPROMPath, BurnDrvGetText(DRV_NAME));
 #endif
 
-#ifdef __LIBRETRO__
-		RFILE *rfp = filestream_open(szFilename, RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-		if (rfp)
-#else
 		FILE *fp = _tfopen(szFilename, _T("wb"));
-		if (fp)
-#endif
-		{
+		if (fp) {
 			for (UINT32 i = 0; i < nHiscoreNumRanges; i++) {
 				UINT8 *Buffer = (UINT8*)BurnMalloc(HiscoreMemRange[i].NumBytes + 10);
 				memset(Buffer, 0, HiscoreMemRange[i].NumBytes + 10);
@@ -751,19 +681,11 @@ void HiscoreExit()
 				}
 				cheat_subptr->close();
 
-#ifdef __LIBRETRO__
-				filestream_write(rfp, Buffer, HiscoreMemRange[i].NumBytes);
-#else
 				fwrite(Buffer, 1, HiscoreMemRange[i].NumBytes, fp);
-#endif
 
 				BurnFree(Buffer);
 			}
-#ifdef __LIBRETRO__
-			filestream_close(rfp);
-#else
 			fclose(fp);
-#endif
 		}
 	} else {
 #if 1 && defined FBNEO_DEBUG

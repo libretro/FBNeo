@@ -26,7 +26,7 @@ static TCHAR CoreRomDataPaths[DIRS_MAX][MAX_PATH];
 INT32 CoreRomDataPathsLoad()
 {
 	TCHAR szConfig[MAX_PATH] = { 0 }, szLine[1024] = { 0 };
-	RFILE* h = NULL;
+	FILE* h = NULL;
 
 #ifdef _UNICODE
 	setlocale(LC_ALL, "");
@@ -45,7 +45,7 @@ INT32 CoreRomDataPathsLoad()
 		szAppPathDefPath
 	);															// g_system_dir/fbneo/path/romdata_path.opt
 
-	if (NULL == (h = filestream_open(szConfig, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+	if (NULL == (h = _tfopen(szConfig, _T("rt"))))
 	{
 		memset(szConfig, 0, MAX_PATH * sizeof(TCHAR));
 		snprintf(
@@ -53,12 +53,12 @@ INT32 CoreRomDataPathsLoad()
 			g_rom_dir, PATH_DEFAULT_SLASH_C()
 		);														// g_rom_dir/romdata_path.opt
 
-		if (NULL == (h = filestream_open(szConfig, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+		if (NULL == (h = fopen(szConfig, "rt")))
 			return 1;											// Only CoreRomDataPaths[0]
 	}
 
 	// Go through each line of the config file
-	while (filestream_gets(h, szLine, 1024)) {
+	while (_fgetts(szLine, 1024, h)) {
 		int nLen = _tcslen(szLine);
 
 		// Get rid of the linefeed at the end
@@ -93,7 +93,7 @@ INT32 CoreRomDataPathsLoad()
 #undef STR
 	}
 
-	filestream_close(h);
+	fclose(h);
 	return 0;													// There may be more
 }
 
@@ -132,23 +132,25 @@ static INT32 IsUTF8Text(const void* pBuffer, long size)
 
 static INT32 IsDatUTF8BOM()
 {
-	RFILE* fp = filestream_open(szRomdataName, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	FILE* fp = _tfopen(szRomdataName, _T("rb"));
 	if (NULL == fp) return -1;
 
 	// get dat size
-	INT32 nDatSize = filestream_get_size(fp);
+	fseek(fp, 0, SEEK_END);
+	INT32 nDatSize = ftell(fp);
+	fseek(fp, 0, SEEK_SET);
 
 	INT32 nRet = 0;
 	char* pszTest = (char*)malloc(nDatSize + 1);
 
 	if (NULL != pszTest) {
 		memset(pszTest, 0, nDatSize + 1);
-		filestream_read(fp, pszTest, nDatSize);
+		fread(pszTest, nDatSize, 1, fp);
 		nRet = IsUTF8Text(pszTest, nDatSize);
 		free(pszTest);
 		pszTest = NULL;
 	}
-	filestream_close(fp);
+	fclose(fp);
 
 	return nRet;
 }
@@ -165,7 +167,8 @@ static INT32 LoadRomdata()
 	INT32 nType = IsDatUTF8BOM();
 	if (-1 == nType) return RDI.nDescCount;
 
-	RFILE* fp = filestream_open(szRomdataName, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	const TCHAR* szReadMode = (3 == nType) ? _T("rt, ccs=UTF-8") : _T("rt");
+	FILE* fp = _tfopen(szRomdataName, szReadMode);
 	if (NULL == fp) return RDI.nDescCount;
 
 	TCHAR szBuf[MAX_PATH] = { 0 }, * pszBuf = NULL, * pszLabel = NULL, * pszInfo = NULL;
@@ -173,8 +176,8 @@ static INT32 LoadRomdata()
 	memset(RDI.szExtraRom, 0, sizeof(RDI.szExtraRom));
 	memset(szFullName,     0, sizeof(szFullName));
 
-	while (!filestream_eof(fp)) {
-		if (filestream_gets(fp, szBuf, MAX_PATH) != NULL) {
+	while (!feof(fp)) {
+		if (_fgetts(szBuf, MAX_PATH, fp) != NULL) {
 			pszBuf   = szBuf;
 			pszLabel = _strqtoken(pszBuf, DELIM_TOKENS_NAME);
 
@@ -411,7 +414,7 @@ static INT32 LoadRomdata()
 			}
 		}
 	}
-	filestream_close(fp);
+	fclose(fp);
 
 	return RDI.nDescCount;
 }
@@ -421,15 +424,17 @@ char* RomdataGetDrvName()
 	INT32 nType = IsDatUTF8BOM();
 	if (-1 == nType) return NULL;
 
-	RFILE* fp = filestream_open(szRomdataName, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+	const TCHAR* szReadMode = (3 == nType) ? _T("rt, ccs=UTF-8") : _T("rt");
+
+	FILE* fp = _tfopen(szRomdataName, szReadMode);
 	if (NULL == fp) return NULL;
 
 	memset(szRomset, 0, MAX_PATH * sizeof(TCHAR));
 
 	TCHAR szBuf[MAX_PATH] = { 0 }, * pszBuf = NULL, * pszLabel = NULL, * pszInfo = NULL;
 
-	while (!filestream_eof(fp)) {
-		if (filestream_gets(fp, szBuf, MAX_PATH) != NULL) {
+	while (!feof(fp)) {
+		if (_fgetts(szBuf, MAX_PATH, fp) != NULL) {
 			pszBuf = szBuf;
 
 			pszLabel = _strqtoken(pszBuf, DELIM_TOKENS_NAME);
@@ -440,14 +445,14 @@ char* RomdataGetDrvName()
 				pszInfo = _strqtoken(NULL, DELIM_TOKENS_NAME);
 				if (NULL == pszInfo) break;	// No driver specified
 
-				filestream_close(fp);
+				fclose(fp);
 				_tcscpy(szRomset, TCHARToANSI(pszInfo, NULL, 0));
 
 				return szRomset;
 			}
 		}
 	}
-	filestream_close(fp);
+	fclose(fp);
 
 	return NULL;
 }
@@ -479,7 +484,7 @@ INT32 create_variables_from_romdatas()
 		struct RDIR* entry = retro_opendir_include_hidden(szFilePathSearch, true);
 		if (!entry || retro_dirent_error(entry)) continue;
 
-		RFILE* fp = NULL;
+		FILE* fp = NULL;
 
 		while (retro_readdir(entry))
 		{
@@ -495,27 +500,30 @@ INT32 create_variables_from_romdatas()
 			memset(szFilePathSearch, 0, MAX_PATH * sizeof(TCHAR));
 			snprintf(szFilePathSearch, MAX_PATH - 1, "%s%s", szDatPaths, name);
 
-			fp = filestream_open(szFilePathSearch, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
+			fp = fopen(szFilePathSearch, "rb");
 			if (NULL == fp) continue;
 
 			// get dat size
-			INT32 nDatSize = filestream_get_size(fp);
+			fseek(fp, 0, SEEK_END);
+			INT32 nDatSize = ftell(fp);
+			fseek(fp, 0, SEEK_SET);
 
 			char* pszTest = (char*)malloc(nDatSize + 1);
 			if (NULL == pszTest)
 			{
-				filestream_close(fp);
+				fclose(fp);
 				continue;
 			}
 
 			memset(pszTest, 0, nDatSize + 1);
-			filestream_read(fp, pszTest, nDatSize);
+			fread(pszTest, nDatSize, 1, fp);
 			INT32 nType = IsUTF8Text(pszTest, nDatSize);
 			free(pszTest);
 			pszTest = NULL;
-			filestream_close(fp);
+			fclose(fp);
 
-			if (NULL == (fp = filestream_open(szFilePathSearch, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE))) continue;
+			const TCHAR* szReadMode = (3 == nType) ? _T("rt, ccs=UTF-8") : _T("rt");
+			if (NULL == (fp = _tfopen(szFilePathSearch, szReadMode))) continue;
 
 			TCHAR szBuf[MAX_PATH] = { 0 }, * pszBuf = NULL, * pszLabel = NULL, * pszInfo = NULL;
 			bool bDrvOK = false, bDescOK = false;
@@ -523,9 +531,9 @@ INT32 create_variables_from_romdatas()
 			memset(szAltName, 0, MAX_PATH * sizeof(TCHAR));
 			memset(szAltDesc, 0, MAX_PATH * sizeof(TCHAR));
 
-			while (!filestream_eof(fp))
+			while (!feof(fp))
 			{
-				if (NULL != filestream_gets(fp, szBuf, MAX_PATH))
+				if (NULL != _fgetts(szBuf, MAX_PATH, fp))
 				{
 					pszBuf = szBuf;
 					pszLabel = _strqtoken(pszBuf, DELIM_TOKENS_NAME);
@@ -557,7 +565,7 @@ INT32 create_variables_from_romdatas()
 					}
 				}
 			}
-			filestream_close(fp);
+			fclose(fp);
 		}
 		retro_closedir(entry);
 	}

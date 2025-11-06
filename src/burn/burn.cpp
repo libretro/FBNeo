@@ -1818,23 +1818,10 @@ void logerror(char* szFormat, ...)
 #if defined (FBNEO_DEBUG)
 void BurnDump_(char *filename, UINT8 *buffer, INT32 bufsize, INT32 append)
 {
-#ifdef __LIBRETRO__
-	RFILE *rf = filestream_open(filename, (append) ? RETRO_VFS_FILE_ACCESS_WRITE | RETRO_VFS_FILE_ACCESS_UPDATE_EXISTING : RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (rf)
-#else
-	FILE *f = fopen(filename, (append) ? "ab" : "wb");
-	if (f)
-#endif
-	{
-#ifdef __LIBRETRO__
-		if (append)
-			filestream_seek(rf, 0, RETRO_VFS_SEEK_POSITION_END);
-		filestream_write(rf, buffer, bufsize);
-		filestream_close(rf);
-#else
+	FILE *f = fopen(filename, (append) ? "a+b" : "wb+");
+	if (f) {
 		fwrite(buffer, 1, bufsize, f);
 		fclose(f);
-#endif
 	} else {
 		bprintf(PRINT_ERROR, _T(" - BurnDump() - Error writing file.\n"));
 	}
@@ -1842,21 +1829,10 @@ void BurnDump_(char *filename, UINT8 *buffer, INT32 bufsize, INT32 append)
 
 void BurnDumpLoad_(char *filename, UINT8 *buffer, INT32 bufsize)
 {
-#ifdef __LIBRETRO__
-	RFILE *rf = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (rf)
-#else
-	FILE *f = fopen(filename, "rb");
-	if (f)
-#endif
-	{
-#ifdef __LIBRETRO__
-		filestream_read(rf, buffer, bufsize);
-		filestream_close(rf);
-#else
+	FILE *f = fopen(filename, "rb+");
+	if (f) {
 		fread(buffer, 1, bufsize, f);
 		fclose(f);
-#endif
 	} else {
 		bprintf(PRINT_ERROR, _T(" - BurnDumpLoad() - File not found.\n"));
 	}

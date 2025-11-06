@@ -515,11 +515,7 @@ static signed int mem;		/* one sample delay memory */
 /* #define SAVE_SAMPLE */
 /* #define SAVE_SEPARATE_CHANNELS */
 #if defined SAVE_SAMPLE || defined SAVE_SEPARATE_CHANNELS
-#ifdef __LIBRETRO__
-static RFILE *rsample[9];
-#else
 static FILE *sample[9];
-#endif
 #endif
 
 
@@ -603,23 +599,9 @@ static void init_tables(void)
 	}
 
 #ifdef SAVE_SAMPLE
-#ifdef __LIBRETRO__
-	rsample[8]=filestream_open("sampsum.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 	sample[8]=fopen("sampsum.pcm","wb");
 #endif
-#endif
 #ifdef SAVE_SEPARATE_CHANNELS
-#ifdef __LIBRETRO__
-	rsample[0]=filestream_open("samp0.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[1]=filestream_open("samp1.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[2]=filestream_open("samp2.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[3]=filestream_open("samp3.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[4]=filestream_open("samp4.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[5]=filestream_open("samp5.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[6]=filestream_open("samp6.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	rsample[7]=filestream_open("samp7.pcm",RETRO_VFS_FILE_ACCESS_WRITE,RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 	sample[0]=fopen("samp0.pcm","wb");
 	sample[1]=fopen("samp1.pcm","wb");
 	sample[2]=fopen("samp2.pcm","wb");
@@ -628,7 +610,6 @@ static void init_tables(void)
 	sample[5]=fopen("samp5.pcm","wb");
 	sample[6]=fopen("samp6.pcm","wb");
 	sample[7]=fopen("samp7.pcm","wb");
-#endif
 #endif
 }
 
@@ -1772,23 +1753,9 @@ void YM2151Shutdown()
 #endif
 
 #ifdef SAVE_SAMPLE
-#ifdef __LIBRETRO__
-	filestream_close(rsample[8]);
-#else
 	fclose(sample[8]);
 #endif
-#endif
 #ifdef SAVE_SEPARATE_CHANNELS
-#ifdef __LIBRETRO__
-	filestream_close(rsample[0]);
-	filestream_close(rsample[1]);
-	filestream_close(rsample[2]);
-	filestream_close(rsample[3]);
-	filestream_close(rsample[4]);
-	filestream_close(rsample[5]);
-	filestream_close(rsample[6]);
-	filestream_close(rsample[7]);
-#else
 	fclose(sample[0]);
 	fclose(sample[1]);
 	fclose(sample[2]);
@@ -1797,7 +1764,6 @@ void YM2151Shutdown()
 	fclose(sample[5]);
 	fclose(sample[6]);
 	fclose(sample[7]);
-#endif
 #endif
 }
 
@@ -2546,36 +2512,16 @@ INLINE signed int acc_calc(signed int value)
 /* second macro saves left and right channels to stereo file */
 #if 0	/*MONO*/
 	#ifdef SAVE_SEPARATE_CHANNELS
-#ifdef __LIBRETRO__
-	  #define SAVE_SINGLE_CHANNEL(j) \
-	  {	signed int pom= -(chanout[j] & PSG->pan[j*2]); \
-		if (pom > 32767) pom = 32767; else if (pom < -32768) pom = -32768; \
-		filestream_putc(rsample[j],(unsigned short)pom&0xff); \
-		filestream_putc(rsample[j],((unsigned short)pom>>8)&0xff);  }
-#else
 	  #define SAVE_SINGLE_CHANNEL(j) \
 	  {	signed int pom= -(chanout[j] & PSG->pan[j*2]); \
 		if (pom > 32767) pom = 32767; else if (pom < -32768) pom = -32768; \
 		fputc((unsigned short)pom&0xff,sample[j]); \
 		fputc(((unsigned short)pom>>8)&0xff,sample[j]);  }
-#endif
 	#else
 	  #define SAVE_SINGLE_CHANNEL(j)
 	#endif
 #else	/*STEREO*/
 	#ifdef SAVE_SEPARATE_CHANNELS
-#ifdef __LIBRETRO__
-	  #define SAVE_SINGLE_CHANNEL(j) \
-	  {	signed int pom = -(chanout[j] & PSG->pan[j*2]); \
-		if (pom > 32767) pom = 32767; else if (pom < -32768) pom = -32768; \
-		filestream_putc(rsample[j],(unsigned short)pom&0xff); \
-		filestream_putc(rsample[j],((unsigned short)pom>>8)&0xff); \
-		pom = -(chanout[j] & PSG->pan[j*2+1]); \
-		if (pom > 32767) pom = 32767; else if (pom < -32768) pom = -32768; \
-		filestream_putc(rsample[j],(unsigned short)pom&0xff); \
-		filestream_putc(rsample[j],((unsigned short)pom>>8)&0xff); \
-	  }
-#else
 	  #define SAVE_SINGLE_CHANNEL(j) \
 	  {	signed int pom = -(chanout[j] & PSG->pan[j*2]); \
 		if (pom > 32767) pom = 32767; else if (pom < -32768) pom = -32768; \
@@ -2586,7 +2532,6 @@ INLINE signed int acc_calc(signed int value)
 		fputc((unsigned short)pom&0xff,sample[j]); \
 		fputc(((unsigned short)pom>>8)&0xff,sample[j]); \
 	  }
-#endif
 	#else
 	  #define SAVE_SINGLE_CHANNEL(j)
 	#endif
@@ -2596,15 +2541,6 @@ INLINE signed int acc_calc(signed int value)
 /* second macro saves left and right channels to stereo file */
 #if 1	/*MONO*/
 	#ifdef SAVE_SAMPLE
-#ifdef __LIBRETRO__
-	  #define SAVE_ALL_CHANNELS \
-	  {	signed int pom = outl; \
-		/*pom = acc_calc(pom);*/ \
-		/*filestream_printf(rsample[8]," %i\n",pom);*/ \
-		filestream_putc(rsample[8],(unsigned short)pom&0xff); \
-		filestream_putc(rsample[8],((unsigned short)pom>>8)&0xff); \
-	  }
-#else
 	  #define SAVE_ALL_CHANNELS \
 	  {	signed int pom = outl; \
 		/*pom = acc_calc(pom);*/ \
@@ -2612,22 +2548,11 @@ INLINE signed int acc_calc(signed int value)
 		fputc((unsigned short)pom&0xff,sample[8]); \
 		fputc(((unsigned short)pom>>8)&0xff,sample[8]); \
 	  }
-#endif
 	#else
 	  #define SAVE_ALL_CHANNELS
 	#endif
 #else	/*STEREO*/
 	#ifdef SAVE_SAMPLE
-#ifdef __LIBRETRO__
-	  #define SAVE_ALL_CHANNELS \
-	  {	signed int pom = outl; \
-		filestream_putc(rsample[8],(unsigned short)pom&0xff); \
-		filestream_putc(rsample[8],((unsigned short)pom>>8)&0xff); \
-		pom = outr; \
-		filestream_putc(rsample[8],(unsigned short)pom&0xff); \
-		filestream_putc(rsample[8],((unsigned short)pom>>8)&0xff); \
-	  }
-#else
 	  #define SAVE_ALL_CHANNELS \
 	  {	signed int pom = outl; \
 		fputc((unsigned short)pom&0xff,sample[8]); \
@@ -2636,7 +2561,6 @@ INLINE signed int acc_calc(signed int value)
 		fputc((unsigned short)pom&0xff,sample[8]); \
 		fputc(((unsigned short)pom>>8)&0xff,sample[8]); \
 	  }
-#endif
 	#else
 	  #define SAVE_ALL_CHANNELS
 	#endif

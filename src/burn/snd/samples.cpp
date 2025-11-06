@@ -807,40 +807,22 @@ void BurnSampleInit(INT32 bAdd /*add samples to stream?*/)
 	strcpy(setname, BurnDrvGetTextA(DRV_SAMPLENAME));
 	sprintf(path, "%s%s.zip", szTempPath, setname);
 	
-#ifdef __LIBRETRO__
-	RFILE *rtest = filestream_open(path, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (rtest) 
-	{
-		nEnableSamples = 1;
-		filestream_close(rtest);
-	}
-#else
 	FILE *test = fopen(path, "rb");
 	if (test) 
 	{
 		nEnableSamples = 1;
 		fclose(test);
 	}
-#endif
 	
 #ifdef INCLUDE_7Z_SUPPORT
 	sprintf(path, "%s%s.7z", szTempPath, setname);
 	
-#ifdef __LIBRETRO__
-	rtest = filestream_open(path, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (rtest)
-	{	
-		nEnableSamples = 1;
-		filestream_close(rtest);
-	}
-#else
 	test = fopen(path, "rb");
 	if (test)
 	{	
 		nEnableSamples = 1;
 		fclose(test);
 	}
-#endif
 #endif
 
 	soundbuf = (INT16*)BurnMalloc(0x1000 * 2 * 2); // mixing buffer

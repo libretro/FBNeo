@@ -43,20 +43,11 @@ static void CpsBlendInit()
 
 	_stprintf(filename, _T("%s%s.bld"), szAppBlendPath, BurnDrvGetText(DRV_NAME));
 
-#ifdef __LIBRETRO__
-	RFILE *rfa = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 	FILE *fa = _tfopen(filename, _T("rt"));
-#endif
 
 	INT32 is_sfz3mix = strstr("sfz3mix", BurnDrvGetTextA(DRV_NAME)) != NULL;
 
-#ifdef __LIBRETRO__
-	if (rfa == NULL)
-#else
-	if (fa == NULL)
-#endif
-	{
+	if (fa == NULL) {
 		if (is_sfz3mix) {
 			// for sfz3mix, don't use parent's blend table. sfz3mix uses different
 			// sprite indexing
@@ -65,18 +56,9 @@ static void CpsBlendInit()
 
 		_stprintf(filename, _T("%s%s.bld"), szAppBlendPath, BurnDrvGetText(DRV_PARENT));
 
-#ifdef __LIBRETRO__
-		rfa = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 		fa = _tfopen(filename, _T("rt"));
-#endif
 
-#ifdef __LIBRETRO__
-		if (rfa == NULL)
-#else
-		if (fa == NULL)
-#endif
-		{
+		if (fa == NULL) {
 			return;
 		}
 	}
@@ -92,11 +74,7 @@ static void CpsBlendInit()
 
 	while (1)
 	{
-#ifdef __LIBRETRO__
-		if (filestream_gets (rfa, szLine, 64) == NULL) break;
-#else
 		if (fgets (szLine, 64, fa) == NULL) break;
-#endif
 
 		if (strncmp ("Game", szLine, 4) == 0) continue; 	// don't care
 		if (strncmp ("Name", szLine, 4) == 0) continue; 	// don't care
@@ -123,11 +101,7 @@ static void CpsBlendInit()
 		}
 	}
 
-#ifdef __LIBRETRO__
-	filestream_close (rfa);
-#else
 	fclose (fa);
-#endif
 }
 
 INT32 CpsObjInit()

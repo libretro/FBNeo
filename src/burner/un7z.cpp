@@ -78,21 +78,13 @@ void SZipFree(ISzAllocPtr p, void *address)
 
 void File_Construct(CSzFile *p)
 {
-#ifdef __LIBRETRO__
-	p->_7z_osdfile_libretro = NULL;
-#else
 	p->_7z_osdfile = NULL;
-#endif
 }
 
 static WRes File_Open(CSzFile *p, const char *, int)
 {
 	/* we handle this ourselves ... */
-#ifdef __LIBRETRO__
-	if (!p->_7z_osdfile_libretro) return 1;
-#else
 	if (!p->_7z_osdfile) return 1;
-#endif
 	else return 0;
 }
 
@@ -110,11 +102,7 @@ WRes File_Read(CSzFile *p, void *data, size_t *size)
 {
 	UINT32 read_length;
 
-#ifdef __LIBRETRO__
-	if (!p->_7z_osdfile_libretro)
-#else
 	if (!p->_7z_osdfile)
-#endif
 	{
 		printf("un7z.c: called File_Read without file\n");
 		return 1;
@@ -124,13 +112,8 @@ WRes File_Read(CSzFile *p, void *data, size_t *size)
 	if (originalSize == 0)
 		return 0;
 
-#ifdef __LIBRETRO__
-	filestream_seek(p->_7z_osdfile_libretro, p->_7z_currfpos, RETRO_VFS_SEEK_POSITION_START);
-	*size = read_length = filestream_read(p->_7z_osdfile_libretro, data, originalSize);
-#else
 	fseek(p->_7z_osdfile, p->_7z_currfpos, SEEK_SET);
 	*size = read_length = fread(data, 1, originalSize, p->_7z_osdfile);
-#endif
 	p->_7z_currfpos += read_length;
 
 	if (*size == originalSize)
@@ -364,25 +347,15 @@ _7z_error _7z_file_open(const char *filename, _7z_file **_7z)
 	new_7z->inited = false;
 	new_7z->archiveStream.file._7z_currfpos = 0;
 
-#ifdef __LIBRETRO__
-	new_7z->archiveStream.file._7z_osdfile_libretro = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-	if (!new_7z->archiveStream.file._7z_osdfile_libretro)
-#else
 	new_7z->archiveStream.file._7z_osdfile = fopen(filename, "rb");
-	if (!new_7z->archiveStream.file._7z_osdfile)
-#endif
-	{
+	if (!new_7z->archiveStream.file._7z_osdfile) {
 		_7zerr = _7ZERR_FILE_ERROR;
 		goto error;
 	}
 
-#ifdef __LIBRETRO__
-	new_7z->archiveStream.file._7z_length = filestream_get_size(new_7z->archiveStream.file._7z_osdfile_libretro);
-#else
 	fseek(new_7z->archiveStream.file._7z_osdfile, 0, SEEK_END);
 	new_7z->archiveStream.file._7z_length = ftell(new_7z->archiveStream.file._7z_osdfile);
 	fseek(new_7z->archiveStream.file._7z_osdfile, 0, SEEK_SET);
-#endif
 
 	new_7z->allocImp.Alloc = SZipAlloc;
 	new_7z->allocImp.Free = SZipFree;
@@ -452,15 +425,9 @@ void _7z_file_close(_7z_file *_7z)
 	unsigned int cachenum;
 
 	/* close the open files */
-#ifdef __LIBRETRO__
-	if (_7z->archiveStream.file._7z_osdfile_libretro != NULL)
-		filestream_close(_7z->archiveStream.file._7z_osdfile_libretro);
-	_7z->archiveStream.file._7z_osdfile_libretro = NULL;
-#else
 	if (_7z->archiveStream.file._7z_osdfile != NULL)
 		fclose(_7z->archiveStream.file._7z_osdfile);
 	_7z->archiveStream.file._7z_osdfile = NULL;
-#endif
 
 	/* find the first NULL entry in the cache */
 	for (cachenum = 0; cachenum < ARRAY_LENGTH(_7z_cache); cachenum++)
@@ -508,16 +475,6 @@ _7z_error _7z_file_decompress(_7z_file *new_7z, void *buffer, UINT32 length, UIN
 	int index = new_7z->curr_file_idx;
 
 	/* make sure the file is open.. */
-#ifdef __LIBRETRO__
-	if (new_7z->archiveStream.file._7z_osdfile_libretro==NULL)
-	{
-		new_7z->archiveStream.file._7z_currfpos = 0;
-		new_7z->archiveStream.file._7z_osdfile_libretro = filestream_open(new_7z->filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-		if (!new_7z->archiveStream.file._7z_osdfile_libretro) {
-			return _7ZERR_FILE_ERROR;
-		}
-	}
-#else
 	if (new_7z->archiveStream.file._7z_osdfile==NULL)
 	{
 		new_7z->archiveStream.file._7z_currfpos = 0;
@@ -526,7 +483,6 @@ _7z_error _7z_file_decompress(_7z_file *new_7z, void *buffer, UINT32 length, UIN
 			return _7ZERR_FILE_ERROR;
 		}
 	}
-#endif
 
 	size_t offset = 0;
 	size_t outSizeProcessed = 0;
@@ -561,13 +517,8 @@ static void free__7z_file(_7z_file *_7z)
 {
 	if (_7z != NULL)
 	{
-#ifdef __LIBRETRO__
-		if (_7z->archiveStream.file._7z_osdfile_libretro != NULL)
-			filestream_close(_7z->archiveStream.file._7z_osdfile_libretro);
-#else
 		if (_7z->archiveStream.file._7z_osdfile != NULL)
 			fclose(_7z->archiveStream.file._7z_osdfile);
-#endif
 		if (_7z->filename != NULL)
 			free((void *)_7z->filename);
 

@@ -690,37 +690,20 @@ UINT32 CheatSearchValueIncreased()
 
 void CheatSearchDumptoFile()
 {
-#ifdef __LIBRETRO__
-	RFILE *rfp = filestream_open("cheatsearchdump.txt", RETRO_VFS_FILE_ACCESS_WRITE, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-#else
 	FILE *fp = fopen("cheatsearchdump.txt", "wt");
-#endif
 	UINT32 nAddress;
 	
-#ifdef __LIBRETRO__
-	if (rfp)
-#else
-	if (fp)
-#endif
-	{
+	if (fp) {
 		char Temp[256];
 		
 		for (nAddress = 0; nAddress < nMemorySize; nAddress++) {
 			if (MemoryStatus[nAddress] == IN_RESULTS) {
 				sprintf(Temp, "Address %08X Value %02X\n", nAddress, MemoryValues[nAddress]);
-#ifdef __LIBRETRO__
-				filestream_write(rfp, Temp, strlen(Temp));
-#else
 				fwrite(Temp, 1, strlen(Temp), fp);
-#endif
 			}
 		}
 		
-#ifdef __LIBRETRO__
-		filestream_close(rfp);
-#else
 		fclose(fp);
-#endif
 	}
 }
 

@@ -3,7 +3,6 @@
 #include "retro_dirent.h"
 
 #include <file/file_path.h>
-#include <streams/file_stream.h>
 
 #define NUM_LANGUAGES		12
 #define MAX_ACTIVE_PATCHES	1024
@@ -47,7 +46,7 @@ static const TCHAR szLanguageCodes[NUM_LANGUAGES][6] = {
 INT32 CoreIpsPathsLoad()
 {
 	TCHAR szConfig[MAX_PATH] = { 0 }, szLine[1024] = { 0 };
-	RFILE* h = NULL;
+	FILE* h = NULL;
 
 #ifdef _UNICODE
 	setlocale(LC_ALL, "");
@@ -66,7 +65,7 @@ INT32 CoreIpsPathsLoad()
 		szAppPathDefPath
 	);																// g_system_dir/fbneo/path/ips_path.opt
 
-	if (NULL == (h = filestream_open(szConfig, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+	if (NULL == (h = _tfopen(szConfig, _T("rt"))))
 	{
 		memset(szConfig, 0, MAX_PATH * sizeof(TCHAR));
 		snprintf(
@@ -74,12 +73,12 @@ INT32 CoreIpsPathsLoad()
 			g_rom_dir, PATH_DEFAULT_SLASH_C()
 		);															// g_rom_dir/ips_path.opt
 
-		if (NULL == (h = filestream_open(szConfig, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+		if (NULL == (h = _tfopen(szConfig, _T("rt"))))
 			return 1;												// Only CoreIpsPaths[0]
 	}
 
 	// Go through each line of the config file
-	while (filestream_gets(h, szLine, 1024)) {
+	while (_fgetts(szLine, 1024, h)) {
 		int nLen = _tcslen(szLine);
 
 		// Get rid of the linefeed at the end
@@ -114,7 +113,7 @@ INT32 CoreIpsPathsLoad()
 #undef STR
 	}
 
-	filestream_close(h);
+	fclose(h);
 	return 0;														// There may be more
 }
 
@@ -156,25 +155,25 @@ static INT32 GetLanguageCode()
 	return nLangcode;
 }
 
-static TCHAR* GetPatchDescByLangcode(RFILE* fp, int nLang)
+static TCHAR* GetPatchDescByLangcode(FILE* fp, int nLang)
 {
 	TCHAR* result = NULL;
 	char* desc = NULL, langtag[10] = { 0 };
 
 	sprintf(langtag, "[%s]", TCHARToANSI(szLanguageCodes[nLang], NULL, 0));
 
-	filestream_rewind(fp);
+	fseek(fp, 0, SEEK_SET);
 
-	while (!filestream_eof(fp))
+	while (!feof(fp))
 	{
 		char s[4096] = { 0 };
 
-		if (filestream_gets(fp, s, sizeof(s)) != NULL)
+		if (fgets(s, sizeof(s), fp) != NULL)
 		{
 			if (strncmp(langtag, s, strlen(langtag)) != 0)
 				continue;
 
-			while (filestream_gets(fp, s, sizeof(s)) != NULL)
+			while (fgets(s, sizeof(s), fp) != NULL)
 			{
 				char* p = NULL;
 
@@ -265,7 +264,7 @@ INT32 create_variables_from_ipses()
 		if (!entry || retro_dirent_error(entry)) continue;
 
 		INT32 nLangcode = GetLanguageCode();
-		RFILE* fp = NULL;
+		FILE* fp = NULL;
 
 		while (retro_readdir(entry))
 		{
@@ -286,7 +285,7 @@ INT32 create_variables_from_ipses()
 				szPatchPaths, name
 			);
 
-			if (NULL == (fp = filestream_open(szFilePathSearch, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE))) continue;
+			if (NULL == (fp = fopen(szFilePathSearch, "r"))) continue;
 			strcpy(szAltFile, szFilePathSearch);
 
 			TCHAR* pszPatchDesc = GetPatchDescByLangcode(fp, nLangcode);
@@ -333,7 +332,7 @@ INT32 create_variables_from_ipses()
 			memset(szAltFile, 0, MAX_PATH * sizeof(TCHAR));
 			memset(szAltName, 0, MAX_PATH * sizeof(TCHAR));
 
-			filestream_close(fp);
+			fclose(fp);
 			nRet++;
 		}
 	}
@@ -426,18 +425,18 @@ static INT32 GetIpsNumActivePatches()
 static void PatchFile(const char* ips_path, UINT8* base, bool readonly)
 {
 	char buf[6];
-	RFILE* f = NULL;
+	FILE* f = NULL;
 	INT32 Offset = 0, Size = 0;
 	UINT8* mem8 = NULL;
 
-	if (NULL == (f = filestream_open(ips_path, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE))) return;
+	if (NULL == (f = fopen(ips_path, "rb"))) return;
 
 	memset(buf, 0, sizeof(buf));
-	filestream_read(f, buf, 5);
+	fread(buf, 1, 5, f);
 
 	if (strcmp(buf, IPS_SIGNATURE))
 	{
-		if (f) filestream_close(f);
+		if (f) fclose(f);
 
 		return;
 	}
@@ -446,9 +445,9 @@ static void PatchFile(const char* ips_path, UINT8* base, bool readonly)
 		UINT8 ch = 0;
 		INT32 bRLE = 0;
 
-		while (!filestream_eof(f)) {
+		while (!feof(f)) {
 			// read patch address offset
-			filestream_read(f, buf, 3);
+			fread(buf, 1, 3, f);
 			buf[3] = 0;
 
 			if (0 == strcmp(buf, IPS_TAG_EOF))
@@ -457,14 +456,14 @@ static void PatchFile(const char* ips_path, UINT8* base, bool readonly)
 			Offset = BYTE3_TO_UINT(buf);
 
 			// read patch length
-			filestream_read(f, buf, 2);
+			fread(buf, 1, 2, f);
 			Size = BYTE2_TO_UINT(buf);
 
 			bRLE = (0 == Size);
 			if (bRLE) {
-				filestream_read(f, buf, 2);
+				fread(buf, 1, 2, f);
 				Size = BYTE2_TO_UINT(buf);
-				ch = filestream_getc(f);
+				ch = fgetc(f);
 			}
 
 			while (Size--)
@@ -477,10 +476,10 @@ static void PatchFile(const char* ips_path, UINT8* base, bool readonly)
 				if (readonly)
 				{
 					if (!bRLE)
-						filestream_getc(f);
+						fgetc(f);
 				}
 				else
-					*mem8 = bRLE ? ch : filestream_getc(f);
+					*mem8 = bRLE ? ch : fgetc(f);
 			}
 		}
 	}
@@ -489,7 +488,7 @@ static void PatchFile(const char* ips_path, UINT8* base, bool readonly)
 	if (readonly && (0 == nIpsMemExpLen[EXP_FLAG]))	// Unspecified length.
 		nIpsMemExpLen[LOAD_ROM] = Offset;
 
-	filestream_close(f);
+	fclose(f);
 }
 
 static char* stristr_int(const char* str1, const char* str2)
@@ -584,15 +583,15 @@ static void DoPatchGame(const char* patch_name, char* game_name, UINT32 crc, UIN
 {
 	char s[MAX_PATH] = { 0 }, * p = NULL, * rom_name = NULL, * ips_name = NULL, * ips_offs = NULL, * ips_crc = NULL;
 	UINT32 nIps_crc = 0;
-	RFILE* fp = NULL;
+	FILE* fp = NULL;
 
-	if (NULL != (fp = filestream_open(patch_name, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE)))
+	if (NULL != (fp = fopen(patch_name, "rb")))
 	{
 		bool bTarget = false;
 
-		while (!filestream_eof(fp))
+		while (!feof(fp))
 		{
-			if (NULL != filestream_gets(fp, s, sizeof(s)))
+			if (NULL != fgets(s, sizeof(s), fp))
 			{
 				p = s;
 
@@ -669,7 +668,7 @@ static void DoPatchGame(const char* patch_name, char* game_name, UINT32 crc, UIN
 				PatchFile(ips_path, base, readonly);
 			}
 		}
-		filestream_close(fp);
+		fclose(fp);
 
 		if (!bTarget && (0 == nIpsMemExpLen[EXP_FLAG]))
 			nIpsMemExpLen[LOAD_ROM] = 0;	// Must be reset to 0!
@@ -732,12 +731,12 @@ void GetIpsDrvDefine()
 		strcpy(ips_data, (0 == nCount) ? szAppIpsPath : pszIpsActivePatches[i]);
 
 		char str[MAX_PATH] = { 0 }, * ptr = NULL, * tmp = NULL;
-		RFILE* fp = NULL;
+		FILE* fp = NULL;
 
-		if (NULL != (fp = filestream_open(ips_data, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE))) {
-			while (!filestream_eof(fp))
+		if (NULL != (fp = fopen(ips_data, "rb"))) {
+			while (!feof(fp))
 			{
-				if (NULL != filestream_gets(fp, str, sizeof(str))) {
+				if (NULL != fgets(str, sizeof(str), fp)) {
 					ptr = str;
 
 					// skip UTF-8 sig
@@ -837,7 +836,7 @@ void GetIpsDrvDefine()
 				}
 			}
 
-			filestream_close(fp);
+			fclose(fp);
 		}
 	}
 	nStandalone = nDefineNum = 0;

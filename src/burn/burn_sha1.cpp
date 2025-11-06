@@ -139,14 +139,8 @@ int BurnComputeSHA1(const char *filename, char *hash_str) {
 	const int filebuf_size = 1024 * 1024;
 	UINT8 *buffer;
 
-#ifdef __LIBRETRO__
-    RFILE *rfile = filestream_open(filename, RETRO_VFS_FILE_ACCESS_READ, RETRO_VFS_FILE_ACCESS_HINT_NONE);
-    if (!rfile)
-#else
     FILE *file = fopen(filename, "rb");
-    if (!file)
-#endif
-    {
+    if (!file) {
         return 1;
     }
 
@@ -155,19 +149,10 @@ int BurnComputeSHA1(const char *filename, char *hash_str) {
 
 	SHA1_Init(&ctx);
     INT32 bytes_read;
-#ifdef __LIBRETRO__
-    while ((bytes_read = filestream_read(rfile, buffer, filebuf_size)) > 0)
-#else
-    while ((bytes_read = fread(buffer, 1, filebuf_size, file)) > 0)
-#endif
-    {
+    while ((bytes_read = fread(buffer, 1, filebuf_size, file)) > 0) {
         SHA1_Update(&ctx, buffer, bytes_read);
     }
-#ifdef __LIBRETRO__
-    filestream_close(rfile);
-#else
     fclose(file);
-#endif
 
 	free(buffer);
 
