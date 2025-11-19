@@ -73,7 +73,7 @@ ifneq (,$(findstring unix,$(platform)))
 	fpic := -fPIC
 	SHARED := -shared -Wl,-no-undefined -Wl,--version-script=$(VERSION_SCRIPT)
 	ENDIANNESS_DEFINES := -DLSB_FIRST
-	LDFLAGS += -lpthread
+	LDFLAGS += -lpthread -ldl
 
 	# Raspberry Pi
 	ifneq (,$(findstring rpi1,$(platform)))
