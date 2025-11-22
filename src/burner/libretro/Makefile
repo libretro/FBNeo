@@ -118,6 +118,15 @@ ifneq (,$(findstring unix,$(platform)))
 		endif
 	endif
 
+# webOS (32-bit)
+else ifeq ($(platform), webos)
+	TARGET := $(TARGET_NAME)_libretro.so
+	fpic := -fPIC
+	SHARED := -shared -Wl,-no-undefined -Wl,--version-script=$(VERSION_SCRIPT)
+	ENDIANNESS_DEFINES := -DLSB_FIRST
+	LDFLAGS += -lpthread -ldl
+	HAVE_NEON = 1
+
 # OS X
 else ifeq ($(platform), osx)
 	TARGET := $(TARGET_NAME)_libretro.dylib
