@@ -1,7 +1,7 @@
 #ifndef __RETRO_STRING__
 #define __RETRO_STRING__
 
-#define NUM_STRING	151
+#define NUM_STRING	159
 
 extern const char* pSelLangStr[NUM_STRING];
 
@@ -147,6 +147,14 @@ void set_multi_language_strings();
 #define RETRO_SOCD_LABEL_6					pSelLangStr[148]
 #define RETRO_RESOLUTION_DESC				pSelLangStr[149]
 #define RETRO_RESOLUTION_INFO				pSelLangStr[150]
+#define RETRO_SYSTEM_CAT_DESC				pSelLangStr[151]
+#define RETRO_SYSTEM_CAT_INFO				pSelLangStr[152]
+#define RETRO_VIDEO_CAT_DESC				pSelLangStr[153]
+#define RETRO_VIDEO_CAT_INFO				pSelLangStr[154]
+#define RETRO_INPUT_CAT_DESC				pSelLangStr[155]
+#define RETRO_INPUT_CAT_INFO				pSelLangStr[156]
+#define RETRO_ADVANCED_CAT_DESC				pSelLangStr[157]
+#define RETRO_ADVANCED_CAT_INFO				pSelLangStr[158]
 
 /* UGUI */
 #define RETRO_ERROR_MESSAGES_00				pSelLangStr[ 59]
