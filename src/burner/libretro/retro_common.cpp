@@ -213,7 +213,7 @@ static struct retro_core_option_v2_definition var_fbneo_cpu_speed_adjust = {
 	NULL,
 	"Change emulated cpu frequency for various systems, by increasing you can fix native slowdowns in some games, by decreasing you can help performance on low-end devices",
 	NULL,
-	"system",
+	NULL,
 	{
 		PERCENT_VALUES
 	},
@@ -225,7 +225,7 @@ static struct retro_core_option_v2_definition var_fbneo_diagnostic_input = {
 	NULL,
 	"Configure button combination to enter cabinet service menu",
 	NULL,
-	"input",
+	NULL,
 	{
 		{ "None",                NULL },
 		{ "Hold Start",          NULL },
@@ -248,7 +248,7 @@ static struct retro_core_option_v2_definition var_fbneo_hiscores = {
 	NULL,
 	"Enable high scores support, you also need the file hiscore.dat in your system/fbneo/ folder",
 	NULL,
-	"system",
+	NULL,
 	{
 		{ "disabled", NULL },
 		{ "enabled",  NULL },
@@ -262,7 +262,7 @@ static struct retro_core_option_v2_definition var_fbneo_allow_patched_romsets = 
 	NULL,
 	"Allow romsets from your system/fbneo/patched/ folder to override your romsets, crcs will be ignored but sizes and names must still match, you need to close content for this setting to take effect",
 	NULL,
-	"advanced",
+	NULL,
 	{
 		{ "disabled", NULL },
 		{ "enabled",  NULL },
@@ -382,7 +382,7 @@ static struct retro_core_option_v2_definition var_fbneo_cyclone = {
 	NULL,
 	"Use at your own risk, it could improve performance on some emulated systems for low-end devices, but there are known side effects : savestates won't be compatible with normal interpreter, and some systems won't work",
 	NULL,
-	"system",
+	NULL,
 	{
 		{ "disabled", NULL },
 		{ "enabled",  NULL },
@@ -1288,11 +1288,6 @@ void set_environment()
 	static struct retro_core_option_v2_category option_cats_us[] =
 	{
 		{
-			"system",
-			RETRO_SYSTEM_CAT_DESC,
-			RETRO_SYSTEM_CAT_INFO
-		},
-		{
 			"video",
 			RETRO_VIDEO_CAT_DESC,
 			RETRO_VIDEO_CAT_INFO
@@ -1306,11 +1301,6 @@ void set_environment()
 			"input",
 			RETRO_INPUT_CAT_DESC,
 			RETRO_INPUT_CAT_INFO
-		},
-		{
-			"advanced",
-			RETRO_ADVANCED_CAT_DESC,
-			RETRO_ADVANCED_CAT_INFO
 		},
 		{
 			"neogeo",
