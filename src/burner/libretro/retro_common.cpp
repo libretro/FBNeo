@@ -85,7 +85,7 @@ static struct retro_core_option_v2_definition var_fbneo_allow_depth_32 = {
 	NULL,
 	"Change pixel format, some games require this to render properly, it could impact performances on some platforms",
 	NULL,
-	NULL,
+	"video",
 	{
 		{ "disabled", NULL },
 		{ "enabled",  NULL },
@@ -99,7 +99,7 @@ static struct retro_core_option_v2_definition var_fbneo_vertical_mode = {
 	NULL,
 	"Rotate display for vertical screens",
 	NULL,
-	NULL,
+	"video",
 	{
 		{ "disabled",       NULL },
 		{ "enabled",        NULL },
@@ -116,7 +116,7 @@ static struct retro_core_option_v2_definition var_fbneo_force_60hz = {
 	NULL,
 	"Ignore game's original refresh rate and try to run it at 60hz instead. It will cause incorrect game speed and frame pacing. It will try to use your monitor's correct refresh rate instead of 60hz if this refresh rate is between 59hz and 61hz.",
 	NULL,
-	NULL,
+	"video",
 	{
 		{ "disabled", NULL },
 		{ "enabled",  NULL },
@@ -130,7 +130,7 @@ static struct retro_core_option_v2_definition var_fbneo_resolution = {
 	NULL,
 	"Set resolution in certain games (vector)",
 	NULL,
-	NULL,
+	"video",
 	{
 		{ "640x480",        NULL },
 		{ "800x600",        NULL },
@@ -333,7 +333,7 @@ static struct retro_core_option_v2_definition var_fbneo_analog_speed = {
 	NULL,
 	"Mitigate analog controls speed, some games might require low values to be playable",
 	NULL,
-	NULL,
+	"input",
 	{
 		PERCENT_VALUES
 	},
@@ -347,7 +347,7 @@ static struct retro_core_option_v2_definition var_fbneo_socd = {
 	NULL,
 	"Change ULDR priority, mostly useful for keyboard users",
 	NULL,
-	NULL,
+	"input",
 	{
 		{ "0",  "disabled" },
 		{ "1",  "Simultaneous Neutral" },
@@ -366,7 +366,7 @@ static struct retro_core_option_v2_definition var_fbneo_lightgun_crosshair_emula
 	NULL,
 	"Change emulated crosshair behavior, \"hide with lightgun device\" will also hide it on touchscreen device",
 	NULL,
-	NULL,
+	"input",
 	{
 		{ "hide with lightgun device", NULL },
 		{ "always hide",               NULL },
@@ -1288,6 +1288,21 @@ void set_environment()
 	static struct retro_core_option_v2_category option_cats_us[] =
 	{
 		{
+			"video",
+			RETRO_VIDEO_CAT_DESC,
+			RETRO_VIDEO_CAT_INFO
+		},
+		{
+			"audio",
+			RETRO_AUDIO_CAT_DESC,
+			RETRO_AUDIO_CAT_INFO
+		},
+		{
+			"input",
+			RETRO_INPUT_CAT_DESC,
+			RETRO_INPUT_CAT_INFO
+		},
+		{
 			"neogeo",
 			RETRO_NEOGEO_CAT_DESC,
 			RETRO_NEOGEO_CAT_INFO
@@ -1296,11 +1311,6 @@ void set_environment()
 			"frameskip",
 			RETRO_FRAME_CAT_DESC,
 			RETRO_FRAME_CAT_INFO
-		},
-		{
-			"audio",
-			RETRO_AUDIO_CAT_DESC,
-			RETRO_AUDIO_CAT_INFO
 		},
 		{
 			"dipswitch",

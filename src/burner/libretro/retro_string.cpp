@@ -156,7 +156,15 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"Up Priority (Up-override Down)",
 		"Down Priority (Left/Right Last Input Priority)",
 		"Resolution",
-		"Set resolution in certain games (vector)"
+		"Set resolution in certain games (vector)",
+		"System Settings",
+		"Configure System Settings",
+		"Video Settings",
+		"Configure Video Settings",
+		"Input Settings",
+		"Configure Input Settings",
+		"Advanced Settings",
+		"Configure Advanced Settings"
 	},
 	{	// Simplified Chinese
 		"\u5c3d\u53ef\u80fd\u4f7f\u7528 32 \u4f4d\u8272\u6df1",
@@ -309,7 +317,15 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"\u4e0a\u65b9\u5411\u4f18\u5148\uff08\u4e0a\u8986\u76d6\u4e0b\uff09",
 		"\u4e0b\u65b9\u5411\u4f18\u5148\uff08\u5de6\u53f3\u6700\u540e\u8f93\u5165\u4f18\u5148\uff09",
 		"\u5206\u8fa8\u7387",
-		"\u8bbe\u7f6e\u77e2\u91cf\u56fe\u5f62\u6e38\u620f\u7684\u5206\u8fa8\u7387"
+		"\u8bbe\u7f6e\u77e2\u91cf\u56fe\u5f62\u6e38\u620f\u7684\u5206\u8fa8\u7387",
+		"\u7cfb\u7edf\u8bbe\u7f6e",
+		"\u914d\u7f6e\u7cfb\u7edf\u8bbe\u7f6e",
+		"\u89c6\u9891\u8bbe\u7f6e",
+		"\u914d\u7f6e\u89c6\u9891\u8bbe\u7f6e",
+		"\u8f93\u5165\u8bbe\u7f6e",
+		"\u914d\u7f6e\u8f93\u5165\u8bbe\u7f6e",
+		"\u9ad8\u7ea7\u8bbe\u7f6e",
+		"\u914d\u7f6e\u9ad8\u7ea7\u8bbe\u7f6e"
 	},
 	{	// Traditional Chinese
 		"\u76e1\u53ef\u80fd\u4f7f\u7528 32 \u4f4d\u8272\u6df1",
@@ -462,7 +478,15 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"\u4e0a\u65b9\u5411\u512a\u5148\uff08\u4e0a\u8986\u84cb\u4e0b\uff09",
 		"\u4e0b\u65b9\u5411\u512a\u5148\uff08\u5de6\u53f3\u6700\u5f8c\u8f38\u5165\u512a\u5148\uff09",
 		"\u89e3\u6790\u5ea6",
-		"\u8a2d\u5b9a\u77e2\u91cf\u5716\u5f62\u904a\u6232\u7684\u89e3\u6790\u5ea6"
+		"\u8a2d\u5b9a\u77e2\u91cf\u5716\u5f62\u904a\u6232\u7684\u89e3\u6790\u5ea6",
+		"\u7cfb\u7d71\u8a2d\u5b9a",
+		"\u914d\u7f6e\u7cfb\u7d71\u8a2d\u5b9a",
+		"\u8996\u8a0a\u8a2d\u5b9a",
+		"\u914d\u7f6e\u8996\u8a0a\u8a2d\u5b9a",
+		"\u8f38\u5165\u8a2d\u5b9a",
+		"\u914d\u7f6e\u8f38\u5165\u8a2d\u5b9a",
+		"\u9032\u968e\u8a2d\u5b9a",
+		"\u914d\u7f6e\u9032\u968e\u8a2d\u5b9a"
 	}
 };
 
