@@ -932,30 +932,68 @@ void set_environment()
 	struct retro_core_option_v2_definition *option_defs_us;
 	struct retro_vfs_interface_info vfs_iface_info;
 
-	// Add the Global core options
-	var_fbneo_allow_depth_32.desc                          = RETRO_DEPTH32_CAT_DESC;
-	var_fbneo_allow_depth_32.info                          = RETRO_DEPTH32_CAT_INFO;
-	vars_systems.push_back(&var_fbneo_allow_depth_32);
-
-	var_fbneo_vertical_mode.desc                           = RETRO_VERTICAL_CAT_DESC;
-	var_fbneo_vertical_mode.info                           = RETRO_VERTICAL_CAT_INFO;
-	var_fbneo_vertical_mode.values[2].value                = RETRO_VERTICAL_VALUE_2;
-	var_fbneo_vertical_mode.values[4].value                = RETRO_VERTICAL_VALUE_4;
-	vars_systems.push_back(&var_fbneo_vertical_mode);
-
-	var_fbneo_resolution.desc                              = RETRO_RESOLUTION_DESC;
-	var_fbneo_resolution.info                              = RETRO_RESOLUTION_INFO;
-
-	var_fbneo_force_60hz.desc                              = RETRO_FORCE60_CAT_DESC;
-	var_fbneo_force_60hz.info                              = RETRO_FORCE60_CAT_INFO;
-	vars_systems.push_back(&var_fbneo_force_60hz);
-
-	vars_systems.push_back(&var_fbneo_resolution);
-
+	// Add the uncategorized core options
 	var_fbneo_allow_patched_romsets.desc                   = RETRO_PATCHED_CAT_DESC;
 	var_fbneo_allow_patched_romsets.info                   = RETRO_PATCHED_CAT_INFO;
 	vars_systems.push_back(&var_fbneo_allow_patched_romsets);
 
+	var_fbneo_cpu_speed_adjust.desc                        = RETRO_CPUSPEED_CAT_DESC;
+	var_fbneo_cpu_speed_adjust.info                        = RETRO_CPUSPEED_CAT_INFO;
+	vars_systems.push_back(&var_fbneo_cpu_speed_adjust);
+
+#ifdef USE_CYCLONE
+	var_fbneo_cyclone.desc = RETRO_CYCLONE_CAT_DESC;
+	var_fbneo_cyclone.info = RETRO_CYCLONE_CAT_INFO;
+	vars_systems.push_back(&var_fbneo_cyclone);
+#endif
+
+	if (pgi_diag)
+	{
+		var_fbneo_diagnostic_input.desc             = RETRO_DIAGNOSTIC_CAT_DESC;
+		var_fbneo_diagnostic_input.info             = RETRO_DIAGNOSTIC_CAT_INFO;
+		var_fbneo_diagnostic_input.values[ 0].value = RETRO_DIAGNOSTIC_VALUE_0;
+		var_fbneo_diagnostic_input.values[ 1].value = RETRO_DIAGNOSTIC_VALUE_1;
+		var_fbneo_diagnostic_input.values[ 3].value = RETRO_DIAGNOSTIC_VALUE_3;
+		var_fbneo_diagnostic_input.values[ 5].value = RETRO_DIAGNOSTIC_VALUE_5;
+		var_fbneo_diagnostic_input.values[ 6].value = RETRO_DIAGNOSTIC_VALUE_6;
+		var_fbneo_diagnostic_input.values[ 8].value = RETRO_DIAGNOSTIC_VALUE_8;
+		var_fbneo_diagnostic_input.values[10].value = RETRO_DIAGNOSTIC_VALUE_10;
+		var_fbneo_diagnostic_input.default_value    = RETRO_DIAGNOSTIC_VALUE_1;
+		vars_systems.push_back(&var_fbneo_diagnostic_input);
+	}
+
+	if (BurnDrvGetFlags() & BDF_HISCORE_SUPPORTED)
+	{
+		var_fbneo_hiscores.desc = RETRO_HISCORES_CAT_DESC;
+		var_fbneo_hiscores.info = RETRO_HISCORES_CAT_INFO;
+		vars_systems.push_back(&var_fbneo_hiscores);
+	}
+
+	// Add the audio core options
+	if (nGameType != RETRO_GAME_TYPE_NEOCD)
+	{
+		var_fbneo_samplerate.desc = RETRO_SAMPLERATE_DEF_DESC;
+		var_fbneo_samplerate.info = RETRO_SAMPLERATE_DEF_INFO;
+		vars_systems.push_back(&var_fbneo_samplerate);
+	}
+	var_fbneo_sample_interpolation.desc            = RETRO_SAMPLE_INTERPOLATION_DEF_DESC;
+	var_fbneo_sample_interpolation.info            = RETRO_SAMPLE_INTERPOLATION_DEF_INFO;
+	var_fbneo_sample_interpolation.values[1].value = RETRO_SAMPLE_INTERPOLATION_VALUE_1;
+	var_fbneo_sample_interpolation.values[2].value = RETRO_SAMPLE_INTERPOLATION_VALUE_2;
+	var_fbneo_sample_interpolation.default_value   = RETRO_SAMPLE_INTERPOLATION_VALUE_2;
+	vars_systems.push_back(&var_fbneo_sample_interpolation);
+
+	var_fbneo_fm_interpolation.desc                = RETRO_FM_INTERPOLATION_DEF_DESC;
+	var_fbneo_fm_interpolation.info                = RETRO_FM_INTERPOLATION_DEF_INFO;
+	var_fbneo_fm_interpolation.values[1].value     = RETRO_FM_INTERPOLATION_VALUE_1;
+	var_fbneo_fm_interpolation.default_value       = RETRO_FM_INTERPOLATION_VALUE_1;
+	vars_systems.push_back(&var_fbneo_fm_interpolation);
+
+	var_fbneo_lowpass_filter.desc                  = RETRO_LOWPASS_FILTER_DEF_DESC;
+	var_fbneo_lowpass_filter.info                  = RETRO_LOWPASS_FILTER_DEF_INFO;
+	vars_systems.push_back(&var_fbneo_lowpass_filter);
+
+	// Add the input core options
 	var_fbneo_analog_speed.desc                            = RETRO_ANALOG_CAT_DESC;
 	var_fbneo_analog_speed.info                            = RETRO_ANALOG_CAT_INFO;
 	vars_systems.push_back(&var_fbneo_analog_speed);
@@ -978,40 +1016,53 @@ void set_environment()
 	var_fbneo_lightgun_crosshair_emulation.default_value   = RETRO_CROSSHAIR_VALUE_0;
 	vars_systems.push_back(&var_fbneo_lightgun_crosshair_emulation);
 
-	var_fbneo_cpu_speed_adjust.desc                        = RETRO_CPUSPEED_CAT_DESC;
-	var_fbneo_cpu_speed_adjust.info                        = RETRO_CPUSPEED_CAT_INFO;
-	vars_systems.push_back(&var_fbneo_cpu_speed_adjust);
+	// Add the video core options
+	var_fbneo_force_60hz.desc                              = RETRO_FORCE60_CAT_DESC;
+	var_fbneo_force_60hz.info                              = RETRO_FORCE60_CAT_INFO;
+	vars_systems.push_back(&var_fbneo_force_60hz);
 
-#ifdef USE_CYCLONE
-	var_fbneo_cyclone.desc = RETRO_CYCLONE_CAT_DESC;
-	var_fbneo_cyclone.info = RETRO_CYCLONE_CAT_INFO;
-	vars_systems.push_back(&var_fbneo_cyclone);
-#endif
-	if (BurnDrvGetFlags() & BDF_HISCORE_SUPPORTED)
+	var_fbneo_resolution.desc                              = RETRO_RESOLUTION_DESC;
+	var_fbneo_resolution.info                              = RETRO_RESOLUTION_INFO;
+	vars_systems.push_back(&var_fbneo_resolution);
+
+	var_fbneo_allow_depth_32.desc                          = RETRO_DEPTH32_CAT_DESC;
+	var_fbneo_allow_depth_32.info                          = RETRO_DEPTH32_CAT_INFO;
+	vars_systems.push_back(&var_fbneo_allow_depth_32);
+
+	var_fbneo_vertical_mode.desc                           = RETRO_VERTICAL_CAT_DESC;
+	var_fbneo_vertical_mode.info                           = RETRO_VERTICAL_CAT_INFO;
+	var_fbneo_vertical_mode.values[2].value                = RETRO_VERTICAL_VALUE_2;
+	var_fbneo_vertical_mode.values[4].value                = RETRO_VERTICAL_VALUE_4;
+	vars_systems.push_back(&var_fbneo_vertical_mode);
+
+	// Add the frameskip core options
+	if (bLibretroSupportsAudioBuffStatus)
 	{
-		var_fbneo_hiscores.desc = RETRO_HISCORES_CAT_DESC;
-		var_fbneo_hiscores.info = RETRO_HISCORES_CAT_INFO;
-		vars_systems.push_back(&var_fbneo_hiscores);
+		var_fbneo_frameskip_type.desc             = RETRO_FRAMESKIP_DEF_DESC;
+		var_fbneo_frameskip_type.info             = RETRO_FRAMESKIP_DEF_INFO;
+		var_fbneo_frameskip_type.values[1].value  = RETRO_FRAMESKIP_VALUE_1;
+		var_fbneo_frameskip_type.values[2].value  = RETRO_FRAMESKIP_VALUE_2;
+		var_fbneo_frameskip_type.values[3].value  = RETRO_FRAMESKIP_VALUE_3;
+		vars_systems.push_back(&var_fbneo_frameskip_type);
+
+		var_fbneo_frameskip_manual_threshold.desc = RETRO_FSTHRESHOLD_DEF_DESC;
+		var_fbneo_frameskip_manual_threshold.info = RETRO_FSTHRESHOLD_DEF_INFO;
+		vars_systems.push_back(&var_fbneo_frameskip_manual_threshold);
 	}
 
-	if (pgi_diag)
-	{
-		var_fbneo_diagnostic_input.desc             = RETRO_DIAGNOSTIC_CAT_DESC;
-		var_fbneo_diagnostic_input.info             = RETRO_DIAGNOSTIC_CAT_INFO;
-		var_fbneo_diagnostic_input.values[ 0].value = RETRO_DIAGNOSTIC_VALUE_0;
-		var_fbneo_diagnostic_input.values[ 1].value = RETRO_DIAGNOSTIC_VALUE_1;
-		var_fbneo_diagnostic_input.values[ 3].value = RETRO_DIAGNOSTIC_VALUE_3;
-		var_fbneo_diagnostic_input.values[ 5].value = RETRO_DIAGNOSTIC_VALUE_5;
-		var_fbneo_diagnostic_input.values[ 6].value = RETRO_DIAGNOSTIC_VALUE_6;
-		var_fbneo_diagnostic_input.values[ 8].value = RETRO_DIAGNOSTIC_VALUE_8;
-		var_fbneo_diagnostic_input.values[10].value = RETRO_DIAGNOSTIC_VALUE_10;
-		var_fbneo_diagnostic_input.default_value    = RETRO_DIAGNOSTIC_VALUE_1;
-		vars_systems.push_back(&var_fbneo_diagnostic_input);
-	}
+	var_fbneo_fixed_frameskip.desc            = RETRO_FSFIXED_DEF_DESC;
+	var_fbneo_fixed_frameskip.info            = RETRO_FSFIXED_DEF_INFO;
+	var_fbneo_fixed_frameskip.values[0].label = RETRO_FSFIXED_LABEL_0;
+	var_fbneo_fixed_frameskip.values[1].label = RETRO_FSFIXED_LABEL_1;
+	var_fbneo_fixed_frameskip.values[2].label = RETRO_FSFIXED_LABEL_2;
+	var_fbneo_fixed_frameskip.values[3].label = RETRO_FSFIXED_LABEL_3;
+	var_fbneo_fixed_frameskip.values[4].label = RETRO_FSFIXED_LABEL_4;
+	var_fbneo_fixed_frameskip.values[5].label = RETRO_FSFIXED_LABEL_5;
+	vars_systems.push_back(&var_fbneo_fixed_frameskip);
 
+	// Add the Neo Geo core options
 	if (bIsNeogeoCartGame)
 	{
-		// Add the Neo Geo core options
 		if (allow_neogeo_mode)
 		{
 			var_fbneo_neogeo_mode.desc            = RETRO_NGMODE_DEF_DESC;
@@ -1095,55 +1146,6 @@ void set_environment()
 			vars_systems.push_back(&var_fbneo_debug_dip_2_8);
 		}
 	}
-
-	// Frameskip settings
-	if (bLibretroSupportsAudioBuffStatus)
-	{
-		var_fbneo_frameskip_type.desc             = RETRO_FRAMESKIP_DEF_DESC;
-		var_fbneo_frameskip_type.info             = RETRO_FRAMESKIP_DEF_INFO;
-		var_fbneo_frameskip_type.values[1].value  = RETRO_FRAMESKIP_VALUE_1;
-		var_fbneo_frameskip_type.values[2].value  = RETRO_FRAMESKIP_VALUE_2;
-		var_fbneo_frameskip_type.values[3].value  = RETRO_FRAMESKIP_VALUE_3;
-		vars_systems.push_back(&var_fbneo_frameskip_type);
-
-		var_fbneo_frameskip_manual_threshold.desc = RETRO_FSTHRESHOLD_DEF_DESC;
-		var_fbneo_frameskip_manual_threshold.info = RETRO_FSTHRESHOLD_DEF_INFO;
-		vars_systems.push_back(&var_fbneo_frameskip_manual_threshold);
-	}
-
-	var_fbneo_fixed_frameskip.desc            = RETRO_FSFIXED_DEF_DESC;
-	var_fbneo_fixed_frameskip.info            = RETRO_FSFIXED_DEF_INFO;
-	var_fbneo_fixed_frameskip.values[0].label = RETRO_FSFIXED_LABEL_0;
-	var_fbneo_fixed_frameskip.values[1].label = RETRO_FSFIXED_LABEL_1;
-	var_fbneo_fixed_frameskip.values[2].label = RETRO_FSFIXED_LABEL_2;
-	var_fbneo_fixed_frameskip.values[3].label = RETRO_FSFIXED_LABEL_3;
-	var_fbneo_fixed_frameskip.values[4].label = RETRO_FSFIXED_LABEL_4;
-	var_fbneo_fixed_frameskip.values[5].label = RETRO_FSFIXED_LABEL_5;
-	vars_systems.push_back(&var_fbneo_fixed_frameskip);
-
-	// Audio settings
-	if (nGameType != RETRO_GAME_TYPE_NEOCD)
-	{
-		var_fbneo_samplerate.desc = RETRO_SAMPLERATE_DEF_DESC;
-		var_fbneo_samplerate.info = RETRO_SAMPLERATE_DEF_INFO;
-		vars_systems.push_back(&var_fbneo_samplerate);
-	}
-	var_fbneo_sample_interpolation.desc            = RETRO_SAMPLE_INTERPOLATION_DEF_DESC;
-	var_fbneo_sample_interpolation.info            = RETRO_SAMPLE_INTERPOLATION_DEF_INFO;
-	var_fbneo_sample_interpolation.values[1].value = RETRO_SAMPLE_INTERPOLATION_VALUE_1;
-	var_fbneo_sample_interpolation.values[2].value = RETRO_SAMPLE_INTERPOLATION_VALUE_2;
-	var_fbneo_sample_interpolation.default_value   = RETRO_SAMPLE_INTERPOLATION_VALUE_2;
-	vars_systems.push_back(&var_fbneo_sample_interpolation);
-
-	var_fbneo_fm_interpolation.desc                = RETRO_FM_INTERPOLATION_DEF_DESC;
-	var_fbneo_fm_interpolation.info                = RETRO_FM_INTERPOLATION_DEF_INFO;
-	var_fbneo_fm_interpolation.values[1].value     = RETRO_FM_INTERPOLATION_VALUE_1;
-	var_fbneo_fm_interpolation.default_value       = RETRO_FM_INTERPOLATION_VALUE_1;
-	vars_systems.push_back(&var_fbneo_fm_interpolation);
-
-	var_fbneo_lowpass_filter.desc                  = RETRO_LOWPASS_FILTER_DEF_DESC;
-	var_fbneo_lowpass_filter.info                  = RETRO_LOWPASS_FILTER_DEF_INFO;
-	vars_systems.push_back(&var_fbneo_lowpass_filter);
 
 #ifdef FBNEO_DEBUG
 	// Debug settings

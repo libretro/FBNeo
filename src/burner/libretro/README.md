@@ -279,7 +279,7 @@ Here is a list of samples currently in use :
 
 ## Hiscores
 
-Copy [hiscore.dat](https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have the hiscore core option enabled.
+Copy [hiscore.dat](https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have `Quick Menu > Core Options > Hiscores` enabled.
 
 It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for this feature, or `hiscore.dat` might have a missing or broken entry for that romset. You can request support in the issue tracker. 
 
@@ -299,7 +299,7 @@ This core provides support for RetroAchievements, and some were added for popula
 
 ## Dipswitches
 
-They are either directly available from `Quick Menu > Core Options`, or from the service menu after setting its shortcut in the `Diagnostic Input` core option.
+They are either directly available from `Quick Menu > Core Options > DIP Switches`, or from the service menu after setting its shortcut at `Quick Menu > Core Options > Diagnostic Input`.
 
 ## Cheats
 
@@ -307,7 +307,7 @@ This core supports the RetroArch cheat feature with the `.cht` files. However it
 
 * Download the pack of cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip)
 * Uncompress **all of them** into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder (which is **NOT** the same folder as the RetroArch feature with the `.cht` files)
-* Cheats will become available through core options (`Quick Menu > Core Options`, **NOT** `Quick Menu > Cheats`) afterward.
+* Cheats will become available through core options (`Quick Menu > Core Options > Cheat`, **NOT** `Quick Menu > Cheats`) afterward.
 
 ## Multi-language
 
@@ -337,7 +337,7 @@ Rarely you could get a "Failed initializing driver" message, this is something y
 
 A lot of romhacks are supported natively, so your romhack might already be supported under a specific romset name.
 
-For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed and must be disabled by toggling off the `Allow patched romsets` core option if you intend to use RetroAchievements : 
+For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed if you intend to use RetroAchievements and must be disabled by toggling off `Quick Menu > Core Options > Allow patched romsets` : 
 
 #### Using the "patched" folder
 
@@ -347,13 +347,13 @@ For the unsupported romhacks, there are 3 methods, but those romhacks are not al
 #### Using IPS Patches
 
 * Put all IPS patch files (including: driver name directory/**.dat|**.ips) into the `SYSTEM_DIRECTORY/fbneo/ips/` folder.
-* IPS Patch will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
+* IPS Patch will become available through core options (`Quick Menu > Core Options > IPS Patch`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
 * Note : To avoid competing with loaded games for startup privileges, IPS Patches is initially disabled by default.
 
 #### Using RomData
 
 * Put all RomData files (including: driver name directory/**.dat) into the `SYSTEM_DIRECTORY/fbneo/romdata/` folder
-* RomData will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
+* RomData will become available through core options (`Quick Menu > Core Options > RomData`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
 
 Please note that all 3 methods still require that you launch the original non-patched romset, it will be patched/replaced at runtime.
 
@@ -414,7 +414,7 @@ That driver was disabled for now, it didn't meet our quality criteria.
 
 ### Where is the hires dipswitch on vector games ? It seems gone.
 
-It was streamlined into a global `Resolution` core option affecting all vector games at once, with new resolutions available.
+It was streamlined into a global `Video Settings > Resolution` core option affecting all vector games at once, with new resolutions available.
 
 For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
 * for horizontal games, you'll want to use 1440x1080
@@ -432,7 +432,7 @@ If you are wondering why this isn't required for the MAME core, you can find mor
 
 Additionally :
 
-* If you are playing on a vertical screen, you'll want to use the `Vertical Mode` core option to rotate the display for your needs, it should also be possible to rotate display from `Settings > Video > Output > Video Rotation` but that method might handle the aspect ratio incorrectly.
+* If you are playing on a vertical screen, you'll want to use the `Video Settings > Vertical Mode` core option to rotate the display for your needs, it should also be possible to rotate display from `Settings > Video > Output > Video Rotation` but that method might handle the aspect ratio incorrectly.
 * If you are using a bezel pack, make sure it's compatible with FBNeo (apparently, some were written specifically to work with MAME's internal rotation) and to follow its official instructions. In some case it seems enabling `Settings > On-Screen Display > On-Screen Overlay > Auto-Scale Overlay` (`input_overlay_auto_scale = "true"` in `retroarch.cfg`) can help.
 
 ### Why is the music high-pitched, too fast and/or different from what i think it should be ?
@@ -442,7 +442,7 @@ The first question you should be asking yourself is "what am i comparing this to
 If you are comparing this to FBNeo standalone, you must be warned that the libretro port is using different default audio settings. 
 By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.
 
-Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
+Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Video Settings > Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
 Please note that it'll likely cause frame duping if your hardware is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.
 
 ### Why do i get a black screen and/or can't i change bios in neogeo games ?
@@ -501,7 +501,7 @@ Note that rollback netplay with mismatching core versions can also be affected b
 
 Keyboards, especially cheaper ones, are often affected by ghosting, which will prevent some key combinations from working and hinder your experience. You can test your keyboard [here](https://www.microsoft.com/applied-sciences/projects/anti-ghosting-demo).
 
-Additionally, keyboards are kind of unsuitable for arcade emulation, because they allow things that were impossible on real hardware, like pressing opposite directions. This commonly leads to problems while doing special moves involving opposite directions in fighting games. The FBNeo core has a core option called SOCD to mitigate this, and some value might work better than another for your play style.
+Additionally, keyboards are kind of unsuitable for arcade emulation, because they allow things that were impossible on real hardware, like pressing opposite directions. This commonly leads to problems while doing special moves involving opposite directions in fighting games. The FBNeo core has a core option at `Input Settings > SOCD Mode` to mitigate this, and some value might work better than another for your play style.
 
 ### Where is SYSTEM_DIRECTORY ?
 

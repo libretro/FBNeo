@@ -5538,7 +5538,7 @@
 		<description>Dragon Ball Z: Buyuu Retsuden (Hack, New Voices v2)</description>
 		<year>2021</year>
 		<manufacturer>KanonZombie</manufacturer>
-		<rom name="Dragon Ball Z - Buyuu Retsuden (New Voices v2)(2021)(KanonZombie).bin" size="2321812" crc="1e91792d"/>
+		<rom name="Dragon Ball Z - Buyuu Retsuden - New Voices v2 (2021)(KanonZombie).bin" size="2321812" crc="1e91792d"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5576,7 +5576,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dslayed" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Dragon Slayer - Eiyuu Densetsu (Japan)</description>
+		<description>Dragon Slayer: The Legend of Heroes (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Dragon Slayer - Eiyuu Densetsu (Japan)(1994)(Sega).bin" size="2097152" crc="01bc1604"/>
@@ -5584,7 +5584,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dslayed2" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Dragon Slayer - Eiyuu Densetsu II (Japan)</description>
+		<description>Dragon Slayer: The Legend of Heroes II (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Dragon Slayer - Eiyuu Densetsu II (Japan)(1995)(Sega).bin" size="2097152" crc="46924dc3"/>
@@ -5592,10 +5592,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="shangh3" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Dragon's Eye Plus - Shanghai III (Japan)</description>
+		<description>Dragon's Eye + Shanghai 3 (Japan)</description>
 		<year>1991</year>
 		<manufacturer>Home Data</manufacturer>
-		<rom name="Dragon's Eye Plus - Shanghai III (Japan)(1991)(Home Data).bin" size="262144" crc="81f0c3cf"/>
+		<rom name="Dragon's Eye Plus + Shanghai 3 (Japan)(1991)(Home Data).bin" size="262144" crc="81f0c3cf"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -7544,7 +7544,7 @@
 	<game name="galagapp" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Galaga (Pocket Player Pro)</description>
 		<year>2023</year>
-		<manufacturer>My Arcade</manufacturer>
+		<manufacturer>My Arcade - BNEI</manufacturer>
 		<rom name="Galaga (2023)(My Arcade).bin" size="131072" crc="eeca829d"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
@@ -7569,7 +7569,7 @@
 	<game name="galaxianpp" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Galaxian (Pocket Player Pro)</description>
 		<year>2023</year>
-		<manufacturer>My Arcade</manufacturer>
+		<manufacturer>My Arcade - BNEI</manufacturer>
 		<rom name="Galaxian (Rev 1)(2023)(My Arcade).bin" size="65536" crc="1608a3a9"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
@@ -9250,7 +9250,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="jb007" sourcefile="megadrive/d_megadrive.cpp">
-		<description>James Bond 007 - The Duel (Euro, Rev. A)</description>
+		<description>James Bond 007: The Duel (Euro, Rev. A)</description>
 		<year>1992</year>
 		<manufacturer>Domark</manufacturer>
 		<rom name="James Bond 007 - The Duel (Euro, Rev A)(1992)(Domark).bin" size="524288" crc="66635364"/>
@@ -9259,7 +9259,7 @@
 	</game>
 	<game name="jb007s" cloneof="jb007" romof="jb007" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>James Bond 007 - The Duel (Hack, Spanish)</description>
+		<description>James Bond 007: The Duel (Hack, Spanish)</description>
 		<year>2019</year>
 		<manufacturer>Wave</manufacturer>
 		<rom name="James Bond 007 - The Duel T-Spa (2019)(Wave).bin" size="524288" crc="4daf3d0d"/>
@@ -9267,7 +9267,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="jb007j" cloneof="jb007" romof="jb007" sourcefile="megadrive/d_megadrive.cpp">
-		<description>James Bond 007 - The Duel (Japan)</description>
+		<description>James Bond 007: The Duel (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Tengen</manufacturer>
 		<rom name="James Bond 007 - The Duel (Japan)(1993)(Tengen).bin" size="524288" crc="aeb4b262"/>
@@ -9275,7 +9275,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="jb007u" cloneof="jb007" romof="jb007" sourcefile="megadrive/d_megadrive.cpp">
-		<description>James Bond 007 - The Duel (USA)</description>
+		<description>James Bond 007: The Duel (USA)</description>
 		<year>1992</year>
 		<manufacturer>Domark</manufacturer>
 		<rom name="James Bond 007 - The Duel (USA)(1992)(Domark).bin" size="524288" crc="4e614548"/>
@@ -9831,7 +9831,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="kickoff3" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Kick Off 3 - European Challenge (Euro)</description>
+		<description>Kick Off 3: European Challenge (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Vic Tokai</manufacturer>
 		<rom name="Kick Off 3 - European Challenge (Euro)(1994)(Vic Tokai).bin" size="1048576" crc="bc37401a"/>
@@ -9961,7 +9961,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="kingsal" sourcefile="megadrive/d_megadrive.cpp">
-		<description>King Salmon - The Big Catch (USA)</description>
+		<description>King Salmon: The Big Catch (USA)</description>
 		<year>1993</year>
 		<manufacturer>Vic Tokai</manufacturer>
 		<rom name="King Salmon - The Big Catch (USA)(1993)(Vic Tokai).bin" size="524288" crc="f516e7d9"/>
@@ -10449,7 +10449,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="lemming2" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Lemmings 2 - The Tribes (Euro)</description>
+		<description>Lemmings 2: The Tribes (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Psygnosis</manufacturer>
 		<rom name="Lemmings 2 - The Tribes (Euro)(1994)(Psygnosis).bin" size="2097152" crc="741eb624"/>
@@ -10457,7 +10457,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="lemming2u" cloneof="lemming2" romof="lemming2" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Lemmings 2 - The Tribes (USA)</description>
+		<description>Lemmings 2: The Tribes (USA)</description>
 		<year>1994</year>
 		<manufacturer>Psygnosis</manufacturer>
 		<rom name="Lemmings 2 - The Tribes (USA)(1994)(Psygnosis).bin" size="2097152" crc="de59a3a3"/>
@@ -10493,7 +10493,7 @@
 	</game>
 	<game name="le2" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Lightgun 'The Justifier' compatible game</comment>
-		<description>Lethal Enforcers II - Gun Fighters (Euro)</description>
+		<description>Lethal Enforcers II: Gun Fighters (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Lethal Enforcers II - Gun Fighters (Euro)(1994)(Konami).bin" size="2097152" crc="4bfe045c"/>
@@ -10502,7 +10502,7 @@
 	</game>
 	<game name="le2u" cloneof="le2" romof="le2" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Lightgun 'The Justifier' compatible game</comment>
-		<description>Lethal Enforcers II - Gun Fighters (USA)</description>
+		<description>Lethal Enforcers II: Gun Fighters (USA)</description>
 		<year>1994</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Lethal Enforcers II - Gun Fighters (USA)(1994)(Konami).bin" size="2097152" crc="e5fdd28b"/>
@@ -12603,7 +12603,7 @@
 	<game name="mspacmanpp" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Ms. Pac-Man (Pocket Player Pro)</description>
 		<year>2023</year>
-		<manufacturer>My Arcade</manufacturer>
+		<manufacturer>My Arcade - BNEI</manufacturer>
 		<rom name="Ms. Pac-Man (2023)(My Arcade).bin" size="524288" crc="9638da23"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
@@ -13905,7 +13905,7 @@
 	<game name="pacmanpp" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Pac-Man (Pocket Player Pro)</description>
 		<year>2023</year>
-		<manufacturer>My Arcade</manufacturer>
+		<manufacturer>My Arcade - BNEI</manufacturer>
 		<rom name="Pac-Man (2023)(My Arcade).bin" size="262144" crc="c6f8d28c"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>

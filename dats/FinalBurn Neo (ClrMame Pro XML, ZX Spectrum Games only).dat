@@ -1845,6 +1845,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="arcticonslt" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Arctic Onslaught (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>The Death Squad</manufacturer>
+		<rom name="Arctic Onslaught 48K (2026)(The Death Squad).tap" size="22526" crc="87dc84a8"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="area51rie128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Area 51: Roswell Incident (English) (128K) (HB)</description>
@@ -3547,11 +3557,20 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="blindpanic" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Blind Panic (48K)</description>
+		<year>1988</year>
+		<manufacturer>Martech Games - Your Sinclair</manufacturer>
+		<rom name="Blind Panic 48K (1988)(Martech Games - Your Sinclair).tzx" size="41610" crc="710e7056"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="blinkys" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Blinky's Scary School (128K)</description>
+		<description>Blinky's Scary School (48K-128K)</description>
 		<year>1990</year>
 		<manufacturer>Zeppelin Games</manufacturer>
-		<rom name="Blinky's Scary School 128K (1990)(Zeppelin Games).tap" size="53665" crc="6fcf88b5"/>
+		<rom name="Blinky's Scary School 48K-128K (1990)(Zeppelin Games).tap" size="53665" crc="6fcf88b5"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -14356,6 +14375,15 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="infiltrator" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Infiltrator (48K)</description>
+		<year>1986</year>
+		<manufacturer>U.S. Gold</manufacturer>
+		<rom name="Infiltrator 48K (1986)(U.S. Gold).tap" size="152377" crc="0ccee7c6"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="innsmouthen" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Innsmouth (English) (48K) (HB, v1.1)</description>
@@ -16383,21 +16411,30 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="lastmsnusg" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Last Mission (48K)</description>
+		<year>1987</year>
+		<manufacturer>U.S. Gold</manufacturer>
+		<rom name="Last Mission 48K (1987)(U.S. Gold).tzx" size="52084" crc="32f61e82"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="lastmission" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Last Mission, The (Spanish) (128K)</description>
+		<description>Last Mission, The (Spanish) (48K-128K)</description>
 		<year>1987</year>
 		<manufacturer>Opera Soft</manufacturer>
-		<rom name="Last Mission, The ES 128K (1987)(Opera Soft).tap" size="45998" crc="2e93fbe9"/>
+		<rom name="Last Mission, The ES 48K-128K (1987)(Opera Soft).tap" size="45998" crc="2e93fbe9"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="lninja2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Last Ninja 2: Back with a Vengeance (128K)</description>
+		<description>Last Ninja 2: Back with a Vengeance (48K-128K)</description>
 		<year>1988</year>
 		<manufacturer>System 3</manufacturer>
-		<rom name="Last Ninja 2 - Back with a Vengeance 128K (1988)(System 3).tap" size="233900" crc="a6be2baa"/>
+		<rom name="Last Ninja 2 - Back with a Vengeance 48K-128K (1988)(System 3).tap" size="233900" crc="a6be2baa"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -16493,10 +16530,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="ledstorm" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>LED Storm ~ Rally 2011 (128K)</description>
+		<description>LED Storm ~ Rally 2011 (48K-128K)</description>
 		<year>1988</year>
 		<manufacturer>Go!</manufacturer>
-		<rom name="LED Storm 128K (1988)(Go!).tap" size="86247" crc="d20b9e67"/>
+		<rom name="LED Storm 48K-128K (1988)(Go!).tap" size="86247" crc="d20b9e67"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -16712,6 +16749,17 @@
 		<year>1987</year>
 		<manufacturer>Opera Soft</manufacturer>
 		<rom name="Livingstone, I Presume 128K (1987)(Opera Soft).tap" size="45998" crc="359fbe3c"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="locknchase" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Lock'n'Chase (48K-128K)</description>
+		<year>2025</year>
+		<manufacturer>Bob's Stuff</manufacturer>
+		<rom name="Lock'n'Chase 48K-128K (2025)(Bob's Stuff).tap" size="47062" crc="5957d7a1"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -23702,10 +23750,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="retofjedi" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Return of the Jedi (128K)</description>
+		<description>Return of the Jedi (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Domark</manufacturer>
-		<rom name="Return of the Jedi 128K (1989)(Domark).tap" size="37222" crc="dccfc93b"/>
+		<rom name="Return of the Jedi 48K-128K (1989)(Domark).tzx" size="40755" crc="b6c903b1"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -28545,21 +28593,21 @@
 		<driver status="good"/>
 	</game>
 	<game name="target" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Target 48K</description>
+		<description>Target (48K)</description>
 		<year>1989</year>
 		<manufacturer>Martech Games</manufacturer>
-		<rom name="Target 48K (1989)(Martech Games).tap" size="26777" crc="5e01d8e8"/>
+		<rom name="Target 48K (1989)(Martech Games).tzx" size="26811" crc="42cf5070"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="tarzan" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Tarzan (128K)</description>
+	<game name="tarzan" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>AY Sound supported</comment>
+		<description>Tarzan (48K)</description>
 		<year>1986</year>
 		<manufacturer>Martech Games</manufacturer>
-		<rom name="Tarzan 128K (1986)(Martech Games).tap" size="56277" crc="e95f4ac1"/>
-		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
-		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<rom name="Tarzan 48K-128K (1986)(Martech Games).tzx" size="58197" crc="5e543ef3"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
