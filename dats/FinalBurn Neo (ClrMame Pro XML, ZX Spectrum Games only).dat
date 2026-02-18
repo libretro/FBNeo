@@ -2809,7 +2809,7 @@
 		<description>Batman (48K-128K)</description>
 		<year>1986</year>
 		<manufacturer>Ocean Software</manufacturer>
-		<rom name="Batman 48K-128K (1986)(Ocean).tap" size="47819" crc="898d7592"/>
+		<rom name="Batman 48K-128K (1986)(Ocean).tzx" size="49822" crc="ec8eac1f"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

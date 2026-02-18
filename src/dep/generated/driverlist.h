@@ -875,6 +875,7 @@ DRV		BurnDrvAmbushj;
 DRV		BurnDrvAmbushv;
 DRV		BurnDrvAmbush;
 DRV		BurnDrvAnteaterg;
+DRV		BurnDrvsnes_Ameultraquizj;
 DRV		BurnSpecAm3dpool;
 DRV		BurnDrvsms_ameribb;
 DRV		BurnDrvsnes_Amebtldome;
@@ -5419,6 +5420,7 @@ DRV		BurnSpecDjpuff;
 DRV		BurnSpecDjpuff23;
 DRV		BurnDrvsnes_Rambisrevenge;
 DRV		BurnDrvsnes_Rattleroyale;
+DRV		BurnDrvsnes_Squawksedition;
 DRV		BurnDrvMSX_dothesame;
 DRV		BurnDrvsms_dothesame;
 DRV		BurnDrvDorunrunc;
@@ -7414,12 +7416,12 @@ DRV		BurnDrvmd_flintscp;
 DRV		BurnDrvmd_flintu;
 DRV		BurnDrvsnes_Flintstones;
 DRV		BurnDrvnes_flintresdinhopc;
-DRV		BurnDrvsnes_Flintstonestsme;
-DRV		BurnDrvsnes_Flintstonestsmj;
-DRV		BurnDrvsnes_Flintstonestsm;
 DRV		BurnDrvnes_flintresdinhopj;
 DRV		BurnDrvnes_flintresdinhop;
 DRV		BurnDrvnes_flintsuratdinpe;
+DRV		BurnDrvsnes_Flintstonestsme;
+DRV		BurnDrvsnes_Flintstonestsmj;
+DRV		BurnDrvsnes_Flintstonestsm;
 DRV		BurnDrvsg1k_segaflipt;
 DRV		BurnDrvFlipjack;
 DRV		BurnDrvMSX_flipper;
@@ -10550,6 +10552,7 @@ DRV		BurnDrvfds_kalinnotsurugij;
 DRV		BurnDrvfds_kalinnotsurugi;
 DRV		BurnDrvKamakazi3;
 DRV		BurnDrvnes_kamenoong;
+DRV		BurnDrvsnes_Kamekisland;
 DRV		BurnDrvnes_kamennoninaka;
 DRV		BurnDrvnes_kamennoninhan;
 DRV		BurnDrvsnes_Kamenrider;
@@ -10841,9 +10844,9 @@ DRV		BurnDrvsnes_Kirbygt;
 DRV		BurnDrvnes_kirbyshlw;
 DRV		BurnDrvmd_kishiden;
 DRV		BurnDrvgg_zenki;
-DRV		BurnDrvsnes_Kdzbr;
 DRV		BurnDrvsnes_Kdzdr;
 DRV		BurnDrvsnes_Kdztm;
+DRV		BurnDrvsnes_Kdzbr;
 DRV		BurnDrvmd_kissshot;
 DRV		BurnDrvnes_kiterdai;
 DRV		BurnDrvnes_kiterdaij;
@@ -22561,6 +22564,7 @@ DRV		BurnDrvmd_trampter;
 #if defined FBNEO_DEBUG
 DRV		BurnDrvTranqgun;		// No sound
 #endif
+DRV		BurnDrvsnes_Ameultraquizte;
 DRV		BurnDrvMSX_transball;
 DRV		BurnDrvsms_transbot;
 DRV		BurnDrvsms_transbotc;
@@ -25609,6 +25613,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvAmbushv,			// Ambush (Volt Electronics)
 	&BurnDrvAmbush,				// Ambush
 	&BurnDrvAnteaterg,			// Ameisenbaer (German)
+	&BurnDrvsnes_Ameultraquizj,	// America Oudan Ultra Quiz (Japan)
 	&BurnSpecAm3dpool,			// American 3D Pool (48K)
 	&BurnDrvsms_ameribb,		// American Baseball (Euro, Brazil)
 	&BurnDrvsnes_Amebtldome,	// American Battle Dome (Japan)
@@ -28455,7 +28460,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_chitesenvaz,	// Chitei Senkuu Vazolder (Japan)
 	&BurnDrvfds_chitetaiord,	// Chitei Tairiku Ordola (Japan)
 	&BurnDrvnes_chiyonoooi,		// Chiyonofuji no Ooichou (Japan)
-	&BurnDrvsnes_Choanikite,	// Cho Aniki - Buff Battle Ballad (Hack, English v1.01)
+	&BurnDrvsnes_Choanikite,	// Cho Aniki: Buff Battle Ballad (Hack, English v1.01)
 	&BurnDrvChokChok,			// Choky! Choky!
 	&BurnDrvChoplift,			// Choplifter (8751 315-5151)
 	&BurnDrvChopliftbl,			// Choplifter (bootleg)
@@ -28472,9 +28477,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvChopliftu,			// Choplifter (unprotected)
 	&BurnDrvsms_chopliftp,		// Choplifter (USA, Prototype)
 	&BurnDrvgg_choplft3,		// Choplifter III (USA)
-	&BurnDrvsnes_Choplift3e,	// Choplifter III - Rescue-Survive (Euro)
-	&BurnDrvsnes_Choplift3j,	// Choplifter III - Rescue-Survive (Japan)
-	&BurnDrvsnes_Choplift3,		// Choplifter III - Rescue-Survive (USA)
+	&BurnDrvsnes_Choplift3e,	// Choplifter III: Rescue-Survive (Euro)
+	&BurnDrvsnes_Choplift3j,	// Choplifter III: Rescue-Survive (Japan)
+	&BurnDrvsnes_Choplift3,		// Choplifter III: Rescue-Survive (USA)
 	&BurnDrvcv_choplift,		// Choplifter! (USA)
 	&BurnDrvMSX_Chopper,		// Chopper (Euro)
 	&BurnSpecChopdef,			// Chopper Defence (48K) (HB, v1.2)
@@ -28486,7 +28491,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_choroq,			// Choro Q (Japan)
 	&BurnDrvMSX_choroqa,		// Choro Q (Japan, Alt)
 	&BurnDrvMSX_choroqk,		// Choro Q (Korea) (Unl)
-	&BurnDrvsnes_Chouanikij,	// Chou Aniki - Bakuretsu Rantou Hen (Japan)
+	&BurnDrvsnes_Chouanikij,	// Chou Aniki: Bakuretsu Rantou Hen (Japan)
 	&BurnDrvmd_miracle9,		// Chou Kyuukai Miracle Nine (Japan)
 	&BurnDrvsnes_Dorabocchan,	// Chou Makai Taisen! Dorabocchan (Japan)
 	&BurnDrvsnes_Choumakaimura,	// Chou Makaimura (Japan)
@@ -29761,7 +29766,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Demolman,		// Demolition Man (USA)
 	&BurnDrvmd_demomanp,		// Demolition Man (USA, Prototype) [no comment, NOT WORKING]
 	&BurnDrvcv_Demoattackna,	// Demon Attack & New Atlantis (HB, v1.2)
-	&BurnDrvsnes_Dczbrte,		// Demon Child Zenki - Battle Raiden (Hack, English)
+	&BurnDrvsnes_Dczbrte,		// Demon Child Zenki: Battle Raiden (Hack, English)
 	&BurnDrvMSX_dcrystal,		// Demon Crystal, The (Japan)
 	&BurnDrvMSX_demoncrystl,	// Demon Crystal, The (Japan, Alt)
 	&BurnDrvnes_demondistrict,	// Demon District (HB)
@@ -29772,7 +29777,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvDmnfrntpcb,			// Demon Front V1.1 / Moyu Zhanxian V1.1 (68k label V107KR, ROM M107KR 11/03/03) (ARM label V106KR, ROM 10/16/03 S106KR) (JAMMA PCB)
 	&BurnSpecDemonpages,		// Demon Pages (128K) (HB)
 	&BurnDrvnes_demonsword,		// Demon Sword (USA)
-	&BurnDrvsnes_Demonsblazon,	// Demon's Blazon - Makaimura Monshou Hen (Japan)
+	&BurnDrvsnes_Demonsblazon,	// Demon's Blazon: Makaimura Monshou Hen (Japan)
 	&BurnDrvsnes_Demonscreste,	// Demon's Crest (Euro)
 	&BurnDrvsnes_Demonscresttp,	// Demon's Crest (Hack, Portuguese v1.1)
 	&BurnDrvsnes_Demonscrest,	// Demon's Crest (USA)
@@ -30153,6 +30158,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecDjpuff23,			// DJ Puff's Volcanic Erruption - Recoloured (128K) (Hack)
 	&BurnDrvsnes_Rambisrevenge,	// DKC2: Rambis Revenge (Hack)
 	&BurnDrvsnes_Rattleroyale,	// DKC2: Rattle Royale (Hack)
+	&BurnDrvsnes_Squawksedition,// DKC2: Squawks Edition (Hack)
 	&BurnDrvMSX_dothesame,		// Do the Same (HB, v1.1)
 	&BurnDrvsms_dothesame,		// Do The Same (HB, v1.40)
 	&BurnDrvDorunrunc,			// Do! Run Run (Do's Castle hardware, set 1)
@@ -32148,12 +32154,12 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_flintu,			// Flintstones, The (USA)
 	&BurnDrvsnes_Flintstones,	// Flintstones, The (USA)
 	&BurnDrvnes_flintresdinhopc,// Flintstones, The - The Rescue of Dino & Hoppy (Hack, Chinese)
-	&BurnDrvsnes_Flintstonestsme,// Flintstones, The - The Treasure of Sierra Madrock (Euro)
-	&BurnDrvsnes_Flintstonestsmj,// Flintstones, The - The Treasure of Sierra Madrock (Japan)
-	&BurnDrvsnes_Flintstonestsm,// Flintstones, The - The Treasure of Sierra Madrock (USA)
 	&BurnDrvnes_flintresdinhopj,// Flintstones, The: The Rescue of Dino & Hoppy (Japan)
 	&BurnDrvnes_flintresdinhop,	// Flintstones, The: The Rescue of Dino & Hoppy (USA)
 	&BurnDrvnes_flintsuratdinpe,// Flintstones, The: The Surprise at Dinosaur Peak! (USA)
+	&BurnDrvsnes_Flintstonestsme,// Flintstones, The: The Treasure of Sierra Madrock (Euro)
+	&BurnDrvsnes_Flintstonestsmj,// Flintstones, The: The Treasure of Sierra Madrock (Japan)
+	&BurnDrvsnes_Flintstonestsm,// Flintstones, The: The Treasure of Sierra Madrock (USA)
 	&BurnDrvsg1k_segaflipt,		// Flipper (Taiwan)
 	&BurnDrvFlipjack,			// Flipper Jack
 	&BurnDrvMSX_flipper,		// Flipper Slipper (Japan)
@@ -35284,6 +35290,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvfds_kalinnotsurugi,	// Kalin no Tsurugi ~ Sword of Kalin, The (Hack, English)
 	&BurnDrvKamakazi3,			// Kamakazi III (hack of 'Super Galaxians')
 	&BurnDrvnes_kamenoong,		// Kame no Ongaeshi - Urashima Densetsu (Japan)
+	&BurnDrvsnes_Kamekisland,	// Kamek's Island (GlobalHack, v1.7)
 	&BurnDrvnes_kamennoninaka,	// Kamen no Ninja Akakage (Japan)
 	&BurnDrvnes_kamennoninhan,	// Kamen no Ninja Hanamaru (Japan)
 	&BurnDrvsnes_Kamenrider,	// Kamen Rider (Japan, Rev. 1)
@@ -35575,9 +35582,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_kirbyshlw,		// Kirby's Halloween Adventure (Hack, v1.4)
 	&BurnDrvmd_kishiden,		// Kishi Densetsu (Japan)
 	&BurnDrvgg_zenki,			// Kishin Douji Zenki (Japan)
-	&BurnDrvsnes_Kdzbr,			// Kishin Douji Zenki - Battle Raiden (Japan)
 	&BurnDrvsnes_Kdzdr,			// Kishin Douji Zenki - Denei Raibu (Japan)
 	&BurnDrvsnes_Kdztm,			// Kishin Douji Zenki - Tenchi Meidou (Japan)
+	&BurnDrvsnes_Kdzbr,			// Kishin Douji Zenki: Battle Raiden (Japan)
 	&BurnDrvmd_kissshot,		// Kiss Shot (Japan, SegaNet)
 	&BurnDrvnes_kiterdai,		// Kiteretsu Daihyakka (Hack, English)
 	&BurnDrvnes_kiterdaij,		// Kiteretsu Daihyakka (Japan)
@@ -41910,7 +41917,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_rnrracinu,		// Rock n' Roll Racing (USA)
 	&BurnDrvsnes_Rrracing,		// Rock N' Roll Racing (USA)
 	&BurnDrvsnes_Rrracingdemo,	// Rock N' Roll Racing (USA, Demo)
-	&BurnDrvsnes_Rrracingart,	// Rock N' Roll Racing - Alternate Race Tracks (Hack)
+	&BurnDrvsnes_Rrracingart,	// Rock N' Roll Racing - Alternate Race Tracks (Hack, v1.2)
 	&BurnDrvnes_roshambo,		// Rock Paper Scissors Lizard Sbock (HB, v0.9b)
 	&BurnSpecrocksham,			// Rock Star Ate my Hamster (128K)
 	&BurnSpecRockstargoesbizarre,// Rock Star Goes Bizarre (128K)
@@ -42885,7 +42892,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_ragnacenc,		// Shin Souseiki Ragnacenty (Hack, Chinese)
 	&BurnDrvmd_ragnacen,		// Shin Souseiki Ragnacenty (Japan)
 	&BurnDrvmd_ragnacenp,		// Shin Souseiki Ragnacenty (Japan, Prototype)
-	&BurnDrvsnes_Stfuturepastj,	// Shin Star Trek - Ooinaru Isan IFD no Nazo o Oe (Japan)
+	&BurnDrvsnes_Stfuturepastj,	// Shin Star Trek: Ooinaru Isan IFD no Nazo o Oe (Japan)
 	&BurnDrvMikiek,				// Shin-ip Sawon - Seok Dol-i
 	&BurnDrvMSX_sinbad,			// Shindobaddo Nanatsu no Bouken (Japan)
 	&BurnDrvTshingen,			// Shingen Samurai-Fighter (Japan, English)
@@ -44183,14 +44190,14 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvStartrkd,			// Star Trek (bootleg of Defender)
 	&BurnDrvStartrks,			// Star Trek (Head On hardware)
 	&BurnDrvnes_startre25tann,	// Star Trek - 25th Anniversary (USA)
-	&BurnDrvsnes_Stcrosstimee,	// Star Trek - Deep Space Nine - Crossroads of Time (Euro)
-	&BurnDrvsnes_Stcrosstime,	// Star Trek - Deep Space Nine - Crossroads of Time (USA)
-	&BurnDrvsnes_Ststarfleete,	// Star Trek - Starfleet Academy - Starship Bridge Simulator (Euro, English)
-	&BurnDrvsnes_Ststarfleetg,	// Star Trek - Starfleet Academy - Starship Bridge Simulator (Euro, German)
-	&BurnDrvsnes_Ststarfleet,	// Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)
+	&BurnDrvsnes_Stcrosstimee,	// Star Trek - Deep Space Nine: Crossroads of Time (Euro)
+	&BurnDrvsnes_Stcrosstime,	// Star Trek - Deep Space Nine: Crossroads of Time (USA)
+	&BurnDrvsnes_Ststarfleete,	// Star Trek - Starfleet Academy: Starship Bridge Simulator (Euro, English)
+	&BurnDrvsnes_Ststarfleetg,	// Star Trek - Starfleet Academy: Starship Bridge Simulator (Euro, German)
+	&BurnDrvsnes_Ststarfleet,	// Star Trek - Starfleet Academy: Starship Bridge Simulator (USA)
 	&BurnDrvnes_startrenexgen,	// Star Trek - The Next Generation (USA)
-	&BurnDrvsnes_Stfuturepaste,	// Star Trek - The Next Generation - Future's Past (Euro)
-	&BurnDrvsnes_Stfuturepast,	// Star Trek - The Next Generation - Future's Past (USA)
+	&BurnDrvsnes_Stfuturepaste,	// Star Trek - The Next Generation: Future's Past (Euro)
+	&BurnDrvsnes_Stfuturepast,	// Star Trek - The Next Generation: Future's Past (USA)
 	&BurnDrvgg_stgbeyn,			// Star Trek Generations - Beyond the Nexus (Euro, USA)
 	&BurnDrvnes_startrevfinfr,	// Star Trek V - The Final Frontier (Prototype)
 	&BurnDrvmd_stds9,			// Star Trek: Deep Space Nine - Crossroads of Time (Euro)
@@ -47295,6 +47302,7 @@ static struct BurnDriver* pDriver[] = {
 #if defined FBNEO_DEBUG
 	&BurnDrvTranqgun,			// Tranquillizer Gun [No sound]
 #endif
+	&BurnDrvsnes_Ameultraquizte,// Trans-America Ultra Quiz (Hack, English v1.1)
 	&BurnDrvMSX_transball,		// Transball (HB, v1.3.2)
 	&BurnDrvsms_transbot,		// TransBot (Euro, USA, Brazil)
 	&BurnDrvsms_transbotc,		// TransBot (Euro, USA, Brazil, Sega Card)
@@ -50339,6 +50347,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "ambushv", "pre90s/d_ambush.cpp"},
 	{ "ambush", "pre90s/d_ambush.cpp"},
 	{ "anteaterg", "galaxian/d_galaxian.cpp"},
+	{ "snes_ameultraquizj", "snes/d_snes.cpp"},
 	{ "spec_am3dpool", "spectrum/d_spectrum.cpp"},
 	{ "sms_ameribb", "sms/d_sms.cpp"},
 	{ "snes_amebtldome", "snes/d_snes.cpp"},
@@ -54851,6 +54860,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_djpuff23", "spectrum/d_spectrum.cpp"},
 	{ "snes_rambisrevenge", "snes/d_snes.cpp"},
 	{ "snes_rattleroyale", "snes/d_snes.cpp"},
+	{ "snes_squawksedition", "snes/d_snes.cpp"},
 	{ "msx_dothesame", "msx/d_msx.cpp"},
 	{ "sms_dothesame", "sms/d_sms.cpp"},
 	{ "dorunrunc", "pre90s/d_docastle.cpp"},
@@ -56836,12 +56846,12 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_flintu", "megadrive/d_megadrive.cpp"},
 	{ "snes_flintstones", "snes/d_snes.cpp"},
 	{ "nes_flintresdinhopc", "nes/d_nes.cpp"},
-	{ "snes_flintstonestsme", "snes/d_snes.cpp"},
-	{ "snes_flintstonestsmj", "snes/d_snes.cpp"},
-	{ "snes_flintstonestsm", "snes/d_snes.cpp"},
 	{ "nes_flintresdinhopj", "nes/d_nes.cpp"},
 	{ "nes_flintresdinhop", "nes/d_nes.cpp"},
 	{ "nes_flintsuratdinpe", "nes/d_nes.cpp"},
+	{ "snes_flintstonestsme", "snes/d_snes.cpp"},
+	{ "snes_flintstonestsmj", "snes/d_snes.cpp"},
+	{ "snes_flintstonestsm", "snes/d_snes.cpp"},
 	{ "sg1k_segaflipt", "sg1000/d_sg1000.cpp"},
 	{ "flipjack", "pre90s/d_flipjack.cpp"},
 	{ "msx_flipper", "msx/d_msx.cpp"},
@@ -59946,6 +59956,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "fds_kalinnotsurugi", "nes/d_nes.cpp"},
 	{ "kamakazi3", "galaxian/d_galaxian.cpp"},
 	{ "nes_kamenoong", "nes/d_nes.cpp"},
+	{ "snes_kamekisland", "snes/d_snes.cpp"},
 	{ "nes_kamennoninaka", "nes/d_nes.cpp"},
 	{ "nes_kamennoninhan", "nes/d_nes.cpp"},
 	{ "snes_kamenrider", "snes/d_snes.cpp"},
@@ -60233,9 +60244,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_kirbyshlw", "nes/d_nes.cpp"},
 	{ "md_kishiden", "megadrive/d_megadrive.cpp"},
 	{ "gg_zenki", "sms/d_sms.cpp"},
-	{ "snes_kdzbr", "snes/d_snes.cpp"},
 	{ "snes_kdzdr", "snes/d_snes.cpp"},
 	{ "snes_kdztm", "snes/d_snes.cpp"},
+	{ "snes_kdzbr", "snes/d_snes.cpp"},
 	{ "md_kissshot", "megadrive/d_megadrive.cpp"},
 	{ "nes_kiterdai", "nes/d_nes.cpp"},
 	{ "nes_kiterdaij", "nes/d_nes.cpp"},
@@ -71847,6 +71858,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_escnormandys", "spectrum/d_spectrum.cpp"},
 	{ "md_trampter", "megadrive/d_megadrive.cpp"},
 	{ "tranqgun", "pre90s/d_vicdual.cpp"},
+	{ "snes_ameultraquizte", "snes/d_snes.cpp"},
 	{ "msx_transball", "msx/d_msx.cpp"},
 	{ "sms_transbot", "sms/d_sms.cpp"},
 	{ "sms_transbotc", "sms/d_sms.cpp"},

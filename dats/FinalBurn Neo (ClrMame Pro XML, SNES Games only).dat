@@ -767,6 +767,14 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="ameultraquizj" cloneof="ameultraquizte" romof="ameultraquizte" sourcefile="snes/d_snes.cpp">
+		<description>America Oudan Ultra Quiz (Japan)</description>
+		<year>1992</year>
+		<manufacturer>Tomy</manufacturer>
+		<rom name="America Oudan Ultra Quiz (J)(1992)(Tomy).sfc" size="1048576" crc="9624e6ed"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="amebtldome" sourcefile="snes/d_snes.cpp">
 		<description>American Battle Dome (Japan)</description>
 		<year>1995</year>
@@ -2989,7 +2997,7 @@
 	</game>
 	<game name="choanikite" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Cho Aniki - Buff Battle Ballad (Hack, English v1.01)</description>
+		<description>Cho Aniki: Buff Battle Ballad (Hack, English v1.01)</description>
 		<year>2023</year>
 		<manufacturer>Stardust Crusaders</manufacturer>
 		<rom name="Cho Aniki - Buff Battle Ballad T-Eng v1.01 (2023)(Stardust Crusaders).sfc" size="2621440" crc="e6cbafe9"/>
@@ -2997,7 +3005,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="choplift3e" cloneof="choplift3" romof="choplift3" sourcefile="snes/d_snes.cpp">
-		<description>Choplifter III - Rescue-Survive (Euro)</description>
+		<description>Choplifter III: Rescue-Survive (Euro)</description>
 		<year>1993</year>
 		<manufacturer>Beam Software</manufacturer>
 		<rom name="Choplifter III - Rescue-Survive (E)(1993)(Beam Software).sfc" size="524288" crc="788e42c9"/>
@@ -3005,7 +3013,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="choplift3j" cloneof="choplift3" romof="choplift3" sourcefile="snes/d_snes.cpp">
-		<description>Choplifter III - Rescue-Survive (Japan)</description>
+		<description>Choplifter III: Rescue-Survive (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Beam Software</manufacturer>
 		<rom name="Choplifter III - Rescue-Survive (J)(1993)(Beam Software).sfc" size="524288" crc="ad26cc9e"/>
@@ -3013,7 +3021,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="choplift3" sourcefile="snes/d_snes.cpp">
-		<description>Choplifter III - Rescue-Survive (USA)</description>
+		<description>Choplifter III: Rescue-Survive (USA)</description>
 		<year>1993</year>
 		<manufacturer>Beam Software</manufacturer>
 		<rom name="Choplifter III - Rescue-Survive (U)(1993)(Beam Software).sfc" size="524288" crc="1d2eae52"/>
@@ -3021,7 +3029,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="chouanikij" cloneof="choanikite" romof="choanikite" sourcefile="snes/d_snes.cpp">
-		<description>Chou Aniki - Bakuretsu Rantou Hen (Japan)</description>
+		<description>Chou Aniki: Bakuretsu Rantou Hen (Japan)</description>
 		<year>1995</year>
 		<manufacturer>NCS - Masaya Games</manufacturer>
 		<rom name="Chou Aniki - Bakuretsu Rantou Hen (J)(1995)(NCS).sfc" size="2097152" crc="70f5d440"/>
@@ -3892,7 +3900,7 @@
 	</game>
 	<game name="dczbrte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Demon Child Zenki - Battle Raiden (Hack, English)</description>
+		<description>Demon Child Zenki: Battle Raiden (Hack, English)</description>
 		<year>2016</year>
 		<manufacturer>Dynamic-Designs</manufacturer>
 		<rom name="Demon Child Zenki - Battle Raiden T-Eng (2016)(Dynamic-Designs).sfc" size="2097152" crc="6bbcf578"/>
@@ -3900,7 +3908,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="demonsblazon" cloneof="demonscrest" romof="demonscrest" sourcefile="snes/d_snes.cpp">
-		<description>Demon's Blazon - Makaimura Monshou Hen (Japan)</description>
+		<description>Demon's Blazon: Makaimura Monshou Hen (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="Demon's Blazon - Makaimura Monshou Hen (J)(1994)(Capcom).sfc" size="2097152" crc="287f10cc"/>
@@ -4351,6 +4359,15 @@
 		<year>2025</year>
 		<manufacturer>kfin45</manufacturer>
 		<rom name="DKC2 - Rattle Royale (2025)(kfin45).sfc" size="4194304" crc="e90719a7"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="squawksedition" cloneof="dkongcntry2" romof="dkongcntry2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>DKC2: Squawks Edition (Hack)</description>
+		<year>2025</year>
+		<manufacturer>kfin45</manufacturer>
+		<rom name="DKC2 - Squawks Edition (2025)(kfin45).sfc" size="4194304" crc="6a8cff00"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -6269,7 +6286,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="flintstonestsme" cloneof="flintstonestsm" romof="flintstonestsm" sourcefile="snes/d_snes.cpp">
-		<description>Flintstones, The - The Treasure of Sierra Madrock (Euro)</description>
+		<description>Flintstones, The: The Treasure of Sierra Madrock (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Taito</manufacturer>
 		<rom name="Flintstones, The - The Treasure of Sierra Madrock (E)(1994)(Taito).sfc" size="1048576" crc="cc846dc4"/>
@@ -6277,7 +6294,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="flintstonestsmj" cloneof="flintstonestsm" romof="flintstonestsm" sourcefile="snes/d_snes.cpp">
-		<description>Flintstones, The - The Treasure of Sierra Madrock (Japan)</description>
+		<description>Flintstones, The: The Treasure of Sierra Madrock (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Taito Corp.</manufacturer>
 		<rom name="Flintstones, The - The Treasure of Sierra Madrock (J)(1994)(Taito).sfc" size="1048576" crc="53d29a71"/>
@@ -6285,7 +6302,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="flintstonestsm" sourcefile="snes/d_snes.cpp">
-		<description>Flintstones, The - The Treasure of Sierra Madrock (USA)</description>
+		<description>Flintstones, The: The Treasure of Sierra Madrock (USA)</description>
 		<year>1994</year>
 		<manufacturer>Taito</manufacturer>
 		<rom name="Flintstones, The - The Treasure of Sierra Madrock (U)(1994)(Taito).sfc" size="1048576" crc="594f5cc6"/>
@@ -8601,6 +8618,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kamekisland" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Homebrew, GlobalHack of Super Mario World</comment>
+		<description>Kamek's Island (GlobalHack, v1.7)</description>
+		<year>2013-15</year>
+		<manufacturer>Gamma V</manufacturer>
+		<rom name="Kamek's Island v1.7 (2015)(Gamma V).sfc" size="4194304" crc="f50086c7"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kamenrider" sourcefile="snes/d_snes.cpp">
 		<description>Kamen Rider (Japan, Rev. 1)</description>
 		<year>1993</year>
@@ -8944,14 +8970,6 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kdzbr" cloneof="dczbrte" romof="dczbrte" sourcefile="snes/d_snes.cpp">
-		<description>Kishin Douji Zenki - Battle Raiden (Japan)</description>
-		<year>1995</year>
-		<manufacturer>Hudson Soft</manufacturer>
-		<rom name="Kishin Douji Zenki - Battle Raiden (J)(1995)(Hudson Soft).sfc" size="2097152" crc="0becfc92"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="kdzdr" sourcefile="snes/d_snes.cpp">
 		<description>Kishin Douji Zenki - Denei Raibu (Japan)</description>
 		<year>1995</year>
@@ -8965,6 +8983,14 @@
 		<year>1996</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="Kishin Douji Zenki - Tenchi Meidou (J)(1996)(Hudson Soft).sfc" size="2097152" crc="d910990c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kdzbr" cloneof="dczbrte" romof="dczbrte" sourcefile="snes/d_snes.cpp">
+		<description>Kishin Douji Zenki: Battle Raiden (Japan)</description>
+		<year>1995</year>
+		<manufacturer>Hudson Soft</manufacturer>
+		<rom name="Kishin Douji Zenki - Battle Raiden (J)(1995)(Hudson Soft).sfc" size="2097152" crc="0becfc92"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13603,7 +13629,7 @@
 	</game>
 	<game name="rrracingart" cloneof="rrracing" romof="rrracing" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Rock N' Roll Racing - Alternate Race Tracks (Hack)</description>
+		<description>Rock N' Roll Racing - Alternate Race Tracks (Hack, v1.2)</description>
 		<year>2025</year>
 		<manufacturer>DarthMarino</manufacturer>
 		<rom name="Rock N' Roll Racing - Alternate Race Tracks v1.2 (2025)(DarthMarino).sfc" size="1048576" crc="21cf199e"/>
@@ -14437,7 +14463,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stfuturepastj" cloneof="stfuturepast" romof="stfuturepast" sourcefile="snes/d_snes.cpp">
-		<description>Shin Star Trek - Ooinaru Isan IFD no Nazo o Oe (Japan)</description>
+		<description>Shin Star Trek: Ooinaru Isan IFD no Nazo o Oe (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Tokuma Shoten</manufacturer>
 		<rom name="Shin Star Trek - Ooinaru Isan IFD no Nazo o Oe (J)(1995)(Tokuma Shoten).sfc" size="2621440" crc="34f09544"/>
@@ -15264,7 +15290,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stcrosstimee" cloneof="stcrosstime" romof="stcrosstime" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - Deep Space Nine - Crossroads of Time (Euro)</description>
+		<description>Star Trek - Deep Space Nine: Crossroads of Time (Euro)</description>
 		<year>1995</year>
 		<manufacturer>Playmates Interactive Ent.</manufacturer>
 		<rom name="Star Trek - Deep Space Nine - Crossroads of Time (E)(1995)(Playmates).sfc" size="1048576" crc="75bff780"/>
@@ -15272,7 +15298,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stcrosstime" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - Deep Space Nine - Crossroads of Time (USA)</description>
+		<description>Star Trek - Deep Space Nine: Crossroads of Time (USA)</description>
 		<year>1995</year>
 		<manufacturer>Playmates Interactive Ent.</manufacturer>
 		<rom name="Star Trek - Deep Space Nine - Crossroads of Time (U)(1995)(Playmates).sfc" size="1048576" crc="9a245fa3"/>
@@ -15280,7 +15306,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="ststarfleete" cloneof="ststarfleet" romof="ststarfleet" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - Starfleet Academy - Starship Bridge Simulator (Euro, English)</description>
+		<description>Star Trek - Starfleet Academy: Starship Bridge Simulator (Euro, English)</description>
 		<year>1994</year>
 		<manufacturer>Interplay</manufacturer>
 		<rom name="Star Trek - Starfleet Academy - Starship Bridge Simulator (E)(1994)(Interplay).sfc" size="1048576" crc="7c07e4a0"/>
@@ -15288,7 +15314,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="ststarfleetg" cloneof="ststarfleet" romof="ststarfleet" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - Starfleet Academy - Starship Bridge Simulator (Euro, German)</description>
+		<description>Star Trek - Starfleet Academy: Starship Bridge Simulator (Euro, German)</description>
 		<year>1994</year>
 		<manufacturer>Interplay</manufacturer>
 		<rom name="Star Trek - Starfleet Academy - Starship Bridge Simulator (E, Germany)(1994)(Interplay).sfc" size="1048576" crc="cb2738bd"/>
@@ -15296,7 +15322,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="ststarfleet" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)</description>
+		<description>Star Trek - Starfleet Academy: Starship Bridge Simulator (USA)</description>
 		<year>1994</year>
 		<manufacturer>Interplay</manufacturer>
 		<rom name="Star Trek - Starfleet Academy - Starship Bridge Simulator (U)(1994)(Interplay).sfc" size="1048576" crc="2db38d24"/>
@@ -15304,7 +15330,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stfuturepaste" cloneof="stfuturepast" romof="stfuturepast" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - The Next Generation - Future's Past (Euro)</description>
+		<description>Star Trek - The Next Generation: Future's Past (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Spectrum HoloByte</manufacturer>
 		<rom name="Star Trek - The Next Generation - Future's Past (E)(1994)(Spectrum HoloByte).sfc" size="2097152" crc="d1a1f7e5"/>
@@ -15312,7 +15338,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stfuturepast" sourcefile="snes/d_snes.cpp">
-		<description>Star Trek - The Next Generation - Future's Past (USA)</description>
+		<description>Star Trek - The Next Generation: Future's Past (USA)</description>
 		<year>1994</year>
 		<manufacturer>Spectrum HoloByte</manufacturer>
 		<rom name="Star Trek - The Next Generation - Future's Past (U)(1994)(Spectrum HoloByte).sfc" size="2097152" crc="8de80428"/>
@@ -18800,6 +18826,15 @@
 		<year>1993</year>
 		<manufacturer>Absolute Entertainment</manufacturer>
 		<rom name="Toys - Let the Toy Wars begin! (U)(1993)(Absolute Entertainment).sfc" size="1048576" crc="efebf501"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ameultraquizte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Trans-America Ultra Quiz (Hack, English v1.1)</description>
+		<year>2025</year>
+		<manufacturer>krokodyl</manufacturer>
+		<rom name="Trans-America Ultra Quiz T-Eng v1.1 (2025)(krokodyl).sfc" size="1572864" crc="19dfa224"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
