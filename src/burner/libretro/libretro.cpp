@@ -1230,7 +1230,7 @@ static bool open_archive()
 		{
 			static char prev[2048];
 			strcpy(prev, text_missing_files);
-			sprintf(text_missing_files, "%s\nAnd %d more...", prev, (num_missing - 18));
+			sprintf(text_missing_files, RETRO_ERROR_MESSAGES_12, prev, (num_missing - 18));
 		}
 
 		BurnExtLoadRom = archive_load_rom;
