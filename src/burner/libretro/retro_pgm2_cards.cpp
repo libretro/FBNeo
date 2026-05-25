@@ -561,11 +561,6 @@ static void rebuild_scan()
 	s_pgm2_card_option_slots = slots_eff;
 }
 
-void retro_pgm2_cards_create_variables()
-{
-	rebuild_scan();
-}
-
 void retro_pgm2_cards_refresh_environment()
 {
 	for (int i = 0; i < 4; i++)
@@ -656,7 +651,6 @@ static void apply_one_slot(int slot)
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: created timestamped card file \"%s\"\n",
 			slot + 1, new_path.c_str());
 
-		rebuild_scan();
 		set_environment();
 
 		int new_choice = find_slot_file_choice(slot, new_path.c_str());
