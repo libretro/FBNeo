@@ -21,6 +21,8 @@
 #include <errno.h>
 #include <vector>
 
+#define ADD_NEW_OPTION 0
+
 extern char g_save_dir[MAX_PATH];
 
 static const INT32 kPgm2CardMaxChoices = 120; // kPgm2CardMaxChoices is constrained to <= RETRO_NUM_CORE_OPTION_VALUES_MAX (128)
@@ -277,6 +279,7 @@ static bool load_or_create_default_slot_card(int slot)
 	return true;
 }
 
+#if ADD_NEW_OPTION
 static bool create_timestamped_slot_card(int slot, std::string& out_path)
 {
 	char dir[MAX_PATH];
@@ -331,6 +334,7 @@ static int find_slot_file_choice(int slot, const char* path)
 
 	return -1;
 }
+#endif
 
 static INT32 __cdecl pgm2_card_noop_callback(struct BurnArea*)
 {
@@ -466,7 +470,9 @@ static void build_slot_option(int slot)
 	add_fixed_option(L, "empty",        RETRO_PGM2_EMPTY_SLOT);
 	add_fixed_option(L, "default",      RETRO_PGM2_DEFAULT_CARD);
 	add_fixed_option(L, "temporary",    RETRO_PGM2_TEMPORARY_CARD);
+#if ADD_NEW_OPTION
 	add_fixed_option(L, "new",          RETRO_PGM2_NEW_CARD);
+#endif
 
 	const size_t nfiles = s_file_paths[slot].size();
 	char idx[12];
@@ -494,7 +500,7 @@ static void build_slot_option(int slot)
 	def.info = s_opt_info_str[slot].c_str();
 	def.category_key = "pgm2_memory_card";
 
-	int nvals = 4 + nfiles;
+	int nvals = L.size() / 2;
 	for (int i = 0; i < nvals; i++) {
 		def.values[i].value = L[i * 2].c_str();
 		def.values[i].label = L[i * 2 + 1].c_str();
@@ -645,6 +651,7 @@ static void apply_one_slot(int slot)
 		return;
 	}
 
+#if ADD_NEW_OPTION
 	// Create New Memory Card File, end with '_timestamped'. Multiple exist.
 	if (strcmp(var.value, "new") == 0) {
 		std::string new_path;
@@ -659,7 +666,12 @@ static void apply_one_slot(int slot)
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: created timestamped card file \"%s\"\n",
 			slot + 1, new_path.c_str());
 
-		// Repeatedly calling set_environment() can lead to memory write leaks and DIP function confusion, requiring exiting and reloading the game to resolve.
+		/**
+			Simply calling rebuild_scan() cannot make the frontend indicate the correct option.
+			Repeatedly calling set_environment() can lead to memory write leaks and DIP function confusion, requiring exiting and reloading the game to resolve.
+			https://github.com/libretro/FBNeo/commit/4cc9971b20285e52ac7b990daf61931a7a17f812
+			This option hided by ADD_NEW_OPTION
+		*/
 		set_environment();
 
 		int new_choice = find_slot_file_choice(slot, new_path.c_str());
@@ -679,6 +691,7 @@ static void apply_one_slot(int slot)
 		}
 		return;
 	}
+#endif
 
 	//Choose memory card from 'g_save_dir'/fbneo/pgm2_memcards/. Default Card excluded.
 	int choice = atoi(var.value);
