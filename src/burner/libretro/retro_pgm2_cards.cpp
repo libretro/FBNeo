@@ -28,7 +28,6 @@ static const INT32 kPgm2CardMaxChoices = 120; // kPgm2CardMaxChoices is constrai
 static const INT32 PGM2_CARD_SIZE = 0x108;
 static const INT32 PGM2_CARD_DATA_SIZE = 0x100;
 
-static bool s_pgm2_cards_built = false;
 /** Slots last exposed in core options (may be provisional 4 before BurnDrvInit sets Pgm2MaxCardSlots). */
 static int s_pgm2_card_option_slots = 0;
 static std::vector<std::string> s_file_paths[4]; // index 0 = first file (choice "1")
@@ -40,6 +39,67 @@ static retro_core_option_v2_definition s_opt_def[4];
 static char s_last_applied[4][16];
 static UINT8 s_pending_card_image[PGM2_CARD_SIZE];
 static std::string s_active_file_path[4];
+
+static const struct {
+    const char* drv_name;
+    INT32 max_slots;
+} pgm2_slot_table[] = {
+    // ORLEG2
+    { "orleg2",           0 },  // overseas (V104)
+    { "orleg2_103",       0 },  // overseas
+    { "orleg2_101",       0 },  // overseas
+    { "orleg2_104jp",     0 },  // Japan
+    { "orleg2_103jp",     0 },  // Japan
+    { "orleg2_101jp",     0 },  // Japan
+    { "orleg2_104cn",     4 },  // China
+    { "orleg2_103cn",     4 },  // China
+    { "orleg2_101cn",     4 },  // China
+    { "orleg2_104hk",     4 },  // Hong Kong
+    { "orleg2_103hk",     4 },  // Hong Kong
+    { "orleg2_101hk",     4 },  // Hong Kong
+    { "orleg2_104tw",     4 },  // Taiwan
+    { "orleg2_103tw",     4 },  // Taiwan
+    { "orleg2_101tw",     4 },  // Taiwan
+
+    // KOV2NL
+    { "kov2nl",           4 },  // overseas (V302)
+    { "kov2nl_301",       4 },  // overseas
+    { "kov2nl_300",       4 },  // overseas
+    { "kov2nl_302jp",     4 },  // Japan
+    { "kov2nl_301jp",     4 },  // Japan
+    { "kov2nl_300jp",     4 },  // Japan
+    { "kov2nl_302cn",     4 },  // China
+    { "kov2nl_301cn",     4 },  // China
+    { "kov2nl_300cn",     4 },  // China
+    { "kov2nl_302hk",     4 },  // Hong Kong
+    { "kov2nl_301hk",     4 },  // Hong Kong
+    { "kov2nl_300hk",     4 },  // Hong Kong
+    { "kov2nl_302tw",     4 },  // Taiwan
+    { "kov2nl_301tw",     4 },  // Taiwan
+    { "kov2nl_300tw",     4 },  // Taiwan
+
+    // KOV3
+    { "kov3",             2 },
+    { "kov3_102",         2 },
+    { "kov3_101",         2 },
+    { "kov3_100",         2 },
+
+    // No card slots
+    { "ddpdojt",          0 },
+    { "kof98umh",         0 },
+};
+
+static INT32 get_pgm2_slot_count(const char* drv_name)
+{
+    if (!drv_name) return 0;
+
+    for (size_t i = 0; i < sizeof(pgm2_slot_table) / sizeof(pgm2_slot_table[0]); i++) {
+        if (strcmp(pgm2_slot_table[i].drv_name, drv_name) == 0) {
+            return pgm2_slot_table[i].max_slots;
+        }
+    }
+    return 0;
+}
 
 static int iequals_suffix(const char* name, const char* suf)
 {
@@ -112,7 +172,7 @@ static void clear_slot_state(int slot)
 	s_file_paths[slot].clear();
 }
 
-static void rebuild_scan(bool preinit_before_drv_init);
+static void rebuild_scan();
 
 static bool read_raw_card_file(const char* path, UINT8* dest, size_t dest_len)
 {
@@ -226,7 +286,6 @@ static bool create_timestamped_slot_card(int slot, std::string& out_path)
 	time_t now;
 	struct tm tm_now;
 
-	out_path.clear();
 	if (slot < 0 || slot >= 4 || !drvname || !drvname[0] || !get_card_dir_path(dir))
 		return false;
 	if (!build_builtin_card_image(s_pending_card_image, sizeof(s_pending_card_image)))
@@ -443,7 +502,6 @@ static void build_slot_option(int slot)
 
 void retro_pgm2_cards_reset()
 {
-	s_pgm2_cards_built = false;
 	s_pgm2_card_option_slots = 0;
 	for (int i = 0; i < 4; i++) {
 		clear_slot_state(i);
@@ -459,37 +517,31 @@ void retro_pgm2_cards_push_options(std::vector<const retro_core_option_v2_defini
 {
 	if ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) != HARDWARE_IGS_PGM2)
 		return;
-	/*
-	 * First set_environment() runs before BurnDrvInit(); Pgm2MaxCardSlots is still 0 then.
-	 * Some front-ends only apply the first SET_CORE_OPTIONS_V2 — scan early so file lists
-	 * are present on that call (provisional slot count 4 until driver sets the real count).
-	 */
-	if (!s_pgm2_cards_built && Pgm2MaxCardSlots <= 0)
-		rebuild_scan(true);
-	if (!s_pgm2_cards_built)
-		return;
+
+	rebuild_scan();
 
 	for (int s = 0; s < s_pgm2_card_option_slots && s < 4; s++)
 		vars_systems.push_back(&s_opt_def[s]);
 }
 
-static void rebuild_scan(bool preinit_before_drv_init)
+static void rebuild_scan()
 {
-	s_pgm2_cards_built = false;
 	s_pgm2_card_option_slots = 0;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4; i++){
 		clear_slot_state(i);
+		memset(s_last_applied[i], 0, sizeof(s_last_applied[i]));
+	}
 
 	if ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) != HARDWARE_IGS_PGM2)
 		return;
 
-	// The value of "slots_eff" is based on "Pgm2MaxCardSlots", which comes from BurnDrvInit().
-	int slots_eff = Pgm2MaxCardSlots;
-	if (slots_eff <= 0 && !preinit_before_drv_init)
-		return;
-
 	const char* drvname = BurnDrvGetTextA(DRV_NAME);
 	if (!drvname || !drvname[0])
+		return;
+
+	// Get slot_count from table, instead of "Pgm2MaxCardSlots", which comes from BurnDrvInit()
+	int slots_eff = get_pgm2_slot_count(drvname);
+	if (slots_eff <= 0)
 		return;
 
 	char dir[MAX_PATH];
@@ -498,9 +550,8 @@ static void rebuild_scan(bool preinit_before_drv_init)
 	path_mkdir(dir);
 
 	log_cb(RETRO_LOG_INFO,
-		"[FBNeo PGM2 cards] scan: save_dir=\"%s\" card_dir=\"%s\" drvname=\"%s\" slots=%d%s\n",
-		g_save_dir, dir, drvname, slots_eff,
-		preinit_before_drv_init ? " (pre-init)" : "");
+		"[FBNeo PGM2 cards] scan: save_dir=\"%s\" card_dir=\"%s\" drvname=\"%s\" slots=%d\n",
+		g_save_dir, dir, drvname, slots_eff);
 
 	for (int s = 0; s < slots_eff && s < 4; s++) {
 		scan_slot_files(s, drvname, dir);
@@ -508,12 +559,11 @@ static void rebuild_scan(bool preinit_before_drv_init)
 	}
 
 	s_pgm2_card_option_slots = slots_eff;
-	s_pgm2_cards_built = true;
 }
 
 void retro_pgm2_cards_create_variables()
 {
-	rebuild_scan(false);
+	rebuild_scan();
 }
 
 void retro_pgm2_cards_refresh_environment()
@@ -521,18 +571,6 @@ void retro_pgm2_cards_refresh_environment()
 	for (int i = 0; i < 4; i++)
 		memset(s_last_applied[i], 0, sizeof(s_last_applied[i]));
 	retro_pgm2_cards_apply_variables();
-}
-
-void retro_pgm2_cards_after_set_environment(void)
-{
-	if (!s_pgm2_cards_built || s_pgm2_card_option_slots <= 0)
-		return;
-	struct retro_core_option_display d;
-	for (int s = 0; s < s_pgm2_card_option_slots && s < 4; s++) {
-		d.key = s_opt_key_str[s].c_str();
-		d.visible = true;
-		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &d);
-	}
 }
 
 static void apply_one_slot(int slot)
@@ -544,9 +582,10 @@ static void apply_one_slot(int slot)
 	char key[48];
 	snprintf(key, sizeof(key), "fbneo-pgm2-ic-p%d", slot + 1);
 	var.key = key;
-	if (!environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || !var.value)
+	if (!environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) || !var.value || var.value[0] == '\0'){
+		memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
 		return;
-
+	}
 	if (strcmp(s_last_applied[slot], var.value) == 0)
 		return;
 	strncpy(s_last_applied[slot], var.value, sizeof(s_last_applied[slot]) - 1);
@@ -558,6 +597,8 @@ static void apply_one_slot(int slot)
 	if (strcmp(var.value, "empty") == 0) {
 		eject_slot(slot);
 		log_cb(RETRO_LOG_WARN, "[FBNeo PGM2 cards] slot P%d: Use Empty Slot; Eject Card File.\n", slot + 1);
+		strncpy(s_last_applied[slot], "empty", sizeof(s_last_applied[slot]) - 1);
+		s_last_applied[slot][sizeof(s_last_applied[slot]) - 1] = '\0';
 		return;
 	}
 
@@ -586,7 +627,7 @@ static void apply_one_slot(int slot)
 		return;
 	}
 
-	// Use IN-Memory Temporary Card ,No File. Expires on Exit Game.
+	// Use IN-Memory Temporary Card, No File. Expires on Exit Game.
 	if (strcmp(var.value, "temporary") == 0) {
 		if (!build_builtin_card_image(s_pending_card_image, sizeof(s_pending_card_image))) {
 			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to build built-in ROM card template\n", slot + 1);
@@ -615,7 +656,7 @@ static void apply_one_slot(int slot)
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: created timestamped card file \"%s\"\n",
 			slot + 1, new_path.c_str());
 
-		rebuild_scan(false);
+		rebuild_scan();
 		set_environment();
 
 		int new_choice = find_slot_file_choice(slot, new_path.c_str());
@@ -672,10 +713,10 @@ void retro_pgm2_cards_apply_variables()
 {
 	if ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) != HARDWARE_IGS_PGM2)
 		return;
-	if (!s_pgm2_cards_built)
-		return;
 
-	int n = (Pgm2MaxCardSlots > 0) ? Pgm2MaxCardSlots : s_pgm2_card_option_slots;
+	INT32 n = get_pgm2_slot_count(BurnDrvGetTextA(DRV_NAME));
+	if (n <= 0) n = s_pgm2_card_option_slots;
+
 	for (int s = 0; s < n && s < 4; s++)
 		apply_one_slot(s);
 }
