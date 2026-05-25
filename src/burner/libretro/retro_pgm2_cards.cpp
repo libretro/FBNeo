@@ -439,6 +439,17 @@ static void scan_slot_files(int slot, const char* drvname, char dir[MAX_PATH])
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards]   [%u] %s\n", (unsigned)(i + 1), names[i].c_str());
 }
 
+
+static void add_fixed_option(std::vector<std::string>& L, const char* value, const char* label) {
+    L.push_back(value);
+    L.push_back(label);
+}
+
+static void add_file_option(std::vector<std::string>& L, const char* path, std::string label) {
+    L.push_back(path);
+    L.push_back(label);
+}
+
 static void build_slot_option(int slot)
 {
 	clear_slot_option(slot);
@@ -450,23 +461,21 @@ static void build_slot_option(int slot)
 
 	std::vector<std::string>& L = s_opt_label_storage[slot];
 	L.clear();
-	L.reserve(2 * (3 + s_file_paths[slot].size()));
-	L.push_back("empty");
-	L.push_back(RETRO_PGM2_EMPTY_SLOT);
-	L.push_back("default");
-	L.push_back(RETRO_PGM2_DEFAULT_CARD);
-	L.push_back("temporary");
-	L.push_back(RETRO_PGM2_TEMPORARY_CARD);
-	L.push_back("new");
-	L.push_back(RETRO_PGM2_NEW_CARD);
-	for (size_t i = 0; i < s_file_paths[slot].size(); i++) {
-		char idx[12];
-		snprintf(idx, sizeof(idx), "%u", (unsigned)(i + 1));
-		L.push_back(idx);
-		L.push_back(label_for_card_file(s_file_paths[slot][i].c_str()));
-	}
+
+	// 4 fixed options
+	add_fixed_option(L, "empty",        RETRO_PGM2_EMPTY_SLOT);
+	add_fixed_option(L, "default",      RETRO_PGM2_DEFAULT_CARD);
+	add_fixed_option(L, "temporary",    RETRO_PGM2_TEMPORARY_CARD);
+	add_fixed_option(L, "new",          RETRO_PGM2_NEW_CARD);
 
 	const size_t nfiles = s_file_paths[slot].size();
+	char idx[12];
+	for (size_t i = 0; i < nfiles; i++) {
+		snprintf(idx, sizeof(idx), "%u", (unsigned)(i + 1));
+		std::string label = label_for_card_file(s_file_paths[slot][i].c_str());
+		add_file_option(L, idx, label);
+	}
+
 	char slot_ch = (char)('1' + slot);
 	/* Keep desc 7-bit ASCII only; some frontends reject or mangle UTF-8 punctuation in SET_CORE_OPTIONS_V2. */
 	char buf[96];
@@ -482,16 +491,15 @@ static void build_slot_option(int slot)
 	retro_core_option_v2_definition& def = s_opt_def[slot];
 	def.key = s_opt_key_str[slot].c_str();
 	def.desc = s_opt_desc_str[slot].c_str();
-	def.desc_categorized = def.desc;
 	def.info = s_opt_info_str[slot].c_str();
-	def.info_categorized = NULL;
 	def.category_key = "pgm2_memory_card";
 
-	int nvals = 4 + (int)s_file_paths[slot].size();
+	int nvals = 4 + nfiles;
 	for (int i = 0; i < nvals; i++) {
-		def.values[i].value = L[(size_t)i * 2].c_str();
-		def.values[i].label = L[(size_t)i * 2 + 1].c_str();
+		def.values[i].value = L[i * 2].c_str();
+		def.values[i].label = L[i * 2 + 1].c_str();
 	}
+
 	def.values[nvals].value = NULL;
 	def.values[nvals].label = NULL;
 	/* default_value must match a values[].value string (same pointer is safest). */
@@ -651,6 +659,7 @@ static void apply_one_slot(int slot)
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: created timestamped card file \"%s\"\n",
 			slot + 1, new_path.c_str());
 
+		// Repeatedly calling set_environment() can lead to memory write leaks and DIP function confusion, requiring exiting and reloading the game to resolve.
 		set_environment();
 
 		int new_choice = find_slot_file_choice(slot, new_path.c_str());
