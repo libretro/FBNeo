@@ -349,7 +349,7 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"PGM2 \u63d2\u69fd P%c: \u9ed8\u8ba4\u5361 + %u \u4e2a\u6587\u4ef6",
 		"\u5b58\u50a8\u5361\u6587\u4ef6\u540d\u4ee5 '",
 		"_p\u73a9\u5bb6\u7f16\u53f7_' \u5f00\u5934\uff0c\u4ee5 '.pg2' \u6216 '.bin' \u7ed3\u5c3e",
-		"You are trying to run FBNeo in Neo-Geo CD emulation mode.\nBut the file you are trying to load is neither a .cue nor a .ccd."
+		"\u4f60\u6b63\u5728\u5c1d\u8bd5\u4ee5 Neo-Geo CD \u6a21\u62df\u6a21\u5f0f\u8fd0\u884c FBNeo\u3002\u4f46\u4f60\u5c1d\u8bd5\u52a0\u8f7d\u7684\u6587\u4ef6\u65e2\u4e0d\u662f .cue \u4e5f\u4e0d\u662f .ccd\u3002"
 	},
 	{	// Traditional Chinese
 		"\u76e1\u53ef\u80fd\u4f7f\u7528 32 \u4f4d\u8272\u6df1",
@@ -522,7 +522,7 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"PGM2 \u63d2\u69fd P%c: \u9810\u8a2d\u5361 + %u \u500b\u6a94\u6848",
 		"\u5132\u5b58\u5361\u6a94\u6848\u540d\u7a31\u4ee5 '",
 		"_p\u73a9\u5bb6\u7de8\u865f_' \u958b\u982d\uff0c\u4e26\u4ee5 '.pg2' \u6216 '.bin' \u7d50\u5c3e",
-		"You are trying to run FBNeo in Neo-Geo CD emulation mode.\nBut the file you are trying to load is neither a .cue nor a .ccd."
+		"\u4f60\u6b63\u5728\u5617\u8a66\u4ee5 Neo-Geo CD \u6a21\u64ec\u6a21\u5f0f\u904b\u884c FBNeo\u3002\u4f46\u4f60\u5617\u8a66\u8f09\u5165\u7684\u6a94\u6848\u65e2\u4e0d\u662f .cue \u4e5f\u4e0d\u662f .ccd\u3002"
 	}
 };
 
