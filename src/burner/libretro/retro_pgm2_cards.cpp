@@ -21,8 +21,6 @@
 #include <errno.h>
 #include <vector>
 
-#define ADD_NEW_OPTION 1
-
 extern char g_save_dir[MAX_PATH];
 
 static const INT32 kPgm2CardMaxChoices = 120; // kPgm2CardMaxChoices is constrained to <= RETRO_NUM_CORE_OPTION_VALUES_MAX (128)
@@ -41,6 +39,7 @@ static retro_core_option_v2_definition s_opt_def[4];
 static char s_last_applied[4][16];
 static UINT8 s_pending_card_image[PGM2_CARD_SIZE];
 static std::string s_active_file_path[4];
+static std::string s_latest_new_card_path[4];
 
 static const struct {
     const char* drv_name;
@@ -279,7 +278,6 @@ static bool load_or_create_default_slot_card(int slot)
 	return true;
 }
 
-#if ADD_NEW_OPTION
 static bool create_timestamped_slot_card(int slot, std::string& out_path)
 {
 	char dir[MAX_PATH];
@@ -334,7 +332,6 @@ static int find_slot_file_choice(int slot, const char* path)
 
 	return -1;
 }
-#endif
 
 static INT32 __cdecl pgm2_card_noop_callback(struct BurnArea*)
 {
@@ -427,6 +424,37 @@ static void scan_slot_files(int slot, const char* drvname, char dir[MAX_PATH])
 	retro_closedir(d);
 
 	std::sort(names.begin(), names.end());
+
+	//setting s_latest_new_card_path[4]
+	if (!names.empty()) {
+		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: names.size()=%u, starting backward scan for latest timestamped card\n",
+			slot + 1, (unsigned)names.size());
+		for (int i = (int)names.size() - 1; i >= 0; i--) {  // From back to front
+			const char* name = names[i].c_str();
+			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: [%d] trying name=\"%s\"\n", slot + 1, i, name);
+			// <drvname>_pN_YYYYMMDD_HHMMSS.pg2
+			int slot_num;
+			int year, month, day, hour, min, sec;
+			int parsed = sscanf(name, "%*[^_]_%*[^_]_p%d_%4d%2d%2d_%2d%2d%2d.pg2",
+					   &slot_num, &year, &month, &day, &hour, &min, &sec);
+			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: [%d] sscanf parsed=%d, slot_num=%d, date=%04d%02d%02d %02d:%02d:%02d\n",
+				slot + 1, i, parsed, slot_num, year, month, day, hour, min, sec);
+			if (parsed == 7) {
+				char path[MAX_PATH];
+				snprintf(path, sizeof(path), "%s%c%s", dir, PATH_DEFAULT_SLASH_C(), name);
+				log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: [%d] MATCHED! setting s_latest_new_card_path=\"%s\"\n",
+					slot + 1, i, path);
+				s_latest_new_card_path[slot] = path;
+				break;
+			} else {
+				log_cb(RETRO_LOG_WARN, "[FBNeo PGM2 cards] slot P%d: [%d] name=\"%s\" did NOT match timestamp pattern (need 7 fields)\n",
+					slot + 1, i, name);
+			}
+		}
+		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: scan complete, final s_latest_new_card_path=\"%s\"\n",
+			slot + 1, s_latest_new_card_path[slot].c_str());
+	}
+
 	if ((int)names.size() > kPgm2CardMaxChoices)
 		names.resize(kPgm2CardMaxChoices);
 
@@ -466,14 +494,14 @@ static void build_slot_option(int slot)
 	std::vector<std::string>& L = s_opt_label_storage[slot];
 	L.clear();
 
-	// 4 fixed options
-	add_fixed_option(L, "empty",        RETRO_PGM2_EMPTY_SLOT);
-	add_fixed_option(L, "default",      RETRO_PGM2_DEFAULT_CARD);
-	add_fixed_option(L, "temporary",    RETRO_PGM2_TEMPORARY_CARD);
-#if ADD_NEW_OPTION
-	add_fixed_option(L, "new",          RETRO_PGM2_NEW_CARD);
-#endif
+	//fixed options
+	add_fixed_option(L, "empty",                 RETRO_PGM2_EMPTY_SLOT);
+	add_fixed_option(L, "default",               RETRO_PGM2_DEFAULT_CARD);
+	add_fixed_option(L, "temporary",             RETRO_PGM2_TEMPORARY_CARD);
+	add_fixed_option(L, "new",                   RETRO_PGM2_NEW_CARD);
+	add_fixed_option(L, "latest_new_card_file",  RETRO_PGM2_LATEST_NEW_CARD_FILE);
 
+	//file options
 	const size_t nfiles = s_file_paths[slot].size();
 	char idx[12];
 	for (size_t i = 0; i < nfiles; i++) {
@@ -523,6 +551,7 @@ void retro_pgm2_cards_reset()
 		s_opt_desc_str[i].clear();
 		s_opt_info_str[i].clear();
 		s_active_file_path[i].clear();
+		s_latest_new_card_path[i].clear();
 		memset(s_last_applied[i], 0, sizeof(s_last_applied[i]));
 	}
 }
@@ -606,52 +635,35 @@ static void apply_one_slot(int slot)
 	if (strcmp(var.value, "empty") == 0) {
 		eject_slot(slot);
 		log_cb(RETRO_LOG_WARN, "[FBNeo PGM2 cards] slot P%d: Use Empty Slot; Eject Card File.\n", slot + 1);
-		strncpy(s_last_applied[slot], "empty", sizeof(s_last_applied[slot]) - 1);
-		s_last_applied[slot][sizeof(s_last_applied[slot]) - 1] = '\0';
 		return;
 	}
 
-	// Use Default Memory Card File ,end with '_defalut', Only one exists. If Failed ,fall back to Temporary Card.
+	// Use Default Memory Card File, end with '_default', Only one exists. If Failed, fall back to Temporary Card.
 	if (strcmp(var.value, "default") == 0) {
 		if (!load_or_create_default_slot_card(slot)) {
-			if (!build_builtin_card_image(s_pending_card_image, sizeof(s_pending_card_image))) {
-				log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to build default ROM card template\n", slot + 1);
-				memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
-				return;
-			}
-			s_active_file_path[slot].clear();
-			log_cb(RETRO_LOG_WARN,
-				"[FBNeo PGM2 cards] slot P%d: failed to load/create default card file; using temporary ROM template\n",
-				slot + 1);
+			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to load/create default card file\n", slot + 1);
+			memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
+			return;
 		}
-
 		reinsert_slot_with_pending_image(slot);
-		if (!s_active_file_path[slot].empty()) {
-			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: using default card file \"%s\"\n",
-				slot + 1, s_active_file_path[slot].c_str());
-		} else {
-			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: using temporary default ROM template\n",
-				slot + 1);
-		}
+		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: using default card file \"%s\"\n", slot + 1, s_active_file_path[slot].c_str());
 		return;
 	}
 
 	// Use IN-Memory Temporary Card, No File. Expires on Exit Game.
 	if (strcmp(var.value, "temporary") == 0) {
 		if (!build_builtin_card_image(s_pending_card_image, sizeof(s_pending_card_image))) {
-			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to build built-in ROM card template\n", slot + 1);
+			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to use temporary card \n", slot + 1);
 			memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
 			return;
 		}
-
 		reinsert_slot_with_pending_image(slot);
 		s_active_file_path[slot].clear();
-		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: using built-in ROM template (option value \"%s\")\n",
+		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: using temporary card (option value \"%s\")\n",
 			slot + 1, var.value);
 		return;
 	}
 
-#if ADD_NEW_OPTION
 	// Create New Memory Card File, end with '_timestamped'. Multiple exist.
 	if (strcmp(var.value, "new") == 0) {
 		std::string new_path;
@@ -663,37 +675,44 @@ static void apply_one_slot(int slot)
 
 		reinsert_slot_with_pending_image(slot);
 		s_active_file_path[slot] = new_path;
+		s_latest_new_card_path[slot] = s_active_file_path[slot];
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: created timestamped card file \"%s\"\n",
 			slot + 1, new_path.c_str());
 
-		/**
-			Simply calling rebuild_scan() cannot make the frontend indicate the correct option.
-			Repeatedly calling set_environment() can lead to memory write leaks and DIP function confusion, requiring exiting and reloading the game to resolve.
-			https://github.com/libretro/FBNeo/commit/4cc9971b20285e52ac7b990daf61931a7a17f812
-			This option hided by ADD_NEW_OPTION
-		*/
-		set_environment();
+		// notifying frontend to select 'latest_new_card_file'
+		struct retro_variable set_var = {0};
+		char key_apply[48];
+		snprintf(key_apply, sizeof(key_apply), "fbneo-pgm2-ic-p%d", slot + 1);
+		set_var.key = key_apply;
+		set_var.value = "latest_new_card_file";
+		environ_cb(RETRO_ENVIRONMENT_SET_VARIABLE, &set_var);
+		strncpy(s_last_applied[slot], set_var.value, sizeof(s_last_applied[slot]) - 1);
+		s_last_applied[slot][sizeof(s_last_applied[slot]) - 1] = '\0';
 
-		int new_choice = find_slot_file_choice(slot, new_path.c_str());
-		if (new_choice > 0) {
-			struct retro_variable set_var = {0};
-			char key_apply[48];
-			char choice_buf[12];
-			snprintf(key_apply, sizeof(key_apply), "fbneo-pgm2-ic-p%d", slot + 1);
-			snprintf(choice_buf, sizeof(choice_buf), "%d", new_choice);
-			set_var.key = key_apply;
-			set_var.value = choice_buf;
-			environ_cb(RETRO_ENVIRONMENT_SET_VARIABLE, &set_var);
-			strncpy(s_last_applied[slot], choice_buf, sizeof(s_last_applied[slot]) - 1);
-			s_last_applied[slot][sizeof(s_last_applied[slot]) - 1] = '\0';
+		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: new card created, notifying frontend to select 'latest_new_card_file'\n", slot + 1);
+
+		return;
+	}
+
+	//Use latest New Card File ,Format: <drvname>_pN_YYYYMMDD_HHMMSS.pg2
+	if (strcmp(var.value, "latest_new_card_file") == 0) {
+		if (!s_latest_new_card_path[slot].empty()) {
+			if (read_raw_card_file(s_latest_new_card_path[slot].c_str(), s_pending_card_image, sizeof(s_pending_card_image))) {
+				reinsert_slot_with_pending_image(slot);
+				s_active_file_path[slot] = s_latest_new_card_path[slot];
+				log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: loaded card file from latest_new_card_file \"%s\"\n", slot + 1, s_latest_new_card_path[slot].c_str());
+			} else {
+				memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
+				log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: latest_new_card_file: failed to read \"%s\".\n", slot + 1, s_latest_new_card_path[slot].c_str());
+			}
 		} else {
 			memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
+			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: latest_new_card_file: no timestamped card found.\n", slot + 1);
 		}
 		return;
 	}
-#endif
 
-	//Choose memory card from 'g_save_dir'/fbneo/pgm2_memcards/. Default Card excluded.
+	//Choose memory card file from 'g_save_dir'/fbneo/pgm2_memcards/. Default Card excluded.
 	int choice = atoi(var.value);
 	int fi = choice - 1;
 	if (fi < 0 || fi >= (int)s_file_paths[slot].size()) {
