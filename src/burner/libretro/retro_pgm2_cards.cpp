@@ -21,7 +21,7 @@
 #include <errno.h>
 #include <vector>
 
-#define ADD_NEW_OPTION 0
+#define ADD_NEW_OPTION 1
 
 extern char g_save_dir[MAX_PATH];
 
