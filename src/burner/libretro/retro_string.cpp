@@ -175,7 +175,8 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"Latest New Card File",
 		"PGM2 slot P%c: default + %u file(s)",
 		"Memory Card Filenames start with ",
-		"_pN_ and end with .pg2 or .bin"
+		"_pN_ and end with .pg2 or .bin",
+		"You are trying to run FBNeo in Neo-Geo CD emulation mode.\nBut the file you are trying to load is neither a .cue nor a .ccd."
 	},
 	{	// Simplified Chinese
 		"\u5c3d\u53ef\u80fd\u4f7f\u7528 32 \u4f4d\u8272\u6df1",
@@ -347,7 +348,8 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"\u6700\u65b0\u7684\u65b0\u5efa\u5361\u7247\u6587\u4ef6",
 		"PGM2 \u63d2\u69fd P%c: \u9ed8\u8ba4\u5361 + %u \u4e2a\u6587\u4ef6",
 		"\u5b58\u50a8\u5361\u6587\u4ef6\u540d\u4ee5 '",
-		"_p\u73a9\u5bb6\u7f16\u53f7_' \u5f00\u5934\uff0c\u4ee5 '.pg2' \u6216 '.bin' \u7ed3\u5c3e"
+		"_p\u73a9\u5bb6\u7f16\u53f7_' \u5f00\u5934\uff0c\u4ee5 '.pg2' \u6216 '.bin' \u7ed3\u5c3e",
+		"You are trying to run FBNeo in Neo-Geo CD emulation mode.\nBut the file you are trying to load is neither a .cue nor a .ccd."
 	},
 	{	// Traditional Chinese
 		"\u76e1\u53ef\u80fd\u4f7f\u7528 32 \u4f4d\u8272\u6df1",
@@ -519,7 +521,8 @@ static const char* multi_language_strings[MAX_LANGUAGES][NUM_STRING] = {
 		"\u6700\u65b0\u7684\u65b0\u5efa\u5361\u7247\u6a94\u6848",
 		"PGM2 \u63d2\u69fd P%c: \u9810\u8a2d\u5361 + %u \u500b\u6a94\u6848",
 		"\u5132\u5b58\u5361\u6a94\u6848\u540d\u7a31\u4ee5 '",
-		"_p\u73a9\u5bb6\u7de8\u865f_' \u958b\u982d\uff0c\u4e26\u4ee5 '.pg2' \u6216 '.bin' \u7d50\u5c3e"
+		"_p\u73a9\u5bb6\u7de8\u865f_' \u958b\u982d\uff0c\u4e26\u4ee5 '.pg2' \u6216 '.bin' \u7d50\u5c3e",
+		"You are trying to run FBNeo in Neo-Geo CD emulation mode.\nBut the file you are trying to load is neither a .cue nor a .ccd."
 	}
 };
 

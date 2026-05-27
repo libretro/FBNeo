@@ -10298,6 +10298,82 @@ struct BurnDriver BurnDrvnes_robocop3c = {
 	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
 };
 
+// Rockman (Hack, Portuguese)
+// https://www.romhacking.net/translations/5498/
+static struct BurnRomInfo nes_rockmantpRomDesc[] = {
+	{ "Rockman T-Por (2020)(ajkmetiuk).nes",          131088, 0xcd402a16, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_rockmantp)
+STD_ROM_FN(nes_rockmantp)
+
+struct BurnDriver BurnDrvnes_rockmantp = {
+	"nes_rockmantp", "nes_megaman", NULL, NULL, "2020",
+	"Rockman (Hack, Portuguese)\0", NULL, "ajkmetiuk", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_rockmantpRomInfo, nes_rockmantpRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Rockman 2: O Misterio do Dr. Wily (Hack, Portuguese)
+// https://www.romhacking.net/translations/5499/
+static struct BurnRomInfo nes_rockm2tpRomDesc[] = {
+	{ "Rockman 2 - O Misterio do Dr. Wily T-Por (2020)(ajkmetiuk, Sliter).nes",          262160, 0x8a296f1e, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_rockm2tp)
+STD_ROM_FN(nes_rockm2tp)
+
+struct BurnDriver BurnDrvnes_rockm2tp = {
+	"nes_rockm2tp", "nes_megaman2", NULL, NULL, "2020",
+	"Rockman 2: O Misterio do Dr. Wily (Hack, Portuguese)\0", NULL, "ajkmetiuk, Sliter", "NES / Famicom",
+	L"Rockman 2: O Mist\u00e9rio do Dr. Wily (Hack, Portuguese)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_rockm2tpRomInfo, nes_rockm2tpRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Rockman 3: O Fim do Dr.Wily!? (Hack, Portuguese v1.03)
+
+static struct BurnRomInfo nes_rockm3tpRomDesc[] = {
+	{ "Rockman 3 - O Fim do Dr.Wily! T-Por v1.03 (2020)(ajkmetiuk).nes",          393232, 0x6d1a539f, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_rockm3tp)
+STD_ROM_FN(nes_rockm3tp)
+
+struct BurnDriver BurnDrvnes_rockm3tp = {
+	"nes_rockm3tp", "nes_megaman3", NULL, NULL, "2020",
+	"Rockman 3: O Fim do Dr.Wily!? (Hack, Portuguese v1.03)\0", NULL, "ajkmetiuk", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_rockm3tpRomInfo, nes_rockm3tpRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Rockman 4: Um Novo Plano Maligno!! (Hack, Portuguese)
+// https://www.romhacking.net/translations/7080/
+static struct BurnRomInfo nes_rockm4tpRomDesc[] = {
+	{ "Rockman 4 - Um Novo Plano Maligno!! T-Por (2023)(ajkmetiuk, Sliter).nes",          524304, 0xe50a5e90, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_rockm4tp)
+STD_ROM_FN(nes_rockm4tp)
+
+struct BurnDriver BurnDrvnes_rockm4tp = {
+	"nes_rockm4tp", "nes_megaman4", NULL, NULL, "2023",
+	"Rockman 4: Um Novo Plano Maligno!! (Hack, Portuguese)\0", NULL, "ajkmetiuk, Sliter", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_rockm4tpRomInfo, nes_rockm4tpRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
 // Rollergames (Hack, Portuguese)
 // https://romhackers.org/traducoes/console/nes/rollergames-po.b.r.e
 static struct BurnRomInfo nes_rollergamestpRomDesc[] = {
@@ -10825,6 +10901,44 @@ struct BurnDriver BurnDrvnes_swordmasterc = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_SCRFIGHT, 0,
 	NESGetZipName, nes_swordmastercRomInfo, nes_swordmastercRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Takahashi Meijin no Bouken-jima III (Hack, Portuguese)
+
+static struct BurnRomInfo nes_takahashi3tpRomDesc[] = {
+	{ "Takahashi Meijin no Bouken-jima III T-Por (2021)(Patryckpo).nes",          262160, 0x423ad762, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_takahashi3tp)
+STD_ROM_FN(nes_takahashi3tp)
+
+struct BurnDriver BurnDrvnes_takahashi3tp = {
+	"nes_takahashi3tp", "nes_advenisl3", NULL, NULL, "2021",
+	"Takahashi Meijin no Bouken-jima III (Hack, Portuguese)\0", NULL, "Patryckpo", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_takahashi3tpRomInfo, nes_takahashi3tpRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Takahashi Meijin no Bouken-jima IV (Hack, Portuguese)
+
+static struct BurnRomInfo nes_takahashi4tpRomDesc[] = {
+	{ "Takahashi Meijin no Bouken-jima IV T-Por (2023)(Patryckpo).nes",          393232, 0x9fc2fe68, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_takahashi4tp)
+STD_ROM_FN(nes_takahashi4tp)
+
+struct BurnDriver BurnDrvnes_takahashi4tp = {
+	"nes_takahashi4tp", "nes_advenisliv", NULL, NULL, "2023",
+	"Takahashi Meijin no Bouken-jima IV (Hack, Portuguese)\0", NULL, "Patryckpo", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_takahashi4tpRomInfo, nes_takahashi4tpRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
 	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
 	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
 };
@@ -20087,6 +20201,63 @@ struct BurnDriver BurnDrvnes_knightmoon = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_NES, GBF_ACTION | GBF_ADV, 0,
 	NESGetZipName, nes_knightmoonRomInfo, nes_knightmoonRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Koopa in a Hurry (GlobalHack, English v1.2)
+// https://www.romhacking.net/hacks/7117/
+static struct BurnRomInfo nes_koopainahurryeRomDesc[] = {
+	{ "Koopa in a Hurry EN v1.2 (2022-26)(Green Jerry).nes",          40976, 0xfe02a2db, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_koopainahurrye)
+STD_ROM_FN(nes_koopainahurrye)
+
+struct BurnDriver BurnDrvnes_koopainahurrye = {
+	"nes_koopainahurrye", NULL, NULL, NULL, "2022-26",
+	"Koopa in a Hurry (GlobalHack, English v1.2)\0", "GlobalHack of Super Mario Bros.", "Green Jerry", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HACK, 2, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_koopainahurryeRomInfo, nes_koopainahurryeRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Koopa com Pressa (GlobalHack, Portuguese v1.2)
+
+static struct BurnRomInfo nes_koopainahurrypRomDesc[] = {
+	{ "Koopa com Pressa PT v1.2 (2022-26)(Green Jerry).nes",          40976, 0x4c0b1068, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_koopainahurryp)
+STD_ROM_FN(nes_koopainahurryp)
+
+struct BurnDriver BurnDrvnes_koopainahurryp = {
+	"nes_koopainahurryp", "nes_koopainahurrye", NULL, NULL, "2022-26",
+	"Koopa com Pressa (GlobalHack, Portuguese v1.2)\0", "GlobalHack of Super Mario Bros.", "Green Jerry", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_koopainahurrypRomInfo, nes_koopainahurrypRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Koopa con Prisa (GlobalHack, Spanish v1.2)
+
+static struct BurnRomInfo nes_koopainahurrysRomDesc[] = {
+	{ "Koopa con Prisa SP v1.2 (2022-26)(Green Jerry).nes",          40976, 0xb0cfe3a5, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_koopainahurrys)
+STD_ROM_FN(nes_koopainahurrys)
+
+struct BurnDriver BurnDrvnes_koopainahurrys = {
+	"nes_koopainahurrys", "nes_koopainahurrye", NULL, NULL, "2022-26",
+	"Koopa con Prisa (GlobalHack, Spanish v1.2)\0", "GlobalHack of Super Mario Bros.", "Green Jerry", "NES / Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_koopainahurrysRomInfo, nes_koopainahurrysRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
 	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
 	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
 };

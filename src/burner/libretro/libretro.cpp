@@ -2164,8 +2164,17 @@ static bool retro_load_game_common()
 
 		// Start CD reader emulation if needed
 		if (nGameType == RETRO_GAME_TYPE_NEOCD) {
+			const char* ext = path_get_extension(szRomsetPath);
+			if (strcmp(ext, "cue") != 0 && strcmp(ext, "ccd") != 0) {
+				static char uguiText[4096];
+				const char* s1 = RETRO_ERROR_MESSAGES_13;
+				const char* s2 = RETRO_ERROR_MESSAGES_07;
+				sprintf(uguiText, "%s\n\n%s", s1, s2);
+				SetUguiError(uguiText);
+				goto end;
+			}
 			if (CDEmuInit()) {
-				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Starting neogeo CD\n");
+				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Starting Neo-Geo CD\n");
 			}
 		}
 

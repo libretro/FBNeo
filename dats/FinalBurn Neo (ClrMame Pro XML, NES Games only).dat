@@ -11920,6 +11920,33 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="koopainahurryp" cloneof="koopainahurrye" romof="koopainahurrye" sourcefile="nes/d_nes.cpp">
+		<comment>Hack, GlobalHack of Super Mario Bros.</comment>
+		<description>Koopa com Pressa (GlobalHack, Portuguese v1.2)</description>
+		<year>2022-26</year>
+		<manufacturer>Green Jerry</manufacturer>
+		<rom name="Koopa com Pressa PT v1.2 (2022-26)(Green Jerry).nes" size="40976" crc="4c0b1068"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="koopainahurrys" cloneof="koopainahurrye" romof="koopainahurrye" sourcefile="nes/d_nes.cpp">
+		<comment>Hack, GlobalHack of Super Mario Bros.</comment>
+		<description>Koopa con Prisa (GlobalHack, Spanish v1.2)</description>
+		<year>2022-26</year>
+		<manufacturer>Green Jerry</manufacturer>
+		<rom name="Koopa con Prisa SP v1.2 (2022-26)(Green Jerry).nes" size="40976" crc="b0cfe3a5"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="koopainahurrye" sourcefile="nes/d_nes.cpp">
+		<comment>Hack, GlobalHack of Super Mario Bros.</comment>
+		<description>Koopa in a Hurry (GlobalHack, English v1.2)</description>
+		<year>2022-26</year>
+		<manufacturer>Green Jerry</manufacturer>
+		<rom name="Koopa in a Hurry EN v1.2 (2022-26)(Green Jerry).nes" size="40976" crc="fe02a2db"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="kosatak" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Kosmity Atakujo (HB, v10.07.2020)</description>
@@ -18019,6 +18046,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="rockmantp" cloneof="megaman" romof="megaman" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Rockman (Hack, Portuguese)</description>
+		<year>2020</year>
+		<manufacturer>ajkmetiuk</manufacturer>
+		<rom name="Rockman T-Por (2020)(ajkmetiuk).nes" size="131088" crc="cd402a16"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="rockman" cloneof="megaman" romof="megaman" sourcefile="nes/d_nes.cpp">
 		<description>Rockman (Japan)</description>
 		<year>1987</year>
@@ -18032,6 +18068,15 @@
 		<year>1988</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="Rockman 2 - Dr. Wily no Nazo (Japan)(1988)(Capcom).nes" size="262160" crc="30b91650"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="rockm2tp" cloneof="megaman2" romof="megaman2" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Rockman 2: O Misterio do Dr. Wily (Hack, Portuguese)</description>
+		<year>2020</year>
+		<manufacturer>ajkmetiuk, Sliter</manufacturer>
+		<rom name="Rockman 2 - O Misterio do Dr. Wily T-Por (2020)(ajkmetiuk, Sliter).nes" size="262160" crc="8a296f1e"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -18052,6 +18097,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="rockm3tp" cloneof="megaman3" romof="megaman3" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Rockman 3: O Fim do Dr.Wily!? (Hack, Portuguese v1.03)</description>
+		<year>2020</year>
+		<manufacturer>ajkmetiuk</manufacturer>
+		<rom name="Rockman 3 - O Fim do Dr.Wily! T-Por v1.03 (2020)(ajkmetiuk).nes" size="393232" crc="6d1a539f"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="rockm4" cloneof="megaman4" romof="megaman4" sourcefile="nes/d_nes.cpp">
 		<description>Rockman 4: Aratanaru Yabou!! (Japan)</description>
 		<year>1991</year>
@@ -18066,6 +18120,15 @@
 		<year>2016</year>
 		<manufacturer>Puresabe</manufacturer>
 		<rom name="Rockman 4 - Minus Infinity (Hack v1.01)(2016)(Puresabe).nes" size="1048592" crc="e9887ba6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="rockm4tp" cloneof="megaman4" romof="megaman4" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Rockman 4: Um Novo Plano Maligno!! (Hack, Portuguese)</description>
+		<year>2023</year>
+		<manufacturer>ajkmetiuk, Sliter</manufacturer>
+		<rom name="Rockman 4 - Um Novo Plano Maligno!! T-Por (2023)(ajkmetiuk, Sliter).nes" size="524304" crc="e50a5e90"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -21396,6 +21459,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="takahashi3tp" cloneof="advenisl3" romof="advenisl3" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Takahashi Meijin no Bouken-jima III (Hack, Portuguese)</description>
+		<year>2021</year>
+		<manufacturer>Patryckpo</manufacturer>
+		<rom name="Takahashi Meijin no Bouken-jima III T-Por (2021)(Patryckpo).nes" size="262160" crc="423ad762"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="takahashi3" cloneof="advenisl3" romof="advenisl3" sourcefile="nes/d_nes.cpp">
 		<description>Takahashi Meijin no Bouken-jima III (Japan)</description>
 		<year>1992</year>
@@ -21410,6 +21482,15 @@
 		<year>2022</year>
 		<manufacturer>NOKOH</manufacturer>
 		<rom name="Takahashi Meijin no Bouken-jima IV T-Chi (2022)(NOKOH).nes" size="524304" crc="5d164133"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="takahashi4tp" cloneof="advenisliv" romof="advenisliv" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Takahashi Meijin no Bouken-jima IV (Hack, Portuguese)</description>
+		<year>2023</year>
+		<manufacturer>Patryckpo</manufacturer>
+		<rom name="Takahashi Meijin no Bouken-jima IV T-Por (2023)(Patryckpo).nes" size="393232" crc="9fc2fe68"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

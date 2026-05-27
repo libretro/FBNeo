@@ -1593,6 +1593,15 @@ static struct BurnDIPInfo mslugLvxDIPList[] = {
 	{0x06, 0x01, 0x01, 0x01, "On"                           },
 };
 
+static struct BurnDIPInfo mslug2DIPList[] = {
+	// Fake DIPs
+	{0x06, 0xFF, 0xFF, 0x00, NULL                           },  // Off
+
+	{0,    0xFE, 0,    2,    "Turbo hack"                   },
+	{0x06, 0x01, 0x01, 0x00, "Off"                          },
+	{0x06, 0x01, 0x01, 0x01, "On"                           },
+};
+
 STDDIPINFOEXT(mslug3x,		neoForceAES,	mslug3x		)
 STDDIPINFOEXT(sengk3eb,		ngdefault,		sengk3eb	)
 STDDIPINFOEXT(kof96ae,		ngdefault,		kof96ae		)
@@ -1607,6 +1616,7 @@ STDDIPINFOEXT(kf10thuo,		ngdefault,		kf10thuo	)
 STDDIPINFOEXT(lastblad,		ngdefault,		lastblad	)
 STDDIPINFOEXT(nam1975,		ngdefault,		nam1975		)
 STDDIPINFOEXT(mslugLvx,		ngdefault,		mslugLvx	)
+STDDIPINFOEXT(mslug2,		ngdefault,		mslug2		)
 
 
 // Rom information
@@ -6832,13 +6842,86 @@ static struct BurnRomInfo mslug2RomDesc[] = {
 STDROMPICKEXT(mslug2, mslug2, neogeo)
 STD_ROM_FN(mslug2)
 
+static void Mslug2PatchCallback()
+{
+
+	// 24-bit address array
+	const UINT32 patch_address[] = {
+		0x001450, 0x001451, 0x001452, 0x001453, 0x001454, 0x001455, 0x001456, 0x001457, 0x001458, 0x001459,
+
+		0x001464, 0x001465, 0x001466, 0x001467, 0x001468, 0x001469, 0x00146a, 0x00146b, 0x00146c, 0x00146d,
+
+		0x00147c, 0x001486,
+
+		0x0014d2, 0x0014d3, 0x0014d4, 0x0014d5, 0x0014d6, 0x0014d7,
+
+		0x001650, 0x001651, 0x001652, 0x001653, 0x001654, 0x001655, 0x001656, 0x001657,
+
+		0x00165e, 0x00165f, 0x001660, 0x001661, 0x001662, 0x001663,
+
+		0x0d8000, 0x0d8001, 0x0d8002, 0x0d8003, 0x0d8004, 0x0d8005, 0x0d8006, 0x0d8007, 0x0d8008, 0x0d8009,
+		0x0d800a, 0x0d800b, 0x0d800c, 0x0d800d, 0x0d800e, 0x0d800f, 0x0d8010, 0x0d8011, 0x0d8012, 0x0d8013
+	};
+
+	// 8-bit data value array
+	const UINT8 patch_data[2][62] = {
+		{
+			// original_data
+			0x2d, 0x10, 0x8a, 0x80, 0x00, 0x52, 0x00, 0x65, 0x0c, 0x00,
+
+			0xed, 0x08, 0x07, 0x00, 0x8c, 0x80, 0x00, 0x66, 0x78, 0x00,
+
+			0x5c, 0x52,
+
+			0x7c, 0x1b, 0xff, 0x00, 0x8d, 0x80,
+
+			0xad, 0x08, 0x07, 0x00, 0x8d, 0x80, 0xf8, 0x67,
+
+			0x7c, 0x1b, 0x00, 0x00, 0x8a, 0x80,
+
+			0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+			0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+		},
+		{
+			// turbo_data
+			0x02, 0x70, 0x71, 0x4e, 0x71, 0x4e, 0x71, 0x4e, 0x71, 0x4e,
+
+			0x71, 0x4e, 0x71, 0x4e, 0x71, 0x4e, 0x71, 0x4e, 0x71, 0x4e,
+
+			0x50, 0x46,
+
+			0x2d, 0x52, 0x8d, 0x80, 0x71, 0x4e,
+
+			0xf9, 0x4e, 0x0d, 0x00, 0x00, 0x80, 0x71, 0x4e,
+
+			0x71, 0x4e, 0x71, 0x4e, 0x71, 0x4e,
+
+			0x2d, 0x0c, 0x02, 0x00, 0x8d, 0x80, 0xf8, 0x65, 0x7c, 0x1b,
+			0x00, 0x00, 0x8d, 0x80, 0xf9, 0x4e, 0x00, 0x00, 0x58, 0x16
+		}
+	};
+
+	const INT32 nIndex  = (VerSwitcher & 1) ? 1 : 0;
+	const size_t nCount = (sizeof(patch_address) / sizeof(patch_address[0]));
+
+	for (size_t i = 0; i < nCount; i++)
+		Neo68KROMActive[patch_address[i]] = patch_data[nIndex][i];
+}
+
+static INT32 mslug2Init()
+{
+	NeoCallbackActive->pResetCallback = Mslug2PatchCallback; // Turbo hack
+
+	return NeoInit();
+}
+
 struct BurnDriver BurnDrvMSlug2 = {
 	"mslug2", NULL, "neogeo", NULL, "1998",
 	"Metal Slug 2 - Super Vehicle-001/II (NGM-2410 ~ NGH-2410)\0", NULL, "SNK", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RUNGUN, FBF_MSLUG,
-	NULL, mslug2RomInfo, mslug2RomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
-	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	NULL, mslug2RomInfo, mslug2RomName, NULL, NULL, NULL, NULL, neogeoInputInfo, mslug2DIPInfo,
+	mslug2Init, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000, 304, 224, 4, 3
 };
 
@@ -16383,6 +16466,39 @@ struct BurnDriver BurnDrvCrswd2bl = {
 };
 
 
+// Crossed Swords 2 (bootleg of CD version, full CD audio)
+// https://www.arcade-projects.com/threads/crossed-sword-ii-mvs-full-cd-audio-release.37356/
+
+static struct BurnRomInfo crswd2blpRomDesc[] = {
+	{ "054.P1",       0x200000, 0xaa14d534, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+
+	{ "054-s1.s1",    0x020000, 0x22e02ddd, 2 | BRF_GRA },           //  1 Text layer tiles
+
+	{ "054-c1.c1",    0x400000, 0x8221b712, 3 | BRF_GRA },           //  2 Sprite data
+	{ "054-c2.c2",    0x400000, 0xd6c6183d, 3 | BRF_GRA },           //  3
+
+	{ "054.M1",    	  0x020000, 0x53412b7a, 4 | BRF_ESS | BRF_PRG }, //  4 Z80 code
+
+	{ "054.V1",    	  0x400000, 0x72364102, 5 | BRF_SND },           //  5 Sound data
+	{ "054.V2",    	  0x400000, 0x501d65cc, 5 | BRF_SND },           //  6 
+	{ "054.V3",       0x400000, 0x913be857, 5 | BRF_SND },           //  7 
+	{ "054.V4",       0x400000, 0x278220ce, 5 | BRF_SND },           //  8 
+};
+
+STDROMPICKEXT(crswd2blp, crswd2blp, neogeo)
+STD_ROM_FN(crswd2blp)
+
+struct BurnDriver BurnDrvCrswd2blp = {
+	"crswd2blp", "crswd2bl", "neogeo", NULL, "1996",
+	"Crossed Swords 2 (bootleg of CD version, full CD audio)\0", NULL, "bootleg (Razoola)", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_SWAPP, GBF_SCRFIGHT, 0,
+	NULL, crswd2blpRomInfo, crswd2blpRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000,	304, 224, 4, 3
+};
+
+
 // Idol Mahjong Final Romance 2 (Neo-Geo, bootleg of CD version)
 
 static struct BurnRomInfo froman2bRomDesc[] = {
@@ -16393,9 +16509,9 @@ static struct BurnRomInfo froman2bRomDesc[] = {
 	{ "098.c1", 0x400000, 0x29148bf7, 3 | BRF_GRA },           //  2 Sprite data
 	{ "098.c2", 0x400000, 0x226b1263, 3 | BRF_GRA },           //  3
 
-	{ "098.m1", 0x020000, 0xda4878cf, 4 | BRF_ESS | BRF_PRG }, //  8 Z80 code
+	{ "098.m1", 0x020000, 0xda4878cf, 4 | BRF_ESS | BRF_PRG }, //  4 Z80 code
 
-	{ "098.v1", 0x100000, 0x6f8ccddc, 5 | BRF_SND },           //  9 Sound data
+	{ "098.v1", 0x100000, 0x6f8ccddc, 5 | BRF_SND },           //  5 Sound data
 };
 
 STDROMPICKEXT(froman2b, froman2b, neogeo)
@@ -16407,6 +16523,39 @@ struct BurnDriver BurnDrvFroman2b = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_BOOTLEG, 2, HARDWARE_SNK_NEOGEO, GBF_MAHJONG, 0,
 	NULL, froman2bRomInfo, froman2bRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000,	304, 224, 4, 3
+};
+
+
+// Idol Mahjong Final Romance 2 (Neo-Geo, bootleg of CD version, full CD audio)
+// https://www.arcade-projects.com/threads/idol-mahjong-final-romance-2-mvs-conversion-full-audio-release.37331/
+
+static struct BurnRomInfo froman2bpRomDesc[] = {
+	{ "098.P1", 0x080000, 0xe86a3e80, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+
+	{ "098.s1", 0x020000, 0x0e6a7c73, 2 | BRF_GRA },           //  1 Text layer tiles
+
+	{ "098.c1", 0x400000, 0x29148bf7, 3 | BRF_GRA },           //  2 Sprite data
+	{ "098.c2", 0x400000, 0x226b1263, 3 | BRF_GRA },           //  3
+
+	{ "098.M1", 0x020000, 0xbdbb0c2c, 4 | BRF_ESS | BRF_PRG }, //  4 Z80 code
+
+	{ "098.V1", 0x400000, 0x208dfae9, 5 | BRF_SND },           //  5 Sound data
+	{ "098.V2", 0x400000, 0xab9ca778, 5 | BRF_SND },           //  6 
+	{ "098.V3", 0x400000, 0xb37b0e7b, 5 | BRF_SND },           //  7 
+	{ "098.V4", 0x400000, 0xcd7c9929, 5 | BRF_SND },           //  8 
+};
+
+STDROMPICKEXT(froman2bp, froman2bp, neogeo)
+STD_ROM_FN(froman2bp)
+
+struct BurnDriver BurnDrvFroman2bp = {
+	"froman2bp", "froman2b", "neogeo", NULL, "1995",
+	"Idol Mahjong Final Romance 2 (Neo-Geo, bootleg of CD version, full CD audio)\0", NULL, "bootleg", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_SNK_NEOGEO, GBF_MAHJONG, 0,
+	NULL, froman2bpRomInfo, froman2bpRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000,	304, 224, 4, 3
 };
@@ -16628,6 +16777,39 @@ struct BurnDriver BurnDrvSamSho3en = {
 	NULL, samsho3enRomInfo, samsho3enRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000, 304, 224, 4, 3
+};
+
+
+// Zintrick / Oshidashi Zentrix (bootleg of CD version, multi-V)
+// https://www.arcade-projects.com/threads/zintrick-with-tracks.36825/
+
+static struct BurnRomInfo zintrckbpRomDesc[] = {
+	{ "zin.P1",   	  0x100000, 0x654342e6, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+
+	{ "zin-s1.bin",   0x020000, 0x56d16afa, 2 | BRF_GRA },           //  1 Text layer tiles
+
+	{ "zin-c1.bin",   0x200000, 0x76aee189, 3 | BRF_GRA },           //  2 Sprite data
+	{ "zin-c2.bin",   0x200000, 0x844ed4b3, 3 | BRF_GRA },           //  3
+
+	{ "zin.M1",    	  0x020000, 0xa1c68361, 4 | BRF_ESS | BRF_PRG }, //  4 Z80 code
+
+	{ "zin.V1",   	  0x400000, 0xcd257055, 5 | BRF_SND },           //  5 Sound data
+	{ "zin.V2",   	  0x400000, 0x5d8f89ab, 5 | BRF_SND },           //  6
+	{ "zin.V3",   	  0x400000, 0x4626b4ff, 5 | BRF_SND },           //  7
+	{ "zin.V4",   	  0x400000, 0x48666336, 5 | BRF_SND },           //  8
+};
+
+STDROMPICKEXT(zintrckbp, zintrckbp, neogeo)
+STD_ROM_FN(zintrckbp)
+
+struct BurnDriver BurnDrvZintrckbp = {
+	"zintrckbp", "zintrckb", "neogeo", NULL, "1996",
+	"Zintrick / Oshidashi Zentrix (bootleg of CD version, multi-V)\0", NULL, "bootleg", "Neo Geo MVS",
+	L"Zintrick\0\u62BC\u3057\u51FA\u3057\u30B8\u30F3\u30C8\u30EA\u30C3\u30AF (bootleg of CD version, multi-V)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_BOOTLEG, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_PUZZLE, 0,
+	NULL, zintrckbpRomInfo, zintrckbpRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000,	304, 224, 4, 3
 };
 
 
