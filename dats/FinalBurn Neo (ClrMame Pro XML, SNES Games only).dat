@@ -19093,10 +19093,10 @@
 	</game>
 	<game name="tmntfightgme" cloneof="tmntfight" romof="tmntfight" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>TMNT: Tournament Fighters - Grandmasters Edition (Hack, v3.8)</description>
+		<description>TMNT: Tournament Fighters - Grandmasters Edition (Hack, v3.9)</description>
 		<year>2025-26</year>
 		<manufacturer>Allo</manufacturer>
-		<rom name="TMNT Tournament Fighters - Grandmasters Edition v3.8 (2025-26)(Allo).sfc" size="4194304" crc="0db1d35e"/>
+		<rom name="TMNT Tournament Fighters - Grandmasters Edition v3.9 (2025-26)(Allo).sfc" size="4194304" crc="58769ab4"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

@@ -3182,12 +3182,34 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="beltalowda1en" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Beltalowda - Part 1 (English) (128K) (HB, v1.4)</description>
+		<year>2026</year>
+		<manufacturer>Molisoft</manufacturer>
+		<rom name="Beltalowda - Part 1 EN v1.4 128K (2026)(Molisoft).tap" size="122263" crc="161c7cd9"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="beltalowda2en" cloneof="beltalowda1en" romof="beltalowda1en" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, Password: inyalowda</comment>
+		<description>Beltalowda - Part 2 (English) (128K) (HB, v1.4)</description>
+		<year>2026</year>
+		<manufacturer>Molisoft</manufacturer>
+		<rom name="Beltalowda - Part 2 EN v1.4 128K (2026)(Molisoft).tap" size="124565" crc="9f54dec0"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="beltalowda1" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Beltalowda - Parte 1 (Spanish) (128K) (HB)</description>
+		<description>Beltalowda - Parte 1 (Spanish) (128K) (HB, v1.2)</description>
 		<year>2025</year>
 		<manufacturer>Molisoft</manufacturer>
-		<rom name="Beltalowda - Parte 1 ES 128K (2025)(Molisoft).tap" size="124920" crc="09d71ec8"/>
+		<rom name="Beltalowda - Parte 1 ES v1.2 128K (2025)(Molisoft).tap" size="124920" crc="09d71ec8"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -3195,10 +3217,10 @@
 	</game>
 	<game name="beltalowda2" cloneof="beltalowda1" romof="beltalowda1" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, Password: inyalowda</comment>
-		<description>Beltalowda - Parte 2 (Spanish) (128K) (HB)</description>
+		<description>Beltalowda - Parte 2 (Spanish) (128K) (HB, v1.2)</description>
 		<year>2025</year>
 		<manufacturer>Molisoft</manufacturer>
-		<rom name="Beltalowda - Parte 2 ES 128K (2025)(Molisoft).tap" size="127418" crc="10ca636f"/>
+		<rom name="Beltalowda - Parte 2 ES v1.2 128K (2025)(Molisoft).tap" size="127418" crc="10ca636f"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -8048,7 +8070,7 @@
 		<description>Deep Strike (48K)</description>
 		<year>1986</year>
 		<manufacturer>Durell Software</manufacturer>
-		<rom name="Deep Strike 48K (1986)(Durell).tap" size="44086" crc="9af55985"/>
+		<rom name="Deep Strike 48K (1986)(Durell).tzx" size="44339" crc="69f64a77"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -12229,11 +12251,11 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="gng_48" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="gng48" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Ghosts 'n' Goblins (48K)</description>
 		<year>1986</year>
 		<manufacturer>Elite Systems</manufacturer>
-		<rom name="Ghosts 'n' Goblins 48K (1986)(Elite Systems).z80" size="47109" crc="dc252529"/>
+		<rom name="Ghosts 'n' Goblins 48K (1986)(Elite Systems).tzx" size="49599" crc="8224f1de"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -14614,6 +14636,16 @@
 		<year>2025</year>
 		<manufacturer>Kamil Blazek</manufacturer>
 		<rom name="Indiana Jones and the Fate of Atlantis - Text Adventure 48K (2025)(Kamil Blazek).tap" size="46567" crc="456d8d5b"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="indyeverlife" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Indiana Jones and the Fountain of Everlasting Life (48K) (HB)</description>
+		<year>2017</year>
+		<manufacturer>M. van Laatum</manufacturer>
+		<rom name="Indiana Jones and the Fountain of Everlasting Life 48K (2017)(M. van Laatum).tap" size="24815" crc="14fc033e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -18492,6 +18524,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mazeract" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Mazeract (48K) (HB)</description>
+		<year>2017</year>
+		<manufacturer>Jari Komppa</manufacturer>
+		<rom name="Mazeract 48K (2017)(Jari Komppa).tap" size="15728" crc="55bfddd5"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mazy" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, AY Sound supported</comment>
 		<description>Mazy (48K) (HB)</description>
@@ -20459,10 +20501,10 @@
 	</game>
 	<game name="nightstalker" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Night Stalker ZX (48K) (HB)</description>
+		<description>Night Stalker ZX (48K) (HB, v01a)</description>
 		<year>2018</year>
-		<manufacturer>AMCgames</manufacturer>
-		<rom name="Night Stalker ZX 48K (2018)(AMCgames).tap" size="34047" crc="6c112118"/>
+		<manufacturer>AMC Games</manufacturer>
+		<rom name="Night Stalker ZX v01a 48K (2018)(AMC Games).tap" size="33846" crc="f6d38f4f"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -26566,6 +26608,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sirjon" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Sir Jon (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Juan Eguia</manufacturer>
+		<rom name="Sir Jon 48K (2026)(Juan Eguia).tap" size="33509" crc="4f16ca66"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sirlancelot" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Sir Lancelot (48K)</description>
 		<year>1984</year>
@@ -27087,6 +27139,16 @@
 		<year>1989</year>
 		<manufacturer>Opera Soft</manufacturer>
 		<rom name="Sol Negro - Special Edition - Part 2 ES 48K-AY (1989)(Opera Soft).z80" size="37075" crc="af912284"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="solargun" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>SolarGun (48K) (HB)</description>
+		<year>2016</year>
+		<manufacturer>Jari Komppa</manufacturer>
+		<rom name="SolarGun 48K (2016)(Jari Komppa).tap" size="11313" crc="6c0866e0"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

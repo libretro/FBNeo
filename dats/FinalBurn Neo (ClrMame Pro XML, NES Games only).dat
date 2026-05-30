@@ -19887,10 +19887,10 @@
 	</game>
 	<game name="splatworld" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Splatter World: Rick vs. the King of Terror (Hack, English)</description>
-		<year>2025</year>
+		<description>Splatter World: Rick vs. the King of Terror (Hack, English v1.10)</description>
+		<year>2025-26</year>
 		<manufacturer>Aeon Genesis</manufacturer>
-		<rom name="Splatterworld - Rick vs. the King of Terror T-Eng (2025)(Aeon Genesis).nes" size="786448" crc="6ab9e947"/>
+		<rom name="Splatterworld - Rick vs. the King of Terror T-Eng v1.10 (2025-26)(Aeon Genesis).nes" size="786448" crc="1bad1f2a"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
