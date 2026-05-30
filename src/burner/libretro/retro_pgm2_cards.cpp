@@ -651,14 +651,14 @@ static void apply_one_slot(int slot)
 	save_active_slot_file(slot);
 
 	//Empty Slots
-	if (strcmp(var.value, "empty") == 0) {
+	if (strcmp(var.value, PGM2_OPT_EMPTY) == 0) {
 		eject_slot(slot);
 		log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: Use Empty Slot; Eject Card File.\n", slot + 1);
 		return;
 	}
 
 	// Use Default Memory Card File, end with '_default', Only one exists. If Failed, fall back to Temporary Card.
-	if (strcmp(var.value, "default") == 0) {
+	if (strcmp(var.value, PGM2_OPT_DEFAULT) == 0) {
 		if (!load_or_create_default_slot_card(slot)) {
 			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to load/create default card file\n", slot + 1);
 			memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
@@ -670,7 +670,7 @@ static void apply_one_slot(int slot)
 	}
 
 	// Use IN-Memory Temporary Card, No File. Expires on Exit Game.
-	if (strcmp(var.value, "temporary") == 0) {
+	if (strcmp(var.value, PGM2_OPT_TEMPORARY) == 0) {
 		if (!build_builtin_card_image(s_pending_card_image, sizeof(s_pending_card_image))) {
 			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to use temporary card \n", slot + 1);
 			memset(s_last_applied[slot], 0, sizeof(s_last_applied[slot]));
@@ -684,7 +684,7 @@ static void apply_one_slot(int slot)
 	}
 
 	// Create New Memory Card File, end with '_timestamped'. Multiple exist.
-	if (strcmp(var.value, "new") == 0) {
+	if (strcmp(var.value, PGM2_OPT_NEW) == 0) {
 		std::string new_path;
 		if (!create_timestamped_slot_card(slot, new_path)) {
 			log_cb(RETRO_LOG_ERROR, "[FBNeo PGM2 cards] slot P%d: failed to create timestamped card file\n", slot + 1);
@@ -706,7 +706,7 @@ static void apply_one_slot(int slot)
 	}
 
 	//Use latest New Card File ,Format: <drvname>_pN_YYYYMMDD_HHMMSS.pg2
-	if (strcmp(var.value, "latest_new_card_file") == 0) {
+	if (strcmp(var.value, PGM2_OPT_LATEST_NEW_FILE) == 0) {
 		if (!s_latest_new_card_path[slot].empty()) {
 			if (read_raw_card_file(s_latest_new_card_path[slot].c_str(), s_pending_card_image, sizeof(s_pending_card_image))) {
 				reinsert_slot_with_pending_image(slot);
