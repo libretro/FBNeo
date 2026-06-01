@@ -11228,6 +11228,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mcastilla" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Maldita Castilla: Requiem (HB, Demo v1.0)</description>
+		<year>2026</year>
+		<manufacturer>PlayOnRetro</manufacturer>
+		<rom name="Maldita Castilla - Requiem Demo v1.0 (2026)(PlayOnRetro).bin" size="2780014" crc="5a33b0c0"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="whacacri" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Mallet Legend's Whac-a-Critter (USA, Taiwan) (Unl)</description>
 		<year>1993</year>

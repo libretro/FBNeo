@@ -4749,10 +4749,10 @@
 	</game>
 	<game name="pyramidescape" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Pyramid Escape (HB)</description>
+		<description>Pyramid Escape (HB, v1.2.1)</description>
 		<year>2025</year>
 		<manufacturer>IrataHack</manufacturer>
-		<rom name="Pyramid Escape (2025)(IrataHack).sms" size="114688" crc="705c8342"/>
+		<rom name="Pyramid Escape v1.2.1 (2025)(IrataHack).sms" size="114688" crc="9bb83ea6"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

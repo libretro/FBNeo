@@ -658,6 +658,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="aethos" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Aethos (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>RBG Entertainment</manufacturer>
+		<rom name="Aethos v1.1 (2026)(RBG Entertainment).nes" size="524304" crc="aa9a547a"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="afterburner" sourcefile="nes/d_nes.cpp">
 		<description>After Burner (USA)</description>
 		<year>1989</year>
@@ -3817,6 +3826,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="chopchop" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>ChopChop (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Sebotron</manufacturer>
+		<rom name="ChopChop v1.1 (2026)(Sebotron).nes" size="40976" crc="c3c943a6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="choplifter" sourcefile="nes/d_nes.cpp">
 		<description>Choplifter (Japan)</description>
 		<year>1986</year>
@@ -5924,28 +5942,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="dragobal3gokden" sourcefile="nes/d_nes.cpp">
-		<description>Dragon Ball 3 - Gokuu Den (Japan)</description>
+		<description>Dragon Ball 3: Gokuu Den (Japan)</description>
 		<year>1989</year>
 		<manufacturer>Bandai</manufacturer>
 		<rom name="Dragon Ball 3 - Gokuu Den (Japan)(1989)(Bandai).nes" size="393232" crc="0544b2a4"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragobalzsupbu2" sourcefile="nes/d_nes.cpp">
-		<comment>Hack</comment>
-		<description>Dragon Ball Z - Super Butouden 2 (Hack, English)</description>
-		<year>2019</year>
-		<manufacturer>Green Jerry</manufacturer>
-		<rom name="Dragon Ball Z - Super Butouden 2 T-Eng (2019)(Green Jerry).nes" size="393232" crc="df87586f"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragobalzsupbu2s" cloneof="dragobalzsupbu2" romof="dragobalzsupbu2" sourcefile="nes/d_nes.cpp">
-		<comment>Hack</comment>
-		<description>Dragon Ball Z - Super Butouden 2 (Hack, Spanish v1.2)</description>
-		<year>2024</year>
-		<manufacturer>Terwilf</manufacturer>
-		<rom name="Dragon Ball Z - Super Butouden 2 T-Spa v1.2 (2024)(Terwilf).nes" size="393232" crc="aa5e709b"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -5959,7 +5959,7 @@
 	</game>
 	<game name="dragobalzgaisajinze" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Hack, English)</description>
+		<description>Dragon Ball Z Gaiden: Saiya Jin Zetsumetsu Keikaku (Hack, English)</description>
 		<year>2007</year>
 		<manufacturer>Twilight Translations</manufacturer>
 		<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (T-Eng).nes" size="524304" crc="e7a5a03d"/>
@@ -5967,7 +5967,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dragobalzgaisajinzeje" cloneof="dragobalzgaisajinze" romof="dragobalzgaisajinze" sourcefile="nes/d_nes.cpp">
-		<description>Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan)</description>
+		<description>Dragon Ball Z Gaiden: Saiya Jin Zetsumetsu Keikaku (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Bandai</manufacturer>
 		<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan).nes" size="524304" crc="69ae6291"/>
@@ -5976,7 +5976,7 @@
 	</game>
 	<game name="dragobalziigefr" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Dragon Ball Z II - Gekishin Freeza!! (Hack, English v1.02)</description>
+		<description>Dragon Ball Z II: Gekishin Freeza!! (Hack, English v1.02)</description>
 		<year>2019</year>
 		<manufacturer>Gyroballer</manufacturer>
 		<rom name="Dragon Ball Z II - Gekishin Freeza!! (T-Eng).nes" size="524304" crc="ffa1e20e"/>
@@ -5984,7 +5984,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dragobalziigefrj" cloneof="dragobalziigefr" romof="dragobalziigefr" sourcefile="nes/d_nes.cpp">
-		<description>Dragon Ball Z II - Gekishin Freeza!! (Japan)</description>
+		<description>Dragon Ball Z II: Gekishin Freeza!! (Japan)</description>
 		<year>1991</year>
 		<manufacturer>Bandai</manufacturer>
 		<rom name="Dragon Ball Z II - Gekishin Freeza!! (Japan).nes" size="524304" crc="d396d28a"/>
@@ -6052,6 +6052,24 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="dragobalzsupbu2" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball Z: Super Butouden 2 (Hack, English)</description>
+		<year>2019</year>
+		<manufacturer>Green Jerry</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden 2 T-Eng (2019)(Green Jerry).nes" size="393232" crc="df87586f"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragobalzsupbu2s" cloneof="dragobalzsupbu2" romof="dragobalzsupbu2" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball Z: Super Butouden 2 (Hack, Spanish v1.2)</description>
+		<year>2024</year>
+		<manufacturer>Terwilf</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden 2 T-Spa v1.2 (2024)(Terwilf).nes" size="393232" crc="aa5e709b"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="dragobalzsupbu2c" cloneof="dragobalzsupbu2" romof="dragobalzsupbu2" sourcefile="nes/d_nes.cpp">
 		<description>Dragon Ball Z: Super Butouden 2 (Taiwan, v1.1) (Unl)</description>
 		<year>1994</year>
@@ -6074,6 +6092,15 @@
 		<year>1999</year>
 		<manufacturer>TransBRC</manufacturer>
 		<rom name="Dragon Ball - Shen Long no Nazo T-Eng (1999)(TransBRC).nes" size="163856" crc="b4e31bf4"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragobalshenron" cloneof="dragonpower" romof="dragonpower" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball: Mystery of Shenron (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>BlackPaladin</manufacturer>
+		<rom name="Dragon Ball - Mystery of Shenron T-Eng (2026)(BlackPaladin).nes" size="163856" crc="d9fcfd37"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -7942,7 +7969,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="flipull" sourcefile="nes/d_nes.cpp">
-		<description>Flipull - An Exciting Cube Game (Japan)</description>
+		<description>Flipull: An Exciting Cube Game (Japan)</description>
 		<year>1989</year>
 		<manufacturer>Taito</manufacturer>
 		<rom name="Flipull - An Exciting Cube Game (Japan)(1989)(Taito).nes" size="65552" crc="b0e199e3"/>
@@ -8501,7 +8528,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gegegnokit" sourcefile="nes/d_nes.cpp">
-		<description>Gegege no Kitarou - Youkai Daimakyou (Japan)</description>
+		<description>Gegege no Kitarou: Youkai Daimakyou (Japan)</description>
 		<year>1986</year>
 		<manufacturer>Bandai</manufacturer>
 		<rom name="Gegege no Kitarou - Youkai Daimakyou (Japan)(1986)(Bandai).nes" size="65552" crc="6a6d9f5a"/>
@@ -15320,6 +15347,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="nightcity" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Night City (HB)</description>
+		<year>2026</year>
+		<manufacturer>Foko Games</manufacturer>
+		<rom name="Night City (2026)(Foko Games).nes" size="40976" crc="39dd25fa"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="nightonelmstra" sourcefile="nes/d_nes.cpp">
 		<description>Nightmare on Elm Street, A (USA)</description>
 		<year>1990</year>
@@ -17847,6 +17883,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="roadfighterh" cloneof="roadfighter" romof="roadfighter" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Road Fighter Remastered (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Chirinea</manufacturer>
+		<rom name="Road Fighter Remastered (2026)(Chirinea).nes" size="24592" crc="08715199"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="roadrunner" sourcefile="nes/d_nes.cpp">
 		<description>Road Runner (USA) (Unl)</description>
 		<year>1989</year>
@@ -18375,6 +18420,15 @@
 		<year>1991</year>
 		<manufacturer>Natsume</manufacturer>
 		<rom name="S.C.A.T. - Special Cybernetic Attack Team (USA)(1991)(Natsume).nes" size="262160" crc="d3bf87d1"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="soeu" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>S.O.E.U.: Story Of Eastern Underground (HB)</description>
+		<year>2026</year>
+		<manufacturer>tboddy</manufacturer>
+		<rom name="S.O.E.U. (2026)(tboddy).nes" size="139280" crc="fb91d84b"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

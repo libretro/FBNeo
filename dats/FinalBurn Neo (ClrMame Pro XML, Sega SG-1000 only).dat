@@ -115,6 +115,15 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="barbarricade" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>Barbarricade (HB, 05-30-26)</description>
+		<year>2026</year>
+		<manufacturer>Jess Creations - ArugulaZ</manufacturer>
+		<rom name="Barbarricade 05-30-26 (2026)(Jess Creations, ArugulaZ).sg" size="40960" crc="9adbeec7"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="battlot" sourcefile="sg1000/d_sg1000.cpp">
 		<comment>Homebrew</comment>
 		<description>Battlot (HB)</description>
