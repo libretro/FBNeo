@@ -3818,10 +3818,10 @@
 	</game>
 	<game name="bloodstone" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Bloodstone (English) (128K) (HB, v1.4)</description>
+		<description>Bloodstone (English) (128K) (HB, v1.6)</description>
 		<year>2026</year>
 		<manufacturer>Romancha, Jerri, DaRkHoRaCe</manufacturer>
-		<rom name="Bloodstone EN v1.4 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72379" crc="3b36644c"/>
+		<rom name="Bloodstone EN v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72055" crc="2c4340f3"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -3829,10 +3829,21 @@
 	</game>
 	<game name="bloodstoneru" cloneof="bloodstone" romof="bloodstone" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Bloodstone (Russian) (128K) (HB, v1.4)</description>
+		<description>Bloodstone (Russian) (128K) (HB, v1.6)</description>
 		<year>2026</year>
 		<manufacturer>Romancha, Jerri, DaRkHoRaCe</manufacturer>
-		<rom name="Bloodstone RU v1.2 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72640" crc="9ec27d60"/>
+		<rom name="Bloodstone RU v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72710" crc="5458ef6a"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bloodstonesp" cloneof="bloodstone" romof="bloodstone" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Bloodstone (Spanish) (128K) (HB, v1.6)</description>
+		<year>2026</year>
+		<manufacturer>Romancha, Jerri, DaRkHoRaCe</manufacturer>
+		<rom name="Bloodstone ES v1.6 128K (2026)(Romancha, Jerri, DaRkHoRaCe).tap" size="72100" crc="4f8132fd"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

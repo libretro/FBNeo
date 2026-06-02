@@ -1682,6 +1682,7 @@ DRV		BurnDrvnes_banana;
 DRV		BurnDrvnes_bananabashdemo;
 DRV		BurnDrvnes_bananaprinceg;
 DRV		BurnDrvnes_bananaprince;
+DRV		BurnDrvnes_bananaprincegr;
 DRV		BurnDrvnes_bananaprincej;
 DRV		BurnDrvsnes_Bananas;
 DRV		BurnDrvBanbam;
@@ -2470,6 +2471,7 @@ DRV		BurnDrvmd_bloodsht;
 DRV		BurnDrvmd_bloodshtfix;
 DRV		BurnSpecBloodstone;
 DRV		BurnSpecBloodstoneru;
+DRV		BurnSpecBloodstonesp;
 DRV		BurnDrvMSX_bloody;
 DRV		BurnSpecBloody;
 DRV		BurnSpecBloodpaws1;
@@ -12748,6 +12750,7 @@ DRV		BurnDrvsnes_Mauimallard;
 DRV		BurnDrvnes_maurimursu;
 DRV		BurnDrvnes_mawthornej;
 DRV		BurnDrvnes_mawthorne;
+DRV		BurnDrvnes_mawthorne1rb;
 DRV		BurnDrvnes_mawthorne2;
 DRV		BurnDrvMaxrpm;
 DRV		BurnSpecMaxstone128en;
@@ -15513,8 +15516,8 @@ DRV		BurnDrvnes_parallelworldj;
 DRV		BurnDrvpce_paranoia;
 DRV		BurnDrvnes_parasolhenbee;
 DRV		BurnDrvnes_parasolhenbeej;
-DRV		BurnDrvnes_parasstaraiislii;
 DRV		BurnDrvpce_parasol;
+DRV		BurnDrvnes_parasstaraiislii;
 DRV		BurnDrvtg_parasol;
 DRV		BurnSpecParatroopers;
 DRV		BurnSpecParazxland;
@@ -16028,6 +16031,7 @@ DRV		BurnDrvnes_platoon;
 DRV		BurnDrvMSX_playball;
 DRV		BurnDrvPlgirls2b;
 DRV		BurnDrvPlgirls2;
+DRV		BurnDrvPlgirls2j;
 DRV		BurnDrvPlgirls;
 DRV		BurnDrvPlayball;
 DRV		BurnDrvMSX_strippoker;
@@ -23311,6 +23315,7 @@ DRV		BurnSpecTube;
 DRV		BurnDrvTubeit;
 DRV		BurnSpecTuerkas;
 DRV		BurnDrvsnes_Tuffenuff;
+DRV		BurnDrvnes_tukipaco;
 DRV		BurnDrvMSX_tuma7;
 DRV		BurnDrvTumbleb2;
 DRV		BurnDrvTumbleb;
@@ -23499,9 +23504,9 @@ DRV		BurnDrvUsclssic;
 DRV		BurnDrvCpsCawingj;
 DRV		BurnDrvCpsCawingjr;
 DRV		BurnDrvMSX_uchuyohei;
-DRV		BurnDrvnes_uchusen;
 DRV		BurnDrvnes_uchusen2;
 DRV		BurnDrvMSX_ugamma;
+DRV		BurnDrvnes_uchusen;
 DRV		BurnDrvnes_uchuukeisdf;
 DRV		BurnDrvsnes_Uchuunokishi;
 DRV		BurnDrvsnes_Astrogogo;
@@ -27047,8 +27052,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_banana,			// Banana (Japan)
 	&BurnDrvnes_bananabashdemo,	// Banana Bash! - Demo (HB)
 	&BurnDrvnes_bananaprinceg,	// Banana Prince (Germany)
-	&BurnDrvnes_bananaprince,	// Banana Prince (Hack, English)
-	&BurnDrvnes_bananaprincej,	// Banana Prince (Japan)
+	&BurnDrvnes_bananaprince,	// Banana Prince (Hack, English v1.1a)
+	&BurnDrvnes_bananaprincegr,	// Banana Prince - Graphics Restore (Hack)
+	&BurnDrvnes_bananaprincej,	// Bananan Ouji no Daibouken (Japan)
 	&BurnDrvsnes_Bananas,		// Bananas de Pijamas (USA) (Unl)
 	&BurnDrvBanbam,				// BanBam
 	&BurnDrvnes_bandana,		// Bandana (HB)
@@ -27834,8 +27840,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_bloodfall,		// Bloodfall (HB)
 	&BurnDrvmd_bloodsht,		// Bloodshot ~ Battle Frenzy (Euro)
 	&BurnDrvmd_bloodshtfix,		// Bloodshot ~ Battle Frenzy (Hack, Texture Fix)
-	&BurnSpecBloodstone,		// Bloodstone (English) (128K) (HB, v1.4)
-	&BurnSpecBloodstoneru,		// Bloodstone (Russian) (128K) (HB, v1.4)
+	&BurnSpecBloodstone,		// Bloodstone (English) (128K) (HB, v1.6)
+	&BurnSpecBloodstoneru,		// Bloodstone (Russian) (128K) (HB, v1.6)
+	&BurnSpecBloodstonesp,		// Bloodstone (Spanish) (128K) (HB, v1.6)
 	&BurnDrvMSX_bloody,			// Bloody (Euro, Spanish)
 	&BurnSpecBloody,			// Bloody (Spanish) (48K)
 	&BurnSpecBloodpaws1,		// Bloody Paws - Part 1 (Spanish) (128K)
@@ -38114,6 +38121,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_maurimursu,		// Mauri Mursu's Hangover (HB)
 	&BurnDrvnes_mawthornej,		// Mawthorne (Japan) (HB)
 	&BurnDrvnes_mawthorne,		// Mawthorne (USA) (HB)
+	&BurnDrvnes_mawthorne1rb,	// Mawthorne I Reborn (World) (HB, v2.0)
 	&BurnDrvnes_mawthorne2,		// Mawthorne II (USA) (HB)
 	&BurnDrvMaxrpm,				// Max RPM (ver 2)
 	&BurnSpecMaxstone128en,		// Max Stone (English) (128K) (HB)
@@ -40879,8 +40887,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvpce_paranoia,		// Paranoia (Japan)
 	&BurnDrvnes_parasolhenbee,	// Parasol Henbee (Hack, English)
 	&BurnDrvnes_parasolhenbeej,	// Parasol Henbee (Japan)
-	&BurnDrvnes_parasstaraiislii,// Parasol Stars - Rainbow Islands II (Euro)
 	&BurnDrvpce_parasol,		// Parasol Stars - The Story of Bubble Bobble III (Japan)
+	&BurnDrvnes_parasstaraiislii,// Parasol Stars ~ Rainbow Islands II (Euro)
 	&BurnDrvtg_parasol,			// Parasol Stars: The Story of Bubble Bobble III (USA)
 	&BurnSpecParatroopers,		// Paratroopers (16K)
 	&BurnSpecParazxland,		// ParaZXland (48K) (HB)
@@ -41393,7 +41401,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_platoon,		// Platoon (USA)
 	&BurnDrvMSX_playball,		// Play Ball (Japan)
 	&BurnDrvPlgirls2b,			// Play Girls 2 (bootleg)
-	&BurnDrvPlgirls2,			// Play Girls 2
+	&BurnDrvPlgirls2,			// Play Girls 2 (Europe)
+	&BurnDrvPlgirls2j,			// Play Girls 2 (Japan)
 	&BurnDrvPlgirls,			// Play Girls
 	&BurnDrvPlayball,			// PlayBall! (prototype)
 	&BurnDrvMSX_strippoker,		// Playhouse Strippoker (Euro)
@@ -44598,7 +44607,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_sofia,			// Sofia (Japan)
 	&BurnSpecSoko1000,			// Soko Ban 1000 (48K) (HB)
 	&BurnDrvnes_sokobanana,		// Soko Banana (HB)
-	&BurnDrvnes_sokobananati,	// Soko Banana - Tinsel Island (HB)
+	&BurnDrvnes_sokobananati,	// Soko Banana: Tinsel Island (HB)
 	&BurnSpecSoko64p,			// SOKO64+ (48K) (HB)
 	&BurnDrvcv_soko64p,			// SOKO64+ (HB)
 	&BurnDrvMSX_soko64p,		// SOKO64+ (HB)
@@ -48419,7 +48428,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecTorochatesh,		// Torre de Ochate, La (Spanish) - Hard mode (48K-128K) (HB, v1.4)
 	&BurnDrvMSX_tortillaen,		// Tortilla Sunrise (English) (HB, v1.1)
 	&BurnDrvMSX_tortillaes,		// Tortilla Sunrise (Spanish) (HB, v1.1)
-	&BurnDrvnes_tortoises,		// Tortoises (HB)
+	&BurnDrvnes_tortoises,		// Tortoises (HB, v1.2)
 	&BurnDrvToryumondx,			// Toryumon DX
 	&BurnDrvToryumon,			// Toryumon
 	&BurnDrvpce_etercity,		// Toshi Tensou Keikaku - Eternal City (Japan)
@@ -48677,6 +48686,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvTubeit,				// Tube-It
 	&BurnSpecTuerkas,			// Tuerkas, the White Cat (48K) (HB, v1.2)
 	&BurnDrvsnes_Tuffenuff,		// Tuff E Nuff (USA)
+	&BurnDrvnes_tukipaco,		// Tuki & Paco Adventures (HB, Demo)
 	&BurnDrvMSX_tuma7,			// Tuma 7 (Euro, Spanish)
 	&BurnDrvTumbleb2,			// Tumble Pop (bootleg with PIC)
 	&BurnDrvTumbleb,			// Tumble Pop (bootleg)
@@ -48794,7 +48804,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvTcobra2u,			// Twin Cobra II (Ver 2.1A 1995/11/30)
 	&BurnDrvTcobra2,			// Twin Cobra II (Ver 2.1O 1995/11/30)
 	&BurnDrvnes_twindragons,	// Twin Dragons (HB)
-	&BurnDrvnes_twindracomedi,	// Twin Dragons Compo Edition (HB)
+	&BurnDrvnes_twindracomedi,	// Twin Dragons - Compo Edition (HB)
 	&BurnDrvnes_twineagle,		// Twin Eagle (USA)
 	&BurnDrvTwineagl,			// Twin Eagle - Revenge Joe's Brother
 	&BurnDrvTwineag2,			// Twin Eagle II - The Rescue Mission
@@ -48865,9 +48875,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsCawingj,			// U.S. Navy (Japan 901012)
 	&BurnDrvCpsCawingjr,		// U.S. Navy (Japan Resale Ver. 901130)
 	&BurnDrvMSX_uchuyohei,		// Uchu Yohei (HB, v1.6.1)
-	&BurnDrvnes_uchusen,		// Uchusen - Ultimate PLOID Battle (HB)
-	&BurnDrvnes_uchusen2,		// Uchusen 2 - Blood Invasion Battle (HB)
+	&BurnDrvnes_uchusen2,		// Uchusen 2: Blood Invasion Battle (HB)
 	&BurnDrvMSX_ugamma,			// Uchusen Gamma (HB)
+	&BurnDrvnes_uchusen,		// Uchusen: Ultimate PLOID Battle (HB)
 	&BurnDrvnes_uchuukeisdf,	// Uchuu Keibitai SDF (Japan)
 	&BurnDrvsnes_Uchuunokishi,	// Uchuu no Kishi - Tekkaman Blade (Japan)
 	&BurnDrvsnes_Astrogogo,		// Uchuu Race - Astro Go! Go! (Japan)
@@ -49048,7 +49058,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_uwol,			// UWOL Quest for Money (HB)
 	&BurnDrvsnes_Uwol,			// Uwol Quest for Money (HB)
 	&BurnDrvpce_uwol,			// Uwol Quest for Money (HB, v1.1)
-	&BurnDrvnes_uxo,			// UXO - Unexploded Ordnance (HB)
+	&BurnDrvnes_uxo,			// UXO: Unexploded Ordnance (HB)
 	&BurnDrvmd_uzukeo,			// Uzu Keobukseon (Korea)
 	&BurnSpecVocean,			// V - Visitors (48K)
 	&BurnDrvmd_vfive,			// V-Five (Japan)
@@ -52402,6 +52412,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_bananabashdemo", "nes/d_nes.cpp"},
 	{ "nes_bananaprinceg", "nes/d_nes.cpp"},
 	{ "nes_bananaprince", "nes/d_nes.cpp"},
+	{ "nes_bananaprincegr", "nes/d_nes.cpp"},
 	{ "nes_bananaprincej", "nes/d_nes.cpp"},
 	{ "snes_bananas", "snes/d_snes.cpp"},
 	{ "banbam", "pre90s/d_markham.cpp"},
@@ -53186,6 +53197,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_bloodshtfix", "megadrive/d_megadrive.cpp"},
 	{ "spec_bloodstone", "spectrum/d_spectrum.cpp"},
 	{ "spec_bloodstoneru", "spectrum/d_spectrum.cpp"},
+	{ "spec_bloodstonesp", "spectrum/d_spectrum.cpp"},
 	{ "msx_bloody", "msx/d_msx.cpp"},
 	{ "spec_bloody", "spectrum/d_spectrum.cpp"},
 	{ "spec_bloodpaws1", "spectrum/d_spectrum.cpp"},
@@ -63386,6 +63398,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_maurimursu", "nes/d_nes.cpp"},
 	{ "nes_mawthornej", "nes/d_nes.cpp"},
 	{ "nes_mawthorne", "nes/d_nes.cpp"},
+	{ "nes_mawthorne1rb", "nes/d_nes.cpp"},
 	{ "nes_mawthorne2", "nes/d_nes.cpp"},
 	{ "maxrpm", "pre90s/d_mcr3.cpp"},
 	{ "spec_maxstone128en", "spectrum/d_spectrum.cpp"},
@@ -66131,8 +66144,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "pce_paranoia", "pce/d_pce.cpp"},
 	{ "nes_parasolhenbee", "nes/d_nes.cpp"},
 	{ "nes_parasolhenbeej", "nes/d_nes.cpp"},
-	{ "nes_parasstaraiislii", "nes/d_nes.cpp"},
 	{ "pce_parasol", "pce/d_pce.cpp"},
+	{ "nes_parasstaraiislii", "nes/d_nes.cpp"},
 	{ "tg_parasol", "pce/d_pce.cpp"},
 	{ "spec_paratroopers", "spectrum/d_spectrum.cpp"},
 	{ "spec_parazxland", "spectrum/d_spectrum.cpp"},
@@ -66642,6 +66655,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "msx_playball", "msx/d_msx.cpp"},
 	{ "plgirls2b", "taito/d_taitol.cpp"},
 	{ "plgirls2", "taito/d_taitol.cpp"},
+	{ "plgirls2j", "taito/d_taitol.cpp"},
 	{ "plgirls", "taito/d_taitol.cpp"},
 	{ "playball", "pre90s/d_williams.cpp"},
 	{ "msx_strippoker", "msx/d_msx.cpp"},
@@ -73857,6 +73871,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "tubeit", "taito/d_taitol.cpp"},
 	{ "spec_tuerkas", "spectrum/d_spectrum.cpp"},
 	{ "snes_tuffenuff", "snes/d_snes.cpp"},
+	{ "nes_tukipaco", "nes/d_nes.cpp"},
 	{ "msx_tuma7", "msx/d_msx.cpp"},
 	{ "tumbleb2", "pst90s/d_tumbleb.cpp"},
 	{ "tumbleb", "pst90s/d_tumbleb.cpp"},
@@ -74037,9 +74052,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "cawingj", "capcom/d_cps1.cpp"},
 	{ "cawingjr", "capcom/d_cps1.cpp"},
 	{ "msx_uchuyohei", "msx/d_msx.cpp"},
-	{ "nes_uchusen", "nes/d_nes.cpp"},
 	{ "nes_uchusen2", "nes/d_nes.cpp"},
 	{ "msx_ugamma", "msx/d_msx.cpp"},
+	{ "nes_uchusen", "nes/d_nes.cpp"},
 	{ "nes_uchuukeisdf", "nes/d_nes.cpp"},
 	{ "snes_uchuunokishi", "snes/d_snes.cpp"},
 	{ "snes_astrogogo", "snes/d_snes.cpp"},

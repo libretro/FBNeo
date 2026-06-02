@@ -1800,18 +1800,27 @@
 	</game>
 	<game name="bananaprince" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Banana Prince (Hack, English)</description>
+		<description>Banana Prince (Hack, English v1.1a)</description>
 		<year>2003</year>
 		<manufacturer>KingMike's Translations</manufacturer>
-		<rom name="Banana Prince T-Eng (2003)(KingMike's Translations).nes" size="262160" crc="3a2e77a7"/>
+		<rom name="Banana Prince T-Eng v1.1a (2003)(KingMike's Translations).nes" size="262160" crc="3a2e77a7"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="bananaprincegr" cloneof="bananaprince" romof="bananaprince" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Banana Prince - Graphics Restore (Hack)</description>
+		<year>2008</year>
+		<manufacturer>elbobelo</manufacturer>
+		<rom name="Banana Prince - Graphics Restore (2008)(elbobelo).nes" size="262160" crc="3ae3edc6"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
 	<game name="bananaprincej" cloneof="bananaprince" romof="bananaprince" sourcefile="nes/d_nes.cpp">
-		<description>Banana Prince (Japan)</description>
+		<description>Bananan Ouji no Daibouken (Japan)</description>
 		<year>1992</year>
 		<manufacturer>Takara</manufacturer>
-		<rom name="Banana Prince (Japan)(1992)(Takara).nes" size="262160" crc="4c7e9492"/>
+		<rom name="Bananan Ouji no Daibouken (Japan)(1992)(Takara).nes" size="262160" crc="4c7e9492"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -13643,6 +13652,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="mawthorne1rb" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Mawthorne I Reborn (World) (HB, v2.0)</description>
+		<year>2022-25</year>
+		<manufacturer>CGT Games</manufacturer>
+		<rom name="Mawthorne I Reborn v2.0 (World)(2022-25)(CGT Games).nes" size="524304" crc="6429fac5"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="mawthorne2" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Mawthorne II (USA) (HB)</description>
@@ -16372,7 +16390,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="parasstaraiislii" sourcefile="nes/d_nes.cpp">
-		<description>Parasol Stars - Rainbow Islands II (Euro)</description>
+		<description>Parasol Stars ~ Rainbow Islands II (Euro)</description>
 		<year>1991</year>
 		<manufacturer>Ocean</manufacturer>
 		<rom name="Parasol Stars - Rainbow Islands II (Euro)(1991)(Ocean).nes" size="262160" crc="dc7a16e6"/>
@@ -19590,7 +19608,7 @@
 	</game>
 	<game name="sokobananati" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Soko Banana - Tinsel Island (HB)</description>
+		<description>Soko Banana: Tinsel Island (HB)</description>
 		<year>2024</year>
 		<manufacturer>Flip For Fate</manufacturer>
 		<rom name="Soko Banana - Tinsel Island (2024)(Flip For Fate).nes" size="524304" crc="b7174c8f"/>
@@ -22652,10 +22670,10 @@
 	</game>
 	<game name="tortoises" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Tortoises (HB)</description>
+		<description>Tortoises (HB, v1.2)</description>
 		<year>2017</year>
 		<manufacturer>FG Software</manufacturer>
-		<rom name="Tortoises (2017)(FG Software).nes" size="65552" crc="05f4f4e2"/>
+		<rom name="Tortoises v1.2 (2017)(FG Software).nes" size="65552" crc="b629ec45"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -22889,6 +22907,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="tukipaco" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Tuki &amp; Paco Adventures (HB, Demo)</description>
+		<year>2026</year>
+		<manufacturer>Pixelis Software</manufacturer>
+		<rom name="Tuki &amp; Paco Adventures (Demo)(2026)(Pixelis Software).nes" size="524304" crc="f5cb1867"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="twincobra" sourcefile="nes/d_nes.cpp">
 		<description>Twin Cobra (USA)</description>
 		<year>1990</year>
@@ -22900,18 +22927,18 @@
 	<game name="twindragons" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Twin Dragons (HB)</description>
-		<year>2018</year>
+		<year>2017</year>
 		<manufacturer>Broke Studio</manufacturer>
-		<rom name="Twin Dragons (2018)(Broke Studio).nes" size="524304" crc="0d29351e"/>
+		<rom name="Twin Dragons (2017)(Broke Studio).nes" size="524304" crc="0d29351e"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
 	<game name="twindracomedi" cloneof="twindragons" romof="twindragons" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Twin Dragons Compo Edition (HB)</description>
+		<description>Twin Dragons - Compo Edition (HB)</description>
 		<year>2016</year>
 		<manufacturer>Broke Studio</manufacturer>
-		<rom name="Twin Dragons Compo Edition (2016)(Broke Studio).nes" size="65552" crc="311cb660"/>
+		<rom name="Twin Dragons - Compo Edition (2016)(Broke Studio).nes" size="65552" crc="311cb660"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -22956,21 +22983,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="uchusen" sourcefile="nes/d_nes.cpp">
-		<comment>Homebrew</comment>
-		<description>Uchusen - Ultimate PLOID Battle (HB)</description>
-		<year>2021</year>
-		<manufacturer>NAPE Games</manufacturer>
-		<rom name="Uchusen - Ultimate PLOID Battle (2021)(Nape Games).nes" size="524304" crc="3ec46930"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
 	<game name="uchusen2" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Uchusen 2 - Blood Invasion Battle (HB)</description>
+		<description>Uchusen 2: Blood Invasion Battle (HB)</description>
 		<year>2021</year>
 		<manufacturer>NAPE Games</manufacturer>
 		<rom name="Uchusen 2 - Blood Invasion Battle (2021)(Nape Games).nes" size="524304" crc="a9623021"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="uchusen" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Uchusen: Ultimate PLOID Battle (HB)</description>
+		<year>2021</year>
+		<manufacturer>NAPE Games</manufacturer>
+		<rom name="Uchusen - Ultimate PLOID Battle (2021)(Nape Games).nes" size="524304" crc="3ec46930"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -23235,7 +23262,7 @@
 	</game>
 	<game name="uxo" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>UXO - Unexploded Ordnance (HB)</description>
+		<description>UXO: Unexploded Ordnance (HB)</description>
 		<year>2016</year>
 		<manufacturer>FG Software</manufacturer>
 		<rom name="UXO - Unexploded Ordnance (2016)(FG Software).nes" size="40976" crc="32ab3a14"/>
