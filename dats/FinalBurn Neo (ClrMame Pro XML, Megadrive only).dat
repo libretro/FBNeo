@@ -666,6 +666,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="aliencat2a" cloneof="aliencat2" romof="aliencat2" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Alien Cat 2 (HB, Alt)</description>
+		<year>2020</year>
+		<manufacturer>PSCD Games, Repa Games</manufacturer>
+		<rom name="Alien Cat 2 (Alt) (2020)(PSCD Games).bin" size="1310720" crc="159b1da2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="aliensol" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Alien Soldier (Euro)</description>
 		<year>1995</year>
@@ -7447,6 +7456,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="foxylanda" cloneof="foxyland" romof="foxyland" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Foxy Land (HB, Alt)</description>
+		<year>2020</year>
+		<manufacturer>PSCD Games, Bug Studio</manufacturer>
+		<rom name="Foxy Land (Alt) (2020)(PSCD-Bug Studio).bin" size="3014656" crc="0ba40013"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bighurt" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Frank Thomas Big Hurt Baseball (Euro, USA)</description>
 		<year>1995</year>
@@ -11230,10 +11248,10 @@
 	</game>
 	<game name="mcastilla" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Maldita Castilla: Requiem (HB, Demo v1.0)</description>
+		<description>Maldita Castilla: Requiem (HB, Demo v1.4)</description>
 		<year>2026</year>
 		<manufacturer>PlayOnRetro</manufacturer>
-		<rom name="Maldita Castilla - Requiem Demo v1.0 (2026)(PlayOnRetro).bin" size="2780014" crc="5a33b0c0"/>
+		<rom name="Maldita Castilla - Requiem Demo v1.4 (2026)(PlayOnRetro).bin" size="2779803" crc="6e43f5e1"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -11994,10 +12012,10 @@
 	</game>
 	<game name="metalgear" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Metal Gear (HB, v1.1)</description>
+		<description>Metal Gear (HB, v1.2)</description>
 		<year>2025</year>
 		<manufacturer>h0ffman</manufacturer>
-		<rom name="Metal Gear v1.1 (2025)(h0ffman).bin" size="1572864" crc="724fe7b3"/>
+		<rom name="Metal Gear v1.2 (2025)(h0ffman).bin" size="2097152" crc="68ec8c19"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -21738,6 +21756,15 @@
 		<year>2021</year>
 		<manufacturer>PSCD Games</manufacturer>
 		<rom name="Thunder Paw (2021)(PSCD Games).bin" size="3014656" crc="81858c5b"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="thundpawa" cloneof="thundpaw" romof="thundpaw" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Thunder Paw (HB, Alt)</description>
+		<year>2021</year>
+		<manufacturer>PSCD Games</manufacturer>
+		<rom name="Thunder Paw (Alt) (2021)(PSCD Games).bin" size="3014656" crc="3455d75c"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

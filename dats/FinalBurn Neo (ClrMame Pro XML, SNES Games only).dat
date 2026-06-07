@@ -10707,6 +10707,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="megamanbasstp" cloneof="megamanbass" romof="megamanbass" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mega Man &amp; Bass (Hack, Portuguese)</description>
+		<year>2014</year>
+		<manufacturer>Trans-Center, Monkey's Traducoes</manufacturer>
+		<rom name="Mega Man &amp; Bass PT-BR (2014)(Trans-Center, Monkey's Traducoes).sfc" size="4194304" crc="3a52b550"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="megaman7e" cloneof="megaman7" romof="megaman7" sourcefile="snes/d_snes.cpp">
 		<description>Mega Man 7 (Euro)</description>
 		<year>1995</year>
@@ -10747,6 +10756,15 @@
 		<year>2025</year>
 		<manufacturer>SCD</manufacturer>
 		<rom name="Mega Man 7 Restoration v1.2 (2025)(SCD).sfc" size="3145728" crc="f7ecba9d"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="megaman7tp" cloneof="megaman7" romof="megaman7" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mega Man VII (Hack, Portuguese)</description>
+		<year>2015</year>
+		<manufacturer>Trans-Center, Monkey's Traducoes</manufacturer>
+		<rom name="Mega Man VII PT-BR (2015)(Trans-Center, Monkey's Traducoes).sfc" size="4194304" crc="fa0da7cd"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

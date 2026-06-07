@@ -3949,6 +3949,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="minesweeper" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Minesweeper (HB, v1.03)</description>
+		<year>2023</year>
+		<manufacturer>Under4Mhz</manufacturer>
+		<rom name="Minesweeper v1.03 (2023)(Under4Mhz).sms" size="32768" crc="27e998e9"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="minimsx" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
 		<description>MiniMSX (HB)</description>
@@ -4749,10 +4758,10 @@
 	</game>
 	<game name="pyramidescape" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Pyramid Escape (HB, v1.2.1)</description>
+		<description>Pyramid Escape (HB, v1.2.2)</description>
 		<year>2025</year>
 		<manufacturer>IrataHack</manufacturer>
-		<rom name="Pyramid Escape v1.2.1 (2025)(IrataHack).sms" size="114688" crc="9bb83ea6"/>
+		<rom name="Pyramid Escape v1.2.2 (2025)(IrataHack).sms" size="114688" crc="313f00bd"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

@@ -23377,6 +23377,24 @@ struct BurnDriver BurnDrvsms_mieyen = {
 	256, 192, 4, 3
 };
 
+// Minesweeper (HB, v1.03)
+static struct BurnRomInfo sms_minesweeperRomDesc[] = {
+	{ "Minesweeper v1.03 (2023)(Under4Mhz).sms",	32768, 0x27e998e9, BRF_PRG | BRF_ESS },
+};
+
+STD_ROM_PICK(sms_minesweeper)
+STD_ROM_FN(sms_minesweeper)
+
+struct BurnDriver BurnDrvsms_minesweeper = {
+	"sms_minesweeper", NULL, NULL, NULL, "2023",
+	"Minesweeper (HB, v1.03)\0", NULL, "Under4Mhz", "Sega Master System",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_MASTER_SYSTEM, GBF_PUZZLE, 0,
+	SMSGetZipName, sms_minesweeperRomInfo, sms_minesweeperRomName, NULL, NULL, NULL, NULL, SMSInputInfo, SMSFMDIPInfo,
+	SMSInit, SMSExit, SMSFrame, SMSDraw, SMSScan, &SMSPaletteRecalc, 0x1E00,
+	256, 192, 4, 3
+};
+
 // MiniMSX (HB)
 static struct BurnRomInfo sms_minimsxRomDesc[] = {
 	{ "MiniMSX (2021)(MikGames).sms",	131072, 0xeb6c0944, BRF_PRG | BRF_ESS },
@@ -23775,9 +23793,9 @@ struct BurnDriver BurnDrvsms_psychicwen = {
 	256, 192, 4, 3
 };
 
-// Pyramid Escape (HB, v1.2.1)
+// Pyramid Escape (HB, v1.2.2)
 static struct BurnRomInfo sms_pyramidescapeRomDesc[] = {
-	{ "Pyramid Escape v1.2.1 (2025)(IrataHack).sms",	114688, 0x9bb83ea6, BRF_PRG | BRF_ESS },
+	{ "Pyramid Escape v1.2.2 (2025)(IrataHack).sms",	114688, 0x313f00bd, BRF_PRG | BRF_ESS },
 };
 
 STD_ROM_PICK(sms_pyramidescape)
@@ -23785,7 +23803,7 @@ STD_ROM_FN(sms_pyramidescape)
 
 struct BurnDriver BurnDrvsms_pyramidescape = {
 	"sms_pyramidescape", NULL, NULL, NULL, "2025",
-	"Pyramid Escape (HB, v1.2.1)\0", NULL, "IrataHack", "Sega Master System",
+	"Pyramid Escape (HB, v1.2.2)\0", NULL, "IrataHack", "Sega Master System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_MASTER_SYSTEM, GBF_PLATFORM, 0,
 	SMSGetZipName, sms_pyramidescapeRomInfo, sms_pyramidescapeRomName, NULL, NULL, NULL, NULL, SMSInputInfo, SMSDIPInfo,

@@ -117,10 +117,10 @@
 	</game>
 	<game name="barbarricade" sourcefile="sg1000/d_sg1000.cpp">
 		<comment>Homebrew</comment>
-		<description>Barbarricade (HB, 05-30-26)</description>
+		<description>Barbarricade (HB, 06-02-26)</description>
 		<year>2026</year>
 		<manufacturer>Jess Creations - ArugulaZ</manufacturer>
-		<rom name="Barbarricade 05-30-26 (2026)(Jess Creations, ArugulaZ).sg" size="40960" crc="9adbeec7"/>
+		<rom name="Barbarricade 06-02-26 (2026)(Jess Creations, ArugulaZ).sg" size="40960" crc="e8b1959c"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1188,6 +1188,15 @@
 		<year>2023</year>
 		<manufacturer>Under4Mhz</manufacturer>
 		<rom name="Mahjong Solitaire v1.16 (2023)(Under4Mhz).sg" size="32768" crc="d07afa95"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="manhole" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>Manhole (HB, v0.6b)</description>
+		<year>2024</year>
+		<manufacturer>Electric Dreams</manufacturer>
+		<rom name="Manhole v0.6b (2024)(Electric Dreams).sg" size="12276" crc="e96272f6"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

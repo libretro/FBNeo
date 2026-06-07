@@ -18195,6 +18195,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="rockm5tp" cloneof="megaman5" romof="megaman5" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Rockman 5: A Armadilha do Blues!? (Hack, Portuguese)</description>
+		<year>2023</year>
+		<manufacturer>ajkmetiuk, Sliter</manufacturer>
+		<rom name="Rockman 5 - A Armadilha do Blues! T-Por (2023)(ajkmetiuk, Sliter).nes" size="524304" crc="16e3b087"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="rockm5" cloneof="megaman5" romof="megaman5" sourcefile="nes/d_nes.cpp">
 		<description>Rockman 5: Blues no Wana!? (Japan)</description>
 		<year>1992</year>
@@ -18209,6 +18218,15 @@
 		<year>2021-22</year>
 		<manufacturer>StalkerMaestro</manufacturer>
 		<rom name="Rockman 5 - Metropolis v1.1a (2022)(StalkerMaestro).nes" size="524304" crc="f4e22701"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="rockm6tp" cloneof="megaman6" romof="megaman6" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Rockman 6: A Maior Batalha de Todas!! (Hack, Portuguese)</description>
+		<year>2023</year>
+		<manufacturer>ajkmetiuk</manufacturer>
+		<rom name="Rockman 6 - A Maior Batalha de Todas!! T-Por (2023)(ajkmetiuk).nes" size="524304" crc="b109d230"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

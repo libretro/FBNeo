@@ -4157,9 +4157,9 @@ struct BurnDriver BurnDrvsg1k_awass = {
 	272, 228, 4, 3
 };
 
-// Barbarricade (HB, 05-30-26)
+// Barbarricade (HB, 06-02-26)
 static struct BurnRomInfo sg1k_barbarricadeRomDesc[] = {
-	{ "Barbarricade 05-30-26 (2026)(Jess Creations, ArugulaZ).sg",	40960, 0x9adbeec7, BRF_PRG | BRF_ESS },
+	{ "Barbarricade 06-02-26 (2026)(Jess Creations, ArugulaZ).sg",	40960, 0xe8b1959c, BRF_PRG | BRF_ESS },
 };
 
 STD_ROM_PICK(sg1k_barbarricade)
@@ -4167,7 +4167,7 @@ STD_ROM_FN(sg1k_barbarricade)
 
 struct BurnDriver BurnDrvsg1k_barbarricade = {
 	"sg1k_barbarricade", NULL, NULL, NULL, "2026",
-	"Barbarricade (HB, 05-30-26)\0", NULL, "Jess Creations - ArugulaZ", "Sega SG-1000",
+	"Barbarricade (HB, 06-02-26)\0", NULL, "Jess Creations - ArugulaZ", "Sega SG-1000",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_SG1000, GBF_BREAKOUT, 0,
 	SG1KGetZipName, sg1k_barbarricadeRomInfo, sg1k_barbarricadeRomName, NULL, NULL, NULL, NULL, Sg1000InputInfo, Sg1000DIPInfo,
@@ -4549,6 +4549,24 @@ struct BurnDriver BurnDrvsg1k_msolitaire = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_SG1000, GBF_PUZZLE, 0,
 	SG1KGetZipName, sg1k_msolitaireRomInfo, sg1k_msolitaireRomName, NULL, NULL, NULL, NULL, Sg1000InputInfo, Sg1000DIPInfo,
+	DrvInit, DrvExit, DrvFrame, TMS9928ADraw, DrvScan, NULL, TMS9928A_PALETTE_SIZE,
+	272, 228, 4, 3
+};
+
+// Manhole (HB, v0.6b)
+static struct BurnRomInfo sg1k_manholeRomDesc[] = {
+	{ "Manhole v0.6b (2024)(Electric Dreams).sg",	12276, 0xe96272f6, BRF_PRG | BRF_ESS },
+};
+
+STD_ROM_PICK(sg1k_manhole)
+STD_ROM_FN(sg1k_manhole)
+
+struct BurnDriver BurnDrvsg1k_manhole = {
+	"sg1k_manhole", NULL, NULL, NULL, "2024",
+	"Manhole (HB, v0.6b)\0", NULL, "Electric Dreams", "Sega SG-1000",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_SG1000, GBF_ACTION, 0,
+	SG1KGetZipName, sg1k_manholeRomInfo, sg1k_manholeRomName, NULL, NULL, NULL, NULL, Sg1000InputInfo, Sg1000DIPInfo,
 	DrvInit, DrvExit, DrvFrame, TMS9928ADraw, DrvScan, NULL, TMS9928A_PALETTE_SIZE,
 	272, 228, 4, 3
 };
