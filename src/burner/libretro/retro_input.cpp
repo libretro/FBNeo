@@ -1878,6 +1878,18 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 		}
 	}
 
+	// Tron
+	if ((parentrom && strcmp(parentrom, "tron") == 0) ||
+		(drvname && strcmp(drvname, "tron") == 0)
+	) {
+		if (strcmp("Dial", description) == 0) {
+			GameInpAnalog2RetroInpAnalog(pgi, nPlayer, RETRO_DEVICE_ID_ANALOG_X, RETRO_DEVICE_INDEX_ANALOG_RIGHT, description);
+		}
+		if (strcmp("Button 1", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, nPlayer, RETRO_DEVICE_ID_JOYPAD_R, description);
+		}
+	}
+
 	// Mortal Kombat 1, 2 & 3
 	// snes-like mapping seems more convenient than original arcade mapping (with the block in the middle), even on arcade sticks
 	if ((parentrom && strcmp(parentrom, "mk") == 0) ||

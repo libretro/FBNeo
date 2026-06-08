@@ -5284,10 +5284,10 @@
 	</game>
 	<game name="earthwormjimtp" cloneof="earthwormjim" romof="earthwormjim" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Earthworm Jim (Hack, Portuguese v2.0)</description>
+		<description>Earthworm Jim (Hack, Portuguese v3.0)</description>
 		<year>2026</year>
 		<manufacturer>juliano_did</manufacturer>
-		<rom name="Earthworm Jim PT-BR v2.0 (2026)(juliano_did).sfc" size="3145728" crc="5e4fe99e"/>
+		<rom name="Earthworm Jim PT-BR v3.0 (2026)(juliano_did).sfc" size="3145728" crc="ca75179f"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

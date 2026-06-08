@@ -21209,21 +21209,12 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="supertiltbro" cloneof="supertiltbrorc3" romof="supertiltbrorc3" sourcefile="nes/d_nes.cpp">
+	<game name="supertiltbro" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Super Tilt Bro. (HB, v2 alpha1)</description>
-		<year>2018</year>
-		<manufacturer>Broke Studio</manufacturer>
-		<rom name="Super Tilt Bro v2 alpha1 (2018)(Broke Studio).nes" size="524304" crc="58829008"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="supertiltbrorc3" sourcefile="nes/d_nes.cpp">
-		<comment>Homebrew</comment>
-		<description>Super Tilt Bro. (HB, v2 RC3)</description>
-		<year>2023</year>
-		<manufacturer>Broke Studio</manufacturer>
-		<rom name="Super Tilt Bro. v2 RC3 (2023)(Broke Studio).nes" size="524304" crc="5802cf20"/>
+		<description>Super Tilt Bro. (HB, v2.6)</description>
+		<year>2016-26</year>
+		<manufacturer>Sylvain Gadrat</manufacturer>
+		<rom name="Super Tilt Bro v2.6 (2016-26)(Sylvain Gadrat).nes" size="524304" crc="fa4edd45"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

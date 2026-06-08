@@ -12,6 +12,16 @@
 		<url>https://neo-source.com/</url>
 		<clrmamepro forcenodump="ignore"/>
 	</header>
+	<game name="oo48" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>--=O O=-- (48K) (HB)</description>
+		<year>2025</year>
+		<manufacturer>Briefer666</manufacturer>
+		<rom name="--=O O=-- 48K-AY (2025)(Briefer666).tap" size="39393" crc="18ea4db2"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="licencetokill128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<description>007 - Licence to Kill (128K)</description>
 		<year>1989</year>
@@ -3031,6 +3041,15 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bazookabill" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Bazooka Bill (48K)</description>
+		<year>1986</year>
+		<manufacturer>Melbourne House</manufacturer>
+		<rom name="Bazooka Bill 48K (1986)(Melbourne House).tzx" size="46262" crc="37f035d1"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bcquesttires" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Press 'P' for controllers menu</comment>
 		<description>BC's Quest for Tires (48K)</description>
@@ -3475,10 +3494,10 @@
 	</game>
 	<game name="bit101en" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>BIT 101 saves Christmas (English) (128K) (HB)</description>
+		<description>BIT 101 saves Christmas (English) (48K-128K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Isaias Diaz</manufacturer>
-		<rom name="BIT 101 saves Christmas EN 128K (2026)(Isaias Diaz).tap" size="58261" crc="e5189aff"/>
+		<rom name="BIT 101 saves Christmas EN 48K-128K (2026)(Isaias Diaz).tap" size="58261" crc="e5189aff"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -3486,10 +3505,10 @@
 	</game>
 	<game name="bit101pt" cloneof="bit101en" romof="bit101en" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>BIT 101 saves Christmas (Portuguese) (128K) (HB)</description>
+		<description>BIT 101 saves Christmas (Portuguese) (48K-128K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Isaias Diaz</manufacturer>
-		<rom name="BIT 101 saves Christmas PT 128K (2026)(Isaias Diaz).tap" size="58347" crc="179aadb9"/>
+		<rom name="BIT 101 saves Christmas PT 48K-128K (2026)(Isaias Diaz).tap" size="58347" crc="179aadb9"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -3497,10 +3516,10 @@
 	</game>
 	<game name="bit101es" cloneof="bit101en" romof="bit101en" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>BIT 101 saves Christmas (Spanish) (128K) (HB)</description>
+		<description>BIT 101 saves Christmas (Spanish) (48K-128K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Isaias Diaz</manufacturer>
-		<rom name="BIT 101 saves Christmas ES 128K (2026)(Isaias Diaz).tap" size="58264" crc="c8e18c62"/>
+		<rom name="BIT 101 saves Christmas ES 48K-128K (2026)(Isaias Diaz).tap" size="58264" crc="c8e18c62"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -5306,6 +5325,15 @@
 		<year>2018</year>
 		<manufacturer>ZXMan48k</manufacturer>
 		<rom name="Castle of Sorrow 48K (2018)(ZXMan48k).tap" size="42259" crc="7750645b"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="castleterror" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Castle of Terror (48K)</description>
+		<year>1985</year>
+		<manufacturer>Melbourne House</manufacturer>
+		<rom name="Castle of Terror 48K (1985)(Melbourne House).tzx" size="48654" crc="93dbea26"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -9231,21 +9259,20 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="ddragon1" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="ddragon1" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Double Dragon (48K)</description>
-		<year>1989</year>
+		<year>1988</year>
 		<manufacturer>Melbourne House</manufacturer>
-		<rom name="Double Dragon 48K (1989)(Melbourne House).tap" size="172027" crc="a38e0c54"/>
-		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
-		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<rom name="Double Dragon 48K (1988)(Melbourne House).tap" size="172027" crc="a38e0c54"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="ddragon2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Double Dragon II: The Revenge (128K)</description>
+		<description>Double Dragon II: The Revenge (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Virgin Games</manufacturer>
-		<rom name="Double Dragon II - The Revenge 128K (1989)(Virgin Games).tap" size="185935" crc="af872e35"/>
+		<rom name="Double Dragon II - The Revenge 48K-128K (1989)(Virgin Games).tap" size="185935" crc="af872e35"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -11089,12 +11116,22 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="fist2" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Press any key to choose options and ENTER to select one</comment>
-		<description>Fist II: The Legend Continues (48K)</description>
+	<game name="fist2vs" cloneof="fist2" romof="fist2" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Press any key to change options and ENTER to select one</comment>
+		<description>Fist II: The Legend Continues - Combat Game (48K)</description>
 		<year>1986</year>
 		<manufacturer>Melbourne House</manufacturer>
-		<rom name="Fist II - The Legend Continues 48K (1986)(Melbourne House).tap" size="47879" crc="41d1677f"/>
+		<rom name="Fist II - The Legend Continues - Combat Game 48K (1986)(Melbourne House).tzx" size="48680" crc="2b45476c"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="fist2" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Press any key to change options and ENTER to select one</comment>
+		<description>Fist II: The Legend Continues - Quest Game (48K)</description>
+		<year>1986</year>
+		<manufacturer>Melbourne House</manufacturer>
+		<rom name="Fist II - The Legend Continues - Quest Game 48K (1986)(Melbourne House).tzx" size="48781" crc="dcf5401c"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -13526,16 +13563,6 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="headon" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Homebrew</comment>
-		<description>Head On (48K) (HB)</description>
-		<year>2026</year>
-		<manufacturer>Indigobeetle</manufacturer>
-		<rom name="Head On 48K (2026)(Indigobeetle).tap" size="28632" crc="a4d9d5f6"/>
-		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
-		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="headheel" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Carry: ENTER - Fire: X - Swop: S</comment>
 		<description>Head over Heels (48K-128K)</description>
@@ -13544,6 +13571,16 @@
 		<rom name="Head over Heels 48K-128K (1987)(Ocean).tap" size="49966" crc="94b0569b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="headon" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Head-On (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Indigobeetle</manufacturer>
+		<rom name="Head-On 48K (2026)(Indigobeetle).tap" size="28632" crc="a4d9d5f6"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -14777,13 +14814,12 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="inspgadget" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="inspgadget" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Inspector Gadget and the Circus of Fear (48K)</description>
 		<year>1987</year>
 		<manufacturer>Melbourne House</manufacturer>
 		<rom name="Inspector Gadget and the Circus of Fear 48K (1987)(Melbourne House).tap" size="44729" crc="c9dfdd10"/>
-		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
-		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20575,6 +20611,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="nick48" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Nick (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>David Programa</manufacturer>
+		<rom name="Nick 48K (2026)(David Programa).tap" size="17579" crc="54ad4574"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="niftylifty" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Nifty Lifty (48K)</description>
 		<year>1984</year>
@@ -21343,10 +21389,10 @@
 	</game>
 	<game name="omelettes" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Omelettes for Breakfast (128K) (HB)</description>
+		<description>Omelettes for Breakfast (48K-128K) (HB)</description>
 		<year>2017</year>
 		<manufacturer>Gabriele Amore</manufacturer>
-		<rom name="Omelettes for Breakfast 128K (2017)(Gabriele Amore).tap" size="35499" crc="d1706d0b"/>
+		<rom name="Omelettes for Breakfast 48K-128K (2017)(Gabriele Amore).tap" size="35499" crc="d1706d0b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -21539,7 +21585,7 @@
 	</game>
 	<game name="oure" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Oure - Dawn Of Hope (48K) (HB)</description>
+		<description>Oure: Dawn Of Hope (48K) (HB)</description>
 		<year>2018</year>
 		<manufacturer>Heavy Spectrum Limited</manufacturer>
 		<rom name="Oure - Dawn Of Hope 48K (2018)(Heavy Spectrum Limited).tap" size="48603" crc="e9047023"/>
@@ -25350,10 +25396,10 @@
 	</game>
 	<game name="soloen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>S.o.L.o. (English) (128K) (HB)</description>
+		<description>S.o.L.o. (English) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Roolandoo</manufacturer>
-		<rom name="S.o.L.o EN 128K (2021)(Roolandoo).tap" size="44386" crc="1db76b41"/>
+		<rom name="S.o.L.o EN 48K-128K (2021)(Roolandoo).tap" size="44386" crc="1db76b41"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -25361,10 +25407,10 @@
 	</game>
 	<game name="soloes" cloneof="soloen" romof="soloen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>S.o.L.o. (Spanish) (128K) (HB)</description>
+		<description>S.o.L.o. (Spanish) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Roolandoo</manufacturer>
-		<rom name="S.o.L.o ES 128K (2021)(Roolandoo).tap" size="44386" crc="20ba7c97"/>
+		<rom name="S.o.L.o ES 48K-128K (2021)(Roolandoo).tap" size="44386" crc="20ba7c97"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -26145,6 +26191,16 @@
 		<rom name="Seto Taisho Vs Yokai 128K (2016)(Monument Microgames).tap" size="83481" crc="4a0550ce"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sewerescape" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Sewer Escape (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>MGR Designs</manufacturer>
+		<rom name="Sewer Escape 48K (2026)(MGR Designs).tap" size="35433" crc="f7fc0443"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -27322,6 +27378,16 @@
 		<year>1987</year>
 		<manufacturer>U.S. Gold</manufacturer>
 		<rom name="Solomon's Key 48K (1987)(U.S. Gold).tap" size="47085" crc="f8e955e0"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="solseed" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Solseed (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Milos Marinovic</manufacturer>
+		<rom name="Solseed 48K (2026)(Milos Marinovic).tap" size="43831" crc="c3f7204e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -30309,6 +30375,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="tinnitus" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Tinnitus (Spanish) (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Spectrum Games</manufacturer>
+		<rom name="Tinnitus ES 48K-128K (2026)(Spectrum Games).tap" size="80842" crc="3b40f24d"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="tintmoon" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Tintin on the Moon (48K)</description>
 		<year>1989</year>
@@ -30320,10 +30396,10 @@
 	</game>
 	<game name="tinycraten" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Tiny Crate (English) (128K) (HB)</description>
+		<description>Tiny Crate (English) (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>PC NONO Games</manufacturer>
-		<rom name="Tiny Crate EN 128K (2022)(PC NONO Games).tap" size="39862" crc="c1f7ff6b"/>
+		<rom name="Tiny Crate EN 48K-128K (2022)(PC NONO Games).tap" size="39862" crc="c1f7ff6b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -30331,10 +30407,10 @@
 	</game>
 	<game name="tinycrates" cloneof="tinycraten" romof="tinycraten" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Tiny Crate (Spanish) (128K) (HB)</description>
+		<description>Tiny Crate (Spanish) (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>PC NONO Games</manufacturer>
-		<rom name="Tiny Crate ES 128K (2022)(PC NONO Games).tap" size="39862" crc="dcab09bc"/>
+		<rom name="Tiny Crate ES 48K-128K (2022)(PC NONO Games).tap" size="39862" crc="dcab09bc"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -30404,6 +30480,16 @@
 		<year>1991</year>
 		<manufacturer>Zeppelin Games</manufacturer>
 		<rom name="Titanic Blinky 48K (1991)(Zeppelin Games).tap" size="46442" crc="dff53244"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="titanusbattle" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Titanus Battle (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>LAWLORD</manufacturer>
+		<rom name="Titanus Battle 48K (2026)(LAWLORD).tap" size="34280" crc="4b9efaa5"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
