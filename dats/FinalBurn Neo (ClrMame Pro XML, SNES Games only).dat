@@ -14265,6 +14265,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="rushbeatshurate" cloneof="peacekeepers" romof="peacekeepers" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Rushing Beat Shura: The Eternal Conflict (Hack, English v1.2)</description>
+		<year>2026</year>
+		<manufacturer>DackR</manufacturer>
+		<rom name="Rushing Beat Shura - The Eternal Conflict T-Eng v1.2 (2026)(DackR).sfc" size="4194304" crc="634eda5c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ryuuko" cloneof="aof" romof="aof" sourcefile="snes/d_snes.cpp">
 		<description>Ryuuko no Ken (Japan)</description>
 		<year>1993</year>
@@ -16968,6 +16977,15 @@
 		<year>1993</year>
 		<manufacturer>Toho Co.</manufacturer>
 		<rom name="Super Godzilla (U)(1993)(Toho Co.).sfc" size="1572864" crc="6a187c70"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superguitar" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Guitar - Rock the SNES! (HB)</description>
+		<year>2026</year>
+		<manufacturer>RheoGamer</manufacturer>
+		<rom name="Super Guitar - Rock the SNES! (2026)(RheoGamer).sfc" size="262144" crc="e4b3c892"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

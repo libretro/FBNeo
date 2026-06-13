@@ -347,6 +347,8 @@ SOURCES_C += $(UGUI_DIR)/ugui.c \
 	$(UGUI_DIR)/SourceHanSansCN_Medium_13X17.c \
 	$(LIBRETRO_DIR)/ugui_tools.c
 
+SOURCES_C += $(FBNEO_LIB_DIR)/libchdr/libchdr_flac.c
+
 # GIT HASH
 GIT_VERSION := $(shell git rev-parse --short HEAD || echo unknown)
 ifneq ($(GIT_VERSION),unknown)

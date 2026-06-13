@@ -3196,6 +3196,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cvaniacotm" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Castlevania: Circle of the Moon (HB, Demo)</description>
+		<year>2026</year>
+		<manufacturer>Andor</manufacturer>
+		<rom name="Castlevania - Circle of the Moon (Demo) (2026)(Andor).bin" size="3932160" crc="6d9ece0f"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cavaleirop" cloneof="cavaleirodcp" romof="cavaleirodcp" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew, Prototype</comment>
 		<description>Cavaleiro (HB, Prototype)</description>
@@ -3689,10 +3698,10 @@
 	</game>
 	<game name="citadel" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Citadel of Chaos, The (HB, v2.23)</description>
-		<year>2021</year>
+		<description>Citadel of Chaos, The (HB, v3.0)</description>
+		<year>2021-25</year>
 		<manufacturer>Studio Vetea</manufacturer>
-		<rom name="Citadel of Chaos, The v2.23 (2021)(Studio Vetea).bin" size="3809298" crc="fac49e30"/>
+		<rom name="Citadel of Chaos, The v3.0 (2021-25)(Studio Vetea).bin" size="4095552" crc="aef2ea1f"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -16107,6 +16116,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="rrpixelpanic" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Retro Replay: Pixel Panic (HB, v0.50)</description>
+		<year>2026</year>
+		<manufacturer>Retro-Replay.com</manufacturer>
+		<rom name="Retro Replay - Pixel Panic v0.50 (2026)(Retro-Replay.com).bin" size="786432" crc="85a6b582"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="revshinre" cloneof="revshin" romof="revshin" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>Revenge of Shinobi Restoration, The (Hack)</description>
@@ -24699,12 +24717,12 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="zpfde" cloneof="zpf" romof="zpf" sourcefile="megadrive/d_megadrive.cpp">
+	<game name="zpfcde" cloneof="zpf" romof="zpf" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>ZPF (Digital Edition) (HB)</description>
+		<description>ZPF (Censored - Digital Edition) (HB)</description>
 		<year>2025-26</year>
 		<manufacturer>Mega Cat Studios</manufacturer>
-		<rom name="ZPF (Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8a19364a"/>
+		<rom name="ZPF (Censored - Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8a19364a"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -24714,6 +24732,15 @@
 		<year>2025</year>
 		<manufacturer>Mega Cat Studios</manufacturer>
 		<rom name="ZPF (2025)(Mega Cat Studios).bin" size="4194304" crc="cd657892"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zpfude" cloneof="zpf" romof="zpf" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>ZPF (Uncensored - Digital Edition) (HB)</description>
+		<year>2025-26</year>
+		<manufacturer>Mega Cat Studios</manufacturer>
+		<rom name="ZPF (Uncensored - Digital Edition) (2025-26)(Mega Cat Studios).bin" size="4194304" crc="8508ebfc"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

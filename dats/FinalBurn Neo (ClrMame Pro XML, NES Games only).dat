@@ -11248,6 +11248,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="justiceduela" cloneof="justiceduel" romof="justiceduel" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Justice Duel (HB, Alt)</description>
+		<year>2019</year>
+		<manufacturer>Mega Cat Studios</manufacturer>
+		<rom name="Justice Duel (Alt)(2019)(Mega Cat Studios).nes" size="196624" crc="b751f4b2"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="juuoukij" cloneof="juuouki" romof="juuouki" sourcefile="nes/d_nes.cpp">
 		<description>Juuouki (Japan)</description>
 		<year>1990</year>
@@ -17777,6 +17786,15 @@
 		<year>1990</year>
 		<manufacturer>Kemco</manufacturer>
 		<rom name="Rescue - The Embassy Mission (USA)(1990)(Kemco).nes" size="262160" crc="0e4fe1f3"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="rrpixelpanic" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Retro Replay: Pixel Panic (HB, v0.50)</description>
+		<year>2026</year>
+		<manufacturer>Retro-Replay.com</manufacturer>
+		<rom name="Retro Replay - Pixel Panic v0.50 (2026)(Retro-Replay.com).nes" size="40976" crc="b0d06f0c"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
