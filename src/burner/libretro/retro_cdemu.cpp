@@ -1,6 +1,8 @@
 #include "retro_common.h"
 #include "retro_cdemu.h"
 #include "burnint.h"
+#include "neocdlist.h"
+#include "neocdlist_games.h"
 
 #define DPRINTF_BUFFER_SIZE 512
 char dprintf_buf[DPRINTF_BUFFER_SIZE];
@@ -62,7 +64,30 @@ static short* cdimgOutputbuffer = NULL;
 
 static int cdimgOutputPosition;
 
+NGCDGAME* game;
+
 void NeoCDInfo_Exit() {}
+
+TCHAR* NeoCDInfo_Text(int nText)
+{
+	if(!game || !IsNeoGeoCD() || !bDrvOkay) return NULL;
+
+	switch(nText) 
+	{
+		case DRV_NAME:			return game->pszName;
+		case DRV_FULLNAME:		return game->pszTitle;
+		case DRV_MANUFACTURER:	return game->pszCompany;
+		case DRV_DATE:			return game->pszYear;
+	}
+
+	return NULL;
+}
+
+int NeoCDInfo_ID() 
+{
+	if(!game || !IsNeoGeoCD() || !bDrvOkay) return 0;
+	return game->id;
+}
 
 /**
  * see src/intf/cd/win32/cd_img.cpp

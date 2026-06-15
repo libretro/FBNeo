@@ -12163,6 +12163,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="ogrebattlete" cloneof="ogrebattle" romof="ogrebattle" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Herostar Fix v0.1.0 by songbirder included</comment>
+		<description>Ogre Battle - The March of the Black Queen (Hack, English v1.2)</description>
+		<year>2018</year>
+		<manufacturer>FinS</manufacturer>
+		<rom name="Ogre Battle - The March of the Black Queen T-Eng v1.2 (2018)(FinS).sfc" size="2097152" crc="7514efdf"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ogrebattle" sourcefile="snes/d_snes.cpp">
 		<description>Ogre Battle - The March of the Black Queen (USA)</description>
 		<year>1994</year>
@@ -17362,6 +17371,15 @@
 		<year>2025</year>
 		<manufacturer>Metaquarius</manufacturer>
 		<rom name="Super Metroid X-Fusion v1.3 (2025)(Metaquarius).sfc" size="4194304" crc="cb4a6685"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="supermetroidfcp" cloneof="supermetroid" romof="supermetroid" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Super Metroid: Fix Collection Patch (Hack, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Furo_19</manufacturer>
+		<rom name="Super Metroid - Fix Collection Patch v1.1 (2026)(Furo_19).sfc" size="3145728" crc="3f8f3eaa"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

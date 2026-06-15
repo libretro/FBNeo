@@ -1400,10 +1400,10 @@
 	</game>
 	<game name="rockmanbe" cloneof="rockmanb" romof="rockmanb" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Hack</comment>
-		<description>Rockman: Battle &amp; Fighters (Hack, English v0.9)</description>
-		<year>2018</year>
-		<manufacturer>marc_max</manufacturer>
-		<rom name="Rockman - Battle &amp; Fighters T-Eng v0.9 (2018)(marc_max).ngp" size="2097152" crc="65985356"/>
+		<description>Rockman: Battle &amp; Fighters (Hack, English v1.0)</description>
+		<year>2018-22</year>
+		<manufacturer>marc_max &amp; RyuHayabusa</manufacturer>
+		<rom name="Rockman - Battle &amp; Fighters T-Eng v1.0 (2018-22)(marc_max &amp; RyuHayabusa).ngp" size="2097152" crc="9322629e"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>

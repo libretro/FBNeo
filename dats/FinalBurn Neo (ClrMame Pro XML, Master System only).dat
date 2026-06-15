@@ -12,6 +12,15 @@
 		<url>https://neo-source.com/</url>
 		<clrmamepro forcenodump="ignore"/>
 	</header>
+	<game name="2048sms" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>2048-SMS! (HB)</description>
+		<year>2014</year>
+		<manufacturer>Sanqui</manufacturer>
+		<rom name="2048-SMS! (2014)(Sanqui).sms" size="32768" crc="4b7a237d"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="4pak" sourcefile="sms/d_sms.cpp">
 		<description>4 PAK All Action (Australia)</description>
 		<year>1995</year>
@@ -3795,6 +3804,15 @@
 		<year>1986</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Marksman Shooting and Trap Shooting and Safari Hunt (Euro, Brazil)(1986)(Sega).sms" size="131072" crc="e8215c2e"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mbarbarricade" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Master Barbarricade (HB)</description>
+		<year>2026</year>
+		<manufacturer>Jess Creations - ArugulaZ</manufacturer>
+		<rom name="Master Barbarricade (2026)(Jess Creations - ArugulaZ).sms" size="40960" crc="cc629243"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

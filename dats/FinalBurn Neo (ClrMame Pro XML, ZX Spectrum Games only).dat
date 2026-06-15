@@ -14,10 +14,10 @@
 	</header>
 	<game name="oo48" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, AY Sound supported</comment>
-		<description>--=O O=-- (48K) (HB)</description>
+		<description>--=O O=-- (48K) (HB, v1.1)</description>
 		<year>2025</year>
 		<manufacturer>Briefer666</manufacturer>
-		<rom name="--=O O=-- 48K-AY (2025)(Briefer666).tap" size="39393" crc="18ea4db2"/>
+		<rom name="--=O O=-- v1.1 48K-AY (2025-26)(Briefer666).tap" size="39393" crc="bcbf0d46"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -1486,7 +1486,7 @@
 		<description>American Tag-Team Wrestling (48K)</description>
 		<year>1992</year>
 		<manufacturer>Zeppelin Games</manufacturer>
-		<rom name="American Tag-Team Wrestling 48K (1992)(Zeppelin Games).z80" size="38767" crc="afb4c0cc"/>
+		<rom name="American Tag-Team Wrestling 48K (1992)(Zeppelin Games).tzx" size="46843" crc="57ea14e3"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -6689,6 +6689,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cosmcruis" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cosmic Cruiser (48K)</description>
+		<year>1984</year>
+		<manufacturer>Imagine Software</manufacturer>
+		<rom name="Cosmic Cruiser 48K (1984)(Imagine Software).tzx" size="46167" crc="f1c3bf1e"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cosmiclan" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Cosmic Lander (48K) (HB)</description>
@@ -7408,6 +7418,50 @@
 		<manufacturer>Alpha-Omega Software</manufacturer>
 		<rom name="Custerd's Quest 48K (1986)(Alpha-Omega Software).tzx" size="48570" crc="8c05087c"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cybwraithen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cyber Wraith (English) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>S&amp;R</manufacturer>
+		<rom name="Cyber Wraith EN 128K (2026)(S&amp;R).tap" size="73834" crc="32467f6c"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cybwraithit" cloneof="cybwraithen" romof="cybwraithen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cyber Wraith (Italian) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>S&amp;R</manufacturer>
+		<rom name="Cyber Wraith IT 128K (2026)(S&amp;R).tap" size="74135" crc="17605e50"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cybwraithpt" cloneof="cybwraithen" romof="cybwraithen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cyber Wraith (Portuguese) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>S&amp;R</manufacturer>
+		<rom name="Cyber Wraith PT 128K (2026)(S&amp;R).tap" size="73836" crc="c0b95748"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cybwraithes" cloneof="cybwraithen" romof="cybwraithen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cyber Wraith (Spanish) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>S&amp;R</manufacturer>
+		<rom name="Cyber Wraith ES 128K (2026)(S&amp;R).tap" size="73997" crc="77678931"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13554,10 +13608,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="hawkstorm" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Hawk Storm (128K)</description>
+		<description>Hawk Storm (48K-128K)</description>
 		<year>1990</year>
 		<manufacturer>Players Software</manufacturer>
-		<rom name="Hawk Storm 128K (1990)(Players).z80" size="41034" crc="f38d5e3c"/>
+		<rom name="Hawk Storm 48K-128K (1990)(Players Software).tzx" size="55508" crc="b7a4ea73"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -19223,9 +19277,20 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mikeinvs" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Mike Invaders (48K-128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>ZXAMAZE</manufacturer>
+		<rom name="Mike Invaders 48K-128K (2026)(ZXAMAZE).tap" size="52393" crc="d3275042"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="miketheguitar2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Mike the Guitar - The Shooter (128K) (HB)</description>
+		<description>Mike the Guitar: The Shooter (128K) (HB)</description>
 		<year>2019</year>
 		<manufacturer>Sebastian Braunert</manufacturer>
 		<rom name="Mike the Guitar - The Shooter 128K (2019)(Sebastian Braunert).tap" size="42463" crc="02644948"/>
@@ -31646,7 +31711,7 @@
 		<description>Victory Road: The Pathway to Fear (48K)</description>
 		<year>1989</year>
 		<manufacturer>Imagine Software</manufacturer>
-		<rom name="Victory Road - The Pathway to Fear 48K (1989)(Imagine Software).tap" size="47710" crc="0613c95a"/>
+		<rom name="Victory Road - The Pathway to Fear 48K (1989)(Imagine Software).tzx" size="53016" crc="e557d61a"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -31679,7 +31744,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="vindthe128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Password Part2: VALSALVA MANOEUVRE</comment>
+		<comment>Password Part 2: VALSALVA MANOEUVRE</comment>
 		<description>Vindicator!, The (128K)</description>
 		<year>1988</year>
 		<manufacturer>Imagine Software</manufacturer>

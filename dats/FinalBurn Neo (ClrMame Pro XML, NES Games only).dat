@@ -4065,6 +4065,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="clashcourts" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Clash of Courts (HB, v1.0.2)</description>
+		<year>2026</year>
+		<manufacturer>kn56k</manufacturer>
+		<rom name="Clash of Courts v1.0.2 (2026)(kn56k).nes" size="524304" crc="9a914504"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="cliffhanger" sourcefile="nes/d_nes.cpp">
 		<description>Cliffhanger (USA)</description>
 		<year>1993</year>

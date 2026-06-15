@@ -24315,6 +24315,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="xevious" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Xevious (HB, alpha-0.02)</description>
+		<year>2026</year>
+		<manufacturer>SirVH</manufacturer>
+		<rom name="Xevious alpha-0.02 (2026)(SirVH).bin" size="1048576" crc="c18f33f2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="xiaomo" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Xiao Monv: Magic Girl (Taiwan) (Unl)</description>
 		<year>1993</year>
