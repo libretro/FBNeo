@@ -70,6 +70,7 @@ void NeoCDInfo_Exit() {}
 
 TCHAR* NeoCDInfo_Text(int nText)
 {
+#ifndef NO_NEOGEO
 	if(!game || !IsNeoGeoCD() || !bDrvOkay) return NULL;
 
 	switch(nText) 
@@ -79,14 +80,18 @@ TCHAR* NeoCDInfo_Text(int nText)
 		case DRV_MANUFACTURER:	return game->pszCompany;
 		case DRV_DATE:			return game->pszYear;
 	}
-
+#endif
 	return NULL;
 }
 
 int NeoCDInfo_ID() 
 {
+#ifndef NO_NEOGEO
 	if(!game || !IsNeoGeoCD() || !bDrvOkay) return 0;
 	return game->id;
+#else
+	return 0;
+#endif
 }
 
 /**
