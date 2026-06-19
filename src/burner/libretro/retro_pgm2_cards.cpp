@@ -444,8 +444,8 @@ static void scan_slot_files(int slot, const char* drvname, char dir[MAX_PATH])
 			const char* name = names[i].c_str();
 			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: [%d] trying name=\"%s\"\n", slot + 1, i, name);
 			// <drvname>_pN_YYYYMMDD_HHMMSS.pg2
-			int slot_num;
-			int year, month, day, hour, min, sec;
+			int slot_num = 0;
+			int year = 0, month = 0, day = 0, hour = 0, min = 0, sec = 0;
 			int parsed = sscanf(name, "%*[^_]_%*[^_]_p%d_%4d%2d%2d_%2d%2d%2d.pg2",
 					   &slot_num, &year, &month, &day, &hour, &min, &sec);
 			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: [%d] sscanf parsed=%d, slot_num=%d, date=%04d%02d%02d %02d:%02d:%02d\n",
