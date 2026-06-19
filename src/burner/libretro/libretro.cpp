@@ -2164,8 +2164,8 @@ static bool retro_load_game_common()
 
 		// Start CD reader emulation if needed
 		if (nGameType == RETRO_GAME_TYPE_NEOCD) {
-			const char* ext = path_get_extension(szRomsetPath);
-			if (strcmp(ext, "cue") != 0 && strcmp(ext, "ccd") != 0) {
+			const char* ext = path_get_extension(CDEmuImage);
+			if (!string_is_equal_noncase(ext, "cue") && !string_is_equal_noncase(ext, "ccd")) {
 				static char uguiText[4096];
 				const char* s1 = RETRO_ERROR_MESSAGES_13;
 				const char* s2 = RETRO_ERROR_MESSAGES_07;

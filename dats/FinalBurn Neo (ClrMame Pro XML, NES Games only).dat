@@ -22948,7 +22948,7 @@
 		<description>Tuki &amp; Paco Adventures (HB, Demo)</description>
 		<year>2026</year>
 		<manufacturer>Pixelis Software</manufacturer>
-		<rom name="Tuki &amp; Paco Adventures (Demo)(2026)(Pixelis Software).nes" size="524304" crc="f5cb1867"/>
+		<rom name="Tuki &amp; Paco Adventures (Demo)(2026)(Pixelis Software).nes" size="524304" crc="b1c6e9fc"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
