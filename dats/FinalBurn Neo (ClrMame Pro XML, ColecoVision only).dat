@@ -448,10 +448,10 @@
 	</game>
 	<game name="barbarricade" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew</comment>
-		<description>Barbarricade (HB, 06-03-26)</description>
+		<description>Barbarricade (HB, 06-17-26)</description>
 		<year>2026</year>
 		<manufacturer>Jess Creations</manufacturer>
-		<rom name="Barbarricade 06-03-26 (2026)(Jess Creations).rom" size="32768" crc="bf40aaf7"/>
+		<rom name="Barbarricade 06-17-26 (2026)(Jess Creations).rom" size="32768" crc="ad6630ce"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>

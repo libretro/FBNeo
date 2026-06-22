@@ -2234,16 +2234,16 @@
 	</game>
 	<game name="blueandr" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
-		<description>Blue And Red - Fight The Robots! (HB, v1.5 NTSC)</description>
+		<description>Blue And Red - Fight The Robots! (HB, v1.6 NTSC)</description>
 		<year>2026</year>
 		<manufacturer>Kaiju Wasp</manufacturer>
-		<rom name="blueandr-p1.bin" size="1048576" crc="32b764e1"/>
+		<rom name="blueandr-p1.bin" size="1048576" crc="6e4f71aa"/>
 		<rom name="blueandr-s1.bin" size="131072" crc="0d0067f5"/>
-		<rom name="blueandr-c1.bin" size="262144" crc="c1554b81"/>
-		<rom name="blueandr-c2.bin" size="262144" crc="83a9c206"/>
-		<rom name="blueandr-m1.bin" size="262144" crc="864a8cf8"/>
+		<rom name="blueandr-c1.bin" size="262144" crc="79b934a5"/>
+		<rom name="blueandr-c2.bin" size="262144" crc="47647e8d"/>
+		<rom name="blueandr-m1.bin" size="262144" crc="19f32974"/>
 		<rom name="blueandr-v1.bin" size="262144" crc="7d5535dd"/>
-		<rom name="blueandr-v2.bin" size="12058624" crc="d6308621"/>
+		<rom name="blueandr-v2.bin" size="12058624" crc="d52a3036"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>

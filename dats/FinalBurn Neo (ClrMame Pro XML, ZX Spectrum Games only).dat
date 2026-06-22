@@ -5432,7 +5432,7 @@
 	</game>
 	<game name="caveraid" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cave Raider - The Cursed Treasure (128K) (HB)</description>
+		<description>Cave Raider: The Cursed Treasure (128K) (HB)</description>
 		<year>2018</year>
 		<manufacturer>Bumfun Software</manufacturer>
 		<rom name="Cave Raider - The Cursed Treasure 128K (2018)(Bumfun Software).tap" size="35128" crc="57718ae2"/>
@@ -7167,12 +7167,22 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cuatrovientos" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cuatro Vientos (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Midtown Games</manufacturer>
+		<rom name="Cuatro Vientos 48K (2026)(Midtown Games).tap" size="36672" crc="b5d4e265"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cubicexp" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, Press '2' to use controller</comment>
-		<description>Cubic Experience, The (128K) (HB, v1.0)</description>
+		<description>Cubic Experience, The (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>Toku Soft</manufacturer>
-		<rom name="Cubic Experience, The v1.0 128K (2022)(Toku Soft).tap" size="37903" crc="366b62f0"/>
+		<rom name="Cubic Experience, The 48K-128K (2022)(Toku Soft).tap" size="37903" crc="366b62f0"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -7180,10 +7190,10 @@
 	</game>
 	<game name="cubicexpve" cloneof="cubicexp" romof="cubicexp" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, Visual Experince: the interactive tutorial of the game</comment>
-		<description>Cubic Experience, The - V.E. (128K) (HB, v1.0)</description>
+		<description>Cubic Experience, The - V.E. (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>Toku Soft</manufacturer>
-		<rom name="Cubic Experience, The - V.E. v1.0 128K (2022)(Toku Soft).tap" size="25874" crc="02582bdf"/>
+		<rom name="Cubic Experience, The - V.E. 48K-128K (2022)(Toku Soft).tap" size="25874" crc="02582bdf"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

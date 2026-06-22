@@ -17,6 +17,9 @@
 #define IDI_TV_NOTFOUND_NON         	    15
 #define IDI_INPD_DETECT_GAMEPADS            16 // icon
 #define IDC_INPD_DETECT_GAMEPADS            17 // control
+#define IDI_TV_ROMDATA_DRV                  18
+#define IDI_LV_CDIMAGE_CUE                  19
+#define IDI_LV_CDIMAGE_CHD                  20
 
 #define IDD_SPLASH							50
 #define IDD_INPD                        	51
@@ -369,7 +372,11 @@
 #define IDC_NCD_SCAN_BUTTON					20811
 #define IDC_NCD_SEL_DIR_BUTTON				20812
 #define IDC_NCD_PLAY_BUTTON					20813
+/*
+*	Use the IDCANCEL control (standard value 2);
+	otherwise, the ESC key cannot be responded to and the modal dialog window cannot be closed.
 #define IDC_NCD_CANCEL_BUTTON				20814
+*/
 #define IDC_NCD_COVER_PREVIEW_PIC			20815
 #define IDC_NCD_LABELSHORT					20816
 #define IDC_NCD_LABELPUBLISHER				20817

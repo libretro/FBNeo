@@ -108,6 +108,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="7thsagatp" cloneof="7thsaga" romof="7thsaga" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>7th Saga, The (Hack, Portuguese)</description>
+		<year>2002</year>
+		<manufacturer>Wanzeler</manufacturer>
+		<rom name="7th Saga, The PT-BR (2002)(Wanzeler).sfc" size="1572864" crc="29bde67c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="7thsaga" sourcefile="snes/d_snes.cpp">
 		<description>7th Saga, The (USA)</description>
 		<year>1993</year>
@@ -146,6 +155,15 @@
 		<year>1995</year>
 		<manufacturer>Viacom New Media</manufacturer>
 		<rom name="Aaahh!!! Real Monsters (E)(1995)(Viacom New Media).sfc" size="2097152" crc="946313fb"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="aaahhrmtp" cloneof="aaahhrm" romof="aaahhrm" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Aaahh!!! Real Monsters (Hack, Portuguese)</description>
+		<year>2011</year>
+		<manufacturer>Ruhan7</manufacturer>
+		<rom name="Aaahh!!! Real Monsters PT-BR (2011)(Ruhan7).sfc" size="2097152" crc="13acbc83"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -2507,6 +2525,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bugsbunnytp" cloneof="bugsbunny" romof="bugsbunny" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Bugs Bunny - Rabbit Rampage (Hack, Portuguese v.Beta 2.0)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Bugs Bunny - Rabbit Rampage PT-BR v.Beta 2.0 (2018)(Ripman).sfc" size="1572864" crc="fd2724cb"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bugsbunny" sourcefile="snes/d_snes.cpp">
 		<description>Bugs Bunny - Rabbit Rampage (USA)</description>
 		<year>1993</year>
@@ -3120,6 +3147,15 @@
 		<year>1998</year>
 		<manufacturer>SadNES cITy</manufacturer>
 		<rom name="Chrono Trigger T-Ita v1.2 (1998)(SadNES cITy).sfc" size="4194304" crc="1bd38229"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="chronotriggertp" cloneof="chronotrigger" romof="chronotrigger" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Chrono Trigger (Hack, Portuguese v1.05)</description>
+		<year>2004</year>
+		<manufacturer>Lynx</manufacturer>
+		<rom name="Chrono Trigger PT-BR v1.05 (2004)(Lynx).sfc" size="4194304" crc="d1a61235"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3749,6 +3785,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="daffyducktmmtp" cloneof="daffyducktmm" romof="daffyducktmm" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Daffy Duck - The Marvin Missions (Hack, Portuguese)</description>
+		<year>2000</year>
+		<manufacturer>Venom Total</manufacturer>
+		<rom name="Daffy Duck - The Marvin Missions PT-BR (2000)(Venom Total).sfc" size="1048576" crc="77ff056e"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="daffyducktmm" sourcefile="snes/d_snes.cpp">
 		<description>Daffy Duck - The Marvin Missions (USA)</description>
 		<year>1993</year>
@@ -4274,6 +4319,15 @@
 		<year>1994</year>
 		<manufacturer>Hudson Soft - Disney Int.</manufacturer>
 		<rom name="Disney's Beauty and the Beast (U)(1994)(Hudson Soft).sfc" size="1048576" crc="956e183c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bonkerstp" cloneof="bonkers" romof="bonkers" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Disney's Bonkers (Hack, Portuguese v.Beta 1.0)</description>
+		<year>2017</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Disney's Bonkers PT-BR v.Beta 1.0 (2017)(Ripman).sfc" size="1048576" crc="cb7558f2"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5312,6 +5366,15 @@
 		<year>1995</year>
 		<manufacturer>Playmates Interactive Ent.</manufacturer>
 		<rom name="Earthworm Jim 2 (E)(1995)(Playmates).sfc" size="3145728" crc="4f961f70"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="earthwormjim2tp" cloneof="earthwormjim2" romof="earthwormjim2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Earthworm Jim 2 (Hack, Portuguese)</description>
+		<year>2017</year>
+		<manufacturer>ripman</manufacturer>
+		<rom name="Earthworm Jim 2 PT-BR (2017)(ripman).sfc" size="3145728" crc="96fec634"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -9682,6 +9745,15 @@
 		<year>1994</year>
 		<manufacturer>Psygnosis</manufacturer>
 		<rom name="Lemmings 2 - The Tribes (U)(1994)(Psygnosis).sfc" size="2097152" crc="df7200c8"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="legendofzeldatp" cloneof="legendofzelda" romof="legendofzelda" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Lenda de Zelda, A: Um Elo com o Passado (Hack, Portuguese v.Beta 1.0)</description>
+		<year>2014</year>
+		<manufacturer>spyblack, Denim</manufacturer>
+		<rom name="Lenda de Zelda, A - Um Elo com o Passado PT-BR v.Beta 1.0 (2014)(spyblack, Denim).sfc" size="2097152" crc="e6d69a29"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
