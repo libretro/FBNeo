@@ -47,10 +47,22 @@ static const char* PGM2_OPT_TEMPORARY = "temporary";
 static const char* PGM2_OPT_NEW = "new";
 static const char* PGM2_OPT_LATEST_NEW_FILE = "latest_new_card_file";
 
+/*
+ * PGM2 driver slot counts and save compatibility.
+ *
+ * 1. Original Drivers: Region fixed by driver name.
+ *    - Same Region, Diff Version: Compatible (e.g., CN v103 <-> CN v104).
+ *    - Different Region: Incompatible (e.g., CN <-> TW).
+ *
+ * 2. Decrypted Drivers (e.g., orleg2d): Single name; region set via DIPs.
+ *    - WARNING: Cross-region saves are incompatible.
+ *      Players must ensure the loaded card matches the active DIP region.
+ */
 static const struct {
     const char* drv_name;
     INT32 max_slots;
 } pgm2_slot_table[] = {
+
     // ORLEG2
     { "orleg2",           0 },  // overseas (V104)
     { "orleg2_103",       0 },  // overseas
@@ -67,6 +79,9 @@ static const struct {
     { "orleg2_104tw",     4 },  // Taiwan
     { "orleg2_103tw",     4 },  // Taiwan
     { "orleg2_101tw",     4 },  // Taiwan
+    { "orleg2d",          4 },  // Decrypted (V104)
+    { "orleg2d_103",      4 },  // Decrypted
+    { "orleg2d_101",      4 },  // Decrypted
 
     // KOV2NL
     { "kov2nl",           4 },  // overseas (V302)
@@ -84,16 +99,25 @@ static const struct {
     { "kov2nl_302tw",     4 },  // Taiwan
     { "kov2nl_301tw",     4 },  // Taiwan
     { "kov2nl_300tw",     4 },  // Taiwan
+    { "kov2nld",          4 },  // Decrypted (V302)
+    { "kov2nld_301",      4 },  // Decrypted
+    { "kov2nld_300",      4 },  // Decrypted
 
     // KOV3
-    { "kov3",             2 },
+    { "kov3",             2 },  // (V104)
     { "kov3_102",         2 },
     { "kov3_101",         2 },
     { "kov3_100",         2 },
+    { "kov3d",            2 },  // Decrypted (V104)
+    { "kov3d_102",        2 },  // Decrypted
+    { "kov3d_101",        2 },  // Decrypted
+    { "kov3d_100",        2 },  // Decrypted
 
     // No card slots
     { "ddpdojt",          0 },
+    { "ddpdojtd",         0 },  // Decrypted
     { "kof98umh",         0 },
+    { "kof98umhd",        0 },  // Decrypted
 };
 
 static INT32 get_pgm2_slot_count(const char* drv_name)
@@ -446,7 +470,7 @@ static void scan_slot_files(int slot, const char* drvname, char dir[MAX_PATH])
 			// <drvname>_pN_YYYYMMDD_HHMMSS.pg2
 			int slot_num = 0;
 			int year = 0, month = 0, day = 0, hour = 0, min = 0, sec = 0;
-			int parsed = sscanf(name, "%*[^_]_%*[^_]_p%d_%4d%2d%2d_%2d%2d%2d.pg2",
+			int parsed = sscanf(name + strlen(drvname), "_p%d_%4d%2d%2d_%2d%2d%2d.pg2",
 					   &slot_num, &year, &month, &day, &hour, &min, &sec);
 			log_cb(RETRO_LOG_INFO, "[FBNeo PGM2 cards] slot P%d: [%d] sscanf parsed=%d, slot_num=%d, date=%04d%02d%02d %02d:%02d:%02d\n",
 				slot + 1, i, parsed, slot_num, year, month, day, hour, min, sec);
@@ -635,6 +659,16 @@ void set_option_applied(int slot, const char* value) {
 }
 
 
+/*
+ * Slot settings are global across all PGM2 games (e.g., "Use Temporary Card").
+ *
+ * Important: Ensure the desired memory card is selected before entering the character selection screen.
+ *
+ * Known Behavior on Game Switch:
+ * 1. Specifically Named Card: Reverts to "Empty Slot" if the new game has a different
+ *    driver name, as the option value (containing the driver name) becomes invalid.
+ * 2. Latest New Card File: Reverts to "Empty Slot" if no matching file is found.
+ */
 static void apply_one_slot(int slot)
 {
 	if (slot < 0 || slot >= 4 || !Pgm2Cards[slot])
