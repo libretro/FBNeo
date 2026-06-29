@@ -385,7 +385,12 @@ static void eject_slot(int slot) {
     }
 
     INT32 nMinVersion = 0;
+    INT32 (__cdecl *prev_burn_acb)(struct BurnArea*) = BurnAcb;
+
+    BurnAcb = pgm2_card_noop_callback;
     BurnAreaScan(ACB_READ | ACB_MEMCARD | ACB_MEMCARD_ACTION, &nMinVersion);
+
+    BurnAcb = prev_burn_acb;
 }
 
 static void save_active_slot_file(int slot)
