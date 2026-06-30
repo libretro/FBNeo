@@ -267,6 +267,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="actraisertp" cloneof="actraiser" romof="actraiser" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>ActRaiser (Hack, Portuguese)</description>
+		<year>2017</year>
+		<manufacturer>BlackThorne</manufacturer>
+		<rom name="ActRaiser PT-BR (2017)(BlackThorne).sfc" size="2097152" crc="8a2060cc"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="actraiserj" cloneof="actraiser" romof="actraiser" sourcefile="snes/d_snes.cpp">
 		<description>Actraiser (Japan)</description>
 		<year>1990</year>
@@ -288,6 +297,15 @@
 		<year>1993</year>
 		<manufacturer>Enix/Quintet</manufacturer>
 		<rom name="ActRaiser 2 (E)(1993)(Enix - Quintet).sfc" size="1572864" crc="630e16a1"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="actraiser2tp" cloneof="actraiser2" romof="actraiser2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>ActRaiser 2 (Hack, Portuguese)</description>
+		<year>2007</year>
+		<manufacturer>Trans-Center</manufacturer>
+		<rom name="ActRaiser 2 PT-BR (2007)(Trans-Center).sfc" size="1572864" crc="7842818b"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -378,6 +396,15 @@
 		<year>2014</year>
 		<manufacturer>Wesker90</manufacturer>
 		<rom name="Addams Family, The - Pugsley's Scavenger Hunt T-Ita (2014)(Wesker90).sfc" size="1048576" crc="d58fb46b"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pugsleyscavhunttp" cloneof="pugsleyscavhunt" romof="pugsleyscavhunt" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Addams Family, The - Pugsley's Scavenger Hunt (Hack, Portuguese)</description>
+		<year>2002</year>
+		<manufacturer>JCN Traducoes</manufacturer>
+		<rom name="Addams Family, The - Pugsley's Scavenger Hunt PT-BR (2002)(JCN Traducoes).sfc" size="1048576" crc="3b2a1aa3"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -854,6 +881,15 @@
 		<year>1997</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Animaniacs (E)(1997)(Konami).sfc" size="1048576" crc="c28a80f6"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="animaniacstp" cloneof="animaniacs" romof="animaniacs" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Animaniacs (Hack, Portuguese)</description>
+		<year>1999</year>
+		<manufacturer>Venom Total</manufacturer>
+		<rom name="Animaniacs PT-BR (1999)(Venom Total).sfc" size="1049088" crc="bf417363"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1831,6 +1867,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bikermicetp" cloneof="bikermice" romof="bikermice" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Biker Mice from Mars (Hack, Portuguese)</description>
+		<year>2001</year>
+		<manufacturer>FBI</manufacturer>
+		<rom name="Biker Mice from Mars PT-BR (2001)(FBI).sfc" size="1180160" crc="c67ceff2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bikermice" sourcefile="snes/d_snes.cpp">
 		<description>Biker Mice from Mars (USA)</description>
 		<year>1994</year>
@@ -2459,6 +2504,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bubsyiitp" cloneof="bubsyii" romof="bubsyii" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Bubsy II (Hack, Portuguese)</description>
+		<year>2017</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Bubsy II PT-BR (2017)(Ripman).sfc" size="2097152" crc="d2647609"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bubsyii" sourcefile="snes/d_snes.cpp">
 		<description>Bubsy II (USA)</description>
 		<year>1994</year>
@@ -2472,6 +2526,15 @@
 		<year>1992</year>
 		<manufacturer>Accolade</manufacturer>
 		<rom name="Bubsy in Claws Encounters of the Furred Kind (E)(1992)(Accolade).sfc" size="2097152" crc="74a94d60"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bubsytp" cloneof="bubsy" romof="bubsy" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Bubsy in Claws Encounters of the Furred Kind (Hack, Portuguese)</description>
+		<year>2017</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Bubsy in Claws Encounters of the Furred Kind PT-BR (2017)(Ripman).sfc" size="2097152" crc="98f0ddc5"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3406,11 +3469,29 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="congocapertp" cloneof="congocaper" romof="congocaper" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Congo's Caper (Hack, Portuguese)</description>
+		<year>2026</year>
+		<manufacturer>juliano_did</manufacturer>
+		<rom name="Congo's Caper PT-BR (2026)(juliano_did).sfc" size="524288" crc="ace9b6b4"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="congocaper" sourcefile="snes/d_snes.cpp">
 		<description>Congo's Caper (USA)</description>
 		<year>1993</year>
 		<manufacturer>Data East</manufacturer>
 		<rom name="Congo's Caper (U)(1993)(Data East).sfc" size="524288" crc="8a24fba8"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="contraiiitp" cloneof="contraiii" romof="contraiii" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Contra III - The Alien Wars (Hack, Portuguese)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Contra III - The Alien Wars PT-BR (2018)(Ripman).sfc" size="1048576" crc="adbb4688"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3444,6 +3525,15 @@
 		<year>1993</year>
 		<manufacturer>Virgin Games</manufacturer>
 		<rom name="Cool Spot (E)(1993)(Virgin Games).sfc" size="1048576" crc="281244b0"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="coolspottp" cloneof="coolspot" romof="coolspot" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Cool Spot (Hack, Portuguese)</description>
+		<year>2010</year>
+		<manufacturer>Rangel Oblivion</manufacturer>
+		<rom name="Cool Spot PT-BR (2010)(Rangel Oblivion).sfc" size="1048576" crc="39ebaa38"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -4497,6 +4587,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="clapperquest" cloneof="dkongcntry2" romof="dkongcntry2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>DKC2: Clapper's Quest (Hack)</description>
+		<year>2026</year>
+		<manufacturer>KFin45</manufacturer>
+		<rom name="DKC2 - Clapper's Quest (2026)(KFin45).sfc" size="4194304" crc="a1885834"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="rambisrevenge" cloneof="dkongcntry2" romof="dkongcntry2" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>DKC2: Rambis Revenge (Hack)</description>
@@ -4632,6 +4731,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dkongcntrytp" cloneof="dkongcntry" romof="dkongcntry" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Donkey Kong Country (Hack, Portuguese)</description>
+		<year>2004</year>
+		<manufacturer>Fox Roms</manufacturer>
+		<rom name="Donkey Kong Country PT-BR (2004)(Fox Roms).sfc" size="4194816" crc="3435b7b3"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dkongcntryr0" cloneof="dkongcntry" romof="dkongcntry" sourcefile="snes/d_snes.cpp">
 		<description>Donkey Kong Country (USA)</description>
 		<year>1994</year>
@@ -4653,6 +4761,15 @@
 		<year>1995</year>
 		<manufacturer>Nintendo - Rare</manufacturer>
 		<rom name="Donkey Kong Country 2 - Diddy's Kong Quest (E, Rev 1)(1995)(Nintendo - Rare).sfc" size="4194304" crc="2ea6b7e8"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dkongcntry2tp" cloneof="dkongcntry2" romof="dkongcntry2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Donkey Kong Country 2: Diddy's Kong Quest (Hack, Portuguese)</description>
+		<year>2017</year>
+		<manufacturer>FURT</manufacturer>
+		<rom name="Donkey Kong Country 2 - Diddy's Kong Quest PT-BR (2017)(FURT).sfc" size="6291456" crc="470b884c"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -4687,6 +4804,15 @@
 		<year>1996</year>
 		<manufacturer>Nintendo - Rare</manufacturer>
 		<rom name="Donkey Kong Country 3 - Dixie Kong's Double Trouble! (E)(1996)(Nintnedo - Rare).sfc" size="4194304" crc="0551fe84"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dkongcntry3tp" cloneof="dkongcntry3" romof="dkongcntry3" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Donkey Kong Country 3: Dixie Kong's Double Trouble! (Hack, Portuguese)</description>
+		<year>2020</year>
+		<manufacturer>FTR</manufacturer>
+		<rom name="Donkey Kong Country 3 - Dixie Kong's Double Trouble! PT-BR (2020)(FTR).sfc" size="4194304" crc="6804934c"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5317,6 +5443,15 @@
 		<year>1992</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="Earth Light (J)(1992)(Hudson Soft).sfc" size="1048576" crc="727f1593"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="earthboundtp" cloneof="earthbound" romof="earthbound" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>EarthBound (Hack, Portuguese)</description>
+		<year>2015</year>
+		<manufacturer>EarthBound Brasil</manufacturer>
+		<rom name="EarthBound PT-BR (2015)(EarthBound Brasil).sfc" size="4194304" crc="a19f1c1c"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -6491,6 +6626,15 @@
 		<year>1993</year>
 		<manufacturer>U.S. Gold - Delphine Software</manufacturer>
 		<rom name="Flashback - The Quest for Identity (U)(1993)(U.S. Gold - Delphine Software).sfc" size="2097152" crc="1e6aceba"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="flintstonestp" cloneof="flintstones" romof="flintstones" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Flintstones, Os (Hack, Portuguese)</description>
+		<year>2026</year>
+		<manufacturer>juliano_did</manufacturer>
+		<rom name="Flintstones, Os PT-BR (2026)(juliano_did).sfc" size="2621440" crc="54b43c19"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -10653,6 +10797,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="masktp" cloneof="mask" romof="mask" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mask, The (Hack, Portuguese v1.0.1)</description>
+		<year>2017</year>
+		<manufacturer>THQ Inc. - Black Pearl Software</manufacturer>
+		<rom name="Mask, The PT-BR v1.0.1 (2017)(Ripman).sfc" size="2097152" crc="7f3678b6"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mask" sourcefile="snes/d_snes.cpp">
 		<description>Mask, The (USA)</description>
 		<year>1995</year>
@@ -10848,6 +11001,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="megamanxtp" cloneof="megamanx" romof="megamanx" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mega Man X (Hack, Portuguese)</description>
+		<year>2000</year>
+		<manufacturer>BR Games</manufacturer>
+		<rom name="Mega Man X PT-BR (2000)(BR Games).sfc" size="1572864" crc="fc776d3c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="megamanx" sourcefile="snes/d_snes.cpp">
 		<description>Mega Man X (USA, Rev. 1)</description>
 		<year>1993</year>
@@ -10880,6 +11042,15 @@
 		<year>1994</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="Mega Man X2 (E)(1994)(Capcom).sfc" size="1572864" crc="3c49c39c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="megamanx2tp" cloneof="megamanx2" romof="megamanx2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, CX4 enhancement chip</comment>
+		<description>Mega Man X2 (Hack, Portuguese)</description>
+		<year>2001</year>
+		<manufacturer>Tradu-Roms</manufacturer>
+		<rom name="Mega Man X2 PT-BR (2001)(Tradu-Roms).sfc" size="1572864" crc="bd71da6b"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20612,6 +20783,15 @@
 		<year>1994</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="X-Men - Mutant Apocalypse (E)(1994)(Capcom).sfc" size="2097152" crc="8e4ab536"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="xmenmatp" cloneof="xmenma" romof="xmenma" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>X-Men - Mutant Apocalypse (Hack, Portuguese)</description>
+		<year>2000</year>
+		<manufacturer>BR Games</manufacturer>
+		<rom name="X-Men - Mutant Apocalypse PT-BR (2000)(BR Games).sfc" size="2097152" crc="8d49650a"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
