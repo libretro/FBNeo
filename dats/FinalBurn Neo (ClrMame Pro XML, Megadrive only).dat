@@ -12716,10 +12716,10 @@
 	</game>
 	<game name="mkaee" cloneof="mk" romof="mk" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>Mortal Kombat Arcade Edition Enhanced (Hack, v2.4)</description>
+		<description>Mortal Kombat Arcade Edition Enhanced (Hack, v2.6)</description>
 		<year>2026</year>
 		<manufacturer>Rael G.C.</manufacturer>
-		<rom name="Mortal Kombat Arcade Edition Enhanced v2.4 (2026)(Rael G.C.).bin" size="4194304" crc="20e1378c"/>
+		<rom name="Mortal Kombat Arcade Edition Enhanced v2.6 (2026)(Rael G.C.).bin" size="4194304" crc="d42cd074"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

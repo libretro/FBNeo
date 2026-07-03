@@ -4082,6 +4082,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dnrsupermantp" cloneof="dnrsuperman" romof="dnrsuperman" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Death and Return of Superman, The (Hack, Portuguese v.Beta 1)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Death and Return of Superman, The PT-BR v.Beta 1 (2018)(Ripman).sfc" size="2097152" crc="2ed18e0a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dnrsuperman" sourcefile="snes/d_snes.cpp">
 		<description>Death and Return of Superman, The (USA)</description>
 		<year>1994</year>
@@ -4112,6 +4121,15 @@
 		<year>1995</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Demolition Man (E)(1995)(Acclaim Entertainment).sfc" size="2097152" crc="31a1b85a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="demolmantp" cloneof="demolman" romof="demolman" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Demolition Man (Hack, Portuguese)</description>
+		<year>2010</year>
+		<manufacturer>Makinadomal94</manufacturer>
+		<rom name="Demolition Man PT-BR (2010)(Makinadomal94).sfc" size="2097152" crc="60e53ff4"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -4520,6 +4538,15 @@
 		<year>2013</year>
 		<manufacturer>Hylian, Denim</manufacturer>
 		<rom name="Goof Troop - A Turma do Pateta PT-BR (2013)(Hylian, Denim).sfc" size="524288" crc="094ba15f"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pinocchiotp" cloneof="pinocchio" romof="pinocchio" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Disney's Pinocchio (Hack, Portuguese v1.1)</description>
+		<year>2020</year>
+		<manufacturer>ByFTR</manufacturer>
+		<rom name="Disney's Pinocchio PT-BR v1.1 (2020)(ByFTR).sfc" size="3145728" crc="8dac2233"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -7469,6 +7496,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gp1piitp" cloneof="gp1pii" romof="gp1pii" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>GP-1 - Part II (Hack, Portuguese)</description>
+		<year>2009</year>
+		<manufacturer>Jamis</manufacturer>
+		<rom name="GP-1 - Part II PT-BR (2009)(Jamis).sfc" size="1572864" crc="b6d5ad5e"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gp1pii" sourcefile="snes/d_snes.cpp">
 		<description>GP-1 - Part II (USA)</description>
 		<year>1994</year>
@@ -7482,6 +7518,15 @@
 		<year>1994</year>
 		<manufacturer>Atlus Co.</manufacturer>
 		<rom name="GP-1 RS - Rapid Stream (J)(1994)(Atlus).sfc" size="1572864" crc="d4488768"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="gradius3tp" cloneof="gradius3" romof="gradius3" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Gradius III (Hack, Portuguese)</description>
+		<year>2005</year>
+		<manufacturer>smartcelo3</manufacturer>
+		<rom name="Gradius III PT-BR (2005)(smartcelo3).sfc" size="524288" crc="7a009de5"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -8474,6 +8519,24 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="issdxwc26" cloneof="issdx" romof="issdx" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>ISSD - World Cup 2026 (Hack, RC1)</description>
+		<year>2026</year>
+		<manufacturer>Equipe Falcon Brasil</manufacturer>
+		<rom name="ISSD - World Cup 2026 RC1 (2026)(Equipe Falcon Brasil).sfc" size="2097152" crc="b658f941"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="issdxwc26gb" cloneof="issdx" romof="issdx" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Portuguese commentaries</comment>
+		<description>ISSD - World Cup 2026 - Narracao Galvao Bueno (Hack, RC1)</description>
+		<year>2026</year>
+		<manufacturer>Equipe Falcon Brasil</manufacturer>
+		<rom name="ISSD - World Cup 2026 - Narracao Galvao Bueno RC1 (2026)(Equipe Falcon Brasil).sfc" size="2097152" crc="499b7866"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="itchyscratchy" sourcefile="snes/d_snes.cpp">
 		<description>Itchy &amp; Scratchy Game, The (USA)</description>
 		<year>1994</year>
@@ -8661,6 +8724,15 @@
 		<year>2018</year>
 		<manufacturer>d4s</manufacturer>
 		<rom name="Jet Pilot Rising v1.1 (2018)(d4s).sfc" size="524288" crc="23507977"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="jetsonstp" cloneof="jetsons" romof="jetsons" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Jetsons, The: Invasion of the Planet Pirates (Hack, Portuguese v.Beta 2)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Jetsons, The - Invasion of the Planet Pirates PT-BR v.Beta 2 (2018)(Ripman).sfc" size="1048576" crc="5f053cde"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -10122,6 +10194,15 @@
 		<year>1994</year>
 		<manufacturer>Sunsoft - Probe</manufacturer>
 		<rom name="Looney Tunes ACME Animation Factory (U)(1994)(Sunsoft - Probe).sfc" size="1048576" crc="0944a5c3"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ltbballtp" cloneof="ltbball" romof="ltbball" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Looney Tunes B-Ball (Hack, Portuguese v.Beta 1)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Looney Tunes B-Ball PT-BR v.Beta 1 (2018)(Ripman).sfc" size="2097152" crc="37ef9766"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13314,6 +13395,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="popeyetp" cloneof="popeyete" romof="popeyete" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Popeye - Tale of Teasing Witch Sea Hag (Hack, Portuguese v.Beta 1)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Popeye - Tale of Teasing Witch Sea Hag PT-BR v.Beta 1 (2018)(Ripman).sfc" size="1572864" crc="1602e6c2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="popfulmail" sourcefile="snes/d_snes.cpp">
 		<description>Popful Mail (Japan)</description>
 		<year>1994</year>
@@ -14223,6 +14313,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="rrracingtp" cloneof="rrracing" romof="rrracing" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Rock N' Roll Racing (Hack, Portuguese v.Beta)</description>
+		<year>1993</year>
+		<manufacturer>Brazilian Warriors</manufacturer>
+		<rom name="Rock N' Roll Racing PT-BR v.Beta (2018)(Brazilian Warriors).sfc" size="1048576" crc="197d1b12"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="rrracingj" cloneof="rrracing" romof="rrracing" sourcefile="snes/d_snes.cpp">
 		<description>Rock N' Roll Racing (Japan)</description>
 		<year>1993</year>
@@ -14959,6 +15058,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="shadowptp" cloneof="shadowp" romof="shadowp" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Prototype, NB: there are glitches in some sprites</comment>
+		<description>Shadow, The (Prototype)(Hack, Portuguese v.Beta 1)</description>
+		<year>1994</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Shadow, The PT-BR v.Beta 1 (Proto)(2018)(Ripman).sfc" size="2097152" crc="255a4097"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="shadowrunti" cloneof="shadowrun" romof="shadowrun" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Shadowrun (Hack, Italian v0.98)</description>
@@ -15184,6 +15292,15 @@
 		<year>1995</year>
 		<manufacturer>Koei</manufacturer>
 		<rom name="Sid Meier's Civilization (U)(1995)(Koei).sfc" size="1572864" crc="41fdba82"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sidepockettp" cloneof="sidepocket" romof="sidepocket" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Side Pocket (Hack, Portuguese v1.0.2)</description>
+		<year>2017</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Side Pocket PT-BR v1.0.2 (2017)(Ripman).sfc" size="1048576" crc="8090cd0d"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -16015,6 +16132,15 @@
 		<year>1994</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Stargate (E)(1994)(Acclaim Entertainment).sfc" size="2097152" crc="af4d4439"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stargatetp" cloneof="stargate" romof="stargate" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Stargate (Hack, Portuguese v.77b rev.30)</description>
+		<year>1994</year>
+		<manufacturer>Acclaim Entertainment</manufacturer>
+		<rom name="Stargate PT-BR v.77b rev.30 (2025)(Neodash).sfc" size="2097152" crc="74598268"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17505,6 +17631,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="smrpgtp" cloneof="smrpg" romof="smrpg" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, SA-1 enhancement CPU</comment>
+		<description>Super Mario RPG: A Lenda das Sete Estrelas (Hack, Portuguese)</description>
+		<year>2004</year>
+		<manufacturer>BR Games</manufacturer>
+		<rom name="Super Mario RPG - A Lenda das Sete Estrelas PT-BR (2004)(BR Games).sfc" size="4194304" crc="b7680288"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="smrpgts" cloneof="smrpg" romof="smrpg" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, SA-1 enhancement CPU</comment>
 		<description>Super Mario RPG: La Leyenda de las 7 Estrellas (Hack, Spanish v1.10)</description>
@@ -18903,6 +19038,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="tmntivtp" cloneof="tmntiv" romof="tmntiv" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Teenage Mutant Ninja Turtles IV: Turtles in Time (Hack, Portuguese v1.0.2)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Teenage Mutant Ninja Turtles IV - Turtles in Time PT-BR v1.0.2 (2018)(Ripman).sfc" size="1048576" crc="ecb42f55"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="tmntiv" sourcefile="snes/d_snes.cpp">
 		<description>Teenage Mutant Ninja Turtles IV: Turtles in Time (USA)</description>
 		<year>1992</year>
@@ -18916,6 +19060,15 @@
 		<year>1993</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Teenage Mutant Ninja Turtles - Mutant Warriors (J)(1993)(Konami).sfc" size="2097152" crc="7e97e194"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tmntfighttp" cloneof="tmntfight" romof="tmntfight" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Teenage Mutant Ninja Turtles: Tournament Fighters (Hack, Portuguese v.Beta 1)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Teenage Mutant Ninja Turtles - Tournament Fighters PT-BR v.Beta 1 (2018)(Ripman).sfc" size="2097152" crc="16e423a6"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -19472,6 +19625,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="topgeartp" cloneof="topgear" romof="topgear" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Top Gear (Hack, Portuguese)</description>
+		<year>1992</year>
+		<manufacturer>BlackThorne</manufacturer>
+		<rom name="Top Gear PT-BR (2018)(BlackThorne).sfc" size="1048576" crc="b2195a16"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="topgear" sourcefile="snes/d_snes.cpp">
 		<description>Top Gear (USA)</description>
 		<year>1992</year>
@@ -19502,6 +19664,16 @@
 		<year>1994</year>
 		<manufacturer>Kemco - Gremlin Interactive</manufacturer>
 		<rom name="Top Gear 3000 (E)(1994)(Kemco - Gremlin Interactive).sfc" size="1048576" crc="493fdb13"/>
+		<rom name="dsp4.bin" merge="dsp4.bin" size="10240" crc="ce0c7783"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="topgear3000tp" cloneof="topgear3000" romof="topgear3000" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, DSP-4 enhancement chip</comment>
+		<description>Top Gear 3000 (Hack, Portuguese v1.0.1)</description>
+		<year>2018</year>
+		<manufacturer>Ripman</manufacturer>
+		<rom name="Top Gear 3000 PT-BR v1.0.1 (2018)(Ripman).sfc" size="1048576" crc="b6ed9f85"/>
 		<rom name="dsp4.bin" merge="dsp4.bin" size="10240" crc="ce0c7783"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
