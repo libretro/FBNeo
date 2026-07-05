@@ -3201,7 +3201,7 @@
 		<description>Castlevania: Circle of the Moon (HB, Demo)</description>
 		<year>2026</year>
 		<manufacturer>Andor</manufacturer>
-		<rom name="Castlevania - Circle of the Moon (Demo) (2026)(Andor).bin" size="3932160" crc="6d9ece0f"/>
+		<rom name="Castlevania - Circle of the Moon (Demo) (2026)(Andor).bin" size="7077888" crc="92137666"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -8872,6 +8872,15 @@
 		<year>1993</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Home Alone 2 - Lost in New York (USA)(1993)(Sega).bin" size="524288" crc="cbf87c14"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hongkong97" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Hong Kong '97 (HB, Beta 01)</description>
+		<year>2026</year>
+		<manufacturer>SirVH</manufacturer>
+		<rom name="Hong Kong '97 Beta 01 (2026)(SirVH).bin" size="524288" crc="36f90806"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -24335,10 +24344,10 @@
 	</game>
 	<game name="xevious" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Xevious (HB, alpha-0.02)</description>
+		<description>Xevious (HB, alpha-0.03)</description>
 		<year>2026</year>
 		<manufacturer>SirVH</manufacturer>
-		<rom name="Xevious alpha-0.02 (2026)(SirVH).bin" size="1048576" crc="c18f33f2"/>
+		<rom name="Xevious alpha-0.03 (2026)(SirVH).bin" size="1048576" crc="0e2511a7"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

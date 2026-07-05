@@ -8029,6 +8029,14 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="hongkong97" sourcefile="snes/d_snes.cpp">
+		<description>Hong Kong '97 (Japan) (Unl)</description>
+		<year>1995</year>
+		<manufacturer>HappySoft</manufacturer>
+		<rom name="Hong Kong '97 (J)(Unl)(1995)(HappySoft).sfc" size="524288" crc="c6a95816"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="hooke" cloneof="hook" romof="hook" sourcefile="snes/d_snes.cpp">
 		<description>Hook (Euro)</description>
 		<year>1992</year>
