@@ -12563,6 +12563,28 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="glitchsisten" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>GlitchSist (English) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Tartessos Games</manufacturer>
+		<rom name="GlitchSist EN 128K (2026)(Tartessos Games).tap" size="90656" crc="bbd36c0d"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="glitchsistes" cloneof="glitchsisten" romof="glitchsisten" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>GlitchSist (Spanish) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Tartessos Games</manufacturer>
+		<rom name="GlitchSist ES 128K (2026)(Tartessos Games).tap" size="90943" crc="024a7842"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="globus" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, Unreleased game from 1987</comment>
 		<description>Globus (Spanish) (48K) (HB)</description>
@@ -32882,6 +32904,17 @@
 		<year>2019</year>
 		<manufacturer>RetroSouls</manufacturer>
 		<rom name="Yazzie 128K (2019)(RetroSouls).tap" size="70103" crc="68d21e49"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="yazziejr" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Yazzie Junior (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>RetroSouls</manufacturer>
+		<rom name="Yazzie Junior 128K (2026)(RetroSouls).tap" size="128672" crc="bd3699dd"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

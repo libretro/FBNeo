@@ -6542,8 +6542,11 @@ DRV		BurnDrvsnes_Earthwormjim2e;
 DRV		BurnDrvsnes_Earthwormjim2tp;
 DRV		BurnDrvmd_ejim2s;
 DRV		BurnDrvmd_ejim2p;
+DRV		BurnDrvnes_ewjim2;
 DRV		BurnDrvmd_ejim2u;
 DRV		BurnDrvsnes_Earthwormjim2;
+DRV		BurnDrvnes_ewjim3;
+DRV		BurnDrvnes_ewjimnes;
 DRV		BurnDrvcv_easterbunny;
 DRV		BurnDrvMSX_eatblue;
 DRV		BurnDrvMSX_eatit;
@@ -8574,6 +8577,8 @@ DRV		BurnDrvmd_gleylancc;
 DRV		BurnDrvMSX_glider;
 DRV		BurnDrvMSX_glidera;
 DRV		BurnSpecGliderr;
+DRV		BurnSpecGlitchsisten;
+DRV		BurnSpecGlitchsistes;
 DRV		BurnDrvGblchmp;
 DRV		BurnDrvsms_globald;
 DRV		BurnDrvsms_globaldp;
@@ -25122,6 +25127,7 @@ DRV		BurnDrvsg1k_yawi;
 DRV		BurnSpecyazzie;
 DRV		BurnDrvmd_yazzie;
 DRV		BurnDrvMSX_yazzie;
+DRV		BurnSpecYazziejr;
 DRV		BurnDrvMSX_yazzier;
 DRV		BurnDrvnesnes_yybeebissii;
 DRV		BurnDrvYellowcbb;
@@ -32079,8 +32085,11 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Earthwormjim2tp,// Earthworm Jim 2 (Hack, Portuguese)
 	&BurnDrvmd_ejim2s,			// Earthworm Jim 2 (Hack, Spanish)
 	&BurnDrvmd_ejim2p,			// Earthworm Jim 2 (Protoype)
+	&BurnDrvnes_ewjim2,			// Earthworm Jim 2 (Taiwan) (Unl)
 	&BurnDrvmd_ejim2u,			// Earthworm Jim 2 (USA)
 	&BurnDrvsnes_Earthwormjim2,	// Earthworm Jim 2 (USA)
+	&BurnDrvnes_ewjim3,			// Earthworm Jim 3 (Taiwan) (Unl)
+	&BurnDrvnes_ewjimnes,		// Earthworm Jim NES Edition (Hack)
 	&BurnDrvcv_easterbunny,		// Easter Bunny (HB)
 	&BurnDrvMSX_eatblue,		// Eat Blue! (HB, v2)
 	&BurnDrvMSX_eatit,			// Eat It (Euro)
@@ -34111,6 +34120,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_glider,			// Glider (Japan)
 	&BurnDrvMSX_glidera,		// Glider (Japan, Alt)
 	&BurnSpecGliderr,			// Glider Rider (48K-128K)
+	&BurnSpecGlitchsisten,		// GlitchSist (English) (128K) (HB)
+	&BurnSpecGlitchsistes,		// GlitchSist (Spanish) (128K) (HB)
 	&BurnDrvGblchmp,			// Global Champion (Ver 2.1A 1994/07/29)
 	&BurnDrvsms_globald,		// Global Defense (Euro, USA)
 	&BurnDrvsms_globaldp,		// Global Defense (Euro, USA, Prototype)
@@ -37353,7 +37364,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvLegionna,			// Legionnaire (World)
 	&BurnDrvmd_legobatman,		// Lego Batman (Russia) (Unl)
 	&BurnDrvmd_legopoc,			// Lego Pirates of the Caribbean (Russia) (Unl)
-	&BurnDrvnes_leidiahuabikaqiuchs,// Lei Dian Huang Bi Ka Qiu Chuan Shuo (China)
+	&BurnDrvnes_leidiahuabikaqiuchs,// Lei Dian Huang Bi Ka Qiu Chuan Shuo (China) (Unl)
 	&BurnDrvBgareggabla,		// Leishen Chuan / Thunder Deity Biography (Chinese hack of Battle Garegga)
 	&BurnSpecLemmings,			// Lemmings (48K)
 	&BurnDrvmd_lemmings,		// Lemmings (Euro)
@@ -50659,6 +50670,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecyazzie,			// Yazzie (128K) (HB)
 	&BurnDrvmd_yazzie,			// Yazzie (HB)
 	&BurnDrvMSX_yazzie,			// Yazzie (HB)
+	&BurnSpecYazziejr,			// Yazzie Junior (128K) (HB)
 	&BurnDrvMSX_yazzier,		// Yazzie Remastered (HB)
 	&BurnDrvnesnes_yybeebissii,	// Yeah Yeah Beebiss II (HB)
 	&BurnDrvYellowcbb,			// Yellow Cab (bootleg)
@@ -57570,8 +57582,11 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "snes_earthwormjim2tp", "snes/d_snes.cpp"},
 	{ "md_ejim2s", "megadrive/d_megadrive.cpp"},
 	{ "md_ejim2p", "megadrive/d_megadrive.cpp"},
+	{ "nes_ewjim2", "nes/d_nes.cpp"},
 	{ "md_ejim2u", "megadrive/d_megadrive.cpp"},
 	{ "snes_earthwormjim2", "snes/d_snes.cpp"},
+	{ "nes_ewjim3", "nes/d_nes.cpp"},
+	{ "nes_ewjimnes", "nes/d_nes.cpp"},
 	{ "cv_easterbunny", "coleco/d_coleco.cpp"},
 	{ "msx_eatblue", "msx/d_msx.cpp"},
 	{ "msx_eatit", "msx/d_msx.cpp"},
@@ -59590,6 +59605,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "msx_glider", "msx/d_msx.cpp"},
 	{ "msx_glidera", "msx/d_msx.cpp"},
 	{ "spec_gliderr", "spectrum/d_spectrum.cpp"},
+	{ "spec_glitchsisten", "spectrum/d_spectrum.cpp"},
+	{ "spec_glitchsistes", "spectrum/d_spectrum.cpp"},
 	{ "gblchmp", "taito/d_taitof3.cpp"},
 	{ "sms_globald", "sms/d_sms.cpp"},
 	{ "sms_globaldp", "sms/d_sms.cpp"},
@@ -75988,6 +76005,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_yazzie", "spectrum/d_spectrum.cpp"},
 	{ "md_yazzie", "megadrive/d_megadrive.cpp"},
 	{ "msx_yazzie", "msx/d_msx.cpp"},
+	{ "spec_yazziejr", "spectrum/d_spectrum.cpp"},
 	{ "msx_yazzier", "msx/d_msx.cpp"},
 	{ "nes_yybeebissii", "nes/d_nes.cpp"},
 	{ "yellowcbb", "dataeast/d_liberate.cpp"},

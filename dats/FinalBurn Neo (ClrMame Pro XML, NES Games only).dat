@@ -2199,7 +2199,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="beee" sourcefile="nes/d_nes.cpp">
-		<comment>Homebrew, Adult game</comment>
+		<comment>Homebrew, Adult Game</comment>
 		<description>Beat 'Em &amp; Eat 'Em (HB)</description>
 		<year>2014</year>
 		<manufacturer>FG Software</manufacturer>
@@ -6752,6 +6752,31 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="ewjim2" sourcefile="nes/d_nes.cpp">
+		<description>Earthworm Jim 2 (Taiwan) (Unl)</description>
+		<year>1997</year>
+		<manufacturer>Realtec</manufacturer>
+		<rom name="Earthworm Jim 2 (Taiwan)(Unl)(1997)(Realtec).nes" size="524304" crc="34023f7d"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="ewjim3" sourcefile="nes/d_nes.cpp">
+		<description>Earthworm Jim 3 (Taiwan) (Unl)</description>
+		<year>1997</year>
+		<manufacturer>Ka Sheng</manufacturer>
+		<rom name="Earthworm Jim 3 (Taiwan)(Unl)(1997)(Ka Sheng).nes" size="524304" crc="2b5130d1"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="ewjimnes" cloneof="ewjim3" romof="ewjim3" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Earthworm Jim NES Edition (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Ti</manufacturer>
+		<rom name="EarthWorm Jim NES Edition (2026)(Ti).nes" size="786448" crc="5bf76773"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="echocamb" sourcefile="nes/d_nes.cpp">
 		<description>Echo Chamber (Unl)</description>
 		<year>200?</year>
@@ -7274,7 +7299,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="famikan" sourcefile="nes/d_nes.cpp">
-		<comment>Adult Only</comment>
+		<comment>Adult Game</comment>
 		<description>Famikan (Japan) (Unl)</description>
 		<year>2005</year>
 		<manufacturer>Dengakudou</manufacturer>
@@ -12516,10 +12541,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="leidiahuabikaqiuchs" sourcefile="nes/d_nes.cpp">
-		<description>Lei Dian Huang Bi Ka Qiu Chuan Shuo (China)</description>
-		<year>199?</year>
-		<manufacturer>&lt;unknown&gt;</manufacturer>
-		<rom name="Lei Dian Huang Bi Ka Qiu Chuan Shuo (China)(199x).nes" size="2097168" crc="f4ebe9b2"/>
+		<description>Lei Dian Huang Bi Ka Qiu Chuan Shuo (China) (Unl)</description>
+		<year>2004</year>
+		<manufacturer>Shenzhen Nanjing Technology</manufacturer>
+		<rom name="Lei Dian Huang Bi Ka Qiu Chuan Shuo (China)(Unl)(2004)(Shenzhen Nanjing Technology).nes" size="2097168" crc="f4ebe9b2"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
