@@ -3666,10 +3666,10 @@
 	</game>
 	<game name="crashbanden" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, Homebrew, GlobalHack of Super Mario World</comment>
-		<description>Crash Bandicoot and the Retro Dimension Enhanced (GlobalHack, English v1.22)</description>
+		<description>Crash Bandicoot and the Retro Dimension Enhanced (GlobalHack, English v1.23)</description>
 		<year>2025-26</year>
 		<manufacturer>Bindicoot</manufacturer>
-		<rom name="Crash Bandicoot and the Retro Dimension Enhanced EN v1.22 (2025-26)(Bandicoot).sfc" size="4194304" crc="601eb065"/>
+		<rom name="Crash Bandicoot and the Retro Dimension Enhanced EN v1.23 (2025-26)(Bandicoot).sfc" size="4194304" crc="04e5840b"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3684,10 +3684,10 @@
 	</game>
 	<game name="crashbandpt" cloneof="crashbanden" romof="crashbanden" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, Homebrew, GlobalHack of Super Mario World</comment>
-		<description>Crash Bandicoot e a Dimensao Retro Versao Melhorada (GlobalHack, Portuguese v1.22)</description>
+		<description>Crash Bandicoot e a Dimensao Retro Versao Melhorada (GlobalHack, Portuguese v1.23)</description>
 		<year>2025-26</year>
 		<manufacturer>Bandicoot</manufacturer>
-		<rom name="Crash Bandicoot e a Dimensao Retro Versao Melhorada PT v1.22 (2025-26)(Bandicoot).sfc" size="4194304" crc="2dd84a5c"/>
+		<rom name="Crash Bandicoot e a Dimensao Retro Versao Melhorada PT v1.23 (2025-26)(Bandicoot).sfc" size="4194304" crc="ccff27c5"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

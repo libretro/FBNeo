@@ -38752,15 +38752,15 @@
 		<description>Zintrick / Oshidashi Zentrix (bootleg of CD version, multi-V)</description>
 		<year>1996</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="zin.P1" size="1048576" crc="654342e6"/>
+		<rom name="zin.P1" size="1048576" crc="23074a8d"/>
 		<rom name="zin-s1.bin" size="131072" crc="56d16afa"/>
 		<rom name="zin-c1.bin" merge="zin-c1.bin" size="2097152" crc="76aee189"/>
 		<rom name="zin-c2.bin" merge="zin-c2.bin" size="2097152" crc="844ed4b3"/>
-		<rom name="zin.M1" size="131072" crc="a1c68361"/>
-		<rom name="zin.V1" size="4194304" crc="cd257055"/>
-		<rom name="zin.V2" size="4194304" crc="5d8f89ab"/>
-		<rom name="zin.V3" size="4194304" crc="4626b4ff"/>
-		<rom name="zin.V4" size="4194304" crc="48666336"/>
+		<rom name="zin.M1" size="131072" crc="6d5b66cf"/>
+		<rom name="zin.V1" size="4194304" crc="ca4c57e1"/>
+		<rom name="zin.V2" size="4194304" crc="c4c82a19"/>
+		<rom name="zin.V3" size="4194304" crc="b3fad4c1"/>
+		<rom name="zin.V4" size="4194304" crc="4e77adac"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>

@@ -14490,6 +14490,7 @@ DRV		BurnDrvNbajamr4j;
 DRV		BurnDrvmd_nbashow;
 DRV		BurnDrvmd_nbashowp;
 DRV		BurnDrvsnes_Nbashowdown;
+DRV		BurnDrvNbamhtx;
 DRV		BurnDrvsnes_Ncaabasketball;
 DRV		BurnDrvmd_ncaabask;
 DRV		BurnDrvsnes_Ncaaf4basketball;
@@ -30040,9 +30041,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCrasha,				// Crash (set 2)
 	&BurnDrvmd_crash,			// Crash Bandicoot (Russia) (Unl)
 	&BurnDrvsnes_Crashband2en,	// Crash Bandicoot and the Retro Dimension 2 - The Crystal Hunt (GlobalHack, English v1.02)
-	&BurnDrvsnes_Crashbanden,	// Crash Bandicoot and the Retro Dimension Enhanced (GlobalHack, English v1.22)
+	&BurnDrvsnes_Crashbanden,	// Crash Bandicoot and the Retro Dimension Enhanced (GlobalHack, English v1.23)
 	&BurnDrvsnes_Crashband2pt,	// Crash Bandicoot e a Dimensao Retro 2 - A Busca pelos Cristais (GlobalHack, Portuguese v1.02)
-	&BurnDrvsnes_Crashbandpt,	// Crash Bandicoot e a Dimensao Retro Versao Melhorada (GlobalHack, Portuguese v1.22)
+	&BurnDrvsnes_Crashbandpt,	// Crash Bandicoot e a Dimensao Retro Versao Melhorada (GlobalHack, Portuguese v1.23)
 #if defined FBNEO_DEBUG
 	&BurnDrvCrater,				// Crater Raider [Graphics Issues, NOT WORKING]
 #endif
@@ -40033,6 +40034,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_nbashow,			// NBA Showdown '94 (Euro, USA)
 	&BurnDrvmd_nbashowp,		// NBA Showdown '94 (USA, Prototype)
 	&BurnDrvsnes_Nbashowdown,	// NBA Showdown (USA)
+	&BurnDrvNbamhtx,			// NBA Super Maximum Hangtime (Custom Rebuild 07/02/26)
 	&BurnDrvsnes_Ncaabasketball,// NCAA Basketball (USA, Rev. 1)
 	&BurnDrvmd_ncaabask,		// NCAA Final Four Basketball (USA)
 	&BurnDrvsnes_Ncaaf4basketball,// NCAA Final Four Basketball (USA)
@@ -65468,6 +65470,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_nbashow", "megadrive/d_megadrive.cpp"},
 	{ "md_nbashowp", "megadrive/d_megadrive.cpp"},
 	{ "snes_nbashowdown", "snes/d_snes.cpp"},
+	{ "nbamhtx", "midway/d_wunit.cpp"},
 	{ "snes_ncaabasketball", "snes/d_snes.cpp"},
 	{ "md_ncaabask", "megadrive/d_megadrive.cpp"},
 	{ "snes_ncaaf4basketball", "snes/d_snes.cpp"},
