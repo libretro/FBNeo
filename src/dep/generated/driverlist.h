@@ -20721,6 +20721,7 @@ DRV		BurnDrvmd_strider2;
 DRV		BurnDrvsms_strider2;
 DRV		BurnDrvmd_strider2s;
 DRV		BurnDrvmd_strider2u;
+DRV		BurnDrvSbowling;
 DRV		BurnDrvStrkfgtrj;
 DRV		BurnDrvStrkfgtr;
 DRV		BurnDrvStrkforc;
@@ -46265,6 +46266,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsms_strider2,		// Strider II (Euro, Brazil)
 	&BurnDrvmd_strider2s,		// Strider Returns - Journey from Darkness (Hack, Spanish)
 	&BurnDrvmd_strider2u,		// Strider Returns: Journey from Darkness (USA)
+	&BurnDrvSbowling,			// Strike Bowling
 	&BurnDrvStrkfgtrj,			// Strike Fighter (Japan)
 	&BurnDrvStrkfgtr,			// Strike Fighter (World)
 	&BurnDrvStrkforc,			// Strike Force (rev 1 02/25/91)
@@ -71649,6 +71651,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sms_strider2", "sms/d_sms.cpp"},
 	{ "md_strider2s", "megadrive/d_megadrive.cpp"},
 	{ "md_strider2u", "megadrive/d_megadrive.cpp"},
+	{ "sbowling", "taito/d_sbowling.cpp"},
 	{ "strkfgtrj", "sega/d_ybrd.cpp"},
 	{ "strkfgtr", "sega/d_ybrd.cpp"},
 	{ "strkforc", "midway/d_yunit.cpp"},
