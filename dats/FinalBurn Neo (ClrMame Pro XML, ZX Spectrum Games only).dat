@@ -3112,7 +3112,7 @@
 		<description>Beamrider (48K)</description>
 		<year>1984</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="Beamrider 48K (1984)(Activision).tap" size="36219" crc="c80c9aa7"/>
+		<rom name="Beamrider 48K (1984)(Activision).tzx" size="36277" crc="d493743e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -10267,7 +10267,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="enduro" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="enduro" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Enduro (48K)</description>
+		<year>1984</year>
+		<manufacturer>Activision</manufacturer>
+		<rom name="Enduro 48K (1984)(Activision).tzx" size="14407" crc="243b414c"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="endurora" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Enduro Racer (48K-128K)</description>
 		<year>1987</year>
 		<manufacturer>Activision</manufacturer>
@@ -24754,6 +24763,39 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="rivrelicen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Rivenor Relic, The (English) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>EdD</manufacturer>
+		<rom name="Rivenor Relic, The EN 128K (2026)(EdD).tap" size="66552" crc="0d66cc08"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rivrelicpt" cloneof="rivrelicen" romof="rivrelicen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Rivenor Relic, The (Portuguese) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>EdD</manufacturer>
+		<rom name="Rivenor Relic, The PT 128K (2026)(EdD).tap" size="66821" crc="f2040194"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rivrelices" cloneof="rivrelicen" romof="rivrelicen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Rivenor Relic, The (Spanish) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>EdD</manufacturer>
+		<rom name="Rivenor Relic, The ES 128K (2026)(EdD).tap" size="66883" crc="85a8e2b3"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="riverrad" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>River Rad (128K) (HB)</description>
@@ -24762,6 +24804,25 @@
 		<rom name="River Rad 128K (2024)(Daniel Isoba).tap" size="54463" crc="4e53cbba"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="riveraid" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>River Raid (48K)</description>
+		<year>1984</year>
+		<manufacturer>Activision</manufacturer>
+		<rom name="River Raid 48K (1984)(Activision).tzx" size="47211" crc="ea6b57d3"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="riveraidplus" cloneof="riveraid" romof="riveraid" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Hack</comment>
+		<description>River Raid+ (48K) (Hack, v0.2)</description>
+		<year>2026</year>
+		<manufacturer>theALFEST</manufacturer>
+		<rom name="River Raid+ v0.2 48K (2026)(theALFEST).tap" size="22554" crc="2e917c63"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -25579,8 +25640,8 @@
 		<comment>Homebrew</comment>
 		<description>Saboteur 2 mod (128K) (HB, v1.1.2)</description>
 		<year>2025</year>
-		<manufacturer>thealfest</manufacturer>
-		<rom name="Saboteur 2 mod v1.1.2 128K (2025)(thealfest).tap" size="29901" crc="023857ea"/>
+		<manufacturer>theALFEST</manufacturer>
+		<rom name="Saboteur 2 mod v1.1.2 128K (2025)(theALFEST).tap" size="29901" crc="023857ea"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -25590,8 +25651,8 @@
 		<comment>Homebrew</comment>
 		<description>Saboteur 2 mod (48K) (HB, v1.1.2)</description>
 		<year>2025</year>
-		<manufacturer>thealfest</manufacturer>
-		<rom name="Saboteur 2 mod v1.1.2 48K (2025)(thealfest).tap" size="28697" crc="b1d6b6bc"/>
+		<manufacturer>theALFEST</manufacturer>
+		<rom name="Saboteur 2 mod v1.1.2 48K (2025)(theALFEST).tap" size="28697" crc="b1d6b6bc"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -28089,7 +28150,7 @@
 		<description>Spider Blast (English) (48K-128K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Wizbit Games</manufacturer>
-		<rom name="Spider Blast EN 48K-128K (2026)(Wizbit Games).tap" size="44915" crc="d6d49818"/>
+		<rom name="Spider Blast EN 48K-128K (2026)(Wizbit Games).tzx" size="44943" crc="de9838da"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -28100,7 +28161,7 @@
 		<description>Spider Blast (Spanish) (48K-128K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Wizbit Games</manufacturer>
-		<rom name="Spider Blast ES (48K-128K) (2026)(Wizbit Games).tap" size="44915" crc="a509a830"/>
+		<rom name="Spider Blast ES 48K-128K (2026)(Wizbit Games).tzx" merge="Spider Blast EN 48K-128K (2026)(Wizbit Games).tzx" size="44943" crc="de9838da"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -32027,6 +32088,16 @@
 		<rom name="Wacky Races 48K-128K (1992)(Hi-Tec).tap" size="149897" crc="c46f4db9"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wackyrobot" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Wacky Robot (16K) (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Cronosoft</manufacturer>
+		<rom name="Wacky Robot v1.1 16K (2026)(Cronosoft).tap" size="7104" crc="fb80b515"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
