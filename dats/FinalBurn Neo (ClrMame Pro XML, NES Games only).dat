@@ -4049,6 +4049,14 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="cityfigiv" cloneof="streefigii" romof="streefigii" sourcefile="nes/d_nes.cpp">
+		<description>City Fighter IV - The World Warrior</description>
+		<year>1993</year>
+		<manufacturer>Towa Soft</manufacturer>
+		<rom name="City Fighter IV - The World Warrior (Unl)(1993)(Towa Soft).unf" size="262263" crc="f6ecda86"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="citytrouble" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>City Trouble (HB)</description>

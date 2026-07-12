@@ -782,8 +782,8 @@
 		<comment>Homebrew</comment>
 		<description>Alisha's Adventure (HB)</description>
 		<year>2026</year>
-		<manufacturer>Andy Koening</manufacturer>
-		<rom name="Alisha's Adventure (2026)(Andy Koening).sfc" size="1310720" crc="c728f10b"/>
+		<manufacturer>Andy Koenigs</manufacturer>
+		<rom name="Alisha's Adventure (2026)(Andy Koenigs).sfc" size="1310720" crc="c728f10b"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
