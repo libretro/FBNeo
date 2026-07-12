@@ -15669,21 +15669,12 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="puyopuyouk" cloneof="puyopuyo" romof="puyopuyo" sourcefile="megadrive/d_megadrive.cpp">
+	<game name="puyopuyote" cloneof="puyopuyo" romof="puyopuyo" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>Puyo Puyo (Hack, English UK)</description>
+		<description>Puyo Puyo (Hack, English v1.1)</description>
 		<year>2025</year>
-		<manufacturer>RadioTails</manufacturer>
-		<rom name="Puyo Puyo T-Eng UK (2025)(RadioTails).bin" size="1048576" crc="a682cd9f"/>
-		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="puyopuyous" cloneof="puyopuyo" romof="puyopuyo" sourcefile="megadrive/d_megadrive.cpp">
-		<comment>Hack</comment>
-		<description>Puyo Puyo (Hack, English US)</description>
-		<year>2025</year>
-		<manufacturer>RadioTails</manufacturer>
-		<rom name="Puyo Puyo T-Eng US (2025)(RadioTails).bin" size="1048576" crc="6b5ebd1c"/>
+		<manufacturer>RadioShadow</manufacturer>
+		<rom name="Puyo Puyo T-Eng v1.1 (2025)(RadioShadow).bin" size="1048576" crc="c081a1ff"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

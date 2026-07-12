@@ -778,6 +778,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="alishaadv" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Alisha's Adventure (HB)</description>
+		<year>2026</year>
+		<manufacturer>Andy Koening</manufacturer>
+		<rom name="Alisha's Adventure (2026)(Andy Koening).sfc" size="1310720" crc="c728f10b"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="allamfootball" sourcefile="snes/d_snes.cpp">
 		<description>All-American Championship Football (Euro)</description>
 		<year>1993</year>
@@ -5505,6 +5514,24 @@
 		<year>1995</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="EarthBound (U)(1995)(Nintendo).sfc" size="3145728" crc="dc9bb451"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="earthboundbr" cloneof="earthbound" romof="earthbound" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>EarthBound Beginnings Remake (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>The EBBR Team &amp; PK Hack</manufacturer>
+		<rom name="EarthBound Beginnings Remake v1.2 (2026)(The EBBR Team &amp; PK Hack).sfc" size="4194304" crc="51bc901b"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="earthboundgsb" cloneof="earthbound" romof="earthbound" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>EarthBound: Giygas Strikes Back! (Hack)</description>
+		<year>2026</year>
+		<manufacturer>The EBBR Team &amp; PK Hack</manufacturer>
+		<rom name="EarthBound - Giygas Strikes Back! (2026)(The EBBR Team &amp; PK Hack).sfc" size="4194304" crc="f096a9ad"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -14180,6 +14207,15 @@
 		<year>1993</year>
 		<manufacturer>Raya Systems - Sculptured Software</manufacturer>
 		<rom name="Rex Ronan - Experimental Surgeon (U)(1993)(Raya Systems - Sculptured Software).sfc" size="524288" crc="105ac679"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rickdang" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Rick Dangerous (HB)</description>
+		<year>2014</year>
+		<manufacturer>Alekmaul</manufacturer>
+		<rom name="Rick Dangerous (2014)(Alekmaul).sfc" size="524288" crc="21c09a2d"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

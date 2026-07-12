@@ -5416,7 +5416,7 @@
 		<description>Cauldron (48K)</description>
 		<year>1985</year>
 		<manufacturer>Palace Software</manufacturer>
-		<rom name="Cauldron 48K (1985)(Palace).z80" size="40827" crc="adea0ad1"/>
+		<rom name="Cauldron 48K (1985)(Palace).tzx" size="48478" crc="fa11b833"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -5425,7 +5425,7 @@
 		<description>Cauldron II: The Pumpkin Strikes Back (48K)</description>
 		<year>1986</year>
 		<manufacturer>Palace Software</manufacturer>
-		<rom name="Cauldron II 48K (1986)(Palace).z80" size="37705" crc="c73307f0"/>
+		<rom name="Cauldron II - The Pumpkin Strikes Back 48K (1986)(Palace).tzx" size="50433" crc="55640d06"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -5480,7 +5480,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="centibug" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Press 'K' to select Kempston joystick</comment>
+		<comment>Press 'K' to select Kempston controller</comment>
 		<description>Centi-Bug - aka Centipede (16K)</description>
 		<year>1983</year>
 		<manufacturer>DK'Tronics</manufacturer>
@@ -6078,7 +6078,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="clevernsmart" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Clever &amp; Smart - Mortadelo y Filemon (48K)</description>
+		<description>Clever &amp; Smart ~ Mortadelo y Filemon (48K)</description>
 		<year>1987</year>
 		<manufacturer>Dro Soft</manufacturer>
 		<rom name="Clever &amp; Smart - Mortadelo y Filemon 48K (1987)(Dro Soft).tzx" size="50119" crc="57cd2bda"/>
@@ -27900,10 +27900,10 @@
 	</game>
 	<game name="spracing" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Space Racing (128K) (HB, v1.2)</description>
-		<year>2021</year>
+		<description>Space Racing (128K) (HB, v1.3)</description>
+		<year>2021-22</year>
 		<manufacturer>Voxel Tower</manufacturer>
-		<rom name="Space Racing v1.2 128K (2021)(Voxel Tower).tap" size="88616" crc="64e0ef40"/>
+		<rom name="Space Racing v1.3 128K (2021-22)(Voxel Tower).tap" size="88705" crc="9e549381"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
