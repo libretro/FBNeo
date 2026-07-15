@@ -10649,7 +10649,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="irontan" sourcefile="nes/d_nes.cpp">
-		<description>Iron Tank - The Invasion of Normandy (USA)</description>
+		<description>Iron Tank: The Invasion of Normandy (USA)</description>
 		<year>1988</year>
 		<manufacturer>SNK</manufacturer>
 		<rom name="Iron Tank - The Invasion of Normandy (USA)(1988)(SNK).nes" size="262160" crc="dcfd85fc"/>
@@ -10657,10 +10657,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="irons" sourcefile="nes/d_nes.cpp">
-		<description>Ironsword - Wizards &amp; Warriors II (USA)</description>
+		<description>Ironsword: Wizards &amp; Warriors II (USA)</description>
 		<year>1989</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Ironsword - Wizards &amp; Warriors II (USA)(1989)(Acclaim).nes" size="262160" crc="be2e7055"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="ironsoh" cloneof="irons" romof="irons" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Ironsword: Wizards &amp; Warriors II - Overhaul (Hack)</description>
+		<year>2022</year>
+		<manufacturer>Rani Baker</manufacturer>
+		<rom name="Ironsword - Wizards and Warriors II - Overhaul (2022)(Rani Baker).nes" size="262160" crc="0436edfe"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -10765,7 +10774,7 @@
 	</game>
 	<game name="jajamgeke" cloneof="jajamgek" romof="jajamgek" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Jajamaru Gekimaden - Maboroshi no Kinmajou (Hack, English)</description>
+		<description>Jajamaru Gekimaden: Maboroshi no Kinmajou (Hack, English)</description>
 		<year>2009</year>
 		<manufacturer>Stardust Crusaders</manufacturer>
 		<rom name="Jajamaru Gekimaden - Maboroshi no Kinmajou T-Eng (2009)(Stardust Crusaders).nes" size="262160" crc="367df135"/>
@@ -10773,7 +10782,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="jajamgekj" cloneof="jajamgek" romof="jajamgek" sourcefile="nes/d_nes.cpp">
-		<description>Jajamaru Gekimaden - Maboroshi no Kinmajou (Japan)</description>
+		<description>Jajamaru Gekimaden: Maboroshi no Kinmajou (Japan)</description>
 		<year>1990</year>
 		<manufacturer>Jaleco</manufacturer>
 		<rom name="Jajamaru Gekimaden - Maboroshi no Kinmajou (Japan)(1990)(Jaleco).nes" size="262160" crc="44902c90"/>
@@ -15555,7 +15564,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="ninjacrusadersj" cloneof="ninjacrusaders" romof="ninjacrusaders" sourcefile="nes/d_nes.cpp">
-		<description>Ninja Crusaders - Ryuuga (Japan)</description>
+		<description>Ninja Crusaders: Ryuuga (Japan)</description>
 		<year>1990</year>
 		<manufacturer>Sammy</manufacturer>
 		<rom name="Ninja Crusaders - Ryuuga (Japan)(1990)(Sammy).nes" size="131088" crc="547ad500"/>
@@ -15648,50 +15657,6 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="ninjajaje" cloneof="ninjajaj" romof="ninjajaj" sourcefile="nes/d_nes.cpp">
-		<comment>Hack</comment>
-		<description>Ninja Jajamaru - Ginga Daisakusen (Hack, English)</description>
-		<year>2002</year>
-		<manufacturer>HTI</manufacturer>
-		<rom name="Ninja Jajamaru - Ginga Daisakusen T-Eng (2002)(HTI).nes" size="262160" crc="89ee0ed9"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="ninjajajj" cloneof="ninjajaj" romof="ninjajaj" sourcefile="nes/d_nes.cpp">
-		<description>Ninja Jajamaru - Ginga Daisakusen (Japan)</description>
-		<year>1991</year>
-		<manufacturer>Jaleco</manufacturer>
-		<rom name="Ninja Jajamaru - Ginga Daisakusen (Japan)(1991)(Jaleco).nes" size="262160" crc="7934c198"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="jajamgek" sourcefile="nes/d_nes.cpp">
-		<comment>Official Translation</comment>
-		<description>Ninja JaJaMaru - Legend of The Golden Castle (English)</description>
-		<year>2023</year>
-		<manufacturer>Jaleco</manufacturer>
-		<rom name="Ninja JaJaMaru - Legend of The Golden Castle - English (1990-2023)(Jaleco).nes" size="458240" crc="d243a931"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="ninjajaj" sourcefile="nes/d_nes.cpp">
-		<comment>Official Translation</comment>
-		<description>Ninja JaJaMaru - Operation Milky Way (English)</description>
-		<year>2023</year>
-		<manufacturer>Jaleco</manufacturer>
-		<rom name="Ninja JaJaMaru - Operation Milky Way T-Eng (1991-2023)(Jaleco).nes" size="262160" crc="f438e54a"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="jajamnincho" sourcefile="nes/d_nes.cpp">
-		<comment>Official Translation</comment>
-		<description>Ninja JaJaMaru - The Ninja Skill Book (English)</description>
-		<year>2023</year>
-		<manufacturer>Jaleco</manufacturer>
-		<rom name="Ninja JaJaMaru - The Ninja Skill Book - English (1989-2023)(Jaleco).nes" size="458752" crc="3fb34ddc"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
 	<game name="jajamnodaij" cloneof="jajamnodai" romof="jajamnodai" sourcefile="nes/d_nes.cpp">
 		<description>Ninja Jajamaru no Daibouken (Japan)</description>
 		<year>1986</year>
@@ -15723,6 +15688,50 @@
 		<year>1985</year>
 		<manufacturer>Jaleco</manufacturer>
 		<rom name="Ninja Jajamaru-kun (Japan)(1985)(Jaleco).nes" size="32784" crc="95e02519"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="ninjajaje" cloneof="ninjajaj" romof="ninjajaj" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Ninja Jajamaru: Ginga Daisakusen (Hack, English)</description>
+		<year>2002</year>
+		<manufacturer>HTI</manufacturer>
+		<rom name="Ninja Jajamaru - Ginga Daisakusen T-Eng (2002)(HTI).nes" size="262160" crc="89ee0ed9"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="ninjajajj" cloneof="ninjajaj" romof="ninjajaj" sourcefile="nes/d_nes.cpp">
+		<description>Ninja Jajamaru: Ginga Daisakusen (Japan)</description>
+		<year>1991</year>
+		<manufacturer>Jaleco</manufacturer>
+		<rom name="Ninja Jajamaru - Ginga Daisakusen (Japan)(1991)(Jaleco).nes" size="262160" crc="7934c198"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="jajamgek" sourcefile="nes/d_nes.cpp">
+		<comment>Official Translation</comment>
+		<description>Ninja JaJaMaru: Legend of The Golden Castle (English)</description>
+		<year>2023</year>
+		<manufacturer>Jaleco</manufacturer>
+		<rom name="Ninja JaJaMaru - Legend of The Golden Castle - English (1990-2023)(Jaleco).nes" size="458240" crc="d243a931"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="ninjajaj" sourcefile="nes/d_nes.cpp">
+		<comment>Official Translation</comment>
+		<description>Ninja JaJaMaru: Operation Milky Way (English)</description>
+		<year>2023</year>
+		<manufacturer>Jaleco</manufacturer>
+		<rom name="Ninja JaJaMaru - Operation Milky Way T-Eng (1991-2023)(Jaleco).nes" size="262160" crc="f438e54a"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="jajamnincho" sourcefile="nes/d_nes.cpp">
+		<comment>Official Translation</comment>
+		<description>Ninja JaJaMaru: The Ninja Skill Book (English)</description>
+		<year>2023</year>
+		<manufacturer>Jaleco</manufacturer>
+		<rom name="Ninja JaJaMaru - The Ninja Skill Book - English (1989-2023)(Jaleco).nes" size="458752" crc="3fb34ddc"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -16325,6 +16334,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="paladquest" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Paladins Quest (HB)</description>
+		<year>2026</year>
+		<manufacturer>Skull and Candle Games</manufacturer>
+		<rom name="Paladins Quest (2026)(Skull and Candle Games).nes" size="40976" crc="509269b6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="palamedesj" cloneof="palamedes" romof="palamedes" sourcefile="nes/d_nes.cpp">
 		<description>Palamedes (Japan)</description>
 		<year>1990</year>
@@ -16544,7 +16562,7 @@
 	</game>
 	<game name="pelusaga" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Pelusa Saga - Kaji's Trials (HB)</description>
+		<description>Pelusa Saga: Kaji's Trials (HB)</description>
 		<year>2023</year>
 		<manufacturer>Broke Studio</manufacturer>
 		<rom name="Pelusa Saga - Kaji's Trials (2023)(Broke Studio).nes" size="524304" crc="bc461bfe"/>
@@ -16559,20 +16577,20 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="pengsokoadv" sourcefile="nes/d_nes.cpp">
-		<comment>Homebrew</comment>
-		<description>Penguin - Sokoban Adventure (HB, v1.1)</description>
-		<year>2024</year>
-		<manufacturer>AJP Games</manufacturer>
-		<rom name="Penguin - Sokoban Adventure v1.1 (2024)(AJP Games).nes" size="65552" crc="d9e2d07b"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
 	<game name="penguinkunwars" sourcefile="nes/d_nes.cpp">
 		<description>Penguin-kun Wars (Japan)</description>
 		<year>1985</year>
 		<manufacturer>ASCII Corp.</manufacturer>
 		<rom name="Penguin-kun Wars (Japan)(1985)(ASCII).nes" size="40976" crc="27229b16"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="pengsokoadv" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Penguin: Sokoban Adventure (HB, v1.1)</description>
+		<year>2024</year>
+		<manufacturer>AJP Games</manufacturer>
+		<rom name="Penguin - Sokoban Adventure v1.1 (2024)(AJP Games).nes" size="65552" crc="d9e2d07b"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

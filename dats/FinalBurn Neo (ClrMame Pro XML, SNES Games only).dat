@@ -13538,6 +13538,32 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="powerhirtsc" cloneof="powerhirte" romof="powerhirte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Power of the Hired (Hack, Chinese)</description>
+		<year>2026</year>
+		<manufacturer>XiaoGuihun</manufacturer>
+		<rom name="Power of the Hired T-Chs (2026)(XiaoGuihun).sfc" size="2097152" crc="ce52c28d"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="powerhirte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Power of the Hired (Hack, English v0.75)</description>
+		<year>2021</year>
+		<manufacturer>Dynamic-Designs</manufacturer>
+		<rom name="Power of the Hired T-Eng v0.75 (2021)(Dynamic-Designs).sfc" size="1572864" crc="d7659c54"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="powerhir" cloneof="powerhirte" romof="powerhirte" sourcefile="snes/d_snes.cpp">
+		<description>Power of the Hired (Japan)</description>
+		<year>1994</year>
+		<manufacturer>NCS</manufacturer>
+		<rom name="Power of the Hired (J)(1994)(NCS).sfc" size="1572864" crc="cf276c80"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="powerpigs" sourcefile="snes/d_snes.cpp">
 		<description>Power Piggs of the Dark Age (USA)</description>
 		<year>1995</year>
@@ -14360,7 +14386,7 @@
 	<game name="rrracingtp" cloneof="rrracing" romof="rrracing" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Rock N' Roll Racing (Hack, Portuguese v.Beta)</description>
-		<year>1993</year>
+		<year>2018</year>
 		<manufacturer>Brazilian Warriors</manufacturer>
 		<rom name="Rock N' Roll Racing PT-BR v.Beta (2018)(Brazilian Warriors).sfc" size="1048576" crc="197d1b12"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
@@ -16181,10 +16207,10 @@
 	</game>
 	<game name="stargatetp" cloneof="stargate" romof="stargate" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Stargate (Hack, Portuguese v.77b rev.30)</description>
-		<year>1994</year>
+		<description>Stargate (Hack, Portuguese v1.0a)</description>
+		<year>2025-26</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
-		<rom name="Stargate PT-BR v.77b rev.30 (2025)(Neodash).sfc" size="2097152" crc="74598268"/>
+		<rom name="Stargate PT-BR v1.0a (2025-26)(Neodash).sfc" size="2097152" crc="5884863f"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -19672,7 +19698,7 @@
 	<game name="topgeartp" cloneof="topgear" romof="topgear" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Top Gear (Hack, Portuguese)</description>
-		<year>1992</year>
+		<year>2018</year>
 		<manufacturer>BlackThorne</manufacturer>
 		<rom name="Top Gear PT-BR (2018)(BlackThorne).sfc" size="1048576" crc="b2195a16"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>

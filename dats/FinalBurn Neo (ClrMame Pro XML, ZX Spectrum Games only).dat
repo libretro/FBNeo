@@ -2509,8 +2509,8 @@
 		<comment>Homebrew</comment>
 		<description>Baby-man Vs Man-baby (48K) (HB)</description>
 		<year>2023</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Baby-man Vs Man-baby 48K (2023)(PuttyCAD, Tin Soldiers).tap" size="41891" crc="7562acb5"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Baby-man Vs Man-baby 48K (2023)(PuttyCAD, 100 Tin Soldiers).tap" size="41891" crc="7562acb5"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -2519,8 +2519,8 @@
 		<comment>Homebrew</comment>
 		<description>Baby-man Vs Nappy Bird (48K) (HB, v1.02)</description>
 		<year>2023</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Baby-man Vs Nappy Bird v1.02 48K (2023)(PuttyCAD, Tin Soldiers).tap" size="23108" crc="d1433065"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Baby-man Vs Nappy Bird v1.02 48K (2023)(PuttyCAD, 100 Tin Soldiers).tap" size="23108" crc="d1433065"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -2529,8 +2529,8 @@
 		<comment>Homebrew</comment>
 		<description>Baby-Man Vs Terminatots PT1 (48K) (HB, v1.01)</description>
 		<year>2025</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Baby-Man Vs Terminatots PT1 v1.01 48K (2025)(PuttyCAD, Tin Soldiers).tap" size="44968" crc="4520df8c"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Baby-Man Vs Terminatots PT1 v1.01 48K (2025)(PuttyCAD, 100 Tin Soldiers).tap" size="44968" crc="4520df8c"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -2539,8 +2539,8 @@
 		<comment>Homebrew</comment>
 		<description>Baby-Man Vs Terminatots PT2 - Game (48K) (HB)</description>
 		<year>2026</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Baby-Man Vs Terminatots PT2 - Game 48K (2026)(PuttyCAD, Tin Soldiers).tap" size="46230" crc="db090c28"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Baby-Man Vs Terminatots PT2 - Game 48K (2026)(PuttyCAD, 100 Tin Soldiers).tap" size="46230" crc="db090c28"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -2549,8 +2549,8 @@
 		<comment>Homebrew</comment>
 		<description>Baby-Man Vs Terminatots PT2 - Intro (48K) (HB)</description>
 		<year>2026</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Baby-Man Vs Terminatots PT2 - Intro 48K (2026)(PuttyCAD, Tin Soldiers).tap" size="33040" crc="b0cac1f9"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Baby-Man Vs Terminatots PT2 - Intro 48K (2026)(PuttyCAD, 100 Tin Soldiers).tap" size="33040" crc="b0cac1f9"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -17270,8 +17270,8 @@
 		<comment>Homebrew</comment>
 		<description>Lockdown Town ZX (48K) (HB, v1.02)</description>
 		<year>2022</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Lockdown Town ZX v1.02 48K (2022)(PuttyCAD, Tin Soldiers).tap" size="30174" crc="2ee0a21e"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Lockdown Town ZX v1.02 48K (2022)(PuttyCAD, 100 Tin Soldiers).tap" size="30174" crc="2ee0a21e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -17280,8 +17280,8 @@
 		<comment>Homebrew</comment>
 		<description>Lockdown Town ZXMas (48K) (HB, v1.03)</description>
 		<year>2022</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Lockdown Town ZXMas v1.03 48K (2022)(PuttyCAD, Tin Soldiers).tap" size="30975" crc="bc1f2f4a"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Lockdown Town ZXMas v1.03 48K (2022)(PuttyCAD, 100 Tin Soldiers).tap" size="30975" crc="bc1f2f4a"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -17290,8 +17290,8 @@
 		<comment>Homebrew</comment>
 		<description>Lockdown Town ZXMas - Crash Exclusive (48K) (HB, v1.01)</description>
 		<year>2023</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Lockdown Town ZXMAS - Crash Exclusive v1.01 48K (2023)(PuttyCAD).tap" size="32868" crc="8cfbb3e5"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Lockdown Town ZXMAS - Crash Exclusive v1.01 48K (2023)(PuttyCAD, 100 Tin Soldiers).tap" size="32868" crc="8cfbb3e5"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -17300,8 +17300,8 @@
 		<comment>Homebrew</comment>
 		<description>Lockdown Town ZXWeen (48K) (HB, v1.02)</description>
 		<year>2022</year>
-		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
-		<rom name="Lockdown Town ZXWeen v1.02 48K (2022)(PuttyCAD, Tin Soldiers).tap" size="30441" crc="4d6a99cf"/>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Lockdown Town ZXWeen v1.02 48K (2022)(PuttyCAD, 100 Tin Soldiers).tap" size="30441" crc="4d6a99cf"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -19971,6 +19971,17 @@
 		<manufacturer>Sebastian Braunert</manufacturer>
 		<rom name="Moritz to the Moon 48K (2019)(Sebastian Braunert).tap" size="42447" crc="04bfae60"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="morningstar" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Morning Star, The (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Dareint</manufacturer>
+		<rom name="Morning Star, The 128K (2026)(Dareint).tap" size="105577" crc="5224d856"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22957,6 +22968,16 @@
 		<rom name="Pooper Scooper 48K-128K (2018)(The Death Squad).tap" size="43438" crc="7bfc504c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="poopyplt" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Poopy Platforms (48K) (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>PuttyCAD, 100 Tin Soldiers</manufacturer>
+		<rom name="Poopy Platforms v1.1 48K (2026)(PuttyCAD, 100 Tin Soldiers).tap" size="35299" crc="6922e2af"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -27846,10 +27867,10 @@
 	</game>
 	<game name="spacinvcoop" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, K: insert coins - 1or2: start - P1: Q/W and X - P2: O/P and SPACE</comment>
-		<description>Space Invaders Co-Op (48K-128K) (HB, v2.0.1)</description>
+		<description>Space Invaders Co-Op (48K-128K) (HB, v2.1)</description>
 		<year>2026</year>
 		<manufacturer>SplinterGU</manufacturer>
-		<rom name="Space Invaders Co-Op v2.0.1 48K-128K (2026)(SplinterGU).tzx" size="32554" crc="19f54c9f"/>
+		<rom name="Space Invaders Co-Op v2.1 48K-128K (2026)(SplinterGU).tzx" size="32851" crc="adf3ac99"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
