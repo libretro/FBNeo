@@ -3613,10 +3613,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="dinolandj" cloneof="dinoland" romof="dinoland" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Chou Touryuu Retsuden - Dino Land (Japan)</description>
+		<description>Chou Touryuu Retsuden Dino Land (Japan)</description>
 		<year>1991</year>
 		<manufacturer>Wolf Team</manufacturer>
-		<rom name="Chou Touryuu Retsuden - Dino Land (Japan).bin" size="524288" crc="81f939de"/>
+		<rom name="Chou Touryuu Retsuden Dino Land (Japan)(1991)(Wolf Team).bin" size="524288" crc="81f939de"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5005,7 +5005,7 @@
 		<description>Devi &amp; Pii (Japan) (Mega Drive Mini 2 Edition)</description>
 		<year>2022</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Devi and Pii (2022)(Mega Drive Mini 2 Ed.).bin" size="524288" crc="425e9e31"/>
+		<rom name="Devi and Pii (Mega Drive Mini 2 Edition)(2022)(Sega).bin" size="524288" crc="425e9e31"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5575,7 +5575,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="ddribble" cloneof="hyperdnk" romof="hyperdnk" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Double Dribble - The Playoff Edition (USA)</description>
+		<description>Double Dribble: The Playoff Edition (USA)</description>
 		<year>1994</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Double Dribble - The Playoff Edition (USA)(1994)(Konami).bin" size="2097152" crc="8352b1d0"/>
@@ -5631,6 +5631,15 @@
 		<year>1993</year>
 		<manufacturer>Sega - Compile</manufacturer>
 		<rom name="Dr. Robotnik's Mean Bean Machine (USA, Proto)(1993)(Sega, Compile).bin" size="1048576" crc="4d0e5273"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="drrobotndx" cloneof="drrobotn" romof="drrobotn" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Hack</comment>
+		<description>Dr. Robotnik's Mean Bean Machine DX Edition (Hack, v3.3)</description>
+		<year>2024</year>
+		<manufacturer>RadioTails</manufacturer>
+		<rom name="Dr. Robotnik's Mean Bean Machine DX Edition v3.3 (2024)(RadioTails).bin" size="2097152" crc="d2856474"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -6806,7 +6815,7 @@
 		<description>Fantasy Zone (Mega Drive Mini 2 Edition)</description>
 		<year>2022</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Fantasy Zone (2022)(Mega Drive Mini 2 Ed.).bin" size="2621440" crc="da31f3ac"/>
+		<rom name="Fantasy Zone (Mega Drive Mini 2 Edition)(2022)(Sega).bin" size="2621440" crc="da31f3ac"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -7563,6 +7572,14 @@
 		<year>1991</year>
 		<manufacturer>Namcot</manufacturer>
 		<rom name="Fushigi no Umi no Nadia (Japan)(1991)(Namcot).bin" size="1048576" crc="4762062a"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vspuyosunj" cloneof="vspuyosun" romof="vspuyosun" sourcefile="megadrive/d_megadrive.cpp">
+		<description>Futari de Puyo Puyo Sun (Mega Drive Mini 2 Edition, Japan)</description>
+		<year>2022</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Futari de Puyo Puyo Sun (Mega Drive Mini 2 Edition, Japan)(2022)(Sega).bin" size="4194304" crc="dfecfdac"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -9001,7 +9018,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="hyperdnkj" cloneof="hyperdnk" romof="hyperdnk" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Hyper Dunk - The Playoff Edition (Japan)</description>
+		<description>Hyper Dunk: The Playoff Edition (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Hyper Dunk - The Playoff Edition (Japan)(1994)(Konami).bin" size="2097152" crc="5baf53d7"/>
@@ -9009,7 +9026,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="hyperdnkjp" cloneof="hyperdnk" romof="hyperdnk" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Hyper Dunk - The Playoff Edition (Japan, Prototype)</description>
+		<description>Hyper Dunk: The Playoff Edition (Japan, Prototype)</description>
 		<year>1994</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Hyper Dunk - The Playoff Edition (Japan, Proto)(1994)(Konami).in" size="2097152" crc="db124bbb"/>
@@ -9640,7 +9657,7 @@
 	</game>
 	<game name="jimpower" cloneof="jimpowerpiko" romof="jimpowerpiko" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Prototype, NB: imperfect graphics.</comment>
-		<description>Jim Power - The Arcade Game (USA, Prototype)</description>
+		<description>Jim Power: The Arcade Game (USA, Prototype)</description>
 		<year>1993</year>
 		<manufacturer>Loriciel</manufacturer>
 		<rom name="Jim Power - The Arcade Game (USA, Proto)(1993)(Loriciel).bin" size="1048576" crc="1cf3238b"/>
@@ -9649,7 +9666,7 @@
 	</game>
 	<game name="jimpowerpiko" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew, Originally developed by Loricel</comment>
-		<description>Jim Power - The Lost Dimension in 3D (HB)</description>
+		<description>Jim Power: The Lost Dimension in 3D (HB)</description>
 		<year>2014</year>
 		<manufacturer>Piko Interactive</manufacturer>
 		<rom name="Jim Power - The Lost Dimension in 3D (2014)(Piko Interactive).bin" size="1048576" crc="f9cd7079"/>
@@ -11035,6 +11052,14 @@
 		<year>1991</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="M-1 Abrams Battle Tank (Euro, USA)(1991)(Sega).bin" size="524288" crc="1e2f74cf"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="musha" sourcefile="megadrive/d_megadrive.cpp">
+		<description>M.U.S.H.A. - Metallic Uniframe Super Hybrid Armor (USA)</description>
+		<year>1990</year>
+		<manufacturer>Seismic</manufacturer>
+		<rom name="MUSHA - Metallic Uniframe Super Hybrid Armor (USA)(1990)(Seismic).bin" size="524288" crc="58a7f7b4"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12878,14 +12903,6 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="musha" sourcefile="megadrive/d_megadrive.cpp">
-		<description>MUSHA - Metallic Uniframe Super Hybrid Armor (USA)</description>
-		<year>1990</year>
-		<manufacturer>Seismic</manufacturer>
-		<rom name="MUSHA - Metallic Uniframe Super Hybrid Armor (USA)(1990)(Seismic).bin" size="524288" crc="58a7f7b4"/>
-		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="mushapt" cloneof="musha" romof="musha" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>MUSHA - Super Armaduras Hibridas e Metalicas (Hack, Portuguese v1.1)</description>
@@ -13677,10 +13694,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="nikkan" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Nikkan Sports Pro Yakyuu Van (Japan)</description>
+		<description>Nikkan Sports Pro Yakyuu VAN (Japan)</description>
 		<year>1991</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Nikkan Sports Pro Yakyuu Van (Japan)(1991)(Sega).bin" size="524288" crc="c3655a59"/>
+		<rom name="Nikkan Sports Pro Yakyuu VAN (Japan)(1991)(Sega).bin" size="524288" crc="c3655a59"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15672,9 +15689,9 @@
 	<game name="puyopuyote" cloneof="puyopuyo" romof="puyopuyo" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>Puyo Puyo (Hack, English v1.1)</description>
-		<year>2025</year>
-		<manufacturer>RadioShadow</manufacturer>
-		<rom name="Puyo Puyo T-Eng v1.1 (2025)(RadioShadow).bin" size="1048576" crc="c081a1ff"/>
+		<year>2026</year>
+		<manufacturer>RadioTails</manufacturer>
+		<rom name="Puyo Puyo T-Eng v1.1 (2026)(RadioTails).bin" size="1048576" crc="c081a1ff"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17927,14 +17944,6 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="shuihu" sourcefile="megadrive/d_megadrive.cpp">
-		<description>Shui Hu - Feng Yun Zhuan (China) (Unl)</description>
-		<year>1999</year>
-		<manufacturer>Never Ending Soft Team</manufacturer>
-		<rom name="Shui Hu - Feng Yun Zhuan (China)(Unl)(1999)(Never Ending Soft Team).bin" size="2097152" crc="3e9e010c"/>
-		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="shuihuzh" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Shui Hu Zhuan (China) (Unl)</description>
 		<year>1996</year>
@@ -17949,6 +17958,14 @@
 		<year>2023</year>
 		<manufacturer>Ken_Tse</manufacturer>
 		<rom name="Shui Hu Zhuan (China)(Unl)(Audio Fix)(2023)(Ken_Tse).bin" size="2097152" crc="84c2f352"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shuihu" sourcefile="megadrive/d_megadrive.cpp">
+		<description>Shui Hu: Feng Yun Zhuan (China) (Unl)</description>
+		<year>1999</year>
+		<manufacturer>Never Ending Soft Team</manufacturer>
+		<rom name="Shui Hu - Feng Yun Zhuan (China)(Unl)(1999)(Never Ending Soft Team).bin" size="2097152" crc="3e9e010c"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18079,7 +18096,7 @@
 	</game>
 	<game name="slamshaq" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Prototype</comment>
-		<description>Slam - Shaq vs. the Legends (Prototype)</description>
+		<description>Slam: Shaq vs. the Legends (Prototype)</description>
 		<year>199?</year>
 		<manufacturer>&lt;unknown&gt;</manufacturer>
 		<rom name="Slam - Shaq vs. the Legends (Proto)(199x).bin" size="2050138" crc="c19c200e"/>
@@ -19040,7 +19057,7 @@
 		<description>Spatter (Mega Drive Mini 2 Edition)</description>
 		<year>2022</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Spatter (2022)(Mega Drive Mini 2 Ed.).bin" size="524288" crc="84081204"/>
+		<rom name="Spatter (Mega Drive Mini 2 Edition)(2022)(Sega).bin" size="524288" crc="84081204"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -19360,7 +19377,7 @@
 		<description>Star Mobile (Mega Drive Mini 2 Edition)</description>
 		<year>2022</year>
 		<manufacturer>Mindware</manufacturer>
-		<rom name="Star Mobile (2022)(Mega Drive Mini 2 Ed.).bin" size="262144" crc="39466559"/>
+		<rom name="Star Mobile (Mega Drive Mini 2 Edition)(2022)(Mindware).bin" size="262144" crc="39466559"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20445,7 +20462,7 @@
 		<description>Super Locomotive (Mega Drive Mini 2 Edition)</description>
 		<year>2022</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Super Locomotive (2022)(Mega Drive Mini 2 Ed.).bin" size="262144" crc="c2840b00"/>
+		<rom name="Super Locomotive (Mega Drive Mini 2 Edition)(2022)(Sega).bin" size="262144" crc="c2840b00"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -23305,6 +23322,14 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="vspuyosun" sourcefile="megadrive/d_megadrive.cpp">
+		<description>VS Puyo Puyo Sun (Mega Drive Mini 2 Edition, USA)</description>
+		<year>2022</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="VS Puyo Puyo Sun (Mega Drive Mini 2 Edition, USA)(2022)(Sega).bin" size="4194304" crc="8e0afeec"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="wackyrac" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Prototype</comment>
 		<description>Wacky Races (USA, Prototype)</description>
@@ -23442,7 +23467,7 @@
 	</game>
 	<game name="wmargin" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Water Margin - A Tale of Clouds and Wind (USA) (HB)</description>
+		<description>Water Margin: A Tale of Clouds and Wind (USA) (HB)</description>
 		<year>2015</year>
 		<manufacturer>Piko Interactive</manufacturer>
 		<rom name="Water Margin - A Tale of Clouds and Wind (U)(2015)(Piko Interactive).bin" size="2097152" crc="7f93b916"/>
@@ -23708,7 +23733,7 @@
 	</game>
 	<game name="wolfchlds" cloneof="wolfchld" romof="wolfchld" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>Wolfchild (Hack,Spanish)</description>
+		<description>Wolfchild (Hack, Spanish)</description>
 		<year>2018</year>
 		<manufacturer>Wave</manufacturer>
 		<rom name="wolfchild (hack, spanish).bin" size="1048576" crc="335e960d"/>
@@ -24283,7 +24308,7 @@
 	</game>
 	<game name="xdrs" cloneof="xdr" romof="xdr" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>XDR - X Dazedly Ray (Hack, Spanish)</description>
+		<description>XDR: X Dazedly Ray (Hack, Spanish)</description>
 		<year>2019</year>
 		<manufacturer>Wave</manufacturer>
 		<rom name="XDR - X Dazedly Ray T-Spa (2019)(Wave).bin" size="524288" crc="d93a9a0d"/>
@@ -24291,7 +24316,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="xdr" sourcefile="megadrive/d_megadrive.cpp">
-		<description>XDR - X Dazedly Ray (Japan)</description>
+		<description>XDR: X Dazedly Ray (Japan)</description>
 		<year>1990</year>
 		<manufacturer>Unipacc</manufacturer>
 		<rom name="XDR - X Dazedly Ray (Japan)(1990)(Unipacc).bin" size="524288" crc="ab22d002"/>

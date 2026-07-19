@@ -3760,6 +3760,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="chipndalresra2tp" cloneof="chipndalresra2" romof="chipndalresra2" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Chip 'n Dale ~ Tico E Teco: Defensores da Lei 2 (Hack, Portuguese v1.1)</description>
+		<year>2026</year>
+		<manufacturer>xThiiix</manufacturer>
+		<rom name="Tico E Teco - Defensores da Lei 2 T-Por v1.1 (2026)(xThiiix).nes" size="262160" crc="5eb965bf"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="chipndalresrasc" cloneof="chipndalresra" romof="chipndalresra" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Chip 'n Dale: Rescue Rangers (Hack, Chinese v1.1)</description>
@@ -13001,10 +13010,10 @@
 	</game>
 	<game name="machinecave" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Machine Cave (HB, v1.9)</description>
+		<description>Machine Cave (HB, v1.19)</description>
 		<year>2018</year>
 		<manufacturer>Simo Sievanen</manufacturer>
-		<rom name="Machine Cave v1.9 (2018)(Simo Sievanen).nes" size="40976" crc="2d904baf"/>
+		<rom name="Machine Cave v1.19 (2018)(Simo Sievanen).nes" size="40976" crc="2d904baf"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -22703,6 +22712,15 @@
 		<year>1989</year>
 		<manufacturer>Infocom</manufacturer>
 		<rom name="Tombs &amp; Treasure (USA)(1989)(Infocom).nes" size="262160" crc="013bd19f"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="tonymont" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Tony: Montezuma's Gold (HB)</description>
+		<year>2026</year>
+		<manufacturer>Monochrome Productions</manufacturer>
+		<rom name="Tony - Montezuma's Gold (2026)(Monochrome Productions).nes" size="524304" crc="c9e4180b"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
