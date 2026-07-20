@@ -18695,6 +18695,7 @@ DRV		BurnDrvsnes_Birdietry;
 DRV		BurnDrvmd_sesame;
 DRV		BurnDrvsnes_st010;
 DRV		BurnDrvsnes_st011;
+DRV		BurnDrvsnes_st018;
 DRV		BurnSpecSetaisho;
 DRV		BurnSpecSewerescape;
 DRV		BurnDrvMSX_sewersam;
@@ -18931,6 +18932,8 @@ DRV		BurnDrvtg_shockman;
 DRV		BurnDrvsnes_Shockman0te;
 DRV		BurnDrvsnes_Shockman0;
 DRV		BurnDrvnes_shockwave;
+DRV		BurnDrvsnes_shodanekte;
+DRV		BurnDrvsnes_shodanek;
 DRV		BurnDrvMSX_shogun;
 DRV		BurnDrvShogwarrk;
 DRV		BurnDrvShogwarru;
@@ -44318,6 +44321,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_sesame,			// Sesame Street Counting Cafe (USA)
 	&BurnDrvsnes_st010,			// Seta ST010 [no comment, NOT WORKING]
 	&BurnDrvsnes_st011,			// Seta ST011 [no comment, NOT WORKING]
+	&BurnDrvsnes_st018,			// Seta ST018 [no comment, NOT WORKING]
 	&BurnSpecSetaisho,			// Seto Taisho Vs Yokai (128K) (HB)
 	&BurnSpecSewerescape,		// Sewer Escape (48K) (HB)
 	&BurnDrvMSX_sewersam,		// Sewer Sam (Japan)
@@ -44554,6 +44558,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Shockman0te,	// Shockman Zero (Hack, English)
 	&BurnDrvsnes_Shockman0,		// Shockman Zero (World)
 	&BurnDrvnes_shockwave,		// Shockwave (USA)
+	&BurnDrvsnes_shodanekte,	// Shodai Nekketsu Kouha Kunio-kun (Hack, English，v1.00)
+	&BurnDrvsnes_shodanek,		// Shodai Nekketsu Kouha Kunio-kun (Japan, Rev 1)
 	&BurnDrvMSX_shogun,			// Shogun (Japan)
 	&BurnDrvShogwarrk,			// Shogun Warriors (Korea?)
 	&BurnDrvShogwarru,			// Shogun Warriors (US)
@@ -69803,6 +69809,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_sesame", "megadrive/d_megadrive.cpp"},
 	{ "snes_st010", "snes/d_snes.cpp"},
 	{ "snes_st011", "snes/d_snes.cpp"},
+	{ "snes_st018", "snes/d_snes.cpp"},
 	{ "spec_setaisho", "spectrum/d_spectrum.cpp"},
 	{ "spec_sewerescape", "spectrum/d_spectrum.cpp"},
 	{ "msx_sewersam", "msx/d_msx.cpp"},
@@ -70037,6 +70044,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "snes_shockman0te", "snes/d_snes.cpp"},
 	{ "snes_shockman0", "snes/d_snes.cpp"},
 	{ "nes_shockwave", "nes/d_nes.cpp"},
+	{ "snes_shodanekte", "snes/d_snes.cpp"},
+	{ "snes_shodanek", "snes/d_snes.cpp"},
 	{ "msx_shogun", "msx/d_msx.cpp"},
 	{ "shogwarrk", "pst90s/d_kaneko16.cpp"},
 	{ "shogwarru", "pst90s/d_kaneko16.cpp"},

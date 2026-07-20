@@ -15422,6 +15422,23 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="shodanekte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Shodai Nekketsu Kouha Kunio-kun (Hack, English，v1.00)</description>
+		<year>2007</year>
+		<manufacturer>Aeon Genesis</manufacturer>
+		<rom name="Shodai Nekketsu Kouha Kunio-kun T-Eng v1.00 (2007)(Aeon Genesis).smc" size="1179648" crc="293279af"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shodanek" cloneof="shodanekte" romof="shodanekte" sourcefile="snes/d_snes.cpp">
+		<description>Shodai Nekketsu Kouha Kunio-kun (Japan, Rev 1)</description>
+		<year>1992</year>
+		<manufacturer>Technos</manufacturer>
+		<rom name="Shodai Nekketsu Kouha Kunio-kun (J, Rev 1)(1992)(Technos).sfc" size="1048576" crc="5df55465"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="shouashibe" sourcefile="snes/d_snes.cpp">
 		<description>Shounen Ashibe: Goma-chan no Yuuenchi Daibouken (Japan)</description>
 		<year>1992</year>
@@ -21833,5 +21850,11 @@
 		<year>x</year>
 		<manufacturer>ST011 microcode</manufacturer>
 		<rom name="st011.bin" size="69632" crc="34d2952c"/>
+	</game>
+	<game isbios="yes" name="st018" sourcefile="snes/d_snes.cpp">
+		<description>Seta ST018</description>
+		<year>x</year>
+		<manufacturer>ST018 microcode</manufacturer>
+		<rom name="st018.bin" size="163840" crc="5c403cc5"/>
 	</game>
 </datafile>
