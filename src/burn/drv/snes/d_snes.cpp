@@ -3,6 +3,7 @@
 
 #include "tiles_generic.h"
 #include "snes.h"
+#include "spc7110.h"		// SPC7110 self-test skip
 #include "burn_gun.h"		// zapper games
 
 static UINT8 snesInputPort0[12];
@@ -183,18 +184,35 @@ static struct BurnDIPInfo SNESDIPList[] =
 
 STDDIPINFO(SNES)
 
+// You may ignore any additions or deletions of list items in the future and count from bottom to top
+#define DIPSW_IDX2	(ARRAY_SIZE(SNESInputList) - 1)
+#define DIPSW_IDX1	(DIPSW_IDX2                - 1)
+
 static struct BurnDIPInfo SNESVRAMHackDIPList[] =
 {
-	DIP_OFFSET(0x19)
-	{0x00, 0xff, 0xff, 0x01, NULL			},
-	{0x01, 0xff, 0xff, 0x00, NULL			},
+	{DIPSW_IDX1, 0xff, 0xff, 0x01, NULL			},
 
-	{0   , 0xfe, 0   ,    2, "Allow vram writes outside blanking (hack)" },
-	{0x00, 0x01, 0x01, 0x00, "Off"				},
-	{0x00, 0x01, 0x01, 0x01, "On"				},
+	{0         , 0xfe, 0   ,    2, "Allow vram writes outside blanking (hack)"	},
+	{DIPSW_IDX1, 0x01, 0x01, 0x00, "Off"		},
+	{DIPSW_IDX1, 0x01, 0x01, 0x01, "On"			},
 };
 
 STDDIPINFO(SNESVRAMHack)
+
+static struct BurnDIPInfo SNESSPCHackDIPList[] =
+{
+	{DIPSW_IDX2, 0xff, 0xff, 0x01, NULL			},
+
+	{0         , 0xfe, 0   ,    2, "Skip SPC7110 self-test (hack)"	},
+	{DIPSW_IDX2, 0x01, 0x01, 0x00, "Off"		},
+	{DIPSW_IDX2, 0x01, 0x01, 0x01, "On"			},
+};
+
+STDDIPINFO(SNESSPCHack)
+STDDIPINFOEXT(SNESHackAB, SNESVRAMHack, SNESSPCHack)
+
+#undef DIPSW_IDX1
+#undef DIPSW_IDX2
 
 static struct BurnDIPInfo SNESZapperDIPList[] =
 {
@@ -284,7 +302,7 @@ static void DrvDoReset()
 {
 	snes_reset(snes, true);
 
-	if ((nIpsDrvDefine & IPS_SNES_VRAMHK) || (NULL != pDataRomDesc))
+	if (nIpsDrvDefine & IPS_SNES_VRAMHK)
 		DrvDips[0] = 1;
 
 	snes->vramhack = (snes->vramhack & ~1) + (DrvDips[0] & 1);
@@ -316,7 +334,7 @@ static INT32 DrvInit()
 	UINT32 bios_len = 0;
 	rom_bios = NULL;
 	if (bios) {
-		rom_bios = BurnMalloc(0x18000); // usually 0x2800 for dsp*, 0x11000 for Seta ST010/ST011
+		rom_bios = BurnMalloc(0x28000); // 0x2800 dsp*, 0x11000 Seta ST010/ST011, 0x28000 Seta ST018
 
 		BurnDrvGetRomInfo(&ri, 0x80);
 		bios_len = ri.nLen;
@@ -599,6 +617,25 @@ struct BurnDriver BurnDrvsnes_st011 = {
 	NULL, NULL, NULL, NULL,
 	BDF_BOARDROM, 1, HARDWARE_SNES, GBF_BIOS, 0,
 	SNESGetZipName, snes_st011RomInfo, snes_st011RomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Seta ST018
+
+static struct BurnRomInfo snes_st018RomDesc[] = {
+	{ "st018.bin", 0x28000, 0x5c403cc5, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_st018)
+STD_ROM_FN(snes_st018)
+
+struct BurnDriver BurnDrvsnes_st018 = {
+	"snes_st018", NULL, NULL, NULL, "x",
+	"Seta ST018\0", NULL, "ST018 microcode", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_BOARDROM, 1, HARDWARE_SNES, GBF_BIOS, 0,
+	SNESGetZipName, snes_st018RomInfo, snes_st018RomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -13898,21 +13935,13 @@ static struct BurnRomInfo snes_Fireemblem776tscRomDesc[] = {
 STD_ROM_PICK(snes_Fireemblem776tsc)
 STD_ROM_FN(snes_Fireemblem776tsc)
 
-static INT32 VRAMHackInit()
-{
-	if (!bDoIpsPatch && (NULL == pDataRomDesc))
-		DrvDips[0] = 1;
-
-	return DrvInit();
-}
-
 struct BurnDriver BurnDrvsnes_Fireemblem776tsc = {
 	"snes_fireemblem776tsc", "snes_fireemblem776te", NULL, NULL, "2001",
 	"Fire Emblem - Thracia 776 (Hack, Simplified Chinese v1.01)\0", NULL, "Wolf Group", "SNES / Super Famicom",
 	L"Fire Emblem - Thracia 776 (Hack, Simplified Chinese v1.01)\0\u706b\u7130\u4e4b\u7eb9\u7ae0 - \u591a\u62c9\u57fa\u4e9a 776\0", NULL, L"\u72fc\u7ec4", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG | GBF_STRATEGY, 0,
 	SNESGetZipName, snes_Fireemblem776tscRomInfo, snes_Fireemblem776tscRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -13931,7 +13960,7 @@ struct BurnDriver BurnDrvsnes_Fireemblem776ttc = {
 	L"Fire Emblem - Thracia 776 (Hack, Traditional Chinese v1.00)\0\u706b\u7130\u4e4b\u7eb9\u7ae0 - \u591a\u62c9\u57fa\u4e9e 776\0", NULL, L"\u72fc\u7ec4", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG | GBF_STRATEGY, 0,
 	SNESGetZipName, snes_Fireemblem776ttcRomInfo, snes_Fireemblem776ttcRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -13988,7 +14017,7 @@ struct BurnDriver BurnDrvsnes_Fireemblemtsc = {
 	L"Fire Emblem - Monshou no Nazo (Hack, Simplified Chinese v1.03)\0\u706b\u7130\u4e4b\u7eb9\u7ae0 - \u7eb9\u7ae0\u4e4b\u8c1c\0", NULL, L"\u72fc\u7ec4", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_STRATEGY | GBF_RPG, 0,
 	SNESGetZipName, snes_FireemblemtscRomInfo, snes_FireemblemtscRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -14007,7 +14036,7 @@ struct BurnDriver BurnDrvsnes_Fireemblemttc = {
 	L"Fire Emblem - Monshou no Nazo (Hack, Traditional Chinese v1.03)\0\u706b\u7130\u4e4b\u7d0b\u7ae0 - \u7d0b\u7ae0\u4e4b\u8b0e\0", NULL, L"\u72fc\u7ec4", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_STRATEGY | GBF_RPG, 0,
 	SNESGetZipName, snes_FireemblemttcRomInfo, snes_FireemblemttcRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -14085,7 +14114,7 @@ struct BurnDriver BurnDrvsnes_Fireemblem4tsc = {
 	L"Fire Emblem - Seisen no Keifu (Hack, Simplified Chinese v1.1)\0\u706b\u7130\u4e4b\u7eb9\u7ae0 - \u5723\u6218\u4e4b\u7cfb\u8c31\0", NULL, L"\u706b\u82b1\u5929\u9f99\u5251", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG | GBF_STRATEGY, 0,
 	SNESGetZipName, snes_Fireemblem4tscRomInfo, snes_Fireemblem4tscRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -14104,7 +14133,7 @@ struct BurnDriver BurnDrvsnes_Fireemblem4ttc = {
 	L"Fire Emblem - Seisen no Keifu (Hack, Traditional Chinese v1.1)\0\u706b\u7130\u4e4b\u7d0b\u7ae0 - \u8056\u6230\u4e4b\u7cfb\u8b5c\0", NULL, L"\u706b\u82b1\u5929\u9f99\u5251", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG | GBF_STRATEGY, 0,
 	SNESGetZipName, snes_Fireemblem4ttcRomInfo, snes_Fireemblem4ttcRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -25259,7 +25288,7 @@ struct BurnDriver BurnDrvsnes_momohappy = {
 	"Momotarou Dentetsu Happy (Japan)\0", NULL, "Hudson Soft", "SNES / Super Famicom",
 	L"Momotarou Dentetsu Happy (Japan)\0\u6843\u592a\u90ce\u96fb\u9244 Happy\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING, 2, HARDWARE_SNES, GBF_SIM, 0,
-	SNESGetZipName, snes_momohappyRomInfo, snes_momohappyRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_momohappyRomInfo, snes_momohappyRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -30585,7 +30614,7 @@ struct BurnDriver BurnDrvsnes_Romasaga3tsc = {
 	L"Romancing Sa-Ga 3 (Hack, Simplified Chinese v1.01)\0\u6d6a\u6f2b\u4f20\u8bf4 3\0", NULL, L"\u5929\u5e7b\u6c49\u5316\u7ec4", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG, 0,
 	SNESGetZipName, snes_Romasaga3tscRomInfo, snes_Romasaga3tscRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -30604,7 +30633,7 @@ struct BurnDriver BurnDrvsnes_Romasaga3ttc = {
 	L"Romancing Sa-Ga 3 (Hack, Traditional Chinese v1.01)\0\u6d6a\u6f2b\u50b3\u8aaa 3\0", NULL, L"\u5929\u5e7b\u6c49\u5316\u7ec4", NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG, 0,
 	SNESGetZipName, snes_Romasaga3ttcRomInfo, snes_Romasaga3ttcRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
@@ -32847,6 +32876,45 @@ struct BurnDriver BurnDrvsnes_Shinkouhate = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HACK, 2, HARDWARE_SNES, GBF_SCRFIGHT | GBF_ADV, 0,
 	SNESGetZipName, snes_ShinkouhateRomInfo, snes_ShinkouhateRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Shodai Nekketsu Kouha Kunio-kun (Hack, English，v1.00)
+// https://www.romhacking.net/translations/893/
+
+static struct BurnRomInfo snes_shodanekteRomDesc[] = {
+	{ "Shodai Nekketsu Kouha Kunio-kun T-Eng v1.00 (2007)(Aeon Genesis).smc", 1179648, 0x293279af, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_shodanekte)
+STD_ROM_FN(snes_shodanekte)
+
+struct BurnDriver BurnDrvsnes_shodanekte = {
+	"snes_shodanekte", NULL, NULL, NULL, "2007",
+	"Shodai Nekketsu Kouha Kunio-kun (Hack, English，v1.00)\0", NULL, "Aeon Genesis", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HACK, 2, HARDWARE_SNES, GBF_SCRFIGHT | GBF_ADV, 0,
+	SNESGetZipName, snes_shodanekteRomInfo, snes_shodanekteRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Shodai Nekketsu Kouha Kunio-kun (Japan, Rev 1)
+
+static struct BurnRomInfo snes_shodanekRomDesc[] = {
+	{ "Shodai Nekketsu Kouha Kunio-kun (J, Rev 1)(1992)(Technos).sfc", 1048576, 0x5df55465, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_shodanek)
+STD_ROM_FN(snes_shodanek)
+
+struct BurnDriver BurnDrvsnes_shodanek = {
+	"snes_shodanek", "snes_shodanekte", NULL, NULL, "1992",
+	"Shodai Nekketsu Kouha Kunio-kun (Japan, Rev 1)\0", NULL, "Technos", "SNES / Super Famicom",
+	L"Shodai Nekketsu Kouha Kunio-kun (Japan, Rev 1)\0\u521d\u4ee3\u71b1\u8840\u786c\u6d3e\u304f\u306b\u304a\u304f\u3093\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_SNES, GBF_SCRFIGHT | GBF_ADV, 0,
+	SNESGetZipName, snes_shodanekRomInfo, snes_shodanekRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -38312,7 +38380,7 @@ struct BurnDriver BurnDrvsnes_spl4 = {
 	"Super Power League 4 (Japan)\0", NULL, "Hudson Soft", "SNES / Super Famicom",
 	L"Super Power League 4 (Japan)\0\u30b9\u30fc\u30d1\u30fc\u30d1\u30ef\u30fc\u30ea\u30fc\u30b04\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING, 2, HARDWARE_SNES, GBF_SPORTSMISC, 0,
-	SNESGetZipName, snes_spl4RomInfo, snes_spl4RomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_spl4RomInfo, snes_spl4RomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -40479,7 +40547,7 @@ struct BurnDriver BurnDrvsnes_tengaim0 = {
 	"Tengai Makyou Zero (Japan)\0", NULL, "Hudson Soft", "SNES / Super Famicom",
 	L"Tengai Makyou Zero (Japan)\0\u5929\u5916\u9b54\u5883 Zero\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SNES, GBF_RPG, 0,
-	SNESGetZipName, snes_tengaim0RomInfo, snes_tengaim0RomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_tengaim0RomInfo, snes_tengaim0RomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -40499,7 +40567,7 @@ struct BurnDriver BurnDrvsnes_tengaim0sj = {
 	"Tengai Makyou Zero: Shonen Jump no Shou (Japan)\0", NULL, "Hudson Soft", "SNES / Super Famicom",
 	L"Tengai Makyou Zero: Shonen Jump no Shou (Japan)\0\u5929\u5916\u9b54\u5883 Zero: \u5c11\u5e74\u30b8\u30e3\u30f3\u30d7\u306e\u7ae0\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SNES, GBF_RPG, 0,
-	SNESGetZipName, snes_tengaim0sjRomInfo, snes_tengaim0sjRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_tengaim0sjRomInfo, snes_tengaim0sjRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -40519,7 +40587,7 @@ struct BurnDriver BurnDrvsnes_tengaim0te = {
 	"Far East of Eden Zero (Hack, English v7.0)\0", NULL, "Tom", "SNES / Super Famicom",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG, 0,
-	SNESGetZipName, snes_tengaim0teRomInfo, snes_tengaim0teRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_tengaim0teRomInfo, snes_tengaim0teRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -40540,7 +40608,7 @@ struct BurnDriver BurnDrvsnes_tengaim0tp = {
 	"Tengai Makyou Zero (Hack, Portuguese)\0", NULL, "Dindo", "SNES / Super Famicom",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG, 0,
-	SNESGetZipName, snes_tengaim0tpRomInfo, snes_tengaim0tpRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_tengaim0tpRomInfo, snes_tengaim0tpRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -40560,7 +40628,7 @@ struct BurnDriver BurnDrvsnes_tengaim0tsc = {
 	"Tengai Makyou Zero (Hack, Simplified Chinese v1.0)\0", NULL, "hlken & ACG & Star Team", "SNES / Super Famicom",
 	L"Tengai Makyou Zero (Hack, Simplified Chinese v1.0)\0\u5929\u5916\u9b54\u5883: Zero (\u7b80\u4e2d\u7ffb\u8bd1)\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG, 0,
-	SNESGetZipName, snes_tengaim0tscRomInfo, snes_tengaim0tscRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	SNESGetZipName, snes_tengaim0tscRomInfo, snes_tengaim0tscRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESSPCHackDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -40580,8 +40648,8 @@ struct BurnDriver BurnDrvsnes_tengaim0ttc = {
 	"Tengai Makyou Zero (Hack, Traditional Chinese v1.0)\0", NULL, "ACG & Star Team", "SNES / Super Famicom",
 	L"Tengai Makyou Zero (Hack, Traditional Chinese v1.0)\0\u5929\u5916\u9b54\u5883 Zero (\u7e41\u4e2d\u7ffb\u8b6f)\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_RPG, 0,
-	SNESGetZipName, snes_tengaim0ttcRomInfo, snes_tengaim0ttcRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESVRAMHackDIPInfo,
-	VRAMHackInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	SNESGetZipName, snes_tengaim0ttcRomInfo, snes_tengaim0ttcRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESHackABDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
 
