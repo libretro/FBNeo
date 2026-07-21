@@ -15424,7 +15424,7 @@
 	</game>
 	<game name="shodanekte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Shodai Nekketsu Kouha Kunio-kun (Hack, English，v1.00)</description>
+		<description>Shodai Nekketsu Kouha Kunio-kun (Hack, English, v1.00)</description>
 		<year>2007</year>
 		<manufacturer>Aeon Genesis</manufacturer>
 		<rom name="Shodai Nekketsu Kouha Kunio-kun T-Eng v1.00 (2007)(Aeon Genesis).smc" size="1179648" crc="293279af"/>
@@ -16652,10 +16652,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="stuntfx" sourcefile="snes/d_snes.cpp">
-		<description>Stunt Race FX (USA，Rev 1)</description>
+		<description>Stunt Race FX (USA, Rev 1)</description>
 		<year>1994</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="Stunt Race FX (U，Rev 1)(1994)(Nintendo).sfc" size="1048576" crc="380c2635"/>
+		<rom name="Stunt Race FX (U, Rev 1)(1994)(Nintendo).sfc" size="1048576" crc="380c2635"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
