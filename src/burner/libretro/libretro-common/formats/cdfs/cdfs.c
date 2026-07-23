@@ -32,10 +32,10 @@ static void cdfs_determine_sector_size(cdfs_track_t* track)
       return;
 
    /* if this is a CDROM-XA data source, the "CD001" tag will be 25 bytes into the sector */
-   if (  buffer[25] == 0x43 
+   if (  buffer[25] == 0x43
       && buffer[26] == 0x44
-      && buffer[27] == 0x30 
-      && buffer[28] == 0x30 
+      && buffer[27] == 0x30
+      && buffer[28] == 0x30
       && buffer[29] == 0x31)
    {
       track->stream_sector_size        = 2352;
@@ -44,8 +44,8 @@ static void cdfs_determine_sector_size(cdfs_track_t* track)
    /* otherwise it should be 17 bytes into the sector */
    else if (buffer[17] == 0x43
       &&    buffer[18] == 0x44
-      &&    buffer[19] == 0x30 
-      &&    buffer[20] == 0x30 
+      &&    buffer[19] == 0x30
+      &&    buffer[20] == 0x30
       &&    buffer[21] == 0x31)
    {
       track->stream_sector_size = 2352;
@@ -65,7 +65,7 @@ static void cdfs_determine_sector_size(cdfs_track_t* track)
          && buffer[ 7] == 0xFF
          && buffer[ 8] == 0xFF
          && buffer[ 9] == 0xFF
-         && buffer[10] == 0xFF 
+         && buffer[10] == 0xFF
          && buffer[11] == 0)
       {
          /* if we didn't find a CD001 tag, this format may predate ISO-9660 */
@@ -80,21 +80,21 @@ static void cdfs_determine_sector_size(cdfs_track_t* track)
 static void cdfs_determine_sector_size_from_file_size(cdfs_track_t* track)
 {
    /* attempt to determine stream_sector_size from file size */
-   size_t size = intfstream_get_size(track->stream);
+   size_t _len = intfstream_get_size(track->stream);
 
-   if ((size % 2352) == 0)
+   if ((_len % 2352) == 0)
    {
       /* raw tracks use all 2352 bytes and have a 24 byte header */
       track->stream_sector_size        = 2352;
       track->stream_sector_header_size = 24;
    }
-   else if ((size % 2048) == 0)
+   else if ((_len % 2048) == 0)
    {
       /* cooked tracks eliminate all header/footer data */
       track->stream_sector_size        = 2048;
       track->stream_sector_header_size = 0;
    }
-   else if ((size % 2336) == 0)
+   else if ((_len % 2336) == 0)
    {
       /* MODE 2 format without 16-byte sync data */
       track->stream_sector_size        = 2336;
@@ -172,7 +172,7 @@ static int cdfs_find_file(cdfs_file_t* file, const char* path)
       intfstream_read(file->track->stream, buffer, sizeof(buffer));
 
       /* the directory_record starts at 156 bytes into the sector.
-       * the sector containing the root directory contents is a 
+       * the sector containing the root directory contents is a
        * 3 byte value that is 2 bytes into the directory_record. */
       offset = 156 + 2;
       sector = buffer[offset] | (buffer[offset + 1] << 8) | (buffer[offset + 2] << 16);
@@ -185,27 +185,69 @@ static int cdfs_find_file(cdfs_file_t* file, const char* path)
    path_length = strlen(path);
    tmp         = buffer;
 
-   while (tmp < buffer + sizeof(buffer))
+   /* The directory record layout (ECMA-119 §9.1) is:
+    *   byte  0:  record length (1 byte; 0 = end of records)
+    *   byte  1:  extended-attr length
+    *   bytes 2-9: location-of-extent (LE+BE) -- we use bytes 2..4
+    *   bytes 10-17: data length (LE+BE) -- we use bytes 10..13
+    *   ...
+    *   byte 32:  filename length
+    *   bytes 33..32+filename_length: filename
+    *
+    * Pre-this-patch the read at tmp[33 + path_length] and the
+    * subsequent reads at tmp[2..4]/tmp[10..13] could run off the
+    * end of the 2048-byte stack buffer when a malformed disc
+    * image had a record positioned (or chained via the
+    * tmp += tmp[0] advance) so that tmp + 33 + path_length lay
+    * past buffer + sizeof(buffer).  An attacker who can place a
+    * crafted sector at the directory offset gets:
+    *  - a 1-byte info-leak from adjacent stack via the
+    *    tmp[33 + path_length] comparison vs ';' / '\0';
+    *  - filename-length bytes leaked via strncasecmp's
+    *    short-circuit timing;
+    *  - up to 4 bytes of attacker-influenced stack data feeding
+    *    `sector` (tmp[2..4]) and `file->size` (tmp[10..13]),
+    *    redirecting the next intfstream_read.
+    *
+    * The advance "tmp += tmp[0]" itself can land tmp anywhere
+    * up to 255 bytes ahead.  The guard tmp < buffer + sizeof
+    * only catches the case where the loop body re-runs; it does
+    * not protect against a single iteration whose body reads
+    * past the buffer.
+    *
+    * Tighten the guard so the entire record (header through the
+    * byte at offset 33 + path_length) must fit, and require the
+    * record's claimed length to be at least large enough to
+    * cover the filename comparison. */
+   while (   tmp < buffer + sizeof(buffer)
+          && (size_t)(tmp - buffer) + 33 + path_length < sizeof(buffer))
    {
-      /* The first byte of the record is the length of 
+      /* The first byte of the record is the length of
        * the record - if 0, we reached the end of the data */
       if (!*tmp)
          break;
 
-      /* filename is 33 bytes into the record and 
+      /* Reject records whose claimed length cannot accommodate
+       * the filename comparison below.  A legitimate ECMA-119
+       * directory record has length >= 33 + filename_length
+       * + 1 (the version-separator byte). */
+      if (tmp[0] < 33 + path_length + 1)
+         break;
+
+      /* filename is 33 bytes into the record and
        * the format is "FILENAME;version" or "DIRECTORY" */
-      if (        (tmp[33 + path_length] == ';' 
+      if (        (tmp[33 + path_length] == ';'
                || (tmp[33 + path_length] == '\0'))
                &&  strncasecmp((const char*)(tmp + 33), path, path_length) == 0)
       {
          /* the file size is in bytes 10-13 of the record */
-         file->size = 
+         file->size =
               (tmp[10])
-            | (tmp[11] << 8) 
-            | (tmp[12] << 16) 
+            | (tmp[11] << 8)
+            | (tmp[12] << 16)
             | (tmp[13] << 24);
 
-         /* the file contents are in the sector identified 
+         /* the file contents are in the sector identified
           * in bytes 2-4 of the record */
          sector = tmp[2] | (tmp[3] << 8) | (tmp[4] << 16);
          return sector;
@@ -235,7 +277,7 @@ int cdfs_open_file(cdfs_file_t* file, cdfs_track_t* track, const char* path)
    {
       file->first_sector = 0;
       file->size         = (unsigned int)((intfstream_get_size(
-               file->track->stream) / file->track->stream_sector_size) 
+               file->track->stream) / file->track->stream_sector_size)
          * 2048);
       return 1;
    }
@@ -319,8 +361,8 @@ int64_t cdfs_read_file(cdfs_file_t* file, void* buffer, uint64_t len)
 
 void cdfs_close_file(cdfs_file_t* file)
 {
-   /* Not really anything to do here, just 
-    * clear out the first_sector so 
+   /* Not really anything to do here, just
+    * clear out the first_sector so
     * read() won't do anything */
    if (file)
       file->first_sector = -1;
@@ -431,11 +473,13 @@ static cdfs_track_t* cdfs_open_cue_track(
    if (!cue_contents)
    {
       intfstream_close(cue_stream);
+      free(cue_stream);
       return NULL;
    }
 
    intfstream_read(cue_stream, cue_contents, stream_size);
    intfstream_close(cue_stream);
+   free(cue_stream);
 
    cue_contents[stream_size] = '\0';
 
@@ -461,15 +505,23 @@ static cdfs_track_t* cdfs_open_cue_track(
             while (file_end > file && *file_end != ' ' && *file_end != '\t')
                --file_end;
 
-            if (     file[0]      == '"' 
+            if (     file[0]      == '"'
                   && file_end[-1] == '"')
             {
                ++file;
                --file_end;
             }
 
-            memcpy(current_track_path, file, file_end - file);
-            current_track_path[file_end - file] = '\0';
+            if (file_end - file < PATH_MAX_LENGTH)
+            {
+               memcpy(current_track_path, file, file_end - file);
+               current_track_path[file_end - file] = '\0';
+            }
+            else
+            {
+               memcpy(current_track_path, file, PATH_MAX_LENGTH - 1);
+               current_track_path[PATH_MAX_LENGTH - 1] = '\0';
+            }
          }
 
          previous_sector_size = 0;
@@ -510,12 +562,21 @@ static cdfs_track_t* cdfs_open_cue_track(
          const char *index     = line + 5;
 
          cdfs_skip_spaces(&index);
-         sscanf(index, "%u", &index_number);
+         index_number = (unsigned)strtol(index, NULL, 10);
          while (*index && *index != ' ' && *index != '\n')
             ++index;
          cdfs_skip_spaces(&index);
 
-         sscanf(index, "%u:%u:%u", &min, &sec, &frame);
+         {
+            char *end;
+            min   = (unsigned)strtol(index, &end, 10);
+            if (*end == ':')
+               ++end;
+            sec   = (unsigned)strtol(end, &end, 10);
+            if (*end == ':')
+               ++end;
+            frame = (unsigned)strtol(end, NULL, 10);
+         }
          sector_offset                 = ((min * 60) + sec) * 75 + frame;
          sector_offset                -= previous_index_sector_offset;
          track_offset                 += sector_offset * previous_sector_size;
@@ -524,9 +585,9 @@ static cdfs_track_t* cdfs_open_cue_track(
 
          if (found_track && index_number == 1)
          {
-            if (     strstr(current_track_path, "/")
-                  || strstr(current_track_path, "\\"))
-               strncpy(track_path, current_track_path, sizeof(track_path));
+            if (     strchr(current_track_path, '/')
+                  || strchr(current_track_path, '\\'))
+               strlcpy(track_path, current_track_path, sizeof(track_path));
             else
             {
                fill_pathname_basedir(track_path, path, sizeof(track_path));
@@ -540,7 +601,7 @@ static cdfs_track_t* cdfs_open_cue_track(
 
    free(cue_contents);
 
-   if (string_is_empty(track_path))
+   if (!*track_path)
       return NULL;
 
    /* NOTE: previous_index_sector_offset will only be valid if all tracks are in the same BIN file.

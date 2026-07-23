@@ -30,7 +30,9 @@ RETRO_BEGIN_DECLS
 
 typedef struct
 {
-   /* bits per sample */
+   /* bits per sample: 8 and 16 are integer PCM, 32 is IEEE float
+    * (the parser only admits 32 with the float format tag, so the
+    * width alone identifies the sample type) */
    unsigned int bitspersample;
 
    /* number of channels */
@@ -62,7 +64,7 @@ typedef struct rwav_iterator rwav_iterator_t;
 /**
  * Initializes the iterator to fill the out structure with data parsed from buf.
  */
-void rwav_init(rwav_iterator_t* iter, rwav_t* out, const void* buf, size_t size);
+void rwav_init(rwav_iterator_t *iter, rwav_t *out, const void* buf, size_t len);
 
 /**
  * Parses a piece of the data. Continue calling as long as it returns RWAV_ITERATE_MORE.
@@ -75,7 +77,7 @@ enum rwav_state rwav_iterate(rwav_iterator_t *iter);
 /**
  * Loads the entire data in one go.
  */
-enum rwav_state rwav_load(rwav_t* out, const void* buf, size_t size);
+enum rwav_state rwav_load(rwav_t *out, const void *buf, size_t len);
 
 /**
  * Frees parsed wave data.

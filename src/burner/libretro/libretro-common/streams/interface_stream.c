@@ -28,7 +28,7 @@
 #ifdef HAVE_CHD
 #include <streams/chd_stream.h>
 #endif
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
 #include <streams/rzip_stream.h>
 #endif
 #include <encodings/crc32.h>
@@ -43,12 +43,6 @@ struct intfstream_internal
    struct
    {
       memstream_t *fp;
-      struct
-      {
-         uint8_t *data;
-         uint64_t size;
-      } buf;
-      bool writable;
    } memory;
 #ifdef HAVE_CHD
    struct
@@ -57,7 +51,7 @@ struct intfstream_internal
       int32_t track;
    } chd;
 #endif
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
    struct
    {
       rzipstream_t *fp;
@@ -76,7 +70,7 @@ int64_t intfstream_get_size(intfstream_internal_t *intf)
       case INTFSTREAM_FILE:
          return filestream_get_size(intf->file.fp);
       case INTFSTREAM_MEMORY:
-         return intf->memory.buf.size;
+         return memstream_get_size(intf->memory.fp);
       case INTFSTREAM_CHD:
 #ifdef HAVE_CHD
         return chdstream_get_size(intf->chd.fp);
@@ -84,7 +78,7 @@ int64_t intfstream_get_size(intfstream_internal_t *intf)
         break;
 #endif
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return rzipstream_get_size(intf->rzip.fp);
 #else
          break;
@@ -92,34 +86,6 @@ int64_t intfstream_get_size(intfstream_internal_t *intf)
    }
 
    return 0;
-}
-
-bool intfstream_resize(intfstream_internal_t *intf, intfstream_info_t *info)
-{
-   if (!intf || !info)
-      return false;
-
-   switch (intf->type)
-   {
-      case INTFSTREAM_FILE:
-         break;
-      case INTFSTREAM_MEMORY:
-         intf->memory.buf.data = info->memory.buf.data;
-         intf->memory.buf.size = info->memory.buf.size;
-
-         memstream_set_buffer(intf->memory.buf.data,
-               intf->memory.buf.size);
-         break;
-      case INTFSTREAM_CHD:
-#ifdef HAVE_CHD
-#endif
-         break;
-      case INTFSTREAM_RZIP:
-         /* Unsupported */
-         return false;
-   }
-
-   return true;
 }
 
 bool intfstream_open(intfstream_internal_t *intf, const char *path,
@@ -136,7 +102,6 @@ bool intfstream_open(intfstream_internal_t *intf, const char *path,
             return false;
          break;
       case INTFSTREAM_MEMORY:
-         intf->memory.fp = memstream_open(intf->memory.writable);
          if (!intf->memory.fp)
             return false;
          break;
@@ -150,7 +115,7 @@ bool intfstream_open(intfstream_internal_t *intf, const char *path,
          return false;
 #endif
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          intf->rzip.fp = rzipstream_open(path, mode);
          if (!intf->rzip.fp)
             return false;
@@ -204,7 +169,7 @@ int intfstream_close(intfstream_internal_t *intf)
 #endif
          return 0;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          if (intf->rzip.fp)
             return rzipstream_close(intf->rzip.fp);
 #endif
@@ -218,24 +183,19 @@ void *intfstream_init(intfstream_info_t *info)
 {
    intfstream_internal_t *intf = NULL;
    if (!info)
-      goto error;
+      return NULL;
 
-   intf = (intfstream_internal_t*)malloc(sizeof(*intf));
-
-   if (!intf)
-      goto error;
+   if (!(intf = (intfstream_internal_t*)malloc(sizeof(*intf))))
+      return NULL;
 
    intf->type            = info->type;
    intf->file.fp         = NULL;
-   intf->memory.buf.data = NULL;
-   intf->memory.buf.size = 0;
    intf->memory.fp       = NULL;
-   intf->memory.writable = false;
 #ifdef HAVE_CHD
    intf->chd.track       = 0;
    intf->chd.fp          = NULL;
 #endif
-#ifdef HAVE_ZLIB
+#ifdef HAVE_COMPRESSION
    intf->rzip.fp         = NULL;
 #endif
 
@@ -244,27 +204,21 @@ void *intfstream_init(intfstream_info_t *info)
       case INTFSTREAM_FILE:
          break;
       case INTFSTREAM_MEMORY:
-         intf->memory.writable = info->memory.writable;
-         if (!intfstream_resize(intf, info))
-            goto error;
+         intf->memory.fp = memstream_open(info->memory.buf.data, info->memory.buf.size, info->memory.writable);
          break;
       case INTFSTREAM_CHD:
 #ifdef HAVE_CHD
          intf->chd.track = info->chd.track;
          break;
 #else
-         goto error;
+         free(intf);
+         return NULL;
 #endif
       case INTFSTREAM_RZIP:
          break;
    }
 
    return intf;
-
-error:
-   if (intf)
-      free(intf);
-   return NULL;
 }
 
 int64_t intfstream_seek(
@@ -347,7 +301,7 @@ int64_t intfstream_read(intfstream_internal_t *intf, void *s, uint64_t len)
          break;
 #endif
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return rzipstream_read(intf->rzip.fp, s, len);
 #else
          break;
@@ -372,7 +326,7 @@ int64_t intfstream_write(intfstream_internal_t *intf,
       case INTFSTREAM_CHD:
          return -1;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return rzipstream_write(intf->rzip.fp, s, len);
 #else
          return -1;
@@ -385,8 +339,8 @@ int64_t intfstream_write(intfstream_internal_t *intf,
 int intfstream_printf(intfstream_internal_t *intf,
       const char* format, ...)
 {
+   int ret;
    va_list vl;
-   int result;
 
    if (!intf)
       return 0;
@@ -395,19 +349,19 @@ int intfstream_printf(intfstream_internal_t *intf,
    {
       case INTFSTREAM_FILE:
          va_start(vl, format);
-         result = filestream_vprintf(intf->file.fp, format, vl);
+         ret = filestream_vprintf(intf->file.fp, format, vl);
          va_end(vl);
-         return result;
+         return ret;
       case INTFSTREAM_MEMORY:
          return -1;
       case INTFSTREAM_CHD:
          return -1;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          va_start(vl, format);
-         result = rzipstream_vprintf(intf->rzip.fp, format, vl);
+         ret = rzipstream_vprintf(intf->rzip.fp, format, vl);
          va_end(vl);
-         return result;
+         return ret;
 #else
          return -1;
 #endif
@@ -437,7 +391,7 @@ int64_t intfstream_get_ptr(intfstream_internal_t* intf)
 }
 
 char *intfstream_gets(intfstream_internal_t *intf,
-      char *buffer, uint64_t len)
+      char *s, uint64_t len)
 {
    if (!intf)
       return NULL;
@@ -446,19 +400,19 @@ char *intfstream_gets(intfstream_internal_t *intf,
    {
       case INTFSTREAM_FILE:
          return filestream_gets(intf->file.fp,
-               buffer, (size_t)len);
+               s, (size_t)len);
       case INTFSTREAM_MEMORY:
          return memstream_gets(intf->memory.fp,
-               buffer, (size_t)len);
+               s, (size_t)len);
       case INTFSTREAM_CHD:
 #ifdef HAVE_CHD
-         return chdstream_gets(intf->chd.fp, buffer, len);
+         return chdstream_gets(intf->chd.fp, s, len);
 #else
          break;
 #endif
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
-         return rzipstream_gets(intf->rzip.fp, buffer, (size_t)len);
+#if defined(HAVE_COMPRESSION)
+         return rzipstream_gets(intf->rzip.fp, s, (size_t)len);
 #else
          break;
 #endif
@@ -485,7 +439,7 @@ int intfstream_getc(intfstream_internal_t *intf)
          break;
 #endif
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return rzipstream_getc(intf->rzip.fp);
 #else
          break;
@@ -513,7 +467,7 @@ int64_t intfstream_tell(intfstream_internal_t *intf)
          break;
 #endif
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return (int64_t)rzipstream_tell(intf->rzip.fp);
 #else
          break;
@@ -541,7 +495,7 @@ int intfstream_eof(intfstream_internal_t *intf)
           * chd_stream interface */
          break;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return rzipstream_eof(intf->rzip.fp);
 #else
          break;
@@ -567,7 +521,7 @@ void intfstream_rewind(intfstream_internal_t *intf)
 #endif
          break;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          rzipstream_rewind(intf->rzip.fp);
 #endif
          break;
@@ -590,7 +544,7 @@ void intfstream_putc(intfstream_internal_t *intf, int c)
       case INTFSTREAM_CHD:
          break;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          rzipstream_putc(intf->rzip.fp, c);
 #else
          break;
@@ -651,7 +605,7 @@ bool intfstream_is_compressed(intfstream_internal_t *intf)
       case INTFSTREAM_CHD:
          return true;
       case INTFSTREAM_RZIP:
-#if defined(HAVE_ZLIB)
+#if defined(HAVE_COMPRESSION)
          return rzipstream_is_compressed(intf->rzip.fp);
 #else
          break;
@@ -665,16 +619,27 @@ bool intfstream_get_crc(intfstream_internal_t *intf, uint32_t *crc)
 {
    int64_t data_read    = 0;
    uint32_t accumulator = 0;
-   uint8_t buffer[4096];
+   /* 256 KB reads instead of a 4 KB stack buffer: CRCing a scanned
+    * multi-gigabyte disc image at 4 KB a call is a quarter of a
+    * million reads per gigabyte, and the call overhead dominates
+    * the checksum.  Heap-allocated once per file - this runs on
+    * scan / updater / backup paths, never per-frame. */
+   size_t buffer_len    = 256 * 1024;
+   uint8_t *buffer      = NULL;
 
    if (!intf || !crc)
+      return false;
+
+   if (!(buffer = (uint8_t*)malloc(buffer_len)))
       return false;
 
    /* Ensure we start at the beginning of the file */
    intfstream_rewind(intf);
 
-   while ((data_read = intfstream_read(intf, buffer, sizeof(buffer))) > 0)
+   while ((data_read = intfstream_read(intf, buffer, buffer_len)) > 0)
       accumulator = encoding_crc32(accumulator, buffer, (size_t)data_read);
+
+   free(buffer);
 
    if (data_read < 0)
       return false;
@@ -699,17 +664,11 @@ intfstream_t* intfstream_open_file(const char *path,
    if (!fd)
       return NULL;
 
-   if (!intfstream_open(fd, path, mode, hints))
-      goto error;
+   if (intfstream_open(fd, path, mode, hints))
+      return fd;
 
-   return fd;
-
-error:
-   if (fd)
-   {
-      intfstream_close(fd);
-      free(fd);
-   }
+   intfstream_close(fd);
+   free(fd);
    return NULL;
 }
 
@@ -722,53 +681,23 @@ intfstream_t *intfstream_open_memory(void *data,
    info.type            = INTFSTREAM_MEMORY;
    info.memory.buf.data = (uint8_t*)data;
    info.memory.buf.size = size;
-   info.memory.writable = false;
+   info.memory.writable = (mode & RETRO_VFS_FILE_ACCESS_WRITE) != 0;
 
-   fd                   = (intfstream_t*)intfstream_init(&info);
-   if (!fd)
+   if (!(fd = (intfstream_t*)intfstream_init(&info)))
       return NULL;
 
-   if (!intfstream_open(fd, NULL, mode, hints))
-      goto error;
+   if (intfstream_open(fd, NULL, mode, hints))
+      return fd;
 
-   return fd;
-
-error:
-   if (fd)
-   {
-      intfstream_close(fd);
-      free(fd);
-   }
+   intfstream_close(fd);
+   free(fd);
    return NULL;
 }
 
 intfstream_t *intfstream_open_writable_memory(void *data,
       unsigned mode, unsigned hints, uint64_t size)
 {
-   intfstream_info_t info;
-   intfstream_t *fd     = NULL;
-
-   info.type            = INTFSTREAM_MEMORY;
-   info.memory.buf.data = (uint8_t*)data;
-   info.memory.buf.size = size;
-   info.memory.writable = true;
-
-   fd                   = (intfstream_t*)intfstream_init(&info);
-   if (!fd)
-      return NULL;
-
-   if (!intfstream_open(fd, NULL, mode, hints))
-      goto error;
-
-   return fd;
-
-error:
-   if (fd)
-   {
-      intfstream_close(fd);
-      free(fd);
-   }
-   return NULL;
+   return intfstream_open_memory(data, mode | RETRO_VFS_FILE_ACCESS_WRITE, hints, size);
 }
 
 intfstream_t *intfstream_open_chd_track(const char *path,
@@ -780,22 +709,14 @@ intfstream_t *intfstream_open_chd_track(const char *path,
    info.type        = INTFSTREAM_CHD;
    info.chd.track   = track;
 
-   fd               = (intfstream_t*)intfstream_init(&info);
-
-   if (!fd)
+   if (!(fd = (intfstream_t*)intfstream_init(&info)))
       return NULL;
 
-   if (!intfstream_open(fd, path, mode, hints))
-      goto error;
+   if (intfstream_open(fd, path, mode, hints))
+      return fd;
 
-   return fd;
-
-error:
-   if (fd)
-   {
-      intfstream_close(fd);
-      free(fd);
-   }
+   intfstream_close(fd);
+   free(fd);
    return NULL;
 }
 
@@ -811,16 +732,10 @@ intfstream_t* intfstream_open_rzip_file(const char *path,
    if (!fd)
       return NULL;
 
-   if (!intfstream_open(fd, path, mode, RETRO_VFS_FILE_ACCESS_HINT_NONE))
-      goto error;
+   if (intfstream_open(fd, path, mode, RETRO_VFS_FILE_ACCESS_HINT_NONE))
+      return fd;
 
-   return fd;
-
-error:
-   if (fd)
-   {
-      intfstream_close(fd);
-      free(fd);
-   }
+   intfstream_close(fd);
+   free(fd);
    return NULL;
 }

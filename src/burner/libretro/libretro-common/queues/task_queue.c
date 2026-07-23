@@ -35,7 +35,9 @@
 #ifdef HAVE_THREADS
 #include <rthreads/rthreads.h>
 #endif
-
+#if defined(EMSCRIPTEN) || defined(_3DS)
+#include <retro_timers.h>
+#endif
 #ifdef HAVE_GCD
 #include <dispatch/dispatch.h>
 #endif
@@ -199,11 +201,23 @@ static void retro_task_internal_gather(void)
       if (task->cleanup)
           task->cleanup(task);
 
+#ifdef HAVE_THREADS
+      slock_lock(property_lock);
+#endif
       if (task->error)
+      {
          free(task->error);
+         task->error = NULL;
+      }
 
       if (task->title)
+      {
          free(task->title);
+         task->title = NULL;
+      }
+#ifdef HAVE_THREADS
+      slock_unlock(property_lock);
+#endif
 
       free(task);
    }
@@ -294,10 +308,21 @@ static void retro_task_regular_retrieve(task_retriever_data_t *data)
       if (task->handler != data->handler)
          continue;
 
-      /* Create new link */
-      info       = (task_retriever_info_t*)
-         malloc(sizeof(task_retriever_info_t));
-      info->data = malloc(data->element_size);
+      /* Create new link.  NULL-check both allocations: the previous
+       * form dereferenced info on the very next line, and passed
+       * info->data (potentially NULL from the second malloc) into
+       * data->func which is free to dereference it.  On OOM just
+       * skip this task - the retriever already tolerates tasks
+       * being absent from the result list (data->func returning
+       * false is the documented 'skip' signal). */
+      if (!(info = (task_retriever_info_t*)
+            malloc(sizeof(task_retriever_info_t))))
+         continue;
+      if (!(info->data = malloc(data->element_size)))
+      {
+         free(info);
+         continue;
+      }
       info->next = NULL;
 
       /* Call retriever function and fill info-specific data */
@@ -347,7 +372,7 @@ static void task_queue_remove(task_queue_t *queue, retro_task_t *task)
 {
    retro_task_t     *t = NULL;
    retro_task_t *front = queue->front;
-
+ 
    /* Remove first element if needed */
    if (task == front)
    {
@@ -357,10 +382,10 @@ static void task_queue_remove(task_queue_t *queue, retro_task_t *task)
       task->next       = NULL;
       return;
    }
-
+ 
    /* Parse queue */
    t = front;
-
+ 
    while (t && t->next)
    {
       /* Remove task and update queue */
@@ -368,16 +393,13 @@ static void task_queue_remove(task_queue_t *queue, retro_task_t *task)
       {
          t->next    = task->next;
          task->next = NULL;
-
+ 
          /* When removing the tail of the queue, update the tail pointer */
          if (queue->back == task)
-         {
-            if (queue->back == task)
-               queue->back = t;
-         }
+            queue->back = t;
          break;
       }
-
+ 
       /* Update iterator */
       t = t->next;
    }
@@ -460,20 +482,20 @@ static bool retro_task_threaded_find(
       retro_task_finder_t func, void *user_data)
 {
    retro_task_t *task = NULL;
-   bool        result = false;
+   bool ret = false;
 
    slock_lock(running_lock);
    for (task = tasks_running.front; task; task = task->next)
    {
       if (func(task, user_data))
       {
-         result = true;
+         ret = true;
          break;
       }
    }
    slock_unlock(running_lock);
 
-   return result;
+   return ret;
 }
 
 static void retro_task_threaded_retrieve(task_retriever_data_t *data)
@@ -522,8 +544,14 @@ static void threaded_worker(void *userdata)
       }
 
       slock_unlock(running_lock);
-
       task->handler(task);
+#if defined(EMSCRIPTEN) || defined(_3DS)
+      /* Workaround emscripten pthread bug where not parking the
+         thread will prevent other important stuff from
+         happening. Maybe due to lack of signals implementation in
+         emscripten's pthreads?  */
+      retro_sleep(1);
+#endif
 
       slock_lock(property_lock);
       finished = ((task->flags & RETRO_TASK_FLG_FINISHED) > 0) ? true : false;
@@ -903,13 +931,16 @@ void task_queue_cancel_task(void *task)
 
 void *task_queue_retriever_info_next(task_retriever_info_t **link)
 {
-   /* Grab data and move to next link */
+   void *data = NULL;
+
+   /* Grab data from current link, then advance */
    if (*link)
    {
+      data  = (*link)->data;
       *link = (*link)->next;
-      return (*link)->data;
    }
-   return NULL;
+
+   return data;
 }
 
 void task_queue_retriever_info_free(task_retriever_info_t *list)
@@ -935,12 +966,12 @@ bool task_is_on_main_thread(void)
 #endif
 }
 
-void task_set_error(retro_task_t *task, char *error)
+void task_set_error(retro_task_t *task, char *err)
 {
 #ifdef HAVE_THREADS
    slock_lock(property_lock);
 #endif
-   task->error = error;
+   task->error = err;
 #ifdef HAVE_THREADS
    slock_unlock(property_lock);
 #endif
@@ -992,6 +1023,19 @@ void task_free_title(retro_task_t *task)
 #endif
 }
 
+void task_free_error(retro_task_t *task)
+{
+#ifdef HAVE_THREADS
+   slock_lock(property_lock);
+#endif
+   if (task->error)
+      free(task->error);
+   task->error = NULL;
+#ifdef HAVE_THREADS
+   slock_unlock(property_lock);
+#endif
+}
+
 void* task_get_data(retro_task_t *task)
 {
    void *data = NULL;
@@ -1036,17 +1080,15 @@ uint8_t task_get_flags(retro_task_t *task)
 
 char* task_get_error(retro_task_t *task)
 {
-   char *error = NULL;
-
+   char *s = NULL;
 #ifdef HAVE_THREADS
    slock_lock(property_lock);
 #endif
-   error = task->error;
+   s = task->error;
 #ifdef HAVE_THREADS
    slock_unlock(property_lock);
 #endif
-
-   return error;
+   return s;
 }
 
 int8_t task_get_progress(retro_task_t *task)

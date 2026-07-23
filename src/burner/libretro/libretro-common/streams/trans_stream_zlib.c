@@ -24,7 +24,6 @@
 #include <string.h>
 
 #include <zlib.h>
-#include <string/stdstring.h>
 #include <streams/trans_stream.h>
 
 struct zlib_trans_stream
@@ -121,9 +120,9 @@ static bool zlib_deflate_define(void *data, const char *prop, uint32_t val)
    if (!data)
       return false;
 
-   if (string_is_equal(prop, "level"))
+   if (strcmp(prop, "level") == 0)
       z->level = (int) val;
-   else if (string_is_equal(prop, "window_bits"))
+   else if (strcmp(prop, "window_bits") == 0)
       z->window_bits = (int) val;
    else
       return false;
@@ -137,7 +136,7 @@ static bool zlib_inflate_define(void *data, const char *prop, uint32_t val)
    if (!data)
       return false;
 
-   if (string_is_equal(prop, "window_bits"))
+   if (strcmp(prop, "window_bits") == 0)
    {
       z->window_bits = (int) val;
       return true;
@@ -192,7 +191,7 @@ static void zlib_set_out(void *data, uint8_t *out, uint32_t out_size)
 static bool zlib_deflate_trans(
    void *data, bool flush,
    uint32_t *rd, uint32_t *wn,
-   enum trans_stream_error *error)
+   enum trans_stream_error *err)
 {
    int zret                     = 0;
    bool ret                     = false;
@@ -213,18 +212,18 @@ static bool zlib_deflate_trans(
 
    if (zret == Z_OK)
    {
-      if (error)
-         *error = TRANS_STREAM_ERROR_AGAIN;
+      if (err)
+         *err = TRANS_STREAM_ERROR_AGAIN;
    }
    else if (zret == Z_STREAM_END)
    {
-      if (error)
-         *error = TRANS_STREAM_ERROR_NONE;
+      if (err)
+         *err = TRANS_STREAM_ERROR_NONE;
    }
    else
    {
-      if (error)
-         *error = TRANS_STREAM_ERROR_OTHER;
+      if (err)
+         *err = TRANS_STREAM_ERROR_OTHER;
       return false;
    }
    ret = true;
@@ -235,8 +234,8 @@ static bool zlib_deflate_trans(
       if (z->avail_in != 0)
       {
          ret = false;
-         if (error)
-            *error = TRANS_STREAM_ERROR_BUFFER_FULL;
+         if (err)
+            *err = TRANS_STREAM_ERROR_BUFFER_FULL;
       }
    }
 
@@ -255,7 +254,7 @@ static bool zlib_deflate_trans(
 static bool zlib_inflate_trans(
    void *data, bool flush,
    uint32_t *rd, uint32_t *wn,
-   enum trans_stream_error *error)
+   enum trans_stream_error *err)
 {
    int zret;
    bool ret                     = false;
@@ -276,18 +275,18 @@ static bool zlib_inflate_trans(
 
    if (zret == Z_OK)
    {
-      if (error)
-         *error = TRANS_STREAM_ERROR_AGAIN;
+      if (err)
+         *err = TRANS_STREAM_ERROR_AGAIN;
    }
    else if (zret == Z_STREAM_END)
    {
-      if (error)
-         *error = TRANS_STREAM_ERROR_NONE;
+      if (err)
+         *err = TRANS_STREAM_ERROR_NONE;
    }
    else
    {
-      if (error)
-         *error = TRANS_STREAM_ERROR_OTHER;
+      if (err)
+         *err = TRANS_STREAM_ERROR_OTHER;
       return false;
    }
    ret = true;
@@ -298,8 +297,8 @@ static bool zlib_inflate_trans(
       if (z->avail_in != 0)
       {
          ret = false;
-         if (error)
-            *error = TRANS_STREAM_ERROR_BUFFER_FULL;
+         if (err)
+            *err = TRANS_STREAM_ERROR_BUFFER_FULL;
       }
    }
 

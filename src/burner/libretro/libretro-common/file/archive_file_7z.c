@@ -59,36 +59,39 @@ struct sevenzip_context_t
    uint32_t parse_index;
    uint32_t decompress_index;
    uint32_t packIndex;
-   uint32_t   block_index;
+   uint32_t block_index;
 };
 
-static void *sevenzip_stream_alloc_impl(ISzAllocPtr p, size_t size)
+static void *sevenzip_stream_alloc_impl(ISzAllocPtr p, size_t len)
 {
-   if (size == 0)
+   if (len == 0)
       return 0;
-   return malloc(size);
+   return malloc(len);
 }
 
 static void sevenzip_stream_free_impl(ISzAllocPtr p, void *address)
 {
-   (void)p;
-
    if (address)
       free(address);
 }
 
-static void *sevenzip_stream_alloc_tmp_impl(ISzAllocPtr p, size_t size)
+static void *sevenzip_stream_alloc_tmp_impl(ISzAllocPtr p, size_t len)
 {
-   (void)p;
-   if (size == 0)
+   if (len == 0)
       return 0;
-   return malloc(size);
+   return malloc(len);
 }
 
 static void* sevenzip_stream_new(void)
 {
    struct sevenzip_context_t *sevenzip_context =
          (struct sevenzip_context_t*)calloc(1, sizeof(struct sevenzip_context_t));
+
+   /* NULL-check the calloc: the field writes below NULL-deref
+    * on OOM and the returned NULL is handled by the caller
+    * (sevenzip_parse_file_free at line ~112 NULL-tolerates). */
+   if (!sevenzip_context)
+      return NULL;
 
    /* These are the allocation routines - currently using
     * the non-standard 7zip choices. */
@@ -140,11 +143,11 @@ static int64_t sevenzip_file_read(
       const char *needle, void **buf,
       const char *optional_outfile)
 {
+   CSzArEx db;
    CFileInStream archiveStream;
    CLookToRead2 lookStream;
    ISzAlloc allocImp;
    ISzAlloc allocTempImp;
-   CSzArEx db;
    uint8_t *output      = 0;
    int64_t outsize      = -1;
 
@@ -162,20 +165,18 @@ static int64_t sevenzip_file_read(
       lookStream.bufSize = 0;
 
 #if defined(_WIN32) && defined(USE_WINDOWS_FILE) && !defined(LEGACY_WIN32)
-   if (!string_is_empty(path))
+   if (path && *path)
    {
-      wchar_t *pathW = utf8_to_utf16_string_alloc(path);
-
-      if (pathW)
+      wchar_t *path_w = utf8_to_utf16_string_alloc(path);
+      if (path_w)
       {
          /* Could not open 7zip archive? */
-         if (InFile_OpenW(&archiveStream.file, pathW))
+         if (InFile_OpenW(&archiveStream.file, path_w))
          {
-            free(pathW);
+            free(path_w);
             return -1;
          }
-
-         free(pathW);
+         free(path_w);
       }
    }
 #else
@@ -205,7 +206,7 @@ static int64_t sevenzip_file_read(
 
       for (i = 0; i < db.NumFiles; i++)
       {
-         size_t len;
+         size_t _len;
          char infile[PATH_MAX_LENGTH];
          size_t offset                = 0;
          size_t outSizeProcessed      = 0;
@@ -215,14 +216,14 @@ static int64_t sevenzip_file_read(
          if (SzArEx_IsDir(&db, i))
             continue;
 
-         len = SzArEx_GetFileNameUtf16(&db, i, NULL);
+         _len = SzArEx_GetFileNameUtf16(&db, i, NULL);
 
-         if (len > temp_size)
+         if (_len > temp_size)
          {
             if (temp)
                free(temp);
-            temp_size = len;
-            temp = (uint16_t *)malloc(temp_size * sizeof(temp[0]));
+            temp_size = _len;
+            temp      = (uint16_t *)malloc(temp_size * sizeof(temp[0]));
 
             if (temp == 0)
             {
@@ -274,9 +275,20 @@ static int64_t sevenzip_file_read(
                 * We would however need to realloc anyways, because RetroArch
                 * expects a \0 at the end, therefore we allocate new,
                 * copy and free the old one. */
-               *buf = malloc((size_t)(outsize + 1));
+               /* NULL-check the malloc before the NUL-termination
+                * write and the memcpy below dereference '*buf'.  On
+                * OOM mark the extraction failed and break out of the
+                * file-search loop; the '!(file_found && res == SZ_OK)'
+                * branch further down then forces outsize = -1 and
+                * the teardown runs. */
+               if (!(*buf = malloc((size_t)(outsize + 1))))
+               {
+                  res     = SZ_ERROR_MEM;
+                  outsize = -1;
+                  break;
+               }
                ((char*)(*buf))[outsize] = '\0';
-               memcpy(*buf,output + offset,outsize);
+               memcpy(*buf, output + offset, outsize);
             }
             break;
          }
@@ -360,27 +372,27 @@ static int sevenzip_parse_file_init(file_archive_transfer_t *state,
    if (filestream_read(state->archive_file, magic_buf, SEVENZIP_MAGIC_LEN) != SEVENZIP_MAGIC_LEN)
       goto error;
 
-   if (string_is_not_equal_fast(magic_buf, SEVENZIP_MAGIC, SEVENZIP_MAGIC_LEN))
+   if (memcmp(magic_buf, SEVENZIP_MAGIC, SEVENZIP_MAGIC_LEN) != 0)
       goto error;
 
    sevenzip_context = (struct sevenzip_context_t*)sevenzip_stream_new();
    state->context = sevenzip_context;
 
 #if defined(_WIN32) && defined(USE_WINDOWS_FILE) && !defined(LEGACY_WIN32)
-   if (!string_is_empty(file))
+   if (file && *file)
    {
-      wchar_t *fileW = utf8_to_utf16_string_alloc(file);
+      wchar_t *file_w = utf8_to_utf16_string_alloc(file);
 
-      if (fileW)
+      if (file_w)
       {
          /* could not open 7zip archive? */
-         if (InFile_OpenW(&sevenzip_context->archiveStream.file, fileW))
+         if (InFile_OpenW(&sevenzip_context->archiveStream.file, file_w))
          {
-            free(fileW);
+            free(file_w);
             goto error;
          }
 
-         free(fileW);
+         free(file_w);
       }
    }
 #else
@@ -414,7 +426,6 @@ error:
 static int sevenzip_parse_file_iterate_step_internal(
       struct sevenzip_context_t *sevenzip_context,
       char *s,
-      size_t len,
       const uint8_t **cdata,
       unsigned *cmode,
       uint32_t *size,
@@ -425,7 +436,7 @@ static int sevenzip_parse_file_iterate_step_internal(
 {
    if (sevenzip_context->parse_index < sevenzip_context->db.NumFiles)
    {
-      size_t len = SzArEx_GetFileNameUtf16(&sevenzip_context->db,
+      size_t _len = SzArEx_GetFileNameUtf16(&sevenzip_context->db,
             sevenzip_context->parse_index, NULL);
       uint64_t compressed_size = 0;
 
@@ -437,11 +448,11 @@ static int sevenzip_parse_file_iterate_step_internal(
          sevenzip_context->packIndex++;
       }
 
-      if (   (len < PATH_MAX_LENGTH)
+      if (   (_len < PATH_MAX_LENGTH)
           && !SzArEx_IsDir(&sevenzip_context->db, sevenzip_context->parse_index))
       {
          SRes res       = SZ_ERROR_FAIL;
-         uint16_t *temp = (uint16_t*)malloc(len * sizeof(uint16_t));
+         uint16_t *temp = (uint16_t*)malloc(_len * sizeof(uint16_t));
 
          if (!temp)
             return -1;
@@ -451,7 +462,7 @@ static int sevenzip_parse_file_iterate_step_internal(
 
          if (temp)
          {
-            res  = utf16_to_char_string(temp, s, len)
+            res  = utf16_to_char_string(temp, s, PATH_MAX_LENGTH)
                ? SZ_OK : SZ_ERROR_FAIL;
             free(temp);
          }
@@ -492,7 +503,6 @@ static int sevenzip_parse_file_iterate_step(void *context,
 
    ret = sevenzip_parse_file_iterate_step_internal(sevenzip_context,
          userdata->current_file_path,
-         sizeof(userdata->current_file_path),
          &cdata, &cmode, &size, &csize,
          &checksum, &payload, userdata);
 
@@ -500,6 +510,7 @@ static int sevenzip_parse_file_iterate_step(void *context,
       return ret;
 
    userdata->crc                 = checksum;
+   userdata->size                = size;
 
    if (file_cb && !file_cb(userdata->current_file_path, valid_exts,
             cdata, cmode,
@@ -512,9 +523,9 @@ static int sevenzip_parse_file_iterate_step(void *context,
 }
 
 static uint32_t sevenzip_stream_crc32_calculate(uint32_t crc,
-      const uint8_t *data, size_t length)
+      const uint8_t *data, size_t len)
 {
-   return encoding_crc32(crc, data, length);
+   return encoding_crc32(crc, data, len);
 }
 
 const struct file_archive_file_backend sevenzip_backend = {
