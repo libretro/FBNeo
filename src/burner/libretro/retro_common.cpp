@@ -1919,7 +1919,7 @@ void check_variables(void)
 			bPatchedRomsetsEnabled = false;
 	}
 
-	if (nGameType != RETRO_GAME_TYPE_NEOCD)
+	if (nGameType != RETRO_GAME_TYPE_NEOCD && nGameType != RETRO_GAME_TYPE_PCECD)
 	{
 		var.key = var_fbneo_samplerate.key;
 		if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
@@ -1935,6 +1935,7 @@ void check_variables(void)
 	else
 	{
 		// src/burn/drv/neogeo/neo_run.cpp is mentioning issues with ngcd cdda playback if samplerate isn't 44100
+		HandleMessage(RETRO_LOG_INFO, "CD hardware detected: samplerate will be 44100.\n");
 		g_audio_samplerate = 44100;
 	}
 

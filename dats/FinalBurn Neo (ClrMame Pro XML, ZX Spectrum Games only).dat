@@ -20808,6 +20808,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="nightsked" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, aka Scrapyard Skedaddle ZX 2</comment>
+		<description>Night Shift Skedaddle ZX (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>ARP &amp; CER</manufacturer>
+		<rom name="Night Shift Skedaddle ZX 48K (2026)(ARP &amp; CER).tap" size="43383" crc="365a3664"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="nightstalker" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Night Stalker ZX (48K) (HB, v01a)</description>
@@ -23358,6 +23368,17 @@
 		<manufacturer>Retrobits</manufacturer>
 		<rom name="Project Re.Ve.La.Tion 48K (2021)(Retrobits).tap" size="26553" crc="6056f1e6"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="projectserpo" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Project Serpo (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Trixelab</manufacturer>
+		<rom name="Project Serpo 128K (2026)(Trixelab).tap" size="73280" crc="3c585f70"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -27541,6 +27562,26 @@
 		<rom name="Sokoban ES 48K-128K (2006)(Compiler Software).tap" size="48579" crc="5f38c1ce"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sokosokoen" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>SokoSoko (English) (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Foko Games</manufacturer>
+		<rom name="SokoSoko EN 48K (2026)(Foko Games).tap" size="45640" crc="7b0f3728"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sokosokoes" cloneof="sokosokoen" romof="sokosokoen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>SokoSoko (Spanish) (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Foko Games</manufacturer>
+		<rom name="SokoSoko ES 48K (2026)(Foko Games).tap" size="45649" crc="3e2448c0"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

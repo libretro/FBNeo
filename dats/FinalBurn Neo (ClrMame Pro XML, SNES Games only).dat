@@ -4094,7 +4094,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="deaetono" cloneof="feudalbros" romof="feudalbros" sourcefile="snes/d_snes.cpp">
-		<description>Deae Tonosama - Appare Ichiban (Japan)</description>
+		<description>Deae Tonosama: Appare Ichiban (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Sunsoft</manufacturer>
 		<rom name="Deae Tonosama - Appare Ichiban (J)(1995)(Sunsoft).sfc" size="1572864" crc="6e42d71b"/>
@@ -4419,6 +4419,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dirtrace" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Dirt Racer (Euro)</description>
 		<year>1995</year>
 		<manufacturer>Elite Systems</manufacturer>
@@ -4427,6 +4428,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dirttraxe" cloneof="dirttrax" romof="dirttrax" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Dirt Trax FX (Euro)</description>
 		<year>1995</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
@@ -4435,6 +4437,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dirttrax" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Dirt Trax FX (USA)</description>
 		<year>1995</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
@@ -4720,7 +4723,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dokapon321j" cloneof="dokapon321te" romof="dokapon321te" sourcefile="snes/d_snes.cpp">
-		<description>Dokapon 3-2-1 - Arashi o Yobu Yuujou (Japan)</description>
+		<description>Dokapon 3-2-1: Arashi o Yobu Yuujou (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Asmik</manufacturer>
 		<rom name="Dokapon 3-2-1 - Arashi o Yobu Yuujou (J)(1994)(Asmik).sfc" size="1572864" crc="fc353400"/>
@@ -4729,7 +4732,7 @@
 	</game>
 	<game name="dokapon321te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Dokapon 3-2-1, from Friendship to Mayhem (Hack, English v1.4)</description>
+		<description>Dokapon 3-2-1: From Friendship to Mayhem (Hack, English v1.4)</description>
 		<year>2023</year>
 		<manufacturer>Krokodyl</manufacturer>
 		<rom name="Dokapon 3-2-1 - Arashi o Yobu Yuujou T-Eng v1.4 (2023)(Krokodyl).sfc" size="2097152" crc="4fe9b036"/>
@@ -4738,7 +4741,7 @@
 	</game>
 	<game name="dokapongdnte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Dokapon Gaiden - Fiery Audition (Hack, English)</description>
+		<description>Dokapon Gaiden: Fiery Audition (Hack, English)</description>
 		<year>2022</year>
 		<manufacturer>Krokodyl</manufacturer>
 		<rom name="Dokapon Gaiden - Fiery Audition T-Eng (2022)(Krokodyl).sfc" size="2097152" crc="94c83422"/>
@@ -4746,7 +4749,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dokapongdnj" cloneof="dokapongdnte" romof="dokapongdnte" sourcefile="snes/d_snes.cpp">
-		<description>Dokapon Gaiden - Honoo no Audition (Japan)</description>
+		<description>Dokapon Gaiden: Honoo no Audition (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Asmik</manufacturer>
 		<rom name="Dokapon Gaiden - Honoo no Audition (J)(1995)(Asmik).sfc" size="1048576" crc="a1684b6c"/>
@@ -4930,6 +4933,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="doome" cloneof="doom" romof="doom" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-2 enhancement chip</comment>
 		<description>Doom (Euro)</description>
 		<year>1995</year>
 		<manufacturer>Ocean</manufacturer>
@@ -4938,6 +4942,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="doomj" cloneof="doom" romof="doom" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-2 enhancement chip</comment>
 		<description>Doom (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Imagineer</manufacturer>
@@ -4946,6 +4951,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="doom" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-2 enhancement chip</comment>
 		<description>Doom (USA)</description>
 		<year>1995</year>
 		<manufacturer>Williams Entertainment</manufacturer>
@@ -4954,6 +4960,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="doomfx3" cloneof="doom" romof="doom" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-3 enhancement chip</comment>
 		<description>Doom FX3 (USA)</description>
 		<year>2025</year>
 		<manufacturer>Limited Run Games</manufacturer>
@@ -6101,7 +6108,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tengaim0te" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, SPC7110 + RTC-4513 enhancement chip</comment>
 		<description>Far East of Eden Zero (Hack, English v7.0)</description>
 		<year>2021</year>
 		<manufacturer>Tom</manufacturer>
@@ -6620,7 +6627,7 @@
 	</game>
 	<game name="fireemblem4te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Genealogy of the Holy War (Hack, English v1.01)</description>
+		<description>Fire Emblem: Genealogy of the Holy War (Hack, English v1.01)</description>
 		<year>2025</year>
 		<manufacturer>Miacis</manufacturer>
 		<rom name="Fire Emblem - Genealogy of the Holy War T-Eng v1.01 (2025)(Miacis).sfc" size="8388608" crc="0fba1e19"/>
@@ -6629,7 +6636,7 @@
 	</game>
 	<game name="fireemblem4tp" cloneof="fireemblem4te" romof="fireemblem4te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Genealogy of the Holy War (Hack, Portuguese v1.13)</description>
+		<description>Fire Emblem: Genealogy of the Holy War (Hack, Portuguese v1.13)</description>
 		<year>2025</year>
 		<manufacturer>Escribas da Espada</manufacturer>
 		<rom name="Fire Emblem - Genealogy of the Holy War PT-BR v1.13 (2025)(Escribas da Espada).sfc" size="6926955" crc="328f3d50"/>
@@ -6638,7 +6645,7 @@
 	</game>
 	<game name="fireemblemtsc" cloneof="fireemblemte" romof="fireemblemte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Monshou no Nazo (Hack, Simplified Chinese v1.03)</description>
+		<description>Fire Emblem: Monshou no Nazo (Hack, Simplified Chinese v1.03)</description>
 		<year>2003</year>
 		<manufacturer>Wolf Group</manufacturer>
 		<rom name="Fire Emblem - Monshou no Nazo T-Chs v1.03 (2003)(Wolf Group).sfc" size="3145728" crc="5962b217"/>
@@ -6647,7 +6654,7 @@
 	</game>
 	<game name="fireemblemttc" cloneof="fireemblemte" romof="fireemblemte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Monshou no Nazo (Hack, Traditional Chinese v1.03)</description>
+		<description>Fire Emblem: Monshou no Nazo (Hack, Traditional Chinese v1.03)</description>
 		<year>2003</year>
 		<manufacturer>Wolf Group</manufacturer>
 		<rom name="Fire Emblem - Monshou no Nazo T-Cht v1.03 (2003)(Wolf Group).sfc" size="3145728" crc="76832422"/>
@@ -6655,7 +6662,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fireemblemj" cloneof="fireemblemte" romof="fireemblemte" sourcefile="snes/d_snes.cpp">
-		<description>Fire Emblem - Monshou no Nazo (Japan, Rev. 1)</description>
+		<description>Fire Emblem: Monshou no Nazo (Japan, Rev. 1)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Fire Emblem - Monshou no Nazo (J, Rev 1)(1993)(Nintendo).sfc" size="3145728" crc="a427b7e6"/>
@@ -6664,7 +6671,7 @@
 	</game>
 	<game name="fireemblemte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Mystery of the Emblem (Hack, English v0.22)</description>
+		<description>Fire Emblem: Mystery of the Emblem (Hack, English v0.22)</description>
 		<year>2022</year>
 		<manufacturer>RobertTheSable</manufacturer>
 		<rom name="Fire Emblem - Monshou no Nazo T-Eng v0.22 (2022)(RobertTheSable).sfc" size="4194304" crc="118d13c2"/>
@@ -6673,7 +6680,7 @@
 	</game>
 	<game name="fireemblem4tsc" cloneof="fireemblem4te" romof="fireemblem4te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Seisen no Keifu (Hack, Simplified Chinese v1.1)</description>
+		<description>Fire Emblem: Seisen no Keifu (Hack, Simplified Chinese v1.1)</description>
 		<year>2008</year>
 		<manufacturer>FIREEMBLEM.NET</manufacturer>
 		<rom name="Fire Emblem - Seisen no Keifu T-Chs v1.1 (2008)(FIREEMBLEM.NET).sfc" size="4194304" crc="58a9a697"/>
@@ -6682,7 +6689,7 @@
 	</game>
 	<game name="fireemblem4ttc" cloneof="fireemblem4te" romof="fireemblem4te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Seisen no Keifu (Hack, Traditional Chinese v1.1)</description>
+		<description>Fire Emblem: Seisen no Keifu (Hack, Traditional Chinese v1.1)</description>
 		<year>2008</year>
 		<manufacturer>FIREEMBLEM.NET</manufacturer>
 		<rom name="Fire Emblem - Seisen no Keifu T-Cht v1.1 (2008)(FIREEMBLEM.NET).sfc" size="4194304" crc="8ed60773"/>
@@ -6690,7 +6697,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fireemblem4j" cloneof="fireemblem4te" romof="fireemblem4te" sourcefile="snes/d_snes.cpp">
-		<description>Fire Emblem - Seisen no Keifu (Japan)</description>
+		<description>Fire Emblem: Seisen no Keifu (Japan)</description>
 		<year>1996</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Fire Emblem - Seisen no Keifu (Japan)(1996)(Nintendo).sfc" size="4194304" crc="dc0d8cf9"/>
@@ -6699,7 +6706,7 @@
 	</game>
 	<game name="fireemblem776te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Thracia 776 (Hack, English v1.08)</description>
+		<description>Fire Emblem: Thracia 776 (Hack, English v1.08)</description>
 		<year>2021</year>
 		<manufacturer>Cirosan, Miacis</manufacturer>
 		<rom name="Fire Emblem - Thracia 776 T-Eng v1.08 (2021)(Cirosan, Miacis).sfc" size="6291456" crc="2039d71b"/>
@@ -6708,7 +6715,7 @@
 	</game>
 	<game name="fireemblem776ti" cloneof="fireemblem776te" romof="fireemblem776te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Thracia 776 (Hack, Italian v1.0.0)</description>
+		<description>Fire Emblem: Thracia 776 (Hack, Italian v1.0.0)</description>
 		<year>2024</year>
 		<manufacturer>EnDavio</manufacturer>
 		<rom name="Fire Emblem - Thracia 776 T-Ita v1.0.0 (2024)(EnDavio).sfc" size="6291456" crc="3f2a7a82"/>
@@ -6717,7 +6724,7 @@
 	</game>
 	<game name="fireemblem776tsc" cloneof="fireemblem776te" romof="fireemblem776te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Thracia 776 (Hack, Simplified Chinese v1.01)</description>
+		<description>Fire Emblem: Thracia 776 (Hack, Simplified Chinese v1.01)</description>
 		<year>2001</year>
 		<manufacturer>Wolf Group</manufacturer>
 		<rom name="Fire Emblem - Thracia 776 T-Chs v1.01 (2001)(Wolf Group).sfc" size="4194304" crc="9618371f"/>
@@ -6726,7 +6733,7 @@
 	</game>
 	<game name="fireemblem776ttc" cloneof="fireemblem776te" romof="fireemblem776te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Fire Emblem - Thracia 776 (Hack, Traditional Chinese v1.00)</description>
+		<description>Fire Emblem: Thracia 776 (Hack, Traditional Chinese v1.00)</description>
 		<year>2001</year>
 		<manufacturer>Wolf Group</manufacturer>
 		<rom name="Fire Emblem - Thracia 776 T-Cht v1.00 (2001)(Wolf Group).sfc" size="4194304" crc="533b84da"/>
@@ -6734,7 +6741,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fireemblem776j" cloneof="fireemblem776te" romof="fireemblem776te" sourcefile="snes/d_snes.cpp">
-		<description>Fire Emblem - Thracia 776 (Japan)</description>
+		<description>Fire Emblem: Thracia 776 (Japan)</description>
 		<year>2000</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Fire Emblem - Thracia 776 (J)(2000)(Nintendo).sfc" size="4194304" crc="fc519952"/>
@@ -7051,6 +7058,15 @@
 		<year>2004</year>
 		<manufacturer>Aeon Genesis</manufacturer>
 		<rom name="Front Mission - Gun Hazard T-Eng (2004)(Aeon Genesis).sfc" size="3145728" crc="e4628064"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="fmgunhazardtp" cloneof="fmgunhazardte" romof="fmgunhazardte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Front Mission: Gun Hazard (Hack, Portuguese)</description>
+		<year>2026</year>
+		<manufacturer>Dindo, aGuGu</manufacturer>
+		<rom name="Front Mission - Gun Hazard PT-BR (2026)(Dindo, aGuGu).sfc" size="4194304" crc="26f73dd2"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -10555,6 +10571,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="lufia2tp" cloneof="lufia2" romof="lufia2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Lufia II: Rise of the Sinistrals (Hack, Portuguese)</description>
+		<year>2026</year>
+		<manufacturer>Dindo</manufacturer>
+		<rom name="Lufia II - Rise of the Sinistrals PT-BR (2026)(Dindo).sfc" size="4194304" crc="401d9b8e"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="lufia2" sourcefile="snes/d_snes.cpp">
 		<description>Lufia II: Rise of the Sinistrals (USA)</description>
 		<year>1996</year>
@@ -11010,30 +11035,6 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mshwargemse" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
-		<description>Marvel Super Heroes - War of the Gems (Euro)</description>
-		<year>1996</year>
-		<manufacturer>Capcom</manufacturer>
-		<rom name="Marvel Super Heroes - War of the Gems (E)(1996)(Capcom).sfc" size="2097152" crc="ac0f2c23"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="mshwargemsj" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
-		<description>Marvel Super Heroes - War of the Gems (Japan)</description>
-		<year>1996</year>
-		<manufacturer>Capcom</manufacturer>
-		<rom name="Marvel Super Heroes - War of the Gems (J)(1996)(Capcom).sfc" size="2097152" crc="ab628c0c"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="mshwargems" sourcefile="snes/d_snes.cpp">
-		<description>Marvel Super Heroes - War of the Gems (USA)</description>
-		<year>1996</year>
-		<manufacturer>Capcom</manufacturer>
-		<rom name="Marvel Super Heroes - War of the Gems (U)(1996)(Capcom).sfc" size="2097152" crc="00af56e8"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="mshwargemsr" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Marvel Super Heroes - War of the Gems Redux (Hack)</description>
@@ -11048,6 +11049,30 @@
 		<year>1999</year>
 		<manufacturer>DVS Electronic</manufacturer>
 		<rom name="Marvel Super Heroes vs. Street Fighter (U)(Unl)(1999)(DVS Electronic).sfc" size="2097152" crc="05f60d4a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshwargemse" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
+		<description>Marvel Super Heroes: War of the Gems (Euro)</description>
+		<year>1996</year>
+		<manufacturer>Capcom</manufacturer>
+		<rom name="Marvel Super Heroes - War of the Gems (E)(1996)(Capcom).sfc" size="2097152" crc="ac0f2c23"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshwargemsj" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
+		<description>Marvel Super Heroes: War of the Gems (Japan)</description>
+		<year>1996</year>
+		<manufacturer>Capcom</manufacturer>
+		<rom name="Marvel Super Heroes - War of the Gems (J)(1996)(Capcom).sfc" size="2097152" crc="ab628c0c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshwargems" sourcefile="snes/d_snes.cpp">
+		<description>Marvel Super Heroes: War of the Gems (USA)</description>
+		<year>1996</year>
+		<manufacturer>Capcom</manufacturer>
+		<rom name="Marvel Super Heroes - War of the Gems (U)(1996)(Capcom).sfc" size="2097152" crc="00af56e8"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -11805,6 +11830,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="momohappy" sourcefile="snes/d_snes.cpp">
+		<comment>SPC7110 enhancement chip</comment>
 		<description>Momotarou Dentetsu Happy (Japan)</description>
 		<year>1996</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -11936,20 +11962,20 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mother2" cloneof="earthbound" romof="earthbound" sourcefile="snes/d_snes.cpp">
-		<description>Mother 2 - Gyiyg no Gyakushuu (Japan)</description>
-		<year>1994</year>
-		<manufacturer>Nintendo</manufacturer>
-		<rom name="Mother 2 - Gyiyg no Gyakushuu (J)(1994)(Nintendo).sfc" size="3145728" crc="2019fabe"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="mother2pe" cloneof="earthbound" romof="earthbound" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Mother 2 - Perfect Edition (Hack, v1.5)</description>
 		<year>2022</year>
 		<manufacturer>CoolGuyBrendyn</manufacturer>
 		<rom name="Mother 2 - Perfect Edition v1.5 (2022)(CoolGuyBrendyn).sfc" size="4194304" crc="98008d9a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mother2" cloneof="earthbound" romof="earthbound" sourcefile="snes/d_snes.cpp">
+		<description>Mother 2: Gyiyg no Gyakushuu (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Mother 2 - Gyiyg no Gyakushuu (J)(1994)(Nintendo).sfc" size="3145728" crc="2019fabe"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12079,10 +12105,10 @@
 	</game>
 	<game name="mystdung2te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Mysterious Dungeon 2: Shiren the Wanderer (Hack, English v1.02)</description>
+		<description>Mysterious Dungeon 2: Shiren the Wanderer (Hack, English v1.03)</description>
 		<year>2006-2026</year>
 		<manufacturer>Aeon Genesis, iggypoop</manufacturer>
-		<rom name="Mysterious Dungeon 2 - Shiren the Wanderer T-Eng v1.02 (2006-2026)(Aeon Genesis, iggypoop).sfc" size="4194304" crc="ab38bde3"/>
+		<rom name="Mysterious Dungeon 2 - Shiren the Wanderer T-Eng v1.03 (2006-2026)(Aeon Genesis, iggypoop).sfc" size="4194304" crc="f8806790"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13746,7 +13772,7 @@
 	</game>
 	<game name="powrangzeoe" cloneof="powrangzeo" romof="powrangzeo" sourcefile="snes/d_snes.cpp">
 		<comment>SA-1 enhancement CPU</comment>
-		<description>Power Rangers Zeo - Battle Racers (Euro)</description>
+		<description>Power Rangers Zeo: Battle Racers (Euro)</description>
 		<year>1996</year>
 		<manufacturer>Natsume</manufacturer>
 		<rom name="Power Rangers Zeo - Battle Racers (E)(1996)(Natsume).sfc" size="1048576" crc="6aa46cfc"/>
@@ -13755,7 +13781,7 @@
 	</game>
 	<game name="powrangzeo" sourcefile="snes/d_snes.cpp">
 		<comment>SA-1 enhancement CPU</comment>
-		<description>Power Rangers Zeo - Battle Racers (USA)</description>
+		<description>Power Rangers Zeo: Battle Racers (USA)</description>
 		<year>1996</year>
 		<manufacturer>Natsume</manufacturer>
 		<rom name="Power Rangers Zeo - Battle Racers (U)(1996)(Natsume).sfc" size="1048576" crc="389300cf"/>
@@ -13763,11 +13789,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="powrslid" sourcefile="snes/d_snes.cpp">
-		<comment>Prototype</comment>
+		<comment>Prototype, Super FX GSU-1 enhancement chip</comment>
 		<description>Power Slide (Europe, Prototype)</description>
 		<year>1994</year>
 		<manufacturer>Elite Systems</manufacturer>
-		<rom name="Power Slide (E, Proto)(1994).sfc" size="524288" crc="65ce3729"/>
+		<rom name="Power Slide (E, Proto)(1994)(Elite Systems).sfc" size="524288" crc="65ce3729"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15848,7 +15874,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="smurfs2" sourcefile="snes/d_snes.cpp">
-		<description>Smurfs, The - Travel the World (Euro)</description>
+		<description>Smurfs, The: Travel the World (Euro)</description>
 		<year>1996</year>
 		<manufacturer>Infogrames</manufacturer>
 		<rom name="Smurfs, The - Travel the World (E)(1996)(Infogrames).sfc" size="1310720" crc="22947169"/>
@@ -15949,7 +15975,7 @@
 	</game>
 	<game name="tenshinoutate" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Song of the Angel - Prayer of the White Wing (Hack, English)</description>
+		<description>Song of the Angel: Prayer of the White Wing (Hack, English)</description>
 		<year>2018</year>
 		<manufacturer>Nightcrawler's TransCorp</manufacturer>
 		<rom name="Song of the Angel - Prayer of the White Wing T-Eng (2018)(Nightcrawler's TransCorp).sfc" size="4194304" crc="7353e8f1"/>
@@ -16349,7 +16375,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfoxj" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
-		<description>Star Fox (Japan, Rev 1)</description>
+		<comment>Super FX GSU-1 enhancement chip</comment>
+		<description>Star Fox (Japan, Rev. 1)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Star Fox (J, Rev 1)(1993)(Nintendo).sfc" size="1048576" crc="ad668a41"/>
@@ -16357,7 +16384,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfox" sourcefile="snes/d_snes.cpp">
-		<description>Star Fox (USA, Rev 2)</description>
+		<comment>Super FX GSU-1 enhancement chip</comment>
+		<description>Star Fox (USA, Rev. 2)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Star Fox (U, Rev 2)(1993)(Nintendo).sfc" size="1048576" crc="8fc4e6d0"/>
@@ -16365,6 +16393,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfox2j" cloneof="starfox2" romof="starfox2" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-2 enhancement chip</comment>
 		<description>Star Fox 2 (Japan, Classic Mini, Switch Online)</description>
 		<year>2017</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -16373,6 +16402,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfox2" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-2 enhancement chip</comment>
 		<description>Star Fox 2 (USA, Europe, Classic Mini, Switch Online)</description>
 		<year>2017</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -16381,7 +16411,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfox2fx3j" cloneof="starfox2" romof="starfox2" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, Super FX GSU-3 enhancement chip</comment>
 		<description>Star Fox 2 FX3 (Japan, v1.0.7)</description>
 		<year>2026</year>
 		<manufacturer>Sunlit</manufacturer>
@@ -16390,7 +16420,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfox2fx3" cloneof="starfox2" romof="starfox2" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, Super FX GSU-3 enhancement chip</comment>
 		<description>Star Fox 2 FX3 (USA, Europe, v1.0.7)</description>
 		<year>2026</year>
 		<manufacturer>Sunlit</manufacturer>
@@ -16399,7 +16429,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfoxex" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, Super FX GSU-1 enhancement chip</comment>
 		<description>Star Fox EX (Hack, v1.11.02b)</description>
 		<year>2025</year>
 		<manufacturer>kandowontu, Sunlitspace542</manufacturer>
@@ -16408,8 +16438,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfoxfx3j" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Star Fox FX3 (Japan, Rev 1, v1.2.7)</description>
+		<comment>Hack, Super FX GSU-3 enhancement chip</comment>
+		<description>Star Fox FX3 (Japan, Rev. 1, v1.2.7)</description>
 		<year>2026</year>
 		<manufacturer>Sunlit</manufacturer>
 		<rom name="Star Fox FX3 v1.2.7 (J, Rev 1)(2026)(Sunlit).sfc" size="4194304" crc="5cd60d02"/>
@@ -16417,8 +16447,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="starfoxfx3" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Star Fox FX3 (USA, Rev 2, v1.2.7)</description>
+		<comment>Hack, Super FX GSU-3 enhancement chip</comment>
+		<description>Star Fox FX3 (USA, Rev. 2, v1.2.7)</description>
 		<year>2026</year>
 		<manufacturer>Sunlit</manufacturer>
 		<rom name="Star Fox FX3 v1.2.7 (U, Rev 2)(2026)(Sunlit).sfc" size="4194304" crc="3139726f"/>
@@ -16550,7 +16580,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="starwing" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
-		<description>Starwing (Euro, Rev 1)</description>
+		<comment>Super FX GSU-1 enhancement chip</comment>
+		<description>Starwing (Euro, Rev. 1)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Starwing (E, Rev 1)(1993)(Nintendo).sfc" size="1048576" crc="ba64da2b"/>
@@ -16558,6 +16589,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starwingg" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Starwing (Germany)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -16566,6 +16598,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starwingswc" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Starwing: Competition (Europe, Competition Cart)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -16574,6 +16607,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="starwinggce" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Starwing: Competition (Germany, Competition Cart)</description>
 		<year>1993</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -16805,6 +16839,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stuntfxe" cloneof="stuntfx" romof="stuntfx" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Stunt Race FX (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -16813,7 +16848,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="stuntfx" sourcefile="snes/d_snes.cpp">
-		<description>Stunt Race FX (USA, Rev 1)</description>
+		<comment>Super FX GSU-1 enhancement chip</comment>
+		<description>Stunt Race FX (USA, Rev. 1)</description>
 		<year>1994</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Stunt Race FX (U, Rev 1)(1994)(Nintendo).sfc" size="1048576" crc="380c2635"/>
@@ -17943,15 +17979,6 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="smw2ttc" cloneof="smw2" romof="smw2" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Super Mario - Yossy Island (Hack, Traditional Chinese)</description>
-		<year>2026</year>
-		<manufacturer>NOKOH</manufacturer>
-		<rom name="Super Mario World 2 - Yoshi's Island T-Cht (2026)(NOKOH).sfc" size="2097152" crc="4b79ef63"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="smallstarse" cloneof="smallstars" romof="smallstars" sourcefile="snes/d_snes.cpp">
 		<description>Super Mario All-Stars (Euro)</description>
 		<year>1993</year>
@@ -18175,7 +18202,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="smw2e" cloneof="smw2" romof="smw2" sourcefile="snes/d_snes.cpp">
-		<description>Super Mario World 2: Yoshi's Island (Euro, Rev 2)</description>
+		<comment>Super FX GSU-2 enhancement chip</comment>
+		<description>Super Mario World 2: Yoshi's Island (Euro, Rev. 2)</description>
 		<year>1995</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Super Mario World 2 - Yoshi's Island (E, Rev 2)(1995)(Nintendo).sfc" size="2097152" crc="e71b3e72"/>
@@ -18183,7 +18211,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="smw2" sourcefile="snes/d_snes.cpp">
-		<description>Super Mario World 2: Yoshi's Island (USA, Rev 1)</description>
+		<comment>Super FX GSU-2 enhancement chip</comment>
+		<description>Super Mario World 2: Yoshi's Island (USA, Rev. 1)</description>
 		<year>1995</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Super Mario World 2 - Yoshi's Island (U, Rev 1)(1995)(Nintendo).sfc" size="2097152" crc="cf98ddaa"/>
@@ -18226,7 +18255,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="smw2tp" cloneof="smw2" romof="smw2" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, Super FX GSU-2 enhancement chip</comment>
 		<description>Super Mario: A Ilha do Yoshi (Hack, Portuguese)</description>
 		<year>2023</year>
 		<manufacturer>Grupo Atlas</manufacturer>
@@ -18234,8 +18263,18 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="smw2ttc" cloneof="smw2" romof="smw2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Super FX GSU-2 enhancement chip</comment>
+		<description>Super Mario: Yossy Island (Hack, Trad. Chinese)</description>
+		<year>2026</year>
+		<manufacturer>NOKOH</manufacturer>
+		<rom name="Super Mario World 2 - Yoshi's Island T-Cht (2026)(NOKOH).sfc" size="2097152" crc="4b79ef63"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="smw2j" cloneof="smw2" romof="smw2" sourcefile="snes/d_snes.cpp">
-		<description>Super Mario: Yossy Island (Japan, Rev 2)</description>
+		<comment>Super FX GSU-2 enhancement chip</comment>
+		<description>Super Mario: Yossy Island (Japan, Rev. 2)</description>
 		<year>1995</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Super Mario - Yossy Island (J, Rev 2)(1995)(Nintendo).sfc" size="2097152" crc="f1063fad"/>
@@ -18519,6 +18558,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="spl4" sourcefile="snes/d_snes.cpp">
+		<comment>SPC7110 enhancement chip</comment>
 		<description>Super Power League 4 (Japan)</description>
 		<year>1996</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -19707,7 +19747,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tengaim0tp" cloneof="tengaim0te" romof="tengaim0te" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, SPC7110 + RTC-4513 enhancement chip</comment>
 		<description>Tengai Makyou Zero (Hack, Portuguese)</description>
 		<year>2026</year>
 		<manufacturer>Dindo</manufacturer>
@@ -19716,7 +19756,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tengaim0tsc" cloneof="tengaim0te" romof="tengaim0te" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, SPC7110 + RTC-4513 enhancement chip</comment>
 		<description>Tengai Makyou Zero (Hack, Simplified Chinese v1.0)</description>
 		<year>2026</year>
 		<manufacturer>hlken &amp; ACG &amp; Star Team</manufacturer>
@@ -19725,7 +19765,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tengaim0ttc" cloneof="tengaim0te" romof="tengaim0te" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
+		<comment>Hack, SPC7110 + RTC-4513 enhancement chip</comment>
 		<description>Tengai Makyou Zero (Hack, Traditional Chinese v1.0)</description>
 		<year>2013</year>
 		<manufacturer>ACG &amp; Star Team</manufacturer>
@@ -19734,6 +19774,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tengaim0" cloneof="tengaim0te" romof="tengaim0te" sourcefile="snes/d_snes.cpp">
+		<comment>SPC7110 + RTC-4513 enhancement chip</comment>
 		<description>Tengai Makyou Zero (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -19742,6 +19783,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tengaim0sj" cloneof="tengaim0te" romof="tengaim0te" sourcefile="snes/d_snes.cpp">
+		<comment>SPC7110 + RTC-4513 enhancement chip</comment>
 		<description>Tengai Makyou Zero: Shonen Jump no Shou (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -19750,7 +19792,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tenshinoutaj" cloneof="tenshinoutate" romof="tenshinoutate" sourcefile="snes/d_snes.cpp">
-		<description>Tenshi no Uta - Shiroki Tsubasa no Inori (Japan)</description>
+		<description>Tenshi no Uta: Shiroki Tsubasa no Inori (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Nippon Telenet</manufacturer>
 		<rom name="Tenshi no Uta - Shiroki Tsubasa no Inori (J)(1994)(Nippon Telenet).sfc" size="1572864" crc="6e030b96"/>
@@ -20906,6 +20948,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="vortexe" cloneof="vortex" romof="vortex" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Vortex (Euro)</description>
 		<year>1994</year>
 		<manufacturer>Electro Brain</manufacturer>
@@ -20914,6 +20957,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="vortex" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Vortex (USA)</description>
 		<year>1994</year>
 		<manufacturer>Electro Brain</manufacturer>
@@ -20922,6 +20966,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="vortexj" cloneof="vortex" romof="vortex" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-1 enhancement chip</comment>
 		<description>Vortex: The FX Robot Battle (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Pack-In-Video</manufacturer>
@@ -21150,7 +21195,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="wildtrax" cloneof="stuntfx" romof="stuntfx" sourcefile="snes/d_snes.cpp">
-		<description>Wild Trax (Japan, Rev 1)</description>
+		<comment>Super FX GSU-1 enhancement chip</comment>
+		<description>Wild Trax (Japan, Rev. 1)</description>
 		<year>1994</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Wild Trax (J, Rev 1)(1994)(Nintendo).sfc" size="1048576" crc="017c68c5"/>
@@ -21239,6 +21285,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="wintgold" sourcefile="snes/d_snes.cpp">
+		<comment>Super FX GSU-2 enhancement chip</comment>
 		<description>Winter Gold (Euro)</description>
 		<year>1996</year>
 		<manufacturer>Nintendo</manufacturer>
@@ -21247,7 +21294,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="winterolympicgames94" sourcefile="snes/d_snes.cpp">
-		<description>Winter Olympic Games - Lillehammer '94 (USA)</description>
+		<description>Winter Olympic Games: Lillehammer '94 (USA)</description>
 		<year>1993</year>
 		<manufacturer>U.S. Gold</manufacturer>
 		<rom name="Winter Olympic Games - Lillehammer '94 (U)(1993)(U.S. Gold).sfc" size="2097152" crc="0704abe4"/>
@@ -21273,7 +21320,7 @@
 	</game>
 	<game name="wiz123te" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, Set 'English' from Options Menu</comment>
-		<description>Wizardry I-II-III - Story of Llylgamyn (Hack, English v1.2)</description>
+		<description>Wizardry I-II-III: Story of Llylgamyn (Hack, English v1.2)</description>
 		<year>2023</year>
 		<manufacturer>HK Adi, Aeon Genesis</manufacturer>
 		<rom name="Wizardry I-II-III - Story of Llylgamyn T-Eng v1.2 (2023)(HK Adi, Aeon Genesis).sfc" size="4194304" crc="05bd884c"/>
@@ -21281,7 +21328,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="wiz123j" cloneof="wiz123te" romof="wiz123te" sourcefile="snes/d_snes.cpp">
-		<description>Wizardry I-II-III - Story of Llylgamyn (Japan)</description>
+		<description>Wizardry I-II-III: Story of Llylgamyn (Japan)</description>
 		<year>1999</year>
 		<manufacturer>Media Factory</manufacturer>
 		<rom name="Wizardry I-II-III - Story of Llylgamyn (J)(1999)(Media Factory).sfc" size="4194304" crc="b8a72553"/>
@@ -21289,7 +21336,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="wizardry5" sourcefile="snes/d_snes.cpp">
-		<description>Wizardry V - Heart of the Maelstrom (USA)</description>
+		<description>Wizardry V: Heart of the Maelstrom (USA)</description>
 		<year>1993</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="Wizardry V - Heart of the Maelstrom (U)(1993)(Capcom).sfc" size="1048576" crc="d8fddd76"/>

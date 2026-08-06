@@ -490,6 +490,7 @@ void retro_set_environment(retro_environment_t cb)
 		{ "SNK Neo Geo Pocket",                  "ngp",   subsystem_rom, 1, RETRO_GAME_TYPE_NGP   },
 		{ "ZX Spectrum",                         "spec",  subsystem_rom, 1, RETRO_GAME_TYPE_SPEC  },
 		{ "Neogeo CD",                           "neocd", subsystem_iso, 1, RETRO_GAME_TYPE_NEOCD },
+		{ "Nec PC-Engine CD",                    "pcecd", subsystem_iso, 1, RETRO_GAME_TYPE_PCECD },
 		{ NULL },
 	};
 
@@ -2178,7 +2179,7 @@ static bool retro_load_game_common()
 		HandleMessage(RETRO_LOG_INFO, "[FBNeo] Samplerate set to %d\n", nBurnSoundRate);
 
 		// Start CD reader emulation if needed
-		if (nGameType == RETRO_GAME_TYPE_NEOCD) {
+		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD) {
 			const char* ext = path_get_extension(CDEmuImage);
 			if (!string_is_equal_noncase(ext, "cue") && !string_is_equal_noncase(ext, "ccd")) {
 				static char uguiText[4096];
@@ -2479,6 +2480,12 @@ bool retro_load_game(const struct retro_game_info *info)
 		nGameType = RETRO_GAME_TYPE_NEOCD;
 		strcpy(CDEmuImage, szRomsetPath);
 		extract_basename(g_driver_name, "neocdz", sizeof(g_driver_name), prefix);
+	} else if(strcmp(g_rom_parent_dir, "pcecd")==0 || strncmp(g_driver_name, "pcecd_", 6)==0) {
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem pcecd identified from parent folder\n");
+		prefix = "";
+		nGameType = RETRO_GAME_TYPE_PCECD;
+		strcpy(CDEmuImage, szRomsetPath);
+		extract_basename(g_driver_name, "pce_scdsys", sizeof(g_driver_name), prefix);
 	} else {
 		extract_basename(g_driver_name, szRomsetPath, sizeof(g_driver_name), prefix);
 	}
@@ -2544,6 +2551,7 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 			prefix = "astro_";
 			break;
 		case RETRO_GAME_TYPE_NEOCD:
+		case RETRO_GAME_TYPE_PCECD:
 			prefix = "";
 			strcpy(CDEmuImage, info->path);
 			break;
@@ -2555,8 +2563,10 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 	extract_basename(g_driver_name, info->path, sizeof(g_driver_name), prefix);
 	extract_directory(g_rom_dir, info->path, sizeof(g_rom_dir));
 
-	if(nGameType == RETRO_GAME_TYPE_NEOCD)
+	if(nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD)
 		extract_basename(g_driver_name, "neocdz", sizeof(g_driver_name), "");
+	if(nGameType == RETRO_GAME_TYPE_PCECD)
+		extract_basename(g_driver_name, "pce_scdsys", sizeof(g_driver_name), "");
 
 	return retro_load_game_common();
 }
@@ -2620,7 +2630,7 @@ static void retro_incomplete_exit()
 		if (BurnNvramSave(g_autofs_path) == 0 && path_is_valid(g_autofs_path))
 			HandleMessage(RETRO_LOG_INFO, "[FBNeo] EEPROM succesfully saved to %s\n", g_autofs_path);
 		BurnDrvExit();
-		if (nGameType == RETRO_GAME_TYPE_NEOCD)
+		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD)
 			CDEmuExit();
 		nBurnDrvActive = ~0U;
 	}

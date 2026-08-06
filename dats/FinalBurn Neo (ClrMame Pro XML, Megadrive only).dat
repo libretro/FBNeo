@@ -21053,6 +21053,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="surgingtek" cloneof="surging" romof="surging" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Hack</comment>
+		<description>Surging Aura (Hack, English / Korean v0.90)</description>
+		<year>2026</year>
+		<manufacturer>retrogamelog</manufacturer>
+		<rom name="Surging Aura T-Eng,Kor v0.90 (2026)(retrogamelog).bin" size="4194304" crc="78b4ac90"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="surging" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Surging Aura (Japan)</description>
 		<year>1995</year>
