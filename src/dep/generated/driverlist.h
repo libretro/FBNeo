@@ -2598,6 +2598,7 @@ DRV		BurnDrvMSX_bokosuka;
 DRV		BurnDrvnes_bokosukawars;
 DRV		BurnDrvMSX_bokosukaa;
 DRV		BurnDrvcv_bokosukawars;
+DRV		BurnDrvgba_boktai2u;
 DRV		BurnDrvsnes_harvmoontsc;
 DRV		BurnDrvsnes_harvmoonttc;
 DRV		BurnDrvsnes_Harvmoonj;
@@ -6013,6 +6014,8 @@ DRV		BurnDrvDdrago3b;
 DRV		BurnDrvDdrago3j;
 DRV		BurnDrvDdrago3p;
 DRV		BurnDrvDdragon3;
+DRV		BurnDrvgba_ddragonj;
+DRV		BurnDrvgba_ddragon;
 DRV		BurnDrvnes_doubldraiitp;
 DRV		BurnSpecddragon2;
 DRV		BurnDrvMSX_ddragon2;
@@ -7593,9 +7596,12 @@ DRV		BurnDrvsnes_Fireemblemtsc;
 DRV		BurnDrvsnes_Fireemblemttc;
 DRV		BurnDrvsnes_Fireemblemj;
 DRV		BurnDrvsnes_Fireemblemte;
+DRV		BurnDrvgba_firembssj;
 DRV		BurnDrvsnes_Fireemblem4tsc;
 DRV		BurnDrvsnes_Fireemblem4ttc;
 DRV		BurnDrvsnes_Fireemblem4j;
+DRV		BurnDrvgba_firembssx;
+DRV		BurnDrvgba_firembssu;
 DRV		BurnDrvsnes_Fireemblem776te;
 DRV		BurnDrvsnes_Fireemblem776ti;
 DRV		BurnDrvsnes_Fireemblem776tsc;
@@ -8273,6 +8279,7 @@ DRV		BurnDrvMSX_gambler;
 DRV		BurnDrvgg_gambler;
 DRV		BurnDrvmd_gambler;
 DRV		BurnDrvsms_gamebox;
+DRV		BurnDrvgba_gba;
 DRV		BurnDrvmd_ggenie1;
 DRV		BurnDrvmd_ggenie;
 DRV		BurnDrvmd_gamenko;
@@ -12973,6 +12980,7 @@ DRV		BurnDrvcv_mpatrolp;
 DRV		BurnDrvnes_mattockmike;
 DRV		BurnDrvsnes_Mauimallard;
 DRV		BurnDrvnes_maurimursu;
+DRV		BurnDrvGbaMawaruWario;
 DRV		BurnDrvnes_mawthornej;
 DRV		BurnDrvnes_mawthorne;
 DRV		BurnDrvnes_mawthorne1rb;
@@ -21343,6 +21351,7 @@ DRV		BurnDrvCpsSgemf;
 DRV		BurnDrvsnes_Supergenjin;
 DRV		BurnDrvsnes_Supergenjin2;
 DRV		BurnDrvsnes_Supergnge;
+DRV		BurnDrvgba_sgng;
 DRV		BurnDrvsnes_Supergng;
 DRV		BurnDrvsnes_Supergngp;
 DRV		BurnDrvsnes_Supergngenh;
@@ -24612,6 +24621,7 @@ DRV		BurnSpecWarhog;
 DRV		BurnDrvmd_wario3;
 DRV		BurnDrvnes_warioswoods;
 DRV		BurnDrvsnes_Wariowoods;
+DRV		BurnDrvgba_wariotws;
 DRV		BurnDrvmd_warlock;
 DRV		BurnDrvmd_warlocks;
 DRV		BurnDrvsnes_Warlock;
@@ -25493,8 +25503,10 @@ DRV		BurnDrvYorijori;		// no comment [NOT WORKING]
 #endif
 DRV		BurnDrvnes_yoshi;
 DRV		BurnDrvmd_ysonic2;
+DRV		BurnDrvgba_yoshiban;
 DRV		BurnDrvsnes_Yoshicookiej;
 DRV		BurnDrvsnes_Yoshiroadhunt;
+DRV		BurnDrvgba_yoshitt;
 DRV		BurnDrvsnes_Yoshicookiee;
 DRV		BurnDrvnes_yoshiscookie;
 DRV		BurnDrvsnes_Yoshicookie;
@@ -25744,6 +25756,7 @@ DRV		BurnDrvZodiack;
 DRV		BurnDrvnes_zoids;
 DRV		BurnDrvnes_zoidsj;
 DRV		BurnSpecZoinho;
+DRV		BurnDrvGbaBoktai2j;
 DRV		BurnSpecZombmalle;
 DRV		BurnSpecZombmalls;
 DRV		BurnDrvmd_zombiterror;
@@ -28449,6 +28462,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_bokosukawars,	// Bokosuka Wars (Japan)
 	&BurnDrvMSX_bokosukaa,		// Bokosuka Wars (Japan, Alt)
 	&BurnDrvcv_bokosukawars,	// Bokosuka Wars (SGM) (HB)
+	&BurnDrvgba_boktai2u,		// Boktai 2: Solar Boy Django (USA)
 	&BurnDrvsnes_harvmoontsc,	// Bokujou Monogatari (Hack, Simplified Chinese v2.0)
 	&BurnDrvsnes_harvmoonttc,	// Bokujou Monogatari (Hack, Traditional Chinese v2.0)
 	&BurnDrvsnes_Harvmoonj,		// Bokujou Monogatari (Japan, Rev. 1)
@@ -31864,6 +31878,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvDdrago3j,			// Double Dragon 3: The Rosetta Stone (Japan)
 	&BurnDrvDdrago3p,			// Double Dragon 3: The Rosetta Stone (prototype)
 	&BurnDrvDdragon3,			// Double Dragon 3: The Rosetta Stone (US)
+	&BurnDrvgba_ddragonj,		// Double Dragon Advance (Japan)
+	&BurnDrvgba_ddragon,		// Double Dragon Advance (USA)
 	&BurnDrvnes_doubldraiitp,	// Double Dragon II: A Revanche (Hack, Portuguese v1.2)
 	&BurnSpecddragon2,			// Double Dragon II: The Revenge (48K-128K)
 	&BurnDrvMSX_ddragon2,		// Double Dragon II: The Revenge (Euro, Spanish)
@@ -33444,9 +33460,12 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Fireemblemttc,	// Fire Emblem: Monshou no Nazo (Hack, Traditional Chinese v1.03)
 	&BurnDrvsnes_Fireemblemj,	// Fire Emblem: Monshou no Nazo (Japan, Rev. 1)
 	&BurnDrvsnes_Fireemblemte,	// Fire Emblem: Mystery of the Emblem (Hack, English v0.22)
+	&BurnDrvgba_firembssj,		// Fire Emblem: Seima no Kouseki (Japan)
 	&BurnDrvsnes_Fireemblem4tsc,// Fire Emblem: Seisen no Keifu (Hack, Simplified Chinese v1.1)
 	&BurnDrvsnes_Fireemblem4ttc,// Fire Emblem: Seisen no Keifu (Hack, Traditional Chinese v1.1)
 	&BurnDrvsnes_Fireemblem4j,	// Fire Emblem: Seisen no Keifu (Japan)
+	&BurnDrvgba_firembssx,		// Fire Emblem: Sheng Xie De Yi Zhi (Hack, v1.4)
+	&BurnDrvgba_firembssu,		// Fire Emblem: The Sacred Stones (USA, Australia)
 	&BurnDrvsnes_Fireemblem776te,// Fire Emblem: Thracia 776 (Hack, English v1.08)
 	&BurnDrvsnes_Fireemblem776ti,// Fire Emblem: Thracia 776 (Hack, Italian v1.0.0)
 	&BurnDrvsnes_Fireemblem776tsc,// Fire Emblem: Thracia 776 (Hack, Simplified Chinese v1.01)
@@ -34124,6 +34143,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgg_gambler,			// Gambler Jikochuushinha (Japan)
 	&BurnDrvmd_gambler,			// Gambler Jikochuushinha: Katayama Masayuki no Mahjong Doujou (Japan)
 	&BurnDrvsms_gamebox,		// Game Box Serie Esportes Radicais (Brazil)
+	&BurnDrvgba_gba,			// Game Boy Advance BIOS [Optional BIOS, bundled replacement is used when absent, NOT WORKING]
 	&BurnDrvmd_ggenie1,			// Game Genie (Euro, USA)
 	&BurnDrvmd_ggenie,			// Game Genie (Euro, USA, Rev. A)
 	&BurnDrvmd_gamenko,			// Game no Kanzume Otokuyou (Sega Channel, Japan)
@@ -38824,6 +38844,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_mattockmike,	// Mattock Mike: The Legend of Pete (HB)
 	&BurnDrvsnes_Mauimallard,	// Maui Mallard in Cold Shadow (USA)
 	&BurnDrvnes_maurimursu,		// Mauri Mursu's Hangover (HB)
+	&BurnDrvGbaMawaruWario,		// Mawaru: Made in Wario (Japan)
 	&BurnDrvnes_mawthornej,		// Mawthorne (Japan) (HB)
 	&BurnDrvnes_mawthorne,		// Mawthorne (USA) (HB)
 	&BurnDrvnes_mawthorne1rb,	// Mawthorne I Reborn (World) (HB, v2.0)
@@ -47194,6 +47215,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Supergenjin,	// Super Genjin (Japan)
 	&BurnDrvsnes_Supergenjin2,	// Super Genjin 2 (Japan)
 	&BurnDrvsnes_Supergnge,		// Super Ghouls'n Ghosts (Euro)
+	&BurnDrvgba_sgng,			// Super Ghouls'n Ghosts (Europe, USA)
 	&BurnDrvsnes_Supergng,		// Super Ghouls'n Ghosts (USA)
 	&BurnDrvsnes_Supergngp,		// Super Ghouls'n Ghosts (USA, Prototype)
 	&BurnDrvsnes_Supergngenh,	// Super Ghouls'n Ghosts Enhanced (Hack)
@@ -50463,6 +50485,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_wario3,			// Wario Land 3 (Russia) (Unl)
 	&BurnDrvnes_warioswoods,	// Wario's Woods (USA)
 	&BurnDrvsnes_Wariowoods,	// Wario's Woods (USA)
+	&BurnDrvgba_wariotws,		// WarioWare: Twisted! (USA, Australia)
 	&BurnDrvmd_warlock,			// Warlock (Euro, USA)
 	&BurnDrvmd_warlocks,		// Warlock (Hack, Spanish)
 	&BurnDrvsnes_Warlock,		// Warlock (USA)
@@ -51344,8 +51367,10 @@ static struct BurnDriver* pDriver[] = {
 #endif
 	&BurnDrvnes_yoshi,			// Yoshi (USA)
 	&BurnDrvmd_ysonic2,			// Yoshi in Sonic the Hedgehog 2 (Hack, Beta)
+	&BurnDrvgba_yoshiban,		// Yoshi no Banyuuinryoku (Japan)
 	&BurnDrvsnes_Yoshicookiej,	// Yoshi no Cookie (Japan)
 	&BurnDrvsnes_Yoshiroadhunt,	// Yoshi no Road Hunting (Japan)
+	&BurnDrvgba_yoshitt,		// Yoshi Topsy: Turvy (USA)
 	&BurnDrvsnes_Yoshicookiee,	// Yoshi's Cookie (Euro)
 	&BurnDrvnes_yoshiscookie,	// Yoshi's Cookie (USA)
 	&BurnDrvsnes_Yoshicookie,	// Yoshi's Cookie (USA)
@@ -51595,6 +51620,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_zoids,			// Zoids - Battle of Central Continent (Hack, English)
 	&BurnDrvnes_zoidsj,			// Zoids - Chuuou Tairiku no Tatakai (Japan)
 	&BurnSpecZoinho,			// Zoinho (Spanish) (48K) (HB)
+	&BurnDrvGbaBoktai2j,		// Zoku Bokura no Taiyou: Taiyou Shounen Django (Japan, Rev 1)
 	&BurnSpecZombmalle,			// Zombi Mall (English) (48K) (HB)
 	&BurnSpecZombmalls,			// Zombi Mall (Spanish) (48K) (HB)
 	&BurnDrvmd_zombiterror,		// Zombi Terror (HB)
@@ -54284,6 +54310,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_bokosukawars", "nes/d_nes.cpp"},
 	{ "msx_bokosukaa", "msx/d_msx.cpp"},
 	{ "cv_bokosukawars", "coleco/d_coleco.cpp"},
+	{ "gba_boktai2u", "gba/d_gba.cpp"},
 	{ "snes_harvmoontsc", "snes/d_snes.cpp"},
 	{ "snes_harvmoonttc", "snes/d_snes.cpp"},
 	{ "snes_harvmoonj", "snes/d_snes.cpp"},
@@ -57671,6 +57698,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "ddragon3j", "pst90s/d_ddragon3.cpp"},
 	{ "ddragon3p", "pst90s/d_ddragon3.cpp"},
 	{ "ddragon3", "pst90s/d_ddragon3.cpp"},
+	{ "gba_ddragonj", "gba/d_gba.cpp"},
+	{ "gba_ddragon", "gba/d_gba.cpp"},
 	{ "nes_doubldraiitp", "nes/d_nes.cpp"},
 	{ "spec_ddragon2", "spectrum/d_spectrum.cpp"},
 	{ "msx_ddragon2", "msx/d_msx.cpp"},
@@ -59245,9 +59274,12 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "snes_fireemblemttc", "snes/d_snes.cpp"},
 	{ "snes_fireemblemj", "snes/d_snes.cpp"},
 	{ "snes_fireemblemte", "snes/d_snes.cpp"},
+	{ "gba_firembssj", "gba/d_gba.cpp"},
 	{ "snes_fireemblem4tsc", "snes/d_snes.cpp"},
 	{ "snes_fireemblem4ttc", "snes/d_snes.cpp"},
 	{ "snes_fireemblem4j", "snes/d_snes.cpp"},
+	{ "gba_firembssx", "gba/d_gba.cpp"},
+	{ "gba_firembssu", "gba/d_gba.cpp"},
 	{ "snes_fireemblem776te", "snes/d_snes.cpp"},
 	{ "snes_fireemblem776ti", "snes/d_snes.cpp"},
 	{ "snes_fireemblem776tsc", "snes/d_snes.cpp"},
@@ -59919,6 +59951,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gg_gambler", "sms/d_sms.cpp"},
 	{ "md_gambler", "megadrive/d_megadrive.cpp"},
 	{ "sms_gamebox", "sms/d_sms.cpp"},
+	{ "gba_gba", "gba/d_gba.cpp"},
 	{ "md_ggenie1", "megadrive/d_megadrive.cpp"},
 	{ "md_ggenie", "megadrive/d_megadrive.cpp"},
 	{ "md_gamenko", "megadrive/d_megadrive.cpp"},
@@ -64581,6 +64614,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_mattockmike", "nes/d_nes.cpp"},
 	{ "snes_mauimallard", "snes/d_snes.cpp"},
 	{ "nes_maurimursu", "nes/d_nes.cpp"},
+	{ "gba_wariotwj", "gba/d_gba.cpp"},
 	{ "nes_mawthornej", "nes/d_nes.cpp"},
 	{ "nes_mawthorne", "nes/d_nes.cpp"},
 	{ "nes_mawthorne1rb", "nes/d_nes.cpp"},
@@ -72881,6 +72915,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "snes_supergenjin", "snes/d_snes.cpp"},
 	{ "snes_supergenjin2", "snes/d_snes.cpp"},
 	{ "snes_supergnge", "snes/d_snes.cpp"},
+	{ "gba_sgng", "gba/d_gba.cpp"},
 	{ "snes_supergng", "snes/d_snes.cpp"},
 	{ "snes_supergngp", "snes/d_snes.cpp"},
 	{ "snes_supergngenh", "snes/d_snes.cpp"},
@@ -76118,6 +76153,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_wario3", "megadrive/d_megadrive.cpp"},
 	{ "nes_warioswoods", "nes/d_nes.cpp"},
 	{ "snes_wariowoods", "snes/d_snes.cpp"},
+	{ "gba_wariotws", "gba/d_gba.cpp"},
 	{ "md_warlock", "megadrive/d_megadrive.cpp"},
 	{ "md_warlocks", "megadrive/d_megadrive.cpp"},
 	{ "snes_warlock", "snes/d_snes.cpp"},
@@ -76987,8 +77023,10 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "yorijori", "pst90s/d_vamphalf.cpp"},
 	{ "nes_yoshi", "nes/d_nes.cpp"},
 	{ "md_ysonic2", "megadrive/d_megadrive.cpp"},
+	{ "gba_yoshiban", "gba/d_gba.cpp"},
 	{ "snes_yoshicookiej", "snes/d_snes.cpp"},
 	{ "snes_yoshiroadhunt", "snes/d_snes.cpp"},
+	{ "gba_yoshitt", "gba/d_gba.cpp"},
 	{ "snes_yoshicookiee", "snes/d_snes.cpp"},
 	{ "nes_yoshiscookie", "nes/d_nes.cpp"},
 	{ "snes_yoshicookie", "snes/d_snes.cpp"},
@@ -77230,6 +77268,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_zoids", "nes/d_nes.cpp"},
 	{ "nes_zoidsj", "nes/d_nes.cpp"},
 	{ "spec_zoinho", "spectrum/d_spectrum.cpp"},
+	{ "gba_boktai2j", "gba/d_gba.cpp"},
 	{ "spec_zombmalle", "spectrum/d_spectrum.cpp"},
 	{ "spec_zombmalls", "spectrum/d_spectrum.cpp"},
 	{ "md_zombiterror", "megadrive/d_megadrive.cpp"},

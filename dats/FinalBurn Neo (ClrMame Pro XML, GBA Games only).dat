@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!DOCTYPE datafile PUBLIC "-//FinalBurn Neo//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+
+<datafile>
+	<header>
+		<name>FinalBurn Neo - GBA Games</name>
+		<description>FinalBurn Neo v1.0.0.03 GBA Games</description>
+		<category>Standard DatFile</category>
+		<version>1.0.0.03</version>
+		<author>FinalBurn Neo</author>
+		<homepage>https://neo-source.com/</homepage>
+		<url>https://neo-source.com/</url>
+		<clrmamepro forcenodump="ignore"/>
+	</header>
+	<game name="boktai2u" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Boktai 2: Solar Boy Django (USA)</description>
+		<year>2004</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Boktai 2 ‑ Solar Boy Django (U)(2004)(Konami).gba" size="16777216" crc="e1ffb2d1"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="ddragonj" cloneof="ddragon" romof="ddragon" sourcefile="gba/d_gba.cpp">
+		<description>Double Dragon Advance (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Atlus</manufacturer>
+		<rom name="Double Dragon Advance (J)(2004)(Atlus).gba" size="4194304" crc="a3330e8f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="ddragon" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Double Dragon Advance (USA)</description>
+		<year>2003</year>
+		<manufacturer>Atlus</manufacturer>
+		<rom name="Double Dragon Advance (U)(2003)(Atlus).gba" size="4194304" crc="764fafb5"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="firembssj" cloneof="firembssu" romof="firembssu" sourcefile="gba/d_gba.cpp">
+		<description>Fire Emblem: Seima no Kouseki (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Fire Emblem - Seima no Kouseki (J)(2004)(Nintendo).gba" size="16777216" crc="9d76826f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="firembssx" cloneof="firembssu" romof="firembssu" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Fire Emblem: Sheng Xie De Yi Zhi (Hack, v1.4)</description>
+		<year>2006</year>
+		<manufacturer>ChinaFE &amp; Wolf Group</manufacturer>
+		<rom name="Fire Emblem - Sheng Xie De Yi Zhi (C)(2006)(ChinaFE &amp; Wolf Group).gba" size="16777216" crc="9cbb923e"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="firembssu" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Fire Emblem: The Sacred Stones (USA, Australia)</description>
+		<year>2005</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Fire Emblem - The Sacred Stones (U, A)(2005)(Nintendo).gba" size="16777216" crc="a47246ae"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="wariotwj" cloneof="wariotws" romof="wariotws" sourcefile="gba/d_gba.cpp">
+		<description>Mawaru: Made in Wario (Japan)</description>
+		<year>2005</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Mawaru - Made in Wario (J)(2005)(Nintendo).gba" size="16777216" crc="e69964f1"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="sgng" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Super Ghouls'n Ghosts (Europe, USA)</description>
+		<year>2002</year>
+		<manufacturer>Capcom</manufacturer>
+		<rom name="Super Ghouls'n Ghosts (E, U)(2002)(Capcom).gba" size="4194304" crc="1ef2acf3"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="wariotws" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>WarioWare: Twisted! (USA, Australia)</description>
+		<year>2005</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="WarioWare ‑ Twisted! (U, A)(2005)(Nintendo).gba" size="16777216" crc="cb4e844b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="yoshiban" cloneof="yoshitt" romof="yoshitt" sourcefile="gba/d_gba.cpp">
+		<description>Yoshi no Banyuuinryoku (Japan)</description>
+		<year>2005</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Yoshi no Banyuuinryoku (J)(2005)(Nintendo).gba" size="8388608" crc="31594b7a"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="yoshitt" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Yoshi Topsy: Turvy (USA)</description>
+		<year>2005</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Yoshi Topsy ‑ Turvy (U)(2005)(Nintendo).gba" size="8388608" crc="e64c265c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="boktai2j" cloneof="boktai2u" romof="boktai2u" sourcefile="gba/d_gba.cpp">
+		<description>Zoku Bokura no Taiyou: Taiyou Shounen Django (Japan, Rev 1)</description>
+		<year>2004</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Zoku Bokura no Taiyou - Taiyou Shounen Django (J, Rev 1)(2004)(Konami).gba" size="16777216" crc="71e2cd01"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game isbios="yes" name="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Optional BIOS, bundled replacement is used when absent</comment>
+		<description>Game Boy Advance BIOS</description>
+		<year>2001</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="gba_bios.bin" size="16384" crc="81977335"/>
+	</game>
+</datafile>

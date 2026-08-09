@@ -174631,15 +174631,6 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="pce_scdsys" sourcefile="pce/d_pce.cpp">
-		<comment>System - media selected seperately</comment>
-		<description>Super CD-Rom System Card (v3.0)</description>
-		<year>1991</year>
-		<manufacturer>NEC - Hudson Soft</manufacturer>
-		<rom name="Super CD-Rom System Card (Japan, v3.0)(1991).pce" size="262144" crc="6d9a73ef"/>
-		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="sbasebalj" cloneof="sbasebal" romof="sbasebal" sourcefile="pre90s/d_alpha68k2.cpp">
 		<description>Super Champion Baseball (Japan)</description>
 		<year>1989</year>
