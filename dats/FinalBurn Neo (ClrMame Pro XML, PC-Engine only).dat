@@ -2568,7 +2568,7 @@
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="pce_scdsys" sourcefile="pce/d_pce.cpp">
+	<game name="scdsys" sourcefile="pce/d_pce.cpp">
 		<comment>System - media selected seperately</comment>
 		<description>Super CD-Rom System Card (v3.0)</description>
 		<year>1991</year>
