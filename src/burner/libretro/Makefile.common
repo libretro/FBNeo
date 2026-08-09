@@ -364,7 +364,7 @@ SOURCES_C += $(UGUI_DIR)/ugui.c \
 SOURCES_C += $(FBNEO_LIB_DIR)/libchdr/libchdr_flac.c
 
 ifeq ($(INCLUDE_CHD_SUPPORT), 1)
-	FBNEO_DEFINES += -DINCLUDE_CHD_SUPPORT
+	FBNEO_DEFINES += -DINCLUDE_CHD_SUPPORT -DUSE_LIBRETRO_VFS
 	SOURCES_CXX += $(FBNEO_INTERFACE_DIR)/cd/cd_chd.cpp
 	ifeq ($(CHD_LIBRETRO), 1)
 		SOURCES_C += $(LIBRETRO_COMM_DIR)/formats/libchdr/libchdr_chd.c \
