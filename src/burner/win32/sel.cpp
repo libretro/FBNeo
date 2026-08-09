@@ -5,7 +5,7 @@
 
 // reduce the total number of sets by this number - (isgsm, neogeo, nmk004, pgm, skns, ym2608, coleco, msx_msx, spectrum, spec128, spec1282a, decocass, midssio, cchip, fdsbios, ngp, bubsys, channelf, namcoc69, namcoc70, namcoc75, atarisy1, snes stuff)
 // don't reduce for these as we display them in the list (neogeo, neocdz)
-#define REDUCE_TOTAL_SETS_BIOS      31
+#define REDUCE_TOTAL_SETS_BIOS      32
 
 UINT_PTR nTimer					= 0;
 UINT_PTR nInitPreviewTimer		= 0;
@@ -135,6 +135,7 @@ HTREEITEM hFilterMsx				= NULL;
 HTREEITEM hFilterNes				= NULL;
 HTREEITEM hFilterFds				= NULL;
 HTREEITEM hFilterSnes				= NULL;
+HTREEITEM hFilterGba				= NULL;
 HTREEITEM hFilterNgp				= NULL;
 HTREEITEM hFilterChannelF			= NULL;
 HTREEITEM hFilterAstroHome			= NULL;
@@ -290,6 +291,8 @@ static UINT64 FdsValue				= (UINT64)HARDWARE_PREFIX_FDS >> 24;
 static UINT64 MASKFDS				= (UINT64)1 << FdsValue;            // 1 << 0x1f - needs casting or.. bonkers!
 static UINT64 SnesValue				= (UINT64)HARDWARE_PREFIX_SNES >> 24;
 static UINT64 MASKSNES				= (UINT64)1 << SnesValue;
+static UINT64 GbaValue				= (UINT64)HARDWARE_GBA >> 24;
+static UINT64 MASKGBA				= (UINT64)1 << GbaValue;
 static UINT64 NgpValue				= (UINT64)HARDWARE_PREFIX_NGP >> 24;
 static UINT64 MASKNGP				= (UINT64)1 << NgpValue;
 static UINT64 ChannelFValue			= (UINT64)HARDWARE_PREFIX_CHANNELF >> 24;
@@ -297,7 +300,7 @@ static UINT64 MASKCHANNELF			= (UINT64)1 << ChannelFValue;
 static UINT64 AstroHValue			= (UINT64)HARDWARE_ASTROHOME >> 24;
 static UINT64 MASKASTROHOME			= (UINT64)1 << AstroHValue;
 
-static UINT64 MASKALL				= ((UINT64)MASKCAPMISC | MASKCAVE | MASKCPS | MASKCPS2 | MASKCPS3 | MASKDATAEAST | MASKGALAXIAN | MASKIREM | MASKKANEKO | MASKKONAMI | MASKNEOGEO | MASKPACMAN | MASKPGM | MASKPGM2 | MASKPSIKYO | MASKSEGA | MASKSETA | MASKTAITO | MASKTECHNOS | MASKTOAPLAN | MASKMISCPRE90S | MASKMISCPOST90S | MASKMEGADRIVE | MASKPCENGINE | MASKSMS | MASKGG | MASKSG1000 | MASKCOLECO | MASKMSX | MASKSPECTRUM | MASKMIDWAY | MASKNES | MASKFDS | MASKSNES | MASKNGP | MASKCHANNELF | MASKASTROHOME );
+static UINT64 MASKALL				= ((UINT64)MASKCAPMISC | MASKCAVE | MASKCPS | MASKCPS2 | MASKCPS3 | MASKDATAEAST | MASKGALAXIAN | MASKIREM | MASKKANEKO | MASKKONAMI | MASKNEOGEO | MASKPACMAN | MASKPGM | MASKPGM2 | MASKPSIKYO | MASKSEGA | MASKSETA | MASKTAITO | MASKTECHNOS | MASKTOAPLAN | MASKMISCPRE90S | MASKMISCPOST90S | MASKMEGADRIVE | MASKPCENGINE | MASKSMS | MASKGG | MASKSG1000 | MASKCOLECO | MASKMSX | MASKSPECTRUM | MASKMIDWAY | MASKNES | MASKFDS | MASKSNES | MASKNGP | MASKCHANNELF | MASKASTROHOME | MASKGBA );
 
 #define SEARCHSUBDIRS			(1 << 26)
 #define UNAVAILABLE				(1 << 27)
@@ -1630,6 +1633,7 @@ static void CreateFilters()
 	_TVCreateFiltersA(hHardware		, IDS_SEL_NES			, hFilterNes			, nLoadMenuShowX & MASKNES							);
 	_TVCreateFiltersA(hHardware		, IDS_SEL_FDS			, hFilterFds			, nLoadMenuShowX & MASKFDS							);
 	_TVCreateFiltersA(hHardware		, IDS_SEL_SNES			, hFilterSnes			, nLoadMenuShowX & MASKSNES							);
+	_TVCreateFiltersA(hHardware		, IDS_SEL_GBA			, hFilterGba			, nLoadMenuShowX & MASKGBA							);
 	_TVCreateFiltersA(hHardware		, IDS_SEL_NGP			, hFilterNgp			, nLoadMenuShowX & MASKNGP							);
 	_TVCreateFiltersA(hHardware		, IDS_SEL_CHANNELF		, hFilterChannelF		, nLoadMenuShowX & MASKCHANNELF						);
 	_TVCreateFiltersA(hHardware		, IDS_SEL_ASTROHOME		, hFilterAstroHome		, nLoadMenuShowX & MASKASTROHOME					);
@@ -1662,6 +1666,7 @@ enum {
 	ICON_NES,
 	ICON_FDS,
 	ICON_SNES,
+	ICON_GBA,
 	ICON_NGPC,
 	ICON_NGP,
 	ICON_CHANNELF,
@@ -1860,6 +1865,7 @@ static UINT32 __stdcall CacheDrvIconsProc(void* lpParam)
 				_T("icon_nes"),
 				_T("icon_fds"),
 				_T("icon_snes"),
+				_T("icon_gba"),
 				_T("icon_ngpc"),
 				_T("icon_ngp"),
 				_T("icon_chf"),
@@ -2097,6 +2103,9 @@ void LoadDrvIcons()
 			if ((nCode & HARDWARE_PUBLIC_MASK) == HARDWARE_SNES) {
 				hDrvIcon[nDrvIndex] = pIconsCache[nDrvCount + ICON_SNES];		continue;
 			}
+			if ((nCode & HARDWARE_PUBLIC_MASK) == HARDWARE_GBA) {
+				hDrvIcon[nDrvIndex] = pIconsCache[nDrvCount + ICON_GBA];	continue;
+			}
 			else
 			if ((nCode & HARDWARE_SNK_NGPC)    == HARDWARE_SNK_NGPC) {
 				hDrvIcon[nDrvIndex] = pIconsCache[nDrvCount + ICON_NGPC];		continue;
@@ -2306,6 +2315,7 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 				_TreeView_SetCheckState(hFilterList, hFilterNes, FALSE);
 				_TreeView_SetCheckState(hFilterList, hFilterFds, FALSE);
 				_TreeView_SetCheckState(hFilterList, hFilterSnes, FALSE);
+				_TreeView_SetCheckState(hFilterList, hFilterGba, FALSE);
 				_TreeView_SetCheckState(hFilterList, hFilterNgp, FALSE);
 				_TreeView_SetCheckState(hFilterList, hFilterChannelF, FALSE);
 				_TreeView_SetCheckState(hFilterList, hFilterAstroHome, FALSE);
@@ -2350,6 +2360,7 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 				_TreeView_SetCheckState(hFilterList, hFilterNes, TRUE);
 				_TreeView_SetCheckState(hFilterList, hFilterFds, TRUE);
 				_TreeView_SetCheckState(hFilterList, hFilterSnes, TRUE);
+				_TreeView_SetCheckState(hFilterList, hFilterGba, TRUE);
 				_TreeView_SetCheckState(hFilterList, hFilterNgp, TRUE);
 				_TreeView_SetCheckState(hFilterList, hFilterChannelF, TRUE);
 				_TreeView_SetCheckState(hFilterList, hFilterAstroHome, TRUE);
@@ -2600,6 +2611,7 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 		if (hItemChanged == hFilterNes)				_ToggleGameListing(nLoadMenuShowX, MASKNES);
 		if (hItemChanged == hFilterFds)				_ToggleGameListing(nLoadMenuShowX, MASKFDS);
 		if (hItemChanged == hFilterSnes)			_ToggleGameListing(nLoadMenuShowX, MASKSNES);
+		if (hItemChanged == hFilterGba)				_ToggleGameListing(nLoadMenuShowX, MASKGBA);
 		if (hItemChanged == hFilterNgp)				_ToggleGameListing(nLoadMenuShowX, MASKNGP);
 		if (hItemChanged == hFilterChannelF)		_ToggleGameListing(nLoadMenuShowX, MASKCHANNELF);
 		if (hItemChanged == hFilterAstroHome)		_ToggleGameListing(nLoadMenuShowX, MASKASTROHOME);
