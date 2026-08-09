@@ -203,6 +203,7 @@ BEGIN
 	IDS_SEL_NES                 "NES"
 	IDS_SEL_FDS                 "FDS"
 	IDS_SEL_SNES				"SNES"
+	IDS_SEL_GBA                 "GBA"
 	IDS_SEL_NGP                 "Neo Geo Pocket"
 	IDS_SEL_CHANNELF            "Fairchild Channel F"
 	IDS_SEL_ASTROHOME           "Bally Astrocade"

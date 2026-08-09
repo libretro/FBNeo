@@ -1164,6 +1164,11 @@ int ProcessCmdLine()
 			return 1;
 		}
 
+		if (_tcscmp(szName, _T("-listinfogbaonly")) == 0) {
+			write_datfile(DAT_GBA_ONLY, stdout);
+			return 1;
+		}
+
 		if (_tcscmp(szName, _T("-listinfongponly")) == 0) {
 			write_datfile(DAT_NGP_ONLY, stdout);
 			return 1;
@@ -1174,7 +1179,7 @@ int ProcessCmdLine()
 			return 1;
 		}
 
-		if (_tcscmp(szName, _T("-listinfoastrohomeonly")) == 0) {
+		if (_tcscmp(szName, _T("-listinfoastrocadeonly")) == 0) {
 			write_datfile(DAT_ASTROHOME_ONLY, stdout);
 			return 1;
 		}
@@ -1470,6 +1475,7 @@ static void CreateSupportFolders()
 		{_T("roms/nes/")},
 		{_T("roms/fds/")},
 		{_T("roms/snes/")},
+		{_T("roms/gba/")},
 		{_T("roms/ngp/")},
 		{_T("roms/channelf/")},
 		{_T("roms/astrocade/")},
