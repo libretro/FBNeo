@@ -2328,7 +2328,7 @@
 		<description>Billionaire Banshee (HB)</description>
 		<year>2021</year>
 		<manufacturer>PSC</manufacturer>
-		<rom name="Billionaire Banshee (2021)(PSC).nes" size="262160" crc="694c4860"/>
+		<rom name="Billionaire Banshee (2021)(PSC - Mega Cat Studios).nes" size="262160" crc="694c4860"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -9119,10 +9119,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="gorodki" sourcefile="nes/d_nes.cpp">
-		<description>Gorodki (Unl)</description>
+		<comment>Homebrew</comment>
+		<description>Gorodki (HB)</description>
 		<year>2016</year>
 		<manufacturer>Shiru</manufacturer>
-		<rom name="Gorodki (Unl)(2016)(Shiru).nes" size="40976" crc="6f3dba49"/>
+		<rom name="Gorodki (2016)(Shiru).nes" size="40976" crc="6f3dba49"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -12643,6 +12644,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="shouashibe" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Li'l Ashibe and the Great Nepalese Adventure (Hack, English v1.01)</description>
+		<year>2026</year>
+		<manufacturer>BlackPaladin</manufacturer>
+		<rom name="Li'l Ashibe and the Great Nepalese Adventure T-Eng v1.01 (2026)(BlackPaladin).nes" size="262160" crc="87c8c9bf"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="lifeforce" sourcefile="nes/d_nes.cpp">
 		<description>Life Force (USA)</description>
 		<year>1988</year>
@@ -13304,6 +13314,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="mahja" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Mahjaventure: Warring Tiles (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>SnowyAria</manufacturer>
+		<rom name="Mahjaventure - Warring Tiles T-Eng (2026)(SnowyAria).nes" size="262160" crc="df135675"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="mahjongblock" sourcefile="nes/d_nes.cpp">
 		<description>Mahjong Block (Unl)</description>
 		<year>1991</year>
@@ -13314,7 +13333,7 @@
 	</game>
 	<game name="minkymomo" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Mahou no Princess Minky Momo - Remember Dream (Hack, English)</description>
+		<description>Mahou no Princess Minky Momo: Remember Dream (Hack, English)</description>
 		<year>2023</year>
 		<manufacturer>karmic</manufacturer>
 		<rom name="Mahou no Princess Minky Momo - Remember Dream T-Eng (2023)(karmic).nes" size="262160" crc="a6eba573"/>
@@ -13322,7 +13341,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="minkymomoj" cloneof="minkymomo" romof="minkymomo" sourcefile="nes/d_nes.cpp">
-		<description>Mahou no Princess Minky Momo - Remember Dream (Japan)</description>
+		<description>Mahou no Princess Minky Momo: Remember Dream (Japan)</description>
 		<year>2023</year>
 		<manufacturer>Yutaka</manufacturer>
 		<rom name="Mahou no Princess Minky Momo - Remember Dream (Japan)(1992)(Yutaka).nes" size="262160" crc="d1b65a3e"/>
@@ -13335,6 +13354,15 @@
 		<year>2024-25</year>
 		<manufacturer>lunoka</manufacturer>
 		<rom name="Mai Nurse v1.03 (2024-25)(lunoka).nes" size="131088" crc="1c909b75"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="mahjaj" cloneof="mahja" romof="mahja" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Majaventure: Mahjong Senki (Japan)</description>
+		<year>1990</year>
+		<manufacturer>Tokuma Shoten</manufacturer>
+		<rom name="Majaventure - Mahjong Senki (Japan)(1990)(Tokuma Shoten).nes" size="262160" crc="e882e048"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -13364,7 +13392,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="majoudenii" sourcefile="nes/d_nes.cpp">
-		<description>Majou Densetsu II - Daimashikyou Galious (Japan)</description>
+		<description>Majou Densetsu II: Daimashikyou Galious (Japan)</description>
 		<year>1987</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Majou Densetsu II - Daimashikyou Galious (Japan)(1987)(Konami).nes" size="131088" crc="763f2d28"/>
@@ -19320,6 +19348,14 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="shouashibej" cloneof="shouashibe" romof="shouashibe" sourcefile="nes/d_nes.cpp">
+		<description>Shounen Ashibe: Nepal Daibouken no Maki (Japan)</description>
+		<year>1991</year>
+		<manufacturer>Takara</manufacturer>
+		<rom name="Shounen Ashibe - Nepal Daibouken no Maki (Japan)(1991)(Takara).nes" size="262160" crc="4ac9932c"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="shovelknight" sourcefile="nes/d_nes.cpp">
 		<comment>Hack, Homebrew, A GlobalHack of 'Whomp 'Em'</comment>
 		<description>Shovel Knight (GlobalHack)</description>
@@ -19462,6 +19498,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="silversurferrx" cloneof="silversurfer" romof="silversurfer" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Silver Surfer Redux (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Billytime! Games</manufacturer>
+		<rom name="Silver Surfer Redux (2026)(Billytime! Games).nes" size="393232" crc="e411a3cb"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="simcity" sourcefile="nes/d_nes.cpp">
 		<comment>Prototype</comment>
 		<description>Sim City (Prototype)</description>
@@ -19472,7 +19517,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="simpsbarvsspamu" sourcefile="nes/d_nes.cpp">
-		<description>Simpsons, The - Bart vs. the Space Mutants (USA, Rev. A)</description>
+		<description>Simpsons, The: Bart vs. the Space Mutants (USA, Rev. A)</description>
 		<year>1991</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Simpsons, The - Bart vs. the Space Mutants (USA, Rev A)(1991)(Acclaim).nes" size="262160" crc="c8602800"/>
@@ -19480,7 +19525,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="simpsbarvswor" sourcefile="nes/d_nes.cpp">
-		<description>Simpsons, The - Bart vs. the World (USA)</description>
+		<description>Simpsons, The: Bart vs. the World (USA)</description>
 		<year>1991</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Simpsons, The - Bart vs. the World (USA)(1991)(Acclaim).nes" size="393232" crc="5101bae1"/>
@@ -19488,7 +19533,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="simpsbarmeeradman" sourcefile="nes/d_nes.cpp">
-		<description>Simpsons, The - Bartman Meets Radioactive Man (USA)</description>
+		<description>Simpsons, The: Bartman Meets Radioactive Man (USA)</description>
 		<year>1992</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Simpsons, The - Bartman Meets Radioactive Man (USA)(1992)(Acclaim).nes" size="393232" crc="7c86930e"/>
@@ -19539,7 +19584,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="skateordie2" sourcefile="nes/d_nes.cpp">
-		<description>Skate or Die 2 - The Search for Double Trouble (USA)</description>
+		<description>Skate or Die 2: The Search for Double Trouble (USA)</description>
 		<year>1990</year>
 		<manufacturer>Electronic Arts</manufacturer>
 		<rom name="Skate or Die 2 - The Search for Double Trouble (USA)(1990)(Electronic Arts).nes" size="393232" crc="290296d4"/>
@@ -20320,8 +20365,17 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="startrevfinfr" sourcefile="nes/d_nes.cpp">
+		<comment>Prototype</comment>
+		<description>Star Trek V: The Final Frontier (Prototype)</description>
+		<year>1989</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Star Trek V - The Final Frontier (Proto)(1989)(Bandai).nes" size="262160" crc="49365548"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="startre25tann" sourcefile="nes/d_nes.cpp">
-		<description>Star Trek - 25th Anniversary (USA)</description>
+		<description>Star Trek: 25th Anniversary (USA)</description>
 		<year>1992</year>
 		<manufacturer>Ultra Games</manufacturer>
 		<rom name="Star Trek - 25th Anniversary (USA)(1992)(Ultra Games).nes" size="524304" crc="76356073"/>
@@ -20329,19 +20383,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="startrenexgen" sourcefile="nes/d_nes.cpp">
-		<description>Star Trek - The Next Generation (USA)</description>
+		<description>Star Trek: The Next Generation (USA)</description>
 		<year>1993</year>
 		<manufacturer>Absolute Entertainment</manufacturer>
 		<rom name="Star Trek - The Next Generation (USA)(1993)(Absolute).nes" size="131088" crc="268202ae"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="startrevfinfr" sourcefile="nes/d_nes.cpp">
-		<comment>Prototype</comment>
-		<description>Star Trek V - The Final Frontier (Prototype)</description>
-		<year>1989</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Star Trek V - The Final Frontier (Proto)(1989)(Bandai).nes" size="262160" crc="49365548"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -21151,6 +21196,15 @@
 		<year>2022</year>
 		<manufacturer>NesInvent</manufacturer>
 		<rom name="Super Mario Bros Enhanced (2022)(NesInvent).nes" size="40976" crc="b1e5b547"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="smbpixel" cloneof="smb" romof="smb" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Super Mario Bros. Pixel Reduction (Hack, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>JBoGre</manufacturer>
+		<rom name="Super Mario Bros. Pixel Reduction v1.1 (2026)(JBoGre).nes" size="40976" crc="8b3d97ca"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

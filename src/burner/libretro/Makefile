@@ -9,7 +9,8 @@ FASTMATH = 1
 USE_SPEEDHACKS = 1
 EXTERNAL_ZLIB = 0
 INCLUDE_7Z_SUPPORT = 1
-INCLUDE_CHD_SUPPORT = 0
+INCLUDE_CHD_SUPPORT = 1
+# it seems libretro chd implementation won't work with this core
 CHD_LIBRETRO = 0
 # enable x86_64 dynarec used in killer instinct
 USE_X64_DRC = 0
