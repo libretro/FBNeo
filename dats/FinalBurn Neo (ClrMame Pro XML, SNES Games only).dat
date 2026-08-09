@@ -9355,6 +9355,23 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kamaitachite" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Kamaitachi no Yoru (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>ButThouMust</manufacturer>
+		<rom name="Kamaitachi no Yoru T-Eng (2026)(ButThouMust).sfc" size="3145728" crc="ba25366f"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kamaitachi" cloneof="kamaitachite" romof="kamaitachite" sourcefile="snes/d_snes.cpp">
+		<description>Kamaitachi no Yoru (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Chun Soft</manufacturer>
+		<rom name="Kamaitachi no Yoru (J)(1994)(Chun Soft).sfc" size="3145728" crc="71c631aa"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kamekisland" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, Homebrew, GlobalHack of Super Mario World</comment>
 		<description>Kamek's Island (GlobalHack, v1.7)</description>
@@ -17730,6 +17747,15 @@
 		<year>1992</year>
 		<manufacturer>Namcot</manufacturer>
 		<rom name="Super Famista (J)(1992)(Namcot).sfc" size="1048576" crc="72d49e26"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfanger" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Fanger (HB)</description>
+		<year>2026</year>
+		<manufacturer>Mega Cat Studios</manufacturer>
+		<rom name="Super Fanger (2026)(Mega Cat Studios).sfc" size="1048576" crc="892a308e"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

@@ -470,7 +470,11 @@ void retro_set_environment(retro_environment_t cb)
 		{ "Rom", "zip|7z", true, true, true, NULL, 0 },
 	};
 	static const struct retro_subsystem_rom_info subsystem_iso[] = {
-		{ "Iso", "ccd|cue",    true, true, true, NULL, 0 },
+#ifdef INCLUDE_CHD_SUPPORT
+		{ "Iso", "ccd|cue|chd",    true, true, true, NULL, 0 },
+#else
+		{ "Iso", "ccd|cue",        true, true, true, NULL, 0 },
+#endif
 	};
 	static const struct retro_subsystem_info subsystems[] = {
 		{ "Bally Astrocade Home Computer",       "astro", subsystem_rom, 1, RETRO_GAME_TYPE_ASTRO },
@@ -517,7 +521,11 @@ void retro_get_system_info(struct retro_system_info *info)
 	info->library_version = strdup(library_version);
 	info->need_fullpath = true;
 	info->block_extract = true;
+#ifdef INCLUDE_CHD_SUPPORT
+	info->valid_extensions = "zip|7z|cue|ccd|chd";
+#else
 	info->valid_extensions = "zip|7z|cue|ccd";
+#endif
 
 	free(library_version);
 }
@@ -2181,7 +2189,12 @@ static bool retro_load_game_common()
 		// Start CD reader emulation if needed
 		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD) {
 			const char* ext = path_get_extension(CDEmuImage);
-			if (!string_is_equal_noncase(ext, "cue") && !string_is_equal_noncase(ext, "ccd")) {
+			if (!string_is_equal_noncase(ext, "cue")
+			 && !string_is_equal_noncase(ext, "ccd")
+#ifdef INCLUDE_CHD_SUPPORT
+			 && !string_is_equal_noncase(ext, "chd")
+#endif
+			) {
 				static char uguiText[4096];
 				const char* s1 = RETRO_ERROR_MESSAGES_13;
 				const char* s2 = RETRO_ERROR_MESSAGES_07;

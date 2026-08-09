@@ -2323,6 +2323,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="billonbans" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew, Published by Mega Cat Studios</comment>
+		<description>Billionaire Banshee (HB)</description>
+		<year>2021</year>
+		<manufacturer>PSC</manufacturer>
+		<rom name="Billionaire Banshee (2021)(PSC).nes" size="262160" crc="694c4860"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="binarycity" cloneof="battlecity" romof="battlecity" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Binary City (Hack)</description>
@@ -6811,6 +6820,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="echoesunread" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Echoes of the Unread (HB)</description>
+		<year>2024</year>
+		<manufacturer>Mega Cat Studios</manufacturer>
+		<rom name="Echoes of the Unread (2024)(Mega Cat Studios).nes" size="131088" crc="6fea1bb3"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="eeeaaaooo" sourcefile="nes/d_nes.cpp">
 		<comment>Demo, Homebrew</comment>
 		<description>EEEAAAOOO - aka AAAEEEOOO (HB, Tech-Demo)</description>
@@ -9097,6 +9115,14 @@
 		<year>1991</year>
 		<manufacturer>Tokuma Shoten</manufacturer>
 		<rom name="Gorby no Pipeline Daisakusen (Japan)(1991)(Tokuma Shoten).nes" size="65552" crc="c136143b"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="gorodki" sourcefile="nes/d_nes.cpp">
+		<description>Gorodki (Unl)</description>
+		<year>2016</year>
+		<manufacturer>Shiru</manufacturer>
+		<rom name="Gorodki (Unl)(2016)(Shiru).nes" size="40976" crc="6f3dba49"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -17014,6 +17040,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="pow2" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Pow 2 (HB)</description>
+		<year>2017</year>
+		<manufacturer>Shiru</manufacturer>
+		<rom name="Pow 2 (2017)(Shiru).nes" size="40976" crc="62baff5a"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="powerbladec" cloneof="powerblade" romof="powerblade" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Power Blade (Hack, Chinese)</description>
@@ -17804,6 +17839,15 @@
 		<year>2021</year>
 		<manufacturer>NAPE Games</manufacturer>
 		<rom name="Reknum - Souls Adventure (2021)(NAPE Games).nes" size="524304" crc="ccdc9c66"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="reknum2a" cloneof="reknum2" romof="reknum2" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew, Published by Mega Cat Studios</comment>
+		<description>Reknum: Souls Adventure (HB, Alt)</description>
+		<year>2021</year>
+		<manufacturer>NAPE Games</manufacturer>
+		<rom name="Reknum - Souls Adventure (Alt)(2021)(NAPE Games).nes" size="524304" crc="28b07f84"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -19556,6 +19600,15 @@
 		<year>1987</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Slalom (USA)(1987)(Nintendo).nes" size="40976" crc="6115164d"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="slideosnake" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Slide-o-Snake (HB)</description>
+		<year>2026</year>
+		<manufacturer>Mikebloke</manufacturer>
+		<rom name="Slide-o-Snake (2026)(Mikebloke).nes" size="40976" crc="443a11b9"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -21769,6 +21822,30 @@
 		<year>1991</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="TaleSpin (USA)(1991)(Capcom).nes" size="262160" crc="143dcab6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="tankasder" cloneof="tankcaltron" romof="tankcaltron" sourcefile="nes/d_nes.cpp">
+		<description>Tank (Asder) (Unl)</description>
+		<year>1993</year>
+		<manufacturer>Asder</manufacturer>
+		<rom name="Tank (Unl)(1993)(Asder).nes" size="40976" crc="171471e2"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="tankcaltron" sourcefile="nes/d_nes.cpp">
+		<description>Tank (Caltron) (Unl)</description>
+		<year>1992</year>
+		<manufacturer>Caltron</manufacturer>
+		<rom name="Tank (Unl)(1992)(Caltron).nes" size="40976" crc="dea0f458"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="tankntdec" cloneof="tankcaltron" romof="tankcaltron" sourcefile="nes/d_nes.cpp">
+		<description>Tank (NTDEC) (Unl)</description>
+		<year>1992</year>
+		<manufacturer>NTDEC</manufacturer>
+		<rom name="Tank (Unl)(1992)(NTDEC).nes" size="40976" crc="6096bb0c"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

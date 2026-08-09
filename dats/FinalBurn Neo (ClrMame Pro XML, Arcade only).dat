@@ -64571,6 +64571,34 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gngenh" cloneof="gng" romof="gng" sourcefile="pre90s/d_gng.cpp">
+		<comment>Hack</comment>
+		<description>Ghosts'n Goblins (Enhanced)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying</manufacturer>
+		<rom name="mm_c_04" merge="mm_c_04" size="16384" crc="4f94130f"/>
+		<rom name="mm_c_03enh" size="32768" crc="ab30bc6d"/>
+		<rom name="mm_c_05enh" size="32768" crc="7a60a968"/>
+		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
+		<rom name="gg1.bin" merge="gg1.bin" size="16384" crc="ecfccf07"/>
+		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
+		<rom name="gg10.bin" merge="gg10.bin" size="16384" crc="7302529d"/>
+		<rom name="gg9.bin" merge="gg9.bin" size="16384" crc="20035bda"/>
+		<rom name="gg8.bin" merge="gg8.bin" size="16384" crc="f12ba271"/>
+		<rom name="gg7.bin" merge="gg7.bin" size="16384" crc="e525207d"/>
+		<rom name="gg6.bin" merge="gg6.bin" size="16384" crc="2d77e9b2"/>
+		<rom name="gg17.bin" merge="gg17.bin" size="16384" crc="93e50a8f"/>
+		<rom name="gg16.bin" merge="gg16.bin" size="16384" crc="06d7e5ca"/>
+		<rom name="gg15.bin" merge="gg15.bin" size="16384" crc="bc1fe02d"/>
+		<rom name="gg14.bin" merge="gg14.bin" size="16384" crc="6aaf12f9"/>
+		<rom name="gg13.bin" merge="gg13.bin" size="16384" crc="e80c3fca"/>
+		<rom name="gg12.bin" merge="gg12.bin" size="16384" crc="7780a925"/>
+		<rom name="tbp24s10.14k" merge="tbp24s10.14k" size="256" crc="0eaf5158"/>
+		<rom name="63s141.2e" merge="63s141.2e" size="256" crc="4a1285a4"/>
+		<rom name="gg-pal10l8.bin" merge="gg-pal10l8.bin" size="44" crc="87f1b7e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gngblita" cloneof="gng" romof="gng" sourcefile="pre90s/d_gng.cpp">
 		<comment>Bootleg</comment>
 		<description>Ghosts'n Goblins (Italian bootleg, harder)</description>
@@ -64763,7 +64791,7 @@
 		<manufacturer>GoodLuckTrying</manufacturer>
 		<rom name="mm_c_knight_04" size="16384" crc="b96e18c0"/>
 		<rom name="mm_c_knight_03" size="32768" crc="57f4f653"/>
-		<rom name="mm_c_knight_05" size="32768" crc="63320d7d"/>
+		<rom name="mm_c_knight_05" size="32768" crc="a8a1a2e7"/>
 		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
 		<rom name="gg1knight.bin" size="16384" crc="c12dd3e3"/>
 		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
@@ -64791,7 +64819,7 @@
 		<manufacturer>GoodLuckTrying</manufacturer>
 		<rom name="mm_c_maiden_04" size="16384" crc="269b5163"/>
 		<rom name="mm_c_maiden_03" size="32768" crc="57f4f653"/>
-		<rom name="mm_c_maiden_05" size="32768" crc="02e34e64"/>
+		<rom name="mm_c_maiden_05" size="32768" crc="4f443f38"/>
 		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
 		<rom name="gg1maiden.bin" size="16384" crc="82e2fa18"/>
 		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
@@ -76464,7 +76492,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="hotdogst" sourcefile="cave/d_hotdogst.cpp">
-		<description>Hotdog Storm - The First Supersonics (korea)</description>
+		<description>Hotdog Storm - The First Supersonics (Korea)</description>
 		<year>1996</year>
 		<manufacturer>Marble (Ace International license)</manufacturer>
 		<rom name="mp3.u29" size="524288" crc="1f4e5479"/>
@@ -95764,6 +95792,33 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="makaimurenh" cloneof="gng" romof="gng" sourcefile="pre90s/d_gng.cpp">
+		<comment>Hack</comment>
+		<description>Makaimura (Enhanced)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying</manufacturer>
+		<rom name="10n.rom" size="16384" crc="81e567e0"/>
+		<rom name="8nenh.rom" size="32768" crc="dc342bc7"/>
+		<rom name="12nenh.rom" size="32768" crc="db25d78d"/>
+		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
+		<rom name="gg1.bin" merge="gg1.bin" size="16384" crc="ecfccf07"/>
+		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
+		<rom name="gg10.bin" merge="gg10.bin" size="16384" crc="7302529d"/>
+		<rom name="gg9.bin" merge="gg9.bin" size="16384" crc="20035bda"/>
+		<rom name="gg8.bin" merge="gg8.bin" size="16384" crc="f12ba271"/>
+		<rom name="gg7.bin" merge="gg7.bin" size="16384" crc="e525207d"/>
+		<rom name="gg6.bin" merge="gg6.bin" size="16384" crc="2d77e9b2"/>
+		<rom name="gng13.n4" size="16384" crc="4613afdc"/>
+		<rom name="gg16.bin" merge="gg16.bin" size="16384" crc="06d7e5ca"/>
+		<rom name="gg15.bin" merge="gg15.bin" size="16384" crc="bc1fe02d"/>
+		<rom name="gng16.l4" size="16384" crc="608d68d5"/>
+		<rom name="gg13.bin" merge="gg13.bin" size="16384" crc="e80c3fca"/>
+		<rom name="gg12.bin" merge="gg12.bin" size="16384" crc="7780a925"/>
+		<rom name="tbp24s10.14k" merge="tbp24s10.14k" size="256" crc="0eaf5158"/>
+		<rom name="63s141.2e" merge="63s141.2e" size="256" crc="4a1285a4"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="makaimur" cloneof="gng" romof="gng" sourcefile="pre90s/d_gng.cpp">
 		<description>Makaimura (Japan revision A?)</description>
 		<year>1985</year>
@@ -95904,7 +95959,7 @@
 		<manufacturer>GoodLuckTrying</manufacturer>
 		<rom name="10nknight.rom" size="16384" crc="f0868081"/>
 		<rom name="8nknight.rom" size="32768" crc="28546c2b"/>
-		<rom name="12nknight.rom" size="32768" crc="0d414cbc"/>
+		<rom name="12nknight.rom" size="32768" crc="56283321"/>
 		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
 		<rom name="gg1knight.bin" size="16384" crc="c12dd3e3"/>
 		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
@@ -95931,7 +95986,7 @@
 		<manufacturer>GoodLuckTrying</manufacturer>
 		<rom name="10nmaiden.rom" size="16384" crc="6f73c922"/>
 		<rom name="8nmaiden.rom" size="32768" crc="28546c2b"/>
-		<rom name="12nmaiden.rom" size="32768" crc="6c900fa5"/>
+		<rom name="12nmaiden.rom" size="32768" crc="29101f6b"/>
 		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
 		<rom name="gg1maiden.bin" size="16384" crc="82e2fa18"/>
 		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
@@ -142892,6 +142947,58 @@
 		<rom name="epr-13837.ic33" size="524288" crc="434de159"/>
 		<rom name="epr-13834.ic4" size="131072" crc="ab0c1833"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rickdangdx" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
+		<comment>Homebrew</comment>
+		<description>Rick Dangerous DX (HB)</description>
+		<year>2026</year>
+		<manufacturer>Z-Team</manufacturer>
+		<rom name="rickdx-p1.bin" size="524288" crc="d3dd7ab5"/>
+		<rom name="rickdx-s1.bin" size="131072" crc="4ec73f78"/>
+		<rom name="rickdx-c1.bin" size="1310720" crc="89e09533"/>
+		<rom name="rickdx-c2.bin" size="1310720" crc="c2df94d4"/>
+		<rom name="rickdx-m1.bin" size="262144" crc="ad8f34e8"/>
+		<rom name="rickdx-v1.bin" size="7077888" crc="69fb1fdf"/>
+		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
+		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
+		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
+		<rom name="sp-u2.sp1" merge="sp-u2.sp1" size="131072" crc="e72943de"/>
+		<rom name="sp1-u2" merge="sp1-u2" size="131072" crc="62f021f4"/>
+		<rom name="sp-e.sp1" merge="sp-e.sp1" size="131072" crc="2723a5b5"/>
+		<rom name="sp1-u4.bin" merge="sp1-u4.bin" size="131072" crc="1179a30f"/>
+		<rom name="sp1-u3.bin" merge="sp1-u3.bin" size="131072" crc="2025b7a2"/>
+		<rom name="vs-bios.rom" merge="vs-bios.rom" size="131072" crc="f0e8f27d"/>
+		<rom name="sp-j2.sp1" merge="sp-j2.sp1" size="131072" crc="acede59c"/>
+		<rom name="sp1.jipan.1024" merge="sp1.jipan.1024" size="131072" crc="9fb0abe4"/>
+		<rom name="sp-45.sp1" merge="sp-45.sp1" size="524288" crc="03cc9f6a"/>
+		<rom name="sp-j3.sp1" merge="sp-j3.sp1" size="524288" crc="486cb450"/>
+		<rom name="japan-j3.bin" merge="japan-j3.bin" size="131072" crc="dff6d41f"/>
+		<rom name="sp1-j3.bin" merge="sp1-j3.bin" size="131072" crc="fbc6d469"/>
+		<rom name="neo-po.bin" merge="neo-po.bin" size="131072" crc="16d0c132"/>
+		<rom name="neo-epo.bin" merge="neo-epo.bin" size="131072" crc="d27a71f1"/>
+		<rom name="neodebug.bin" merge="neodebug.bin" size="131072" crc="698ebb7d"/>
+		<rom name="sp-1v1_3db8c.bin" merge="sp-1v1_3db8c.bin" size="131072" crc="162f0ebe"/>
+		<rom name="uni-bios_4_0.rom" merge="uni-bios_4_0.rom" size="131072" crc="a7aab458"/>
+		<rom name="uni-bios_3_3.rom" merge="uni-bios_3_3.rom" size="131072" crc="24858466"/>
+		<rom name="uni-bios_3_2.rom" merge="uni-bios_3_2.rom" size="131072" crc="a4e8b9b3"/>
+		<rom name="uni-bios_3_1.rom" merge="uni-bios_3_1.rom" size="131072" crc="0c58093f"/>
+		<rom name="uni-bios_3_0.rom" merge="uni-bios_3_0.rom" size="131072" crc="a97c89a9"/>
+		<rom name="uni-bios_2_3.rom" merge="uni-bios_2_3.rom" size="131072" crc="27664eb5"/>
+		<rom name="uni-bios_2_3o.rom" merge="uni-bios_2_3o.rom" size="131072" crc="601720ae"/>
+		<rom name="uni-bios_2_2.rom" merge="uni-bios_2_2.rom" size="131072" crc="2d50996a"/>
+		<rom name="uni-bios_2_1.rom" merge="uni-bios_2_1.rom" size="131072" crc="8dabf76b"/>
+		<rom name="uni-bios_2_0.rom" merge="uni-bios_2_0.rom" size="131072" crc="0c12c2ad"/>
+		<rom name="uni-bios_1_3.rom" merge="uni-bios_1_3.rom" size="131072" crc="b24b44a0"/>
+		<rom name="uni-bios_1_2.rom" merge="uni-bios_1_2.rom" size="131072" crc="4fa698e9"/>
+		<rom name="uni-bios_1_2o.rom" merge="uni-bios_1_2o.rom" size="131072" crc="e19d3ce9"/>
+		<rom name="uni-bios_1_1.rom" merge="uni-bios_1_1.rom" size="131072" crc="5dda0d84"/>
+		<rom name="uni-bios_1_0.rom" merge="uni-bios_1_0.rom" size="131072" crc="0ce453a0"/>
+		<rom name="neopen.sp1" merge="neopen.sp1" size="131072" crc="cb915e76"/>
+		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
+		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
+		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
+		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="ridleofp" sourcefile="sega/d_segae.cpp">

@@ -9,6 +9,8 @@ FASTMATH = 1
 USE_SPEEDHACKS = 1
 EXTERNAL_ZLIB = 0
 INCLUDE_7Z_SUPPORT = 1
+INCLUDE_CHD_SUPPORT = 0
+CHD_LIBRETRO = 0
 # enable x86_64 dynarec used in killer instinct
 USE_X64_DRC = 0
 AUTOGEN_DATS = 0
@@ -238,7 +240,7 @@ else ifneq (,$(filter $(platform), ps3 psl1ght))
 	# RetroArch no longer vendors zlib, build our own copy
 	EXTERNAL_ZLIB = 0
 	STATIC_LINKING = 1
-	INCLUDE_7Z_SUPPORT = 0
+	INCLUDE_7Z_SUPPORT = 1
 
 	CC = $(PS3DEV)/ppu/bin/ppu-$(COMMONLV)gcc$(EXE_EXT)
 	CXX = $(PS3DEV)/ppu/bin/ppu-$(COMMONLV)g++$(EXE_EXT)
@@ -310,7 +312,7 @@ else ifeq ($(platform), libnx)
 	CFLAGS += -std=gnu11
 	STATIC_LINKING = 1
 	# 2021-05-18 : disabling 7z again for libnx, it seems the lib version linked to RA is old
-	INCLUDE_7Z_SUPPORT = 0
+	INCLUDE_7Z_SUPPORT = 1
 	ENDIANNESS_DEFINES := -DLSB_FIRST
 
 # Funkey S
@@ -411,7 +413,7 @@ else ifneq (,$(filter $(platform), ngc wii wiiu))
 else ifeq ($(platform), emscripten)
 	TARGET := $(TARGET_NAME)_libretro_$(platform).bc
 	ENDIANNESS_DEFINES := -DLSB_FIRST
-	INCLUDE_7Z_SUPPORT = 0
+	INCLUDE_7Z_SUPPORT = 1
 	EXTERNAL_ZLIB = 1
 	STATIC_LINKING = 1
 	FASTMATH = 0

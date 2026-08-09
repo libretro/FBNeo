@@ -9137,6 +9137,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="imminence" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Imminence (HB)</description>
+		<year>2026</year>
+		<manufacturer>Augmented Studios</manufacturer>
+		<rom name="Imminence (2026)(Augmented Studios).bin" size="4063232" crc="fbd45c81"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="immortal" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Immortal, The (Euro, USA)</description>
 		<year>1991-93</year>
@@ -12795,10 +12804,10 @@
 	</game>
 	<game name="mkaee" cloneof="mk" romof="mk" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>Mortal Kombat Arcade Edition Enhanced (Hack, v2.6)</description>
+		<description>Mortal Kombat Arcade Edition Enhanced (Hack, v2.7)</description>
 		<year>2026</year>
 		<manufacturer>Rael G.C.</manufacturer>
-		<rom name="Mortal Kombat Arcade Edition Enhanced v2.6 (2026)(Rael G.C.).bin" size="4194304" crc="d42cd074"/>
+		<rom name="Mortal Kombat Arcade Edition Enhanced v2.7 (2026)(Rael G.C.).bin" size="4194304" crc="b9fa989e"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15077,6 +15086,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="phantomgear" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Phantom Gear (HB, v0.94 Demo)</description>
+		<year>2026</year>
+		<manufacturer>Bits Rule Games</manufacturer>
+		<rom name="Phantom Gear v0.94 Demo (2026)(Bits Rule Games).bin" size="2380236" crc="3a771364"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="phelios" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Phelios (Euro)</description>
 		<year>1990</year>
@@ -16290,6 +16308,15 @@
 		<year>199?</year>
 		<manufacturer>Psygnosis</manufacturer>
 		<rom name="Resq (Euro, Proto)(199x)(Psygnosis).bin" size="1048576" crc="558e35e0"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="retrogamesh" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Retro Games Hunters (HB, v0.90 Demo)</description>
+		<year>2026</year>
+		<manufacturer>Sevilha</manufacturer>
+		<rom name="Retro Games Hunters v0.90 Demo (2026)(Sevilha).bin" size="3670016" crc="3b150b0d"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

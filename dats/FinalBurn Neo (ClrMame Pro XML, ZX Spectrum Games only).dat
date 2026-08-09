@@ -21489,6 +21489,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="oiltanker" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Oil Tanker Simulator (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Dark Humour Games</manufacturer>
+		<rom name="Oil Tanker Simulator 48K (2026)(Dark Humour Games).z80" size="10587" crc="2d4ab4dd"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="oldtower" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Old Tower (128K) (HB)</description>

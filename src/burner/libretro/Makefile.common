@@ -77,6 +77,7 @@ TMS34010_CPU_DIR		:= $(FBNEO_CPU_DIR)/tms34
 UPD7725_CPU_DIR			:= $(FBNEO_CPU_DIR)/upd7725
 UPD7810_CPU_DIR			:= $(FBNEO_CPU_DIR)/upd7810
 V60_CPU_DIR				:= $(FBNEO_CPU_DIR)/v60
+XA_CPU_DIR				:= $(FBNEO_CPU_DIR)/xa
 Z180_CPU_DIR			:= $(FBNEO_CPU_DIR)/z180
 Z80_CPU_DIR				:= $(FBNEO_CPU_DIR)/z80
 
@@ -155,6 +156,7 @@ FBNEO_CPU_DIRS := $(FBNEO_CPU_DIR) \
 	$(TLCS900_CPU_DIR) \
 	$(TMS32010_CPU_DIR) \
 	$(UPD7810_CPU_DIR) \
+	$(XA_CPU_DIR) \
 	$(Z80_CPU_DIR) \
 	$(Z180_CPU_DIR)
 
@@ -234,6 +236,7 @@ INCLUDE_DIRS := $(FBNEO_BURNER_DIR)/win32 \
 	$(UPD7810_CPU_DIR) \
 	$(V60_CPU_DIR) \
 	$(T11_CPU_DIR) \
+	$(XA_CPU_DIR) \
 	$(Z80_CPU_DIR) \
 	$(Z180_CPU_DIR) \
 	$(SH4_CPU_DIR) \
@@ -359,6 +362,39 @@ SOURCES_C += $(UGUI_DIR)/ugui.c \
 	$(LIBRETRO_DIR)/ugui_tools.c
 
 SOURCES_C += $(FBNEO_LIB_DIR)/libchdr/libchdr_flac.c
+
+ifeq ($(INCLUDE_CHD_SUPPORT), 1)
+	FBNEO_DEFINES += -DINCLUDE_CHD_SUPPORT
+	SOURCES_CXX += $(FBNEO_INTERFACE_DIR)/cd/cd_chd.cpp
+	ifeq ($(CHD_LIBRETRO), 1)
+		SOURCES_C += $(LIBRETRO_COMM_DIR)/formats/libchdr/libchdr_chd.c \
+			$(LIBRETRO_COMM_DIR)/formats/libchdr/libchdr_zlib.c \
+			$(LIBRETRO_COMM_DIR)/formats/libchdr/libchdr_huffman.c \
+			$(LIBRETRO_COMM_DIR)/formats/libchdr/libchdr_bitstream.c \
+			$(LIBRETRO_COMM_DIR)/encodings/encoding_deflate.c \
+			$(LIBRETRO_COMM_DIR)/formats/libchdr/libchdr_cdrom.c
+		INCLUDE_DIRS += $(LIBRETRO_COMM_DIR)/include/libchdr/
+	else
+		FBNEO_DEFINES += -DCHDR_SYSTEM_ZLIB
+		SOURCES_C += $(FBNEO_LIB_DIR)/libchdr/libchdr_chd.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_zlib.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_cdzl.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_bitstream.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_huffman.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_huff.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_flac.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_lzma.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_zstd.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_cdlz.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_cdfl.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_codec_cdzs.c \
+			$(FBNEO_LIB_DIR)/libchdr/libchdr_cdrom.c \
+			$(FBNEO_LIB_DIR)/lzma/libchdr_lzma.c \
+			$(FBNEO_LIB_DIR)/zstd/zstddeclib.c
+		INCLUDE_DIRS += $(FBNEO_LIB_DIR)/libchdr/include/ \
+			$(FBNEO_LIB_DIR)/lzma/
+	endif
+endif
 
 # GIT HASH
 GIT_VERSION := $(shell git rev-parse --short HEAD || echo unknown)

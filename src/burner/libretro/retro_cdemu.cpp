@@ -1,6 +1,9 @@
 #include "retro_common.h"
 #include "retro_cdemu.h"
 #include "burnint.h"
+#ifdef INCLUDE_CHD_SUPPORT
+#include "cd_chd.h"
+#endif
 #include "neocdlist.h"
 #include "neocdlist_games.h"
 
@@ -28,6 +31,9 @@ const INT32 CD_FRAMES_SECOND =      75;
 const INT32 CD_TYPE_NONE     = 1 << 0;
 const INT32 CD_TYPE_BINCUE   = 1 << 1;
 const INT32 CD_TYPE_CCD      = 1 << 2;
+#ifdef INCLUDE_CHD_SUPPORT
+const INT32 CD_TYPE_CHD      = 1 << 3;
+#endif
 
 static INT32 cd_pregap;
 static double cd_volume = 100.0;
@@ -40,6 +46,10 @@ struct cdimgCDROM_TOC { UINT8 FirstTrack; UINT8 LastTrack; UINT8 ImageType; TCHA
 static cdimgCDROM_TOC* cdimgTOC;
 
 static FILE*  cdimgFile  = NULL;
+#ifdef INCLUDE_CHD_SUPPORT
+static ChdImage* cdimgChd = NULL;
+static INT32  cdimgChdTrackLBA[MAXIMUM_NUMBER_TRACKS];  // logical LBA of each track start
+#endif
 static INT32  cdimgTrack = 0;
 static INT32  cdimgLBA   = 0;
 
@@ -64,6 +74,9 @@ static INT32 cdimgOutputbufferSize = 0;
 static INT16* cdimgOutputbuffer = NULL;
 
 static INT32 cdimgOutputPosition;
+#ifdef INCLUDE_CHD_SUPPORT
+static INT32 cdimgAudioFilePos;  // Track audio read position within file (file sector index)
+#endif
 
 NGCDGAME* game;
 
@@ -104,6 +117,13 @@ TCHAR* GetIsoPath()
 	if (cdimgTOC) {
 		return cdimgTOC->Image;
 	}
+
+#ifdef INCLUDE_CHD_SUPPORT
+	// CHD files don't need CUE parsing - the .chd file IS the complete image
+	if (_tcslen(CDEmuImage) > 4 && IsFileExt(CDEmuImage, _T(".chd"))) {
+		return CDEmuImage;
+	}
+#endif
 
 	return NULL;
 }
@@ -480,6 +500,12 @@ static INT32 cdimgExit()
 		fclose(cdimgFile);
 	cdimgFile = NULL;
 
+#ifdef INCLUDE_CHD_SUPPORT
+	if (cdimgChd)
+		ChdClose(cdimgChd);
+	cdimgChd = NULL;
+#endif
+
 	cdimgTrack = 0;
 	cdimgLBA   = 0;
 	cd_volume  = 100.0;
@@ -494,6 +520,131 @@ static INT32 cdimgExit()
 
 	return 0;
 }
+
+#ifdef INCLUDE_CHD_SUPPORT
+// ---------------------------------------------------------------------------
+// Unified sector reader for the cd_img backend.  Regardless of whether the
+// underlying image is a plain .bin/.cue or a compressed .chd, callers invoke
+// this function with a data-track-relative LBA (LBA 0 == first user sector,
+// same coordinate system as fseek(offset*2352) in a .bin file).  The returned
+// buffer is always a 2352-byte raw mode-1 sector.
+//
+//   lba    : logical sector index (matches the TOC addresses built at parse)
+//   dest   : caller-provided 2352-byte buffer
+//   bAudio : true to request the track's native form (audio), false for
+//            a mode-1 raw sector (cooked 2048 tracks are promoted to raw)
+//   return : 0 on success, non-zero on error
+static INT32 cdimgReadRawSector(INT32 lba, UINT8* dest, bool bAudio = false)
+{
+	if (!cdimgTOC)
+		return 1;
+
+	if (cdimgTOC->ImageType == CD_TYPE_CHD) {
+		INT32 nType = bAudio ? CHD_TRACK_RAW_DONTCARE : CHD_TRACK_MODE1_RAW;
+		return ChdReadSector(cdimgChd, lba, nType, dest);
+	}
+
+	// Fall-through: standard raw image (.bin/.cue, .ccd/.img).
+	if (!cdimgFile)
+		return 1;
+	if (fseek(cdimgFile, (long)lba * 2352, SEEK_SET) != 0)
+		return 1;
+	size_t n = fread(dest, 1, 2352, cdimgFile);
+	return (n == 2352) ? 0 : 1;
+}
+
+// Count the number of audio tracks in a CHD file.
+// pszFile — TCHAR path to the .chd file (pass NULL to use CDEmuImage)
+INT32 cdimgCountChdAudioTracks(TCHAR* pszFile)
+{
+	TCHAR* pszPath = pszFile ? pszFile : CDEmuImage;
+	if (!pszPath || _tcslen(pszPath) < 5) {
+		bprintf(PRINT_ERROR, _T("cdimgCountChdAudioTracks: invalid path\n"));
+		return 0;
+	}
+	return ChdCountAudioTracks(pszPath);
+}
+
+static INT32 cdimgParseChdFile()
+{
+	cdimgChd = ChdOpenFile(CDEmuImage);
+	if (!cdimgChd) {
+		dprintf(_T("*** Couldn't open .chd file\n"));
+		return 1;
+	}
+
+	INT32 nContainer = ChdGetContainerType(cdimgChd);
+	if (nContainer != CHD_CONTAINER_CD && nContainer != CHD_CONTAINER_GDROM) {
+		dprintf(_T("*** CHD is not a CD/GD-ROM image\n"));
+		ChdClose(cdimgChd);
+		cdimgChd = NULL;
+		return 1;
+	}
+
+	cdimgTOC->ImageType = CD_TYPE_CHD;
+	_tcscpy(cdimgTOC->Image, CDEmuImage);
+
+	// Standard CD pregap is 150 sectors; TOC addresses carry it so the
+	// coordinate system matches .bin/.cue.
+	cd_pregap = 150;
+
+	INT32 nTracks = ChdGetNumTracks(cdimgChd);
+	if (nTracks <= 0) {
+		ChdClose(cdimgChd);
+		cdimgChd = NULL;
+		return 1;
+	}
+
+	for (INT32 trk = 0; trk < nTracks; trk++) {
+		const ChdTrack* pT = ChdGetTrack(cdimgChd, trk);
+		cdimgChdTrackLBA[trk] = pT->nLogFrameOfs;
+
+		cdimgTOC->TrackData[trk].Control     = pT->nControl;
+		cdimgTOC->TrackData[trk].TrackNumber = tobcd(trk + 1);
+
+		const UINT8* msf = cdimgLBAToMSF(pT->nLogFrameOfs + cd_pregap);
+		cdimgTOC->TrackData[trk].Address[0] = 0;
+		cdimgTOC->TrackData[trk].Address[1] = msf[1];
+		cdimgTOC->TrackData[trk].Address[2] = msf[2];
+		cdimgTOC->TrackData[trk].Address[3] = msf[3];
+	}
+
+	// EndAddress per track (next track start, or lead-out for the last).
+	INT32 nTotal = ChdGetTotalFrames(cdimgChd);
+	for (INT32 trk = 0; trk < nTracks; trk++) {
+		INT32 end = (trk + 1 < nTracks) ? cdimgChdTrackLBA[trk + 1] : nTotal;
+		const UINT8* msf = cdimgLBAToMSF(end + cd_pregap);
+		cdimgTOC->TrackData[trk].EndAddress[0] = 0;
+		cdimgTOC->TrackData[trk].EndAddress[1] = msf[1];
+		cdimgTOC->TrackData[trk].EndAddress[2] = msf[2];
+		cdimgTOC->TrackData[trk].EndAddress[3] = msf[3];
+	}
+
+	cdimgTOC->FirstTrack = 1;
+	cdimgTOC->LastTrack  = nTracks;
+
+	// Lead-out entry, just past the last valid sector.
+	const UINT8* leadout = cdimgLBAToMSF(nTotal + cd_pregap);
+	cdimgTOC->TrackData[nTracks].Control     = 0x41;
+	cdimgTOC->TrackData[nTracks].TrackNumber = 0xAA;
+	cdimgTOC->TrackData[nTracks].Address[0]  = 0;
+	cdimgTOC->TrackData[nTracks].Address[1]  = leadout[1];
+	cdimgTOC->TrackData[nTracks].Address[2]  = leadout[2];
+	cdimgTOC->TrackData[nTracks].Address[3]  = leadout[3];
+
+	// Debug: report container class, CHD geometry and per-track MODE / bytes-per-sector.
+	bprintf(PRINT_IMPORTANT, _T("CHD: container=%s  v%d  hunkbytes=%d  frames/hunk=%d  tracks=%d  total frames=%d\n"),
+		ChdContainerName(nContainer), ChdGetVersion(cdimgChd),
+		ChdGetHunkBytes(cdimgChd), ChdGetFramesPerHunk(cdimgChd), nTracks, nTotal);
+	for (INT32 trk = 0; trk < nTracks; trk++) {
+		const ChdTrack* pT = ChdGetTrack(cdimgChd, trk);
+		bprintf(PRINT_IMPORTANT, _T("CHD:   track %02d  type=%s  %d bytes/sector  sub=%d  frames=%d\n"),
+			trk + 1, ChdTrackTypeName(pT->nType), pT->nDataSize, pT->nSubSize, pT->nFrames);
+	}
+
+	return 0;
+}
+#endif
 
 static INT32 cdimgInit()
 {
@@ -518,6 +669,17 @@ static INT32 cdimgInit()
 			return 1;
 		}
 
+#ifdef INCLUDE_CHD_SUPPORT
+	} else
+	if (IsFileExt(filename, _T(".chd"))) {
+		if (cdimgParseChdFile()) {
+			dprintf(_T("*** Couldn't parse .chd file\n"));
+			cdimgExit();
+
+			return 1;
+		}
+
+#endif
 	} else
 	if (IsFileExt(filename, _T(".ccd"))) {
 		if (cdimgParseSubFile()) {
@@ -549,7 +711,23 @@ static INT32 cdimgInit()
 
 	cdimgLBA++;
 
+#ifdef INCLUDE_CHD_SUPPORT
+	// Validate the CD by scanning the ISO-9660 volume descriptor at sector 16.
+	// Both .bin and .chd images expose sector 16 as the first usable data sector.
+	if (cdimgTOC->ImageType == CD_TYPE_CHD) {
+		// Unified sector reader gives us a complete 2352-byte raw sector.
+		// CD001 identifier lives at byte 1 of the 2048-byte user data area,
+		// which is byte 17 (16 + 1) of the full 2352-byte sector.
+		if (cdimgReadRawSector(16, (UINT8*)buf) == 0) {
+			if (strncmp("CD001", buf + 16 + 1, 5) == 0) {
+				buf[16 + 48] = 0;
+			} else
+				dprintf(_T("*** Bad CD!\n"));
+		}
+	} else {
+#else
 	{
+#endif
 		FILE* h = fopen(cdimgTOC->Image, _T("rb"));
 
 		if (h) {
@@ -608,7 +786,7 @@ static INT32 cdimgPlayLBA(INT32 LBA) // audio play start
 	if (QChannel != NULL) { // .CCD dump w/.SUB
 		if (QChannel[LBA].Control & 0x40)
 			return 1;
-	} else { // .BIN/.CUE dump
+	} else { // .BIN/.CUE dump or .CHD
 		if (cdimgTOC->TrackData[cdimgFindTrack(LBA)].Control & 0x40)
 			return 1;
 	}
@@ -622,7 +800,50 @@ static INT32 cdimgPlayLBA(INT32 LBA) // audio play start
 
 	bprintf(PRINT_IMPORTANT, _T("    playing track %2i\n"), cdimgTrack + 1);
 
+#ifdef INCLUDE_CHD_SUPPORT
+	// ------------------------------------------------------------------
+	// Prepare the audio output buffer.  Size and byte layout are always
+	// the same regardless of image container (stereo 16-bit PCM).  The
+	// only difference is how we source the raw bytes.
+	// ------------------------------------------------------------------
+	INT32 sectors_to_read = (cdimgOUT_SIZE * 4) / 2352;
+	INT32 base;
+
+	// Logical LBA space is shared by CHD and .bin/.cue: subtract the disc
+	// pregap.  For CHD, cd_chd maps the logical LBA to its CHD frame per track.
+	base = cdimgLBA - cd_pregap;
+
+	// Initialize audio file position tracker for subsequent buffer refills
+	cdimgAudioFilePos = base;
+
+	if (cdimgTOC->ImageType == CD_TYPE_CHD) {
+
+		UINT8 sector_buf[2352];
+		INT32 read_count = 0;
+		if (base < 0) base = 0;
+		for (INT32 i = 0; i < sectors_to_read; i++) {
+			if (cdimgReadRawSector(base + i, sector_buf, true) != 0)
+				break;
+
+			// Convert big-endian CD-DA data to native byte order
+			for (INT32 j = 0; j < 2352; j += 4) {
+				INT32 dst_idx = (i * 2352 + j) / 2;
+				cdimgOutputbuffer[dst_idx] = (sector_buf[j] << 8) | sector_buf[j + 1];
+				cdimgOutputbuffer[dst_idx + 1] = (sector_buf[j + 2] << 8) | sector_buf[j + 3];
+			}
+			read_count++;
+		}
+		// each CHD sector == 2352 bytes == 588 stereo 16-bit samples (4 bytes each)
+		cdimgOutputbufferSize = read_count * (2352 / 4);
+		if (read_count == 0) {
+			cdimgStop();
+			return 1;
+		}
+
+	} else {
+#else
 	{
+#endif
 
 		cdimgFile = fopen(cdimgTOC->Image, _T("rb"));
 		if (cdimgFile == NULL)
@@ -662,10 +883,31 @@ static INT32 cdimgLoadSector(INT32 LBA, char* pBuffer)
 {
 	if (CDEmuStatus == playing) return 0; // data loading
 
+	INT32 originalLBA = LBA;
 	if (CDEmuStatus == seeking) {
 		LBA -= cd_pregap; // when seeking, we must account for pregap
 		re_sync = 1;
 	}
+
+#ifdef INCLUDE_CHD_SUPPORT
+	// Unified sector reader: cdimgReadRawSector handles both .bin and .chd
+	// transparently. For .bin files we still prefer the sequential-access
+	// optimization below (avoids redundant fseek calls).
+	if (cdimgTOC && cdimgTOC->ImageType == CD_TYPE_CHD) {
+		if (cdimgReadRawSector(LBA, (UINT8*)pBuffer) != 0) {
+			dprintf(_T("*** couldn't read sector (LBA %08u)\n"), originalLBA);
+			return 0;
+		}
+		CDEmuStatus = reading;
+		// cdimgLBA mirrors the .cue/.bin convention: file-relative sector
+		// index of the next sector.  cdimgTrack is kept in sync using a
+		// full-disc LBA (with pregap) so cdimgFindTrack returns the correct
+		// track index for the BIOS standby-screen Q-channel query.
+		cdimgLBA = LBA + 1;
+		cdimgTrack = cdimgFindTrack(LBA + cd_pregap);
+		return cdimgLBA;
+	}
+#endif
 
 	if (LBA != cdimgLBA || !cdimgFile || re_sync) {
 		re_sync = 0;
@@ -694,6 +936,9 @@ static INT32 cdimgLoadSector(INT32 LBA, char* pBuffer)
 
 	//dprintf(_T("    reading LBA %08i 0x%08X"), LBA, ftell(cdimgFile));
 
+	// Raw-image path (.cue / .ccd / .bin).  Keep cdimgLBA semantics
+	// exactly as before (file sector index) — this historically produces
+	// the correct standby-screen output.
 	cdimgLBA = cdimgMSFToLBA(cdimgTOC->TrackData[0].Address) + (ftell(cdimgFile) + 2351) / 2352 - cd_pregap;
 
 	bool status = (fread(pBuffer, 1, 2352, cdimgFile) <= 0);
@@ -792,7 +1037,11 @@ static UINT8* cdimgReadQChannel()
 				QChannelData[6] = QChannel[cdimgLBA].MSFrel.F;
 
 				QChannelData[7] = QChannel[cdimgLBA].Control;
-			} else { // .BIN/.ISO
+			} else { // .BIN/.ISO / .CHD
+				// cdimgLBA is the file-relative sector index for .cue
+				// (data-track origin). For .chd we additionally keep
+				// cdimgTrack set by cdimgFindTrack to identify which contains
+				// the current track.
 				const UINT8* AddressAbs = cdimgLBAToMSF(cdimgLBA);
 				const UINT8* AddressRel = cdimgLBAToMSF(cdimgLBA - cdimgMSFToLBA(cdimgTOC->TrackData[cdimgTrack].Address));
 
@@ -865,14 +1114,14 @@ static INT32 cdimgGetSoundBuffer(INT16* buffer, INT32 samples)
 	}
 #endif
 
-	// --- End-of-track check
+	// --- End-of-track check (shared for both .bin and .chd — both use TOC).
 	if (cdimgLBA >= cdimgMSFToLBA(cdimgTOC->TrackData[cdimgTrack + 1].Address)) {
 		bprintf(0, _T("End of audio track %d reached!! stopping.\n"), cdimgTrack + 1);
 		cdimgStop();
 		return 0;
 	}
 
-	// --- Buffer-underflow refill.  Drain whatever is left, then refill from disk
+	// --- Buffer-underflow refill.  Drain whatever is left, then refill from disk/chd.
 	if ((cdimgOutputPosition + samples) >= cdimgOutputbufferSize) {
 		INT16* src = cdimgOutputbuffer + cdimgOutputPosition * 2;
 		INT16* dst = buffer;
@@ -887,7 +1136,41 @@ static INT32 cdimgGetSoundBuffer(INT16* buffer, INT32 samples)
 
 		cdimgOutputPosition = 0;
 
+#ifdef INCLUDE_CHD_SUPPORT
+		// Refill the buffer: data source selected by image container type.
+		if (cdimgTOC->ImageType == CD_TYPE_CHD) {
+			// CHD: decompress sectors one at a time, each 2352 bytes.
+			// CD-DA audio is stored as big-endian 16-bit stereo samples,
+			// so we need to convert from big-endian to native byte order.
+			INT32 sectors_to_read = (cdimgOUT_SIZE * 4) / 2352;
+			INT32 read_count = 0;
+			INT32 base = cdimgAudioFilePos;  // Use audio file position tracker
+			if (base < 0) base = 0;
+
+			UINT8 sector_buf[2352];
+
+			for (INT32 i = 0; i < sectors_to_read; i++) {
+				if (cdimgReadRawSector(base + i, sector_buf, true) != 0)
+					break;
+
+				// Convert big-endian CD-DA data to native byte order
+				for (INT32 j = 0; j < 2352; j += 4) {
+					INT32 dst_idx = (i * 2352 + j) / 2;
+					cdimgOutputbuffer[dst_idx] = (sector_buf[j] << 8) | sector_buf[j + 1];
+					cdimgOutputbuffer[dst_idx + 1] = (sector_buf[j + 2] << 8) | sector_buf[j + 3];
+				}
+				read_count++;
+			}
+			// Advance audio file position for next buffer refill
+			cdimgAudioFilePos += read_count;
+
+			cdimgOutputbufferSize = read_count * (2352 / 4);
+			if (cdimgOutputbufferSize <= 0)
+				cdimgStop();
+		} else {
+#else
 		{
+#endif
 			// BIN / raw: rely on the FILE* stream.  If it was lost (rare),
 			// attempt to re-open at the current LBA.
 			if (cdimgFile == NULL) {
