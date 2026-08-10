@@ -4095,6 +4095,16 @@ DRV		BurnDrvClshroads;
 DRV		BurnDrvClshroad;
 DRV		BurnDrvmd_classicc;
 DRV		BurnDrvsnes_Classickong;
+DRV		BurnDrvgba_n_cvaniau;
+DRV		BurnDrvgba_n_dkong;
+DRV		BurnDrvgba_n_drmrio;
+DRV		BurnDrvgba_n_exbike;
+DRV		BurnDrvgba_n_iceclm;
+DRV		BurnDrvgba_n_metroi;
+DRV		BurnDrvgba_n_pacman;
+DRV		BurnDrvgba_n_smb;
+DRV		BurnDrvgba_n_zelda;
+DRV		BurnDrvgba_n_xevios;
 DRV		BurnDrvmd_clayfght;
 DRV		BurnDrvsnes_Clayfighte;
 DRV		BurnDrvmd_clayfghtu;
@@ -7147,6 +7157,17 @@ DRV		BurnDrvfds_famicgrapriii;
 DRV		BurnDrvnes_famicjumii;
 DRV		BurnDrvnes_famicjum;
 DRV		BurnDrvnes_famicjump;
+DRV		BurnDrvgba_f_smb;
+DRV		BurnDrvgba_f_dkong;
+DRV		BurnDrvgba_f_iceclm;
+DRV		BurnDrvgba_f_exbike;
+DRV		BurnDrvgba_f_zelda;
+DRV		BurnDrvgba_f_pacman;
+DRV		BurnDrvgba_f_xevios;
+DRV		BurnDrvgba_f_drmrio;
+DRV		BurnDrvgba_f_murasa;
+DRV		BurnDrvgba_f_metroi;
+DRV		BurnDrvgba_f_akumaj;
 DRV		BurnDrvsnes_Famtanclub2j;
 DRV		BurnDrvnes_famicomwars;
 DRV		BurnDrvnes_famicomwarsj;
@@ -29959,6 +29980,16 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvClshroad,			// Clash-Road
 	&BurnDrvmd_classicc,		// Classic Collection (Euro)
 	&BurnDrvsnes_Classickong,	// Classic Kong Complete (HB, v2.01)
+	&BurnDrvgba_n_cvaniau,		// Classic NES Series: Castlevania (USA)
+	&BurnDrvgba_n_dkong,		// Classic NES Series: Donkey Kong (USA, Europe)
+	&BurnDrvgba_n_drmrio,		// Classic NES Series: Dr. Mario (USA, Europe)
+	&BurnDrvgba_n_exbike,		// Classic NES Series: Excitebike (USA, Europe)
+	&BurnDrvgba_n_iceclm,		// Classic NES Series: Ice Climber (USA, Europe)
+	&BurnDrvgba_n_metroi,		// Classic NES Series: Metroid (USA, Europe)
+	&BurnDrvgba_n_pacman,		// Classic NES Series: Pac-Man (USA, Europe)
+	&BurnDrvgba_n_smb,			// Classic NES Series: Super Mario Bros. (USA, Europe)
+	&BurnDrvgba_n_zelda,		// Classic NES Series: The Legend of Zelda (USA, Europe)
+	&BurnDrvgba_n_xevios,		// Classic NES Series: Xevious (USA, Europe)
 	&BurnDrvmd_clayfght,		// Clay Fighter (Euro)
 	&BurnDrvsnes_Clayfighte,	// Clay Fighter (Euro)
 	&BurnDrvmd_clayfghtu,		// Clay Fighter (USA)
@@ -33011,6 +33042,17 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_famicjumii,		// Famicom Jump II: Saikyou no 7 Nin (Japan)
 	&BurnDrvnes_famicjum,		// Famicom Jump: Eiyuu Retsuden (Japan)
 	&BurnDrvnes_famicjump,		// Famicom Jump: Heroes History (Hack, English v1.03)
+	&BurnDrvgba_f_smb,			// Famicom Mini Vol.01: Super Mario Bros. (Japan, Rev 1)
+	&BurnDrvgba_f_dkong,		// Famicom Mini Vol.02: Donkey Kong (Japan)
+	&BurnDrvgba_f_iceclm,		// Famicom Mini Vol.03: Ice Climber (Japan)
+	&BurnDrvgba_f_exbike,		// Famicom Mini Vol.04: Excitebike (Japan)
+	&BurnDrvgba_f_zelda,		// Famicom Mini Vol.05: Zelda no Densetsu 1: The Hyrule Fantasy (Japan)
+	&BurnDrvgba_f_pacman,		// Famicom Mini Vol.06: Pac-Man (Japan)
+	&BurnDrvgba_f_xevios,		// Famicom Mini Vol.07: Xevious (Japan)
+	&BurnDrvgba_f_drmrio,		// Famicom Mini Vol.15: Dr. Mario (Japan)
+	&BurnDrvgba_f_murasa,		// Famicom Mini Vol.22: Nazo no Murasame Jou (Japan)
+	&BurnDrvgba_f_metroi,		// Famicom Mini Vol.23: Metroid (Japan)
+	&BurnDrvgba_f_akumaj,		// Famicom Mini Vol.29: Akumajou Dracula (Japan)
 	&BurnDrvsnes_Famtanclub2j,	// Famicom Tantei Club Part II: Ushiro ni Tatsu Shoujo (Japan)
 	&BurnDrvnes_famicomwars,	// Famicom Wars (Hack, English)
 	&BurnDrvnes_famicomwarsj,	// Famicom Wars (Japan)
@@ -55793,6 +55835,16 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "clshroad", "pre90s/d_clshroad.cpp"},
 	{ "md_classicc", "megadrive/d_megadrive.cpp"},
 	{ "snes_classickong", "snes/d_snes.cpp"},
+	{ "gba_n_cvaniau", "gba/d_gba.cpp"},
+	{ "gba_n_dkong", "gba/d_gba.cpp"},
+	{ "gba_n_drmrio", "gba/d_gba.cpp"},
+	{ "gba_n_exbike", "gba/d_gba.cpp"},
+	{ "gba_n_iceclm", "gba/d_gba.cpp"},
+	{ "gba_n_metroi", "gba/d_gba.cpp"},
+	{ "gba_n_pacman", "gba/d_gba.cpp"},
+	{ "gba_n_smb", "gba/d_gba.cpp"},
+	{ "gba_n_zelda", "gba/d_gba.cpp"},
+	{ "gba_n_xevios", "gba/d_gba.cpp"},
 	{ "md_clayfght", "megadrive/d_megadrive.cpp"},
 	{ "snes_clayfighte", "snes/d_snes.cpp"},
 	{ "md_clayfghtu", "megadrive/d_megadrive.cpp"},
@@ -58827,6 +58879,17 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_famicjumii", "nes/d_nes.cpp"},
 	{ "nes_famicjum", "nes/d_nes.cpp"},
 	{ "nes_famicjump", "nes/d_nes.cpp"},
+	{ "gba_f_smb", "gba/d_gba.cpp"},
+	{ "gba_f_dkong", "gba/d_gba.cpp"},
+	{ "gba_f_iceclm", "gba/d_gba.cpp"},
+	{ "gba_f_exbike", "gba/d_gba.cpp"},
+	{ "gba_f_zelda", "gba/d_gba.cpp"},
+	{ "gba_f_pacman", "gba/d_gba.cpp"},
+	{ "gba_f_xevios", "gba/d_gba.cpp"},
+	{ "gba_f_drmrio", "gba/d_gba.cpp"},
+	{ "gba_f_murasa", "gba/d_gba.cpp"},
+	{ "gba_f_metroi", "gba/d_gba.cpp"},
+	{ "gba_f_akumaj", "gba/d_gba.cpp"},
 	{ "snes_famtanclub2j", "snes/d_snes.cpp"},
 	{ "nes_famicomwars", "nes/d_nes.cpp"},
 	{ "nes_famicomwarsj", "nes/d_nes.cpp"},

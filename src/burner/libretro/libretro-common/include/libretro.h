@@ -2821,6 +2821,39 @@ enum retro_mod
 #define RETRO_ENVIRONMENT_GET_HDR_OUTPUT_MODE (91 | RETRO_ENVIRONMENT_EXPERIMENTAL)
 
 /**
+ * Queries the peak luminance the frontend is presenting to, in cd/m2 (nits).
+ *
+ * Only meaningful together with #RETRO_PIXEL_FORMAT_HDR10_2101010.  A core
+ * emitting HDR10 encodes absolute luminance itself, so it decides where its
+ * brightest content lands.  #RETRO_ENVIRONMENT_GET_HDR_PAPER_WHITE_NITS says
+ * where ordinary content sits; this says how much room there is above it.  The
+ * gap between the two is the entire headroom a core has for highlights, and
+ * without it a core has to guess - a guess that is too dark on a bright display
+ * and clips on a dim one.
+ *
+ * This is what the *display* can do, not what the content wants, so it is a
+ * ceiling to roll off toward rather than a level to target.  A core should not
+ * assume anything it emits below this value is reproduced exactly; displays
+ * tone map internally, and many report a peak they can only hold over a small
+ * window.
+ *
+ * May be lower than paper white if the user has configured it so.  A core
+ * should treat that as zero headroom and clamp to paper white rather than
+ * producing a negative range.
+ *
+ * The user can change this at any time, so a core should re-query it rather
+ * than caching it indefinitely.
+ *
+ * @param[out] data <tt>float *</tt>.
+ * Set to the peak luminance in nits.
+ * @return \c true if the call is recognised, \c false on a frontend that does
+ * not implement it; callers should then fall back to a sensible default.
+ * 1000 nits is a reasonable assumption, being both the HDR10 reference peak
+ * and roughly what mid-range HDR displays achieve.
+ */
+#define RETRO_ENVIRONMENT_GET_HDR_MAX_NITS (92 | RETRO_ENVIRONMENT_EXPERIMENTAL)
+
+/**
  * Result of \c RETRO_ENVIRONMENT_GET_MEMORY_STATUS.
  *
  * Sizes are in bytes; a field the frontend cannot determine is left at 0.
@@ -3007,6 +3040,10 @@ typedef const char *(RETRO_CALLCONV *retro_vfs_get_path_t)(struct retro_vfs_file
  * @param path The path to open.
  * @param mode A bitwise combination of \c RETRO_VFS_FILE_ACCESS flags.
  * At a minimum, one of \c RETRO_VFS_FILE_ACCESS_READ or \c RETRO_VFS_FILE_ACCESS_WRITE must be specified.
+ * If \c RETRO_VFS_FILE_ACCESS_WRITE is specified and \c RETRO_VFS_FILE_ACCESS_UPDATE_EXISTING is not specified,
+ * and no file or directory exists at \c path, this function will attempt to create an empty file at \c path.
+ * If either \c RETRO_VFS_FILE_ACCESS_WRITE is not specified or \c RETRO_VFS_FILE_ACCESS_UPDATE_EXISTING is specified,
+ * and no file or directory exists at \c path, this function will return \c NULL without attempting to create a file at \c path.
  * @param hints A bitwise combination of \c RETRO_VFS_FILE_ACCESS_HINT flags.
  * @return A handle to the opened file,
  * or \c NULL upon failure.
@@ -3078,8 +3115,7 @@ typedef int64_t (RETRO_CALLCONV *retro_vfs_tell_t)(struct retro_vfs_file_handle 
  * @param stream The file to set the position of.
  * @param offset The new position, in bytes.
  * @param seek_position The position to seek from.
- * @return The new position,
- * or -1 if there was an error.
+ * @return 0 on success, -1 on failure.
  * @since VFS API v1
  * @see File Seek Positions
  * @see filestream_seek
@@ -4481,6 +4517,27 @@ struct retro_log_callback
 
 /** Indicates CPU support for the LZCNT instruction (x86 ABM / ARM CLZ). */
 #define RETRO_SIMD_LZCNT    (1 << 23)
+
+/**
+ * Indicates CPU support for the PCLMULQDQ carry-less multiply instruction.
+ *
+ * Distinct from \c RETRO_SIMD_AES: AES-NI is CPUID.1:ECX[25] and
+ * PCLMULQDQ is CPUID.1:ECX[1]. They shipped together on most parts but
+ * hypervisors mask them independently and some early Westmere SKUs had
+ * AES fused off, so one must not be used as a proxy for the other.
+ */
+#define RETRO_SIMD_PCLMUL   (1 << 24)
+
+/**
+ * Indicates CPU support for the ARMv8 CRC32 instructions
+ * (\c crc32b / \c crc32h / \c crc32w / \c crc32x).
+ *
+ * These compute CRC-32/ISO-HDLC, the gzip and PNG polynomial, not
+ * CRC-32C. Optional in ARMv8.0 and mandatory from ARMv8.1, so a
+ * 64-bit ARM CPU does not imply their presence: Apple's A7 through
+ * A10 lack them, for instance.
+ */
+#define RETRO_SIMD_CRC32    (1 << 25)
 
 /** @} */
 
@@ -7749,7 +7806,8 @@ struct retro_exec_mem_alloc
  */
 struct retro_exec_mem_free
 {
-   void *rx;  /**< The \c rx pointer returned by a previous alloc call. */
+   void *rx;  /**< The \c rx pointer returned by a previous alloc call.
+                   The matching \c rw pointer is also accepted. */
 };
 
 /** @} */

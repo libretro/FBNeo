@@ -40,7 +40,10 @@ enum rwebm_codec
    RWEBM_CODEC_VORBIS,
    RWEBM_CODEC_OPUS,
    RWEBM_CODEC_H264,  /* V_MPEG4/ISO/AVC: CodecPrivate is the avcC box  */
-   RWEBM_CODEC_AAC    /* A_AAC*: CodecPrivate is the ASC                */
+   RWEBM_CODEC_AAC,   /* A_AAC*: CodecPrivate is the ASC                */
+   RWEBM_CODEC_FLAC   /* A_FLAC: CodecPrivate is a whole fLaC header -
+                       * magic and metadata blocks - and each block is
+                       * one raw FLAC frame                            */
 };
 
 typedef struct
@@ -139,6 +142,21 @@ rwebm_t *rwebm_open_memory_avail(const uint8_t *data, size_t size,
  * size).  Until it reaches the segment end, rwebm_read_packet returns
  * RWEBM_READ_AGAIN instead of end-of-stream at the wall. */
 void rwebm_set_avail(rwebm_t *webm, size_t avail);
+
+/* Cues, the container's seek index: the number of usable points, 0
+ * when the file carries none or the parse did not reach them (they
+ * are usually written after the clusters, so a partial read whose
+ * wall stopped the header walk short has none).  Seeking needs them:
+ * without an index a target can only be reached by walking. */
+int rwebm_num_cues(const rwebm_t *webm);
+
+/* Reposition the packet walk to the indexed cluster at or before
+ * 'ns'.  Returns the timestamp actually landed on, in nanoseconds,
+ * which is at or before the one asked for - a caller wanting an exact
+ * position decodes forward from here and discards.  Returns < 0 when
+ * the file has no Cues, or when the target cluster lies past a
+ * partial read's wall.  The next rwebm_read_packet resumes there. */
+int64_t rwebm_seek_time_ns(rwebm_t *webm, int64_t ns);
 
 /* Restart packet reading from the first cluster. */
 void rwebm_rewind(rwebm_t *webm);

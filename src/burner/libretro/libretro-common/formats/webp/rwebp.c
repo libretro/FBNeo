@@ -22,7 +22,15 @@
  * inverse transforms, 4x4 and 16x16 intra prediction, both the simple
  * and normal loop filters, fancy chroma upsampling and YUV->RGB. Only
  * VP8 key frames occur in WebP, so inter-frame prediction (motion
- * vectors, golden/altref reference frames) is intentionally absent. */
+ * vectors, golden/altref reference frames) is intentionally absent.
+ *
+ * Alpha (ALPH chunks, all filter methods) is applied to lossy images,
+ * and animated WebP (ANMF) is decoded into fully composited canvas
+ * frames following the container spec's canvas/blend/dispose model.
+ *
+ * What it does not implement: encoding, color profiles and EXIF/XMP
+ * metadata (the chunks are skipped), and fragments (an abandoned spec
+ * draft). */
 
 #include <stdio.h>
 #include <stdint.h>
@@ -179,30 +187,50 @@ static int vh_next_tbl_bits(const int *count, int len, int root_bits)
 static int vh_build(vh *h, const uint8_t *lens, int ns, int root)
 {
    int count[VH_MAXCL + 1], offset[VH_MAXCL + 1];
-   int sorted[4096];
+   /* Symbol scratch, heap rather than stack.  As int sorted[4096] this
+    * was 16 KiB in one frame - twice the 8 KiB a GEKKO thread gets
+    * (STACKSIZE in rthreads/gx_pthread.h) - and it is reachable from
+    * a task handler, so it runs on a worker rather than the main
+    * thread whenever the task queue is threaded:
+    * task_file_load_handler -> task_image_load_handler ->
+    * task_image_process -> image_transfer_process ->
+    * rwebp_process_image -> ... -> vh_build, and the same via
+    * task_overlay_handler.  Wii and GameCube build HAVE_RWEBP and
+    * HAVE_THREADS both.
+    *
+    * uint16_t rather than int as well: every value here is a symbol
+    * index, bounded by the ns > 4096 rejection below, and every read
+    * of it is already masked with 0xFFFF. */
+   uint16_t *sorted = (uint16_t*)malloc(4096 * sizeof(*sorted));
    int total_size = 1 << root;
    int len, symbol, i, pass;
    uint32_t *t = NULL;
 
-   if (ns > 4096) return -1;
+   if (!sorted)
+      return -1;
+   if (ns > 4096)
+      goto fail;
    memset(count, 0, sizeof(count));
    for (symbol = 0; symbol < ns; symbol++)
    {
-      if (lens[symbol] > VH_MAXCL) return -1;
+      if (lens[symbol] > VH_MAXCL)
+         goto fail;
       count[lens[symbol]]++;
    }
-   if (count[0] == ns) return -1;
+   if (count[0] == ns)
+      goto fail;
 
    offset[1] = 0;
    for (len = 1; len < VH_MAXCL; len++)
    {
-      if (count[len] > (1 << len)) return -1;
+      if (count[len] > (1 << len))
+         goto fail;
       offset[len + 1] = offset[len] + count[len];
    }
    for (symbol = 0; symbol < ns; symbol++)
    {
       int cl = lens[symbol];
-      if (cl > 0) sorted[offset[cl]++] = symbol;
+      if (cl > 0) sorted[offset[cl]++] = (uint16_t)symbol;
    }
 
    /* Single-symbol special case: 0-bit code returns that symbol. */
@@ -210,10 +238,12 @@ static int vh_build(vh *h, const uint8_t *lens, int ns, int root)
    {
       total_size = 1 << root;
       h->t = (uint32_t*)calloc(total_size, sizeof(uint32_t));
-      if (!h->t) return -1;
+      if (!h->t)
+         goto fail;
       h->sz = total_size; h->rb = root;
       for (i = 0; i < total_size; i++)
          h->t[i] = (uint32_t)(sorted[0] & 0xFFFF);
+      free(sorted);
       return 0;
    }
 
@@ -274,12 +304,18 @@ static int vh_build(vh *h, const uint8_t *lens, int ns, int root)
       if (pass == 0)
       {
          t = (uint32_t*)calloc(total_size + 1, sizeof(uint32_t));
-         if (!t) return -1;
+         if (!t)
+            goto fail;
       }
    }
 
    h->t = t; h->sz = total_size; h->rb = root;
+   free(sorted);
    return 0;
+
+fail:
+   free(sorted);
+   return -1;
 }
 
 static INLINE int vh_read(const vh *h, vbr *b)

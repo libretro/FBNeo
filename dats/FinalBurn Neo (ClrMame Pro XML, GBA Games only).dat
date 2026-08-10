@@ -21,6 +21,96 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="n_cvaniau" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Castlevania (USA)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Castlevania (U)(2004)(Nintendo).gba" size="1048576" crc="23e4082c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_dkong" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Donkey Kong (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Donkey Kong (U, E)(2004)(Nintendo).gba" size="1048576" crc="f53d8b56"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_drmrio" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Dr. Mario (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Dr. Mario (U)(2004)(Nintendo).gba" size="1048576" crc="934e1f1d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_exbike" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Excitebike (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Excitebike (U, E)(2004)(Nintendo).gba" size="1048576" crc="67d9a2a6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_iceclm" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Ice Climber (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Ice Climber (U, E)(2004)(Nintendo).gba" size="1048576" crc="b265538d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_metroi" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Metroid (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Metroid (U, E)(2004)(Nintendo).gba" size="1048576" crc="9a243b9b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_pacman" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Pac-Man (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Pac-Man (U, E)(2004)(Nintendo).gba" size="1048576" crc="c28df82f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_smb" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Super Mario Bros. (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Super Mario Bros. (U, E)(2004)(Nintendo).gba" size="1048576" crc="f7129225"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_zelda" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: The Legend of Zelda (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - The Legend of Zelda (U, E)(2004)(Nintendo).gba" size="1048576" crc="6d49cabf"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="n_xevios" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Classic NES Series: Xevious (USA, Europe)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Classic NES Series - Xevious (U, E)(2004)(Nintendo).gba" size="1048576" crc="9cd2d5dd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="ddragonj" cloneof="ddragon" romof="ddragon" sourcefile="gba/d_gba.cpp">
 		<description>Double Dragon Advance (Japan)</description>
 		<year>2004</year>
@@ -35,6 +125,105 @@
 		<year>2003</year>
 		<manufacturer>Atlus</manufacturer>
 		<rom name="Double Dragon Advance (U)(2003)(Atlus).gba" size="4194304" crc="764fafb5"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_smb" cloneof="n_smb" romof="n_smb" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.01: Super Mario Bros. (Japan, Rev 1)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.01 - Super Mario Bros. (J, Rev 1)(2004)(Nintendo).gba" size="1048576" crc="cd2604dd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_dkong" cloneof="n_dkong" romof="n_dkong" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.02: Donkey Kong (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.02 - Donkey Kong (J)(2004)(Nintendo).gba" size="1048576" crc="071c3f2b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_iceclm" cloneof="n_iceclm" romof="n_iceclm" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.03: Ice Climber (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.03 - Ice Climber (Japan)(2004)(Nintendo).gba" size="1048576" crc="d0aef472"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_exbike" cloneof="n_exbike" romof="n_exbike" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.04: Excitebike (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.04 - Excitebike (J)(2004)(Nintendo).gba" size="1048576" crc="32604c95"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_zelda" cloneof="n_zelda" romof="n_zelda" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.05: Zelda no Densetsu 1: The Hyrule Fantasy (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.05 - Zelda no Densetsu 1 - The Hyrule Fantasy (J)(2004)(Nintendo).gba" size="1048576" crc="712d76e8"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_pacman" cloneof="n_pacman" romof="n_pacman" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.06: Pac-Man (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.06 - Pac-Man (J)(2004)(Nintendo).gba" size="1048576" crc="91acf642"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_xevios" cloneof="n_xevios" romof="n_xevios" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.07: Xevious (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.07 - Xevious (J)(2004)(Nintendo).gba" size="1048576" crc="f54eeb0e"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_drmrio" cloneof="n_drmrio" romof="n_drmrio" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.15: Dr. Mario (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.15 - Dr. Mario (J)(2004)(Nintendo).gba" size="1048576" crc="c836f2e2"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_murasa" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.22: Nazo no Murasame Jou (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.22 - Nazo no Murasame Jou (J)(2004)(Nintendo).gba" size="4194304" crc="8233349c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_metroi" cloneof="n_metroi" romof="n_metroi" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.23: Metroid (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.23 - Metroid (J)(2004)(Nintendo).gba" size="4194304" crc="abeccdab"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="f_akumaj" cloneof="n_cvaniau" romof="n_cvaniau" sourcefile="gba/d_gba.cpp">
+		<description>Famicom Mini Vol.29: Akumajou Dracula (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Famicom Mini Vol.29 - Akumajou Dracula (J)(2004)(Nintendo).gba" size="1048576" crc="11419d8b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

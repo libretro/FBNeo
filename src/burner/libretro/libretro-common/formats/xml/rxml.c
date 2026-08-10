@@ -31,6 +31,16 @@
 
 /* Self-contained XML parser.
  *
+ * What it implements: well-formed element trees with attributes,
+ * character data, CDATA sections, comments, processing instructions,
+ * numeric character references and the five predefined entities,
+ * building the rxml_node tree declared in <formats/rxml.h>.
+ *
+ * What it does not implement: DTD interpretation (a DOCTYPE
+ * declaration is skipped, so internally defined entities and attribute
+ * defaults have no effect), namespace processing (prefixes stay part
+ * of the name), validation, non-UTF-8 encodings, and serialisation.
+ *
  * This replaces the previously vendored yxml push parser (deps/yxml)
  * with a direct span scanner over the input string, written from
  * scratch.  The accepted document set and the resulting tree match the
@@ -61,9 +71,43 @@
  *     U+DFFF..U+E7FD (while accepting U+D800..U+DFFE).
  */
 
+/* Arena --------------------------------------------------------------
+ *
+ * Every node, attribute and string used to be its own malloc: the 55 XML
+ * assets of one libretro core came to 83727 of them, three per element
+ * and two per attribute, and the same number of frees walking the tree
+ * on the way out.  None of it is individually freeable - the public API
+ * hands out pointers that live until rxml_free_document and offers no
+ * way to release one - so the allocator was doing bookkeeping nobody
+ * could use.
+ *
+ * Bump-allocate instead and free the blocks together.  Block size grows
+ * geometrically from RXML_ARENA_MIN so a large document does not pay a
+ * malloc per few nodes; a request too big for the head block gets its
+ * own block linked in behind it, which keeps the head's remaining space
+ * usable rather than stranding it. */
+
+#define RXML_ARENA_MIN (16 * 1024)
+
+struct rxml_block
+{
+   struct rxml_block *next;
+   size_t             used;
+   size_t             cap;
+   /* payload follows */
+};
+
 struct rxml_document
 {
-   struct rxml_node *root_node;
+   struct rxml_node  *root_node;
+   struct rxml_block *blocks;
+   size_t             blocksz;
+   /* The document text, owned and mutable.  Attribute values and
+    * character data that need no translation are NUL-terminated where
+    * they sit and pointed at rather than copied, so this has to outlive
+    * the tree - and no caller's buffer can serve, which is why the
+    * string entry point takes a copy. */
+   char              *buf;
 };
 
 /* Keep rarely taken scanners (declarations, comments, PIs, references,
@@ -133,6 +177,14 @@ struct rxml_parser
    const unsigned char *val_direct; /* clean attr value taken straight
                                        from the input (no accumulation) */
    size_t val_direct_len;
+   /* The same trick for character data: a single clean run is kept as a
+    * span into the input and copied only if something else has to be
+    * accumulated on top of it - a second run, a reference, a CR, CDATA.
+    * Pretty-printed XML puts one such run, the indentation, between
+    * every pair of elements, and an element with children throws it
+    * away again at the end tag, so copying it was pure loss. */
+   const unsigned char *txt_direct;
+   size_t txt_direct_len;
    struct rxml_frame *frames; /* per-depth scratch (dynamic):
                                  .node is the pushed parent (indices
                                  below stack_i), .name/.len the open
@@ -144,6 +196,7 @@ struct rxml_parser
    rxml_node_t *node;
    struct rxml_attrib_node *attr;
    rxml_document_t *doc;
+   unsigned opts;
 };
 
 /* Accumulator ------------------------------------------------------- */
@@ -166,8 +219,24 @@ RXML_COLD static int rxml_acc_reserve(struct rxml_parser *ps, size_t extra)
    return 1;
 }
 
+/* Fold a deferred run into the accumulator: called from the two entry
+ * points below, so no accumulation path can miss it. */
+RXML_COLD static int rxml_acc_promote(struct rxml_parser *ps)
+{
+   const unsigned char *s = ps->txt_direct;
+   size_t               n = ps->txt_direct_len;
+   ps->txt_direct = NULL;
+   if (ps->acc_len + n + 1 > ps->acc_cap && !rxml_acc_reserve(ps, n))
+      return 0;
+   memcpy(ps->acc + ps->acc_len, s, n);
+   ps->acc_len += n;
+   return 1;
+}
+
 static INLINE int rxml_acc_ch(struct rxml_parser *ps, unsigned char c)
 {
+   if (ps->txt_direct && !rxml_acc_promote(ps))
+      return 0;
    if (ps->acc_len + 2 > ps->acc_cap && !rxml_acc_reserve(ps, 1))
       return 0;
    ps->acc[ps->acc_len++] = (char)c;
@@ -176,6 +245,8 @@ static INLINE int rxml_acc_ch(struct rxml_parser *ps, unsigned char c)
 
 static int rxml_acc_span(struct rxml_parser *ps, const unsigned char *s, size_t len)
 {
+   if (ps->txt_direct && !rxml_acc_promote(ps))
+      return 0;
    if (ps->acc_len + len + 1 > ps->acc_cap && !rxml_acc_reserve(ps, len))
       return 0;
    memcpy(ps->acc + ps->acc_len, s, len);
@@ -183,10 +254,74 @@ static int rxml_acc_span(struct rxml_parser *ps, const unsigned char *s, size_t 
    return 1;
 }
 
-/* strdup() of a counted span */
-static char *rxml_span_dup(const unsigned char *s, size_t len)
+/* Slow path: the head block cannot take the request. */
+RXML_COLD static void *rxml_arena_grow(rxml_document_t *doc, size_t size)
 {
-   char *r = (char*)malloc(len + 1);
+   struct rxml_block *b = doc->blocks;
+   struct rxml_block *nb;
+   size_t             cap;
+
+   /* A block's payload starts at malloc's alignment, so offset 0 needs
+    * no rounding whatever the caller asked for. */
+   cap = doc->blocksz;
+   if (cap < size)
+   {
+      /* Oversized: give it a block of its own and leave the head in
+       * place, so the bytes still free there are not stranded. */
+      nb = (struct rxml_block*)malloc(sizeof(*nb) + size);
+      if (!nb)
+         return NULL;
+      nb->cap  = size;
+      nb->used = size;
+      if (b)
+      {
+         nb->next = b->next;
+         b->next  = nb;
+      }
+      else
+      {
+         nb->next    = NULL;
+         doc->blocks = nb;
+      }
+      return (char*)(nb + 1);
+   }
+
+   nb = (struct rxml_block*)malloc(sizeof(*nb) + cap);
+   if (!nb)
+      return NULL;
+   nb->cap      = cap;
+   nb->used     = size;
+   nb->next     = doc->blocks;
+   doc->blocks  = nb;
+   if (doc->blocksz < (RXML_ARENA_MIN << 6))
+      doc->blocksz <<= 1;
+   return (char*)(nb + 1);
+}
+
+/* Bump the head block.  Inline because it runs three times per element
+ * and twice per attribute - at 16.5 million calls over one core's asset
+ * set the call itself was measurable next to the pointer arithmetic. */
+static INLINE void *rxml_arena_alloc(rxml_document_t *doc, size_t size,
+      size_t align)
+{
+   struct rxml_block *b = doc->blocks;
+   if (b)
+   {
+      size_t off = (b->used + (align - 1)) & ~(align - 1);
+      if (off + size <= b->cap)
+      {
+         b->used = off + size;
+         return (char*)(b + 1) + off;
+      }
+   }
+   return rxml_arena_grow(doc, size);
+}
+
+/* Counted span copied into the arena, NUL-terminated. */
+static char *rxml_arena_dup(rxml_document_t *doc,
+      const unsigned char *s, size_t len)
+{
+   char *r = (char*)rxml_arena_alloc(doc, len + 1, 1);
    if (r)
    {
       memcpy(r, s, len);
@@ -194,6 +329,7 @@ static char *rxml_span_dup(const unsigned char *s, size_t len)
    }
    return r;
 }
+
 
 /* Scan a name at *pp: first byte must be a name-start (caller checked),
  * following bytes name chars.  Returns length, cursor left on the
@@ -351,8 +487,74 @@ RXML_COLD static int rxml_scan_ref(struct rxml_parser *ps)
 
 /* Element start: link a node exactly as the old event loop did.  The
  * node and its name live in one allocation (the name directly after
- * the struct); rxml_free_node() frees the node only. */
-static int rxml_on_elemstart(struct rxml_parser *ps,
+ * the struct), both out of the document arena. */
+
+/* Mixed content: an element that has child elements can still carry
+ * text between and around them.  The old implementation dropped such
+ * runs entirely; expat-class parsers deliver them.  Non-whitespace
+ * runs are appended (in document order, concatenated exactly as an
+ * expat character-data handler would see them) to the enclosing
+ * element's data.  Whitespace-only runs - the indentation between
+ * every pair of elements in pretty-printed XML - are still dropped,
+ * which also keeps the observable behavior of container nodes
+ * (data == NULL) unchanged for such documents. */
+/* Cheap hot-path test: is the pending run whitespace only?  True for
+ * the indentation between every pair of elements in pretty-printed
+ * XML, so this runs per element and must stay inline; the cold append
+ * below then only ever runs on genuine mixed content. */
+static INLINE int rxml_pending_is_ws(const struct rxml_parser *ps)
+{
+   const unsigned char *s;
+   size_t len, i;
+   if (ps->txt_direct)
+   {
+      s   = ps->txt_direct;
+      len = ps->txt_direct_len;
+   }
+   else
+   {
+      s   = (const unsigned char*)ps->acc;
+      len = ps->acc_len;
+   }
+   for (i = 0; i < len; i++)
+      if (!(rxml_is_sp(s[i]) || s[i] == 0x0d))
+         return 0;
+   return 1;
+}
+
+RXML_COLD static int rxml_flush_mixed(struct rxml_parser *ps,
+      rxml_node_t *owner)
+{
+   const unsigned char *s;
+   size_t len, old;
+   char *nd;
+   if (ps->txt_direct)
+   {
+      s   = ps->txt_direct;
+      len = ps->txt_direct_len;
+   }
+   else
+   {
+      s   = (const unsigned char*)ps->acc;
+      len = ps->acc_len;
+   }
+   ps->txt_direct = NULL;
+   ps->acc_len    = 0;
+   if (!owner)
+      return 1;
+   old = owner->data ? strlen(owner->data) : 0;
+   nd  = (char*)rxml_arena_alloc(ps->doc, old + len + 1, 1);
+   if (!nd)
+      return 0;
+   if (old)
+      memcpy(nd, owner->data, old);
+   memcpy(nd + old, s, len);
+   nd[old + len] = '\0';
+   owner->data   = nd;
+   return 1;
+}
+
+static INLINE int rxml_on_elemstart(struct rxml_parser *ps,
       const unsigned char *name, size_t name_len)
 {
    rxml_node_t *n;
@@ -366,7 +568,8 @@ static int rxml_on_elemstart(struct rxml_parser *ps,
       ps->frames     = nf;
       ps->frames_cap = ncap;
    }
-   n = (rxml_node_t*)malloc(sizeof(*n) + name_len + 1);
+   n = (rxml_node_t*)rxml_arena_alloc(ps->doc, sizeof(*n) + name_len + 1,
+         sizeof(void*));
    if (!n)
       return 0;
    n->name     = (char*)(n + 1);
@@ -376,6 +579,13 @@ static int rxml_on_elemstart(struct rxml_parser *ps,
    n->attrib   = NULL;
    n->children = NULL;
    n->next     = NULL;
+   /* Byte offset of the '<'; RXML_OPT_LINES turns it into a line
+    * number after the parse.  Recorded unconditionally: the store is
+    * free here, while any conditional form (ternary or predicted
+    * branch) measurably perturbs the parser's hot loop on text-heavy
+    * documents (cmov chains a dependent doc->buf load per element;
+    * even a never-taken branch costs ~25%). */
+   n->line     = (unsigned)((const char*)name - 1 - ps->doc->buf);
    if (ps->node)
    {
       if (ps->level > ps->stack_i)
@@ -389,9 +599,28 @@ static int rxml_on_elemstart(struct rxml_parser *ps,
    }
    else
       ps->doc->root_node           = n;
-   ps->node    = n;
-   ps->attr    = NULL;
-   ps->acc_len = 0;
+   ps->attr       = NULL;
+   if (ps->txt_direct || ps->acc_len)
+   {
+      if (rxml_pending_is_ws(ps))
+      {
+         ps->txt_direct = NULL;
+         ps->acc_len    = 0;
+      }
+      else
+      {
+         /* Text pending at a child's open tag belongs to the enclosing
+          * element: the node just descended from, or the parent of the
+          * sibling chain (computed against the pre-link state, which
+          * the level/stack_i comparison still reflects). */
+         rxml_node_t *owner = (ps->node && ps->level > ps->stack_i)
+               ? ps->node
+               : (ps->stack_i ? ps->frames[ps->stack_i - 1].node : NULL);
+         if (!rxml_flush_mixed(ps, owner))
+            return 0;
+      }
+   }
+   ps->node       = n;
    ps->frames[ps->level].name = name;
    ps->frames[ps->level].len  = name_len;
    ps->level++;
@@ -399,31 +628,63 @@ static int rxml_on_elemstart(struct rxml_parser *ps,
 }
 
 /* Element end: store accumulated text on childless elements only. */
-static int rxml_on_elemend(struct rxml_parser *ps)
+static INLINE int rxml_on_elemend(struct rxml_parser *ps)
 {
    ps->level--;
-   if (ps->acc_len)
+   if (ps->txt_direct || ps->acc_len)
    {
+      /* Exactly one of the two holds the text: a deferred run is set
+       * only when the accumulator is empty, and any accumulation folds
+       * a deferred run in first. */
       if (ps->level == ps->stack_i)
       {
-         if (ps->node->data)
-            free(ps->node->data);
-         ps->node->data = rxml_span_dup((const unsigned char*)ps->acc, ps->acc_len);
-         if (!ps->node->data)
+         /* Childless element: the text is its value.  A mixed-content
+          * fragment can already be present if the element interleaved
+          * text and children that were all closed - but then this
+          * branch is not taken; childless means no descend happened
+          * and data is still NULL, so the direct store below is safe. */
+         if (ps->txt_direct)
+         {
+            /* As for an attribute value: the byte one past a deferred
+             * run is the '<' that ended it, long since consumed. */
+            char *d = (char*)ps->txt_direct;
+            d[ps->txt_direct_len] = '\0';
+            ps->node->data        = d;
+         }
+         else
+         {
+            ps->node->data = rxml_arena_dup(ps->doc,
+                  (const unsigned char*)ps->acc, ps->acc_len);
+            if (!ps->node->data)
+               return 0;
+         }
+         ps->txt_direct = NULL;
+         ps->acc_len    = 0;
+      }
+      else if (rxml_pending_is_ws(ps))
+      {
+         ps->txt_direct = NULL;
+         ps->acc_len    = 0;
+      }
+      else
+      {
+         /* Element with children: a run after the last child is
+          * trailing mixed content of the element being closed. */
+         if (!rxml_flush_mixed(ps,
+               ps->stack_i ? ps->frames[ps->stack_i - 1].node : NULL))
             return 0;
       }
-      ps->acc_len = 0;
    }
    if (ps->level < ps->stack_i)
       ps->node = ps->frames[--ps->stack_i].node;
    return 1;
 }
 
-static int rxml_on_attrstart(struct rxml_parser *ps,
+static INLINE int rxml_on_attrstart(struct rxml_parser *ps,
       const unsigned char *name, size_t name_len)
 {
    struct rxml_attrib_node *a = (struct rxml_attrib_node*)
-      malloc(sizeof(*a) + name_len + 1);
+      rxml_arena_alloc(ps->doc, sizeof(*a) + name_len + 1, sizeof(void*));
    if (!a)
       return 0;
    a->attrib   = (char*)(a + 1);
@@ -435,27 +696,33 @@ static int rxml_on_attrstart(struct rxml_parser *ps,
       ps->attr->next   = a;
    else
       ps->node->attrib = a;
-   ps->attr    = a;
-   ps->acc_len = 0;
+   ps->attr       = a;
+   ps->acc_len    = 0;
+   ps->txt_direct = NULL;
    return 1;
 }
 
-static int rxml_on_attrend(struct rxml_parser *ps)
+static INLINE int rxml_on_attrend(struct rxml_parser *ps)
 {
    if (ps->val_direct)
    {
       if (ps->val_direct_len)
       {
-         ps->attr->value = rxml_span_dup(ps->val_direct, ps->val_direct_len);
-         if (!ps->attr->value)
-            return 0;
+         /* The byte one past the value is the closing quote, which the
+          * scanner has already stepped over; overwriting it terminates
+          * the value where it lies.  The parse is single-pass forward,
+          * so nothing reads behind the cursor again. */
+         char *v = (char*)ps->val_direct;
+         v[ps->val_direct_len] = '\0';
+         ps->attr->value       = v;
       }
       ps->val_direct = NULL;
       return 1;
    }
    if (ps->acc_len)
    {
-      ps->attr->value = rxml_span_dup((const unsigned char*)ps->acc, ps->acc_len);
+      ps->attr->value = rxml_arena_dup(ps->doc,
+            (const unsigned char*)ps->acc, ps->acc_len);
       if (!ps->attr->value)
          return 0;
       ps->acc_len = 0;
@@ -920,7 +1187,17 @@ RXML_NOINLINE static int rxml_scan_misc(struct rxml_parser *ps, int mode)
       rxml_skip_sp(ps);
       c = *ps->p;
       if (c != '<')
-         return c ? 0 : -1;
+      {
+         /* End of input between constructs is the one place a document
+          * may legitimately end; in the epilog it is the normal way a
+          * complete parse finishes, and must stay distinguishable from
+          * the -1 that scanners return for input ending inside a
+          * construct so that RXML_OPT_STRICT_EOF only rejects genuine
+          * truncation. */
+         if (!c)
+            return mode ? -1 : 2;
+         return 0;
+      }
       ps->p++;
       c = *ps->p;
       if (!c)
@@ -1084,8 +1361,16 @@ content_loop:
          {
             while (!(rxml_cls[*q] & RXML_CCS))
                q++;
-            if (q > run && !rxml_acc_span(ps, run, (size_t)(q - run)))
-               return 0;
+            if (q > run)
+            {
+               if (!ps->txt_direct && !ps->acc_len)
+               {
+                  ps->txt_direct     = run;
+                  ps->txt_direct_len = (size_t)(q - run);
+               }
+               else if (!rxml_acc_span(ps, run, (size_t)(q - run)))
+                  return 0;
+            }
             c = *q;
             if (c == '<')
                break;
@@ -1224,8 +1509,83 @@ element_closed:
    }
 
 epilog:
-   /* After the root element: whitespace, comments and PIs only. */
-   return rxml_scan_misc(ps, 0);
+   /* After the root element: whitespace, comments and PIs only; input
+    * ending cleanly between them completes the parse. */
+   {
+      int r2 = rxml_scan_misc(ps, 0);
+      return (r2 == 2) ? 1 : r2;
+   }
+}
+
+
+/* Turn the element-start offsets recorded in ->line into 1-based line
+ * numbers.  Pre-order tree order is ascending offset order, so a
+ * single sweep of the document with an incrementally advanced newline
+ * count covers every node.  Returns 0 on allocation failure (treated
+ * by the caller like any other parse-time allocation failure). */
+static int rxml_annotate_lines(rxml_document_t *doc)
+{
+   rxml_node_t *n     = doc->root_node;
+   rxml_node_t **up   = NULL;
+   size_t up_len      = 0, up_cap = 0;
+   const char *at     = doc->buf;
+   unsigned line      = 1;
+   while (n)
+   {
+      const char *to = doc->buf + n->line;
+      const char *nl;
+      while (at < to && (nl = (const char*)memchr(at, '\n', to - at)))
+      {
+         line++;
+         at = nl + 1;
+      }
+      at      = to;
+      n->line = line;
+      if (n->children)
+      {
+         if (n->next)
+         {
+            if (up_len == up_cap)
+            {
+               size_t ncap       = up_cap ? (up_cap << 1) : 16;
+               rxml_node_t **nup = (rxml_node_t**)
+                     realloc(up, ncap * sizeof(*nup));
+               if (!nup)
+               {
+                  free(up);
+                  return 0;
+               }
+               up     = nup;
+               up_cap = ncap;
+            }
+            up[up_len++] = n->next;
+         }
+         n = n->children;
+      }
+      else if (n->next)
+         n = n->next;
+      else
+         n = up_len ? up[--up_len] : NULL;
+   }
+   free(up);
+   return 1;
+}
+
+/* Compute the 1-based line/column of a byte offset. */
+static void rxml_error_position(const char *buf, size_t offset,
+      rxml_parse_error_t *err)
+{
+   const char *at = buf, *to = buf + offset, *nl, *bol = buf;
+   unsigned line  = 1;
+   while (at < to && (nl = (const char*)memchr(at, '\n', to - at)))
+   {
+      line++;
+      at  = nl + 1;
+      bol = at;
+   }
+   err->offset = offset;
+   err->line   = line;
+   err->col    = (unsigned)(to - bol) + 1;
 }
 
 /* Public API --------------------------------------------------------- */
@@ -1237,47 +1597,16 @@ struct rxml_node *rxml_root_node(rxml_document_t *doc)
    return NULL;
 }
 
-RXML_COLD static void rxml_free_node(struct rxml_node *node)
-{
-   struct rxml_node *head = NULL;
-   struct rxml_attrib_node *attrib_node_head = NULL;
-
-   if (!node)
-      return;
-
-   for (head = node->children; head; )
-   {
-      struct rxml_node *next_node = (struct rxml_node*)head->next;
-      rxml_free_node(head);
-      head = next_node;
-   }
-
-   for (attrib_node_head = node->attrib; attrib_node_head; )
-   {
-      struct rxml_attrib_node *next_attrib =
-            (struct rxml_attrib_node*)attrib_node_head->next;
-
-      /* ->attrib lives inside the same allocation */
-      if (attrib_node_head->value)
-         free(attrib_node_head->value);
-      free(attrib_node_head);
-
-      attrib_node_head = next_attrib;
-   }
-
-   /* ->name lives inside the same allocation */
-   if (node->data)
-      free(node->data);
-   free(node);
-}
-
-rxml_document_t *rxml_load_document_string(const char *str)
+/* Parse a buffer the document takes ownership of. */
+static rxml_document_t *rxml_parse_owned(char *buf, size_t len,
+      unsigned opts, rxml_parse_error_t *err)
 {
    struct rxml_parser ps;
    int r;
 
    memset(&ps, 0, sizeof(ps));
-   ps.p          = (const unsigned char*)str;
+   ps.opts       = opts;
+   ps.p          = (const unsigned char*)buf;
    ps.acc_cap    = 4096;
    ps.acc        = (char*)malloc(ps.acc_cap);
    ps.frames_cap = 32;
@@ -1289,6 +1618,16 @@ rxml_document_t *rxml_load_document_string(const char *str)
    else
    {
       ps.doc->root_node = NULL;
+      ps.doc->blocks    = NULL;
+      /* Size the first block from the document rather than starting at
+       * the floor and doubling: an 8 KiB file needed 16 + 32 KiB that
+       * way, where one block sized from the input covers it.  Four
+       * times the source is measured headroom - a node is ~48 bytes and
+       * the tightest element a document can spell is four - and the
+       * doubling below still catches anything denser. */
+      ps.doc->blocksz   = (len > (RXML_ARENA_MIN / 4))
+                        ? (len << 2) : RXML_ARENA_MIN;
+      ps.doc->buf       = buf;
       r = rxml_parse_document(&ps);
    }
 
@@ -1297,18 +1636,65 @@ rxml_document_t *rxml_load_document_string(const char *str)
 
    /* r > 0: fully parsed; r < 0: input ended mid-construct, which the
     * old implementation also accepted (it never signalled EOF to the
-    * parser), returning the tree built so far; r == 0: parse error. */
+    * parser), returning the tree built so far unless
+    * RXML_OPT_STRICT_EOF asks for expat-style rejection;
+    * r == 0: parse error. */
+   if (r < 0 && (opts & RXML_OPT_STRICT_EOF))
+      r = 0;
    if (r == 0)
    {
+      if (err)
+         rxml_error_position(buf, (const char*)ps.p - buf, err);
+      if (ps.doc)
+         rxml_free_document(ps.doc);
+      else
+         free(buf);
+      return NULL;
+   }
+   if ((opts & RXML_OPT_LINES) && ps.doc->root_node
+         && !rxml_annotate_lines(ps.doc))
+   {
+      if (err)
+         rxml_error_position(buf, 0, err);
       rxml_free_document(ps.doc);
       return NULL;
    }
    return ps.doc;
 }
 
+rxml_document_t *rxml_load_document_string_opts(const char *str,
+      unsigned opts, rxml_parse_error_t *err)
+{
+   size_t len;
+   char  *buf;
+
+   if (err)
+   {
+      err->offset = 0;
+      err->line   = err->col = 0;
+   }
+   if (!str)
+      return NULL;
+
+   /* One copy of the whole document, against which the in-place
+    * terminations below are legal.  It replaces the per-value and
+    * per-text copies the parser used to make, so it is cheaper than
+    * what it replaces even before the allocations are counted. */
+   len = strlen(str);
+   if (!(buf = (char*)malloc(len + 1)))
+      return NULL;
+   memcpy(buf, str, len + 1);
+
+   return rxml_parse_owned(buf, len, opts, err);
+}
+
+rxml_document_t *rxml_load_document_string(const char *str)
+{
+   return rxml_load_document_string_opts(str, 0, NULL);
+}
+
 rxml_document_t *rxml_load_document(const char *path)
 {
-   rxml_document_t *doc    = NULL;
    char *memory_buffer     = NULL;
    int64_t len             = 0;
    RFILE *file             = filestream_open(path,
@@ -1337,10 +1723,9 @@ rxml_document_t *rxml_load_document(const char *path)
    filestream_close(file);
    file                    = NULL;
 
-   doc                     = rxml_load_document_string(memory_buffer);
-
-   free(memory_buffer);
-   return doc;
+   /* The document takes the buffer: the tree points into it, and
+    * rxml_parse_owned frees it on failure. */
+   return rxml_parse_owned(memory_buffer, (size_t)len, 0, NULL);
 
 error:
    free(memory_buffer);
@@ -1351,11 +1736,21 @@ error:
 
 void rxml_free_document(rxml_document_t *doc)
 {
+   struct rxml_block *b;
+
    if (!doc)
       return;
 
-   rxml_free_node(doc->root_node);
+   /* Everything the tree points at came out of these blocks, so the
+    * walk that used to free node by node is gone with them. */
+   for (b = doc->blocks; b; )
+   {
+      struct rxml_block *next = b->next;
+      free(b);
+      b = next;
+   }
 
+   free(doc->buf);
    free(doc);
 }
 

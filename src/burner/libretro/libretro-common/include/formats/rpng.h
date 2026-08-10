@@ -40,6 +40,57 @@ bool rpng_is_valid(rpng_t *rpng);
 
 bool rpng_set_buf_ptr(rpng_t *rpng, void *data, size_t len);
 
+/* Prefix decoding support: rpng_set_avail declares how many bytes of
+ * the buffer passed to rpng_set_buf_ptr are actually resident (a byte
+ * count from the start; monotonic, clamped to the full length).  While
+ * the resident frontier is below the full length, rpng_iterate_image
+ * stops at a chunk that reaches past it with rpng_need_more() true -
+ * distinct from a malformed or final chunk - so a caller feeding a
+ * growing read can raise avail and iterate again.  Never calling
+ * rpng_set_avail leaves the whole buffer resident (classic behaviour). */
+void rpng_set_avail(rpng_t *rpng, size_t avail);
+bool rpng_need_more(const rpng_t *rpng);
+
+/* Prefix early-start gate: true once the resident bytes contain the
+ * signature and the whole IHDR chunk (33 bytes), i.e. the chunk walk
+ * can begin.  Mirrors rjpeg_header_ready. */
+bool rpng_header_ready(const uint8_t *data, size_t len);
+
+/* APNG (Animated PNG) streaming decode.  rpng_is_apng cheaply reports
+ * whether a buffer carries an acTL animation-control chunk before the
+ * first IDAT; a still PNG returns false and decodes through the ordinary
+ * rpng path.  The stream emits composited RGBA frames one at a time onto
+ * a persistent canvas (memory independent of frame count), mirroring the
+ * rwebp_anim_stream / video-stream contract.  next() returns the canvas
+ * (valid until the next call, do not free); NULL means end of one pass -
+ * rewind to loop.  The buffer is BORROWED and must outlive the stream. */
+typedef struct rpng_apng_stream rpng_apng_stream_t;
+
+bool rpng_is_apng(const uint8_t *buf, size_t len);
+/* As rpng_is_apng, but 'need_more' (may be NULL) is set when the answer
+ * lies beyond the supplied bytes, so a caller probing a short header
+ * prefix can tell that apart from a conclusive "still PNG". */
+bool rpng_is_apng_ex(const uint8_t *buf, size_t len, int *need_more);
+rpng_apng_stream_t *rpng_apng_stream_open(const uint8_t *buf, size_t len);
+void rpng_apng_stream_close(rpng_apng_stream_t *s);
+void rpng_apng_stream_get_info(const rpng_apng_stream_t *s,
+      unsigned *width, unsigned *height, int *num_frames, int *loop_count);
+const uint32_t *rpng_apng_stream_next(rpng_apng_stream_t *s,
+      int *duration_ms);
+bool rpng_apng_stream_set_argb(rpng_apng_stream_t *s, int argb);
+void rpng_apng_stream_rewind(rpng_apng_stream_t *s);
+
+/* Progressive open over a partially-resident buffer: only the first
+ * 'avail' bytes are guaranteed present.  Succeeds once the header and
+ * at least one frame are in; raise the frontier with
+ * rpng_apng_stream_set_avail as the read advances and later frames
+ * become playable.  Returns NULL with *need_more set when the header is
+ * not resident yet.  Until a frame is indexed, next() reports
+ * end-of-pass rather than decoding un-arrived bytes. */
+rpng_apng_stream_t *rpng_apng_stream_open_avail(const uint8_t *buf,
+      size_t len, size_t avail, int *need_more);
+void rpng_apng_stream_set_avail(rpng_apng_stream_t *s, size_t avail);
+
 rpng_t *rpng_alloc(void);
 
 void rpng_free(rpng_t *rpng);
