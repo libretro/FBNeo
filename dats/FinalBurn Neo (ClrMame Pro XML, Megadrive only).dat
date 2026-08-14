@@ -889,6 +889,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="animalcontrolebs" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Animal Control: Elite Balloon Squad (HB, v1.2.0)</description>
+		<year>2023</year>
+		<manufacturer>Safety Stoat Studios</manufacturer>
+		<rom name="Animal Control - Elite Balloon Squad v1.2.0 (2023)(Safety Stoat Studios).bin" size="2490368" crc="501bc79f"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="animania" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Animaniacs (Euro)</description>
 		<year>1994</year>
@@ -6312,6 +6321,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="elansar" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Elansar (M4) (HB)</description>
+		<year>2026</year>
+		<manufacturer>OrionSoft</manufacturer>
+		<rom name="Elansar (2026)(OrionSoft).bin" size="4194304" crc="a4ed642a"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="elemastj" cloneof="elemast" romof="elemast" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Elemental Master (Japan)</description>
 		<year>1990</year>
@@ -7205,11 +7223,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="ffightmd" sourcefile="megadrive/d_megadrive.cpp">
-		<comment>Homebrew, Public version Christmas 2025</comment>
-		<description>Final Fight MD (HB, v0.92b)</description>
-		<year>2025</year>
+		<comment>Homebrew</comment>
+		<description>Final Fight MD (HB, v0.94b+)</description>
+		<year>2026</year>
 		<manufacturer>MXRetroDev - CFX</manufacturer>
-		<rom name="Final Fight MD v0.92b (2025)(MXRetroDev - CFX).bin" size="4194304" crc="ae245026"/>
+		<rom name="Final Fight MD v0.94b+ (2026)(MXRetroDev - CFX).bin" size="4194304" crc="16512148"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -8719,6 +8737,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="harunasbs" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Haruna's Big Snow Cleanup (HB)</description>
+		<year>2026</year>
+		<manufacturer>NK Soft</manufacturer>
+		<rom name="Haruna's Big Snow Cleanup (2026)(NK Soft).bin" size="2883584" crc="dbe5dc80"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="haunting" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Haunting Starring Polterguy (Euro, USA)</description>
 		<year>1993</year>
@@ -9139,10 +9166,10 @@
 	</game>
 	<game name="imminence" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Imminence (HB)</description>
+		<description>Imminence (HB, v1.0.2.260601)</description>
 		<year>2026</year>
 		<manufacturer>Augmented Studios</manufacturer>
-		<rom name="Imminence (2026)(Augmented Studios).bin" size="4063232" crc="fbd45c81"/>
+		<rom name="Imminence v1.0.2.260601 (2026)(Augmented Studios).bin" size="4063232" crc="fbd45c81"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -11872,10 +11899,10 @@
 	</game>
 	<game name="megapushori" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Mega Pushori (HB)</description>
+		<description>Mega Pushori (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>abadede919302</manufacturer>
-		<rom name="Mega Pushori (2026)(abadede919302).bin" size="262144" crc="2f60ad1d"/>
+		<rom name="Mega Pushori v1.1 (2026)(abadede919302).bin" size="262144" crc="a92304d4"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15206,6 +15233,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="piratesdrowned" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Pirates of the Drowned Hypertorus (HB, v0.0.13)</description>
+		<year>2026</year>
+		<manufacturer>Safety Stoat Studios</manufacturer>
+		<rom name="Pirates of the Drowned Hypertorus v0.0.13 (2026)(Safety Stoat Studios).bin" size="1441792" crc="88d4a40d"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="piratesc" cloneof="pirates" romof="pirates" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Prototype</comment>
 		<description>Pirates! Gold (Hack, Spanish)</description>
@@ -15796,6 +15832,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="punishergv" cloneof="punisher" romof="punisher" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Hack</comment>
+		<description>Punisher, The - Gun Version (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Everything is fun</manufacturer>
+		<rom name="Punisher, The - Gun Version (2026)(Everything is fun).bin" size="2097152" crc="e4f97405"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="puttergnk" cloneof="putter" romof="putter" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Putter Golf (Japan, Game no Kandume MegaCD Rip)</description>
 		<year>1991</year>
@@ -16259,6 +16304,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="redtanks" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Red Tanks (HB)</description>
+		<year>2026</year>
+		<manufacturer>abadede919302</manufacturer>
+		<rom name="Red Tanks (2026)(abadede919302).bin" size="262144" crc="223165e5"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="redzone" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Red Zone (Euro, USA)</description>
 		<year>1994</year>
@@ -16555,6 +16609,15 @@
 		<year>2021</year>
 		<manufacturer>Savok</manufacturer>
 		<rom name="River City Girls... of Rage v0.9.82 (2021)(Savok).bin" size="2889204" crc="bea16706"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="riverraid2600" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>River Raid 2600 (HB, v0.0.1)</description>
+		<year>2026</year>
+		<manufacturer>SirVH</manufacturer>
+		<rom name="River Raid 2600 v0.0.1 (2026)(SirVH).bin" size="262144" crc="72e64443"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17113,6 +17176,15 @@
 		<year>2014</year>
 		<manufacturer>Sasha Darko</manufacturer>
 		<rom name="Sacred Line - Genesis (Watermelon) (2014)(Sasha Darko).bin" size="4194304" crc="06b219c0"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sagacrystalqfp" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>SagaCrystal: Quest for Pie (HB)</description>
+		<year>2026</year>
+		<manufacturer>Doby Games</manufacturer>
+		<rom name="SagaCrystal - Quest for Pie (2026)(Doby Games).bin" size="917504" crc="e61ed7af"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

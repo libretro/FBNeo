@@ -73,6 +73,8 @@ extern int bRunPause;
 #define _ftprintf fprintf
 #define _tcsstr strstr
 #define _sntprintf snprintf
+#define _tcsrchr strrchr
+#define _tcscmp strcmp
 
 typedef char TCHAR;
 

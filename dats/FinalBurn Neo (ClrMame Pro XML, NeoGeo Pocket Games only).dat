@@ -1789,6 +1789,17 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="tripledef" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Triple Defence (HB)</description>
+		<year>2026</year>
+		<manufacturer>Zhamul</manufacturer>
+		<rom name="Triple Defence (2026)(Zhamul).ngp" size="16782" crc="b8769650"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="tsunapn2" cloneof="puzzlnk2" romof="puzzlnk2" sourcefile="pst90s/d_ngp.cpp">
 		<description>Tsunagete Pon! 2 (Japan)</description>
 		<year>1999</year>
