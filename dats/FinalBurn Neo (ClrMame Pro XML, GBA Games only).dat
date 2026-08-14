@@ -1416,6 +1416,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="airball" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Airball (HB, v1.3)</description>
+		<year>2004</year>
+		<manufacturer>Foxy's Softs</manufacturer>
+		<rom name="Airball v1.3 (2004)(Foxy's Softs).gba" size="1365740" crc="52dac8c6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="airfrcd2" cloneof="deadlysk" romof="deadlysk" sourcefile="gba/d_gba.cpp">
 		<description>AirForce Delta II (Japan)</description>
 		<year>2002</year>
@@ -1743,10 +1753,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="apotris" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Apotris (v3.4.5)</description>
-		<year>2023</year>
+		<comment>Homebrew</comment>
+		<description>Apotris (HB, v4.1.0)</description>
+		<year>2024</year>
 		<manufacturer>akouzoukos</manufacturer>
-		<rom name="apotris.bin" size="4194304" crc="55ae4312"/>
+		<rom name="Apotris v4.1.0 (2024)(akouzoukos).gba" size="4194304" crc="9b777cba"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -4910,29 +4921,31 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="crzychse" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Crazy Chase (Europe)</description>
+	<game name="crzychsep" cloneof="crzychse" romof="crzychse" sourcefile="gba/d_gba.cpp">
+		<comment>Prototype</comment>
+		<description>Crazy Chase (Europe, M3 Prototype)</description>
 		<year>2002</year>
 		<manufacturer>Kemco</manufacturer>
-		<rom name="agb-accp-0.u1" size="4194304" crc="313f4ffc"/>
+		<rom name="Crazy Chase (E, M3 Proto)(2002)(Kemco).gba" size="4194304" crc="5f331132"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="crzychse" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Crazy Chase (Europe, M3)</description>
+		<year>2002</year>
+		<manufacturer>Kemco</manufacturer>
+		<rom name="Crazy Chase (E, M3)(2002)(Kemco).gba" size="4194304" crc="313f4ffc"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="crzychsepa" cloneof="crzychse" romof="crzychse" sourcefile="gba/d_gba.cpp">
-		<description>Crazy Chase (Europe, prototype early)</description>
+		<comment>Prototype</comment>
+		<description>Crazy Chase (Europe, Prototype early)</description>
 		<year>2002</year>
 		<manufacturer>Kemco</manufacturer>
-		<rom name="crazy chase (europe) (beta).bin" size="4194304" crc="ff7e2e9b"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="crzychsep" cloneof="crzychse" romof="crzychse" sourcefile="gba/d_gba.cpp">
-		<description>Crazy Chase (Europe, prototype)</description>
-		<year>2002</year>
-		<manufacturer>Kemco</manufacturer>
-		<rom name="crazy chase (europe) (en,fr,de) (beta).bin" size="4194304" crc="5f331132"/>
+		<rom name="Crazy Chase (E, Proto)(2002)(Kemco).gba" size="4194304" crc="ff7e2e9b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -4941,52 +4954,52 @@
 		<description>Crazy Chase (USA)</description>
 		<year>2002</year>
 		<manufacturer>Kemco</manufacturer>
-		<rom name="crazy chase (usa).bin" size="4194304" crc="caba1db9"/>
+		<rom name="Crazy Chase (U)(2002)(Kemco).gba" size="4194304" crc="caba1db9"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="crzyfrog" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Crazy Frog Racer (Europe)</description>
+		<description>Crazy Frog Racer (Europe, M4)</description>
 		<year>2005</year>
-		<manufacturer>dtp Entertainment</manufacturer>
-		<rom name="crazy frog racer (europe) (en,fr,de,nl).bin" size="4194304" crc="2723236b"/>
+		<manufacturer>Digital Jesters</manufacturer>
+		<rom name="Crazy Frog Racer (E, M4)(2005)(Digital Jesters).gba" size="4194304" crc="2723236b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="crzytaxi" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Crazy Taxi - Catch a Ride (Europe)</description>
+		<description>Crazy Taxi: Catch a Ride (Europe, M5)</description>
 		<year>2002</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="crazy taxi - catch a ride (europe) (en,fr,de,es,it).bin" size="8388608" crc="4aebd704"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Crazy Taxi - Catch a Ride (E, M5)(2002)(THQ).gba" size="8388608" crc="4aebd704"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="crzytaxiu" cloneof="crzytaxi" romof="crzytaxi" sourcefile="gba/d_gba.cpp">
-		<description>Crazy Taxi - Catch a Ride (USA)</description>
+		<description>Crazy Taxi: Catch a Ride (USA)</description>
 		<year>2002</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="crazy taxi - catch a ride (usa).bin" size="8388608" crc="8ec709d6"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="creaturs" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Creatures (Europe, English / French / German)</description>
-		<year>2001</year>
-		<manufacturer>SWING! Entertainment</manufacturer>
-		<rom name="creatures (europe) (en,fr,de).bin" size="4194304" crc="68206301"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Crazy Taxi - Catch a Ride (U)(2002)(THQ).gba" size="8388608" crc="8ec709d6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="creatursa" cloneof="creaturs" romof="creaturs" sourcefile="gba/d_gba.cpp">
-		<description>Creatures (Europe, English / Italian / Spanish)</description>
+		<description>Creatures (Europe, M3 Alt)</description>
 		<year>2001</year>
 		<manufacturer>SWING! Entertainment</manufacturer>
-		<rom name="creatures (europe) (en,es,it).bin" size="4194304" crc="4f18f57e"/>
+		<rom name="Creatures (E, M3 Alt)(2001)(SWING! Entertainment).gba" size="4194304" crc="4f18f57e"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="creaturs" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Creatures (Europe, M3)</description>
+		<year>2001</year>
+		<manufacturer>SWING! Entertainment</manufacturer>
+		<rom name="Creatures (E, M3)(2001)(SWING! Entertainment).gba" size="4194304" crc="68206301"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5177,6 +5190,16 @@
 		<year>2006</year>
 		<manufacturer>Namco</manufacturer>
 		<rom name="curious george (usa).bin" size="4194304" crc="f6b549dd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="custodian" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Custodian (HB)</description>
+		<year>2019</year>
+		<manufacturer>Piko Interactive</manufacturer>
+		<rom name="Custodian (2019)(Piko Interactive).gba" size="1048576" crc="7e6cd1fe"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -11438,6 +11461,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="hexavirus" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>HexaVirus (HB)</description>
+		<year>2007</year>
+		<manufacturer>Alekmaul</manufacturer>
+		<rom name="HexaVirus (2007)(Alekmaul).gba" size="1414244" crc="92243509"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="heyarnld" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Hey Arnold! - The Movie (Europe)</description>
 		<year>2002</year>
@@ -13349,10 +13382,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="koteteik" cloneof="steelemp" romof="steelemp" sourcefile="gba/d_gba.cpp">
-		<description>Koutetsu Teikoku from HOT・B (Japan)</description>
+		<description>Koutetsu Teikoku from HOT-B (Japan)</description>
 		<year>2004</year>
 		<manufacturer>Starfish</manufacturer>
-		<rom name="koutetsu teikoku from hot-b (japan).bin" size="4194304" crc="cdfac4ee"/>
+		<rom name="Koutetsu Teikoku from HOT-B (J)(2004)(Starfish).gba" size="4194304" crc="cdfac4ee"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -14258,6 +14291,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="mainurse" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Mai Nurse (HB, v1.02)</description>
+		<year>2024</year>
+		<manufacturer>lunoka</manufacturer>
+		<rom name="Mai Nurse v1.02 (2024)(lunoka).gba" size="205756" crc="08a20dc9"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="mailcute" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Mail de Cute (Japan)</description>
 		<year>2002</year>
@@ -14777,6 +14820,16 @@
 		<year>2013</year>
 		<manufacturer>PortableDev - Alekmaul</manufacturer>
 		<rom name="MazezaM v1.1 (2013)(PortableDev - Alekmaul).gba" size="569944" crc="f7bc9db0"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="meating" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Meating, The (HB)</description>
+		<year>2023</year>
+		<manufacturer>Mega Cat Studios</manufacturer>
+		<rom name="Meating, The (2023)(Mega Cat Studios).gba" size="1048576" crc="903b5cfa"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -16741,6 +16794,16 @@
 		<year>2006</year>
 		<manufacturer>Electronic Arts</manufacturer>
 		<rom name="agb-bn7p-0.u1" size="8388608" crc="f4c0d140"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="neonnoir" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>NEONnoir (HB)</description>
+		<year>2025</year>
+		<manufacturer>Mass</manufacturer>
+		<rom name="NEONnoir (2025)(Mass).gba" size="2793156" crc="34220044"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -19494,6 +19557,26 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="rickdang" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Rick Dangerous (HB)</description>
+		<year>2013</year>
+		<manufacturer>Alekmaul</manufacturer>
+		<rom name="Rick Dangerous (2013)(Alekmaul).gba" size="4237460" crc="53d4f7c5"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="rickdang2" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Rick Dangerous 2 (HB)</description>
+		<year>2011</year>
+		<manufacturer>Alekmaul</manufacturer>
+		<rom name="Rick Dangerous 2 (2011)(Alekmaul).gba" size="4934608" crc="65a8d986"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="rcr" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>River City Ransom EX (USA)</description>
 		<year>2004</year>
@@ -21447,6 +21530,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="sosnake" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Slide-o-Snake (HB)</description>
+		<year>2026</year>
+		<manufacturer>Mike Bloke</manufacturer>
+		<rom name="Slide-o-Snake (2026)(Mike Bloke).gba" size="7003796" crc="9e5d4094"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="slimemdq" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Slime Morimori Dragon Quest - Shougeki no Shippo Dan (Japan)</description>
 		<year>2003</year>
@@ -22568,10 +22661,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="starx" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Star X (Europe)</description>
+		<description>Star X (Europe, M6)</description>
 		<year>2002</year>
 		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="star x (europe) (en,fr,de,es,it,nl).bin" size="8388608" crc="9dca9c3c"/>
+		<rom name="Star X (E, M6)(2002)(BAM! Entertainment).gba" size="8388608" crc="9dca9c3c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -22580,16 +22673,16 @@
 		<description>Star X (USA)</description>
 		<year>2002</year>
 		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="star x (usa) (en,fr,de,es,it,nl).bin" size="8388608" crc="8b02b2b1"/>
+		<rom name="Star X (U, M6)(2002)(BAM! Entertainment).gba" size="8388608" crc="8b02b2b1"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="starskyh" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Starsky &amp; Hutch (Europe)</description>
+		<description>Starsky &amp; Hutch (Europe, M5)</description>
 		<year>2003</year>
 		<manufacturer>Empire Entertainment</manufacturer>
-		<rom name="agb-ayhp-0.u1" size="4194304" crc="209958e5"/>
+		<rom name="Starsky &amp; Hutch (E, M5)(2003)(Empire Entertainment).gba" size="4194304" crc="209958e5"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -22598,16 +22691,17 @@
 		<description>Starsky &amp; Hutch (USA)</description>
 		<year>2003</year>
 		<manufacturer>Empire Entertainment</manufacturer>
-		<rom name="starsky &amp; hutch (usa).bin" size="4194304" crc="b3993252"/>
+		<rom name="Starsky &amp; Hutch (U)(2003)(Empire Entertainment).gba" size="4194304" crc="b3993252"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="starskyhup" cloneof="starskyh" romof="starskyh" sourcefile="gba/d_gba.cpp">
-		<description>Starsky &amp; Hutch (USA, prototype)</description>
+		<comment>Prototype</comment>
+		<description>Starsky &amp; Hutch (USA, Prototype)</description>
 		<year>2003</year>
 		<manufacturer>Empire Entertainment</manufacturer>
-		<rom name="starsky &amp; hutch (usa) (beta).bin" size="4231928" crc="ab142d2e"/>
+		<rom name="Starsky &amp; Hutch (U, Proto)(2003)(Empire Entertainment).gba" size="4231928" crc="ab142d2e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -22616,7 +22710,7 @@
 		<description>Steel Empire (Europe)</description>
 		<year>2005</year>
 		<manufacturer>Zoo Digital Publishing</manufacturer>
-		<rom name="steel empire (europe).bin" size="4194304" crc="cb91922e"/>
+		<rom name="Steel Empire (E)(2005)(Zoo Digital Publishing).gba" size="4194304" crc="cb91922e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26859,7 +26953,7 @@
 		<description>World Championship Poker (Europe)</description>
 		<year>2005</year>
 		<manufacturer>Play It</manufacturer>
-		<rom name="world championship poker (europe) (en,fr,de,es,it).bin" size="4194304" crc="4776f86e"/>
+		<rom name="World Championship Poker (E, M5)(2005)(Play It).gba" size="4194304" crc="4776f86e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26868,25 +26962,26 @@
 		<description>World Championship Poker (USA)</description>
 		<year>2004</year>
 		<manufacturer>Crave Entertainment</manufacturer>
-		<rom name="world championship poker (usa).bin" size="4194304" crc="07f15152"/>
+		<rom name="World Championship Poker (U)(2004)(Crave Entertainment).gba" size="4194304" crc="07f15152"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="worldreb" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>World Reborn (USA)</description>
-		<year>2015</year>
-		<manufacturer>Piko Interactive</manufacturer>
-		<rom name="world reborn.bin" size="4194304" crc="eefb32ff"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="worldrebp" cloneof="worldreb" romof="worldreb" sourcefile="gba/d_gba.cpp">
-		<description>World Reborn (USA, prototype)</description>
+	<game name="worldrebp" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Prototype</comment>
+		<description>World Reborn (USA, Prototype)</description>
 		<year>2004</year>
 		<manufacturer>Destination Software</manufacturer>
-		<rom name="world reborn (usa) (proto).bin" size="4194304" crc="4c48ebb3"/>
+		<rom name="World Reborn (U, Proto)(2004)(Destination Software).gba" size="4194304" crc="4c48ebb3"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="worldreb" cloneof="worldrebp" romof="worldrebp" sourcefile="gba/d_gba.cpp">
+		<description>World Reborn (World)</description>
+		<year>2015</year>
+		<manufacturer>Piko Interactive</manufacturer>
+		<rom name="World Reborn (2015)(Piko Interactive).gba" size="4194304" crc="eefb32ff"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26895,7 +26990,7 @@
 		<description>World Tennis Stars (Europe)</description>
 		<year>2004</year>
 		<manufacturer>Ignition Entertainment</manufacturer>
-		<rom name="agb-awcp-0.u1" size="4194304" crc="b5830f5f"/>
+		<rom name="World Tennis Stars (E)(2004)(Ignition Entertainment).gba" size="4194304" crc="b5830f5f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26904,7 +26999,7 @@
 		<description>World Tennis Stars (USA)</description>
 		<year>2004</year>
 		<manufacturer>AIA</manufacturer>
-		<rom name="world tennis stars (usa).bin" size="4194304" crc="036e30b0"/>
+		<rom name="World Tennis Stars (U)(2004)(AIA).gba" size="4194304" crc="036e30b0"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26937,19 +27032,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="wpt" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>WPT - World Poker Tour (Europe)</description>
+		<description>WPT: World Poker Tour (Europe)</description>
 		<year>2006</year>
 		<manufacturer>2K Sports</manufacturer>
-		<rom name="agb-bwop-0.u1" size="4194304" crc="8fa26a97"/>
+		<rom name="World Poker Tour (E)(2006)(2K Sports).gba" size="4194304" crc="8fa26a97"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="wptu" cloneof="wpt" romof="wpt" sourcefile="gba/d_gba.cpp">
-		<description>WPT - World Poker Tour (USA)</description>
+		<description>WPT: World Poker Tour (USA)</description>
 		<year>2005</year>
 		<manufacturer>2K Sports</manufacturer>
-		<rom name="world poker tour (usa).bin" size="4194304" crc="b18784c1"/>
+		<rom name="World Poker Tour (U)(2005)(2K Sports).gba" size="4194304" crc="b18784c1"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
