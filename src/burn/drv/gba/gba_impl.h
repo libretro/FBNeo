@@ -2050,9 +2050,6 @@ bool gba_load_rom(sb_emu_state_t* emu, gba_t* gba, gba_scratch_t* scratch)
 	gba->tilt_sensor.sample_y       = 0xfff;
 	gba->tilt_sensor.pending_x      = 0x3a0;
 	gba->tilt_sensor.pending_y      = 0x3a0;
-	if (!sb_path_has_file_ext(emu->rom_path, ".gba"))
-		return false;
-
 	if (emu->rom_size > 32 * 1024 * 1024) {
 		printf("ROMs with sizes >32MB (%zu bytes) are too big for the GBA\n", emu->rom_size);
 		return false;
@@ -2118,11 +2115,11 @@ bool gba_load_rom(sb_emu_state_t* emu, gba_t* gba, gba_scratch_t* scratch)
 		printf("No GBA bios using bundled bios\n");
 		memcpy(gba->mem.bios, gba_bios_bin, sizeof(gba_bios_bin));
 		const UINT32 initial_regs[37] = {
-			0x0      ,0x0,0x0      ,0x0,0x0,0x0      ,0x0,0x0,
-			0x0      ,0x0,0x0      ,0x0,0x0,0x3007f00,0x0,0x8000000,
-			0xdf     ,0x0,0x0      ,0x0,0x0,0x0      ,0x0,0x0,
-			0x3007fa0,0x0,0x3007fe0,0x0,0x0,0x0      ,0x0,0x0,
-			0x0      ,0x0,0x0      ,0x0,0x0,
+			0x0      , 0x0,0x0      , 0x0,0x0,0x0      , 0x0,0x0,
+			0x0      , 0x0,0x0      , 0x0,0x0,0x3007f00, 0x0,0x8000000,
+			0xdf     , 0x0,0x0      , 0x0,0x0,0x0      , 0x0,0x0,
+			0x3007fa0, 0x0,0x3007fe0, 0x0,0x0,0x0      , 0x0,0x0,
+			0x0      , 0x0,0x0      , 0x0,0x0,
 		};
 		for (INT32 i = 0;i < 37;++i)
 			gba->cpu.registers[i] = initial_regs[i];
@@ -2425,28 +2422,31 @@ static FORCE_INLINE void gba_tick_ppu(gba_t* gba, bool render)
 						INT32 tx = sx % 8;
 						INT32 ty = sy % 8;
 
-						INT32 y_tile_stride = obj_vram_map_2d ? 32 : x_size / 8 * (colors_or_palettes ? 2 : 1);
-						INT32 tile          = tile_base + (((sx / 8)) * (colors_or_palettes ? 2 : 1)) + (sy / 8) * y_tile_stride;
-						// Don't allow the column indices to overflow into the row indices in 2D mode. 
-						// See: https://github.com/skylersaleh/SkyEmu/issues/13
+						INT32 tile_step = colors_or_palettes ? 2 : 1;
+						INT32 tile;
 						if (obj_vram_map_2d) {
-							tile  = (tile_base + (((sx / 8)) * (colors_or_palettes ? 2 : 1))) & 31;
-							tile |= (tile_base +   (sy / 8)  * y_tile_stride) & ~31;
+							INT32 base = colors_or_palettes ? tile_base & ~1 : tile_base;
+							tile  = (base + (sx / 8) * tile_step) & 0x1f;
+							tile |= (base + (sy / 8) * 32       ) & 0x3e0;
+						} else {
+							tile  = (tile_base + (sx / 8) * tile_step + (sy / 8) * (x_size / 8) * tile_step) & 0x3ff;
 						}
-						//Tiles >511 are not rendered in bg_mode3-5 since that memory is used to store the bitmap graphics. 
+						//Tiles >511 are not rendered in bg_mode3-5 since that memory is used to store the bitmap graphics.
 						if (tile < 512 && bg_mode >= 3 && bg_mode <= 5)
 							continue;
 						UINT8 palette_id;
 						INT32 obj_tile_base = GBA_OBJ_TILES0_2;
 						bool transparent = false;
 						if (colors_or_palettes == false) {
-							palette_id  = gba->mem.vram[obj_tile_base + tile * 8 * 4 + tx / 2 + ty * 4];
-							palette_id  = (palette_id >> ((tx & 1) * 4)) & 0xf;
-							transparent =  palette_id == 0;
-							palette_id +=  palette * 16;
+							INT32 offset = (tile * 32 + tx / 2 + ty * 4) & 0x7fff;
+							palette_id   = gba->mem.vram[obj_tile_base + offset];
+							palette_id   = (palette_id >> ((tx & 1) * 4)) & 0xf;
+							transparent  =  palette_id == 0;
+							palette_id  +=  palette * 16;
 						} else {
-							palette_id  = gba->mem.vram[obj_tile_base + tile * 8 * 4 + tx + ty * 8];
-							transparent = palette_id == 0;
+							INT32 offset = (tile * 32 + tx + ty * 8) & 0x7fff;
+							palette_id   = gba->mem.vram[obj_tile_base + offset];
+							transparent  = palette_id == 0;
 						}
 
 						UINT32 col = *(UINT16*)(gba->mem.palette + GBA_OBJ_PALETTE + palette_id * 2);

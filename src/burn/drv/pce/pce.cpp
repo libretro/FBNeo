@@ -528,7 +528,7 @@ INT32 SGXInit()
 
 INT32 PCECDInit()
 {
-	return CommonInit(PCEDips[2] & 1 ? CD_HW : ACARD_HW);
+	return CommonInit(PCEDips[2] & 1 ? ACARD_HW : CD_HW);
 }
 
 INT32 populousInit()
@@ -680,7 +680,7 @@ INT32 PCEFrame()
 
 		if (HAS_CD) {
 			CDSubsystemTick();
-			MSM5205Update();
+			MSM5205UpdateScanline(i);
 		}
 
 		// if thinking of changing this, make sure to check for these side effects:
