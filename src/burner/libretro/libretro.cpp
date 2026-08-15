@@ -1896,6 +1896,9 @@ static bool retro_load_game_common()
 	nBurnDrvActive = ((NULL != pDataRomDesc) && (-1 != pRDI->nDescCount)) ? pRDI->nDriverId : BurnDrvGetIndexByName(g_driver_name);
 	if (nBurnDrvActive < nBurnDrvCount) {
 
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] Romset name: %s\n", g_driver_name);
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] Romset description: %s\n", BurnDrvGetTextA(DRV_FULLNAME));
+
 		// If the game is marked as not working, let's stop here
 		if (!(BurnDrvIsWorking())) {
 			SetUguiError(RETRO_ERROR_MESSAGES_01);
@@ -2116,7 +2119,7 @@ static bool retro_load_game_common()
 		}
 
 		// Initialization done
-		HandleMessage(RETRO_LOG_INFO, "[FBNeo] Driver %s was successfully started : game's full name is %s\n", g_driver_name, BurnDrvGetTextA(DRV_FULLNAME));
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] Driver successfully started\n");
 	}
 	else
 	{
@@ -2259,6 +2262,7 @@ bool retro_load_game(const struct retro_game_info *info)
 			break;
 	}
 
+	// prepare prefix
 	extract_basename(g_driver_name, szRomsetPath, sizeof(g_driver_name), "");
 	extract_directory(g_rom_dir, szRomsetPath, sizeof(g_rom_dir));
 	extract_basename(g_rom_parent_dir, g_rom_dir, sizeof(g_rom_parent_dir),"");
@@ -2327,10 +2331,12 @@ bool retro_load_game(const struct retro_game_info *info)
 		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem chf identified from parent folder\n");
 		if (strncmp(g_driver_name, "chf_", 4) != 0) prefix = "chf_";
 	}
-	if(strcmp(g_rom_parent_dir, "astro")==0 || strcmp(g_rom_parent_dir, "astrohome")==0) {
+	if(strcmp(g_rom_parent_dir, "astro")==0 || strcmp(g_rom_parent_dir, "astrohome")==0 || strcmp(g_rom_parent_dir, "astrocade")==0) {
 		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem astro identified from parent folder\n");
 		if (strncmp(g_driver_name, "astro_", 6) != 0) prefix = "astro_";
 	}
+
+	// prepare g_driver_name
 	if(strcmp(g_rom_parent_dir, "neocd")==0 || strncmp(g_driver_name, "neocd_", 6)==0) {
 		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem neocd identified from parent folder\n");
 		prefix = "";
@@ -2434,7 +2440,7 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 	extract_basename(g_driver_name, info->path, sizeof(g_driver_name), prefix);
 	extract_directory(g_rom_dir, info->path, sizeof(g_rom_dir));
 
-	if(nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD)
+	if(nGameType == RETRO_GAME_TYPE_NEOCD)
 		extract_basename(g_driver_name, "neocdz", sizeof(g_driver_name), "");
 	if(nGameType == RETRO_GAME_TYPE_PCECD)
 		extract_basename(g_driver_name, "pce_scdsys", sizeof(g_driver_name), "");
