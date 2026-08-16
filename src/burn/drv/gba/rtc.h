@@ -58,6 +58,7 @@ typedef struct {
 	UINT8 buffer[7];
 	UINT8 last_pins;
 	UINT8 sio_out;
+	bool  force_irq;
 } gba_rtc_t;
 
 // Howard Hinnant's days_from_civil / civil_from_days (public domain). Proleptic
@@ -135,7 +136,7 @@ static FORCE_INLINE INT32 gba_rtc_bcd_decode(UINT8 value, UINT8 maximum, UINT8 *
 static FORCE_INLINE UINT8 gba_rtc_hour_encode(UINT8 hour_24, UINT8 status)
 {
 	if (status & 0x40) return gba_rtc_bcd_encode(hour_24);
-	return gba_rtc_bcd_encode(hour_24 % 12) | (hour_24 >= 12 ? 0x80 : 0);
+	return gba_rtc_bcd_encode(hour_24 % 12) | (hour_24 >= 12 ? 0x40 : 0);
 }
 
 static FORCE_INLINE INT32 gba_rtc_hour_decode(UINT8 status, UINT8 value, UINT8 *hour)
@@ -146,7 +147,7 @@ static FORCE_INLINE INT32 gba_rtc_hour_decode(UINT8 status, UINT8 value, UINT8 *
 	}
 	UINT8 decoded;
 	if (gba_rtc_bcd_decode(value & 0x3f, 11, &decoded)) return 1;
-	*hour = decoded + ((value & 0x80) ? 12 : 0);
+	*hour = decoded + ((value & 0x40) ? 12 : 0);
 	return 0;
 }
 
@@ -182,7 +183,7 @@ static FORCE_INLINE void gba_rtc_reanchor(gba_rtc_t *rtc, INT64 rtc_seconds)
 	rtc->host_seconds = GBA_RTC_NOW_SECONDS();
 }
 
-static FORCE_INLINE void gba_rtc_latch_read(gba_rtc_t *rtc)
+static void gba_rtc_latch_read(gba_rtc_t *rtc)
 {
 	memset(rtc->buffer, 0xff, sizeof(rtc->buffer));
 	switch (rtc->command_register) {
@@ -270,7 +271,7 @@ static FORCE_INLINE UINT8 gba_rtc_reverse8(UINT8 value)
 	return ((value & 0x55) << 1) | ((value & 0xaa) >> 1);
 }
 
-static FORCE_INLINE void gba_rtc_decode_command(gba_rtc_t *rtc)
+static void gba_rtc_decode_command(gba_rtc_t *rtc)
 {
 	UINT8 command = rtc->command;
 	if ((command & 0x0f) != 0x06 && (command & 0xf0) == 0x60) command = gba_rtc_reverse8(command);
@@ -293,6 +294,8 @@ static FORCE_INLINE void gba_rtc_decode_command(gba_rtc_t *rtc)
 	}
 	if (rtc->command_register == GBA_RTC_FORCE_IRQ || rtc->command_register == GBA_RTC_UNUSED ||
 		rtc->command_register == GBA_RTC_UNUSED2 || rtc->command_register == GBA_RTC_UNUSED3) {
+		if (rtc->command_register == GBA_RTC_FORCE_IRQ && !rtc->command_read)
+			rtc->force_irq = true;
 		rtc->phase = GBA_RTC_COMPLETE;
 		return;
 	}

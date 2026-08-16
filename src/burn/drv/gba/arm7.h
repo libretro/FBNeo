@@ -160,10 +160,10 @@ static void arm7_msr(arm7_t* cpu, UINT32 opcode);
 
 static void arm9_clz(arm7_t* cpu, UINT32 opcode);
 static void arm9_double_word_transfer(arm7_t* cpu, UINT32 opcode);
-static FORCE_INLINE void arm9_qadd_qsub(arm7_t* cpu, UINT32 opcode);
-static FORCE_INLINE void arm9_signed_halfword_multiply(arm7_t* cpu, UINT32 opcode);
+static void arm9_qadd_qsub(arm7_t* cpu, UINT32 opcode);
+static void arm9_signed_halfword_multiply(arm7_t* cpu, UINT32 opcode);
 static FORCE_INLINE void arm9_single_word_transfer(arm7_t* cpu, UINT32 opcode);
-static FORCE_INLINE void arm9_block_transfer(arm7_t* cpu, UINT32 opcode);
+static void arm9_block_transfer(arm7_t* cpu, UINT32 opcode);
 // Thumb Instruction Implementations
 static void arm7t_mov_shift_reg(arm7_t* cpu, UINT32 opcode);
 static void arm7t_add_sub(arm7_t* cpu, UINT32 opcode);
@@ -201,7 +201,7 @@ static FORCE_INLINE UINT32 arm7_reg_read(arm7_t*cpu, UINT32 reg);
 static FORCE_INLINE UINT32 arm7_reg_read_r15_adj(arm7_t*cpu, UINT32 reg, INT32 r15_off);
 static FORCE_INLINE void   arm7_reg_write(arm7_t*cpu, UINT32 reg, UINT32 value);
 static FORCE_INLINE UINT32 arm7_reg_index(arm7_t* cpu, UINT32 reg);
-static FORCE_INLINE UINT32 arm7_shift(arm7_t* arm, UINT32 opcode, UINT64 value, UINT32 shift_value, INT32* carry);
+static UINT32 arm7_shift(arm7_t* arm, UINT32 opcode, UINT64 value, UINT32 shift_value, INT32* carry);
 static FORCE_INLINE UINT32 arm7_load_shift_reg(arm7_t* arm, UINT32 opcode, INT32* carry);
 static FORCE_INLINE UINT32 arm7_rotr(UINT32 value, UINT32 rotate);
 static FORCE_INLINE bool   arm7_get_thumb_bit(arm7_t* cpu);
@@ -875,7 +875,7 @@ static FORCE_INLINE bool arm7_run_phased_opcode(arm7_t* cpu)
 	return false;
 }
 
-static FORCE_INLINE void arm7_exec_instruction(arm7_t* cpu)
+static void arm7_exec_instruction(arm7_t* cpu)
 {
 	bool thumb = arm7_get_thumb_bit(cpu);
 	if (SB_LIKELY(arm7_run_phased_opcode(cpu))) {
@@ -1036,7 +1036,7 @@ static FORCE_INLINE UINT32 arm7_load_shift_reg(arm7_t* arm, UINT32 opcode, INT32
 	return arm7_shift(arm, opcode, value, shift_value, carry);
 }
 
-static FORCE_INLINE UINT32 arm7_shift(arm7_t* arm, UINT32 opcode, UINT64 value, UINT32 shift_value, INT32* carry)
+static UINT32 arm7_shift(arm7_t* arm, UINT32 opcode, UINT64 value, UINT32 shift_value, INT32* carry)
 {
 	INT32 shift_type = ARM7_BFE(opcode, 5, 2);
 	// Shift value of 0 has special behavior from a register: 
@@ -1093,7 +1093,7 @@ static FORCE_INLINE UINT32 arm7_shift(arm7_t* arm, UINT32 opcode, UINT64 value, 
 	return value;
 }
 
-static FORCE_INLINE void arm7_data_processing(arm7_t* cpu, UINT32 opcode)
+static void arm7_data_processing(arm7_t* cpu, UINT32 opcode)
 {
 	// If it's used as anything but the shift amount in an operation with a register-specified shift, r15 will be PC + 12
 	// I.e. add r0, r15, r15, lsl r15 would set r0 to PC + 12 + ((PC + 12) << (PC + 8))
@@ -1251,7 +1251,7 @@ static FORCE_INLINE void arm7_multiply(arm7_t* cpu, UINT32 opcode)
 }
 
 //SMULLxxx
-static FORCE_INLINE void arm9_signed_halfword_multiply(arm7_t* cpu, UINT32 opcode)
+static void arm9_signed_halfword_multiply(arm7_t* cpu, UINT32 opcode)
 {
 	INT32 op = ARM7_BFE(opcode, 21, 2);
 
@@ -1303,7 +1303,7 @@ static FORCE_INLINE void arm9_signed_halfword_multiply(arm7_t* cpu, UINT32 opcod
 	arm7_reg_write(cpu, Rd, result);
 }
 
-static FORCE_INLINE void arm7_multiply_long(arm7_t* cpu, UINT32 opcode)
+static void arm7_multiply_long(arm7_t* cpu, UINT32 opcode)
 {
 	bool U = ARM7_BFE(opcode, 22, 1);
 	bool A = ARM7_BFE(opcode, 21, 1);
@@ -1405,7 +1405,7 @@ static FORCE_INLINE void arm9_branch_link_exchange(arm7_t* cpu, UINT32 opcode)
 	arm7_set_thumb_bit(cpu, thumb);
 }
 
-static FORCE_INLINE void arm7_half_word_transfer(arm7_t* cpu, UINT32 opcode)
+static void arm7_half_word_transfer(arm7_t* cpu, UINT32 opcode)
 {
 	bool P   = ARM7_BFE(opcode, 24, 1);
 	bool U   = ARM7_BFE(opcode, 23, 1);
@@ -1620,7 +1620,7 @@ static FORCE_INLINE void arm9_clz(arm7_t* cpu, UINT32 opcode)
 	arm7_reg_write(cpu, Rd, count);
 }
 
-static FORCE_INLINE void arm9_qadd_qsub(arm7_t* cpu, UINT32 opcode) {
+static void arm9_qadd_qsub(arm7_t* cpu, UINT32 opcode) {
 	bool double_value = ARM7_BFE(opcode, 22, 1);
 	bool subtract     = ARM7_BFE(opcode, 21, 1);
 	INT32 Rn = ARM7_BFE(opcode, 16, 4);
@@ -1644,7 +1644,7 @@ static FORCE_INLINE void arm9_qadd_qsub(arm7_t* cpu, UINT32 opcode) {
 	arm7_reg_write(cpu, Rd, result);
 }
 
-static FORCE_INLINE void arm7_block_transfer(arm7_t* cpu, UINT32 opcode)
+static void arm7_block_transfer(arm7_t* cpu, UINT32 opcode)
 {
 	INT32 P       = ARM7_BFE(opcode, 24,  1);
 	INT32 U       = ARM7_BFE(opcode, 23,  1);
@@ -1760,7 +1760,7 @@ static FORCE_INLINE void arm7_block_transfer(arm7_t* cpu, UINT32 opcode)
 	cpu->phased_op_id = 0;
 }
 
-static FORCE_INLINE void arm9_block_transfer(arm7_t* cpu, UINT32 opcode)
+static void arm9_block_transfer(arm7_t* cpu, UINT32 opcode)
 {
 	INT32 P       = ARM7_BFE(opcode, 24,  1);
 	INT32 U       = ARM7_BFE(opcode, 23,  1);
@@ -2060,7 +2060,7 @@ static FORCE_INLINE void arm7t_mov_cmp_add_sub_imm(arm7_t* cpu, UINT32 opcode)
 	arm7_data_processing(cpu, arm_op);
 }
 
-static FORCE_INLINE void arm7t_alu_op(arm7_t* cpu, UINT32 opcode)
+static void arm7t_alu_op(arm7_t* cpu, UINT32 opcode)
 {
 	INT32 op = ARM7_BFE(opcode, 6, 4);
 	INT32 Rs = ARM7_BFE(opcode, 3, 3);
