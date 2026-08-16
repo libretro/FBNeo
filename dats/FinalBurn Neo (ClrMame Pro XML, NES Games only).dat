@@ -10144,6 +10144,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="holdlight" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Hold the Light (HB)</description>
+		<year>2025</year>
+		<manufacturer>TSBF Studio</manufacturer>
+		<rom name="Hold the Light (2025)(TSBF Studio).nes" size="524304" crc="013aee36"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="hollowkgg" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Hollow Knight Grab Grub (HB)</description>

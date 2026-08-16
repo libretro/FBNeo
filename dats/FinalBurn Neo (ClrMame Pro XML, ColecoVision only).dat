@@ -177,6 +177,19 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="amidar" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew, SGM - Super Game Module</comment>
+		<description>Amidar (SGM) (HB)</description>
+		<year>1981-2024</year>
+		<manufacturer>Opcode Games - Konami</manufacturer>
+		<rom name="Amidar SGM (2024)(Opcode Games).rom" size="131072" crc="e4676d56"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="antarct" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<description>Antarctic Adventure (USA, Euro)</description>
 		<year>1984</year>
@@ -269,7 +282,7 @@
 		<comment>Homebrew, SGM - Published by CollectorVision Games</comment>
 		<description>Arkanoid (SGM) (HB)</description>
 		<year>1986-2020</year>
-		<manufacturer>Taito</manufacturer>
+		<manufacturer>Taito Corp.</manufacturer>
 		<rom name="Arkanoid SGM (2020)(CollectorVision).rom" size="32768" crc="28b61e06"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
@@ -627,8 +640,8 @@
 		<comment>Homebrew, Published by Team Pixelboy</comment>
 		<description>Black Onyx, The (HB)</description>
 		<year>1987-2013</year>
-		<manufacturer>Sega - Mystery Man</manufacturer>
-		<rom name="Black Onyx, the (2013)(Team Pixelboy).rom" size="65536" crc="dddd1396"/>
+		<manufacturer>Mystery Man - Sega</manufacturer>
+		<rom name="Black Onyx, The (2013)(Team Pixelboy).rom" size="65536" crc="dddd1396"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -677,7 +690,7 @@
 	<game name="bokosukawars" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew, SGM - Super Game Module</comment>
 		<description>Bokosuka Wars (SGM) (HB)</description>
-		<year>2017</year>
+		<year>1983-2017</year>
 		<manufacturer>Opcode Games - ASCII</manufacturer>
 		<rom name="Bokosuka Wars SGM (2017)(Opcode Games).rom" size="32768" crc="59b0eb86"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
@@ -1090,7 +1103,7 @@
 		<description>Cabbage Patch Kids (HB)</description>
 		<year>1983-2017</year>
 		<manufacturer>Opcode Games - Konami</manufacturer>
-		<rom name="Cabbage Patch Kids (1983-2017)(Opcode Games).rom" size="65536" crc="741cf863"/>
+		<rom name="Cabbage Patch Kids (2017)(Opcode Games).rom" size="65536" crc="741cf863"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -1954,7 +1967,7 @@
 		<description>Dig Dug (SGM) (HB)</description>
 		<year>1982-2017</year>
 		<manufacturer>Opcode Games - Namcot</manufacturer>
-		<rom name="Dig Dug SGM (1982-2017)(Opcode Games).rom" size="32768" crc="59d08879"/>
+		<rom name="Dig Dug SGM (2017)(Opcode Games).rom" size="32768" crc="59d08879"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -1981,6 +1994,32 @@
 		<year>2015</year>
 		<manufacturer>Windmill Software</manufacturer>
 		<rom name="Digger (2015)(CollectorVision).rom" size="24576" crc="77088cab"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dkarcade" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew, SGM - Super Game Module</comment>
+		<description>DK Arcade (SGM) (HB)</description>
+		<year>1981-2023</year>
+		<manufacturer>Opcode Games - Nintendo</manufacturer>
+		<rom name="DK Arcade SGM (2023)(Opcode Games).rom" size="131072" crc="76004c98"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dkjrarcade" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew, SGM - Super Game Module</comment>
+		<description>DK Jr. Arcade (SGM) (HB)</description>
+		<year>2023</year>
+		<manufacturer>Opcode Games - Nintendo</manufacturer>
+		<rom name="DK Jr. Arcade (2023)(Opcode Games).rom" size="131072" crc="c4ea9601"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -2094,7 +2133,7 @@
 		<description>Dorodon (SGM) (HB)</description>
 		<year>1984-2017</year>
 		<manufacturer>Opcode Games - UPL</manufacturer>
-		<rom name="Dorodon SGM (1984-2017)(Opcode Games).rom" size="32768" crc="e3d61921"/>
+		<rom name="Dorodon SGM (2017)(Opcode Games).rom" size="32768" crc="e3d61921"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -2502,7 +2541,7 @@
 		<comment>Homebrew, Published by Team Pixelboy</comment>
 		<description>Flicky (HB)</description>
 		<year>1984-2018</year>
-		<manufacturer>Sega - Mystery Man</manufacturer>
+		<manufacturer>Mystery Man - Sega</manufacturer>
 		<rom name="Flicky (2018)(Team Pixelboy).rom" size="32768" crc="89875c52"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
@@ -2689,7 +2728,7 @@
 		<description>Front Line (SGM) (HB)</description>
 		<year>1984-2019</year>
 		<manufacturer>Opcode Games - Taito</manufacturer>
-		<rom name="Front Line SGM (1984-2019)(Opcode Games).rom" size="65536" crc="e544a5f9"/>
+		<rom name="Front Line SGM (2019)(Opcode Games).rom" size="65536" crc="e544a5f9"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -2983,7 +3022,7 @@
 		<description>Goonies, The (Opcode) (SGM) (HB)</description>
 		<year>1986-2023</year>
 		<manufacturer>Opcode Games - Konami</manufacturer>
-		<rom name="Goonies, The - SGM (2023)(Opcode Games).rom" size="131072" crc="6c8113c1"/>
+		<rom name="Goonies, The SGM (2023)(Opcode Games).rom" size="131072" crc="6c8113c1"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -3034,7 +3073,7 @@
 		<description>Gradius (SGM) (HB)</description>
 		<year>1986-2016</year>
 		<manufacturer>Opcode Games - Konami</manufacturer>
-		<rom name="Gradius - SGM (2016)(Opcode Games).rom" size="131072" crc="30d337e4"/>
+		<rom name="Gradius SGM (2016)(Opcode Games).rom" size="131072" crc="30d337e4"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -3047,7 +3086,7 @@
 		<description>Gradius (SGM) (HB, Alt)</description>
 		<year>1986-2016</year>
 		<manufacturer>Opcode Games - Konami</manufacturer>
-		<rom name="Gradius - SGM (Alt)(2016)(Opcode Games).rom" size="131072" crc="2426c300"/>
+		<rom name="Gradius SGM (Alt)(2016)(Opcode Games).rom" size="131072" crc="2426c300"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -4065,10 +4104,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="mkidwiz" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>SGM - Super Game Module</comment>
 		<description>Magical Kid WIZ (SGM) (HB)</description>
-		<year>2018</year>
-		<manufacturer>Opcode Games</manufacturer>
-		<rom name="Magical Kid WIZ (2018)(Opcode Games).rom" size="131072" crc="aeefdb96"/>
+		<year>1986-2018</year>
+		<manufacturer>Opcode Games - Sony</manufacturer>
+		<rom name="Magical Kid WIZ SGM (2018)(Opcode Games).rom" size="131072" crc="aeefdb96"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -4077,10 +4117,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="magtree" romof="coleco" sourcefile="coleco/d_coleco.cpp">
-		<comment>Homebrew, Published by Opcode Games</comment>
+		<comment>Homebrew</comment>
 		<description>Magical Tree (HB)</description>
-		<year>2006</year>
-		<manufacturer>Konami</manufacturer>
+		<year>1984-2006</year>
+		<manufacturer>Opcode Games - Konami</manufacturer>
 		<rom name="Magical Tree (2006)(Opcode Games).rom" size="32768" crc="f4314bb1"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
@@ -4090,11 +4130,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="magtreep" cloneof="magtree" romof="magtree" sourcefile="coleco/d_coleco.cpp">
-		<comment>Homebrew, Prototype, Published by Opcode Games</comment>
+		<comment>Homebrew, Prototype</comment>
 		<description>Magical Tree (HB, Prototype)</description>
 		<year>1984-2004</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="Magical Tree (Proto) (1984-2004)(Opcode Games).rom" size="32768" crc="9f53f9cc"/>
+		<manufacturer>Opcode Games - Konami</manufacturer>
+		<rom name="Magical Tree (Proto)(2004)(Opcode Games).rom" size="32768" crc="9f53f9cc"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -4516,7 +4556,7 @@
 		<comment>Homebrew, Published by Team Pixelboy</comment>
 		<description>Monaco GP (HB)</description>
 		<year>1983-2021</year>
-		<manufacturer>Sega - Mystery Man</manufacturer>
+		<manufacturer>Mystery Man - Sega</manufacturer>
 		<rom name="Monaco GP (2021)(Mystery Man).rom" size="32768" crc="5d21678e"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
@@ -4630,7 +4670,7 @@
 		<description>Mooncresta (SGM) (HB)</description>
 		<year>1980-2023</year>
 		<manufacturer>Opcode Games - Nichibutsu</manufacturer>
-		<rom name="Mooncresta - SGM (2023)(Opcode Games).rom" size="131072" crc="bdae4248"/>
+		<rom name="Mooncresta SGM (2023)(Opcode Games).rom" size="131072" crc="bdae4248"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -4728,7 +4768,7 @@
 		<description>Mouser (SGM) (HB)</description>
 		<year>1983-2017</year>
 		<manufacturer>Opcode Games - UPL</manufacturer>
-		<rom name="Mouser - SGM (1983-2017)(Opcode Games).rom" size="32768" crc="b9a8d81e"/>
+		<rom name="Mouser SGM (2017)(Opcode Games).rom" size="32768" crc="b9a8d81e"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -5198,7 +5238,7 @@
 		<description>Pac-Man DX (SGM) (HB)</description>
 		<year>2025</year>
 		<manufacturer>Opcode Games</manufacturer>
-		<rom name="Pac-Man DX - SGM (2025)(Opcode Games).rom" size="262144" crc="de785ee3"/>
+		<rom name="Pac-Man DX SGM (2025)(Opcode Games).rom" size="262144" crc="de785ee3"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -5272,7 +5312,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="penguinadv" romof="coleco" sourcefile="coleco/d_coleco.cpp">
-		<comment>Homebrew</comment>
+		<comment>Homebrew, SGM - Super Game Module</comment>
 		<description>Penguin Adventure (SGM) (HB)</description>
 		<year>1986-2016</year>
 		<manufacturer>Opcode Games - Konami</manufacturer>
@@ -5300,7 +5340,7 @@
 	<game name="penguinwars" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew, SGM - Super Game Module</comment>
 		<description>Penguin Wars (SGM) (HB)</description>
-		<year>2018</year>
+		<year>1985-2018</year>
 		<manufacturer>Opcode Games - ASCII</manufacturer>
 		<rom name="Penguin Wars SGM (2018)(Opcode Games).rom" size="65536" crc="4008a425"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
@@ -5846,7 +5886,7 @@
 	<game name="roadfght" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew</comment>
 		<description>Road Fighter (HB)</description>
-		<year>2007</year>
+		<year>1985-2007</year>
 		<manufacturer>Opcode Games - Konami</manufacturer>
 		<rom name="Road Fighter (2007)(Opcode Games).rom" size="32768" crc="570b9935"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
@@ -6022,8 +6062,8 @@
 		<comment>Homebrew, Published by CollectorVision Games</comment>
 		<description>Safari Race (HB)</description>
 		<year>1988-2022</year>
-		<manufacturer>Sega - Mystery Man</manufacturer>
-		<rom name="Safari Race (1988-2022)(Mystery Man).rom" size="32768" crc="53dc76f4"/>
+		<manufacturer>Mystery Man - Sega</manufacturer>
+		<rom name="Safari Race (2022)(Mystery Man).rom" size="32768" crc="53dc76f4"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -6338,10 +6378,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="skyjag" romof="coleco" sourcefile="coleco/d_coleco.cpp">
-		<comment>Homebrew, Published by Opcode Games</comment>
+		<comment>Homebrew</comment>
 		<description>Sky Jaguar (HB)</description>
-		<year>2004</year>
-		<manufacturer>Konami</manufacturer>
+		<year>1984-2004</year>
+		<manufacturer>Opcode Games - Konami</manufacturer>
 		<rom name="Sky Jaguar (2004)(Opcode Games).rom" size="32768" crc="54d54968"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
@@ -8273,7 +8313,7 @@
 		<comment>Homebrew, Published by Team Pixelboy</comment>
 		<description>Zaxxon II (HB)</description>
 		<year>1985-2021</year>
-		<manufacturer>Sega - Mystery Man</manufacturer>
+		<manufacturer>Mystery Man - Sega</manufacturer>
 		<rom name="Zaxxon II (2021)(Team Pixelboy).rom" size="32768" crc="762e9a2b"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
@@ -8311,8 +8351,8 @@
 		<comment>Homebrew, Published by CollectorVision Games</comment>
 		<description>Zippy Race (HB)</description>
 		<year>1983-2009</year>
-		<manufacturer>Dvik &amp; Joyrex</manufacturer>
-		<rom name="Zippy Race (2009)(Opcode Games).rom" size="32768" crc="44e6948c"/>
+		<manufacturer>Dvik &amp; Joyrex - Sega</manufacturer>
+		<rom name="Zippy Race (2009)(Dvik &amp; Joyrex).rom" size="32768" crc="44e6948c"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -8376,7 +8416,7 @@
 		<comment>Homebrew, Published by Team Pixelboy</comment>
 		<description>Zoom 909 (HB)</description>
 		<year>1985-2021</year>
-		<manufacturer>Sega - Mystery Man</manufacturer>
+		<manufacturer>Mystery Man - Sega</manufacturer>
 		<rom name="Zoom 909 (2021)(Team Pixelboy).rom" size="32768" crc="7dc7a049"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>

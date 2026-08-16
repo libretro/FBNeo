@@ -5491,6 +5491,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="snakepit" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Snake Pit (HB)</description>
+		<year>2026</year>
+		<manufacturer>Popixel Games</manufacturer>
+		<rom name="Snake Pit (2026)(Popixel Games).sms" size="524288" crc="8c9de8bc"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="snappysnorg" sourcefile="sms/d_sms.cpp">
 		<comment>Hack, Homebrew, WIP version, demo</comment>
 		<description>Snappy Snorg and the Seven Silver Stones (GlobalHack, v1.4)</description>
@@ -6460,6 +6469,15 @@
 		<year>2017</year>
 		<manufacturer>Wave</manufacturer>
 		<rom name="Terminator, The T-Spa (2017)(Wave).sms" size="262144" crc="cea55b21"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tetrisse" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Tetris (System E) (HB, v1.5)</description>
+		<year>2026</year>
+		<manufacturer>Master Linkuei</manufacturer>
+		<rom name="Tetris (System E) v1.5 (2026)(Master Linkuei).sms" size="131072" crc="08ab88b7"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
