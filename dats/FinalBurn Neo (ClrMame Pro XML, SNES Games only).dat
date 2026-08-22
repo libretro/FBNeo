@@ -895,6 +895,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="angelsong" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Angelsong (HB, v1.5)</description>
+		<year>2025-26</year>
+		<manufacturer>Team Disposable and Haller.Z</manufacturer>
+		<rom name="Angelsong v1.5 (2025-26)(Team Disposable &amp; Haller.Z).sfc" size="262144" crc="daae6bdc"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="brutalj" cloneof="brutal" romof="brutal" sourcefile="snes/d_snes.cpp">
 		<description>Animal Buranden - Brutal (Japan)</description>
 		<year>1994</year>
@@ -5132,10 +5141,10 @@
 	</game>
 	<game name="dottieflowers" sourcefile="snes/d_snes.cpp">
 		<comment>Homebrew</comment>
-		<description>Dottie Flowers (HB)</description>
+		<description>Dottie Flowers (HB, v1.1)</description>
 		<year>2023</year>
 		<manufacturer>Goldlocke</manufacturer>
-		<rom name="Dottie Flowers (2023)(Goldlocke).sfc" size="1048576" crc="14172273"/>
+		<rom name="Dottie Flowers v1.1 (2023)(Goldlocke).sfc" size="1048576" crc="14172273"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -10590,10 +10599,10 @@
 	</game>
 	<game name="lufia2tp" cloneof="lufia2" romof="lufia2" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Lufia II: Rise of the Sinistrals (Hack, Portuguese)</description>
+		<description>Lufia II: Rise of the Sinistrals (Hack, Portuguese v1.01)</description>
 		<year>2026</year>
 		<manufacturer>Dindo</manufacturer>
-		<rom name="Lufia II - Rise of the Sinistrals PT-BR (2026)(Dindo).sfc" size="4194304" crc="401d9b8e"/>
+		<rom name="Lufia II - Rise of the Sinistrals PT-BR v1.01 (2026)(Dindo).sfc" size="4194304" crc="55e30995"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15302,7 +15311,7 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="seikdens3te" sourcefile="snes/d_snes.cpp">
+	<game name="seikdens3te" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Seiken Densetsu 3 (Hack, English v1.01)</description>
 		<year>2000</year>
@@ -15311,7 +15320,7 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="seikdens3ttc" cloneof="seikdens3te" romof="seikdens3te" sourcefile="snes/d_snes.cpp">
+	<game name="seikdens3ttc" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Seiken Densetsu 3 (Hack, Traditional Chinese v1.0)</description>
 		<year>2012</year>
@@ -15320,7 +15329,7 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="seikdens3j" cloneof="seikdens3te" romof="seikdens3te" sourcefile="snes/d_snes.cpp">
+	<game name="seikdens3j" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
 		<description>Seiken Densetsu 3 (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Squaresoft</manufacturer>
@@ -15328,21 +15337,12 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="seikdens3ts" cloneof="seikdens3te" romof="seikdens3te" sourcefile="snes/d_snes.cpp">
+	<game name="seikdens3ts" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Seiken Densetsu 3 ~ Secret of Mana 2 (Hack, Spanish)</description>
 		<year>2013</year>
 		<manufacturer>Traducciones Magno</manufacturer>
 		<rom name="Seiken Densetsu 3 T-Spa (2013)(Traducciones Magno).sfc" size="4194304" crc="11b87dea"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="seikdens3tp" cloneof="seikdens3te" romof="seikdens3te" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Seiken Densetsu 3 ~ Trials of Mana (Hack, Portuguese v1.03)</description>
-		<year>2024</year>
-		<manufacturer>Dindo</manufacturer>
-		<rom name="Seiken Densetsu 3 - Trials of Mana PT-BR v1.03 (2024)(Dindo).sfc" size="4194304" crc="0c61a7bf"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -16709,6 +16709,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sfalpha2lff" cloneof="sfalpha2" romof="sfalpha2" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, S-DD1 enhancement chip</comment>
+		<description>Street Fighter Alpha 2 (Lightweight Freeze Fix) (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Gizaha &amp; Grom</manufacturer>
+		<rom name="Street Fighter Alpha 2 (Lightweight Freeze Fix) (2026)(Gizaha &amp; Grom).sfc" size="4194304" crc="7ea8cf67"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sfalpha2" sourcefile="snes/d_snes.cpp">
 		<comment>S-DD1 enhancement chip</comment>
 		<description>Street Fighter Alpha 2 (USA)</description>
@@ -17264,12 +17273,21 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="supbombpbwj" sourcefile="snes/d_snes.cpp">
+	<game name="supbombpbwj" cloneof="supbombpbw" romof="supbombpbw" sourcefile="snes/d_snes.cpp">
 		<comment>SA-1 enhancement CPU</comment>
 		<description>Super Bomberman - Panic Bomber W (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="Super Bomberman - Panic Bomber W (J)(1995)(Hudson Soft).sfc" size="1048576" crc="fc633ecb"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="supbombpbw" sourcefile="snes/d_snes.cpp">
+		<comment>SA-1 enhancement CPU - Official English Translation</comment>
+		<description>Super Bomberman - Panic Bomber W (USA)</description>
+		<year>2026</year>
+		<manufacturer>Hudson Soft</manufacturer>
+		<rom name="Super Bomberman - Panic Bomber W (U)(2026)(Hudson Soft).sfc" size="2097152" crc="46b5c2bf"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17297,7 +17315,7 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="supbomb3e" sourcefile="snes/d_snes.cpp">
+	<game name="supbomb3e" cloneof="supbomb3" romof="supbomb3" sourcefile="snes/d_snes.cpp">
 		<description>Super Bomberman 3 (Euro)</description>
 		<year>1995</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -17305,7 +17323,7 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="supbomb3j" cloneof="supbomb3e" romof="supbomb3e" sourcefile="snes/d_snes.cpp">
+	<game name="supbomb3j" cloneof="supbomb3" romof="supbomb3" sourcefile="snes/d_snes.cpp">
 		<description>Super Bomberman 3 (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -17313,7 +17331,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="supbomb4te" sourcefile="snes/d_snes.cpp">
+	<game name="supbomb3" sourcefile="snes/d_snes.cpp">
+		<description>Super Bomberman 3 (USA)</description>
+		<year>2026</year>
+		<manufacturer>Hudson Soft</manufacturer>
+		<rom name="Super Bomberman 3 (U)(2026)(Hudson Soft).sfc" size="2097152" crc="9f40aaa3"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="supbomb4te" cloneof="supbomb4" romof="supbomb4" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Super Bomberman 4 (Hack, English)</description>
 		<year>2009</year>
@@ -17322,7 +17348,7 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="supbomb4j" cloneof="supbomb4te" romof="supbomb4te" sourcefile="snes/d_snes.cpp">
+	<game name="supbomb4j" cloneof="supbomb4" romof="supbomb4" sourcefile="snes/d_snes.cpp">
 		<description>Super Bomberman 4 (Japan)</description>
 		<year>1996</year>
 		<manufacturer>Hudson Soft</manufacturer>
@@ -17330,11 +17356,29 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="supbomb5j" sourcefile="snes/d_snes.cpp">
+	<game name="supbomb4" sourcefile="snes/d_snes.cpp">
+		<comment>Official English Translation</comment>
+		<description>Super Bomberman 4 (USA)</description>
+		<year>1996</year>
+		<manufacturer>Hudson Soft</manufacturer>
+		<rom name="Super Bomberman 4 (U)(2026)(Hudson Soft).sfc" size="4194304" crc="4dc7d0d3"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="supbomb5j" cloneof="supbomb5" romof="supbomb5" sourcefile="snes/d_snes.cpp">
 		<description>Super Bomberman 5 (Japan)</description>
 		<year>1997</year>
 		<manufacturer>Hudson Soft</manufacturer>
 		<rom name="Super Bomberman 5 (J)(1997)(Hudson Soft).sfc" size="2097152" crc="06b1f0f5"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="supbomb5" sourcefile="snes/d_snes.cpp">
+		<comment>Official English Translation</comment>
+		<description>Super Bomberman 5 (USA)</description>
+		<year>2026</year>
+		<manufacturer>Hudson Soft</manufacturer>
+		<rom name="Super Bomberman 5 (U)(2026)(Hudson Soft).sfc" size="4194304" crc="c25ab56a"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20452,6 +20496,47 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="trialsmanatp" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Trials of Mana (Hack, Portuguese v1.03)</description>
+		<year>2024</year>
+		<manufacturer>Dindo</manufacturer>
+		<rom name="Trials of Mana PT-BR v1.03 (2024)(Dindo).sfc" size="4194304" crc="0c61a7bf"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="trialsmanaen" sourcefile="snes/d_snes.cpp">
+		<description>Trials of Mana (World, English, Rev 1, Collection of Mana)</description>
+		<year>1995-2019</year>
+		<manufacturer>Square Enix</manufacturer>
+		<rom name="Trials of Mana (W, English, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="173e6097"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="trialsmanafr" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
+		<description>Trials of Mana (World, French, Rev 1, Collection of Mana)</description>
+		<year>1995-2019</year>
+		<manufacturer>Square Enix</manufacturer>
+		<rom name="Trials of Mana (W, French, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="3d09832a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="trialsmanade" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
+		<description>Trials of Mana (World, German, Rev 1, Collection of Mana)</description>
+		<year>1995-2019</year>
+		<manufacturer>Square Enix</manufacturer>
+		<rom name="Trials of Mana (W, German, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="534df838"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="trialsmanaes" cloneof="trialsmanaen" romof="trialsmanaen" sourcefile="snes/d_snes.cpp">
+		<description>Trials of Mana (World, Spanish, Rev 1, Collection of Mana)</description>
+		<year>1995-2019</year>
+		<manufacturer>Square Enix</manufacturer>
+		<rom name="Trials of Mana (W, Spanish, Rev 1)(1995-2019)(Square Enix).sfc" size="6291456" crc="593cd548"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="troddlers" sourcefile="snes/d_snes.cpp">
 		<comment>'SNES Mouse' compatible game (Set Dipswitches)</comment>
 		<description>Troddlers (USA)</description>
@@ -20737,11 +20822,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="umikawate" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Umihara Kawase (Hack, English)</description>
-		<year>2021</year>
-		<manufacturer>satsu, Green Jerry</manufacturer>
-		<rom name="Umihara Kawase T-Eng (2021)(satsu, Green Jerry).sfc" size="1048576" crc="18b07992"/>
+		<comment>Hack, HUD + Lives &amp; English Logo patches included</comment>
+		<description>Umihara Kawase (Hack, English, v0.90)</description>
+		<year>2007</year>
+		<manufacturer>satsu</manufacturer>
+		<rom name="Umihara Kawase T-Eng v0.90 (2007)(satsu).sfc" size="1048576" crc="a72905c4"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20750,6 +20835,33 @@
 		<year>1994</year>
 		<manufacturer>TNN</manufacturer>
 		<rom name="Umihara Kawase (J)(1994)(TNN).sfc" size="1048576" crc="393ccca2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="umiharakawaseccc" cloneof="umikawate" romof="umikawate" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Umihara Kawase Christmas Community Challenge (Hack)</description>
+		<year>2023</year>
+		<manufacturer>Raccoon Sam</manufacturer>
+		<rom name="Umihara Kawase Christmas Community Challenge (2023)(Raccoon Sam).sfc" size="2097152" crc="36dd21b2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="umiharakawaseed" cloneof="umikawate" romof="umikawate" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Umihara Kawase Emiko's Dream (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>MariallenaHax</manufacturer>
+		<rom name="Umihara Kawase Emiko's Dream v1.2 (2026)(MariallenaHax).sfc" size="1048576" crc="f21edb6a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="umiharakawasenag" cloneof="umikawate" romof="umikawate" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Umihara Kawase Nagori (Hack)</description>
+		<year>2025</year>
+		<manufacturer>Euler</manufacturer>
+		<rom name="Umihara Kawase Nagori (2025)(Euler).sfc" size="2097152" crc="bba4c1fe"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

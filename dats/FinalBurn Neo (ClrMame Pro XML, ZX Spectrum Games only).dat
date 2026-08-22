@@ -1260,7 +1260,7 @@
 		<description>Alien Highway (48K)</description>
 		<year>1986</year>
 		<manufacturer>Vortex Software</manufacturer>
-		<rom name="Alien Highway 48K (1986)(Vortex).tap" size="48086" crc="f5a22737"/>
+		<rom name="Alien Highway 48K (1986)(Vortex Software).tap" size="48086" crc="f5a22737"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -6626,6 +6626,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cooper" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>Cooper Run (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>MnnPT</manufacturer>
+		<rom name="Cooper Run 48K-AY (2026)(MnnPT).tap" size="27714" crc="1d3f8db6"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="copout" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Cop-Out (48K)</description>
 		<year>1986</year>
@@ -7567,7 +7577,7 @@
 		<description>Cyclone (48K)</description>
 		<year>1985</year>
 		<manufacturer>Vortex Software</manufacturer>
-		<rom name="Cyclone 48K (1985)(Vortex).tap" size="48533" crc="980d9d6e"/>
+		<rom name="Cyclone 48K (1985)(Vortex Software).tap" size="48533" crc="980d9d6e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -14015,7 +14025,7 @@
 		<description>Highway Encounter (48K)</description>
 		<year>1985</year>
 		<manufacturer>Vortex Software</manufacturer>
-		<rom name="Highway Encounter 48K (1985)(Vortex Software).z80" size="41836" crc="7946eec7"/>
+		<rom name="Highway Encounter 48K (1985)(Vortex Software).tzx" size="41678" crc="16759823"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -16457,7 +16467,7 @@
 		<description>Knight Rider (48K)</description>
 		<year>1986</year>
 		<manufacturer>Ocean Software</manufacturer>
-		<rom name="Knight Rider 48K (1986)(Ocean).tap" size="49152" crc="df4e4c85"/>
+		<rom name="Knight Rider 48K (1986)(Ocean).tzx" size="49000" crc="f9dcf0de"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -19221,6 +19231,16 @@
 		<year>2024</year>
 		<manufacturer>The Death Squad</manufacturer>
 		<rom name="Micro Snake 16K (2024)(The Death Squad).tap" size="7592" crc="ed3e3094"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="microban" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, Press ENTER to change level</comment>
+		<description>Microban (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Foko Games</manufacturer>
+		<rom name="Microban 48K (2026)(Foko Games).tap" size="41739" crc="50ab7fbc"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -22987,7 +23007,7 @@
 		<description>Pogo (48K)</description>
 		<year>1984</year>
 		<manufacturer>Ocean Software</manufacturer>
-		<rom name="Pogo 48K (1984)(Ocean).tap" size="42355" crc="858e042e"/>
+		<rom name="Pogo 48K (1984)(Ocean).tzx" size="49289" crc="2c88384a"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -24063,7 +24083,7 @@
 		<description>Rambo: First Blood Part II (48K)</description>
 		<year>1985</year>
 		<manufacturer>Ocean Software</manufacturer>
-		<rom name="Rambo - First Blood Part II 48K (1985)(Ocean).tap" size="49392" crc="769660f9"/>
+		<rom name="Rambo - First Blood Part II 48K (1985)(Ocean).tap" size="46563" crc="cabf6bbd"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -27370,6 +27390,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="slugger" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Slugger (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>PuttyCAD, Tin Soldiers</manufacturer>
+		<rom name="Slugger 48K (2026)(PuttyCAD, Tin Soldiers).tap" size="29023" crc="7af00ea8"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="slyspy" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Select 'Interface II' to use controller</comment>
 		<description>Sly Spy: Secret Agent (128K)</description>
@@ -29876,6 +29906,15 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="tll" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>T.L.L.: Tornado Low Level (48K)</description>
+		<year>1984</year>
+		<manufacturer>Vortex Software</manufacturer>
+		<rom name="T.L.L. - Tornado Low Level 48K (1984)(Vortex Software).tzx" size="49351" crc="aaf11ecc"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="taichitortoise" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Tai Chi Tortoise (48K)</description>
 		<year>1991</year>
@@ -30437,6 +30476,25 @@
 		<rom name="Thieves School - All in One 128K (2008)(World XXI Soft Inc.).tap" size="339068" crc="621a5647"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="thing2" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Press '4' to use controller</comment>
+		<description>Thing Bounces Back (48K)</description>
+		<year>1987</year>
+		<manufacturer>Gremlin Graphics</manufacturer>
+		<rom name="Thing Bounces Back 48K (1987)(Gremlin Graphics).tzx" size="41572" crc="8306afea"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="think" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Think! (48K)</description>
+		<year>1985</year>
+		<manufacturer>Ariolasoft UK</manufacturer>
+		<rom name="Think! 48K (1985)(Ariolasoft UK).tzx" size="44320" crc="948df554"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -31626,6 +31684,16 @@
 		<rom name="UN Squadron 48K-128K (1990)(U.S Gold).tap" size="303274" crc="12571e3a"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="uchotos" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>Uchotos (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Uchotos 48K-AY (2026)(Inufuto).tzx" size="16384" crc="833ab2fa"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

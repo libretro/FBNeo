@@ -2314,12 +2314,12 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bjreborndemo" sourcefile="megadrive/d_megadrive.cpp">
+	<game name="bjreborn" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Black Jewel Reborn (HB, Demo v2.11)</description>
-		<year>2022</year>
+		<description>Black Jewel Reborn (HB, Alpha)</description>
+		<year>2022-26</year>
 		<manufacturer>PSCD Games</manufacturer>
-		<rom name="Black Jewel Reborn v2.11 (2022)(PSCD Games).bin" size="3407872" crc="0adee51c"/>
+		<rom name="Black Jewel Reborn Alpha (2022-26)(PSCD Games).bin" size="3932160" crc="5b901963"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -21723,6 +21723,15 @@
 		<year>2022</year>
 		<manufacturer>savok</manufacturer>
 		<rom name="Teenage Mutant Ninja Turtles - Shredder's Re-Revenge GlobHack v1.01 (2022)(savok).bin" size="4063356" crc="6720cc8a"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tmntarcade" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.2.9)</description>
+		<year>2026</year>
+		<manufacturer>Gustavo Valenzuela</manufacturer>
+		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.2.9 (2026)(Gustavo Valenzuela).bin" size="1048576" crc="e009b761"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

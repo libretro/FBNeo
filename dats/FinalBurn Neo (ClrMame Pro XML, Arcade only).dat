@@ -36777,6 +36777,118 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="daimakaiknight" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Daimakaimura - Knight Artoria Edition (Japan)</description>
+		<year>2026</year>
+		<manufacturer>hack (GoodLuckTrying)</manufacturer>
+		<rom name="dmj_38knight.12f" size="131072" crc="3098aca7"/>
+		<rom name="dmj_39knight.12h" size="131072" crc="222d253b"/>
+		<rom name="dmj_40knight.13f" size="131072" crc="1050f528"/>
+		<rom name="dmj_41knight.13h" size="131072" crc="bff07623"/>
+		<rom name="dm_33knight.10f" size="131072" crc="37619c8a"/>
+		<rom name="dm_34knight.10h" size="131072" crc="f92dc399"/>
+		<rom name="dm_35knight.11f" size="131072" crc="c04b85c8"/>
+		<rom name="dm_36knight.11h" size="131072" crc="89be83de"/>
+		<rom name="dm_02knight.4b" size="131072" crc="27bd1d69"/>
+		<rom name="dm_01knight.4a" size="131072" crc="e8ba76ec"/>
+		<rom name="dm_10knight.9b" size="131072" crc="44d222eb"/>
+		<rom name="dm_09knight.9a" size="131072" crc="5561f7df"/>
+		<rom name="dm_18knight.5e" size="131072" crc="a65e9f34"/>
+		<rom name="dm_17knight.5c" size="131072" crc="3f84db19"/>
+		<rom name="dm_30knight.8h" size="131072" crc="500840f2"/>
+		<rom name="dm_29knight.8f" size="131072" crc="bafb92de"/>
+		<rom name="dm_04knight.5b" size="131072" crc="a4f4f8f0"/>
+		<rom name="dm_03knight.5a" size="131072" crc="b1033e62"/>
+		<rom name="dm_12knight.10b" size="131072" crc="10fdd76a"/>
+		<rom name="dm_11knight.10a" size="131072" crc="9040cb04"/>
+		<rom name="dm_20knight.7e" size="131072" crc="281d0b3e"/>
+		<rom name="dm_19knight.7c" size="131072" crc="2623b52f"/>
+		<rom name="dm_32knight.9h" size="131072" crc="99692344"/>
+		<rom name="dm_31knight.9f" size="131072" crc="54acb729"/>
+		<rom name="dm_06knight.7b" size="65536" crc="a726123a"/>
+		<rom name="dm_05knight.7a" size="65536" crc="379d3bee"/>
+		<rom name="dm_14knight.11b" size="65536" crc="eedbdd71"/>
+		<rom name="dm_13knight.11a" size="65536" crc="96a4311f"/>
+		<rom name="dm_22knight.8e" size="65536" crc="af590ecd"/>
+		<rom name="dm_21knight.8c" size="65536" crc="00bdeef0"/>
+		<rom name="dm_26knight.10e" size="65536" crc="d409bf40"/>
+		<rom name="dm_25knight.10c" size="65536" crc="fc91ec7c"/>
+		<rom name="dm_08knight.8b" size="65536" crc="08043aa8"/>
+		<rom name="dm_07knight.8a" size="65536" crc="daca4bc1"/>
+		<rom name="dm_16knight.12b" size="65536" crc="0d7d3de4"/>
+		<rom name="dm_15knight.12a" size="65536" crc="53622c1c"/>
+		<rom name="dm_24knight.9e" size="65536" crc="f7770b2c"/>
+		<rom name="dm_23knight.9c" size="65536" crc="3d4192b7"/>
+		<rom name="dm_28knight.11e" size="65536" crc="5c63b626"/>
+		<rom name="dm_27knight.11c" size="65536" crc="47ce5f76"/>
+		<rom name="37.13c" merge="26.10a" size="65536" crc="3692f6e5"/>
+		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
+		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
+		<rom name="prg1" merge="prg1" size="279" crc="f1129744"/>
+		<rom name="rom1" merge="rom1" size="279" crc="41dc73b9"/>
+		<rom name="sou1" merge="sou1" size="279" crc="84f4b2fe"/>
+		<rom name="dm22a.1a" size="279" crc="d4776116"/>
+		<rom name="lwio.12c" merge="lwio.8i" size="279" crc="ad52b90c"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="daimakaimaiden" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Daimakaimura - Maiden Artoria Edition (Japan)</description>
+		<year>2026</year>
+		<manufacturer>hack (GoodLuckTrying)</manufacturer>
+		<rom name="dmj_38maiden.12f" size="131072" crc="7f436646"/>
+		<rom name="dmj_39maiden.12h" size="131072" crc="ebc72dee"/>
+		<rom name="dmj_40maiden.13f" size="131072" crc="a8371817"/>
+		<rom name="dmj_41maiden.13h" size="131072" crc="cd7de9bb"/>
+		<rom name="dm_33maiden.10f" size="131072" crc="0e47e3b3"/>
+		<rom name="dm_34maiden.10h" size="131072" crc="d9675957"/>
+		<rom name="dm_35maiden.11f" size="131072" crc="c04b85c8"/>
+		<rom name="dm_36maiden.11h" size="131072" crc="89be83de"/>
+		<rom name="dm_02maiden.4b" size="131072" crc="e195234d"/>
+		<rom name="dm_01maiden.4a" size="131072" crc="bf40447c"/>
+		<rom name="dm_10maiden.9b" size="131072" crc="64506deb"/>
+		<rom name="dm_09maiden.9a" size="131072" crc="6db846bf"/>
+		<rom name="dm_18maiden.5e" size="131072" crc="3d707890"/>
+		<rom name="dm_17maiden.5c" size="131072" crc="25adb6e2"/>
+		<rom name="dm_30maiden.8h" size="131072" crc="29bb7d32"/>
+		<rom name="dm_29maiden.8f" size="131072" crc="d99c38e0"/>
+		<rom name="dm_04maiden.5b" size="131072" crc="a4f4f8f0"/>
+		<rom name="dm_03maiden.5a" size="131072" crc="b1033e62"/>
+		<rom name="dm_12maiden.10b" size="131072" crc="10fdd76a"/>
+		<rom name="dm_11maiden.10a" size="131072" crc="9040cb04"/>
+		<rom name="dm_20maiden.7e" size="131072" crc="281d0b3e"/>
+		<rom name="dm_19maiden.7c" size="131072" crc="2623b52f"/>
+		<rom name="dm_32maiden.9h" size="131072" crc="99692344"/>
+		<rom name="dm_31maiden.9f" size="131072" crc="54acb729"/>
+		<rom name="dm_06maiden.7b" size="65536" crc="e99f777e"/>
+		<rom name="dm_05maiden.7a" size="65536" crc="9798c4be"/>
+		<rom name="dm_14maiden.11b" size="65536" crc="d731677a"/>
+		<rom name="dm_13maiden.11a" size="65536" crc="e9282194"/>
+		<rom name="dm_22maiden.8e" size="65536" crc="f94717d0"/>
+		<rom name="dm_21maiden.8c" size="65536" crc="d2605c04"/>
+		<rom name="dm_26maiden.10e" size="65536" crc="ad8a53ec"/>
+		<rom name="dm_25maiden.10c" size="65536" crc="ae66ab27"/>
+		<rom name="dm_08maiden.8b" size="65536" crc="afce74dd"/>
+		<rom name="dm_07maiden.8a" size="65536" crc="0b4e155f"/>
+		<rom name="dm_16maiden.12b" size="65536" crc="5bc8e886"/>
+		<rom name="dm_15maiden.12a" size="65536" crc="095a6785"/>
+		<rom name="dm_24maiden.9e" size="65536" crc="aa3d5491"/>
+		<rom name="dm_23maiden.9c" size="65536" crc="1fb7da8c"/>
+		<rom name="dm_28maiden.11e" size="65536" crc="2913fa9b"/>
+		<rom name="dm_27maiden.11c" size="65536" crc="5749565d"/>
+		<rom name="37.13c" merge="26.10a" size="65536" crc="3692f6e5"/>
+		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
+		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
+		<rom name="prg1" merge="prg1" size="279" crc="f1129744"/>
+		<rom name="rom1" merge="rom1" size="279" crc="41dc73b9"/>
+		<rom name="sou1" merge="sou1" size="279" crc="84f4b2fe"/>
+		<rom name="dm22a.1a" size="279" crc="d4776116"/>
+		<rom name="lwio.12c" merge="lwio.8i" size="279" crc="ad52b90c"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="daiohc" cloneof="daioh" romof="daioh" sourcefile="pst90s/d_seta.cpp">
 		<description>Daioh (93111A PCB conversion)</description>
 		<year>1993</year>
@@ -65084,6 +65196,170 @@
 		<rom name="sou1" size="279" crc="84f4b2fe"/>
 		<rom name="dm620.2a" size="279" crc="f6e5f727"/>
 		<rom name="lwio.8i" size="279" crc="ad52b90c"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ghoulsuknight" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Ghouls'n Ghosts - Knight Artoria Edition (USA)</description>
+		<year>2026</year>
+		<manufacturer>hack (GoodLuckTrying)</manufacturer>
+		<rom name="dmu_29knight.10h" size="131072" crc="6b315490"/>
+		<rom name="dmu_30knight.10j" size="131072" crc="e3209d51"/>
+		<rom name="dmu_27knight.9h" size="131072" crc="0cc89606"/>
+		<rom name="dmu_28knight.9j" size="131072" crc="a263bde6"/>
+		<rom name="dm-17knight.7j" size="524288" crc="e856d9b6"/>
+		<rom name="dm-05knight.3a" size="524288" crc="68381793"/>
+		<rom name="dm-07knight.3f" size="524288" crc="fe68674d"/>
+		<rom name="dm-06knight.3c" size="524288" crc="c0e27e48"/>
+		<rom name="dm-08knight.3g" size="524288" crc="7be8f80a"/>
+		<rom name="09knight.4a" size="65536" crc="a726123a"/>
+		<rom name="18knight.7a" size="65536" crc="379d3bee"/>
+		<rom name="13knight.4e" size="65536" crc="eedbdd71"/>
+		<rom name="22knight.7e" size="65536" crc="96a4311f"/>
+		<rom name="11knight.4c" size="65536" crc="af590ecd"/>
+		<rom name="20knight.7c" size="65536" crc="00bdeef0"/>
+		<rom name="15knight.4g" size="65536" crc="d409bf40"/>
+		<rom name="24knight.7g" size="65536" crc="fc91ec7c"/>
+		<rom name="10knight.4b" size="65536" crc="08043aa8"/>
+		<rom name="19knight.7b" size="65536" crc="daca4bc1"/>
+		<rom name="14knight.4f" size="65536" crc="0d7d3de4"/>
+		<rom name="23knight.7f" size="65536" crc="53622c1c"/>
+		<rom name="12knight.4d" size="65536" crc="f7770b2c"/>
+		<rom name="21knight.7d" size="65536" crc="3d4192b7"/>
+		<rom name="16knight.4h" size="65536" crc="5c63b626"/>
+		<rom name="25knight.7h" size="65536" crc="47ce5f76"/>
+		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
+		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
+		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
+		<rom name="prg1" merge="prg1" size="279" crc="f1129744"/>
+		<rom name="rom1" merge="rom1" size="279" crc="41dc73b9"/>
+		<rom name="sou1" merge="sou1" size="279" crc="84f4b2fe"/>
+		<rom name="dm620.2a" merge="dm620.2a" size="279" crc="f6e5f727"/>
+		<rom name="lwio.8i" merge="lwio.8i" size="279" crc="ad52b90c"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ghoulsknight" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Ghouls'n Ghosts - Knight Artoria Edition (World)</description>
+		<year>2026</year>
+		<manufacturer>hack (GoodLuckTrying)</manufacturer>
+		<rom name="dme_29knight.10h" size="131072" crc="a26366a2"/>
+		<rom name="dme_30knight.10j" size="131072" crc="906bfbd9"/>
+		<rom name="dme_27knight.9h" size="131072" crc="0f80f588"/>
+		<rom name="dme_28knight.9j" size="131072" crc="448bf481"/>
+		<rom name="dm-17knight.7j" size="524288" crc="e856d9b6"/>
+		<rom name="dm-05knight.3a" size="524288" crc="68381793"/>
+		<rom name="dm-07knight.3f" size="524288" crc="fe68674d"/>
+		<rom name="dm-06knight.3c" size="524288" crc="c0e27e48"/>
+		<rom name="dm-08knight.3g" size="524288" crc="7be8f80a"/>
+		<rom name="09knight.4a" size="65536" crc="a726123a"/>
+		<rom name="18knight.7a" size="65536" crc="379d3bee"/>
+		<rom name="13knight.4e" size="65536" crc="eedbdd71"/>
+		<rom name="22knight.7e" size="65536" crc="96a4311f"/>
+		<rom name="11knight.4c" size="65536" crc="af590ecd"/>
+		<rom name="20knight.7c" size="65536" crc="00bdeef0"/>
+		<rom name="15knight.4g" size="65536" crc="d409bf40"/>
+		<rom name="24knight.7g" size="65536" crc="fc91ec7c"/>
+		<rom name="10knight.4b" size="65536" crc="08043aa8"/>
+		<rom name="19knight.7b" size="65536" crc="daca4bc1"/>
+		<rom name="14knight.4f" size="65536" crc="0d7d3de4"/>
+		<rom name="23knight.7f" size="65536" crc="53622c1c"/>
+		<rom name="12knight.4d" size="65536" crc="f7770b2c"/>
+		<rom name="21knight.7d" size="65536" crc="3d4192b7"/>
+		<rom name="16knight.4h" size="65536" crc="5c63b626"/>
+		<rom name="25knight.7h" size="65536" crc="47ce5f76"/>
+		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
+		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
+		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
+		<rom name="prg1" merge="prg1" size="279" crc="f1129744"/>
+		<rom name="rom1" merge="rom1" size="279" crc="41dc73b9"/>
+		<rom name="sou1" merge="sou1" size="279" crc="84f4b2fe"/>
+		<rom name="dm620.2a" merge="dm620.2a" size="279" crc="f6e5f727"/>
+		<rom name="lwio.8i" merge="lwio.8i" size="279" crc="ad52b90c"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ghoulsumaiden" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Ghouls'n Ghosts - Maiden Artoria Edition (USA)</description>
+		<year>2026</year>
+		<manufacturer>hack (GoodLuckTrying)</manufacturer>
+		<rom name="dmu_29maiden.10h" size="131072" crc="7ac6c63e"/>
+		<rom name="dmu_30maiden.10j" size="131072" crc="0a3d58f0"/>
+		<rom name="dmu_27maiden.9h" size="131072" crc="db966113"/>
+		<rom name="dmu_28maiden.9j" size="131072" crc="d6594f60"/>
+		<rom name="dm-17maiden.7j" size="524288" crc="f96c3f5d"/>
+		<rom name="dm-05maiden.3a" size="524288" crc="089d3e31"/>
+		<rom name="dm-07maiden.3f" size="524288" crc="b7b0567c"/>
+		<rom name="dm-06maiden.3c" size="524288" crc="92ca0ba1"/>
+		<rom name="dm-08maiden.3g" size="524288" crc="0f39afc8"/>
+		<rom name="09maiden.4a" size="65536" crc="e99f777e"/>
+		<rom name="18maiden.7a" size="65536" crc="9798c4be"/>
+		<rom name="13maiden.4e" size="65536" crc="d731677a"/>
+		<rom name="22maiden.7e" size="65536" crc="e9282194"/>
+		<rom name="11maiden.4c" size="65536" crc="f94717d0"/>
+		<rom name="20maiden.7c" size="65536" crc="d2605c04"/>
+		<rom name="15maiden.4g" size="65536" crc="ad8a53ec"/>
+		<rom name="24maiden.7g" size="65536" crc="ae66ab27"/>
+		<rom name="10maiden.4b" size="65536" crc="afce74dd"/>
+		<rom name="19maiden.7b" size="65536" crc="0b4e155f"/>
+		<rom name="14maiden.4f" size="65536" crc="5bc8e886"/>
+		<rom name="23maiden.7f" size="65536" crc="095a6785"/>
+		<rom name="12maiden.4d" size="65536" crc="aa3d5491"/>
+		<rom name="21maiden.7d" size="65536" crc="1fb7da8c"/>
+		<rom name="16maiden.4h" size="65536" crc="2913fa9b"/>
+		<rom name="25maiden.7h" size="65536" crc="5749565d"/>
+		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
+		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
+		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
+		<rom name="prg1" merge="prg1" size="279" crc="f1129744"/>
+		<rom name="rom1" merge="rom1" size="279" crc="41dc73b9"/>
+		<rom name="sou1" merge="sou1" size="279" crc="84f4b2fe"/>
+		<rom name="dm620.2a" merge="dm620.2a" size="279" crc="f6e5f727"/>
+		<rom name="lwio.8i" merge="lwio.8i" size="279" crc="ad52b90c"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ghoulsmaiden" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Ghouls'n Ghosts - Maiden Artoria Edition (World)</description>
+		<year>2026</year>
+		<manufacturer>hack (GoodLuckTrying)</manufacturer>
+		<rom name="dme_29maiden.10h" size="131072" crc="62bc0f9f"/>
+		<rom name="dme_30maiden.10j" size="131072" crc="3d770ee1"/>
+		<rom name="dme_27maiden.9h" size="131072" crc="717dfa2f"/>
+		<rom name="dme_28maiden.9j" size="131072" crc="00136f06"/>
+		<rom name="dm-17maiden.7j" size="524288" crc="f96c3f5d"/>
+		<rom name="dm-05maiden.3a" size="524288" crc="089d3e31"/>
+		<rom name="dm-07maiden.3f" size="524288" crc="b7b0567c"/>
+		<rom name="dm-06maiden.3c" size="524288" crc="92ca0ba1"/>
+		<rom name="dm-08maiden.3g" size="524288" crc="0f39afc8"/>
+		<rom name="09maiden.4a" size="65536" crc="e99f777e"/>
+		<rom name="18maiden.7a" size="65536" crc="9798c4be"/>
+		<rom name="13maiden.4e" size="65536" crc="d731677a"/>
+		<rom name="22maiden.7e" size="65536" crc="e9282194"/>
+		<rom name="11maiden.4c" size="65536" crc="f94717d0"/>
+		<rom name="20maiden.7c" size="65536" crc="d2605c04"/>
+		<rom name="15maiden.4g" size="65536" crc="ad8a53ec"/>
+		<rom name="24maiden.7g" size="65536" crc="ae66ab27"/>
+		<rom name="10maiden.4b" size="65536" crc="afce74dd"/>
+		<rom name="19maiden.7b" size="65536" crc="0b4e155f"/>
+		<rom name="14maiden.4f" size="65536" crc="5bc8e886"/>
+		<rom name="23maiden.7f" size="65536" crc="095a6785"/>
+		<rom name="12maiden.4d" size="65536" crc="aa3d5491"/>
+		<rom name="21maiden.7d" size="65536" crc="1fb7da8c"/>
+		<rom name="16maiden.4h" size="65536" crc="2913fa9b"/>
+		<rom name="25maiden.7h" size="65536" crc="5749565d"/>
+		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
+		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
+		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
+		<rom name="prg1" merge="prg1" size="279" crc="f1129744"/>
+		<rom name="rom1" merge="rom1" size="279" crc="41dc73b9"/>
+		<rom name="sou1" merge="sou1" size="279" crc="84f4b2fe"/>
+		<rom name="dm620.2a" merge="dm620.2a" size="279" crc="f6e5f727"/>
+		<rom name="lwio.8i" merge="lwio.8i" size="279" crc="ad52b90c"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -153758,15 +154034,15 @@
 	</game>
 	<game name="sengoku2rb" cloneof="sengoku2" romof="sengoku2" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Sengoku 2 / Sengoku Denshou 2 (Hack, Red Blood v1.15)</description>
+		<description>Sengoku 2 / Sengoku Denshou 2 (Hack, Red Blood v1.16)</description>
 		<year>2026</year>
 		<manufacturer>Raphael-Boichot</manufacturer>
-		<rom name="040-p1rb.p1" size="1048576" crc="9a8925fe"/>
+		<rom name="040-p1rb.p1" size="1048576" crc="ad8f774e"/>
 		<rom name="040-s1.s1" merge="040-s1.s1" size="131072" crc="cd9802a3"/>
 		<rom name="040-c1rb.c1" size="2097152" crc="451cdf68"/>
 		<rom name="040-c2rb.c2" size="2097152" crc="942d98b8"/>
-		<rom name="040-c3rb.c3" size="524288" crc="f3992a91"/>
-		<rom name="040-c4rb.c4" size="524288" crc="7838143d"/>
+		<rom name="040-c3rb.c3" size="524288" crc="7a846578"/>
+		<rom name="040-c4rb.c4" size="524288" crc="15eba55e"/>
 		<rom name="040-m1.m1" merge="040-m1.m1" size="131072" crc="d4de4bca"/>
 		<rom name="040-v1.v1" merge="040-v1.v1" size="2097152" crc="71cb4b5d"/>
 		<rom name="040-v2.v2" merge="040-v2.v2" size="1048576" crc="c5cece01"/>
@@ -168849,13 +169125,13 @@
 	</game>
 	<game name="sf2prime" cloneof="hsf2" romof="hsf2" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter II': Prime (Ver 0.79, Hack)</description>
+		<description>Street Fighter II': Prime (Ver 0.80, Hack)</description>
 		<year>2026</year>
 		<manufacturer>Zero800</manufacturer>
-		<rom name="sf2pr.03" size="524288" crc="37cf6a95"/>
-		<rom name="sf2pr.04" size="524288" crc="bed963d7"/>
-		<rom name="sf2pr.05" size="524288" crc="fb29feee"/>
-		<rom name="sf2pr.06" size="524288" crc="539df3c6"/>
+		<rom name="sf2pr.03" size="524288" crc="5ee5a492"/>
+		<rom name="sf2pr.04" size="524288" crc="d4f8e6b0"/>
+		<rom name="sf2pr.05" size="524288" crc="2f989a93"/>
+		<rom name="sf2pr.06" size="524288" crc="cd24ac24"/>
 		<rom name="sf2pr.13m" size="8388608" crc="74d0902d"/>
 		<rom name="sf2pr.15m" size="8388608" crc="e9373df0"/>
 		<rom name="sf2pr.17m" size="8388608" crc="c0c2ebdf"/>
@@ -202993,6 +203269,20 @@
 		<rom name="timfg6.bin" size="16384" crc="244778e8"/>
 		<rom name="82s123.12d" merge="82s123.12d" size="32" crc="e1281ee9"/>
 		<video type="raster" orientation="horizontal" width="512" height="480" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tattack" sourcefile="pre90s/d_tattack.cpp">
+		<description>Time Attacker</description>
+		<year>1983?</year>
+		<manufacturer>Shonan</manufacturer>
+		<rom name="rom.9a" size="4096" crc="47120994"/>
+		<rom name="7910cq" size="2048" status="nodump"/>
+		<rom name="rom.6c" size="4096" crc="88ce45cf"/>
+		<sample name="paddle_hit" />
+		<sample name="wall_hit" />
+		<sample name="brick_destroy" />
+		<sample name="win_bgm" />
+		<video type="raster" orientation="vertical" width="232" height="200" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="timefgtr" sourcefile="galaxian/d_galaxian.cpp">

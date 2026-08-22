@@ -2712,6 +2712,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="goombainv" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Goomba Invaders (HB)</description>
+		<year>2026</year>
+		<manufacturer>BriG78</manufacturer>
+		<rom name="Goomba Invaders (2026)(BriG78).sms" size="32768" crc="6dbfeb1a"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gotris" cloneof="gotrisfv" romof="gotrisfv" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
 		<description>Gotris (HB, v0.8)</description>
@@ -6673,6 +6682,15 @@
 		<year>2025</year>
 		<manufacturer>chirinea</manufacturer>
 		<rom name="Turma Da Monica Na Terra Dos Monstros v1.02 (2025)(chirinea).sms" size="524288" crc="02339218"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="uchotos" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew, YM2413 FM sound chip supported</comment>
+		<description>Uchotos (HB)</description>
+		<year>2026</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Uchotos (2026)(Inufuto).sms" size="16384" crc="d31930dc"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

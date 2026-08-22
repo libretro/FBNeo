@@ -1747,6 +1747,32 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dacmana" cloneof="dacman" romof="dacman" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Dacman (HB, Alt)</description>
+		<year>2000</year>
+		<manufacturer>Daniel Bienvenu</manufacturer>
+		<rom name="Dacman (Alt)(2000)(Daniel Bienvenu).rom" size="32768" crc="3c0bba92"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dacman2" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Dacman II (HB)</description>
+		<year>2026</year>
+		<manufacturer>Amy Bienvenu</manufacturer>
+		<rom name="Dacman II (2026)(Amy Bienvenu).rom" size="16106" crc="dfeccda0"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dambustca" cloneof="dambust" romof="dambust" sourcefile="coleco/d_coleco.cpp">
 		<description>Dam Busters, The (Canada)</description>
 		<year>1984</year>
@@ -2017,9 +2043,9 @@
 	<game name="dkjrarcade" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew, SGM - Super Game Module</comment>
 		<description>DK Jr. Arcade (SGM) (HB)</description>
-		<year>2023</year>
+		<year>1982-2024</year>
 		<manufacturer>Opcode Games - Nintendo</manufacturer>
-		<rom name="DK Jr. Arcade (2023)(Opcode Games).rom" size="131072" crc="c4ea9601"/>
+		<rom name="DK Jr. Arcade SGM (2024)(Opcode Games).rom" size="131072" crc="c4ea9601"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -3686,6 +3712,19 @@
 		<year>1983</year>
 		<manufacturer>Coleco</manufacturer>
 		<rom name="Ken Uston Blackjack-Poker (USA, Euro)(1983)(Coleco).rom" size="16384" crc="8c7b7803"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kennedyappr" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Kennedy Approach (HB, v0.5)</description>
+		<year>2026</year>
+		<manufacturer>Electric Dreams</manufacturer>
+		<rom name="Kennedy Approach v0.5 (2026)(Electric Dreams).rom" size="131072" crc="79774ec7"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -7804,6 +7843,19 @@
 		<year>2007-2017</year>
 		<manufacturer>Imanok</manufacturer>
 		<rom name="Txupinazo SGM (2017)(Team Pixelboy).rom" size="32768" crc="28bdf665"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="uchotos" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Uchotos (HB)</description>
+		<year>2026</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Uchotos (2026)(Inufuto).rom" size="8192" crc="87ec1018"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>

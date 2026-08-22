@@ -390,6 +390,17 @@
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="scdsys" sourcefile="pce/d_pce.cpp">
+		<comment>System - media selected seperately</comment>
+		<description>CD System Card</description>
+		<year>1991</year>
+		<manufacturer>NEC - Hudson Soft</manufacturer>
+		<rom name="Super CD-Rom System Card (Japan, v3.0)(1991).pce" size="262144" crc="6d9a73ef"/>
+		<rom name="Super CD-Rom System Card (Japan, v3.0, font hack)(2026).pce" size="262144" crc="16a9fda2"/>
+		<rom name="TurboGrafx CD System Card (USA, v3.0)(1992).pce" size="262144" crc="2b5b75fe"/>
+		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="champwrs" sourcefile="pce/d_pce.cpp">
 		<description>Champion Wrestler (Japan)</description>
 		<year>1990</year>
@@ -2565,15 +2576,6 @@
 		<year>19??</year>
 		<manufacturer>Game Express</manufacturer>
 		<rom name="strip fighter ii (japan).pce" size="1048576" crc="d6fc51ce"/>
-		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="scdsys" sourcefile="pce/d_pce.cpp">
-		<comment>System - media selected seperately</comment>
-		<description>Super CD-Rom System Card (v3.0)</description>
-		<year>1991</year>
-		<manufacturer>NEC - Hudson Soft</manufacturer>
-		<rom name="Super CD-Rom System Card (Japan, v3.0)(1991).pce" size="262144" crc="6d9a73ef"/>
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

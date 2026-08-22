@@ -78,6 +78,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="2048m" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>2048 (mmuszkow) (HB)</description>
+		<year>2015</year>
+		<manufacturer>mmuszkow</manufacturer>
+		<rom name="2048 (2015)(mmuszkow).nes" size="24592" crc="6527bb61"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="3dbatworru" sourcefile="nes/d_nes.cpp">
 		<description>3-D Battles of World Runner, The (USA)</description>
 		<year>1987</year>
@@ -3041,6 +3050,15 @@
 		<year>1993</year>
 		<manufacturer>Inovation Tech.</manufacturer>
 		<rom name="Buzz &amp; Waldog (USA, Proto)(1993)(Inovation Tech.).nes" size="262160" crc="1587bc5f"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="bytecraft" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Byte Craft (HB)</description>
+		<year>2026</year>
+		<manufacturer>Mr. Aspie</manufacturer>
+		<rom name="Byte Craft (2026)(Mr. Aspie).nes" size="1310736" crc="07f399cb"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -9055,6 +9073,15 @@
 		<year>1983</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="Gomoku Narabe Renju (Japan)(1983)(Nintendo).nes" size="24592" crc="28843bb1"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="goombainv" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Goomba Invaders (HB)</description>
+		<year>2026</year>
+		<manufacturer>BriG78</manufacturer>
+		<rom name="Goomba Invaders (2026)(BriG78).nes" size="40976" crc="4bfb362a"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -15292,6 +15319,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="necronancynmd" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Necro Nancy - Nightmare Mode Demo (HB)</description>
+		<year>2025</year>
+		<manufacturer>Grimware Games</manufacturer>
+		<rom name="Necro Nancy - Nightmare Mode Demo (2025)(Grimware Games).nes" size="524304" crc="03f13855"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="nekkekakden" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Nekketsu Kakutou Densetsu (Hack, English v0.95)</description>
@@ -19811,6 +19847,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="soccer26" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Soccer (HB)</description>
+		<year>2026</year>
+		<manufacturer>Foko Games</manufacturer>
+		<rom name="Soccer (2026)(Foko Games).nes" size="90128" crc="7c812702"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="soccer" sourcefile="nes/d_nes.cpp">
 		<description>Soccer (USA)</description>
 		<year>1985</year>
@@ -20835,6 +20880,15 @@
 		<manufacturer>Sunsoft</manufacturer>
 		<rom name="Sunman (Euro, Proto)(1992)(Sunsoft).nes" size="262160" crc="2bce4dc7"/>
 		<video type="raster" orientation="horizontal" width="256" height="232" aspectx="256" aspecty="232"/>
+		<driver status="good"/>
+	</game>
+	<game name="sunsetland" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Sunset Land (HB)</description>
+		<year>2026</year>
+		<manufacturer>Rivet Gun Games</manufacturer>
+		<rom name="Sunset Land (2026)(Rivet Gun Games).nes" size="524304" crc="69b85bde"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
 	<game name="superaladdin" cloneof="aladdinunl" romof="aladdinunl" sourcefile="nes/d_nes.cpp">
@@ -22460,6 +22514,15 @@
 		<year>2023</year>
 		<manufacturer>climax</manufacturer>
 		<rom name="Tetris (BPS) - CC Edition (2023)(climax).nes" size="49168" crc="e0ea2f20"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="tetrishb" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Tetris (HB)</description>
+		<year>2010</year>
+		<manufacturer>&lt;unknown&gt;</manufacturer>
+		<rom name="Tetris (2010).nes" size="65552" crc="feae6527"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

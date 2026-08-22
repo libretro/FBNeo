@@ -1208,7 +1208,7 @@
 		<description>Ascend (HB)</description>
 		<year>2022</year>
 		<manufacturer>Inufuto</manufacturer>
-		<rom name="Ascend (2022)(Inufuto).rom" size="9528" crc="81ee38e6"/>
+		<rom name="Ascend (2022)(Inufuto).cas" size="9564" crc="4fb7bbc8"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -3210,7 +3210,7 @@
 		<description>Cacorm (HB)</description>
 		<year>2022</year>
 		<manufacturer>Inufuto</manufacturer>
-		<rom name="Cacorm (2022)(Inufuto).rom" size="8357" crc="d32b2732"/>
+		<rom name="Cacorm (2022)(Inufuto).cas" size="8363" crc="7d9a0cb1"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -10658,7 +10658,7 @@
 		<description>Lift (HB)</description>
 		<year>2021</year>
 		<manufacturer>Inufuto</manufacturer>
-		<rom name="Lift (2021)(Inufuto).rom" size="8192" crc="1f12d963"/>
+		<rom name="Lift (2021)(Inufuto).cas" size="8404" crc="b05b6f6b"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -11444,7 +11444,7 @@
 		<description>Mazy (HB)</description>
 		<year>2021</year>
 		<manufacturer>Inufuto</manufacturer>
-		<rom name="Mazy (2021)(Inufuto).rom" size="8192" crc="7bd27e36"/>
+		<rom name="Mazy (2021)(Inufuto).cas" size="8165" crc="547738a0"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -15605,7 +15605,7 @@
 		<description>Ruptus (HB)</description>
 		<year>2021</year>
 		<manufacturer>Inufuto</manufacturer>
-		<rom name="Ruptus (2021)(Inufuto).rom" size="16384" crc="59ece025"/>
+		<rom name="Ruptus (2021)(Inufuto).cas" size="12268" crc="1ced4c9d"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -16681,10 +16681,10 @@
 	</game>
 	<game name="spacebash" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew</comment>
-		<description>Space Bash: Contact !! (HB)</description>
+		<description>Space Bash: Contact !! (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Dave's Retro Forge</manufacturer>
-		<rom name="Space Bash - Contact !! (2026)(Dave's Retro Forge).rom" size="557056" crc="14dad385"/>
+		<rom name="Space Bash - Contact !! v1.1 (2026)(Dave's Retro Forge).rom" size="557056" crc="f57042fe"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -19088,6 +19088,18 @@
 		<year>1986</year>
 		<manufacturer>ASCII Corp.</manufacturer>
 		<rom name="TZR - GrandPrix Rider (Japan)(1986)(ASCII).rom" size="32768" crc="d792c827"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="uchotos" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Uchotos (HB)</description>
+		<year>2026</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Uchotos (2026)(Inufuto).cas" size="7749" crc="911c2339"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
