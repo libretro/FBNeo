@@ -625,6 +625,24 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="advpanzerbl" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Adventures of Panzer, The: Blarghe!! (HB, Alpha v0.01)</description>
+		<year>2025</year>
+		<manufacturer>PixelCraft</manufacturer>
+		<rom name="Adventures of Panzer, The - Blarghe!! Alpha v0.01 (2025)(PixelCraft).nes" size="524304" crc="c3c1bcab"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="advpanzerdm" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Adventures of Panzer, The: DMuscles (HB, Byte-Off 3 Demo)</description>
+		<year>2022</year>
+		<manufacturer>PixelCraft</manufacturer>
+		<rom name="Adventures of Panzer, The - DMuscles Byte-Off 3 Demo (2022)(PixelCraft).nes" size="524304" crc="0a543bd6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="advpanzer4" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Adventures of Panzer, The: Frontiers (HB, v1.2)</description>

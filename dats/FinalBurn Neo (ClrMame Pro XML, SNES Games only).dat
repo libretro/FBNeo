@@ -9875,6 +9875,23 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="ladystalker" cloneof="ladystalkerte" romof="ladystalkerte" sourcefile="snes/d_snes.cpp">
+		<description>Lady Stalker - Kako kara no Chousen (Japan)</description>
+		<year>1995</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="Lady Stalker - Kako kara no Chousen (J)(1995)(Taito).sfc" size="2621440" crc="4390d719"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ladystalkerte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Lady Stalker - The Apocalypse Engine (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>Retch</manufacturer>
+		<rom name="Lady Stalker - The Apocalypse Engine T-Eng (2026)(Retch).sfc" size="4194304" crc="3a59468a"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="lagoone" cloneof="lagoon" romof="lagoon" sourcefile="snes/d_snes.cpp">
 		<description>Lagoon (Euro, English)</description>
 		<year>1993</year>

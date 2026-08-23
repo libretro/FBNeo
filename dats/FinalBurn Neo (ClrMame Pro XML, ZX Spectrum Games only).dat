@@ -2802,12 +2802,23 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="basirokoes" cloneof="basirokoen" romof="basirokoen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Basilisco de Roko (Spanish) (128K) (HB, v2026)</description>
+		<year>2026</year>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisco de Roko ES 128K (2026)(RetroSotano).tap" size="58469" crc="ed66efc7"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="basilisk2128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Basilisko de Roco 2, El (128K) (HB)</description>
+		<description>Basilisco de Roko 2, El (128K) (HB)</description>
 		<year>2024</year>
-		<manufacturer>Retrosotano</manufacturer>
-		<rom name="Basilisko de Roco 2, El 128K (2024)(Retrosotano).tap" size="53844" crc="b8695d6b"/>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisco de Roko 2, El 128K (2024)(RetroSotano).tap" size="53844" crc="b8695d6b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -2815,20 +2826,20 @@
 	</game>
 	<game name="basilisk248" cloneof="basilisk2128" romof="basilisk2128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Basilisko de Roco 2, El (48K) (HB)</description>
+		<description>Basilisco de Roko 2, El (48K) (HB)</description>
 		<year>2024</year>
-		<manufacturer>Retrosotano</manufacturer>
-		<rom name="Basilisko de Roco 2, El 48K (2024)(Retrosotano).tap" size="53371" crc="137cc20d"/>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisco de Roko 2, El 48K (2024)(RetroSotano).tap" size="53371" crc="137cc20d"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="basiroco128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Basilisko de Roco, El (128K) (HB)</description>
+		<description>Basilisco de Roko, El (128K) (HB)</description>
 		<year>2024</year>
-		<manufacturer>Retrosotano</manufacturer>
-		<rom name="Basilisko de Roco, El 128K (2024)(Retrosotano).tap" size="53569" crc="1c3b947e"/>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisco de Roko, El 128K (2024)(RetroSotano).tap" size="53569" crc="1c3b947e"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -2836,11 +2847,33 @@
 	</game>
 	<game name="basiroco48" cloneof="basiroco128" romof="basiroco128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Basilisko de Roco, El (48K) (HB)</description>
+		<description>Basilisco de Roko, El (48K) (HB)</description>
 		<year>2024</year>
-		<manufacturer>Retrosotano</manufacturer>
-		<rom name="Basilisko de Roco, El 48K (2024)(Retrosotano).tap" size="53126" crc="99baf2c2"/>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisco de Roko, El 48K (2024)(RetroSotano).tap" size="53126" crc="99baf2c2"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="basirokopt" cloneof="basirokoen" romof="basirokoen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Basilisco de Roko, O (Portuguese) (128K) (HB, v2026)</description>
+		<year>2026</year>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisco de Roko, O PT 128K (2026)(RetroSotano).tap" size="58412" crc="3134bac9"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="basirokoen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Basilisk of Roko (English) (128K) (HB, v2026)</description>
+		<year>2026</year>
+		<manufacturer>RetroSotano</manufacturer>
+		<rom name="Basilisk of Roko EN 128K (2026)(RetroSotano).tap" size="58466" crc="37a3d09c"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

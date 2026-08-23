@@ -36818,10 +36818,10 @@
 		<rom name="dm_07knight.8a" size="65536" crc="daca4bc1"/>
 		<rom name="dm_16knight.12b" size="65536" crc="0d7d3de4"/>
 		<rom name="dm_15knight.12a" size="65536" crc="53622c1c"/>
-		<rom name="dm_24knight.9e" size="65536" crc="f7770b2c"/>
-		<rom name="dm_23knight.9c" size="65536" crc="3d4192b7"/>
+		<rom name="dm_24knight.9e" size="65536" crc="95efe854"/>
+		<rom name="dm_23knight.9c" size="65536" crc="5fd971cf"/>
 		<rom name="dm_28knight.11e" size="65536" crc="5c63b626"/>
-		<rom name="dm_27knight.11c" size="65536" crc="47ce5f76"/>
+		<rom name="dm_27knight.11c" size="65536" crc="2556bc0e"/>
 		<rom name="37.13c" merge="26.10a" size="65536" crc="3692f6e5"/>
 		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
 		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
@@ -36874,10 +36874,10 @@
 		<rom name="dm_07maiden.8a" size="65536" crc="0b4e155f"/>
 		<rom name="dm_16maiden.12b" size="65536" crc="5bc8e886"/>
 		<rom name="dm_15maiden.12a" size="65536" crc="095a6785"/>
-		<rom name="dm_24maiden.9e" size="65536" crc="aa3d5491"/>
-		<rom name="dm_23maiden.9c" size="65536" crc="1fb7da8c"/>
+		<rom name="dm_24maiden.9e" size="65536" crc="c8a5b7e9"/>
+		<rom name="dm_23maiden.9c" size="65536" crc="7d2f39f4"/>
 		<rom name="dm_28maiden.11e" size="65536" crc="2913fa9b"/>
-		<rom name="dm_27maiden.11c" size="65536" crc="5749565d"/>
+		<rom name="dm_27maiden.11c" size="65536" crc="35d1b525"/>
 		<rom name="37.13c" merge="26.10a" size="65536" crc="3692f6e5"/>
 		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
 		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
@@ -65225,10 +65225,10 @@
 		<rom name="19knight.7b" size="65536" crc="daca4bc1"/>
 		<rom name="14knight.4f" size="65536" crc="0d7d3de4"/>
 		<rom name="23knight.7f" size="65536" crc="53622c1c"/>
-		<rom name="12knight.4d" size="65536" crc="f7770b2c"/>
-		<rom name="21knight.7d" size="65536" crc="3d4192b7"/>
+		<rom name="12knight.4d" size="65536" crc="95efe854"/>
+		<rom name="21knight.7d" size="65536" crc="5fd971cf"/>
 		<rom name="16knight.4h" size="65536" crc="5c63b626"/>
-		<rom name="25knight.7h" size="65536" crc="47ce5f76"/>
+		<rom name="25knight.7h" size="65536" crc="2556bc0e"/>
 		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
 		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
 		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
@@ -65266,10 +65266,10 @@
 		<rom name="19knight.7b" size="65536" crc="daca4bc1"/>
 		<rom name="14knight.4f" size="65536" crc="0d7d3de4"/>
 		<rom name="23knight.7f" size="65536" crc="53622c1c"/>
-		<rom name="12knight.4d" size="65536" crc="f7770b2c"/>
-		<rom name="21knight.7d" size="65536" crc="3d4192b7"/>
+		<rom name="12knight.4d" size="65536" crc="95efe854"/>
+		<rom name="21knight.7d" size="65536" crc="5fd971cf"/>
 		<rom name="16knight.4h" size="65536" crc="5c63b626"/>
-		<rom name="25knight.7h" size="65536" crc="47ce5f76"/>
+		<rom name="25knight.7h" size="65536" crc="2556bc0e"/>
 		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
 		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
 		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
@@ -65307,10 +65307,10 @@
 		<rom name="19maiden.7b" size="65536" crc="0b4e155f"/>
 		<rom name="14maiden.4f" size="65536" crc="5bc8e886"/>
 		<rom name="23maiden.7f" size="65536" crc="095a6785"/>
-		<rom name="12maiden.4d" size="65536" crc="aa3d5491"/>
-		<rom name="21maiden.7d" size="65536" crc="1fb7da8c"/>
+		<rom name="12maiden.4d" size="65536" crc="c8a5b7e9"/>
+		<rom name="21maiden.7d" size="65536" crc="7d2f39f4"/>
 		<rom name="16maiden.4h" size="65536" crc="2913fa9b"/>
-		<rom name="25maiden.7h" size="65536" crc="5749565d"/>
+		<rom name="25maiden.7h" size="65536" crc="35d1b525"/>
 		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
 		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
 		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>
@@ -65348,10 +65348,10 @@
 		<rom name="19maiden.7b" size="65536" crc="0b4e155f"/>
 		<rom name="14maiden.4f" size="65536" crc="5bc8e886"/>
 		<rom name="23maiden.7f" size="65536" crc="095a6785"/>
-		<rom name="12maiden.4d" size="65536" crc="aa3d5491"/>
-		<rom name="21maiden.7d" size="65536" crc="1fb7da8c"/>
+		<rom name="12maiden.4d" size="65536" crc="c8a5b7e9"/>
+		<rom name="21maiden.7d" size="65536" crc="7d2f39f4"/>
 		<rom name="16maiden.4h" size="65536" crc="2913fa9b"/>
-		<rom name="25maiden.7h" size="65536" crc="5749565d"/>
+		<rom name="25maiden.7h" size="65536" crc="35d1b525"/>
 		<rom name="26.10a" merge="26.10a" size="65536" crc="3692f6e5"/>
 		<rom name="buf1" merge="buf1" size="279" crc="eb122de7"/>
 		<rom name="ioa1" merge="ioa1" size="279" crc="59c7ee3b"/>

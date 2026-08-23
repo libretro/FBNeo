@@ -8788,6 +8788,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="heavyrecoil" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Heavy Recoil (HB)</description>
+		<year>2026</year>
+		<manufacturer>Wide Pixel Games</manufacturer>
+		<rom name="Heavy Recoil (2026)(Wide Pixel Games).bin" size="4194304" crc="49e9564b"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="hvyunits" cloneof="hvyunit" romof="hvyunit" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>Heavy Unit (Hack, Spanish)</description>

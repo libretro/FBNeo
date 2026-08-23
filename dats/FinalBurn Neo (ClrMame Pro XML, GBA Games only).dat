@@ -1982,6 +1982,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="atomix" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Atomix (HB)</description>
+		<year>2004</year>
+		<manufacturer>Michael El-Baki</manufacturer>
+		<rom name="Atomix (2004)(Michael El-Baki).gba" size="934600" crc="fc610889"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="atvquad" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>ATV - Quad Power Racing (Europe, rev. 1)</description>
 		<year>200?</year>
@@ -2708,6 +2718,16 @@
 		<year>2002</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="beast shooter - mezase beast king (japan).bin" size="4194304" crc="a13760bc"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="beerbelly" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Beer Belly Bill (HB)</description>
+		<year>2004</year>
+		<manufacturer>Metalvotze</manufacturer>
+		<rom name="Beer Belly Bill (2004)(Metalvotze).gba" size="191848" crc="74b4f461"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -3540,6 +3560,16 @@
 		<year>2007</year>
 		<manufacturer>THQ</manufacturer>
 		<rom name="bratz - the movie (usa).bin" size="4194304" crc="2ef801c0"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="breakoid" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Breakoid (HB)</description>
+		<year>2026</year>
+		<manufacturer>CeL</manufacturer>
+		<rom name="Breakoid (2026)(CeL).gba" size="3889132" crc="51d3cc78"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5387,6 +5417,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="dangxmas" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Dangerous Xmas (HB)</description>
+		<year>2003</year>
+		<manufacturer>Spoutnick Team</manufacturer>
+		<rom name="Dangerous Xmas (2003)(Spoutnick Team).gba" size="1377628" crc="16cf39a6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="danphnujg" cloneof="danphnuj" romof="danphnuj" sourcefile="gba/d_gba.cpp">
 		<description>Danny Phantom - Dschungelstadt (Germany)</description>
 		<year>2006</year>
@@ -6110,154 +6150,154 @@
 		<driver status="good"/>
 	</game>
 	<game name="dsfootblj" cloneof="dsfootbl" romof="dsfootbl" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - American Football (Japan)</description>
+		<description>Disney Sports: American Football (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="disney sports - american football (japan).bin" size="16777216" crc="b92e9057"/>
+		<rom name="Disney Sports - Football (J)(2002)(Konami).gba" size="16777216" crc="b92e9057"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsbasket" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Basketball (Europe)</description>
+		<description>Disney Sports: Basketball (Europe, M5)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - basketball (europe) (en,fr,de,es,it).bin" size="16777216" crc="d6d89f81"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Basketball (E, M5)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="d6d89f81"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsbasketj" cloneof="dsbasket" romof="dsbasket" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Basketball (Japan)</description>
-		<year>2003</year>
+		<description>Disney Sports: Basketball (Japan)</description>
+		<year>2002</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="disney sports - basketball (japan).bin" size="16777216" crc="3911b4b6"/>
+		<rom name="Disney Sports - Basketball (J)(2002)(Konami).gba" size="16777216" crc="3911b4b6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsbasketu" cloneof="dsbasket" romof="dsbasket" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Basketball (USA)</description>
+		<description>Disney Sports: Basketball (USA)</description>
 		<year>2002</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - basketball (usa).bin" size="16777216" crc="80ec6cf0"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Basketball (U)(2002)(Disney Interactive - Konami).gba" size="16777216" crc="80ec6cf0"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dssoccer" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Football (Europe)</description>
-		<year>2002</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - football (soccer) (europe) (en,fr,de,es,it).bin" size="16777216" crc="33f73199"/>
+		<description>Disney Sports: Football (Europe, M5)</description>
+		<year>2003</year>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Football (E, M5)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="33f73199"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsfootbl" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Football (USA)</description>
+		<description>Disney Sports: Football (USA)</description>
 		<year>2002</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - football (usa).bin" size="16777216" crc="01413db1"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Football (U)(2002)(Disney Interactive - Konami).gba" size="16777216" crc="01413db1"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsmotox" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Motocross (Europe)</description>
+		<description>Disney Sports: Motocross (Europe, M5)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - motocross (europe) (en,fr,de,es,it).bin" size="16777216" crc="72dcb4f4"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Motocross (E, M5)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="72dcb4f4"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsmotoxj" cloneof="dsmotox" romof="dsmotox" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Motocross (Japan)</description>
+		<description>Disney Sports: Motocross (Japan)</description>
 		<year>2003</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="disney sports - motocross (japan).bin" size="16777216" crc="1a62d76f"/>
+		<rom name="Disney Sports - Motocross (J)(2003)(Konami).gba" size="16777216" crc="1a62d76f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsmotoxu" cloneof="dsmotox" romof="dsmotox" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Motocross (USA)</description>
+		<description>Disney Sports: Motocross (USA)</description>
 		<year>2003</year>
 		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - motocross (usa).bin" size="16777216" crc="a771ad79"/>
+		<rom name="Disney Sports - Motocross (U)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="a771ad79"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsskate" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Skateboarding (Europe)</description>
+		<description>Disney Sports: Skateboarding (Europe, M5)</description>
 		<year>2002</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - skateboarding (europe) (en,fr,de,es,it).bin" size="16777216" crc="10c05c7b"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Skateboarding (E, M5)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="10c05c7b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsskatej" cloneof="dsskate" romof="dsskate" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Skateboarding (Japan)</description>
+		<description>Disney Sports: Skateboarding (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="disney sports - skateboarding (japan).bin" size="16777216" crc="5df4a476"/>
+		<rom name="Disney Sports - Skateboarding (J)(2002)(Konami).gba" size="16777216" crc="5df4a476"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dsskateu" cloneof="dsskate" romof="dsskate" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Skateboarding (USA)</description>
+		<description>Disney Sports: Skateboarding (USA)</description>
 		<year>2002</year>
 		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - skateboarding (usa).bin" size="16777216" crc="37ffd837"/>
+		<rom name="Disney Sports - Skateboarding (U)(2002)(Disney Interactive - Konami).gba" size="16777216" crc="37ffd837"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dssnow" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Snowboarding (Europe)</description>
+		<description>Disney Sports: Snowboarding (Europe, M5)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - snowboarding (europe) (en,fr,de,es,it).bin" size="16777216" crc="77b7fcce"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Snowboarding (E, M5)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="77b7fcce"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dssnowj" cloneof="dssnow" romof="dssnow" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Snowboarding (Japan)</description>
+		<description>Disney Sports: Snowboarding (Japan)</description>
 		<year>2003</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="disney sports - snowboarding (japan).bin" size="16777216" crc="bdc23a47"/>
+		<rom name="Disney Sports - Snowboarding (J)(2003)(Konami).gba" size="16777216" crc="bdc23a47"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dssnowu" cloneof="dssnow" romof="dssnow" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Snowboarding (USA)</description>
+		<description>Disney Sports: Snowboarding (USA)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="disney sports - snowboarding (usa).bin" size="16777216" crc="4733693c"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Snowboarding (U)(2003)(Disney Interactive - Konami).gba" size="16777216" crc="4733693c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dssoccerj" cloneof="dssoccer" romof="dssoccer" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Soccer (Japan)</description>
+		<description>Disney Sports: Soccer (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="disney sports - soccer (japan).bin" size="16777216" crc="680957e7"/>
+		<rom name="Disney Sports - Soccer (J)(2002)(Konami).gba" size="16777216" crc="680957e7"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="dssocceru" cloneof="dssoccer" romof="dssoccer" sourcefile="gba/d_gba.cpp">
-		<description>Disney Sports - Soccer (USA)</description>
+		<description>Disney Sports: Soccer (USA)</description>
 		<year>2002</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="agb-a6de-0.u1" size="16777216" crc="2f1316d2"/>
+		<manufacturer>Disney Interactive - Konami</manufacturer>
+		<rom name="Disney Sports - Soccer (U)(2002)(Disney Interactive - Konami).gba" size="16777216" crc="2f1316d2"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6677,10 +6717,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="dparty" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Party (Europe, USA)</description>
+		<description>Disney's Party (Europe, USA, M5)</description>
 		<year>2003</year>
 		<manufacturer>Electronic Arts</manufacturer>
-		<rom name="disney's party (usa, europe) (en,fr,de,es,it).bin" size="8388608" crc="6bb63774"/>
+		<rom name="Disney's Party (E, U, M5)(2003)(Electronic Arts).gba" size="8388608" crc="6bb63774"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -8120,6 +8160,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="elite" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Elite: The New Kind (HB, v1.7.1)</description>
+		<year>2005</year>
+		<manufacturer>FluBBa</manufacturer>
+		<rom name="Elite - The New Kind v1.7.1 (2005)(FluBBa).gba" size="546392" crc="5f9b4211"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="enchantd" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Enchanted - Once Upon Andalasia (USA)</description>
 		<year>2007</year>
@@ -8496,6 +8546,16 @@
 		<year>2006</year>
 		<manufacturer>Majesco</manufacturer>
 		<rom name="f24 stealth fighter (usa).bin" size="4194304" crc="9387ea7c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="factbots" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Factory Bots (HB)</description>
+		<year>2009</year>
+		<manufacturer>Nicholas Scheltema</manufacturer>
+		<rom name="Factory Bots (2009)(Nicholas Scheltema).gba" size="256848" crc="8907e464"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -10562,6 +10622,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="gematrix" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Gematrix (HB)</description>
+		<year>2024</year>
+		<manufacturer>Issung</manufacturer>
+		<rom name="Gematrix (2024)(Issung).gba" size="1184496" crc="2af2da4e"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="genseish" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Genseishin Justirisers - Souchaku! Chikyuu no Senshi-tachi (Japan)</description>
 		<year>2004</year>
@@ -12326,19 +12396,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="inukkocl" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Inukko Club (Japan)</description>
+		<description>Inukko Club: Fukumaru no Daibouken (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Jorudan</manufacturer>
-		<rom name="inukko club (japan).bin" size="8388608" crc="d473b3c1"/>
+		<rom name="Inukko Club - Fukumaru no Daibouken (J)(2002)(Jorudan).gba" size="8388608" crc="d473b3c1"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="inuyasha" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Inuyasha - Naraku no Wana! Mayoi no Mori no Shoutaijou (Japan)</description>
+		<description>Inuyasha: Naraku no Wana! Mayoi no Mori no Shoutaijou (Japan)</description>
 		<year>2003</year>
-		<manufacturer>Takara</manufacturer>
-		<rom name="inuyasha - naraku no wana mayoi no mori no shoutaijou (japan).bin" size="8388608" crc="8fcdf69c"/>
+		<manufacturer>Avex Mode</manufacturer>
+		<rom name="Inuyasha - Naraku no Wana! Mayoi no Mori no Shoutaijou (J)(2003)(Avex Mode).gba" size="8388608" crc="8fcdf69c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -12347,7 +12417,7 @@
 		<description>Invader (Europe)</description>
 		<year>2002</year>
 		<manufacturer>Xicat Interactive</manufacturer>
-		<rom name="invader (europe).bin" size="8388608" crc="a94d6058"/>
+		<rom name="Invader (E)(2002)(Xicat Interactive).gba" size="8388608" crc="a94d6058"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15928,7 +15998,7 @@
 		<description>Mickey no Pocket Resort (Japan)</description>
 		<year>2004</year>
 		<manufacturer>Tomy</manufacturer>
-		<rom name="mickey no pocket resort (japan).bin" size="8388608" crc="edb264b8"/>
+		<rom name="Mickey no Pocket Resort (J)(2004)(Tomy).gba" size="8388608" crc="edb264b8"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -18995,6 +19065,26 @@
 		<year>2003</year>
 		<manufacturer>Vivendi Universal</manufacturer>
 		<rom name="polly pocket - super splash island (usa) (vivendi).bin" size="4194304" crc="b5de8c6e"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="polybius" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Polybius (HB)</description>
+		<year>2026</year>
+		<manufacturer>knurmrty</manufacturer>
+		<rom name="Polybius (2026)(knurmrty).gba" size="31204" crc="dd271b30"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="poomania" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Poomania (HB)</description>
+		<year>2009</year>
+		<manufacturer>Metalvotze</manufacturer>
+		<rom name="Poomania (2009)(Metalvotze).gba" size="652512" crc="78482a70"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -22345,6 +22435,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="spacetwins" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Space Twins (HB)</description>
+		<year>2003</year>
+		<manufacturer>9wires</manufacturer>
+		<rom name="Space Twins (2003)(9wires).gba" size="1350536" crc="0edc97d9"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="speedbl2" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Speedball 2 - Brutal Deluxe (Europe)</description>
 		<year>2002</year>
@@ -25435,6 +25535,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="thrust" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Thrust (HB, v1.1)</description>
+		<year>2003</year>
+		<manufacturer>Grumpy Cat</manufacturer>
+		<rom name="Thrust v1.1 (2003)(Grumpy Cat).gba" size="732268" crc="e0af844f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="thundral" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Thunder Alley (USA)</description>
 		<year>2004</year>
@@ -25525,6 +25635,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="tinycities" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Tiny Cities Advance (HB)</description>
+		<year>2026</year>
+		<manufacturer>CoffeeTommy</manufacturer>
+		<rom name="Tiny Cities Advance (2026)(CoffeeTommy).gba" size="774988" crc="1a3c8dc9"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="ttoonbbd" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Tiny Toon Adventures - Buster's Bad Dream (Europe)</description>
 		<year>2002</year>
@@ -25566,6 +25686,16 @@
 		<year>2002</year>
 		<manufacturer>Titus</manufacturer>
 		<rom name="tir et but - edition champions du monde (france).bin" size="4194304" crc="7782a204"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="titeisenki" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Titei Senki Advance (HB)</description>
+		<year>2005</year>
+		<manufacturer>Chinchilla Softhouse</manufacturer>
+		<rom name="Titei Senki Advance v1.03 (2005)(Chinchilla Softhouse).gba" size="8794708" crc="f2254660"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26794,6 +26924,16 @@
 		<year>2002</year>
 		<manufacturer>Titus</manufacturer>
 		<rom name="virtual kasparov (usa) (en,fr,de,es,it).bin" size="4194304" crc="815b722f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="voltorbesc" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Voltorb's Escape (HB)</description>
+		<year>2025</year>
+		<manufacturer>AceMan</manufacturer>
+		<rom name="Voltorb's Escape (2025)(AceMan).gba" size="4324964" crc="c7c36b7c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

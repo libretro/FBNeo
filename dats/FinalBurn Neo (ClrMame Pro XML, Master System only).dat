@@ -2490,7 +2490,7 @@
 		<description>Genius Bakabon, The (Hack, English v1.2)</description>
 		<year>2023</year>
 		<manufacturer>FCandChill</manufacturer>
-		<rom name="Genius Bakabon, The T-Eng v1.2 (2023)( (FCandChill).sms" size="262144" crc="7d0d2d4d"/>
+		<rom name="Genius Bakabon, The T-Eng v1.2 (2023)(FCandChill).sms" size="262144" crc="7d0d2d4d"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

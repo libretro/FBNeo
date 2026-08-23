@@ -1570,11 +1570,24 @@
 		<driver status="good"/>
 	</game>
 	<game name="comicbakery" romof="coleco" sourcefile="coleco/d_coleco.cpp">
-		<comment>Homebrew, Published by CollectorVision Games</comment>
-		<description>Comic Bakery (HB)</description>
-		<year>1984-2014</year>
-		<manufacturer>Konami</manufacturer>
+		<comment>Homebrew</comment>
+		<description>Comic Bakery (CollectorVision) (HB)</description>
+		<year>2014</year>
+		<manufacturer>CollectorVision - Konami</manufacturer>
 		<rom name="Comic Bakery (2014)(CollectorVision).rom" size="27925" crc="8884bac2"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="comicbakeryo" cloneof="comicbakery" romof="comicbakery" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Comic Bakery (Opcode Games) (HB)</description>
+		<year>2010</year>
+		<manufacturer>Opcode Games - Konami</manufacturer>
+		<rom name="Comic Bakery (2010)(Opcode Games).rom" size="31745" crc="220cdd5e"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -2801,7 +2814,7 @@
 	</game>
 	<game name="frostbite" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew, Published by Team Pixelboy</comment>
-		<description>Frost Bite (HB)</description>
+		<description>Frostbite (HB)</description>
 		<year>1983-2016</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Frostbite (2016)(Team Pixelboy).rom" size="32768" crc="b3212318"/>
@@ -5899,10 +5912,10 @@
 	</game>
 	<game name="riskyrick" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew</comment>
-		<description>Risky Rick (HB)</description>
+		<description>Risky Rick in Dangerous Traps (HB)</description>
 		<year>2018</year>
 		<manufacturer>ArcadeVision</manufacturer>
-		<rom name="Risky Rick (2018)(ArcadeVision).rom" size="32768" crc="68fdb91b"/>
+		<rom name="Risky Rick in Dangerous Traps (2018)(ArcadeVision).rom" size="32768" crc="68fdb91b"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
