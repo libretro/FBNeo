@@ -5,8 +5,6 @@
 #ifdef INCLUDE_CHD_SUPPORT
 #include "cd_chd.h"
 #endif
-#include "neocdlist.h"
-#include "neocdlist_games.h"
 
 // libretro wrapper for dprint function
 
@@ -25,76 +23,6 @@ static INT32 __cdecl libretro_dprintf(TCHAR* szFormat, ...)
 	return rc;
 }
 #define dprintf libretro_dprintf
-
-// variables from src/intf/cd/cd_interface.cpp
-
-bool bCDEmuOkay = false;
-CDEmuStatusValue CDEmuStatus;
-TCHAR CDEmuImage[MAX_PATH];
-
-// variables from cd_img.h
-// we don't need to share them across files so it's fine if they are not in a header
-
-#define CDIMAGE_MAX_TRACKS       (99)
-#define CDIMAGE_MAX_SOURCE_FILES (CDIMAGE_MAX_TRACKS + 2)
-
-enum {
-	CDIMAGE_TRACK_AUDIO = 0,
-	CDIMAGE_TRACK_MODE1_2048,
-	CDIMAGE_TRACK_MODE1_2352,
-	CDIMAGE_TRACK_MODE2_2336,
-	CDIMAGE_TRACK_MODE2_2352
-};
-
-struct CDImageTrack {
-	INT32 nNumber;
-	INT32 nType;
-	INT32 nControl;
-	INT32 nStartLBA;
-	INT32 nIndex0LBA;
-	INT32 nIndex1LBA;
-	INT32 nPregap;
-	INT32 nSectors;
-	INT32 nSectorSize;
-	INT32 nUserOffset;
-	INT32 nUserSize;
-	const TCHAR* szPath;
-};
-
-#define cdimgFseek fseek
-#define cdimgFtell ftell
-
-// functions/variables from src/burner/cdlist.cpp
-
-NGCDGAME* game;
-
-void NeoCDInfo_Exit() {}
-
-TCHAR* NeoCDInfo_Text(int nText)
-{
-#ifndef NO_NEOGEO
-	if(!game || !IsNeoGeoCD() || !bDrvOkay) return NULL;
-
-	switch(nText) 
-	{
-		case DRV_NAME:			return game->pszName;
-		case DRV_FULLNAME:		return game->pszTitle;
-		case DRV_MANUFACTURER:	return game->pszCompany;
-		case DRV_DATE:			return game->pszYear;
-	}
-#endif
-	return NULL;
-}
-
-int NeoCDInfo_ID() 
-{
-#ifndef NO_NEOGEO
-	if(!game || !IsNeoGeoCD() || !bDrvOkay) return 0;
-	return game->id;
-#else
-	return 0;
-#endif
-}
 
 // functions from src/burner/misc.cpp
 
@@ -207,6 +135,45 @@ TCHAR *StrLower(TCHAR *str)
 
 	return &szBuffer[0];
 }
+
+// variables from src/intf/cd/cd_interface.cpp
+
+bool bCDEmuOkay = false;
+CDEmuStatusValue CDEmuStatus;
+TCHAR CDEmuImage[MAX_PATH];
+UINT8 CDEmuImageTOCSHA1[MAX_PATH] = { 0, };
+
+// variables from cd_img.h
+// we don't need to share them across files so it's fine if they are not in a header
+
+#define CDIMAGE_MAX_TRACKS       (99)
+#define CDIMAGE_MAX_SOURCE_FILES (CDIMAGE_MAX_TRACKS + 2)
+
+enum {
+	CDIMAGE_TRACK_AUDIO = 0,
+	CDIMAGE_TRACK_MODE1_2048,
+	CDIMAGE_TRACK_MODE1_2352,
+	CDIMAGE_TRACK_MODE2_2336,
+	CDIMAGE_TRACK_MODE2_2352
+};
+
+struct CDImageTrack {
+	INT32 nNumber;
+	INT32 nType;
+	INT32 nControl;
+	INT32 nStartLBA;
+	INT32 nIndex0LBA;
+	INT32 nIndex1LBA;
+	INT32 nPregap;
+	INT32 nSectors;
+	INT32 nSectorSize;
+	INT32 nUserOffset;
+	INT32 nUserSize;
+	const TCHAR* szPath;
+};
+
+#define cdimgFseek fseek
+#define cdimgFtell ftell
 
 // cd_img internal functions, no deps to interface.cpp/cd_interface.cpp, shared with standalone
 

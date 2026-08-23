@@ -75,6 +75,7 @@ extern int bRunPause;
 #define _sntprintf snprintf
 #define _tcsrchr strrchr
 #define _tcscmp strcmp
+#define _totlower(c)   tolower((unsigned char)(c))
 
 typedef char TCHAR;
 

@@ -182,6 +182,7 @@ SOURCES_CXX += $(FBNEO_BURN_DIR)/burn.cpp \
 	$(FBNEO_BURNER_DIR)/statec.cpp \
 	$(FBNEO_BURNER_DIR)/zipfn.cpp \
 	$(FBNEO_BURNER_DIR)/nvram.cpp \
+	$(FBNEO_BURNER_DIR)/cdlist.cpp \
 	$(FBNEO_INTERFACE_DIR)/audio/aud_dsp.cpp \
 	$(FBNEO_INTERFACE_DIR)/audio/lowpass2.cpp
 

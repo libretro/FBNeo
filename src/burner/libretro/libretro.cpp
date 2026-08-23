@@ -9,13 +9,14 @@
 #include "aud_dsp.h"
 
 #include "retro_common.h"
-#include "retro_cdemu.h"
 #include "retro_input.h"
 #include "retro_memory.h"
 #include "ugui_tools.h"
 #ifndef NO_PGM2
 #include "retro_pgm2_cards.h"
 #endif
+#include "neocdlist.h"
+#include "pcecdlist.h"
 
 #include <file/file_path.h>
 
@@ -745,6 +746,16 @@ char* TCHARToANSI(const TCHAR* pszInString, char* pszOutString, int /*nOutSize*/
 	}
 
 	return (char*)pszInString;
+}
+
+TCHAR* ANSIToTCHAR(const char* pszInString, TCHAR* pszOutString, int nOutSize)
+{
+	if (pszOutString) {
+		_tcscpy(pszOutString, pszInString);
+		return pszOutString;
+	}
+
+	return (TCHAR*)pszInString;
 }
 
 // addition to support loading of roms without crc check
@@ -2036,10 +2047,13 @@ static bool retro_load_game_common()
 			}
 			// cd emulation is started
 			bCDEmuStarted = true;
-			if (nGameType == RETRO_GAME_TYPE_NEOCD)
+			if (nGameType == RETRO_GAME_TYPE_NEOCD) {
+				NeoCDInfo_Init();
 				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Starting Neo-Geo CD\n");
-			else
+			} else {
+				PceCDInfo_Init();
 				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Starting PC Engine CD\n");
+			}
 		}
 
 		// Apply dipswitches
@@ -2083,7 +2097,7 @@ static bool retro_load_game_common()
 		CheevosInit();
 
 		// Loading minimal savestate (handle some machine settings)
-		snprintf_nowarn (g_autofs_path, sizeof(g_autofs_path), "%s%cfbneo%c%s.fs", g_save_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), BurnDrvGetTextA(DRV_NAME));
+		snprintf_nowarn (g_autofs_path, sizeof(g_autofs_path), "%s%cfbneo%c%s.fs", g_save_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), (IsCDGame() ? CDInfo_GamePrefix() : BurnDrvGetText(DRV_NAME)));
 		if (BurnNvramLoad(g_autofs_path) == 0) {
 			HandleMessage(RETRO_LOG_INFO, "[FBNeo] EEPROM successfully loaded from %s\n", g_autofs_path);
 		}
