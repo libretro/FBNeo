@@ -117,7 +117,8 @@ SOURCES_CXX += $(FBNEO_BURN_DIR)/burn_bitmap.cpp \
 	$(FBNEO_BURN_DIR)/burn_shift.cpp \
 	$(FBNEO_BURN_DIR)/tilemap_generic.cpp \
 	$(FBNEO_BURN_DIR)/tiles_generic.cpp \
-	$(FBNEO_BURN_DIR)/vector.cpp
+	$(FBNEO_BURN_DIR)/vector.cpp \
+	$(FBNEO_BURNER_DIR)/cdlist.cpp
 
 FBNEO_SRC_DIRS := $(FBNEO_CPU_DIRS) $(FBNEO_BURN_DIRS)
 

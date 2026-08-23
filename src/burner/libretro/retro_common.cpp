@@ -1,6 +1,6 @@
 #include "retro_common.h"
 #include "retro_input.h"
-#ifndef NO_PGM2
+#ifdef BUILD_PGM2
 #include "retro_pgm2_cards.h"
 #endif
 
@@ -850,7 +850,7 @@ void set_neogeo_bios_availability(char *szName, uint32_t crc, bool ignoreCrc)
 	}
 }
 
-#ifndef NO_NEOGEO
+#ifdef BUILD_NEOGEO
 static RomBiosInfo* find_neogeo_bios(uint32_t categories)
 {
 	for (int i = 0; neogeo_bioses[i].filename != NULL; i++)
@@ -867,7 +867,7 @@ static RomBiosInfo* find_neogeo_bios(uint32_t categories)
 
 void set_neo_system_bios()
 {
-#ifndef NO_NEOGEO
+#ifdef BUILD_NEOGEO
 	if (g_opt_neo_geo_mode == 0)
 	{
 		// Nothing to do in DIPSWITCH mode because the NeoSystem variable is changed by the DIP Switch core option
@@ -1152,7 +1152,7 @@ void set_environment()
 		}
 	}
 
-#ifndef NO_PGM2
+#ifdef BUILD_PGM2
 	retro_pgm2_cards_push_options(vars_systems);
 #endif
 
@@ -1343,7 +1343,7 @@ void set_environment()
 			"RomData",
 			RETRO_ROMDATA_CAT_INFO
 		},
-#ifndef NO_PGM2
+#ifdef BUILD_PGM2
 		{
 			"pgm2_memory_card",
 			RETRO_PGM2_MEMORY_CARD_DESC,
@@ -2118,7 +2118,7 @@ void check_variables(void)
 	}
 #endif
 
-#ifndef NO_PGM2
+#ifdef BUILD_PGM2
 	retro_pgm2_cards_apply_variables();
 #endif
 }

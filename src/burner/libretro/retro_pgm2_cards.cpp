@@ -1,12 +1,10 @@
 // PGM2 Memory card selection for libretro: scan 'g_save_dir'/fbneo/pgm2_memcards/<drv>_pN_*.pg2|.bin
 
-#ifndef NO_PGM2
-
-#include "retro_pgm2_cards.h"
 #include "retro_common.h"
 
-#include "burn.h"
-#include "state.h"
+#ifdef BUILD_PGM2
+
+#include "retro_pgm2_cards.h"
 #include "drv/pgm2/pgm2.h"
 
 #include <retro_dirent.h>

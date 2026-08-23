@@ -1,4 +1,8 @@
+// CD emulation
+
 #include "retro_common.h"
+
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
 #include "cd_interface.h"
 #include "burner.h"
 #include "burnint.h"
@@ -23,118 +27,6 @@ static INT32 __cdecl libretro_dprintf(TCHAR* szFormat, ...)
 	return rc;
 }
 #define dprintf libretro_dprintf
-
-// functions from src/burner/misc.cpp
-
-TCHAR* ExtractFilename(TCHAR* fullname)
-{
-	TCHAR* filename = fullname + _tcslen(fullname);
-
-	do {
-		filename--;
-	} while (filename >= fullname && *filename != _T('\\') && *filename != _T('/') && *filename != _T(':'));
-
-	return filename;
-}
-
-TCHAR* LabelCheck(TCHAR* s, TCHAR* pszLabel)
-{
-	INT32 nLen;
-	if (s == NULL) {
-		return NULL;
-	}
-	if (pszLabel == NULL) {
-		return NULL;
-	}
-	nLen = _tcslen(pszLabel);
-
-	SKIP_WS(s);													// Skip whitespace
-
-	if (_tcsncmp(s, pszLabel, nLen)){							// Doesn't match
-		return NULL;
-	}
-	return s + nLen;
-}
-
-INT32 QuoteRead(TCHAR** ppszQuote, TCHAR** ppszEnd, TCHAR* pszSrc)	// Read a (quoted) string from szSrc and poINT32 to the end
-{
-	static TCHAR szQuote[QUOTE_MAX];
-	TCHAR* s = pszSrc;
-	TCHAR* e;
-
-	// Skip whitespace
-	SKIP_WS(s);
-
-	e = s;
-
-	if (*s == _T('\"')) {										// Quoted string
-		s++;
-		e++;
-		// Find end quote
-		FIND_QT(e);
-		_tcsncpy(szQuote, s, e - s);
-		// Zero-terminate
-		szQuote[e - s] = _T('\0');
-		e++;
-	} else {													// Non-quoted string
-		// Find whitespace
-		FIND_WS(e);
-		_tcsncpy(szQuote, s, e - s);
-		// Zero-terminate
-		szQuote[e - s] = _T('\0');
-	}
-
-	if (ppszQuote) {
-		*ppszQuote = szQuote;
-	}
-	if (ppszEnd)	{
-		*ppszEnd = e;
-	}
-
-	return 0;
-}
-
-TCHAR *FileExt(TCHAR *str)
-{
-	TCHAR *dot = strrchr(str, _T('.'));
-
-	return (dot) ? StrLower(dot) : str;
-}
-
-bool IsFileExt(TCHAR *str, TCHAR *ext)
-{
-	return (_tcsicmp(ext, FileExt(str)) == 0);
-}
-
-TCHAR *StrReplace(TCHAR *str, TCHAR find, TCHAR replace)
-{
-	INT32 length = _tcslen(str);
-
-	for (INT32 i = 0; i < length; i++) {
-		if (str[i] == find) str[i] = replace;
-	}
-
-	return str;
-}
-
-// StrLower() - leaves str untouched, returns modified string
-TCHAR *StrLower(TCHAR *str)
-{
-	static TCHAR szBuffer[256] = _T("");
-	INT32 length = _tcslen(str);
-
-	if (length > 255) length = 255;
-
-	for (INT32 i = 0; i < length; i++) {
-		if (str[i] >= _T('A') && str[i] <= _T('Z'))
-			szBuffer[i] = (str[i] + _T(' '));
-		else
-			szBuffer[i] = str[i];
-	}
-	szBuffer[length] = 0;
-
-	return &szBuffer[0];
-}
 
 // variables from src/intf/cd/cd_interface.cpp
 
@@ -258,3 +150,5 @@ INT32 CDEmuScan(INT32 nAction, INT32 *pnMin)
 	}
 	return cdimgScan(nAction, pnMin);
 }
+
+#endif
