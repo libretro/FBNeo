@@ -843,6 +843,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="afterburner" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>After Burner (128K)</description>
+		<year>1989</year>
+		<manufacturer>Activision</manufacturer>
+		<rom name="After Burner 128K (1989)(Activision).tap" size="102813" crc="b40696fb"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="afterthewar1" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>After the War - Part 1 (Spanish) (48K)</description>
 		<year>1989</year>
@@ -859,16 +869,6 @@
 		<manufacturer>Dinamic Software</manufacturer>
 		<rom name="After the War - Part 2 ES 48K (1989)(Dinamic Software).tzx" size="47622" crc="08ff3d4c"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
-		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="afterburner" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Afterburner (128K)</description>
-		<year>1989</year>
-		<manufacturer>Activision</manufacturer>
-		<rom name="Afterburner 128K (1989)(Activision).tap" size="102813" crc="b40696fb"/>
-		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
-		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

@@ -110552,22 +110552,22 @@
 		<description>Moon Patrol Unknown Territories</description>
 		<year>2025</year>
 		<manufacturer>hack (Paul Goes)</manufacturer>
-		<rom name="mpatrolut.3m" size="4096" crc="f0c4405b"/>
-		<rom name="mpatrolut.3l" size="4096" crc="1cd1640d"/>
-		<rom name="mpatrolut.3k" size="4096" crc="45943910"/>
-		<rom name="mpatrolut.3j" size="4096" crc="825e0ad3"/>
+		<rom name="mpatrolut-1.3m" size="4096" crc="f0c4405b"/>
+		<rom name="mpatrolut-2.3l" size="4096" crc="1cd1640d"/>
+		<rom name="mpatrolut-3.3k" size="4096" crc="45943910"/>
+		<rom name="mpatrolut-4.3j" size="4096" crc="825e0ad3"/>
 		<rom name="mp-s1.1a" merge="mp-s1.1a" size="4096" crc="561d3108"/>
-		<rom name="mpatrolut.3e" size="4096" crc="0c61ffa6"/>
-		<rom name="mpatrolut.3f" size="4096" crc="8fbcaa31"/>
-		<rom name="mpatrolut.3m" size="4096" crc="bd17d3ac"/>
-		<rom name="mpatrolut.3n" size="4096" crc="9ce028bf"/>
+		<rom name="mpatrolut-5.3e" size="4096" crc="0c61ffa6"/>
+		<rom name="mpatrolut-4.3f" size="4096" crc="8fbcaa31"/>
+		<rom name="mpatrolut-2.3m" size="4096" crc="bd17d3ac"/>
+		<rom name="mpatrolut-1.3n" size="4096" crc="9ce028bf"/>
 		<rom name="mpe-1.3l" merge="mpe-1.3l" size="4096" crc="c46a7f72"/>
 		<rom name="mpe-2.3k" merge="mpe-2.3k" size="4096" crc="c7aa1fb0"/>
 		<rom name="mpe-3.3h" merge="mpe-3.3h" size="4096" crc="a0919392"/>
-		<rom name="mpatrolut.2a" size="512" crc="2f926603"/>
-		<rom name="mpatrolut.1m" size="32" crc="1d02b31c"/>
-		<rom name="mpatrolut.1f" size="32" crc="298daa56"/>
-		<rom name="mpatrolut.2h" size="256" crc="e35efd45"/>
+		<rom name="mpatrolut-4.2a" size="512" crc="2f926603"/>
+		<rom name="mpatrolut-3.1m" size="32" crc="1d02b31c"/>
+		<rom name="mpatrolut-1.1f" size="32" crc="298daa56"/>
+		<rom name="mpatrolut-2.2h" size="256" crc="e35efd45"/>
 		<rom name="mp_7621-5.7h" merge="mp_7621-5.7h" size="512" crc="cf1fd9d0"/>
 		<video type="raster" orientation="horizontal" width="240" height="252" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

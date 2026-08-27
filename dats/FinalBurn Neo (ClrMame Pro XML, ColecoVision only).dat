@@ -2901,6 +2901,19 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gamewatch" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Game &amp; Watch Collection (HB, v0.33)</description>
+		<year>2025</year>
+		<manufacturer>Electric Dreams</manufacturer>
+		<rom name="Game &amp; Watch Collection v0.33 (2025)(Electric Dreams).rom" size="131072" crc="2f3a1c8d"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gamepack1" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<comment>Homebrew</comment>
 		<description>GamePack 1 (HB)</description>
@@ -5172,6 +5185,19 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="oilpanic" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Oil Panic (HB, v0.72)</description>
+		<year>2026</year>
+		<manufacturer>Electric Dreams</manufacturer>
+		<rom name="Oil Panic v0.72 (2026)(Electric Dreams).rom" size="24576" crc="4dc66df0"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="oilswell" romof="coleco" sourcefile="coleco/d_coleco.cpp">
 		<description>Oil's Well (USA)</description>
 		<year>1984</year>
@@ -5635,6 +5661,19 @@
 		<year>1984</year>
 		<manufacturer>Strongin-Mayem</manufacturer>
 		<rom name="Power Lords - Quest for Volcan (USA, Proto)(1983)(Strongin-Mayem).rom" size="32768" crc="caa61d8d"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="preastro" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Pre-Astro (HB)</description>
+		<year>2025</year>
+		<manufacturer>Haranni</manufacturer>
+		<rom name="Pre-Astro (2025)(Haranni).rom" size="30054" crc="bb02d475"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
@@ -6739,6 +6778,19 @@
 		<year>1986-2023</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Space Shuttle SGM_EEPROM (2023)(Team Pixelboy).rom" size="65536" crc="bb0f6678"/>
+		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
+		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
+		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>
+		<rom name="czz50.rom" merge="czz50.rom" size="16384" crc="4999abc6"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="spacetrouble" romof="coleco" sourcefile="coleco/d_coleco.cpp">
+		<comment>Homebrew</comment>
+		<description>Space Trouble (SGM) (HB)</description>
+		<year>2026</year>
+		<manufacturer>kamshaft</manufacturer>
+		<rom name="Space Trouble SGM (2026)(kamshaft).rom" size="16384" crc="fc6cac16"/>
 		<rom name="coleco.rom" merge="coleco.rom" size="8192" crc="3aa93ef3"/>
 		<rom name="colecoa.rom" merge="colecoa.rom" size="8192" crc="39bb16fc"/>
 		<rom name="svi603.rom" merge="svi603.rom" size="8192" crc="19e91b82"/>

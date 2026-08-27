@@ -983,10 +983,10 @@
 	</game>
 	<game name="aliensmash" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Alien Smash (HB, v1.1)</description>
+		<description>Alien Smash (HB)</description>
 		<year>2026</year>
 		<manufacturer>RBG Entertainment</manufacturer>
-		<rom name="Alien Smash v1.1 (2026)(RBG Entertainment).nes" size="524304" crc="d87adb78"/>
+		<rom name="Alien Smash (2026)(RBG Entertainment).nes" size="524304" crc="1c692e98"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -13307,6 +13307,15 @@
 		<year>1990</year>
 		<manufacturer>Vic Tokai</manufacturer>
 		<rom name="Magical Kid's Doropie (Proto)(1990)(Vic Tokai).nes" size="262160" crc="84209fee"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="magicpuzpopar" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Magical Puzzle Popils - Audio Recreation (Hack, v1.0A)</description>
+		<year>2026</year>
+		<manufacturer>Mister Man</manufacturer>
+		<rom name="Magical Puzzle Popils - Audio Recreation v1.0A (2026)(Mister Man).nes" size="196624" crc="792f6122"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
