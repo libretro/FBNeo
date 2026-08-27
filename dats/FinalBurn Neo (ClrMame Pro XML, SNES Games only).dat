@@ -3954,6 +3954,14 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dai4jisrt" cloneof="suprobwars4" romof="suprobwars4" sourcefile="snes/d_snes.cpp">
+		<description>Dai-4-ji Super Robot Taisen (Japan, Rev. 1)</description>
+		<year>1995</year>
+		<manufacturer>Banpresto</manufacturer>
+		<rom name="Dai-4-ji Super Robot Taisen (J, Rev 1)(1995)(Banpresto).sfc" size="3145728" crc="63883e1e"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="daikaijuu" cloneof="ssmste" romof="ssmste" sourcefile="snes/d_snes.cpp">
 		<description>Daikaijuu Monogatari (Japan)</description>
 		<year>1994</year>
@@ -11794,6 +11802,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="minicraft3d" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Minicraft 3D (HB, v0.2)</description>
+		<year>2026</year>
+		<manufacturer>GameOfTobi</manufacturer>
+		<rom name="Minicraft 3D v0.2 (2026)(GameOfTobi).sfc" size="65536" crc="a1bac09c"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="miragirlste" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Miracle Girls (Hack, English v1.1)</description>
@@ -18807,6 +18824,15 @@
 		<year>2019</year>
 		<manufacturer>Wolfgare</manufacturer>
 		<rom name="Super Robot Wars 3 T-Ita (2019)(Wolfgare).sfc" size="2097152" crc="17a3d0d5"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="suprobwars4" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Super Robot Wars 4 (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>Aeon Genesis</manufacturer>
+		<rom name="Super Robot Wars 4 T-Eng (2026)(Aeon Genesis).sfc" size="4194304" crc="72bbacca"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

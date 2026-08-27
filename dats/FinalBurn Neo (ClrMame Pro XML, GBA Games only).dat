@@ -1937,6 +1937,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="asmash" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Astro Smash GBA (HB)</description>
+		<year>2026</year>
+		<manufacturer>BraindeaD Games</manufacturer>
+		<rom name="Astro Smash GBA (2026)(BraindeaD Games).gba" size="125868" crc="380cff53"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="astobelx" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Astérix &amp; Obélix - Bash Them All! (Europe)</description>
 		<year>2002</year>
@@ -2722,12 +2732,32 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="beatbeast" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Beat Beast (HB)</description>
+		<year>2024</year>
+		<manufacturer>Afska, LaChia, Synthenia</manufacturer>
+		<rom name="Beat Beast (2024)(Afska, LaChia, Synthenia).gba" size="33506864" crc="1821da49"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="beerbelly" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew</comment>
 		<description>Beer Belly Bill (HB)</description>
 		<year>2004</year>
 		<manufacturer>Metalvotze</manufacturer>
 		<rom name="Beer Belly Bill (2004)(Metalvotze).gba" size="191848" crc="74b4f461"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="beerbelly2" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Beer Belly Bill 2: Morning Shift (HB)</description>
+		<year>2005</year>
+		<manufacturer>Metalvotze</manufacturer>
+		<rom name="Beer Belly Bill 2 - Morning Shift (2005)(Metalvotze).gba" size="124368" crc="f0f7fd72"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -3430,136 +3460,136 @@
 		<driver status="good"/>
 	</game>
 	<game name="bratz" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bratz (Europe)</description>
+		<description>Bratz (Europe, M5)</description>
 		<year>2003</year>
 		<manufacturer>Ubi Soft</manufacturer>
-		<rom name="bratz (europe) (en,fr,de,es,it).bin" size="4194304" crc="b30241e2"/>
+		<rom name="Bratz (E, M5)(2003)(Ubi Soft).gba" size="4194304" crc="b30241e2"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzu" cloneof="bratz" romof="bratz" sourcefile="gba/d_gba.cpp">
-		<description>Bratz (USA)</description>
+		<description>Bratz (USA, M3)</description>
 		<year>2003</year>
 		<manufacturer>Ubi Soft</manufacturer>
-		<rom name="bratz (usa) (en,fr,es).bin" size="4194304" crc="21e5a010"/>
+		<rom name="Bratz (U, M3)(2003)(Ubi Soft).gba" size="4194304" crc="21e5a010"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzbab" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Babyz (Europe)</description>
+		<description>Bratz: Babyz (Europe, M3)</description>
 		<year>2006</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - babyz (europe) (en,es,it).bin" size="4194304" crc="08b89540"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Babyz (E, M3)(2006)(THQ).gba" size="4194304" crc="08b89540"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzbabu" cloneof="bratzbab" romof="bratzbab" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Babyz (USA)</description>
+		<description>Bratz: Babyz (USA)</description>
 		<year>2006</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - babyz (usa).bin" size="4194304" crc="23e8a494"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="bratzfd" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Forever Diamondz (Europe)</description>
-		<year>2006</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="agb-bxfp-0.u1" size="8388608" crc="db179296"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Babyz (U)(2006)(THQ).gba" size="4194304" crc="23e8a494"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzfdg" cloneof="bratzfd" romof="bratzfd" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Forever Diamondz (Germany)</description>
+		<description>Bratz: Forever Diamondz (Europe, Germany)</description>
 		<year>2006</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - forever diamondz (germany).bin" size="8388608" crc="f39cadeb"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Forever Diamondz (E, DE)(2006)(THQ).gba" size="8388608" crc="f39cadeb"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="bratzfd" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Bratz: Forever Diamondz (Europe, M4)</description>
+		<year>2006</year>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Forever Diamondz (E, M4)(2006)(THQ).gba" size="8388608" crc="db179296"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzfdu" cloneof="bratzfd" romof="bratzfd" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Forever Diamondz (USA)</description>
+		<description>Bratz: Forever Diamondz (USA)</description>
 		<year>2006</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - forever diamondz (usa).bin" size="8388608" crc="9e389908"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="bratzra" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Rock Angelz (Europe, USA)</description>
-		<year>2005</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="agb-brrp-0.u1" size="8388608" crc="aa245d0c"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Forever Diamondz (U)(2006)(THQ).gba" size="8388608" crc="9e389908"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzraf" cloneof="bratzra" romof="bratzra" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Rock Angelz (France)</description>
+		<description>Bratz: Rock Angelz (Europe, France)</description>
 		<year>2005</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - rock angelz (france).bin" size="8388608" crc="8fc8d6d2"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Rock Angelz (E, FR)(2005)(THQ).gba" size="8388608" crc="8fc8d6d2"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzrag" cloneof="bratzra" romof="bratzra" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Rock Angelz (Germany)</description>
+		<description>Bratz: Rock Angelz (Europe, Germany)</description>
 		<year>2005</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - rock angelz (germany).bin" size="8388608" crc="649588cb"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Rock Angelz (E, DE)(2005)(THQ).gba" size="8388608" crc="649588cb"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzras" cloneof="bratzra" romof="bratzra" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - Rock Angelz (Spain)</description>
+		<description>Bratz: Rock Angelz (Europe, Spain)</description>
 		<year>2005</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - rock angelz (spain).bin" size="8388608" crc="cfff9119"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Rock Angelz (E, SP)(2005)(THQ).gba" size="8388608" crc="cfff9119"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="bratzra" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Bratz: Rock Angelz (Europe, USA)</description>
+		<year>2005</year>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - Rock Angelz (E, U)(2005)(THQ).gba" size="8388608" crc="aa245d0c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzmov" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - The Movie (Europe)</description>
+		<description>Bratz: The Movie (Europe)</description>
 		<year>2007</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="agb-bbup-0.u1" size="4194304" crc="cd485f79"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="bratzmova" cloneof="bratzmov" romof="bratzmov" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - The Movie (Europe, Italian / Spanish)</description>
-		<year>2007</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - the movie (europe) (es,it).bin" size="4194304" crc="4386e26c"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - The Movie (E)(2007)(THQ).gba" size="4194304" crc="cd485f79"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzmovg" cloneof="bratzmov" romof="bratzmov" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - The Movie (Germany)</description>
+		<description>Bratz: The Movie (Europe, Germany)</description>
 		<year>2007</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - the movie (germany).bin" size="4194304" crc="04f21321"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - The Movie (E, DE)(2007)THQ).gba" size="4194304" crc="04f21321"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="bratzmova" cloneof="bratzmov" romof="bratzmov" sourcefile="gba/d_gba.cpp">
+		<description>Bratz: The Movie (Europe, Italian/Spanish)</description>
+		<year>2007</year>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - The Movie (E, IT-SP)(2007)THQ).gba" size="4194304" crc="4386e26c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bratzmovu" cloneof="bratzmov" romof="bratzmov" sourcefile="gba/d_gba.cpp">
-		<description>Bratz - The Movie (USA)</description>
+		<description>Bratz: The Movie (USA)</description>
 		<year>2007</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="bratz - the movie (usa).bin" size="4194304" crc="2ef801c0"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Bratz - The Movie (U)(2007)THQ).gba" size="4194304" crc="2ef801c0"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -3646,20 +3676,20 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="britneyg" cloneof="britney" romof="britney" sourcefile="gba/d_gba.cpp">
-		<description>Britney's Dance Beat (Europe, M2 EN/DE)</description>
+	<game name="britneyf" cloneof="britney" romof="britney" sourcefile="gba/d_gba.cpp">
+		<description>Britney's Dance Beat (Europe, M2 English/French)</description>
 		<year>2002</year>
 		<manufacturer>THQ Inc.</manufacturer>
-		<rom name="Britney's Dance Beat (E, EN/DE)(2002)(THQ).gba" size="8388608" crc="cfe69825"/>
+		<rom name="Britney's Dance Beat (E, EN-FR)(2002)(THQ).gba" size="8388608" crc="021cda8e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="britneyf" cloneof="britney" romof="britney" sourcefile="gba/d_gba.cpp">
-		<description>Britney's Dance Beat (Europe, M2 EN/FR)</description>
+	<game name="britneyg" cloneof="britney" romof="britney" sourcefile="gba/d_gba.cpp">
+		<description>Britney's Dance Beat (Europe, M2 English/German)</description>
 		<year>2002</year>
 		<manufacturer>THQ Inc.</manufacturer>
-		<rom name="Britney's Dance Beat (E, EN/FR)(2002)(THQ).gba" size="8388608" crc="021cda8e"/>
+		<rom name="Britney's Dance Beat (E, EN-DE)(2002)(THQ).gba" size="8388608" crc="cfe69825"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -3693,19 +3723,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="brokensw" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Broken Sword - The Shadow of the Templars (Europe)</description>
+		<description>Broken Sword: The Shadow of the Templars (Europe, M5)</description>
 		<year>2002</year>
 		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="agb-abjp-0.u1" size="8388608" crc="3a23efd7"/>
+		<rom name="Broken Sword - The Shadow of the Templars (E, M5)(2002)(BAM! Entertainment).gba" size="8388608" crc="3a23efd7"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="brokenswu" cloneof="brokensw" romof="brokensw" sourcefile="gba/d_gba.cpp">
-		<description>Broken Sword - The Shadow of the Templars (USA)</description>
+		<description>Broken Sword: The Shadow of the Templars (USA, M5)</description>
 		<year>2002</year>
 		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="broken sword - the shadow of the templars (usa) (en,fr,de,es,it).bin" size="8388608" crc="3278ce51"/>
+		<rom name="Broken Sword - The Shadow of the Templars (U, M5)(2002)(BAM! Entertainment).gba" size="8388608" crc="3278ce51"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -3714,52 +3744,52 @@
 		<description>Brother Bear (USA)</description>
 		<year>2003</year>
 		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="brother bear (usa).bin" size="8388608" crc="342de1d6"/>
+		<rom name="Disney's Brother Bear (U)(2003)(Disney Interactive).gba" size="8388608" crc="342de1d6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="brucelee" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bruce Lee - Return of the Legend (Europe)</description>
+		<description>Bruce Lee: Return of the Legend (Europe, M5)</description>
 		<year>2002</year>
 		<manufacturer>Universal Interactive</manufacturer>
-		<rom name="bruce lee - return of the legend (europe) (en,fr,de,es,it).bin" size="8388608" crc="b5ff39dc"/>
+		<rom name="Bruce Lee - Return of the Legend (E, M5)(2002)(Universal Interactive).gba" size="8388608" crc="b5ff39dc"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bruceleeu" cloneof="brucelee" romof="brucelee" sourcefile="gba/d_gba.cpp">
-		<description>Bruce Lee - Return of the Legend (USA)</description>
+		<description>Bruce Lee: Return of the Legend (USA)</description>
 		<year>2002</year>
 		<manufacturer>Universal Interactive</manufacturer>
-		<rom name="bruce lee - return of the legend (usa).bin" size="8388608" crc="b2a45a4c"/>
+		<rom name="Bruce Lee - Return of the Legend (U)(2002)(Universal Interactive).gba" size="8388608" crc="b2a45a4c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bublbobl" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Bubble Bobble - Old &amp; New (Europe)</description>
-		<year>2002</year>
+		<description>Bubble Bobble: Old &amp; New (Europe, M5)</description>
+		<year>2003</year>
 		<manufacturer>Empire Interactive</manufacturer>
-		<rom name="agb-aonp-0.u1" size="4194304" crc="dfa1a201"/>
+		<rom name="Bubble Bobble - Old &amp; New (E, M5)(2003)(Empire Interactive).gba" size="4194304" crc="dfa1a201"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bublboblj" cloneof="bublbobl" romof="bublbobl" sourcefile="gba/d_gba.cpp">
-		<description>Bubble Bobble - Old &amp; New (Japan)</description>
+		<description>Bubble Bobble: Old &amp; New (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Mediakite</manufacturer>
-		<rom name="bubble bobble - old &amp; new (japan).bin" size="4194304" crc="be9fd5e7"/>
+		<rom name="Bubble Bobble - Old &amp; New (J)(2002)(Mediakite).gba" size="4194304" crc="be9fd5e7"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="bublboblu" cloneof="bublbobl" romof="bublbobl" sourcefile="gba/d_gba.cpp">
-		<description>Bubble Bobble - Old &amp; New (USA)</description>
+		<description>Bubble Bobble: Old &amp; New (USA)</description>
 		<year>2003</year>
 		<manufacturer>Empire Interactive</manufacturer>
-		<rom name="bubble bobble - old &amp; new (usa).bin" size="4194304" crc="feec503c"/>
+		<rom name="Bubble Bobble - Old &amp; New (U)(2003)(Empire Interactive).gba" size="4194304" crc="feec503c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -4094,6 +4124,16 @@
 		<year>2002</year>
 		<manufacturer>Microids</manufacturer>
 		<rom name="casper (usa) (en,fr,es).bin" size="4194304" crc="9f905e60"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="castlemaster" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Castle Master (HB)</description>
+		<year>2004</year>
+		<manufacturer>Quirky</manufacturer>
+		<rom name="Castle Master (2004)(Quirky).gba" size="259192" crc="307f7d77"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5035,19 +5075,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="crayonay" cloneof="shinchan" romof="shinchan" sourcefile="gba/d_gba.cpp">
-		<description>Crayon Shin-chan - Arashi o Yobu Cinemaland no Daibouken! (Japan)</description>
+		<description>Crayon Shin-chan: Arashi o Yobu Cinemaland no Daibouken! (Japan)</description>
 		<year>2004</year>
 		<manufacturer>Banpresto</manufacturer>
-		<rom name="crayon shin-chan - arashi o yobu cinemaland no daibouken (japan).bin" size="16777216" crc="6e936a54"/>
+		<rom name="Crayon Shin-chan - Arashi o Yobu Cinemaland no Daibouken! (J)(2004)(Banpresto).gba" size="16777216" crc="6e936a54"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="crayondy" cloneof="shincnms" romof="shincnms" sourcefile="gba/d_gba.cpp">
-		<description>Crayon Shin-chan - Densetsu o Yobu Omake no Miyako Shockgaan! (Japan)</description>
+		<description>Crayon Shin-chan: Densetsu o Yobu Omake no Miyako Shockgaan! (Japan)</description>
 		<year>2006</year>
 		<manufacturer>Banpresto</manufacturer>
-		<rom name="crayon shin-chan - densetsu o yobu omake no miyako shockgaan (japan).bin" size="33554432" crc="45c84466"/>
+		<rom name="Crayon Shin-chan - Densetsu o Yobu Omake no Miyako Shockgaan! (J)(2006)(Banpresto).gba" size="33554432" crc="45c84466"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5756,7 +5796,7 @@
 		<description>Densetsu no Stafy (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="densetsu no stafy (japan).bin" size="8388608" crc="fae94c8b"/>
+		<rom name="Densetsu no Stafy (J)(2002)(Nintendo).gba" size="8388608" crc="fae94c8b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5765,7 +5805,7 @@
 		<description>Densetsu no Stafy 2 (Japan)</description>
 		<year>2003</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="densetsu no stafy 2 (japan).bin" size="16777216" crc="ea73eb54"/>
+		<rom name="Densetsu no Stafy 2 (J)(2003)(Nintendo).gba" size="16777216" crc="ea73eb54"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5774,16 +5814,16 @@
 		<description>Densetsu no Stafy 3 (Japan)</description>
 		<year>2004</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="densetsu no stafy 3 (japan).bin" size="16777216" crc="fcaf1aa8"/>
+		<rom name="Densetsu no Stafy 3 (J)(2004)(Nintendo).gba" size="16777216" crc="fcaf1aa8"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="stafy3" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Densetsu no Stafy 3 (Japan, rev. 1)</description>
+		<description>Densetsu no Stafy 3 (Japan, Rev. 1)</description>
 		<year>2004</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="densetsu no stafy 3 (japan) (rev 1).bin" size="16777216" crc="2d6e4c3b"/>
+		<rom name="Densetsu no Stafy 3 (J, Rev 1)(2004)(Nintendo).gba" size="16777216" crc="2d6e4c3b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5792,7 +5832,7 @@
 		<description>Derby Stallion Advance (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Enterbrain</manufacturer>
-		<rom name="derby stallion advance (japan).bin" size="4194304" crc="9746ef12"/>
+		<rom name="Derby Stallion Advance (J)(2002)(Enterbrain).gba" size="4194304" crc="9746ef12"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -5801,7 +5841,7 @@
 		<description>Desert Strike Advance (USA)</description>
 		<year>2002</year>
 		<manufacturer>Electronic Arts</manufacturer>
-		<rom name="desert strike advance (usa).bin" size="4194304" crc="cc1c1405"/>
+		<rom name="Desert Strike Advance (U)(2002)(Electronic Arts).gba" size="4194304" crc="cc1c1405"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6375,19 +6415,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="brobear" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Brother Bear (Europe, English)</description>
+		<description>Disney's Brother Bear (Europe)</description>
 		<year>2003</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="agb-bbrp-0.u1" size="8388608" crc="6220a4b8"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Disney's Brother Bear (E)(2003)(THQ).gba" size="8388608" crc="6220a4b8"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="brobeara" cloneof="brobear" romof="brobear" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Brother Bear (Europe, French / German / Italian / Spanish / Dutch / Danish / Swedish)</description>
+		<description>Disney's Brother Bear (Europe, M7)</description>
 		<year>2003</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="brother bear (europe) (fr,de,es,it,nl,sv,da).bin" size="8388608" crc="fd814097"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Disney's Brother Bear (E, M7)(2003)(THQ).gba" size="8388608" crc="fd814097"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6771,28 +6811,28 @@
 		<driver status="good"/>
 	</game>
 	<game name="tarzanf" cloneof="tarzan" romof="tarzan" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Tarzan - L'Appel de la Jungle (France)</description>
+		<description>Disney's Tarzan: L'Appel de la Jungle (Europe, France)</description>
 		<year>2002</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="tarzan - l'appel de la jungle (france).bin" size="8388608" crc="35ab002e"/>
+		<rom name="Disney's Tarzan - Return to the Jungle (E, FR)(2002)(Activision).gba" size="8388608" crc="35ab002e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="tarzan" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Tarzan - Return to the Jungle (Europe, USA)</description>
+		<description>Disney's Tarzan: Return to the Jungle (Europe, USA)</description>
 		<year>2002</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="tarzan - return to the jungle (usa, europe).bin" size="8388608" crc="32c6df3f"/>
+		<rom name="Disney's Tarzan - Return to the Jungle (E, U)(2002)(Activision).gba" size="8388608" crc="32c6df3f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="tarzang" cloneof="tarzan" romof="tarzan" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Tarzan - Rückkehr in den Dschungel (Germany)</description>
+		<description>Disney's Tarzan: Rückkehr in den Dschungel (Europe, Germany)</description>
 		<year>2002</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="tarzan - rueckkehr in den dschungel (germany).bin" size="8388608" crc="59733b26"/>
+		<rom name="Disney's Tarzan - Return to the Jungle (E, DE)(2002)(Activision).gba" size="8388608" crc="59733b26"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -7008,7 +7048,7 @@
 		<description>Dogz 2 (USA, rev. 1)</description>
 		<year>2007</year>
 		<manufacturer>Ubisoft</manufacturer>
-		<rom name="agb-bime-1.u1" size="16777216" crc="0e2aca9e"/>
+		<rom name="agb-bime-1.u1" size="16777216" crc="a0ebb191"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -8156,6 +8196,16 @@
 		<year>2005</year>
 		<manufacturer>Ignition Entertainment</manufacturer>
 		<rom name="elf bowling 1 &amp; 2 (usa).bin" size="4194304" crc="68feff40"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="eliteagb" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Elite AGB (HB, v1.4.1)</description>
+		<year>2007</year>
+		<manufacturer>Quirky</manufacturer>
+		<rom name="Elite AGB v1.4.1 (2007)(Quirky).gba" size="960088" crc="28985872"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -9819,6 +9869,36 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="haganeoste" cloneof="haganeos" romof="haganeos" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>FullMetal Alchemist: Sonata of Memories (Hack, English)</description>
+		<year>2021</year>
+		<manufacturer>Iredc</manufacturer>
+		<rom name="FullMetal Alchemist - Sonata of Memories T-Eng (2021)(Iredc).gba" size="9127040" crc="08be6ed0"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="haganemrte" cloneof="haganemr" romof="haganemr" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>FullMetal Alchemist: Stray Rondo (Hack, English v0.02)</description>
+		<year>2017</year>
+		<manufacturer>mz</manufacturer>
+		<rom name="FullMetal Alchemist - Stray Rondo T-Eng v0.02 (2017)(mz).gba" size="16777216" crc="bc3f79b5"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="fungus" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Fungus Forest (HB)</description>
+		<year>2025</year>
+		<manufacturer>MOONbit, Anorak Studio</manufacturer>
+		<rom name="Fungus Forest (2025)(MOONbit, Anorak Studio).gba" size="1543104" crc="6db13c60"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="fushalic" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Fushigi no Kuni no Alice - Alice's Adventures in Wonderland (Japan)</description>
 		<year>2003</year>
@@ -11284,37 +11364,37 @@
 		<driver status="good"/>
 	</game>
 	<game name="haganemr" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Hagane no Renkinjutsushi - FullMetal Alchemist - Meisou no Rondo (Japan)</description>
+		<description>Hagane no Renkinjutsushi ~ FullMetal Alchemist: Meisou no Rondo (Japan)</description>
 		<year>2004</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="hagane no renkinjutsushi - meisou no rondo (japan).bin" size="8388608" crc="a8cda373"/>
+		<rom name="Hagane no Renkinjutsushi - Meisou no Rondo (J)(2004)(Bandai).gba" size="8388608" crc="a8cda373"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="haganeos" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Hagane no Renkinjutsushi - FullMetal Alchemist - Omoide no Sonata (Japan)</description>
+		<description>Hagane no Renkinjutsushi ~ FullMetal Alchemist: Omoide no Sonata (Japan)</description>
 		<year>2004</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="hagane no renkinjutsushi - omoide no sonata (japan).bin" size="8388608" crc="c6144316"/>
+		<rom name="Hagane no Renkinjutsushi - Omoide no Sonata (J)(2004)(Bandai).gba" size="8388608" crc="c6144316"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="hajimeip" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Hajime no Ippo - The Fighting! (Japan)</description>
+		<description>Hajime no Ippo: The Fighting! (Japan)</description>
 		<year>2002</year>
-		<manufacturer>ESP</manufacturer>
-		<rom name="hajime no ippo - the fighting (japan).bin" size="8388608" crc="782dc7eb"/>
+		<manufacturer>ESP Software</manufacturer>
+		<rom name="Hajime no Ippo - The Fighting! (J)(2002)(ESP).gba" size="8388608" crc="782dc7eb"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="hamepane" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Hamepane - Tokyo Mew Mew (Japan)</description>
+		<description>Hamepane: Tokyo Mew Mew (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Takara</manufacturer>
-		<rom name="hamepane - tokyo mew mew (japan).bin" size="4194304" crc="5875c07a"/>
+		<rom name="Hamepane - Tokyo Mew Mew (J)(2002)(Takara).gba" size="4194304" crc="5875c07a"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -12294,6 +12374,15 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="ikplusu" cloneof="ikplus" romof="ikplus" sourcefile="gba/d_gba.cpp">
+		<description>IK+: International Karate Plus (USA)</description>
+		<year>2003</year>
+		<manufacturer>Ignition Entertainment</manufacturer>
+		<rom name="International Karate Plus (U)(2003)(Ignition Entertainment).gba" size="4194304" crc="31c4f03b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="oubliette" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew</comment>
 		<description>Inheritors of the Oubliette (HB, v1.2)</description>
@@ -12323,29 +12412,29 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="inspgrac" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Inspector Gadget Racing (Europe, M6)</description>
+		<year>2002</year>
+		<manufacturer>L.S.P.</manufacturer>
+		<rom name="Inspector Gadget Racing (E, M6)(2002)(L.S.P.).gba" size="4194304" crc="b0d1c070"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="inspgadg" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Inspector Gadget - Advance Mission (Europe)</description>
+		<description>Inspector Gadget: Advance Mission (Europe, M6)</description>
 		<year>2001</year>
 		<manufacturer>L.S.P.</manufacturer>
-		<rom name="inspector gadget - advance mission (europe) (en,fr,de,es,it,nl).bin" size="4194304" crc="406aa0c6"/>
+		<rom name="Inspector Gadget - Advance Mission (E, M6)(2001)(L.S.P.).gba" size="4194304" crc="406aa0c6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="inspgadgu" cloneof="inspgadg" romof="inspgadg" sourcefile="gba/d_gba.cpp">
-		<description>Inspector Gadget - Advance Mission (USA)</description>
+		<description>Inspector Gadget: Advance Mission (USA)</description>
 		<year>2001</year>
 		<manufacturer>Dreamcatcher</manufacturer>
-		<rom name="inspector gadget - advance mission (usa).bin" size="4194304" crc="ef131209"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="inspgrac" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Inspector Gadget Racing (Europe)</description>
-		<year>2002</year>
-		<manufacturer>L.S.P.</manufacturer>
-		<rom name="inspector gadget racing (europe) (en,fr,de,es,it,nl).bin" size="4194304" crc="b0d1c070"/>
+		<rom name="Inspector Gadget - Advance Mission (U)(2001)(Dreamcatcher).gba" size="4194304" crc="ef131209"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -12354,7 +12443,7 @@
 		<description>International Karate Advanced (Europe)</description>
 		<year>2002</year>
 		<manufacturer>Studio 3</manufacturer>
-		<rom name="agb-aikp-0.u1" size="4194304" crc="d33a14af"/>
+		<rom name="International Karate Advanced (E)(2002)(Studio 3).gba" size="4194304" crc="d33a14af"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -12363,16 +12452,7 @@
 		<description>International Karate Plus (Europe)</description>
 		<year>2003</year>
 		<manufacturer>Ignition Entertainment</manufacturer>
-		<rom name="agb-a3kp-0.u1" size="4194304" crc="1052a0ea"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="ikplusu" cloneof="ikplus" romof="ikplus" sourcefile="gba/d_gba.cpp">
-		<description>International Karate Plus (USA)</description>
-		<year>2003</year>
-		<manufacturer>Ignition Entertainment</manufacturer>
-		<rom name="international karate plus (usa).bin" size="4194304" crc="31c4f03b"/>
+		<rom name="International Karate Plus (E)(2003)(Ignition Entertainment).gba" size="4194304" crc="1052a0ea"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -12381,7 +12461,7 @@
 		<description>International Superstar Soccer (Europe)</description>
 		<year>2001</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="agb-aisp-0.u1" size="8388608" crc="9989ce55"/>
+		<rom name="International Superstar Soccer (E)(2001)(Konami).gba" size="8388608" crc="9989ce55"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -12390,7 +12470,7 @@
 		<description>International Superstar Soccer Advance (Europe)</description>
 		<year>2003</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="agb-ay2p-0.u1" size="8388608" crc="7eb2f6d6"/>
+		<rom name="International Superstar Soccer Advance (E)(2003)(Konami).gba" size="8388608" crc="7eb2f6d6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13256,7 +13336,7 @@
 		<description>King Kong - The Official Game of the Movie (Europe, English / Swedish / Norwegian / Danish / Finnish)</description>
 		<year>2005</year>
 		<manufacturer>Ubisoft</manufacturer>
-		<rom name="agb-bkqx-0.u1" merge="king kong - the official game of the movie (europe) (en,fr,de,es,it,nl).bin" size="8388608" crc="37387b19"/>
+		<rom name="agb-bkqx-0.u1" size="8388608" crc="439a92eb"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13292,7 +13372,7 @@
 		<description>Kinniku Banzuke - Kimero! Kiseki no Kanzen Seiha (Japan)</description>
 		<year>2001</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="kinniku banzuke - kimero kiseki no kanzen seiha (japan).bin" size="8388608" crc="40b1dd00"/>
+		<rom name="kinniku banzuke - kimero kiseki no kanzen seiha (japan).bin" size="8388608" crc="c81b9701"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13760,7 +13840,7 @@
 		<description>Kurukuru Kururin (Europe)</description>
 		<year>2001</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="kurukuru kururin (europe).bin" size="4194304" crc="c4dab956"/>
+		<rom name="Kurukuru Kururin (E)(2001)(Nintendo).gba" size="4194304" crc="c4dab956"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13769,7 +13849,17 @@
 		<description>Kurukuru Kururin (Japan)</description>
 		<year>2001</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="kurukuru kururin (japan).bin" size="4194304" crc="8a6a900b"/>
+		<rom name="Kurukuru Kururin (J)(2001)(Nintendo).gba" size="4194304" crc="8a6a900b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="kururinpte" cloneof="kururinp" romof="kururinp" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Kururin Paradise (Hack, English v1.1.1)</description>
+		<year>2023</year>
+		<manufacturer>Dimedime-d</manufacturer>
+		<rom name="Kururin Paradise T-Eng v1.1.1 (2023)(Dimedime-d).gba" size="8388608" crc="79023342"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13778,7 +13868,7 @@
 		<description>Kururin Paradise (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="kururin paradise (japan).bin" size="8388608" crc="93d036f5"/>
+		<rom name="Kururin Paradise (J)(2002)(Nintendo).gba" size="8388608" crc="93d036f5"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13823,7 +13913,7 @@
 		<description>Lady Sia (Europe)</description>
 		<year>2001</year>
 		<manufacturer>TDK Mediactive</manufacturer>
-		<rom name="agb-aldp-0.u1" size="4194304" crc="958097d2"/>
+		<rom name="Lady Sia (E, M6)(2001)(TGK Mediactive).gba" size="4194304" crc="958097d2"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13832,7 +13922,43 @@
 		<description>Lady Sia (USA)</description>
 		<year>2001</year>
 		<manufacturer>TDK Mediactive</manufacturer>
-		<rom name="lady sia (usa) (en,fr,de,es,it,nl).bin" size="4194304" crc="139e95bd"/>
+		<rom name="Lady Sia (U, M6)(2001)(TGK Mediactive).gba" size="4194304" crc="139e95bd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="landbtim" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Land Before Time, The (Europe, M5)</description>
+		<year>2002</year>
+		<manufacturer>Conspiracy Entertainment</manufacturer>
+		<rom name="Land Before Time, The (E, M5)(2002)(Conspiracy Entertainment).gba" size="4194304" crc="cf0fa4d9"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="landbtimu" cloneof="landbtim" romof="landbtim" sourcefile="gba/d_gba.cpp">
+		<description>Land Before Time, The (USA, M2)</description>
+		<year>2002</year>
+		<manufacturer>Conspiracy Entertainment</manufacturer>
+		<rom name="Land Before Time, The (U, M2)(2002)(Conspiracy Entertainment).gba" size="4194304" crc="cfd8a52c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="landbtmb" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Land Before Time, The: Into the Mysterious Beyond (Europe, M8)</description>
+		<year>2006</year>
+		<manufacturer>The Game Factory</manufacturer>
+		<rom name="Land Before Time, The - Into the Mysterious Beyond (E, M8)(2006)(The Game Factory).gba" size="8388608" crc="5485eefa"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="landbtmbu" cloneof="landbtmb" romof="landbtmb" sourcefile="gba/d_gba.cpp">
+		<description>Land Before Time, The: Into the Mysterious Beyond (USA, M3)</description>
+		<year>2006</year>
+		<manufacturer>The Game Factory</manufacturer>
+		<rom name="Land Before Time, The - Into the Mysterious Beyond (U, M3)(2006)(The Game Factory).gba" size="8388608" crc="cff03df3"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13896,6 +14022,26 @@
 		<year>2003</year>
 		<manufacturer>Banpresto</manufacturer>
 		<rom name="legend of dynamic goushouden - houkai no rondo (japan).bin" size="8388608" crc="67f18f8e"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="stafyte2" cloneof="stafy" romof="stafy" sourcefile="gba/d_gba.cpp">
+		<comment>Hack, This hack uses translated or fan made names for characters</comment>
+		<description>Legendary Starfy, The - new names (Hack, English v1.1)</description>
+		<year>2023</year>
+		<manufacturer>Megahog2015</manufacturer>
+		<rom name="Legendary Starfy, The T-Eng v1.1 - new names (2023)(Megahog2015).gba" size="8388608" crc="e324050c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="stafyte1" cloneof="stafy" romof="stafy" sourcefile="gba/d_gba.cpp">
+		<comment>Hack, This hack uses original names for characters</comment>
+		<description>Legendary Starfy, The - original names (Hack, English v1.1)</description>
+		<year>2023</year>
+		<manufacturer>Megahog2015</manufacturer>
+		<rom name="Legendary Starfy, The T-Eng v1.1 - original names (2023)(Megahog2015).gba" size="8388608" crc="a047b091"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15863,7 +16009,7 @@
 		<description>Metal Slug Advance (Europe)</description>
 		<year>2004</year>
 		<manufacturer>Ignition Entertainment</manufacturer>
-		<rom name="agb-bsmp-0.u1" size="8388608" crc="3806f4ae"/>
+		<rom name="Metal Slug Advance (E)(2004)(Ignition Entertainment).gba" size="8388608" crc="3806f4ae"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15872,7 +16018,7 @@
 		<description>Metal Slug Advance (Japan)</description>
 		<year>2004</year>
 		<manufacturer>SNK Playmore</manufacturer>
-		<rom name="metal slug advance (japan).bin" size="8388608" crc="0caba589"/>
+		<rom name="Metal Slug Advance (J)(2004)(SNK Playmore).gba" size="8388608" crc="0caba589"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15881,7 +16027,17 @@
 		<description>Metal Slug Advance (USA)</description>
 		<year>2004</year>
 		<manufacturer>SNK</manufacturer>
-		<rom name="metal slug advance (usa).bin" size="8388608" crc="09980880"/>
+		<rom name="Metal Slug Advance (U)(2004)(SNK Playmore).gba" size="8388608" crc="09980880"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="mgunslngte" cloneof="mgunslng" romof="mgunslng" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Metalgun Slinger (Hack, English v1.1)</description>
+		<year>2025</year>
+		<manufacturer>RaeDawnChonglingBay</manufacturer>
+		<rom name="Metalgun Slinger T-Eng v1.1 (2025)(RaeDawnChonglingBay).gba" size="8388608" crc="17313719"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15890,79 +16046,36 @@
 		<description>Metalgun Slinger (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Atmark</manufacturer>
-		<rom name="metalgun slinger (japan).bin" size="8388608" crc="8dfb7a2f"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="metroid0" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Metroid - Zero Mission (Europe)</description>
-		<year>2004</year>
-		<manufacturer>Nintendo</manufacturer>
-		<rom name="agb-bmxp-0.u1" size="8388608" crc="f1d92e63"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="metroid0p" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
-		<description>Metroid - Zero Mission (Europe, prototype)</description>
-		<year>2004</year>
-		<manufacturer>Nintendo</manufacturer>
-		<rom name="abmxped.bin" size="16777216" crc="b6438226"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="metroid0j" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
-		<description>Metroid - Zero Mission (Japan)</description>
-		<year>2004</year>
-		<manufacturer>Nintendo</manufacturer>
-		<rom name="metroid - zero mission (japan).bin" size="8388608" crc="44b79e2b"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="metroid0u" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
-		<description>Metroid - Zero Mission (USA)</description>
-		<year>2004</year>
-		<manufacturer>Nintendo</manufacturer>
-		<rom name="metroid - zero mission (usa).bin" size="8388608" crc="5c61a844"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="metroid0up" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
-		<description>Metroid - Zero Mission (USA, prototype)</description>
-		<year>2004</year>
-		<manufacturer>Nintendo</manufacturer>
-		<rom name="abmxe00.bin" size="16777216" crc="922c4a10"/>
+		<rom name="Metalgun Slinger (J)(2002)(Atmark).gba" size="8388608" crc="8dfb7a2f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="metrdfsn" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Metroid Fusion (Europe)</description>
+		<description>Metroid Fusion (Europe, M5)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="agb-amtp-0.u1" size="8388608" crc="974e46ab"/>
+		<rom name="Metroid Fusion (E, M5)(2002)(Nintendo).gba" size="8388608" crc="974e46ab"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="metrdfsnp2" cloneof="metrdfsn" romof="metrdfsn" sourcefile="gba/d_gba.cpp">
-		<description>Metroid Fusion (Europe, prototype 20020911)</description>
+		<comment>Prototype</comment>
+		<description>Metroid Fusion (Europe, M5, Prototype 20020911)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="metj01d.bin" size="16777216" crc="3acbd239"/>
+		<rom name="Metroid Fusion (E, M5, Proto 20020911)(Nintendo).gba" size="16777216" crc="3acbd239"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="metrdfsnp1" cloneof="metrdfsn" romof="metrdfsn" sourcefile="gba/d_gba.cpp">
-		<description>Metroid Fusion (Europe, prototype 20020916)</description>
+		<comment>Prototype</comment>
+		<description>Metroid Fusion (Europe, M5, Prototype 20020916)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="metj01d_a.bin" size="8388608" crc="1605e4f7"/>
+		<rom name="Metroid Fusion (E, M5, Proto 20020916)(Nintendo).gba" size="8388608" crc="1605e4f7"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15971,7 +16084,7 @@
 		<description>Metroid Fusion (Japan)</description>
 		<year>2003</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="metroid fusion (japan).bin" size="8388608" crc="817a7e9e"/>
+		<rom name="Metroid Fusion (J)(2003)(Nintendo).gba" size="8388608" crc="817a7e9e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -15980,7 +16093,54 @@
 		<description>Metroid Fusion (USA, Australia)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="metroid fusion (usa, australia).bin" size="8388608" crc="6c75479c"/>
+		<rom name="Metroid Fusion (A, U)(2002)(Nintendo).gba" size="8388608" crc="6c75479c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="metroid0" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Metroid: Zero Mission (Europe, M5)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Metroid - Zero Mission (E, M5)(2004)(Nintendo).gba" size="8388608" crc="f1d92e63"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="metroid0p" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
+		<comment>Prototype</comment>
+		<description>Metroid: Zero Mission (Europe, M5, Prototype)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Metroid - Zero Mission (E, M5, Proto)(2004)(Nintendo).gba" size="16777216" crc="b6438226"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="metroid0j" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
+		<description>Metroid: Zero Mission (Japan)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Metroid - Zero Mission (J)(2004)(Nintendo).gba" size="8388608" crc="44b79e2b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="metroid0u" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
+		<description>Metroid: Zero Mission (USA)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Metroid - Zero Mission (U)(2004)(Nintendo).gba" size="8388608" crc="5c61a844"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="metroid0up" cloneof="metroid0" romof="metroid0" sourcefile="gba/d_gba.cpp">
+		<comment>Prototype</comment>
+		<description>Metroid: Zero Mission (USA, Prototype)</description>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Metroid - Zero Mission (U, Proto)(2004)(Nintendo).gba" size="16777216" crc="922c4a10"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -17280,7 +17440,7 @@
 		<description>NES Classics: Castlevania (Europe)</description>
 		<year>2004</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="NES Classics - Castlevania (E)(2004)(Nintendo).gba" size="4194304" crc="2b510046"/>
+		<rom name="NES Classics - Castlevania (E)(2004)(Nintendo).gba" size="1048576" crc="497e3279"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -17694,16 +17854,26 @@
 		<description>Operation Armored Liberty (USA)</description>
 		<year>2003</year>
 		<manufacturer>Majesco</manufacturer>
-		<rom name="operation armored liberty (usa).bin" size="4194304" crc="8f289e0b"/>
+		<rom name="Operation Armored Liberty (U)(2003)(Majesco).gba" size="4194304" crc="8f289e0b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="orientlbte" cloneof="orientlb" romof="orientlb" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Oriental Blue: Ao no Tengai (Hack, English)</description>
+		<year>2013</year>
+		<manufacturer>Kingcom, Tom</manufacturer>
+		<rom name="Oriental Blue - Ao no Tengai T-Eng (2013)(Kingcom, Tom).gba" size="16777216" crc="8a850da7"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="orientlb" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Oriental Blue - Ao no Tengai (Japan)</description>
+		<description>Oriental Blue: Ao no Tengai (Japan)</description>
 		<year>2003</year>
-		<manufacturer>Hudson</manufacturer>
-		<rom name="oriental blue - ao no tengai (japan).bin" size="16777216" crc="05e80ecc"/>
+		<manufacturer>Hudson Soft</manufacturer>
+		<rom name="Oriental Blue - Ao no Tengai (J)(2003)(Hudson).gba" size="16777216" crc="05e80ecc"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -17712,7 +17882,7 @@
 		<description>Oshaberi Inko Club (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Alpha Unit</manufacturer>
-		<rom name="oshaberi inko club (japan).bin" size="8388608" crc="df6901f0"/>
+		<rom name="Oshaberi Inko Club (J)(2002)(Alpha Unit).gba" size="8388608" crc="df6901f0"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -19921,6 +20091,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="reaxion" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Reaxion (HB)</description>
+		<year>2007</year>
+		<manufacturer>Cosine</manufacturer>
+		<rom name="Reaxion (2007)(Cosine).gba" size="280560" crc="960ee137"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="rebelstr" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Rebelstar - Tactical Command (Europe)</description>
 		<year>2006</year>
@@ -21304,20 +21484,30 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="shinchan" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Shin Chan - Aventuras en Cineland (Spain)</description>
-		<year>2005</year>
-		<manufacturer>Atari</manufacturer>
-		<rom name="agb-bxcs-0.u1" size="16777216" crc="769a7666"/>
+	<game name="shincnms" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Shin Chan contra los Muñecos de Shock Gahn (Europe, Spain)</description>
+		<year>2006</year>
+		<manufacturer>Atari SA</manufacturer>
+		<rom name="Shin Chan contra los Munecos de Shock Gahn (E, SP)(2006)(Atari SA).gba" size="16777216" crc="fd47a2fe"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="shincnms" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Shin Chan contra los Muñecos de Shock Gahn (Spain)</description>
-		<year>2006</year>
-		<manufacturer>Atari</manufacturer>
-		<rom name="shin chan contra los munecos de shock gahn (spain).bin" size="16777216" crc="fd47a2fe"/>
+	<game name="shinchante" cloneof="shinchan" romof="shinchan" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Shin Chan: Adventures in Cinema-Land (Hack, English)</description>
+		<year>2019</year>
+		<manufacturer>LeonarthCG</manufacturer>
+		<rom name="Shin Chan - Adventures in Cinema-Land T-Eng (2019)(LeonarthCG).gba" size="17359992" crc="4c5ffba8"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="shinchan" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Shin Chan: Aventuras en Cineland (Europe, Spain)</description>
+		<year>2005</year>
+		<manufacturer>Atari SA</manufacturer>
+		<rom name="Shin Chan - Aventuras en Cineland (E, SP)(2005)(Atari SA).gba" size="16777216" crc="769a7666"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -21331,11 +21521,21 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="shinmtte" cloneof="shinmt" romof="shinmt" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Shin Megami Tensei (Hack, English v1.3b)</description>
+		<year>2021</year>
+		<manufacturer>Shawnxz</manufacturer>
+		<rom name="Shin Megami Tensei T-Eng v1.3b (2021)(Shawnxz).gba" size="16777216" crc="f74db49f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="shinmt" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Shin Megami Tensei (Japan)</description>
 		<year>2003</year>
-		<manufacturer>Atlus</manufacturer>
-		<rom name="shin megami tensei (japan).bin" size="8388608" crc="b857c3c5"/>
+		<manufacturer>Atlus Co.</manufacturer>
+		<rom name="Shin Megami Tensei (J)(2003)(Atlus).gba" size="8388608" crc="b857c3c5"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -23057,6 +23257,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="stacktower" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Stack a Tower (HB)</description>
+		<year>2026</year>
+		<manufacturer>LaLuigi</manufacturer>
+		<rom name="Stack a Tower (2026)(Laluigi).gba" size="45772" crc="7a420f95"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="stadiumg" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Stadium Games (Europe)</description>
 		<year>2003</year>
@@ -23788,11 +23998,11 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="smb" romof="gba" sourcefile="gba/d_gba.cpp">
+	<game name="f_smbhmc" cloneof="n_smb" romof="n_smb" sourcefile="gba/d_gba.cpp">
 		<description>Super Mario Bros. (Japan, Hot Mario Campaign)</description>
-		<year>19??</year>
-		<manufacturer>&lt;unknown&gt;</manufacturer>
-		<rom name="super mario bros. (japan) (hot mario campaign).bin" size="4194304" crc="085b271b"/>
+		<year>2004</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Super Mario Bros. (J, Hot Mario Campaign)(2004)(Nintendo).gba" size="1048576" crc="e4628d75"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -23918,7 +24128,7 @@
 		<description>Super Robot Taisen A (Japan)</description>
 		<year>2001</year>
 		<manufacturer>Banpresto</manufacturer>
-		<rom name="super robot taisen a (japan).bin" size="8388608" crc="2f6e9788"/>
+		<rom name="Super Robot Taisen A (J)(2001)(Banpresto).gba" size="8388608" crc="2f6e9788"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -23927,7 +24137,7 @@
 		<description>Super Robot Taisen D (Japan)</description>
 		<year>2003</year>
 		<manufacturer>Banpresto</manufacturer>
-		<rom name="super robot taisen d (japan).bin" size="8388608" crc="efb45117"/>
+		<rom name="Super Robot Taisen D (J)(2003)(Banpresto).gba" size="8388608" crc="efb45117"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -23936,7 +24146,7 @@
 		<description>Super Robot Taisen J (Japan)</description>
 		<year>2005</year>
 		<manufacturer>Banpresto</manufacturer>
-		<rom name="agb-b6jj-0.u1" size="16777216" crc="c956fd37"/>
+		<rom name="Super Robot Taisen J (J)(2005)(Banpresto).gba" size="16777216" crc="c956fd37"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -23945,7 +24155,17 @@
 		<description>Super Robot Taisen R (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Banpresto</manufacturer>
-		<rom name="agb-aj9j-0.u1" size="8388608" crc="df7f91bc"/>
+		<rom name="Super Robot Taisen R (J)(2002)(Banpresto).gba" size="8388608" crc="df7f91bc"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="srobotjte" cloneof="srobotj" romof="srobotj" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Super Robot Wars J (Hack, English)</description>
+		<year>2010</year>
+		<manufacturer>Kingcom</manufacturer>
+		<rom name="Super Robot Wars J T-Eng (2010)(Kingcom).gba" size="16777216" crc="89b628e3"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -24321,10 +24541,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="taxi3" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Taxi 3 (France)</description>
+		<description>Taxi 3 (Europe, France)</description>
 		<year>2003</year>
 		<manufacturer>Ubi Soft</manufacturer>
-		<rom name="taxi 3 (france).bin" size="8388608" crc="2d2b0c11"/>
+		<rom name="Taxi 3 (E, FR)(2003)(Ubi Soft).gba" size="8388608" crc="2d2b0c11"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -25027,42 +25247,6 @@
 		<year>2005</year>
 		<manufacturer>The Game Factory</manufacturer>
 		<rom name="koala brothers - outback adventures (usa) (en,fr,de,es,it,nl,pt,da).bin" size="8388608" crc="6ec76bce"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="landbtim" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>The Land Before Time (Europe)</description>
-		<year>2002</year>
-		<manufacturer>Conspiracy Entertainment</manufacturer>
-		<rom name="land before time, the (europe) (en,fr,de,es,it).bin" size="4194304" crc="cf0fa4d9"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="landbtimu" cloneof="landbtim" romof="landbtim" sourcefile="gba/d_gba.cpp">
-		<description>The Land Before Time (USA)</description>
-		<year>2002</year>
-		<manufacturer>Conspiracy Entertainment</manufacturer>
-		<rom name="land before time, the (usa) (en,es).bin" size="4194304" crc="cfd8a52c"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="landbtmb" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>The Land Before Time - Into the Mysterious Beyond (Europe)</description>
-		<year>2006</year>
-		<manufacturer>The Game Factory</manufacturer>
-		<rom name="agb-blop-0.u1" size="8388608" crc="5485eefa"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="landbtmbu" cloneof="landbtmb" romof="landbtmb" sourcefile="gba/d_gba.cpp">
-		<description>The Land Before Time - Into the Mysterious Beyond (USA)</description>
-		<year>2006</year>
-		<manufacturer>The Game Factory</manufacturer>
-		<rom name="land before time, the - into the mysterious beyond (usa) (en,fr,es).bin" size="8388608" crc="cff03df3"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -25918,20 +26102,30 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="tomatote" cloneof="tomato" romof="tomato" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Tomato Adventure (Hack, English v1.1.1)</description>
+		<year>2023</year>
+		<manufacturer>Unknown W. Brackets</manufacturer>
+		<rom name="Tomato Adventure T-Eng v.1.1.1 (2023)(Unknown W. Brackets).gba" size="8388608" crc="a9bb7cd7"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="tomato" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Tomato Adventure (Japan)</description>
 		<year>2002</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="agb-aglj-0.u1" size="8388608" crc="e37ca939"/>
+		<rom name="Tomato Adventure (J)(2002)(Nintendo).gba" size="8388608" crc="e37ca939"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="tonka" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Tonka - On the Job (USA)</description>
+		<description>Tonka: On the Job (USA)</description>
 		<year>2006</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="tonka - on the job (usa).bin" size="4194304" crc="dbcd4541"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Tonka - On the Job (U)(2006)(THQ).gba" size="4194304" crc="dbcd4541"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -25940,16 +26134,16 @@
 		<description>Tony Hawk's American Sk8land (Europe, English)</description>
 		<year>2005</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="tony hawk's american sk8land (europe).bin" size="8388608" crc="a824df3f"/>
+		<rom name="Tony Hawk's American Sk8land (E, EN)(2005)(Activision).gba" size="8388608" crc="a824df3f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="thawkaska" cloneof="thawkask" romof="thawkask" sourcefile="gba/d_gba.cpp">
-		<description>Tony Hawk's American Sk8land (Europe, French / German / Italian / Spanish)</description>
+		<description>Tony Hawk's American Sk8land (Europe, M4)</description>
 		<year>2005</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="tony hawk's american sk8land (europe) (fr,de,es,it).bin" size="8388608" crc="9633084a"/>
+		<rom name="Tony Hawk's American Sk8land (E, M4)(2005)(Activision).gba" size="8388608" crc="9633084a"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -25958,16 +26152,16 @@
 		<description>Tony Hawk's American Sk8land (USA)</description>
 		<year>2005</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="tony hawk's american sk8land (usa).bin" size="8388608" crc="7b089f4a"/>
+		<rom name="Tony Hawk's American Sk8land (U)(2005)(Activision).gba" size="8388608" crc="7b089f4a"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="thawkdj" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Tony Hawk's Downhill Jam (Europe)</description>
+		<description>Tony Hawk's Downhill Jam (Europe, M5)</description>
 		<year>2006</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="agb-bxsp-0.u1" size="16777216" crc="4a975f48"/>
+		<rom name="Tony Hawk's Downhill Jam (E, M5)(2006)(Activision).gba" size="16777216" crc="4a975f48"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -25976,7 +26170,7 @@
 		<description>Tony Hawk's Downhill Jam (USA)</description>
 		<year>2006</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="agb-bxse-0.u1" size="16777216" crc="37b0b53d"/>
+		<rom name="Tony Hawk's Downhill Jam (U)(2006)(Activision).gba" size="16777216" crc="37b0b53d"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -26148,6 +26342,16 @@
 		<year>2006</year>
 		<manufacturer>2K Sports</manufacturer>
 		<rom name="top spin 2 (usa) (en,fr,de,es,it).bin" size="16777216" crc="a960d63b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="tortoises" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Tortoises (HB)</description>
+		<year>2024</year>
+		<manufacturer>FG Software</manufacturer>
+		<rom name="Tortoises (2024)(FG Software).gba" size="262144" crc="e8f9eb14"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

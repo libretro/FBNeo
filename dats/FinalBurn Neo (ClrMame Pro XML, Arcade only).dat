@@ -41945,6 +41945,34 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="dkbowser" cloneof="dkong" romof="dkong" sampleof="dkong" sourcefile="pre90s/d_dkong.cpp">
+		<comment>Hack</comment>
+		<description>Donkey Kong (Bowser's Takeover v1.00)</description>
+		<year>2026</year>
+		<manufacturer>hack (Paul Goes)</manufacturer>
+		<rom name="dkbowser.5et" size="4096" crc="2680ae9e"/>
+		<rom name="dkbowser.5ct" size="4096" crc="5cc230f1"/>
+		<rom name="dkbowser.5bt" size="4096" crc="c1918928"/>
+		<rom name="dkbowser.5at" size="4096" crc="7f3b508b"/>
+		<rom name="dkbowser.3i" size="2048" crc="9e77db35"/>
+		<rom name="s_3j_b.bin" merge="s_3j_b.bin" size="2048" crc="4743fe92"/>
+		<rom name="dkbowser.5h" size="2048" crc="bbf41cd4"/>
+		<rom name="dkbowser.3pt" size="2048" crc="1653cadb"/>
+		<rom name="dkbowser.4m" size="2048" crc="c8563065"/>
+		<rom name="dkbowser.4n" size="2048" crc="acb90323"/>
+		<rom name="dkbowser.4r" size="2048" crc="18e81522"/>
+		<rom name="dkbowser.4s" size="2048" crc="5aae0c7a"/>
+		<rom name="dkbowser.2k" size="256" crc="cd5154ef"/>
+		<rom name="dkbowser.2j" size="256" crc="1a687240"/>
+		<rom name="dkbowser.5e" size="256" crc="a1444094"/>
+		<sample name="run01" />
+		<sample name="run02" />
+		<sample name="run03" />
+		<sample name="jump" />
+		<sample name="dkstomp" />
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="dkonghrd" cloneof="dkong" romof="dkong" sampleof="dkong" sourcefile="pre90s/d_dkong.cpp">
 		<description>Donkey Kong (hard kit)</description>
 		<year>1981</year>
@@ -42308,7 +42336,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Accelerate</description>
 		<year>2023</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkaccel.5et" size="4096" crc="cfb3a3be"/>
 		<rom name="dkaccel.5ct" size="4096" crc="9a527b63"/>
 		<rom name="dkaccel.5bt" size="4096" crc="107b677c"/>
@@ -42336,7 +42364,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Anniversary Edition</description>
 		<year>2021</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkong40y.5et" size="4096" crc="cf44c2dd"/>
 		<rom name="dkong40y.5ct" size="4096" crc="34238a95"/>
 		<rom name="dkong40y.5bt" size="4096" crc="6c5614e5"/>
@@ -42364,7 +42392,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Barrelpalooza v1.06</description>
 		<year>2021</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongbp.5et" size="4096" crc="bb5c7dca"/>
 		<rom name="dkongbp.5ct" size="4096" crc="c742739c"/>
 		<rom name="dkongbp.5bt" size="4096" crc="a46859ec"/>
@@ -42392,7 +42420,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Barrelpalooza v1.07</description>
 		<year>2021</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongbp1.5et" size="4096" crc="c80c0431"/>
 		<rom name="dkongbp.5ct" size="4096" crc="c742739c"/>
 		<rom name="dkongbp.5bt" size="4096" crc="a46859ec"/>
@@ -42420,7 +42448,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Championship Edition v1.01</description>
 		<year>2020</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongchm.5et" size="4096" crc="26890d72"/>
 		<rom name="dkongchm.5ct" size="4096" crc="d5965c23"/>
 		<rom name="dkongchm.5bt" size="4096" crc="fce41e06"/>
@@ -42506,7 +42534,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Crazy Barrels Edition</description>
 		<year>2019</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkcbarrel.5et" size="4096" crc="78e37c41"/>
 		<rom name="dkcbarrel.5ct" size="4096" crc="a46cbb85"/>
 		<rom name="dkcbarrel.5bt" size="4096" crc="07da5b15"/>
@@ -42534,7 +42562,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Duel</description>
 		<year>2021</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkduel.5et" size="4096" crc="87a4912f"/>
 		<rom name="dkduel.5ct" size="4096" crc="1c547c2b"/>
 		<rom name="dkduel.5bt" size="4096" crc="fce41e06"/>
@@ -42590,7 +42618,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Freerun Edition</description>
 		<year>2019</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkfreerun.5et" size="4096" crc="2b85ddf0"/>
 		<rom name="dkfreerun.5ct" size="4096" crc="ef7e15d7"/>
 		<rom name="dkfreerun.5bt" size="4096" crc="cb390d7c"/>
@@ -42618,7 +42646,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Hearthunt</description>
 		<year>2022</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkhrthnt.5et" size="4096" crc="c9a84bae"/>
 		<rom name="dkhrthnt.5ct" size="4096" crc="e55daf9e"/>
 		<rom name="dkhrthnt.5bt" size="4096" crc="34466de4"/>
@@ -42704,7 +42732,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong In the Dark v1.02</description>
 		<year>2020</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongitd.5et" size="4096" crc="abddd83e"/>
 		<rom name="dkongitd.5ct" size="4096" crc="ee146d99"/>
 		<rom name="dkongchm.5bt" size="4096" crc="fce41e06"/>
@@ -42914,7 +42942,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong League Championship v1.00</description>
 		<year>2020</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongchm.5et" size="4096" crc="26890d72"/>
 		<rom name="dkongchm.5ct" size="4096" crc="d5965c23"/>
 		<rom name="dkongchm.5bt" size="4096" crc="fce41e06"/>
@@ -42942,7 +42970,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong On the Run v1.02</description>
 		<year>2020</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongotr.5et" size="4096" crc="fd64526a"/>
 		<rom name="dkongotr.5ct" size="4096" crc="6d692d1b"/>
 		<rom name="dkongotr.5bt" size="4096" crc="d029c495"/>
@@ -42970,7 +42998,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Pac-Man Crossover</description>
 		<year>2024</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkpmx.5et" size="4096" crc="a7a913d5"/>
 		<rom name="dkpmx.5ct" size="4096" crc="03ce5531"/>
 		<rom name="dkpmx.5bt" size="4096" crc="abaf3fa1"/>
@@ -43026,7 +43054,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Randomized Edition v1.01</description>
 		<year>2020</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongran1.5et" size="4096" crc="fc29f234"/>
 		<rom name="dkongran1.5ct" size="4096" crc="49e16508"/>
 		<rom name="dkongchm.5bt" size="4096" crc="fce41e06"/>
@@ -43139,7 +43167,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong RNDMZR</description>
 		<year>2022</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkrndmzr.5et" size="4096" crc="281b9bb6"/>
 		<rom name="dkrndmzr.5ct" size="4096" crc="7fa1be23"/>
 		<rom name="dkrndmzr.5bt" size="4096" crc="50ad6d22"/>
@@ -43167,7 +43195,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Skip Start v1.00</description>
 		<year>2020</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongss.5et" size="4096" crc="87c65c59"/>
 		<rom name="c_5ct_g.bin" merge="c_5ct_g.bin" size="4096" crc="5ec461ec"/>
 		<rom name="dkongss.5bt" size="4096" crc="f31c0c47"/>
@@ -43366,7 +43394,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Twisted Jungle v1.05</description>
 		<year>2021</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkongtj.5et" size="4096" crc="63e2a483"/>
 		<rom name="dkongtj.5ct" size="4096" crc="ed5c7b13"/>
 		<rom name="dkongtj.5bt" size="4096" crc="b1990430"/>
@@ -43394,7 +43422,7 @@
 		<comment>Hack</comment>
 		<description>Donkey Kong Wizardry</description>
 		<year>2022</year>
-		<manufacturer>Paul Goes</manufacturer>
+		<manufacturer>hack (Paul Goes)</manufacturer>
 		<rom name="dkwizardry.5et" size="4096" crc="f42bb2e5"/>
 		<rom name="dkwizardry.5ct" size="4096" crc="85cf6e4c"/>
 		<rom name="dkwizardry.5bt" size="4096" crc="6e888d7b"/>
@@ -110515,6 +110543,31 @@
 		<rom name="mpc-3.1m" merge="mpc-3.1m" size="32" crc="6a57eff2"/>
 		<rom name="mpc-1.1f" merge="mpc-1.1f" size="32" crc="26979b13"/>
 		<rom name="mpc-2.2h" merge="mpc-2.2h" size="256" crc="7ae4cd97"/>
+		<rom name="mp_7621-5.7h" merge="mp_7621-5.7h" size="512" crc="cf1fd9d0"/>
+		<video type="raster" orientation="horizontal" width="240" height="252" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mpatrolut" cloneof="mpatrol" romof="mpatrol" sourcefile="irem/d_m52.cpp">
+		<comment>Hack</comment>
+		<description>Moon Patrol Unknown Territories</description>
+		<year>2025</year>
+		<manufacturer>hack (Paul Goes)</manufacturer>
+		<rom name="mpatrolut.3m" size="4096" crc="f0c4405b"/>
+		<rom name="mpatrolut.3l" size="4096" crc="1cd1640d"/>
+		<rom name="mpatrolut.3k" size="4096" crc="45943910"/>
+		<rom name="mpatrolut.3j" size="4096" crc="825e0ad3"/>
+		<rom name="mp-s1.1a" merge="mp-s1.1a" size="4096" crc="561d3108"/>
+		<rom name="mpatrolut.3e" size="4096" crc="0c61ffa6"/>
+		<rom name="mpatrolut.3f" size="4096" crc="8fbcaa31"/>
+		<rom name="mpatrolut.3m" size="4096" crc="bd17d3ac"/>
+		<rom name="mpatrolut.3n" size="4096" crc="9ce028bf"/>
+		<rom name="mpe-1.3l" merge="mpe-1.3l" size="4096" crc="c46a7f72"/>
+		<rom name="mpe-2.3k" merge="mpe-2.3k" size="4096" crc="c7aa1fb0"/>
+		<rom name="mpe-3.3h" merge="mpe-3.3h" size="4096" crc="a0919392"/>
+		<rom name="mpatrolut.2a" size="512" crc="2f926603"/>
+		<rom name="mpatrolut.1m" size="32" crc="1d02b31c"/>
+		<rom name="mpatrolut.1f" size="32" crc="298daa56"/>
+		<rom name="mpatrolut.2h" size="256" crc="e35efd45"/>
 		<rom name="mp_7621-5.7h" merge="mp_7621-5.7h" size="512" crc="cf1fd9d0"/>
 		<video type="raster" orientation="horizontal" width="240" height="252" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
