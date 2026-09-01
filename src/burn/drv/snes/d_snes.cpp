@@ -46690,6 +46690,25 @@ struct BurnDriver BurnDrvsnes_Bjreborndemo = {
 	512, 448, 4, 3
 };
 
+// Blokit (HB, v1.0.1)
+// https://crispulent-crisps.itch.io/blokit
+static struct BurnRomInfo snes_BlokitRomDesc[] = {
+	{ "Blokit v1.0.1 (2026)(Crisps).sfc", 262143, 0xc45ec1c5, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Blokit)
+STD_ROM_FN(snes_Blokit)
+
+struct BurnDriver BurnDrvsnes_Blokit = {
+	"snes_blokit", NULL, NULL, NULL, "2026",
+	"Blokit (HB, v1.0.1)\0", NULL, "Crisps", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SNES, GBF_PUZZLE, 0,
+	SNESGetZipName, snes_BlokitRomInfo, snes_BlokitRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
 // Blow'em Out (HB)
 
 static struct BurnRomInfo snes_BlowemoutRomDesc[] = {
@@ -46842,6 +46861,44 @@ struct BurnDriver BurnDrvsnes_Chipschlg = {
 	512, 448, 4, 3
 };
 
+// Chou Makaimura - Knight Artoria Edition (Hack, v1.2)
+// https://www.romhacking.net/hacks/9094/
+static struct BurnRomInfo snes_ChomakmurknightRomDesc[] = {
+	{ "Chou Makaimura - Knight Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred).sfc", 1048576, 0x86bd3499, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Chomakmurknight)
+STD_ROM_FN(snes_Chomakmurknight)
+
+struct BurnDriver BurnDrvsnes_Chomakmurknight = {
+	"snes_chomakmurknight", "snes_supergng", NULL, NULL, "2026",
+	"Chou Makaimura - Knight Artoria Edition (Hack, v1.2)\0", NULL, "GoodLuckTrying, Fred", "SNES / Super Famicom",
+	L"Chou Makaimura - Knight Artoria Edition (Hack, v1.2)\0\u8d85\u9b54\u754c\u6751\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM | GBF_RUNGUN, 0,
+	SNESGetZipName, snes_ChomakmurknightRomInfo, snes_ChomakmurknightRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Chou Makaimura - Maiden Artoria Edition (Hack, v1.2)
+
+static struct BurnRomInfo snes_ChomakmurmaidenRomDesc[] = {
+	{ "Chou Makaimura - Maiden Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred).sfc", 1048576, 0x4fa2d787, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Chomakmurmaiden)
+STD_ROM_FN(snes_Chomakmurmaiden)
+
+struct BurnDriver BurnDrvsnes_Chomakmurmaiden = {
+	"snes_chomakmurmaiden", "snes_supergng", NULL, NULL, "2026",
+	"Chou Makaimura - Maiden Artoria Edition (Hack, v1.2)\0", NULL, "GoodLuckTrying, Fred", "SNES / Super Famicom",
+	L"Chou Makaimura - Maiden Artoria Edition (Hack, v1.2)\0\u8d85\u9b54\u754c\u6751\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM | GBF_RUNGUN, 0,
+	SNESGetZipName, snes_ChomakmurmaidenRomInfo, snes_ChomakmurmaidenRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
 // DKC2: Clapper's Quest (Hack)
 // https://www.romhacking.net/hacks/9545/
 static struct BurnRomInfo snes_ClapperquestRomDesc[] = {
@@ -46921,7 +46978,7 @@ struct BurnDriver BurnDrvsnes_Cornbustpiko = {
 // Cosmo Gang - The Puzzle - Double Rotation (Hack)
 // https://www.romhacking.net/hacks/8158/
 static struct BurnRomInfo snes_CosmogangpzlhRomDesc[] = {
-	{ "Cosmo Gang - The Puzzle - Double Rotation Hack (2023)(bankbank).sfc", 524288, 0x524ee83b, BRF_ESS | BRF_PRG },
+	{ "Cosmo Gang - The Puzzle - Double Rotation (2023)(bankbank).sfc", 524288, 0x524ee83b, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(snes_Cosmogangpzlh)
@@ -49750,6 +49807,44 @@ struct BurnDriver BurnDrvsnes_Skippfrds = {
 	512, 448, 4, 3
 };
 
+// Super Ghouls 'N Ghosts - Knight Artoria Edition (Hack, v3.2)
+// https://www.romhacking.net/hacks/9094/
+static struct BurnRomInfo snes_SpgngknightRomDesc[] = {
+	{ "Super Ghouls 'N Ghosts - Knight Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred).sfc", 1048576, 0x7967c502, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Spgngknight)
+STD_ROM_FN(snes_Spgngknight)
+
+struct BurnDriver BurnDrvsnes_Spgngknight = {
+	"snes_spgngknight", "snes_supergng", NULL, NULL, "2026",
+	"Super Ghouls 'N Ghosts - Knight Artoria Edition (Hack, v3.2)\0", NULL, "GoodLuckTrying, Fred", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM | GBF_RUNGUN, 0,
+	SNESGetZipName, snes_SpgngknightRomInfo, snes_SpgngknightRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Super Ghouls 'N Ghosts - Maiden Artoria Edition (Hack, v3.2)
+
+static struct BurnRomInfo snes_SpgngmaidenRomDesc[] = {
+	{ "Super Ghouls 'N Ghosts - Maiden Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred).sfc", 1048576, 0xf9e91182, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Spgngmaiden)
+STD_ROM_FN(snes_Spgngmaiden)
+
+struct BurnDriver BurnDrvsnes_Spgngmaiden = {
+	"snes_spgngmaiden", "snes_supergng", NULL, NULL, "2026",
+	"Super Ghouls 'N Ghosts - Maiden Artoria Edition (Hack, v3.2)\0", NULL, "GoodLuckTrying, Fred", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM | GBF_RUNGUN, 0,
+	SNESGetZipName, snes_SpgngmaidenRomInfo, snes_SpgngmaidenRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
 // Super Mario Horizons (GlobalHack, v1.0b)
 // https://www.smwcentral.net/?p=section&a=details&id=35232
 static struct BurnRomInfo snes_SmhorizonsRomDesc[] = {
@@ -50322,10 +50417,10 @@ struct BurnDriver BurnDrvsnes_Superguitar = {
 	512, 448, 4, 3
 };
 
-// Super Ghouls'n Ghosts Enhanced (Hack)
+// Super Ghouls'n Ghosts Enhanced (Hack, v1.1.0)
 // https://www.romhacking.net/hacks/9480/
 static struct BurnRomInfo snes_SupergngenhRomDesc[] = {
-	{ "Super Ghouls'n Ghosts Enhanced Hack (2026)(Tiken).sfc", 1048576, 0xebb9c790, BRF_ESS | BRF_PRG },
+	{ "Super Ghouls'n Ghosts Enhanced v1.1.0 (2026)(Tiken).sfc", 1048576, 0x4e1618ac, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(snes_Supergngenh)
@@ -50333,7 +50428,7 @@ STD_ROM_FN(snes_Supergngenh)
 
 struct BurnDriver BurnDrvsnes_Supergngenh = {
 	"snes_supergngenh", "snes_supergng", NULL, NULL, "2026",
-	"Super Ghouls'n Ghosts Enhanced (Hack)\0", "Air control while jumping & FastROM & more...", "Tiken", "SNES / Super Famicom",
+	"Super Ghouls'n Ghosts Enhanced (Hack, v1.1.0)\0", "Air control while jumping & FastROM & more...", "Tiken", "SNES / Super Famicom",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM | GBF_RUNGUN, 0,
 	SNESGetZipName, snes_SupergngenhRomInfo, snes_SupergngenhRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
@@ -50344,7 +50439,7 @@ struct BurnDriver BurnDrvsnes_Supergngenh = {
 // Super Ghouls'n Ghosts Restoration (Hack)
 // https://www.romhacking.net/hacks/3473/
 static struct BurnRomInfo snes_SupergngrRomDesc[] = {
-	{ "Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD).sfc", 2097152, 0xd983a882, BRF_ESS | BRF_PRG },
+	{ "Super Ghouls'n Ghosts Restoration (2023-25)(SCD).sfc", 2097152, 0xd983a882, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(snes_Supergngr)
@@ -51259,7 +51354,7 @@ struct BurnDriver BurnDrvsnes_Brzombies = {
 // Oh No! More Zombies Ate My Neighbors! (Hack)
 
 static struct BurnRomInfo snes_Zombies2hRomDesc[] = {
-	{ "Oh No! More Zombies Ate My Neighbors! - Hack (2010)(Stanley_Decker, Sloat).sfc", 4194304, 0xd218147c, BRF_ESS | BRF_PRG },
+	{ "Oh No! More Zombies Ate My Neighbors! (2010)(Stanley_Decker, Sloat).sfc", 4194304, 0xd218147c, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(snes_Zombies2h)
