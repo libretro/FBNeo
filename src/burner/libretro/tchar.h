@@ -75,7 +75,8 @@ extern int bRunPause;
 #define _sntprintf snprintf
 #define _tcsrchr strrchr
 #define _tcscmp strcmp
-#define _totlower(c)   tolower((unsigned char)(c))
+#define _totlower(c) tolower((unsigned char)(c))
+#define _AtoT(a) ANSIToTCHAR(a, NULL, 0)
 
 typedef char TCHAR;
 

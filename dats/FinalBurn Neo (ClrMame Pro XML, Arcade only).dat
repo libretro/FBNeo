@@ -97460,6 +97460,29 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mmatrixi" cloneof="mmatrix" romof="mmatrix" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Mars Matrix: Hyper Solid Shooting (Hack, Improvement v1.0.0)</description>
+		<year>2025</year>
+		<manufacturer>hack</manufacturer>
+		<rom name="mmxiu.03" size="524288" crc="a578097b"/>
+		<rom name="mmxu.04" merge="mmxu.04" size="524288" crc="0135fc6c"/>
+		<rom name="mmxiu.05" size="524288" crc="a1fbd3d8"/>
+		<rom name="mmx.13m" merge="mmx.13m" size="4194304" crc="04748718"/>
+		<rom name="mmx.15m" merge="mmx.15m" size="4194304" crc="38074f44"/>
+		<rom name="mmx.17m" merge="mmx.17m" size="4194304" crc="e4635e35"/>
+		<rom name="mmx.19m" merge="mmx.19m" size="4194304" crc="4400a3f2"/>
+		<rom name="mmx.14m" merge="mmx.14m" size="4194304" crc="d52bf491"/>
+		<rom name="mmx.16m" merge="mmx.16m" size="4194304" crc="23f70780"/>
+		<rom name="mmx.18m" merge="mmx.18m" size="4194304" crc="2562c9d5"/>
+		<rom name="mmx.20m" merge="mmx.20m" size="4194304" crc="583a9687"/>
+		<rom name="mmxi.01" size="131072" crc="45a29ce5"/>
+		<rom name="mmx.11m" merge="mmx.11m" size="4194304" crc="4180b39f"/>
+		<rom name="mmx.12m" merge="mmx.12m" size="4194304" crc="95e22a59"/>
+		<rom name="mmatrix.key" merge="mmatrix.key" size="20" crc="8ed66bc4"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mmatrixj" cloneof="mmatrix" romof="mmatrix" sourcefile="capcom/d_cps2.cpp">
 		<description>Mars Matrix: Hyper Solid Shooting (Japan 000412)</description>
 		<year>2000</year>
@@ -154087,13 +154110,13 @@
 	</game>
 	<game name="sengoku2rb" cloneof="sengoku2" romof="sengoku2" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Sengoku 2 / Sengoku Denshou 2 (Hack, Red Blood v1.16)</description>
+		<description>Sengoku 2 / Sengoku Denshou 2 (Hack, Red Blood v1.17)</description>
 		<year>2026</year>
 		<manufacturer>Raphael-Boichot</manufacturer>
 		<rom name="040-p1rb.p1" size="1048576" crc="ad8f774e"/>
 		<rom name="040-s1.s1" merge="040-s1.s1" size="131072" crc="cd9802a3"/>
-		<rom name="040-c1rb.c1" size="2097152" crc="451cdf68"/>
-		<rom name="040-c2rb.c2" size="2097152" crc="942d98b8"/>
+		<rom name="040-c1rb.c1" size="2097152" crc="4659be44"/>
+		<rom name="040-c2rb.c2" size="2097152" crc="17765684"/>
 		<rom name="040-c3rb.c3" size="524288" crc="7a846578"/>
 		<rom name="040-c4rb.c4" size="524288" crc="15eba55e"/>
 		<rom name="040-m1.m1" merge="040-m1.m1" size="131072" crc="d4de4bca"/>

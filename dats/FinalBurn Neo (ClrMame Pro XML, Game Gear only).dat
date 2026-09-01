@@ -4833,10 +4833,10 @@
 	</game>
 	<game name="tetris4gg" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris4GG (HB, v0.9)</description>
-		<year>2022</year>
+		<description>Tetris4GG (HB)</description>
+		<year>2026</year>
 		<manufacturer>Armix</manufacturer>
-		<rom name="Tetris4GG v0.9 (2022)(Armix).gg" size="65536" crc="e0654d27"/>
+		<rom name="Tetris4GG (2026)(Armix).gg" size="131072" crc="8ada9c7c"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

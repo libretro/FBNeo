@@ -2082,6 +2082,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="blokit" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Blokit (HB, v1.0.1)</description>
+		<year>2026</year>
+		<manufacturer>Crisps</manufacturer>
+		<rom name="Blokit v1.0.1 (2026)(Crisps).sfc" size="262143" crc="c45ec1c5"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="blowemout" sourcefile="snes/d_snes.cpp">
 		<comment>Homebrew</comment>
 		<description>Blow'em Out (HB)</description>
@@ -3223,6 +3232,24 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="chomakmurknight" cloneof="supergng" romof="supergng" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Chou Makaimura - Knight Artoria Edition (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying, Fred</manufacturer>
+		<rom name="Chou Makaimura - Knight Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="86bd3499"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="chomakmurmaiden" cloneof="supergng" romof="supergng" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Chou Makaimura - Maiden Artoria Edition (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying, Fred</manufacturer>
+		<rom name="Chou Makaimura - Maiden Artoria Edition v1.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="4fa2d787"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cymacross" sourcefile="snes/d_snes.cpp">
 		<description>Choujikuu Yousai Macross: Scrambled Valkyrie (Japan)</description>
 		<year>1993</year>
@@ -3662,7 +3689,7 @@
 		<description>Cosmo Gang - The Puzzle - Double Rotation (Hack)</description>
 		<year>2023</year>
 		<manufacturer>bankbank</manufacturer>
-		<rom name="Cosmo Gang - The Puzzle - Double Rotation Hack (2023)(bankbank).sfc" size="524288" crc="524ee83b"/>
+		<rom name="Cosmo Gang - The Puzzle - Double Rotation (2023)(bankbank).sfc" size="524288" crc="524ee83b"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12820,7 +12847,7 @@
 		<description>Oh No! More Zombies Ate My Neighbors! (Hack)</description>
 		<year>2010</year>
 		<manufacturer>Stanley_Decker, Sloat</manufacturer>
-		<rom name="Oh No! More Zombies Ate My Neighbors! - Hack (2010)(Stanley_Decker, Sloat).sfc" size="4194304" crc="d218147c"/>
+		<rom name="Oh No! More Zombies Ate My Neighbors! (2010)(Stanley_Decker, Sloat).sfc" size="4194304" crc="d218147c"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17878,6 +17905,24 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="spgngknight" cloneof="supergng" romof="supergng" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Super Ghouls 'N Ghosts - Knight Artoria Edition (Hack, v3.2)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying, Fred</manufacturer>
+		<rom name="Super Ghouls 'N Ghosts - Knight Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="7967c502"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="spgngmaiden" cloneof="supergng" romof="supergng" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Super Ghouls 'N Ghosts - Maiden Artoria Edition (Hack, v3.2)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying, Fred</manufacturer>
+		<rom name="Super Ghouls 'N Ghosts - Maiden Artoria Edition v3.2 (2026)(GoodLuckTrying, Fred).sfc" size="1048576" crc="f9e91182"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="supergnge" cloneof="supergng" romof="supergng" sourcefile="snes/d_snes.cpp">
 		<description>Super Ghouls'n Ghosts (Euro)</description>
 		<year>1991</year>
@@ -17905,10 +17950,10 @@
 	</game>
 	<game name="supergngenh" cloneof="supergng" romof="supergng" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, Air control while jumping &amp; FastROM &amp; more...</comment>
-		<description>Super Ghouls'n Ghosts Enhanced (Hack)</description>
+		<description>Super Ghouls'n Ghosts Enhanced (Hack, v1.1.0)</description>
 		<year>2026</year>
 		<manufacturer>Tiken</manufacturer>
-		<rom name="Super Ghouls'n Ghosts Enhanced Hack (2026)(Tiken).sfc" size="1048576" crc="ebb9c790"/>
+		<rom name="Super Ghouls'n Ghosts Enhanced v1.1.0 (2026)(Tiken).sfc" size="1048576" crc="4e1618ac"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17917,7 +17962,7 @@
 		<description>Super Ghouls'n Ghosts Restoration (Hack)</description>
 		<year>2023-25</year>
 		<manufacturer>SCD</manufacturer>
-		<rom name="Super Ghouls'n Ghosts Restoration Hack (2023-25)(SCD).sfc" size="2097152" crc="d983a882"/>
+		<rom name="Super Ghouls'n Ghosts Restoration (2023-25)(SCD).sfc" size="2097152" crc="d983a882"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
