@@ -5592,17 +5592,17 @@ struct BurnDriver BurnDrvcv_battlot = {
 	272, 228, 4, 3
 };
 
-// Beach Head (HB, v0.93)
+// Beach Head (HB, v1.00)
 static struct BurnRomInfo cv_beacheadRomDesc[] = {
-	{ "Beach Head v0.93 (2025)(CollectorVision).rom",	131072, 0x86ab5d25, BRF_PRG | BRF_ESS },
+	{ "Beach Head v1.00 (2025-26)(Electric Dreams).rom",	131072, 0x7d698996, BRF_PRG | BRF_ESS },
 };
 
 STDROMPICKEXT(cv_beachead, cv_beachead, cv_coleco)
 STD_ROM_FN(cv_beachead)
 
 struct BurnDriver BurnDrvcv_beachead = {
-	"cv_beachead", NULL, "cv_coleco", NULL, "2025",
-	"Beach Head (HB, v0.93)\0", "Published by CollectorVision Games", "Electric Adventures", "ColecoVision",
+	"cv_beachead", NULL, "cv_coleco", NULL, "2025-26",
+	"Beach Head (HB, v1.00)\0", NULL, "Electric Dreams", "ColecoVision",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_COLECO, GBF_MINIGAMES | GBF_SHOOT, 0,
 	CVGetZipName, cv_beacheadRomInfo, cv_beacheadRomName, NULL, NULL, NULL, NULL, ColecoInputInfo, ColecoDIPInfo,
@@ -11618,6 +11618,24 @@ struct BurnDriver BurnDrvcv_spaceshuttle = {
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_COLECO, GBF_SIM, 0,
 	CVGetZipName, cv_spaceshuttleRomInfo, cv_spaceshuttleRomName, NULL, NULL, NULL, NULL, ColecoInputInfo, ColecoDIPInfo,
 	DrvInitSGMEEPROM, DrvExit, DrvFrame, TMS9928ADraw, DrvScan, NULL, TMS9928A_PALETTE_SIZE,
+	272, 228, 4, 3
+};
+
+// Space Taxi (HB, v0.36)
+static struct BurnRomInfo cv_spacetaxiRomDesc[] = {
+	{ "Space Taxi v0.36 (2026)(Electric Dreams).rom",	131072, 0x708c9e10, BRF_PRG | BRF_ESS },
+};
+
+STDROMPICKEXT(cv_spacetaxi, cv_spacetaxi, cv_coleco)
+STD_ROM_FN(cv_spacetaxi)
+
+struct BurnDriver BurnDrvcv_spacetaxi = {
+	"cv_spacetaxi", NULL, "cv_coleco", NULL, "2026",
+	"Space Taxi (HB, v0.36)\0", NULL, "Electric Dreams", "ColecoVision",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_COLECO, GBF_ACTION | GBF_PLATFORM, 0,
+	CVGetZipName, cv_spacetaxiRomInfo, cv_spacetaxiRomName, NULL, NULL, NULL, NULL, ColecoInputInfo, ColecoDIPInfo,
+	DrvInit, DrvExit, DrvFrame, TMS9928ADraw, DrvScan, NULL, TMS9928A_PALETTE_SIZE,
 	272, 228, 4, 3
 };
 
