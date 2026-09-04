@@ -1084,24 +1084,6 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
-	<game name="soundthn" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>A Sound of Thunder (Europe)</description>
-		<year>2004</year>
-		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="sound of thunder, a (europe) (en,fr,de,es,it).bin" size="8388608" crc="cf404aee"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="soundthnu" cloneof="soundthn" romof="soundthn" sourcefile="gba/d_gba.cpp">
-		<description>A Sound of Thunder (USA)</description>
-		<year>2005</year>
-		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="sound of thunder, a (usa) (en,fr,de,es,it).bin" size="8388608" crc="72894e1b"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
 	<game name="overhedgg" cloneof="overhedg" romof="overhedg" sourcefile="gba/d_gba.cpp">
 		<description>Ab Durch die Hecke (Germany)</description>
 		<year>2006</year>
@@ -1495,10 +1477,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="circlmonj" cloneof="circlmon" romof="circlmon" sourcefile="gba/d_gba.cpp">
-		<description>Akumajou Dracula - Circle of the Moon (Japan)</description>
+		<description>Akumajou Dracula: Circle of the Moon (Japan)</description>
 		<year>2001</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="akumajou dracula - circle of the moon (japan).bin" size="8388608" crc="f3e41d73"/>
+		<rom name="Akumajou Dracula - Circle of the Moon (J)(2001)(Konami).gba" size="8388608" crc="f3e41d73"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -1840,6 +1822,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="arkanoidadv" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Arkanoid Advance (HB)</description>
+		<year>2004</year>
+		<manufacturer>Yodajr</manufacturer>
+		<rom name="Arkanoid Advance (2004)(Yodajr).gba" size="1742192" crc="d2db954c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="amenadv" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Army Men Advance (Europe, USA, M5)</description>
 		<year>2001</year>
@@ -2046,6 +2038,16 @@
 		<year>2006</year>
 		<manufacturer>DSI Games</manufacturer>
 		<rom name="atv - thunder ridge riders (usa).bin" size="4194304" crc="773e73c7"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="auntflora" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Aunt Flora's Mansion (HB)</description>
+		<year>2024</year>
+		<manufacturer>Pocket Pulp, Anna Anthropy</manufacturer>
+		<rom name="Aunt Flora's Mansion (2024)(Pocket Pulp, Anna Anthropy).gba" size="2097152" crc="fcdc6168"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -4214,70 +4216,7 @@
 		<description>Castlevania (Europe)</description>
 		<year>2001</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="agb-aamp-0.u1" size="8388608" crc="611535dc"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="cvaniaasj" cloneof="cvaniaas" romof="cvaniaas" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Akatsuki no Minuet (Japan)</description>
-		<year>2003</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="castlevania - akatsuki no minuet (japan).bin" size="8388608" crc="284e3092"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="cvaniaas" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Aria of Sorrow (Europe)</description>
-		<year>2003</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="agb-a2cp-0.u1" size="8388608" crc="d0c91f74"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="cvaniaasu" cloneof="cvaniaas" romof="cvaniaas" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Aria of Sorrow (USA)</description>
-		<year>2003</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="castlevania - aria of sorrow (usa).bin" size="8388608" crc="35536183"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="cvaniahdj" cloneof="cvaniahd" romof="cvaniahd" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Byakuya no Concerto (Japan)</description>
-		<year>2002</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="castlevania - byakuya no concerto (japan).bin" size="8388608" crc="379b3248"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="circlmonu" cloneof="circlmon" romof="circlmon" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Circle of the Moon (USA)</description>
-		<year>2001</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="castlevania - circle of the moon (usa).bin" size="8388608" crc="1cc059a4"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="cvaniahd" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Harmony of Dissonance (Europe)</description>
-		<year>2002</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="agb-achp-0.u1" size="8388608" crc="521b3091"/>
-		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
-		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
-		<driver status="good"/>
-	</game>
-	<game name="cvaniahdu" cloneof="cvaniahd" romof="cvaniahd" sourcefile="gba/d_gba.cpp">
-		<description>Castlevania - Harmony of Dissonance (USA)</description>
-		<year>2002</year>
-		<manufacturer>Konami</manufacturer>
-		<rom name="castlevania - harmony of dissonance (usa).bin" size="8388608" crc="88c1b562"/>
+		<rom name="Castlevania (E)(2001)(Konami).gba" size="8388608" crc="611535dc"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -4296,6 +4235,79 @@
 		<year>2006</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="castlevania double pack (usa).bin" size="16777216" crc="dbcecc7d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniaasj" cloneof="cvaniaas" romof="cvaniaas" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Akatsuki no Minuet (Japan)</description>
+		<year>2003</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Akatsuki no Minuet (J)(2003)(Konami).gba" size="8388608" crc="284e3092"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniaas" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Aria of Sorrow (Europe, M3)</description>
+		<year>2003</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Aria of Sorrow (E, M3)(2003)(Konami).gba" size="8388608" crc="d0c91f74"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniaasu" cloneof="cvaniaas" romof="cvaniaas" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Aria of Sorrow (USA)</description>
+		<year>2003</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Aria of Sorrow (U)(2003)(Konami).gba" size="8388608" crc="35536183"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniaasde" cloneof="cvaniaas" romof="cvaniaas" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Castlevania: Aria of Sorrow Definitive Edition (Hack)</description>
+		<year>2024</year>
+		<manufacturer>sspmog</manufacturer>
+		<rom name="Castlevania - Aria of Sorrow Definitive Edition (2024)(sspmog).gba" size="8388608" crc="265a8dfd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniahdj" cloneof="cvaniahd" romof="cvaniahd" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Byakuya no Concerto (Japan)</description>
+		<year>2002</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Byakuya no Concerto (J)(2002)(Konami).gba" size="8388608" crc="379b3248"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="circlmonu" cloneof="circlmon" romof="circlmon" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Circle of the Moon (USA)</description>
+		<year>2001</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Circle of the Moon (U)(2001)(Konami).gba" size="8388608" crc="1cc059a4"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniahd" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Harmony of Dissonance (Europe)</description>
+		<year>2002</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Harmony of Dissonance (E)(2002)(Konami).gba" size="8388608" crc="521b3091"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="cvaniahdu" cloneof="cvaniahd" romof="cvaniahd" sourcefile="gba/d_gba.cpp">
+		<description>Castlevania: Harmony of Dissonance (USA)</description>
+		<year>2002</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="Castlevania - Harmony of Dissonance (U)(2002)(Konami).gba" size="8388608" crc="88c1b562"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6443,10 +6455,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="aladdin" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Aladdin (Europe)</description>
+		<description>Disney's Aladdin (Europe, M4)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="agb-badp-0.u1" size="4194304" crc="594fbb7c"/>
+		<manufacturer>Disney Interactive - Capcom</manufacturer>
+		<rom name="Disney's Aladdin (E, M4)(2003)(Disney Interactive - Capcom).gba" size="4194304" crc="594fbb7c"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6454,17 +6466,17 @@
 	<game name="aladdinj" cloneof="aladdin" romof="aladdin" sourcefile="gba/d_gba.cpp">
 		<description>Disney's Aladdin (Japan)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="aladdin (japan).bin" size="4194304" crc="587f1aef"/>
+		<manufacturer>Disney Interactive - Capcom</manufacturer>
+		<rom name="Disney's Aladdin (J)(2003)(Disney Interactive - Capcom).gba" size="4194304" crc="587f1aef"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="aladdinu" cloneof="aladdin" romof="aladdin" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Aladdin (USA)</description>
+		<description>Disney's Aladdin (USA, M4)</description>
 		<year>2003</year>
-		<manufacturer>Disney Interactive</manufacturer>
-		<rom name="aladdin (usa) (en,fr,de,es).bin" size="4194304" crc="40b383f6"/>
+		<manufacturer>Disney Interactive - Capcom</manufacturer>
+		<rom name="Disney's Aladdin (U, M4)(2003)(Disney Interactive - Capcom).gba" size="4194304" crc="40b383f6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6533,19 +6545,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="donaldd" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Donald Duck "Adv@nce"!*# (Europe)</description>
+		<description>Disney's Donald Duck Adv@nce!*# (Europe, M5)</description>
 		<year>2001</year>
-		<manufacturer>Ubi Soft</manufacturer>
-		<rom name="agb-adkp-0.u1" size="8388608" crc="4c086a5e"/>
+		<manufacturer>UbiSoft</manufacturer>
+		<rom name="Disney's Donald Duck Advance (E, M5)(2001)(UbiSoft).gba" size="8388608" crc="4c086a5e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="donalddu" cloneof="donaldd" romof="donaldd" sourcefile="gba/d_gba.cpp">
-		<description>Disney's Donald Duck "Adv@nce"!*# (USA)</description>
+		<description>Disney's Donald Duck Adv@nce!*# (USA)</description>
 		<year>2001</year>
-		<manufacturer>Ubi Soft</manufacturer>
-		<rom name="donald duck advance (usa).bin" size="8388608" crc="936daab2"/>
+		<manufacturer>UbiSoft</manufacturer>
+		<rom name="Disney's Donald Duck Advance (U)(2001)(UbiSoft).gba" size="8388608" crc="936daab2"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -6553,8 +6565,8 @@
 	<game name="donalddj" cloneof="donaldd" romof="donaldd" sourcefile="gba/d_gba.cpp">
 		<description>Disney's Donald Duck Advance (Japan)</description>
 		<year>2001</year>
-		<manufacturer>Ubi Soft</manufacturer>
-		<rom name="donald duck advance (japan).bin" size="8388608" crc="0195de8f"/>
+		<manufacturer>UbiSoft</manufacturer>
+		<rom name="Disney's Donald Duck Advance (J)(2001)(UbiSoft).gba" size="8388608" crc="0195de8f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -7227,10 +7239,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="donchan" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Donchan Puzzle Hanabi de Dohn Advance (Japan)</description>
+		<description>Don-Chan Puzzle: Hanabi de Dohn Advance (Japan)</description>
 		<year>2004</year>
-		<manufacturer>Aruze</manufacturer>
-		<rom name="donchan puzzle hanabi de dohn advance (japan).bin" size="8388608" crc="500922e8"/>
+		<manufacturer>Aruze Corp.</manufacturer>
+		<rom name="Don-Chan Puzzle - Hanabi de Dohn Advance (J)(2004)(Aruze Corp.).gba" size="8388608" crc="500922e8"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -7248,7 +7260,17 @@
 		<description>Donkey Kong Country (USA)</description>
 		<year>2003</year>
 		<manufacturer>Nintendo</manufacturer>
-		<rom name="Donkey Kong Country 2 (U)(2003)(Nintendo).gba" size="8388608" crc="12f7a968"/>
+		<rom name="Donkey Kong Country (U)(2003)(Nintendo).gba" size="8388608" crc="12f7a968"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="dkongcc" cloneof="dkongc" romof="dkongc" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Donkey Kong Country - Palette Restoration (Hack, v1.1)</description>
+		<year>2018</year>
+		<manufacturer>marc_max</manufacturer>
+		<rom name="Donkey Kong Country - Palette Restoration v1.1 (2018)(marc_max).gba" size="8388608" crc="c05c1406"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -8308,6 +8330,16 @@
 		<year>2005</year>
 		<manufacturer>FluBBa</manufacturer>
 		<rom name="Elite - The New Kind v1.7.1 (2005)(FluBBa).gba" size="546392" crc="5f9b4211"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="ellandtcw" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew, Published by The Retro Room Games</comment>
+		<description>Elland: The Crystal Wars (HB)</description>
+		<year>2022</year>
+		<manufacturer>The Retro Room Games</manufacturer>
+		<rom name="Elland - The Crystal Wars (2022)(The Retro Room Games).gba" size="4016344" crc="e3128bcb"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -10194,6 +10226,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="galaxywall" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Galaxy Wall (HB)</description>
+		<year>2015</year>
+		<manufacturer>Choi Kyun</manufacturer>
+		<rom name="Galaxy Wall (2015)(Choi Kyun).gba" size="441552" crc="62662275"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="galidor" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Galidor - Defenders of the Outer Dimension (USA)</description>
 		<year>2002</year>
@@ -10973,6 +11015,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="gleam" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Gleam (HB)</description>
+		<year>2006</year>
+		<manufacturer>AkumaATR</manufacturer>
+		<rom name="Gleam (2006)(AkumaATR).gba" size="30709368" crc="c4b63fe6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="incredibi" cloneof="incredib" romof="incredib" sourcefile="gba/d_gba.cpp">
 		<description>Gli Incredibili - Una 'Normale' Famiglia di Supereroi (Italy)</description>
 		<year>2004</year>
@@ -11005,6 +11057,16 @@
 		<year>2005</year>
 		<manufacturer>Flashpoint Games</manufacturer>
 		<rom name="glory days (europe) (en,fr,de,es,it).bin" size="4194304" crc="84adb2c3"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="gloryhunt" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Glory Hunters (HB, v1.3)</description>
+		<year>2025</year>
+		<manufacturer>2think Design Studio</manufacturer>
+		<rom name="Glory Hunters v1.3 (World)(2025)(2think Design Studio).gba" size="4270324" crc="f031b45e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -11223,6 +11285,16 @@
 		<year>2004</year>
 		<manufacturer>Rockstar Games</manufacturer>
 		<rom name="grand theft auto advance (usa).bin" size="16777216" crc="1fa131e8"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="gravity" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Gravity (HB)</description>
+		<year>2025</year>
+		<manufacturer>VG Source Game Studio</manufacturer>
+		<rom name="Gravity (2025)(VG Source Game Studio).gba" size="4194304" crc="15e60fb1"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -14469,6 +14541,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="lightcycle" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Light Cycle GBA (HB)</description>
+		<year>2015</year>
+		<manufacturer>Choi Kyun</manufacturer>
+		<rom name="Light Cycle GBA (2015)(Choi Kyun).gba" size="717428" crc="ed3ae715"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="lilliput" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Lilliput Oukoku - Lillimoni to Issho Puni! (Japan)</description>
 		<year>2004</year>
@@ -14985,6 +15067,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="magiclegendtk" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew, Published by The Retro Room Games, press Start to close textual menu</comment>
+		<description>Magic and Legend: Time Knights (HB)</description>
+		<year>2023</year>
+		<manufacturer>Giles Hamson</manufacturer>
+		<rom name="Magic and Legend - Time Knights (2023)(Giles Hamson).gba" size="1048576" crc="6d890405"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="maghousn" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Magical Houshin (Japan)</description>
 		<year>2002</year>
@@ -15117,6 +15209,16 @@
 		<year>2003</year>
 		<manufacturer>Jester Interactive</manufacturer>
 		<rom name="manic miner (europe, later) (en,fr,de,es,it).bin" size="7562196" crc="fb3d52bd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="manolo" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Manolo &amp; Benito (HB)</description>
+		<year>2025</year>
+		<manufacturer>VG Source Game Studio</manufacturer>
+		<rom name="Manolo &amp; Benito (2025)(VG Source Game Studio).gba" size="524288" crc="52957c3a"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -16957,6 +17059,26 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="moondefender" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Moon Defender (HB)</description>
+		<year>2017</year>
+		<manufacturer>Choe Gyun</manufacturer>
+		<rom name="Moon Defender (2017)(Choe Gyun).gba" size="889960" crc="7f5a50e0"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="moonrider" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Moon Rider (HB)</description>
+		<year>2019</year>
+		<manufacturer>Choi Gyun</manufacturer>
+		<rom name="Moon Rider (2019)(Choi Gyun).gba" size="1003160" crc="f8f76a53"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="mooncat" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew, 'Level Codes' version</comment>
 		<description>Mooncat's Trio (HB)</description>
@@ -17830,6 +17952,26 @@
 		<year>2006</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="nos voisins, les hommes (france).bin" size="8388608" crc="eb7c8402"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="notebookadv" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Notebook Adventure (HB, v1.3)</description>
+		<year>2022</year>
+		<manufacturer>NotImplementedLife</manufacturer>
+		<rom name="Notebook Adventure v1.3 (2022)(NotImplementedLife).gba" size="476392" crc="cc110502"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="notenogram" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Notenogram (HB)</description>
+		<year>2022</year>
+		<manufacturer>kva64</manufacturer>
+		<rom name="Notenogram (2022)(kva64).gba" size="807876" crc="28108d5e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -18955,6 +19097,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="pokeghgrey" cloneof="pokefird" romof="pokefird" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Pokemon - Ghost Grey Version (Hack, v1.0.1)</description>
+		<year>2026</year>
+		<manufacturer>Joey Zeed</manufacturer>
+		<rom name="Pokemon - Ghost Grey Version v1.0.1 (2026)(Joey Zeed).gba" size="33554432" crc="be0375e2"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="poksaph" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Pokemon - Sapphire Version (unlicensed) (protection hacked)</description>
 		<year>200?</year>
@@ -19926,6 +20078,16 @@
 		<year>2004</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="pyuu to fuku jaguar - byoo to deru megane-kun (japan).bin" size="8388608" crc="1f67bd36"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="spaceqix" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Qix: Space Qix (HB, v1.3)</description>
+		<year>2015</year>
+		<manufacturer>Choi Kyun</manufacturer>
+		<rom name="Qix - Space Qix v1.3 (2015)(Choi Kyun).gba" size="2043248" crc="ba37db65"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -21587,6 +21749,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="shantaegbc" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew, Game Boy Color to GBA porting</comment>
+		<description>Shantae - GBC2GBA (HB)</description>
+		<year>2025</year>
+		<manufacturer>WayForward</manufacturer>
+		<rom name="Shantae - GBC2GBA (2025)(WayForward).gba" size="4270208" crc="137b5a1c"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="shantaerr" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Shantae Advance: Risky Revolution (World)</description>
 		<year>2025</year>
@@ -22681,75 +22853,74 @@
 		<driver status="good"/>
 	</game>
 	<game name="sonic" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance (Europe)</description>
+		<description>Sonic Advance (Europe, M5)</description>
 		<year>2002</year>
-		<manufacturer>Infogrames</manufacturer>
-		<rom name="Sonic Advance (E)(2002)(Infogrames).gba" size="8388608" crc="6232839b"/>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Sonic Advance (E, M5)(2002)(Sega).gba" size="8388608" crc="6232839b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicja" cloneof="sonic" romof="sonic" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance (Japan)</description>
+		<description>Sonic Advance (Japan, M2)</description>
 		<year>2001</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Advance (J)(2001)(Sega).gba" size="8388608" crc="5f512223"/>
+		<rom name="Sonic Advance (J, M2)(2001)(Sega).gba" size="8388608" crc="5f512223"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicj" cloneof="sonic" romof="sonic" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance (Japan, Rev. 1)</description>
+		<description>Sonic Advance (Japan, M2, Rev. 1)</description>
 		<year>2001</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Advance (J, Rev 1)(2001)(Sega).gba" size="8388608" crc="85957a24"/>
+		<rom name="Sonic Advance (J, M2, Rev 1)(2001)(Sega).gba" size="8388608" crc="85957a24"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicu" cloneof="sonic" romof="sonic" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance (USA)</description>
+		<description>Sonic Advance (USA, M2)</description>
 		<year>2002</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="Sonic Advance (U)(2002)(THQ).gba" size="8388608" crc="63f70fd8"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Sonic Advance (U, M2)(2002)(THQ).gba" size="8388608" crc="63f70fd8"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicup" cloneof="sonic" romof="sonic" sourcefile="gba/d_gba.cpp">
 		<comment>Prototype</comment>
-		<description>Sonic Advance (USA, prototype)</description>
+		<description>Sonic Advance (USA, Prototype)</description>
 		<year>2002</year>
-		<manufacturer>Infogrames</manufacturer>
-		<rom name="sonicadvance_asoe00_prototype.bin" size="8388608" crc="a80de3b2"/>
-		<rom name="sonicadvance_asoe00_prototype.sav" size="65536" crc="fd8ddede"/>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Sonic Advance (U, Proto)(2002)(Sega).gba" size="8388608" crc="a80de3b2"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonic2" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance 2 (Europe)</description>
+		<description>Sonic Advance 2 (Europe, M6)</description>
 		<year>2003</year>
-		<manufacturer>Infogrames</manufacturer>
-		<rom name="Sonic Advance 2 (E)(2003)(Infogrames).gba" size="16777216" crc="89509891"/>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Sonic Advance 2 (E, M6)(2003)(Sega).gba" size="16777216" crc="89509891"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonic2j" cloneof="sonic2" romof="sonic2" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance 2 (Japan)</description>
+		<description>Sonic Advance 2 (Japan, M6)</description>
 		<year>2002</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Advance 2 (J)(2002)(Sega).gba" size="16777216" crc="513804ff"/>
+		<rom name="Sonic Advance 2 (J, M6)(2002)(Sega).gba" size="16777216" crc="513804ff"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonic2u" cloneof="sonic2" romof="sonic2" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance 2 (USA)</description>
+		<description>Sonic Advance 2 (USA, M6)</description>
 		<year>2003</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="Sonic Advance 2 (U)(2003)(THQ).gba" size="16777216" crc="7efee7f7"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Sonic Advance 2 (U, M6)(2003)(THQ).gba" size="16777216" crc="7efee7f7"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -22758,26 +22929,36 @@
 		<comment>Prototype</comment>
 		<description>Sonic Advance 2 (USA, Prototype)</description>
 		<year>2003</year>
-		<manufacturer>THQ</manufacturer>
+		<manufacturer>THQ Inc.</manufacturer>
 		<rom name="Sonic Advance 2 (U, Proto)(2003)(THQ).gba" size="33554432" crc="6d7567ed"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="sonic2sp" cloneof="sonic2" romof="sonic2" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Sonic Advance 2 SP (Hack, v1.02)</description>
+		<year>2026</year>
+		<manufacturer>TrackerTD</manufacturer>
+		<rom name="Sonic Advance 2 SP v1.02 (2026)(TrackerTD).gba" size="17366340" crc="e87c51dd"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="sonic3" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance 3 (Europe)</description>
+		<description>Sonic Advance 3 (Europe, M6)</description>
 		<year>2004</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="Sonic Advance 3 (E)(2004)(THQ).gba" size="16777216" crc="5bf83456"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Sonic Advance 3 (E, M6)(2004)(THQ).gba" size="16777216" crc="5bf83456"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonic3j" cloneof="sonic3" romof="sonic3" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance 3 (Japan)</description>
+		<description>Sonic Advance 3 (Japan, M6)</description>
 		<year>2004</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Advance 3 (J)(2004)(Sega).gba" size="16777216" crc="4375f1d6"/>
+		<rom name="Sonic Advance 3 (J, M6)(2004)(Sega).gba" size="16777216" crc="4375f1d6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -22793,73 +22974,101 @@
 		<driver status="good"/>
 	</game>
 	<game name="sonic3u" cloneof="sonic3" romof="sonic3" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Advance 3 (USA)</description>
+		<description>Sonic Advance 3 (USA, M6)</description>
 		<year>2004</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="Sonic Advance 3 (U)(2004)(THQ).gba" size="16777216" crc="49dda5e6"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Sonic Advance 3 (U, M6)(2004)(THQ).gba" size="16777216" crc="49dda5e6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="sonic3sp" cloneof="sonic3" romof="sonic3" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Sonic Advance 3 SP (Hack, v1.03)</description>
+		<year>2026</year>
+		<manufacturer>TrackerTD</manufacturer>
+		<rom name="Sonic Advance 3 SP v1.03 (2026)(TrackerTD).gba" size="17284532" crc="b4ee8ea9"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicbtl" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Battle (Europe)</description>
+		<description>Sonic Battle (Europe, M6)</description>
 		<year>2004</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="Sonic Battle (E)(2004)(THQ).gba" size="16777216" crc="d0f65125"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Sonic Battle (E, M6)(2004)(THQ).gba" size="16777216" crc="d0f65125"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicbtlj" cloneof="sonicbtl" romof="sonicbtl" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Battle (Japan)</description>
+		<description>Sonic Battle (Japan, M2)</description>
 		<year>2003</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Battle (J)(2003)(Sega).gba" size="16777216" crc="7305ac30"/>
+		<rom name="Sonic Battle (J, M2)(2003)(Sega).gba" size="16777216" crc="7305ac30"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicbtlu" cloneof="sonicbtl" romof="sonicbtl" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Battle (USA)</description>
+		<description>Sonic Battle (USA, M6)</description>
 		<year>2004</year>
-		<manufacturer>THQ</manufacturer>
-		<rom name="Sonic Battle (U)(2004)(THQ).gba" size="16777216" crc="9ec9d86f"/>
+		<manufacturer>THQ Inc.</manufacturer>
+		<rom name="Sonic Battle (U, M6)(2004)(THQ).gba" size="16777216" crc="9ec9d86f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicpin" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Pinball Party (Europe)</description>
+		<description>Sonic Pinball Party (Europe, M6)</description>
 		<year>2003</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Pinball Party (E)(2003)(Sega).gba" size="8388608" crc="4435917e"/>
+		<rom name="Sonic Pinball Party (E, M6)(2003)(Sega).gba" size="8388608" crc="4435917e"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicpinj" cloneof="sonicpin" romof="sonicpin" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Pinball Party (Japan)</description>
+		<description>Sonic Pinball Party (Japan, M6)</description>
 		<year>2003</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Pinball Party (J)(2003)(Sega).gba" size="8388608" crc="43b5f167"/>
+		<rom name="Sonic Pinball Party (J, M6)(2003)(Sega).gba" size="8388608" crc="43b5f167"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicpinu" cloneof="sonicpin" romof="sonicpin" sourcefile="gba/d_gba.cpp">
-		<description>Sonic Pinball Party (USA)</description>
+		<description>Sonic Pinball Party (USA, M6)</description>
 		<year>2003</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="Sonic Pinball Party (U)(2003)(Sega).gba" size="8388608" crc="08794743"/>
+		<rom name="Sonic Pinball Party (U, M6)(2003)(Sega).gba" size="8388608" crc="08794743"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
 	<game name="sonicgen" romof="gba" sourcefile="gba/d_gba.cpp">
-		<description>Sonic the Hedgehog - Genesis (USA)</description>
+		<description>Sonic the Hedgehog: Genesis (USA)</description>
 		<year>2006</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Sonic the Hedgehog - Genesis (U)(2006)(Sega).gba" size="4194304" crc="027bc70d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="soundthn" romof="gba" sourcefile="gba/d_gba.cpp">
+		<description>Sound of Thunder, A (Europe, M5)</description>
+		<year>2004</year>
+		<manufacturer>BAM! Entertainment</manufacturer>
+		<rom name="Sound of Thunder, A (E, M5)(2004)(BAM! Entertainment).gba" size="8388608" crc="cf404aee"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="soundthnu" cloneof="soundthn" romof="soundthn" sourcefile="gba/d_gba.cpp">
+		<description>Sound of Thunder, A (USA, M5)</description>
+		<year>2005</year>
+		<manufacturer>BAM! Entertainment</manufacturer>
+		<rom name="Sound of Thunder, A (U, M5)(2005)(BAM! Entertainment).gba" size="8388608" crc="72894e1b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -24245,6 +24454,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="sma4ph" cloneof="sma4" romof="sma4" sourcefile="gba/d_gba.cpp">
+		<comment>Hack, Version with access to World-e: use 4th save slot</comment>
+		<description>Super Mario Advance 4 - Super Mario Bros. 3 (GBP/SNES Palette Hack) (Hack, M5)</description>
+		<year>2021</year>
+		<manufacturer>djedditt</manufacturer>
+		<rom name="Super Mario Advance 4 - Super Mario Bros. 3 (GBP-SNES Palette Hack) (M5) (2021)(djedditt).gba" size="8388608" crc="60e63e19"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="sma4ua" cloneof="sma4" romof="sma4" sourcefile="gba/d_gba.cpp">
 		<description>Super Mario Advance 4 - Super Mario Bros. 3 (USA)</description>
 		<year>2003</year>
@@ -24259,6 +24478,16 @@
 		<year>2003</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="agb-ax4e-1.bin" size="4194304" crc="88dab27f"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="sma4vc" cloneof="sma4" romof="sma4" sourcefile="gba/d_gba.cpp">
+		<comment>Version with access to World-e: use 4th save slot</comment>
+		<description>Super Mario Advance 4 - Super Mario Bros. 3 (Virtual Console) (Europe, M5, Rev. 1)</description>
+		<year>2003</year>
+		<manufacturer>Nintendo</manufacturer>
+		<rom name="Super Mario Advance 4 - Super Mario Bros. 3 (VC) (E, M5, Rev 1) (2003)(Nintendo).gba" size="8388608" crc="d4f45b01"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -27860,7 +28089,17 @@
 		<description>Wolfenstein 3D (Europe, USA)</description>
 		<year>2002</year>
 		<manufacturer>BAM! Entertainment</manufacturer>
-		<rom name="agb-awop-0.u1" size="8388608" crc="c4aa2b7b"/>
+		<rom name="Wolfenstein 3D (E, U)(2002)(BAM! Entertainment).gba" size="8388608" crc="c4aa2b7b"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="wolfn3denh" cloneof="wolfn3d" romof="wolfn3d" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Wolfenstein 3D Enhanced (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Bazooka_Face</manufacturer>
+		<rom name="Wolfenstein 3D Enhanced (2026)(Bazooka_Face).gba" size="33554432" crc="e2886318"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

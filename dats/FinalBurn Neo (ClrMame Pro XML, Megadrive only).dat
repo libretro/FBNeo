@@ -12050,6 +12050,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="megaboxr" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>MegaBox Reloaded (HB)</description>
+		<year>2026</year>
+		<manufacturer>PlayOnRetro</manufacturer>
+		<rom name="MegaBox Reloaded (2026)(PlayOnRetro).bin" size="1589592" crc="1a90be2d"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="megamind" sourcefile="megadrive/d_megadrive.cpp">
 		<description>MegaMind (Japan, SegaNet)</description>
 		<year>1991</year>
@@ -15124,10 +15133,10 @@
 	</game>
 	<game name="phantomgear" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Phantom Gear (HB, v0.94 Demo)</description>
+		<description>Phantom Gear (HB, v1.00 Demo)</description>
 		<year>2026</year>
 		<manufacturer>Bits Rule Games</manufacturer>
-		<rom name="Phantom Gear v0.94 Demo (2026)(Bits Rule Games).bin" size="2380236" crc="3a771364"/>
+		<rom name="Phantom Gear v1.00 Demo (2026)(Bits Rule Games).bin" size="2492316" crc="49662ded"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

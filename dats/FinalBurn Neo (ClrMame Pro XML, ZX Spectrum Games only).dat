@@ -345,7 +345,7 @@
 		<description>720 Degrees (48K)</description>
 		<year>1986</year>
 		<manufacturer>U.S. Gold</manufacturer>
-		<rom name="720 Degrees 48K (1987)(U.S. Gold).tap" size="50644" crc="842e1279"/>
+		<rom name="720 Degrees 48K (1987)(U.S. Gold).tzx" size="60492" crc="3640abef"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -1073,7 +1073,7 @@
 		<description>Alchemist (48K)</description>
 		<year>1983</year>
 		<manufacturer>Imagine Software</manufacturer>
-		<rom name="Alchemist 48K (1983)(Imagine Software).z80" size="37807" crc="e6f0df00"/>
+		<rom name="Alchemist 48K (1983)(Imagine Software).tzx" size="47321" crc="03e190d7"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -2609,6 +2609,28 @@
 		<manufacturer>Hewson Consultants</manufacturer>
 		<rom name="Backgammon 16K (1983)(Hewson Consultants).tap" size="8399" crc="b2f2cafe"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="backrzxen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Backrooms ZX (English) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>AmikoSoft</manufacturer>
+		<rom name="Backrooms ZX EN 128K (2026)(AmikoSoft).tap" size="81568" crc="097f35d6"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="backrzxes" cloneof="backrzxen" romof="backrzxen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Backrooms ZX (Spanish) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>AmikoSoft</manufacturer>
+		<rom name="Backrooms ZX ES 128K (2026)(AmikoSoft).tap" size="82158" crc="5a4de3db"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -11696,7 +11718,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="fredhardp1" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="fredhardp1en" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Freddy Hardest - Part 1 (English) (48K)</description>
+		<year>1987</year>
+		<manufacturer>Dinamic Software</manufacturer>
+		<rom name="Freddy Hardest - Part 1 EN 48K (1987)(Dinamic Software).tzx" size="49371" crc="05a97024"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="fredhardp1es" cloneof="fredhardp1en" romof="fredhardp1en" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Freddy Hardest - Part 1 (Spanish) (48K)</description>
 		<year>1987</year>
 		<manufacturer>Dinamic Software</manufacturer>
@@ -11705,7 +11736,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="fredhardp2" cloneof="fredhardp1" romof="fredhardp1" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="fredhardp2en" cloneof="fredhardp1en" romof="fredhardp1en" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Freddy Hardest - Part 2 (English) (48K)</description>
+		<year>1987</year>
+		<manufacturer>Dinamic Software</manufacturer>
+		<rom name="Freddy Hardest - Part 2 EN 48K (1987)(Dinamic Software).tzx" size="42742" crc="64de69ec"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="fredhardp2es" cloneof="fredhardp1en" romof="fredhardp1en" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Password: 897653</comment>
 		<description>Freddy Hardest - Part 2 (Spanish) (48K)</description>
 		<year>1987</year>
@@ -11715,7 +11755,7 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="freddyhardestsouthman" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="freddyhardestsouthman" cloneof="guardianangel" romof="guardianangel" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Set 'S - Sinclair' to use controller</comment>
 		<description>Freddy Hardest in South Manhattan (Spanish) (48K)</description>
 		<year>1989</year>
@@ -13170,6 +13210,15 @@
 		<manufacturer>Ocean Software</manufacturer>
 		<rom name="Gryzor 48K (1987)(Ocean).tap" size="49774" crc="1b11c206"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="guardianangel" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Guardian Angel, The (48K)</description>
+		<year>1989</year>
+		<manufacturer>Set 'S - Sinclair' to use controller</manufacturer>
+		<rom name="Guardian Angel, The 48K (1989)(Dinamic Software).tzx" size="44481" crc="ce4a8c97"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -23743,8 +23792,8 @@
 		<comment>Homebrew</comment>
 		<description>Pyramid, The (128K) (HB)</description>
 		<year>2025</year>
-		<manufacturer>Amikosoft</manufacturer>
-		<rom name="Pyramid, The 128K (2025)(Amikosoft).tap" size="62761" crc="8bea7ad5"/>
+		<manufacturer>AmikoSoft</manufacturer>
+		<rom name="Pyramid, The 128K (2025)(AmikoSoft).tap" size="62761" crc="8bea7ad5"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -23816,6 +23865,17 @@
 		<year>2018</year>
 		<manufacturer>Jaime Grilo</manufacturer>
 		<rom name="Quahappy 128K (2018)(Jaime Grilo).tap" size="64538" crc="c1566260"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="quanthop" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Quantum Hop (48K-128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Tonsomo Entertainment</manufacturer>
+		<rom name="Quantum Hop 48K-128K (2026)(Tonsomo Entertainment).tzx" size="41178" crc="ac0c49c6"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

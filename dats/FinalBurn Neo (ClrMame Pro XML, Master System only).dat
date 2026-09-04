@@ -3123,6 +3123,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="hongkong97" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Hong Kong '97 (HB, v0.0.1)</description>
+		<year>2026</year>
+		<manufacturer>SirVH</manufacturer>
+		<rom name="Hong Kong '97 v0.0.1 (2026)(SirVH).sms" size="491520" crc="ef93e8da"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="hook" sourcefile="sms/d_sms.cpp">
 		<comment>Prototype</comment>
 		<description>Hook (Euro, Prototype)</description>
@@ -6120,10 +6129,10 @@
 	</game>
 	<game name="smb" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew, YM2413 FM sound chip supported</comment>
-		<description>Super Mario Bros. (HB, v0.12.e83b808)</description>
+		<description>Super Mario Bros. (HB, v1.00)</description>
 		<year>2026</year>
 		<manufacturer>Lack of Track</manufacturer>
-		<rom name="Super Mario Bros. v0.12.e83b808 (2026)(Lack of Track).sms" size="262144" crc="b209d7a8"/>
+		<rom name="Super Mario Bros. v1.00 (2026)(Lack of Track).sms" size="262144" crc="5a74f2b6"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -6487,6 +6496,15 @@
 		<year>2026</year>
 		<manufacturer>Master Linkuei</manufacturer>
 		<rom name="Tetris (System E) v1.5 (2026)(Master Linkuei).sms" size="131072" crc="08ab88b7"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tetris4gg" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Tetris4GG (HB)</description>
+		<year>2026</year>
+		<manufacturer>Armix</manufacturer>
+		<rom name="Tetris4GG (2026)(Armix).sms" size="131072" crc="549390e6"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
