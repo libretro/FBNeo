@@ -6540,6 +6540,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="drapuzzch" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Dragon's Puzzle Challenge (HB)</description>
+		<year>2026</year>
+		<manufacturer>BMO Studios</manufacturer>
+		<rom name="Dragon's Puzzle Challenge (2026)(BMO Studios).nes" size="131088" crc="283ef285"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="draiocht" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>Draiocht (HB)</description>
@@ -8755,6 +8764,15 @@
 		<year>2015</year>
 		<manufacturer>8bit Evolution</manufacturer>
 		<rom name="Germ Squashers (2015)(8bit Evolution).nes" size="65552" crc="cd6349b4"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="getittog" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Get It Together! (HB)</description>
+		<year>2026</year>
+		<manufacturer>IMP Games</manufacturer>
+		<rom name="Get It Together! (2026)(IMP Games).nes" size="524304" crc="c05c17f1"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -12190,6 +12208,15 @@
 		<year>1992</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Krusty's Fun House (USA)(1992)(Acclaim).nes" size="393232" crc="85c86151"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="kubo3" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>KUBO 3 (HB, Rev. J)</description>
+		<year>2022</year>
+		<manufacturer>SJ Games</manufacturer>
+		<rom name="KUBO 3 Rev J (2022)(SJ Games).nes" size="524304" crc="0f1462fb"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

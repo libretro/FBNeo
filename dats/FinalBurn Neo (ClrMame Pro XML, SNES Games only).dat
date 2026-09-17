@@ -11113,15 +11113,6 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="mshwargemsr" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Marvel Super Heroes - War of the Gems Redux (Hack)</description>
-		<year>2025</year>
-		<manufacturer>BillyTime! Games</manufacturer>
-		<rom name="Marvel Super Heroes - War of the Gems Redux (2025)(BillyTime! Games).sfc" size="2097152" crc="2dc14312"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="mshvsf" sourcefile="snes/d_snes.cpp">
 		<description>Marvel Super Heroes vs. Street Fighter (USA) (Unl)</description>
 		<year>1999</year>
@@ -11151,6 +11142,15 @@
 		<year>1996</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="Marvel Super Heroes - War of the Gems (U)(1996)(Capcom).sfc" size="2097152" crc="00af56e8"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshwargemsr" cloneof="mshwargems" romof="mshwargems" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Marvel Super Heroes: War of the Gems Redux (Hack, v2.1)</description>
+		<year>2025-26</year>
+		<manufacturer>BillyTime! Games</manufacturer>
+		<rom name="Marvel Super Heroes - War of the Gems Redux v2.1 (2025-26)(BillyTime! Games).sfc" size="2097152" crc="ce4eb55c"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

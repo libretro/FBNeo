@@ -78004,31 +78004,31 @@
 	</game>
 	<game name="hyxevious" cloneof="sxevious" romof="sxevious" sampleof="xevious" sourcefile="pre90s/d_galaga.cpp">
 		<comment>Hack, High difficulty level hack</comment>
-		<description>Hyper Xevious (Hack, 2026-07-30)</description>
+		<description>Hyper Xevious (Hack, 2026-09-10)</description>
 		<year>2026</year>
 		<manufacturer>zeroco</manufacturer>
-		<rom name="hx_cpu_3p.rom" size="4096" crc="08272d28"/>
-		<rom name="hx_cpu_3m.rom" size="4096" crc="8c9f4685"/>
-		<rom name="hx_xv3_3.2m" size="4096" crc="3088765b"/>
-		<rom name="hx_xv3_4.2l" size="4096" crc="c27a7ed4"/>
-		<rom name="hx_xv3_5.3f" size="4096" crc="ac6c050d"/>
-		<rom name="hx_xv3_6.3j" size="4096" crc="e32de02d"/>
-		<rom name="xvi_7.2c" merge="xvi_7.2c" size="4096" crc="dd35cf1c"/>
-		<rom name="xvi_12.3b" merge="xvi_12.3b" size="4096" crc="088c8b26"/>
-		<rom name="xvi_13.3c" merge="xvi_13.3c" size="4096" crc="de60ba25"/>
-		<rom name="xvi_14.3d" merge="xvi_14.3d" size="4096" crc="535cdbbc"/>
-		<rom name="xvi_15.4m" merge="xvi_15.4m" size="8192" crc="dc2c0ecb"/>
-		<rom name="xvi_18.4r" merge="xvi_18.4r" size="8192" crc="02417d19"/>
+		<rom name="hx_cpu_3p.rom" size="4096" crc="a37c9f7b"/>
+		<rom name="hx_cpu_3m.rom" size="4096" crc="95d0d220"/>
+		<rom name="hx_xv3_3.2m" size="4096" crc="c8273459"/>
+		<rom name="hx_xv3_4.2l" size="4096" crc="ffa45371"/>
+		<rom name="hx_xv3_5.3f" size="4096" crc="73c619ac"/>
+		<rom name="hx_xv3_6.3j" size="4096" crc="7cc09eb9"/>
+		<rom name="hx_xvi_7.2c" size="4096" crc="13707e32"/>
+		<rom name="hx_xvi_12.3b" size="4096" crc="01de9009"/>
+		<rom name="hx_xvi_13.3c" size="4096" crc="2d15b4f6"/>
+		<rom name="hx_xvi_14.3d" size="4096" crc="17b87634"/>
+		<rom name="hx_xvi_15.4m" size="8192" crc="a5b59dcf"/>
+		<rom name="hx_xvi_18.4r" size="8192" crc="e5d614e4"/>
 		<rom name="xvi_17.4p" merge="xvi_17.4p" size="8192" crc="dfb587ce"/>
-		<rom name="xvi_16.4n" merge="xvi_16.4n" size="4096" crc="605ca889"/>
-		<rom name="xvi_9.2a" merge="xvi_9.2a" size="4096" crc="57ed9879"/>
-		<rom name="xvi_10.2b" merge="xvi_10.2b" size="8192" crc="ae3ba9e5"/>
-		<rom name="xvi_11.2c" merge="xvi_11.2c" size="4096" crc="31e244dd"/>
+		<rom name="hx_xvi_16.4n" size="4096" crc="64e83f92"/>
+		<rom name="hx_xvi_9.2a" size="4096" crc="bdf36d3f"/>
+		<rom name="hx_xvi_10.2b" size="8192" crc="9802cff9"/>
+		<rom name="hx_xvi_11.2c" size="4096" crc="a374dece"/>
 		<rom name="xvi-8.6a" merge="xvi-8.6a" size="256" crc="5cc2727f"/>
 		<rom name="xvi-9.6d" merge="xvi-9.6d" size="256" crc="5c8796cc"/>
 		<rom name="xvi-10.6e" merge="xvi-10.6e" size="256" crc="3cb60975"/>
-		<rom name="xvi-7.4h" merge="xvi-7.4h" size="512" crc="22d98032"/>
-		<rom name="xvi-6.4f" merge="xvi-6.4f" size="512" crc="3a7599f0"/>
+		<rom name="hx_xvi-7.4h" size="512" crc="7c19819e"/>
+		<rom name="hx_xvi-6.4f" size="512" crc="a3a0aba5"/>
 		<rom name="xvi-4.3l" merge="xvi-4.3l" size="512" crc="fd8b9d91"/>
 		<rom name="xvi-5.3m" merge="xvi-5.3m" size="512" crc="bf906d82"/>
 		<rom name="xvi-2.7n" merge="xvi-2.7n" size="256" crc="550f06bc"/>

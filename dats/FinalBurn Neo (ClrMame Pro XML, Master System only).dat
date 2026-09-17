@@ -2308,15 +2308,6 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="frontierforced" cloneof="frontierforce" romof="frontierforce" sourcefile="sms/d_sms.cpp">
-		<comment>Homebrew</comment>
-		<description>Frontier Force (HB, Alpha Demo v0.1.2.3)</description>
-		<year>2024</year>
-		<manufacturer>BadComputer</manufacturer>
-		<rom name="Frontier Force - Alpha Demo v0.1.2.3 (2024)(BadComputer).sms" size="262144" crc="def51eb0"/>
-		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="frontierforce" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
 		<description>Frontier Force (HB, v1.1)</description>
@@ -4376,6 +4367,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="oriflame" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Oriflame (HB)</description>
+		<year>2026</year>
+		<manufacturer>Altair</manufacturer>
+		<rom name="Oriflame (2026)(Altair).sms" size="1048576" crc="fee8077a"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="osotos" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew, YM2413 FM sound chip supported</comment>
 		<description>Osotos (HB)</description>
@@ -4959,6 +4959,15 @@
 		<year>2022</year>
 		<manufacturer>Maxim</manufacturer>
 		<rom name="Rayman Retro Rumble v1.3 (2022)(Maxim).sms" size="524288" crc="932c57d5"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="razingcore" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Razing Core (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Bad Computer</manufacturer>
+		<rom name="Razing Core v1.1 (2026)(Bad Computer).sms" size="524288" crc="811b0309"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
