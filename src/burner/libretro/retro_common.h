@@ -274,7 +274,6 @@ void set_environment();
 void check_variables(void);
 int HandleMessage(enum retro_log_level level, TCHAR* szFormat, ...);
 char* strqtoken(char* s, const char* delims);
-char* TCHARToANSI(const TCHAR* pszInString, char* pszOutString, int /*nOutSize*/);
 INT32 create_variables_from_ipses();
 INT32 reset_ipses_from_variables();
 INT32 apply_ipses_from_variables();

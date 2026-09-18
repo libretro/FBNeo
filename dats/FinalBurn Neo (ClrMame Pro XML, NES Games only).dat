@@ -10889,6 +10889,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="jacobselev" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Jacob's Elevator (HB)</description>
+		<year>2026</year>
+		<manufacturer>gamma_correction</manufacturer>
+		<rom name="Jacob's Elevator (2026)(gamma_correction).nes" size="40976" crc="d8bb43f6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="jajamgeke" cloneof="jajamgek" romof="jajamgek" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Jajamaru Gekimaden: Maboroshi no Kinmajou (Hack, English)</description>
@@ -13701,6 +13710,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="marianaseq" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Mariana Sequence, The (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>CGT Games</manufacturer>
+		<rom name="Mariana Sequence, The v1.1(HB) (2026)(CGT Games).nes" size="524304" crc="63307f67"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="marioadventure" cloneof="smb3" romof="smb3" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Mario Adventure (Hack)</description>
@@ -16354,6 +16372,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="owareabapa" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>OWARE: Abapa (HB)</description>
+		<year>2026</year>
+		<manufacturer>Jiucai Baobao</manufacturer>
+		<rom name="OWARE - Abapa (2026)(Jiucai Baobao).nes" size="40976" crc="89983b27"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="powc" cloneof="pow" romof="pow" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>P.O.W. - Prisoners of War (Hack, Spanish v2.0)</description>
@@ -17523,6 +17550,15 @@
 		<year>2019</year>
 		<manufacturer>Piko Interactive</manufacturer>
 		<rom name="Pyramids of Ra (2019)(Piko Interactive).nes" size="393232" crc="0bcee664"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="pyrga" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Pyrga (HB, v1.46)</description>
+		<year>2026</year>
+		<manufacturer>Jiucai Baobao</manufacturer>
+		<rom name="Pyrga v1.46 (2026)(Jiucai Baobao).nes" size="32784" crc="917c1747"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

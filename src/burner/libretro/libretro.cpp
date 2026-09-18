@@ -513,7 +513,7 @@ static int create_variables_from_dipswitches()
 	for (int i = 0; BurnDrvGetDIPInfo(&bdi, i) == 0; i++)
 	{
 		/* 0xFE is the beginning label for a DIP switch entry */
-		/* 0xFD are region DIP switches */
+		/* 0xFD are "fake" DIP switches (region, bios selection, ...) */
 		if ((bdi.nFlags == 0xFE || bdi.nFlags == 0xFD) && bdi.nSetting > 1)
 		{
 			dipswitch_core_options.push_back(dipswitch_core_option());
@@ -3126,8 +3126,6 @@ char* GameDecoration(UINT32 nBurnDrv)
 	nBurnDrvActive = nOldBurnDrv;
 	return szGameDecoration;
 }
-
-#undef TYPES_MAX
 
 // functions from src/burner/misc.cpp
 
