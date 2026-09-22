@@ -4889,6 +4889,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="uchotosm" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Uchotos Micro (HB)</description>
+		<year>2026</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Uchotos Micro (2026)(Inufuto).gg" size="16384" crc="fcb06b02"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ultsoccr" sourcefile="sms/d_sms.cpp">
 		<description>Ultimate Soccer (Euro, Japan, Brazil)</description>
 		<year>1993</year>

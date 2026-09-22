@@ -39,6 +39,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="100boxesp" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>100 Boxes Puzzle (HB)</description>
+		<year>2009</year>
+		<manufacturer>Kyoufu Kawa</manufacturer>
+		<rom name="100 Boxes Puzzle (2009)(Kyoufu Kawa).gba" size="39944" crc="15ed9e65"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="2disnspt" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>2 Disney Games: Disney Sports - Football + Disney Sports - Skateboarding (Europe)</description>
 		<year>200?</year>
@@ -3968,6 +3978,16 @@
 		<year>2005</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="agb-bbkj-0.u1" size="8388608" crc="89b09753"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="bustamove" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Bust-A-Move (HB)</description>
+		<year>2002</year>
+		<manufacturer>Russ Prince</manufacturer>
+		<rom name="Bust-A-Move (2002)(Russ Prince).gba" size="943512" crc="da9dbbb1"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -7996,6 +8016,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="drwleviathan" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Drawing a Leviathan (HB)</description>
+		<year>2024</year>
+		<manufacturer>Screenshake Farm</manufacturer>
+		<rom name="Drawing a Leviathan (2024)(Screenshake Farm).gba" size="9437768" crc="1eb0f64d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="drilldoz" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Drill Dozer (USA)</description>
 		<year>2006</year>
@@ -10994,6 +11024,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="grandprix" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>GBA Grand Prix!! (HB)</description>
+		<year>2024</year>
+		<manufacturer>Dippy0615</manufacturer>
+		<rom name="GBA Grand Prix!! (2024)(Dippy0615).gba" size="874392" crc="bf97bc21"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="gbamovie" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>GBA Movie Player 2 CF (Spain)</description>
 		<year>19??</year>
@@ -11449,6 +11489,16 @@
 		<year>2023-24</year>
 		<manufacturer>Goodboy Galaxy</manufacturer>
 		<rom name="Goodboy Galaxy v1.3 (2023-24)(Goodboy Galaxy).gba" size="33554432" crc="159ff629"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="googledino" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Google Dino Advance (HB, v1.1)</description>
+		<year>2021-25</year>
+		<manufacturer>Ethan Fritz</manufacturer>
+		<rom name="Google Dino Advance v1.1 (2021-25)(Ethan Fritz).gba" size="109084" crc="fdaca282"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -14700,6 +14750,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="cerdagbc" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Hack</comment>
+		<description>Lellenda de la Cerda DX, La: Ed. Charnega - GBC2GBA (Hack, Spanish v2.0)</description>
+		<year>1999</year>
+		<manufacturer>Charnego Translations</manufacturer>
+		<rom name="Lellenda de la Cerda DX, La - Ed. Charnega - GBC2GBA T-Spa v2.0 (1999)(Charnego Translations).gba" size="1124508" crc="4cfd62cb"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="lemnsnckg" cloneof="lemnsnck" romof="lemnsnck" sourcefile="gba/d_gba.cpp">
 		<description>Lemony Snicket - Rätselhafte Ereignisse (Germany)</description>
 		<year>2004</year>
@@ -14759,6 +14819,16 @@
 		<year>2003</year>
 		<manufacturer>THQ</manufacturer>
 		<rom name="razmoket rencontrent les delajungle, les (france).bin" size="4194304" crc="720b7ff2"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="letitrecoil" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Let It Recoil! (HB)</description>
+		<year>2026</year>
+		<manufacturer>Bump Dev</manufacturer>
+		<rom name="Let It Recoil! (2026)(Bump Dev).gba" size="318668" crc="3bcb4a23"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -23893,6 +23963,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="sputterdash" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Sputter Dash! - Chopper (HB)</description>
+		<year>2004</year>
+		<manufacturer>Mike Horgan</manufacturer>
+		<rom name="Sputter Dash! - Chopper (2004)(Mike Horgan).gba" size="295296" crc="286a2498"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="spyhunt" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Spy Hunter (Europe, M5)</description>
 		<year>2002</year>
@@ -25066,6 +25146,16 @@
 		<year>2010</year>
 		<manufacturer>Kingcom</manufacturer>
 		<rom name="Super Robot Wars J T-Eng (2010)(Kingcom).gba" size="16777216" crc="3b3cd715"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="sstarshooter" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Star Shooter Advance (HB)</description>
+		<year>2003</year>
+		<manufacturer>Magic Touch</manufacturer>
+		<rom name="Super Star Shooter Advance (2003)(Magic Touch).gba" size="1048576" crc="79b757fc"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -27315,6 +27405,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="trailblazer" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Trailblazer Advance (HB, v0.9b)</description>
+		<year>2004</year>
+		<manufacturer>Lemoners</manufacturer>
+		<rom name="Trailblazer Advance v0.9b (2004)(Lemoners).gba" size="383072" crc="316f42b5"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="tremblay" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew</comment>
 		<description>Tremblay Island (HB, v1.10)</description>
@@ -27638,6 +27738,16 @@
 		<year>2004</year>
 		<manufacturer>King Records</manufacturer>
 		<rom name="uchuu no stellvia (japan).bin" size="8388608" crc="a00a4530"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="ucityadv" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>uCity Advance (HB, v1.0.3)</description>
+		<year>2021-26</year>
+		<manufacturer>SkyLyrac</manufacturer>
+		<rom name="uCity Advance v1.0.3 (2021-26)(SkyLyrac).gba" size="1933560" crc="f4ec1ad4"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

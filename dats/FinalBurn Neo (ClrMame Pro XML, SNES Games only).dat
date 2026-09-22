@@ -6832,6 +6832,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="firewall" sourcefile="snes/d_snes.cpp">
+		<comment>Homebrew</comment>
+		<description>Firewall (HB)</description>
+		<year>2026</year>
+		<manufacturer>ColPanic</manufacturer>
+		<rom name="Firewall (2026)(ColPanic).sfc" size="524288" crc="c7b83d03"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="firstsamuraie" cloneof="firstsamurai" romof="firstsamurai" sourcefile="snes/d_snes.cpp">
 		<description>First Samurai (Euro)</description>
 		<year>1993</year>
@@ -16533,6 +16542,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="starfoxun" cloneof="starfox" romof="starfox" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Super FX GSU-1 enhancement chip</comment>
+		<description>Star Fox Unleashed (Hack, Preview 1)</description>
+		<year>2026</year>
+		<manufacturer>Ensign Salt</manufacturer>
+		<rom name="Star Fox Unleashed Preview 1 (2026)(Ensign Salt).sfc" size="2097152" crc="aaf4d919"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="staroceante" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, S-DD1 enhancement chip</comment>
 		<description>Star Ocean (Hack, English)</description>
@@ -17886,6 +17904,54 @@
 		<year>1991</year>
 		<manufacturer>Human Entertainment</manufacturer>
 		<rom name="Super Formation Soccer (J)(1991)(Human Entertainment).sfc" size="524288" crc="265afe97"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfsoccer94" cloneof="superfsoccer94fd" romof="superfsoccer94fd" sourcefile="snes/d_snes.cpp">
+		<description>Super Formation Soccer 94 - World Cup Edition (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Human Entertainment</manufacturer>
+		<rom name="Super Formation Soccer 94 - World Cup Edition (J)(1994)(Human Entertainment).sfc" size="1048576" crc="d547c5d2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfsoccer94fd" sourcefile="snes/d_snes.cpp">
+		<description>Super Formation Soccer 94 - World Cup Final Data (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Human Entertainment</manufacturer>
+		<rom name="Super Formation Soccer 94 - World Cup Final Data (J)(1994)(Human Entertainment).sfc" size="1048576" crc="bf1f2e16"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfsoccer95" sourcefile="snes/d_snes.cpp">
+		<description>Super Formation Soccer 95 - della Serie A (Japan)</description>
+		<year>1995</year>
+		<manufacturer>Human Entertainment</manufacturer>
+		<rom name="Super Formation Soccer 95 - della Serie A (J)(1995)(Human Entertainment).sfc" size="1572864" crc="798352bf"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfsoccer95x" cloneof="superfsoccer95" romof="superfsoccer95" sourcefile="snes/d_snes.cpp">
+		<description>Super Formation Soccer 95 - della Serie A - UCC Xaqua Version (Japan)</description>
+		<year>1995</year>
+		<manufacturer>Human Entertainment</manufacturer>
+		<rom name="Super Formation Soccer 95 - della Serie A - UCC Xaqua Version (J)(1995)(Human Entertainment).sfc" size="1572864" crc="1cf83bc2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfsoccer96" sourcefile="snes/d_snes.cpp">
+		<description>Super Formation Soccer 96 - World Club Edition (Japan)</description>
+		<year>1996</year>
+		<manufacturer>Human Entertainment</manufacturer>
+		<rom name="Super Formation Soccer 96 - World Club Edition (J)(1996)(Human Entertainment).sfc" size="1572864" crc="f42272cb"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superfsoccer2" sourcefile="snes/d_snes.cpp">
+		<description>Super Formation Soccer II (Japan)</description>
+		<year>1993</year>
+		<manufacturer>Human Entertainment</manufacturer>
+		<rom name="Super Formation Soccer II (J)(1993)(Human Entertainment).sfc" size="524288" crc="74c75074"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20348,6 +20414,15 @@
 		<year>1992</year>
 		<manufacturer>Sofel</manufacturer>
 		<rom name="TKO Super Championship Boxing (U)(1992)(Sofel).sfc" size="524288" crc="fd4af462"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tmntsf2t" cloneof="sf2turbo" romof="sf2turbo" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>TMNT x Street Fighter II Turbo (Hack, v29)</description>
+		<year>2026</year>
+		<manufacturer>RyanFox.eth</manufacturer>
+		<rom name="TMNT x Street Fighter II Turbo v29 (2026)(RyanFox.eth).sfc" size="4194304" crc="094ddc93"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

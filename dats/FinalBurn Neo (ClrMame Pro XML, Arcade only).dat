@@ -50816,6 +50816,38 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="exedexesrt" cloneof="exedexes" romof="exedexes" sourcefile="pre90s/d_exedexes.cpp">
+		<comment>Hack</comment>
+		<description>Exed Exes (Recreation of location test version, Hack, 2026-09-21)</description>
+		<year>2026</year>
+		<manufacturer>zeroco</manufacturer>
+		<rom name="rt_11m_ee04.bin" size="16384" crc="e1b7ee12"/>
+		<rom name="rt_10m_ee03.bin" size="16384" crc="ceef62f6"/>
+		<rom name="rt_09m_ee02.bin" size="16384" crc="9a93c1c2"/>
+		<rom name="11e_ee01.bin" merge="11e_ee01.bin" size="16384" crc="73cdf3b2"/>
+		<rom name="05c_ee00.bin" merge="05c_ee00.bin" size="8192" crc="cadb75bd"/>
+		<rom name="h01_ee08.bin" merge="h01_ee08.bin" size="16384" crc="96a65c1d"/>
+		<rom name="a03_ee06.bin" merge="a03_ee06.bin" size="16384" crc="6039bdd1"/>
+		<rom name="a02_ee05.bin" merge="a02_ee05.bin" size="16384" crc="b32d8252"/>
+		<rom name="j11_ee10.bin" merge="j11_ee10.bin" size="16384" crc="bc83e265"/>
+		<rom name="j12_ee11.bin" merge="j12_ee11.bin" size="16384" crc="0e0f300d"/>
+		<rom name="rt_c01_ee07.bin" size="16384" crc="3b6f6490"/>
+		<rom name="h04_ee09.bin" merge="h04_ee09.bin" size="8192" crc="6057c907"/>
+		<rom name="02d_e-02.bin" merge="02d_e-02.bin" size="256" crc="8d0d5935"/>
+		<rom name="03d_e-03.bin" merge="03d_e-03.bin" size="256" crc="d3c17efc"/>
+		<rom name="04d_e-04.bin" merge="04d_e-04.bin" size="256" crc="58ba964c"/>
+		<rom name="06f_e-05.bin" merge="06f_e-05.bin" size="256" crc="35a03579"/>
+		<rom name="l04_e-10.bin" merge="l04_e-10.bin" size="256" crc="1dfad87a"/>
+		<rom name="c04_e-07.bin" merge="c04_e-07.bin" size="256" crc="850064e0"/>
+		<rom name="l09_e-11.bin" merge="l09_e-11.bin" size="256" crc="2bb68710"/>
+		<rom name="l10_e-12.bin" merge="l10_e-12.bin" size="256" crc="173184ef"/>
+		<rom name="06l_e-06.bin" merge="06l_e-06.bin" size="256" crc="712ac508"/>
+		<rom name="k06_e-08.bin" merge="k06_e-08.bin" size="256" crc="0eaf5158"/>
+		<rom name="l03_e-09.bin" merge="l03_e-09.bin" size="256" crc="0d968558"/>
+		<rom name="03e_e-01.bin" merge="03e_e-01.bin" size="32" crc="1acee376"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="exedexes" sourcefile="pre90s/d_exedexes.cpp">
 		<description>Exed Exes</description>
 		<year>1985</year>

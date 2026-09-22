@@ -4576,8 +4576,8 @@
 		<comment>Homebrew</comment>
 		<description>Crabbie Attack! (HB)</description>
 		<year>2023</year>
-		<manufacturer>TurtleRescueNES</manufacturer>
-		<rom name="Crabbie Attack! (2023)(TurtleRescueNES).nes" size="524304" crc="9838a3d0"/>
+		<manufacturer>Joe Sherman</manufacturer>
+		<rom name="Crabbie Attack! (2023)(Joe Sherman).nes" size="524304" crc="9838a3d0"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -16374,10 +16374,10 @@
 	</game>
 	<game name="owareabapa" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>OWARE: Abapa (HB)</description>
+		<description>OWARE: Abapa (HB, v2.30)</description>
 		<year>2026</year>
 		<manufacturer>Jiucai Baobao</manufacturer>
-		<rom name="OWARE - Abapa (2026)(Jiucai Baobao).nes" size="40976" crc="89983b27"/>
+		<rom name="OWARE - Abapa v2.30 (2026)(Jiucai Baobao).nes" size="40976" crc="6ca55989"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -16512,6 +16512,15 @@
 		<year>2026</year>
 		<manufacturer>Musikai</manufacturer>
 		<rom name="Pacifister, The (2026)(Musikai).nes" size="524304" crc="c0763d59"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="packet" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Packet (HB)</description>
+		<year>2026</year>
+		<manufacturer>Joe Sherman</manufacturer>
+		<rom name="Packet (2026)(Joe Sherman).nes" size="524304" crc="f437e3b4"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -17555,10 +17564,10 @@
 	</game>
 	<game name="pyrga" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Pyrga (HB, v1.46)</description>
+		<description>Pyrga (HB, v1.52)</description>
 		<year>2026</year>
 		<manufacturer>Jiucai Baobao</manufacturer>
-		<rom name="Pyrga v1.46 (2026)(Jiucai Baobao).nes" size="32784" crc="917c1747"/>
+		<rom name="Pyrga v1.52 (2026)(Jiucai Baobao).nes" size="32784" crc="a97601c5"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
