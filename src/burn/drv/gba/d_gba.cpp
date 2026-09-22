@@ -55660,6 +55660,25 @@ struct BurnDriver BurnDrvgba_tomatote = {
 // ----------------------------------------
 
 
+// 100 Boxes Puzzle (HB)
+
+static struct BurnRomInfo gba_100boxespRomDesc[] = {
+	{ "100 Boxes Puzzle (2009)(Kyoufu Kawa).gba",	39944,	0x15ed9e65,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_100boxesp, gba_100boxesp, gba_gba)
+STD_ROM_FN(gba_100boxesp)
+
+struct BurnDriver BurnDrvgba_100boxesp = {
+	"gba_100boxesp", NULL, "gba_gba", NULL, "2009",
+	"100 Boxes Puzzle (HB)\0", NULL, "Kyoufu Kawa", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_PUZZLE, 0,
+	GbaGetZipName, gba_100boxespRomInfo, gba_100boxespRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // 2048 (HB, v1.3.1)
 
 static struct BurnRomInfo gba_2048RomDesc[] = {
@@ -56187,6 +56206,25 @@ struct BurnDriver BurnDrvgba_bugtris = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_PUZZLE, 0,
 	GbaGetZipName, gba_bugtrisRomInfo, gba_bugtrisRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
+// Bust-A-Move (HB)
+
+static struct BurnRomInfo gba_bustamoveRomDesc[] = {
+	{ "Bust-A-Move (2002)(Russ Prince).gba",	943512,	0xda9dbbb1,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_bustamove, gba_bustamove, gba_gba)
+STD_ROM_FN(gba_bustamove)
+
+struct BurnDriver BurnDrvgba_bustamove = {
+	"gba_bustamove", NULL, "gba_gba", NULL, "2002",
+	"Bust-A-Move (HB)\0", NULL, "Russ Prince", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_PUZZLE, 0,
+	GbaGetZipName, gba_bustamoveRomInfo, gba_bustamoveRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
@@ -56837,6 +56875,25 @@ struct BurnDriver BurnDrvgba_doompctc = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
+// Drawing a Leviathan (HB)
+
+static struct BurnRomInfo gba_drwleviathanRomDesc[] = {
+	{ "Drawing a Leviathan (2024)(Screenshake Farm).gba",	9437768,	0x1eb0f64d,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_drwleviathan, gba_drwleviathan, gba_gba)
+STD_ROM_FN(gba_drwleviathan)
+
+struct BurnDriver BurnDrvgba_drwleviathan = {
+	"gba_drwleviathan", NULL, "gba_gba", NULL, "2024",
+	"Drawing a Leviathan (HB)\0", NULL, "Screenshake Farm", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION, 0,
+	GbaGetZipName, gba_drwleviathanRomInfo, gba_drwleviathanRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // Dungeon Tactics Advance (HB)
 
 static struct BurnRomInfo gba_dtaRomDesc[] = {
@@ -57179,6 +57236,25 @@ struct BurnDriver BurnDrvgba_fzerovvz = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
+// GBA Grand Prix!! (HB)
+
+static struct BurnRomInfo gba_grandprixRomDesc[] = {
+	{ "GBA Grand Prix!! (2024)(Dippy0615).gba",	874392,	0xbf97bc21,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_grandprix, gba_grandprix, gba_gba)
+STD_ROM_FN(gba_grandprix)
+
+struct BurnDriver BurnDrvgba_grandprix = {
+	"gba_grandprix", NULL, "gba_gba", NULL, "2024",
+	"GBA Grand Prix!! (HB)\0", NULL, "Dippy0615", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_RACING, 0,
+	GbaGetZipName, gba_grandprixRomInfo, gba_grandprixRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // Geekdash (HB)
 
 static struct BurnRomInfo gba_geekdashRomDesc[] = {
@@ -57388,6 +57464,25 @@ struct BurnDriver BurnDrvgba_goodboy = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
+// Google Dino Advance (HB, v1.1)
+
+static struct BurnRomInfo gba_googledinoRomDesc[] = {
+	{ "Google Dino Advance v1.1 (2021-25)(Ethan Fritz).gba",	109084,	0xfdaca282,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_googledino, gba_googledino, gba_gba)
+STD_ROM_FN(gba_googledino)
+
+struct BurnDriver BurnDrvgba_googledino = {
+	"gba_googledino", NULL, "gba_gba", NULL, "2021-25",
+	"Google Dino Advance (HB, v1.1)\0", NULL, "Ethan Fritz", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION, 0,
+	GbaGetZipName, gba_googledinoRomInfo, gba_googledinoRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // GORF (HB)
 
 static struct BurnRomInfo gba_gorfRomDesc[] = {
@@ -57557,6 +57652,25 @@ struct BurnDriver BurnDrvgba_iridion2pk = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
+// Jurl (HB, v1.2a)
+
+static struct BurnRomInfo gba_jurlRomDesc[] = {
+	{ "Jurl v1.2a (2025)(Tonsomo Entertainment).gba",	964716,	0x67d03d52,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_jurl, gba_jurl, gba_gba)
+STD_ROM_FN(gba_jurl)
+
+struct BurnDriver BurnDrvgba_jurl = {
+	"gba_jurl", NULL, "gba_gba", NULL, "2025",
+	"Jurl (HB, v1.2a)\0", NULL, "Tonsomo Entertainment", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION, 0,
+	GbaGetZipName, gba_jurlRomInfo, gba_jurlRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // Kien (World)
 static struct BurnRomInfo gba_kieni8RomDesc[] = {
 	{ "Kien (World)(2024)(Incube8 Games).gba",	8350032,	0x5a64b473,	BRF_ESS | BRF_PRG },
@@ -57575,21 +57689,21 @@ struct BurnDriver BurnDrvgba_kieni8 = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
-// Jurl (HB, v1.2a)
+// Let It Recoil! (HB)
 
-static struct BurnRomInfo gba_jurlRomDesc[] = {
-	{ "Jurl v1.2a (2025)(Tonsomo Entertainment).gba",	964716,	0x67d03d52,	BRF_ESS | BRF_PRG },
+static struct BurnRomInfo gba_letitrecoilRomDesc[] = {
+	{ "Let It Recoil! (2026)(Bump Dev).gba",	318668,	0x3bcb4a23,	BRF_ESS | BRF_PRG },
 };
 
-STDROMPICKEXT(gba_jurl, gba_jurl, gba_gba)
-STD_ROM_FN(gba_jurl)
+STDROMPICKEXT(gba_letitrecoil, gba_letitrecoil, gba_gba)
+STD_ROM_FN(gba_letitrecoil)
 
-struct BurnDriver BurnDrvgba_jurl = {
-	"gba_jurl", NULL, "gba_gba", NULL, "2025",
-	"Jurl (HB, v1.2a)\0", NULL, "Tonsomo Entertainment", "Game Boy Advance",
+struct BurnDriver BurnDrvgba_letitrecoil = {
+	"gba_letitrecoil", NULL, "gba_gba", NULL, "2026",
+	"Let It Recoil! (HB)\0", NULL, "Bump Dev", "Game Boy Advance",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION, 0,
-	GbaGetZipName, gba_jurlRomInfo, gba_jurlRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION | GBF_SHOOT, 0,
+	GbaGetZipName, gba_letitrecoilRomInfo, gba_letitrecoilRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
@@ -58484,6 +58598,25 @@ struct BurnDriver BurnDrvgba_stacktower = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
+// Sputter Dash! - Chopper (HB)
+
+static struct BurnRomInfo gba_sputterdashRomDesc[] = {
+	{ "Sputter Dash! - Chopper (2004)(Mike Horgan).gba",	295296,	0x286a2498,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_sputterdash, gba_sputterdash, gba_gba)
+STD_ROM_FN(gba_sputterdash)
+
+struct BurnDriver BurnDrvgba_sputterdash = {
+	"gba_sputterdash", NULL, "gba_gba", NULL, "2004",
+	"Sputter Dash! - Chopper (HB)\0", NULL, "Mike Horgan", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION, 0,
+	GbaGetZipName, gba_sputterdashRomInfo, gba_sputterdashRomName, NULL, NULL, NULL, NULL, GbaInputInfo, CusDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // Sys*Crusher (HB)
 
 static struct BurnRomInfo gba_syscrusherRomDesc[] = {
@@ -58518,6 +58651,25 @@ struct BurnDriver BurnDrvgba_sma4ph = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_PLATFORM, 0,
 	GbaGetZipName, gba_sma4phRomInfo, gba_sma4phRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
+// Super Star Shooter Advance (HB)
+
+static struct BurnRomInfo gba_sstarshooterRomDesc[] = {
+	{ "Super Star Shooter Advance (2003)(Magic Touch).gba",	1048576,	0x79b757fc,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_sstarshooter, gba_sstarshooter, gba_gba)
+STD_ROM_FN(gba_sstarshooter)
+
+struct BurnDriver BurnDrvgba_sstarshooter = {
+	"gba_sstarshooter", NULL, "gba_gba", NULL, "2003",
+	"Super Star Shooter Advance (HB)\0", NULL, "Magic Touch", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_VERSHOOT, 0,
+	GbaGetZipName, gba_sstarshooterRomInfo, gba_sstarshooterRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
@@ -58693,6 +58845,25 @@ struct BurnDriver BurnDrvgba_tremblay = {
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
 
+// Trailblazer Advance (HB, v0.9b)
+
+static struct BurnRomInfo gba_trailblazerRomDesc[] = {
+	{ "Trailblazer Advance v0.9b (2004)(Lemoners).gba",	383072,	0x316f42b5,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_trailblazer, gba_trailblazer, gba_gba)
+STD_ROM_FN(gba_trailblazer)
+
+struct BurnDriver BurnDrvgba_trailblazer = {
+	"gba_trailblazer", NULL, "gba_gba", NULL, "2004",
+	"Trailblazer Advance (HB, v0.9b)\0", NULL, "Lemoners", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_RACING, 0,
+	GbaGetZipName, gba_trailblazerRomInfo, gba_trailblazerRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
 // Trogdor! (HB, v3.1)
 
 static struct BurnRomInfo gba_trogdorRomDesc[] = {
@@ -58727,6 +58898,25 @@ struct BurnDriver BurnDrvgba_trun = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION, 0,
 	GbaGetZipName, gba_trunRomInfo, gba_trunRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
+// µCity Advance (HB, v1.0.3)
+
+static struct BurnRomInfo gba_ucityadvRomDesc[] = {
+	{ "uCity Advance v1.0.3 (2021-26)(SkyLyrac).gba",	1933560,	0xf4ec1ad4,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_ucityadv, gba_ucityadv, gba_gba)
+STD_ROM_FN(gba_ucityadv)
+
+struct BurnDriver BurnDrvgba_ucityadv = {
+	"gba_ucityadv", NULL, "gba_gba", NULL, "2021-26",
+	"uCity Advance (HB, v1.0.3)\0", NULL, "SkyLyrac", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_SIM, 0,
+	GbaGetZipName, gba_ucityadvRomInfo, gba_ucityadvRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
@@ -59075,6 +59265,25 @@ struct BurnDriver BurnDrvgba_korodicegb = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_PUZZLE, 0,
 	GbaGetZipName, gba_korodicegbRomInfo, gba_korodicegbRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
+	GBA_WIDTH, GBA_HEIGHT, 3, 2
+};
+
+// Lellenda de la Cerda DX, La: Ed. Charnega - GBC2GBA (Hack, Spanish v2.0)
+
+static struct BurnRomInfo gba_cerdagbcRomDesc[] = {
+	{ "Lellenda de la Cerda DX, La - Ed. Charnega - GBC2GBA T-Spa v2.0 (1999)(Charnego Translations).gba",	1124508,	0x4cfd62cb,	BRF_ESS | BRF_PRG },
+};
+
+STDROMPICKEXT(gba_cerdagbc, gba_cerdagbc, gba_gba)
+STD_ROM_FN(gba_cerdagbc)
+
+struct BurnDriver BurnDrvgba_cerdagbc = {
+	"gba_cerdagbc", NULL, "gba_gba", NULL, "1999",
+	"Lellenda de la Cerda DX, La: Ed. Charnega - GBC2GBA (Hack, Spanish v2.0)\0", NULL, "Charnego Translations", "Game Boy Advance",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HACK, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_GBA, GBF_ACTION | GBF_ADV, 0,
+	GbaGetZipName, gba_cerdagbcRomInfo, gba_cerdagbcRomName, NULL, NULL, NULL, NULL, GbaInputInfo, GbaDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0,
 	GBA_WIDTH, GBA_HEIGHT, 3, 2
 };
