@@ -399,6 +399,8 @@ DRV		BurnDrvabscam;
 DRV		BurnSpecabusimpr;
 DRV		BurnDrvMSX_abusimbel;
 DRV		BurnSpecabusimprd;
+DRV		BurnSpecAbydosen;
+DRV		BurnSpecAbydoses;
 DRV		BurnDrvAbyssali;
 DRV		BurnDrvmd_abyssal;
 DRV		BurnDrvsnes_Accelebridte;
@@ -680,11 +682,13 @@ DRV		BurnDrvMSX_afterthewar1;
 DRV		BurnSpecafterthewar1;
 DRV		BurnDrvMSX_afterthewar2;
 DRV		BurnSpecafterthewar2;
+DRV		BurnDrvAfterwar;
 DRV		BurnDrvMSX_afteroids;
 DRV		BurnSpecafteroids;
 DRV		BurnDrvgba_agassi;
 DRV		BurnDrvgba_agassiu;
 DRV		BurnSpecAgathadv;
+DRV		BurnSpecAgathadvee;
 DRV		BurnSpecAgathadv48;
 DRV		BurnSpecAgathadvh;
 DRV		BurnDrvgba_agecart1;
@@ -2565,7 +2569,6 @@ DRV		BurnDrvgba_bigmutha;
 DRV		BurnDrvgba_bigmuthau;
 DRV		BurnDrvnes_bignosfreout;
 DRV		BurnDrvnes_bignoscav;
-DRV		BurnSpecBignoseamericanadv;
 DRV		BurnDrvBigrun;
 DRV		BurnDrvBigrunu;
 DRV		BurnDrvsnes_Bigskytroope;
@@ -2581,6 +2584,7 @@ DRV		BurnDrvmd_bigfd;
 DRV		BurnSpecBigfoot;
 DRV		BurnDrvnes_bigfoot;
 DRV		BurnDrvgba_larryboy;
+DRV		BurnSpecBignoseusaadv;
 DRV		BurnSpecBigotudo;
 DRV		BurnDrvsnes_Bikedaisuki;
 DRV		BurnDrvsnes_Bikermicee;
@@ -6486,7 +6490,6 @@ DRV		BurnSpecDizzy2ce23en;
 DRV		BurnSpecDizzy2ce23ru;
 DRV		BurnSpecDizzy2ex23e;
 DRV		BurnSpecDizzy2es23r;
-DRV		BurnSpecdizzy2ay;
 DRV		BurnSpecdizzy2;
 DRV		BurnSpecdizzy2ru;
 DRV		BurnSpecdizzy3;
@@ -14070,6 +14073,8 @@ DRV		BurnDrvsnes_Lufia2;
 DRV		BurnDrvgba_lro;
 DRV		BurnDrvgba_luma;
 DRV		BurnSpecLumascii;
+DRV		BurnSpecLumizx128;
+DRV		BurnSpecLumizx48;
 DRV		BurnSpecLunacrabs;
 DRV		BurnDrvgg_lunare;
 DRV		BurnDrvMSX_lunarbal;
@@ -22934,7 +22939,7 @@ DRV		BurnDrvSpidmanu;
 DRV		BurnDrvSpidman;
 DRV		BurnDrvSpidermi;
 DRV		BurnSpecSpidermanco;
-DRV		BurnSpecSpikeintransylvania;
+DRV		BurnSpecSpiketransyl;
 DRV		BurnSpecSpikerbt;
 DRV		BurnDrvSpinmast;
 DRV		BurnDrvpce_spinpair;
@@ -23351,6 +23356,9 @@ DRV		BurnDrvmd_steeltalp;
 DRV		BurnDrvsnes_Steeltalonsfr;
 DRV		BurnSpecSteg;
 DRV		BurnDrvnes_steinsgate;
+DRV		BurnSpecStela;
+DRV		BurnSpecStela2en;
+DRV		BurnSpecStela2es;
 DRV		BurnDrvsms_stella;
 DRV		BurnDrvMSX_stellarburrow;
 DRV		BurnDrvMSX_step;
@@ -27466,6 +27474,8 @@ DRV		BurnDrvgba_vip;
 DRV		BurnSpecVaderetro;
 DRV		BurnSpecVaderetroen;
 DRV		BurnSpecVaderetroes;
+DRV		BurnSpecVaderetro2en;
+DRV		BurnSpecVaderetro2es;
 DRV		BurnDrvsnes_Valdisere;
 DRV		BurnDrvmd_valiss;
 DRV		BurnDrvmd_valis;
@@ -29743,6 +29753,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecabusimpr,			// Abu Simbel Profanation (English) (48K)
 	&BurnDrvMSX_abusimbel,		// Abu Simbel Profanation (Euro, Spanish)
 	&BurnSpecabusimprd,			// Abu Simbel Profanation (Spanish) (48K)
+	&BurnSpecAbydosen,			// ABYDOS (English) (48K) (HB)
+	&BurnSpecAbydoses,			// ABYDOS (Spanish) (48K) (HB)
 	&BurnDrvAbyssali,			// Abyssal Infants (HB)
 	&BurnDrvmd_abyssal,			// Abyssal Infants (HB)
 	&BurnDrvsnes_Accelebridte,	// Accele Brid (Hack, English)
@@ -30024,11 +30036,13 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecafterthewar1,		// After the War - Part 1 (Spanish) (48K)
 	&BurnDrvMSX_afterthewar2,	// After the War - Part 2 (Euro, Spanish)
 	&BurnSpecafterthewar2,		// After the War - Part 2 (Spanish) (48K)
+	&BurnDrvAfterwar,			// After the War
 	&BurnDrvMSX_afteroids,		// Afteroids (Euro, Spanish)
 	&BurnSpecafteroids,			// Afteroids (Spanish) (48K)
 	&BurnDrvgba_agassi,			// Agassi Tennis Generation (Europe)
 	&BurnDrvgba_agassiu,		// Agassi Tennis Generation (USA)
 	&BurnSpecAgathadv,			// Agatha Adventure (128K) (HB)
+	&BurnSpecAgathadvee,		// Agatha Adventure (128K) (HB, v2)
 	&BurnSpecAgathadv48,		// Agatha Adventure (48K) (HB)
 	&BurnSpecAgathadvh,			// Agatha Adventure - hard-mode (128K) (HB)
 	&BurnDrvgba_agecart1,		// AGB Aging Cartridge (World, version 1.0)
@@ -31909,7 +31923,6 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_bigmuthau,		// Big Mutha Truckers (USA)
 	&BurnDrvnes_bignosfreout,	// Big Nose Freaks Out (USA)
 	&BurnDrvnes_bignoscav,		// Big Nose the Caveman (USA)
-	&BurnSpecBignoseamericanadv,// Big Nose's American Adventure (48K)
 	&BurnDrvBigrun,				// Big Run (11th Rallye version, Europe?)
 	&BurnDrvBigrunu,			// Big Run (11th Rallye version, US?)
 	&BurnDrvsnes_Bigskytroope,	// Big Sky Trooper (Euro)
@@ -31925,6 +31938,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecBigfoot,			// Bigfoot (48K)
 	&BurnDrvnes_bigfoot,		// Bigfoot (USA)
 	&BurnDrvgba_larryboy,		// BigIdea's VeggieTales - LarryBoy and the Bad Apple (USA)
+	&BurnSpecBignoseusaadv,		// Bignose's USA Adventure ~ Bignose in the USA (48K)
 	&BurnSpecBigotudo,			// Bigotudo, El (128K) (HB, v1.4)
 	&BurnDrvsnes_Bikedaisuki,	// Bike Daisuki! Hashiriya Tamashii (Japan)
 	&BurnDrvsnes_Bikermicee,	// Biker Mice from Mars (Euro)
@@ -35830,10 +35844,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecDizzy2ce23ru,		// Dizzy II: Treasure Island - Classic Edition 2023 (Russian) (128K) (Hack, v1.4)
 	&BurnSpecDizzy2ex23e,		// Dizzy II: Treasure Island - Extended Edition 2023 (English) (128K) (Hack, v1.0d)
 	&BurnSpecDizzy2es23r,		// Dizzy II: Treasure Island - Extended Edition 2023 (Russian) (128K) (Hack, v1.0d)
-	&BurnSpecdizzy2ay,			// Dizzy II: Treasure Island Dizzy (128K)
-	&BurnSpecdizzy2,			// Dizzy II: Treasure Island Dizzy (48K)
-	&BurnSpecdizzy2ru,			// Dizzy II: Treasure Island Dizzy (Russian) (128K) (Hack)
-	&BurnSpecdizzy3,			// Dizzy III: Fantasy World Dizzy (128K)
+	&BurnSpecdizzy2,			// Dizzy II: Treasure Island Dizzy (48K-128K)
+	&BurnSpecdizzy2ru,			// Dizzy II: Treasure Island Dizzy (Russian) (48K-128K) (Hack)
+	&BurnSpecdizzy3,			// Dizzy III: Fantasy World Dizzy (48K-128K)
 	&BurnSpecdizzy3ru,			// Dizzy III: Fantasy World Dizzy (Russian) (128K) (Hack)
 	&BurnSpecDizzy3ce23,		// Dizzy III: Fantasy World Dizzy - Classic Edition 2023 (English) (128K) (Hack)
 	&BurnSpecDizzy3ce23ru,		// Dizzy III: Fantasy World Dizzy - Classic Edition 2023 (Russian) (128K) (Hack)
@@ -43414,6 +43427,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_lro,			// Luggage Retrieval Officer (HB)
 	&BurnDrvgba_luma,			// Luma (HB)
 	&BurnSpecLumascii,			// LumASCII (48K) (HB)
+	&BurnSpecLumizx128,			// Lumines ZX (128K) (HB)
+	&BurnSpecLumizx48,			// Lumines ZX (48K) (HB)
 	&BurnSpecLunacrabs,			// Luna Crabs (16K)
 	&BurnDrvgg_lunare,			// Lunar - Sanposuru Gakuen (Hack, English)
 	&BurnDrvMSX_lunarbal,		// Lunar Ball (Japan)
@@ -52278,7 +52293,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvSpidman,			// Spider-Man: The Videogame (World)
 	&BurnDrvSpidermi,			// Spiderman (FMV Demo)
 	&BurnSpecSpidermanco,		// Spiderman: La Ciudad a Oscuras (Spanish) (128K) (HB)
-	&BurnSpecSpikeintransylvania,// Spike in Transylvania (128K)
+	&BurnSpecSpiketransyl,		// Spike in Transylvania (48K-128K)
 	&BurnSpecSpikerbt,			// Spiker - Basic Training (128K) (HB)
 	&BurnDrvSpinmast,			// Spin Master / Miracle Adventure
 	&BurnDrvpce_spinpair,		// Spin Pair (Japan)
@@ -52695,6 +52710,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Steeltalonsfr,	// Steel Talons - FastROM (Hack)
 	&BurnSpecSteg,				// Steg the Slug (48K-128K)
 	&BurnDrvnes_steinsgate,		// Steins Gate (HB)
+	&BurnSpecStela,				// Stela (48K) (HB)
+	&BurnSpecStela2en,			// Stela II (English) (48K) (HB)
+	&BurnSpecStela2es,			// Stela II (Spanish) (48K) (HB)
 	&BurnDrvsms_stella,			// Stella in Adventure World (GlobalHack)
 	&BurnDrvMSX_stellarburrow,	// Stellar Burrow (HB)
 	&BurnDrvMSX_step,			// Step (HB, v1.2)
@@ -56810,6 +56828,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecVaderetro,			// Vade Retro (48K-128K) (HB)
 	&BurnSpecVaderetroen,		// Vade Retro (J.B.G.V.) (English) (48K) (HB)
 	&BurnSpecVaderetroes,		// Vade Retro (J.B.G.V.) (Spanish) (48K) (HB)
+	&BurnSpecVaderetro2en,		// Vade Retro II (J.B.V.G.) (English) (48K) (HB)
+	&BurnSpecVaderetro2es,		// Vade Retro II (J.B.V.G.) (Spanish) (48K) (HB)
 	&BurnDrvsnes_Valdisere,		// Val d'Isere Championship (Euro, Rev. 1)
 	&BurnDrvmd_valiss,			// Valis (Hack, Spanish v2.0)
 	&BurnDrvmd_valis,			// Valis (USA)
@@ -59085,6 +59105,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_abusimpr", "spectrum/d_spectrum.cpp"},
 	{ "msx_abusimbel", "msx/d_msx.cpp"},
 	{ "spec_abusimprd", "spectrum/d_spectrum.cpp"},
+	{ "spec_abydosen", "spectrum/d_spectrum.cpp"},
+	{ "spec_abydoses", "spectrum/d_spectrum.cpp"},
 	{ "abyssali", "neogeo/d_neogeo.cpp"},
 	{ "md_abyssal", "megadrive/d_megadrive.cpp"},
 	{ "snes_accelebridte", "snes/d_snes.cpp"},
@@ -59366,11 +59388,13 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_afterthewar1", "spectrum/d_spectrum.cpp"},
 	{ "msx_afterthewar2", "msx/d_msx.cpp"},
 	{ "spec_afterthewar2", "spectrum/d_spectrum.cpp"},
+	{ "afterwar", "pst90s/d_megaphx.cpp"},
 	{ "msx_afteroids", "msx/d_msx.cpp"},
 	{ "spec_afteroids", "spectrum/d_spectrum.cpp"},
 	{ "gba_agassi", "gba/d_gba.cpp"},
 	{ "gba_agassiu", "gba/d_gba.cpp"},
 	{ "spec_agathadv", "spectrum/d_spectrum.cpp"},
+	{ "spec_agathadvee", "spectrum/d_spectrum.cpp"},
 	{ "spec_agathadv48", "spectrum/d_spectrum.cpp"},
 	{ "spec_agathadvh", "spectrum/d_spectrum.cpp"},
 	{ "gba_agecart1", "gba/d_gba.cpp"},
@@ -61239,7 +61263,6 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gba_bigmuthau", "gba/d_gba.cpp"},
 	{ "nes_bignosfreout", "nes/d_nes.cpp"},
 	{ "nes_bignoscav", "nes/d_nes.cpp"},
-	{ "spec_bignoseamericanadv", "spectrum/d_spectrum.cpp"},
 	{ "bigrun", "pst90s/d_cischeat.cpp"},
 	{ "bigrunu", "pst90s/d_cischeat.cpp"},
 	{ "snes_bigskytroope", "snes/d_snes.cpp"},
@@ -61255,6 +61278,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_bigfoot", "spectrum/d_spectrum.cpp"},
 	{ "nes_bigfoot", "nes/d_nes.cpp"},
 	{ "gba_larryboy", "gba/d_gba.cpp"},
+	{ "spec_bignoseusaadv", "spectrum/d_spectrum.cpp"},
 	{ "spec_bigotudo", "spectrum/d_spectrum.cpp"},
 	{ "snes_bikedaisuki", "snes/d_snes.cpp"},
 	{ "snes_bikermicee", "snes/d_snes.cpp"},
@@ -65136,7 +65160,6 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_dizzy2ce23ru", "spectrum/d_spectrum.cpp"},
 	{ "spec_dizzy2ex23e", "spectrum/d_spectrum.cpp"},
 	{ "spec_dizzy2ex23r", "spectrum/d_spectrum.cpp"},
-	{ "spec_dizzy2ay", "spectrum/d_spectrum.cpp"},
 	{ "spec_dizzy2", "spectrum/d_spectrum.cpp"},
 	{ "spec_dizzy2ru", "spectrum/d_spectrum.cpp"},
 	{ "spec_dizzy3", "spectrum/d_spectrum.cpp"},
@@ -72672,6 +72695,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gba_lro", "gba/d_gba.cpp"},
 	{ "gba_luma", "gba/d_gba.cpp"},
 	{ "spec_lumascii", "spectrum/d_spectrum.cpp"},
+	{ "spec_lumizx128", "spectrum/d_spectrum.cpp"},
+	{ "spec_lumizx48", "spectrum/d_spectrum.cpp"},
 	{ "spec_lunacrabs", "spectrum/d_spectrum.cpp"},
 	{ "gg_lunare", "sms/d_sms.cpp"},
 	{ "msx_lunarbal", "msx/d_msx.cpp"},
@@ -81476,7 +81501,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spidman", "sega/d_segas32.cpp"},
 	{ "spidermi", "neogeo/d_neogeo.cpp"},
 	{ "spec_spidermanco", "spectrum/d_spectrum.cpp"},
-	{ "spec_spikeintransylvania", "spectrum/d_spectrum.cpp"},
+	{ "spec_spiketransyl", "spectrum/d_spectrum.cpp"},
 	{ "spec_spikerbt", "spectrum/d_spectrum.cpp"},
 	{ "spinmast", "neogeo/d_neogeo.cpp"},
 	{ "pce_spinpair", "pce/d_pce.cpp"},
@@ -81893,6 +81918,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "snes_steeltalonsfr", "snes/d_snes.cpp"},
 	{ "spec_steg", "spectrum/d_spectrum.cpp"},
 	{ "nes_steinsgate", "nes/d_nes.cpp"},
+	{ "spec_stela", "spectrum/d_spectrum.cpp"},
+	{ "spec_stela2en", "spectrum/d_spectrum.cpp"},
+	{ "spec_stela2es", "spectrum/d_spectrum.cpp"},
 	{ "sms_stella", "sms/d_sms.cpp"},
 	{ "msx_stellarburrow", "msx/d_msx.cpp"},
 	{ "msx_step", "msx/d_msx.cpp"},
@@ -85968,6 +85996,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_vaderetro", "spectrum/d_spectrum.cpp"},
 	{ "spec_vaderetroen", "spectrum/d_spectrum.cpp"},
 	{ "spec_vaderetroes", "spectrum/d_spectrum.cpp"},
+	{ "spec_vaderetro2en", "spectrum/d_spectrum.cpp"},
+	{ "spec_vaderetro2es", "spectrum/d_spectrum.cpp"},
 	{ "snes_valdisere", "snes/d_snes.cpp"},
 	{ "md_valiss", "megadrive/d_megadrive.cpp"},
 	{ "md_valis", "megadrive/d_megadrive.cpp"},

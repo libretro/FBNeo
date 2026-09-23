@@ -4274,6 +4274,24 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="afterwar" sourcefile="pst90s/d_megaphx.cpp">
+		<description>After the War</description>
+		<year>1991</year>
+		<manufacturer>Dinamic / Inder</manufacturer>
+		<rom name="aw.u32" size="131072" crc="b99703d4"/>
+		<rom name="aw.u21" size="131072" crc="f11e7449"/>
+		<rom name="aw0.u38" size="131072" crc="91a80067"/>
+		<rom name="aw1.u27" size="131072" crc="43812d35"/>
+		<rom name="aw2.u37" size="131072" crc="bcb7be40"/>
+		<rom name="aw3.u26" size="131072" crc="45963256"/>
+		<rom name="aw4.u36" size="131072" crc="93d091a7"/>
+		<rom name="aw5.u25" size="131072" crc="e6044d6e"/>
+		<rom name="sonido_aw1.u39" size="131072" crc="14368d11"/>
+		<rom name="sonido_aw0.u35" size="8192" crc="cd22f2a4"/>
+		<rom name="pic16c54.bin" size="1024" crc="89e74d49"/>
+		<video type="raster" orientation="horizontal" width="320" height="200" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="aoh" sourcefile="pst90s/d_vamphalf.cpp">
 		<description>Age Of Heroes - Silkroad 2 (v0.63 - 2001/02/07)</description>
 		<year>2001</year>

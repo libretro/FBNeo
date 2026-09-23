@@ -510,6 +510,26 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="abydosen" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>ABYDOS (English) (48K) (HB)</description>
+		<year>2013</year>
+		<manufacturer>J.B.G.V.</manufacturer>
+		<rom name="ABYDOS EN 48K (2013)(J.B.G.V.).tap" size="38072" crc="4bfdbde9"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="abydoses" cloneof="abydosen" romof="abydosen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>ABYDOS (Spanish) (48K) (HB)</description>
+		<year>2013</year>
+		<manufacturer>J.B.G.V.</manufacturer>
+		<rom name="ABYDOS ES 48K (2013)(J.B.G.V.).tap" size="38084" crc="0e566060"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ace2088" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>SHIFT+J/K: speed up/down - L, R, T: change weapons - W: set display</comment>
 		<description>ACE 2088 (128K)</description>
@@ -962,7 +982,7 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="agathadv" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="agathadv" cloneof="agathadvee" romof="agathadvee" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Agatha Adventure (128K) (HB)</description>
 		<year>2021</year>
@@ -973,7 +993,18 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="agathadv48" cloneof="agathadv" romof="agathadv" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="agathadvee" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Agatha Adventure (128K) (HB, v2)</description>
+		<year>2022</year>
+		<manufacturer>Daniel Isoba</manufacturer>
+		<rom name="Agatha Adventure v2 128K (2022)(Daniel Isoba).tap" size="46747" crc="16409e6d"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="agathadv48" cloneof="agathadvee" romof="agathadvee" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Agatha Adventure (48K) (HB)</description>
 		<year>2021</year>
@@ -983,7 +1014,7 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="agathadvh" cloneof="agathadv" romof="agathadv" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="agathadvh" cloneof="agathadvee" romof="agathadvee" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Agatha Adventure - hard-mode (128K) (HB)</description>
 		<year>2021</year>
@@ -2425,7 +2456,7 @@
 		<description>ATV Simulator - All Terrain Vehicle (48K)</description>
 		<year>1987</year>
 		<manufacturer>Codemasters</manufacturer>
-		<rom name="ATV Simulator 48K (1987)(Codemasters).tap" size="47048" crc="373a50ad"/>
+		<rom name="ATV Simulator 48K (1987)(Codemasters).tzx" size="47124" crc="73718734"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -3547,15 +3578,6 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bignoseamericanadv" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Big Nose's American Adventure (48K)</description>
-		<year>1992</year>
-		<manufacturer>Codemasters</manufacturer>
-		<rom name="Big Nose's American Adventure 48K (1992)(Codemasters).tap" size="47470" crc="64006917"/>
-		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
-		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="bigtroubleinlittlechina" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Big Trouble in Little China (48K)</description>
 		<year>1986</year>
@@ -3570,6 +3592,15 @@
 		<year>1988</year>
 		<manufacturer>Codemasters</manufacturer>
 		<rom name="Bigfoot 48K (1988)(Codemasters).tzx" size="39168" crc="a3d8d69d"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bignoseusaadv" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Bignose's USA Adventure ~ Bignose in the USA (48K)</description>
+		<year>1992</year>
+		<manufacturer>Codemasters</manufacturer>
+		<rom name="Bignose's American Adventure 48K (1992)(Codemasters).tzx" size="47498" crc="4cbb79e9"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -9040,41 +9071,32 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dizzy2ay" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Dizzy II: Treasure Island Dizzy (128K)</description>
+	<game name="dizzy2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Dizzy II: Treasure Island Dizzy (48K-128K)</description>
 		<year>1988</year>
 		<manufacturer>Codemasters</manufacturer>
-		<rom name="Dizzy 2 - Treasure Island Dizzy 128K (1988)(Codemasters).tap" size="57678" crc="0fd65ba2"/>
+		<rom name="Dizzy 2 - Treasure Island Dizzy 48K-128K (1988)(Codemasters).tzx" size="57736" crc="b8371fae"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dizzy2" cloneof="dizzy2ay" romof="dizzy2ay" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Dizzy II: Treasure Island Dizzy (48K)</description>
-		<year>1988</year>
-		<manufacturer>Codemasters</manufacturer>
-		<rom name="Dizzy 2 - Treasure Island Dizzy 48K (1988)(Codemasters).tap" size="44195" crc="3c680bbd"/>
-		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
-		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dizzy2ru" cloneof="dizzy2ay" romof="dizzy2ay" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="dizzy2ru" cloneof="dizzy2" romof="dizzy2" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Hack</comment>
-		<description>Dizzy II: Treasure Island Dizzy (Russian) (128K) (Hack)</description>
+		<description>Dizzy II: Treasure Island Dizzy (Russian) (48K-128K) (Hack)</description>
 		<year>199?</year>
 		<manufacturer>&lt;unknown&gt;</manufacturer>
-		<rom name="Dizzy 2 - Treasure Island Dizzy RU 128K (199x).z80" size="57508" crc="ccc7f01b"/>
+		<rom name="Dizzy 2 - Treasure Island Dizzy RU 48K-128K (199x).z80" size="57508" crc="ccc7f01b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="dizzy3" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Dizzy III: Fantasy World Dizzy (128K)</description>
+		<description>Dizzy III: Fantasy World Dizzy (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Codemasters</manufacturer>
-		<rom name="Dizzy 3 - Fantasy World Dizzy 128K (1989)(Codemasters).tap" size="62876" crc="2080a324"/>
+		<rom name="Dizzy 3 - Fantasy World Dizzy 48K-128K (1989)(Codemasters).tap" size="62876" crc="2080a324"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -9282,7 +9304,7 @@
 		<description>Dizzy: The Ultimate Cartoon Adventure (48K)</description>
 		<year>1987</year>
 		<manufacturer>Codemasters</manufacturer>
-		<rom name="Dizzy - The Ultimate Cartoon Adventure 48K (1987)(Codemasters).tap" size="48901" crc="da1ce6bf"/>
+		<rom name="Dizzy - The Ultimate Cartoon Adventure 48K (1987)(Codemasters).tzx" size="48885" crc="2c09a879"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -18069,6 +18091,27 @@
 		<manufacturer>Bob's Stuff</manufacturer>
 		<rom name="LumASCII 48K (2012)(Bob's Stuff).tzx" size="47945" crc="5eff5715"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="lumizx128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Lumines ZX (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>kirby2000</manufacturer>
+		<rom name="Lumines ZX 128K (2026)(kirby2000).z80" size="131182" crc="eb500888"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="lumizx48" cloneof="lumizx128" romof="lumizx128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Lumines ZX (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>kirby2000</manufacturer>
+		<rom name="Lumines ZX 48K (2026)(kirby2000).z80" size="49182" crc="a12c7c04"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -29009,11 +29052,11 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="spikeintransylvania" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Spike in Transylvania (128K)</description>
+	<game name="spiketransyl" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Spike in Transylvania (48K-128K)</description>
 		<year>1991</year>
 		<manufacturer>Codemasters</manufacturer>
-		<rom name="Spike in Transylvania 128K (1991)(Codemasters).tap" size="54232" crc="2e3cf5ca"/>
+		<rom name="Spike in Transylvania 48K-128K (1991)(Codemasters).tzx" size="54266" crc="beeb04c1"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -29454,6 +29497,36 @@
 		<rom name="Steg 48K-128K (1992)(Codemasters).tzx" size="51302" crc="62474d1c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stela" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Stela (48K) (HB)</description>
+		<year>2011</year>
+		<manufacturer>J.B.G.V.</manufacturer>
+		<rom name="Stela 48K (2011)(J.B.G.V.).tzx" size="39581" crc="a35a020b"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stela2en" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Stela II (English) (48K) (HB)</description>
+		<year>2016</year>
+		<manufacturer>La Moderna Soft</manufacturer>
+		<rom name="Stela II EN 48K (2016)(La Moderna Soft).tap" size="46544" crc="fe9d1532"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stela2es" cloneof="stela2en" romof="stela2en" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Stela II (Spanish) (48K) (HB)</description>
+		<year>2016</year>
+		<manufacturer>La Moderna Soft</manufacturer>
+		<rom name="Stela II ES 48K (2016)(La Moderna Soft).tap" size="46585" crc="941f728e"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -32610,6 +32683,26 @@
 		<year>2012</year>
 		<manufacturer>J.B.G.V.</manufacturer>
 		<rom name="Vade Retro ES 48K (2012)(J.B.G.V.).tzx" size="41456" crc="1215623a"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vaderetro2en" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Vade Retro II (J.B.V.G.) (English) (48K) (HB)</description>
+		<year>2017</year>
+		<manufacturer>La Moderna Soft</manufacturer>
+		<rom name="Vade Retro II EN 48K (2017)(La Moderna Soft).tap" size="44481" crc="83966d1f"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vaderetro2es" cloneof="vaderetro2en" romof="vaderetro2en" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Vade Retro II (J.B.V.G.) (Spanish) (48K) (HB)</description>
+		<year>2017</year>
+		<manufacturer>La Moderna Soft</manufacturer>
+		<rom name="Vade Retro II ES 48K (2017)(La Moderna Soft).tap" size="44481" crc="02e5d063"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
