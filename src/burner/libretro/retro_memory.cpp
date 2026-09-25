@@ -136,6 +136,17 @@ static int StateGetMainRamAcb(BurnArea *pba)
 				nMemoryCount++;
 			}
 			return 0;
+		case HARDWARE_NVS:
+			if ((strcmp(pba->szName, "CPU Ram") == 0)) {
+				pMainRamData = pba->Data;
+				nMainRamSize = pba->nLen;
+				bMainRamFound = true;
+			}
+			// $6000 work ram, only when the driver placed it right after cpu ram
+			if ((strcmp(pba->szName, "Work Ram") == 0) && bMainRamFound && pba->Data == (UINT8*)pMainRamData + nMainRamSize) {
+				nMainRamSize += pba->nLen;
+			}
+			return 0;
 		case HARDWARE_SNK_NGP:
 		case HARDWARE_SNK_NGPC:
 			if ((strcmp(pba->szName, "Main Ram") == 0)) {
