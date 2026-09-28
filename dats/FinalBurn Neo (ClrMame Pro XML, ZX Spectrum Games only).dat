@@ -3862,6 +3862,15 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bladerunner" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Blade Runner (48K)</description>
+		<year>1985</year>
+		<manufacturer>CRL Group</manufacturer>
+		<rom name="Blade Runner 48K (1985)(CRL Group).tap" size="34893" crc="33bf7e7d"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bladewarrior" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Select '3. Sinclair Stick' to use controller</comment>
 		<description>Blade Warrior (48K)</description>
@@ -9880,7 +9889,7 @@
 		<description>Dragon Ninja (128K)</description>
 		<year>1988</year>
 		<manufacturer>Imagine Software</manufacturer>
-		<rom name="Dragon Ninja 128K (1988)(Imagine Software).tap" size="118559" crc="636223a9"/>
+		<rom name="Dragon Ninja 128K (1988)(Imagine Software).tzx" size="118777" crc="420d8da3"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -10389,6 +10398,26 @@
 		<year>1990</year>
 		<manufacturer>Impulze</manufacturer>
 		<rom name="Edd the Duck 48K (1990)(Impulze).tzx" size="44167" crc="dfc4785e"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="effugiten" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Effugit (English) (48K) (HB)</description>
+		<year>2013</year>
+		<manufacturer>J.B.G.V.</manufacturer>
+		<rom name="Effugit EN 48K (2013)(J.B.G.V.).tzx" size="36588" crc="1839f858"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="effugites" cloneof="effugiten" romof="effugiten" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Effugit (Spanish) (48K) (HB)</description>
+		<year>2013</year>
+		<manufacturer>J.B.G.V.</manufacturer>
+		<rom name="Effugit ES 48K (2013)(J.B.G.V.).tzx" size="36593" crc="18023497"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -13483,6 +13512,15 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gridgate" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Grid Gate (48K)</description>
+		<year>1984</year>
+		<manufacturer>Silversoft</manufacturer>
+		<rom name="Grid Gate 48K (1984)(Silversoft).tzx" size="47913" crc="523132f6"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gridrunner" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Gridrunner (16K)</description>
 		<year>1983</year>
@@ -13533,7 +13571,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="guardianangel" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Guardian Angel, The (48K)</description>
+		<description>Guardian Angel, The (English) (48K)</description>
 		<year>1989</year>
 		<manufacturer>Set 'S - Sinclair' to use controller</manufacturer>
 		<rom name="Guardian Angel, The 48K (1989)(Dinamic Software).tzx" size="44481" crc="ce4a8c97"/>
@@ -15217,10 +15255,10 @@
 	</game>
 	<game name="wallseryx" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>In the Walls of Eryx (128K) (HB)</description>
+		<description>In the Walls of Eryx (48K-128K) (HB)</description>
 		<year>2016</year>
 		<manufacturer>Monster's Legs Productions</manufacturer>
-		<rom name="In the Walls of Eryx (2016)(Monster's Legs Productions).tap" size="39585" crc="e201c77c"/>
+		<rom name="In the Walls of Eryx 48K-128K (2016)(Monster's Legs Productions).tap" size="39585" crc="e201c77c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -15237,10 +15275,10 @@
 	</game>
 	<game name="incprof" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Incredible Shrinking Professor, The (128K) (HB, v1.1)</description>
+		<description>Incredible Shrinking Professor, The (48K-128K) (HB, v1.1)</description>
 		<year>2017</year>
 		<manufacturer>Rucksack Games</manufacturer>
-		<rom name="Incredible Shrinking Professor, The 128K (2017)(Rucksack Games).tap" size="44116" crc="03e3de19"/>
+		<rom name="Incredible Shrinking Professor, The 48K-128K (2017)(Rucksack Games).tap" size="44116" crc="03e3de19"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -16114,7 +16152,7 @@
 		<description>Jet Set Luis: Rumbo a la Costa Blanca (Spanish) (48K) (HB)</description>
 		<year>2015</year>
 		<manufacturer>Softwarecete</manufacturer>
-		<rom name="Jet Set Luis - Rumbo a la Costa Blanca ES 48K (2015)(Softwarecete).tap" size="39975" crc="0da926da"/>
+		<rom name="Jet Set Luis - Rumbo a la Costa Blanca ES 48K (2015)(Softwarecete).tzx" size="40003" crc="d879f644"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -20898,6 +20936,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="munchinfy" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Munch Infinity (128K) (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Apologies</manufacturer>
+		<rom name="Munch Infinity v1.1 128K (2026)(Apologies).tap" size="111308" crc="69dee604"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="muncher" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Set 'Sinclair Joystick' to use controller</comment>
 		<description>Muncher Eats Chewits, The (128K)</description>
@@ -21516,7 +21565,7 @@
 		<description>Ninja Commando (48K)</description>
 		<year>1989</year>
 		<manufacturer>Zeppelin Games</manufacturer>
-		<rom name="Ninja Commando 48K (1989)(Zeppelin Games).tap" size="40413" crc="60e678a2"/>
+		<rom name="Ninja Commando 48K (1989)(Zeppelin Games).tzx" size="40471" crc="1b48a198"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -21553,12 +21602,21 @@
 		<driver status="good"/>
 	</game>
 	<game name="ninjamassacre" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Ninja Massacre (128K)</description>
+		<description>Ninja Massacre (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Codemasters</manufacturer>
-		<rom name="Ninja Massacre 128K (1989)(Codemasters).tap" size="59148" crc="2b28000a"/>
+		<rom name="Ninja Massacre 48K-128K (1989)(Codemasters).tzx" size="59179" crc="135633fa"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ninjamaster" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Ninja Master (48K)</description>
+		<year>1986</year>
+		<manufacturer>Firebird Software</manufacturer>
+		<rom name="Ninja Master 48K (1986)(Firebird Software).tzx" size="49715" crc="bd1e320e"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -21637,10 +21695,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="ninjawarr" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Ninja Warriors, The (128K)</description>
+		<description>Ninja Warriors, The (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Virgin Games</manufacturer>
-		<rom name="Ninja Warriors, The 128K (1989)(Virgin Games).tap" size="112187" crc="e870c241"/>
+		<rom name="Ninja Warriors, The 48K-128K (1989)(Virgin Games).tap" size="112187" crc="e870c241"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -25757,7 +25815,7 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="robo2048" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="robo2084" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Robotron: 2084 (48K)</description>
 		<year>1984</year>
 		<manufacturer>Atarisoft</manufacturer>
@@ -28433,6 +28491,15 @@
 		<rom name="Sophia II 128K (2019)(Alessandro Grussu).tap" size="78009" crc="ea86b2a1"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sophistry" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Sophistry (48K)</description>
+		<year>1987</year>
+		<manufacturer>CRL Group</manufacturer>
+		<rom name="Sophistry 48K (1987)(CRL Group).tap" size="42699" crc="b913d76a"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -34653,6 +34720,16 @@
 		<year>1982</year>
 		<manufacturer>Sinclair Research Limited</manufacturer>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zxtennis" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>ZX Tennis (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Oldschool Is Beautiful</manufacturer>
+		<rom name="ZX Tennis 48K (2026)(Oldschool Is Beautiful).tap" size="28676" crc="ec136250"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

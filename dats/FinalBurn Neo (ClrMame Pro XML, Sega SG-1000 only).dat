@@ -225,6 +225,15 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bubblefight" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>Bubble Fight (HB)</description>
+		<year>2026</year>
+		<manufacturer>SiRioHD</manufacturer>
+		<rom name="Bubble Fight (2026)(SiRioHD).sg" size="32768" crc="836ed578"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cso" sourcefile="sg1000/d_sg1000.cpp">
 		<description>C_So! (Japan)</description>
 		<year>1985</year>

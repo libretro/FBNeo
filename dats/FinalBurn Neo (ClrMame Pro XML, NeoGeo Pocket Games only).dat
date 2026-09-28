@@ -14,10 +14,10 @@
 	</header>
 	<game name="2048" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>2048 (HB)</description>
+		<description>2048 (HB, v11)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="2048 (2026)(Hardhat Warrior).ngp" size="524288" crc="eb81b508"/>
+		<rom name="2048 v11 (2026)(Hardhat Warrior).ngp" size="42282" crc="336e0d6f"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -104,7 +104,7 @@
 		<description>Barbarian Invaders (HB, v1.01)</description>
 		<year>200?</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Barbarian Invaders v1.01 (200x)(Chris Ahchay).ngp" size="524288" crc="85dc10f7"/>
+		<rom name="Barbarian Invaders v1.01 (200x)(Chris Ahchay).ngp" size="8482" crc="3479a823"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -209,6 +209,28 @@
 		<year>2025</year>
 		<manufacturer>Inufuto</manufacturer>
 		<rom name="Bootskell Mini (2025)(Inufuto).ngp" size="524288" crc="3aa89e2e"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="breakout" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Breakout (HB, v22)</description>
+		<year>2026</year>
+		<manufacturer>Hardhat Warrior</manufacturer>
+		<rom name="Breakout v22 (2026)(Hardhat Warrior).ngp" size="2097152" crc="e65ba71a"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bublbobl" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Bubble Bobble (HB, Demo)</description>
+		<year>2026</year>
+		<manufacturer>Chris Ahchay</manufacturer>
+		<rom name="Bubble Bobble Demo (2026)(Chris Ahchay).ngp" size="2226982" crc="16d265b2"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -345,7 +367,7 @@
 		<description>Defenderoids (HB)</description>
 		<year>2025</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Defenderoids (2025)(Chris Ahchay).ngp" size="524288" crc="33bde8bd"/>
+		<rom name="Defenderoids (2025)(Chris Ahchay).ngp" size="63424" crc="8a525026"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -449,7 +471,7 @@
 		<description>Dodger (HB)</description>
 		<year>2007</year>
 		<manufacturer>Ivan Mackintosh</manufacturer>
-		<rom name="Dodger (2007)(Ivan Mackintosh).ngp" size="524288" crc="fc13a65b"/>
+		<rom name="Dodger (2007)(Ivan Mackintosh).ngp" size="12917" crc="70f69290"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -470,7 +492,7 @@
 		<description>Don't Die, Mr. Robot! (HB, v2.0.3)</description>
 		<year>2025</year>
 		<manufacturer>Chris Ahchay - Infinite State Games</manufacturer>
-		<rom name="Don't Die, Mr. Robot! v2.0.3 (2025)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="0c36f0f3"/>
+		<rom name="Don't Die, Mr. Robot! v2.0.3 (2025)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="fc3c3e3a"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -529,10 +551,10 @@
 	</game>
 	<game name="farkle" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Farkle (HB)</description>
+		<description>Farkle (HB, v14)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Farkle (2026)(Hardhat Warrior).ngp" size="524288" crc="38f1256d"/>
+		<rom name="Farkle v14 (2026)(Hardhat Warrior).ngp" size="48550" crc="41453ddd"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -583,7 +605,18 @@
 		<description>Fruity Pals' Revenge (HB, v1.2)</description>
 		<year>2025</year>
 		<manufacturer>Chris Ahchay - Infinite State Games</manufacturer>
-		<rom name="Fruity Pals' Revenge v1.2 (2025)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="f92db309"/>
+		<rom name="Fruity Pals' Revenge v1.2 (2025)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="47e33e8c"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="furry" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Furry (HB)</description>
+		<year>2026</year>
+		<manufacturer>Napomex</manufacturer>
+		<rom name="Furry (2026)(Napomex).ngp" size="2097152" crc="b12c2762"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -604,7 +637,7 @@
 		<description>Gardenia (HB, v1.4)</description>
 		<year>2026</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="8a8641cd"/>
+		<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="6bf8b0aa"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -648,7 +681,7 @@
 		<description>Horatio Goes Snowboarding (HB)</description>
 		<year>2026</year>
 		<manufacturer>Chris Ahchay - Infinite State Games</manufacturer>
-		<rom name="Horatio Goes Snowboarding (2026)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="c959fe3c"/>
+		<rom name="Horatio Goes Snowboarding (2026)(Chris Ahchay - Infinite State Games).ngp" size="2097152" crc="1bd2d8e7"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -724,7 +757,7 @@
 		<description>Jurl (HB)</description>
 		<year>2025</year>
 		<manufacturer>Tonsomo Entertainment</manufacturer>
-		<rom name="Jurl (2025)(Tonsomo Entertainment).ngp" size="524288" crc="af434981"/>
+		<rom name="Jurl (2025)(Tonsomo Entertainment).ngp" size="52671" crc="c01a1a2e"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -989,6 +1022,17 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="minesweep" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Minesweeper (HB, v15)</description>
+		<year>2026</year>
+		<manufacturer>Hardhat Warrior</manufacturer>
+		<rom name="Minesweeper v15 (2026)(Hardhat Warrior).ngp" size="41487" crc="5512e7df"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mizuki" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Mizuki Shigeru no Youkai Shashinkan (Japan)</description>
 		<year>1999</year>
@@ -1004,7 +1048,7 @@
 		<description>Mr. Do! (HB)</description>
 		<year>200?</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Mr. Do! (200x)(Chris Ahchay).ngp" size="524288" crc="43c2e978"/>
+		<rom name="Mr. Do! (200x)(Chris Ahchay).ngp" size="16152" crc="0098c7b5"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1046,7 +1090,7 @@
 		<description>Neo Bowling (HB)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Neo Bowling (2026)(Hardhat Warrior).ngp" size="2097152" crc="b5d2d3f2"/>
+		<rom name="Neo Bowling (2026)(Hardhat Warrior).ngp" size="2097152" crc="df4d1720"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1165,10 +1209,10 @@
 	</game>
 	<game name="neoyahtzee" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Neo Yahtzee (HB)</description>
+		<description>Neo Yahtzee (HB, v38)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Neo Yahtzee (2026)(Hardhat Warrior).ngp" size="524288" crc="15c0f41e"/>
+		<rom name="Neo Yahtzee v38 (2026)(Hardhat Warrior).ngp" size="53780" crc="aadaf0ae"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1254,6 +1298,17 @@
 		<year>2026</year>
 		<manufacturer>Tixul</manufacturer>
 		<rom name="Over Rev (2026)(Tixul).ngp" size="2097152" crc="a381d08a"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pacmanpd" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Pac-Man (HB)</description>
+		<year>2001</year>
+		<manufacturer>Dark Father</manufacturer>
+		<rom name="Pac-Man (2001)(Dark Father).ngp" size="131411" crc="1dcec4ea"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1501,6 +1556,17 @@
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="puzzlegems" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Puzzle Gems (HB, v1.1)</description>
+		<year>2003</year>
+		<manufacturer>Thor</manufacturer>
+		<rom name="Puzzle Gems v1.1 (2003)(Thor).ngp" size="39798" crc="ef104269"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="puzzlink" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<description>Puzzle Link (Euro)</description>
 		<year>1999</year>
@@ -1536,6 +1602,17 @@
 		<year>1999</year>
 		<manufacturer>SNK - Yumekobo</manufacturer>
 		<rom name="Renketsu Puzzle Tsunagete Pon! Color (Japan)(1999)(SNK - Yumekobo).ngp" size="524288" crc="c3f3e83c"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="robotron" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Robotron: 2084 (HB)</description>
+		<year>200?</year>
+		<manufacturer>Chris Ahchay</manufacturer>
+		<rom name="Robotron - 2084 (200x)(Chris Ahchay).ngp" size="30465" crc="19619eb7"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1588,7 +1665,7 @@
 		<description>Same Game (HB)</description>
 		<year>200?</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Same Game (200x)(Chris Ahchay).ngp" size="524288" crc="00c6cfb3"/>
+		<rom name="Same Game (200x)(Chris Ahchay).ngp" size="15766" crc="c6ff75c2"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1816,10 +1893,10 @@
 	</game>
 	<game name="sodchess" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>SOD Chess (HB, v1.02)</description>
+		<description>SOD Chess (HB, v1.1.0)</description>
 		<year>2002</year>
 		<manufacturer>Thor</manufacturer>
-		<rom name="SOD Chess v1.02 (2002)(Thor).ngp" size="442759" crc="ec1bb549"/>
+		<rom name="SOD Chess v1.1.0 (2002)(Thor).ngp" size="143697" crc="2f2dd18e"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1891,10 +1968,10 @@
 	</game>
 	<game name="sudoku" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Sudoku (HB)</description>
+		<description>Sudoku (HB, v17)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Sudoku (2026)(Hardhat Warrior).ngp" size="524288" crc="87c40377"/>
+		<rom name="Sudoku v17 (2026)(Hardhat Warrior).ngp" size="42717" crc="9d522c5f"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1934,10 +2011,10 @@
 	</game>
 	<game name="tetris" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris (HB)</description>
+		<description>Tetris (HB, v55)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Tetris (2026)(Hardhat Warrior).ngp" size="524288" crc="04b25a90"/>
+		<rom name="Tetris v55 (2026)(Hardhat Warrior).ngp" size="43552" crc="7c0eae1d"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>

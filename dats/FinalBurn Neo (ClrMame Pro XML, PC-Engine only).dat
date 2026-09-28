@@ -2472,11 +2472,20 @@
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sonson2te" cloneof="sonson2" romof="sonson2" sourcefile="pce/d_pce.cpp">
+		<comment>Hack</comment>
+		<description>Son Son II (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>Jackic</manufacturer>
+		<rom name="Son Son II T-Eng (2026)(Jackic).pce" size="524288" crc="ef783f57"/>
+		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sonson2" sourcefile="pce/d_pce.cpp">
 		<description>Son Son II (Japan)</description>
 		<year>1989</year>
 		<manufacturer>NEC</manufacturer>
-		<rom name="son son ii (japan).pce" size="262144" crc="d7921df2"/>
+		<rom name="Son Son II (Japan)(1989)(NEC).pce" size="262144" crc="d7921df2"/>
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

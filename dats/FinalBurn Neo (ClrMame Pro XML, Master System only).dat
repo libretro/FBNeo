@@ -1133,6 +1133,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bubblefight" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew, YM2413 FM sound chip supported</comment>
+		<description>Bubble Fight (HB, v1.1.0)</description>
+		<year>2026</year>
+		<manufacturer>SiRioHD</manufacturer>
+		<rom name="Bubble Fight v1.1.0 (2026)(SiRioHD).sms" size="262144" crc="d07abe60"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="buggyrun" sourcefile="sms/d_sms.cpp">
 		<description>Buggy Run (Euro, Brazil)</description>
 		<year>1993</year>
@@ -2257,6 +2266,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="flashback" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Flashback (HB, v0.0.5)</description>
+		<year>2026</year>
+		<manufacturer>haroldo-ok</manufacturer>
+		<rom name="Flashback v0.0.5 (2026)(haroldo-ok).sms" size="4194304" crc="9cb9e457"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="fpoint" sourcefile="sms/d_sms.cpp">
 		<description>Flashpoint (Korea)</description>
 		<year>199?</year>
@@ -2501,6 +2519,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="getbluesph" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew, YM2413 FM sound chip supported</comment>
+		<description>Get Blue Spheres! (HB)</description>
+		<year>2026</year>
+		<manufacturer>GuyDeNaville</manufacturer>
+		<rom name="Get Blue Spheres! (2026)(GuyDeNaville).sms" size="262144" crc="c9d82c04"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ghosth" sourcefile="sms/d_sms.cpp">
 		<description>Ghost House (Euro, USA, Brazil)</description>
 		<year>1986</year>
@@ -2742,8 +2769,8 @@
 		<comment>Homebrew</comment>
 		<description>Grail of the Gods (HB, v0.99)</description>
 		<year>2023-25</year>
-		<manufacturer>Guydebaville</manufacturer>
-		<rom name="Grail of the Gods v0.99 (2023-25)(Guydebaville).sms" size="131072" crc="fb3a8ab3"/>
+		<manufacturer>GuyDeNaville</manufacturer>
+		<rom name="Grail of the Gods v0.99 (2023-25)(GuyDeNaville).sms" size="131072" crc="fb3a8ab3"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3857,6 +3884,15 @@
 		<year>2017</year>
 		<manufacturer>PO.B.R.E.</manufacturer>
 		<rom name="Master of Darkness - Mestre das Trevas T-Por (2017)(PO.B.R.E.).sms" size="262144" crc="30703780"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mtennis" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Master Tennis (HB)</description>
+		<year>2026</year>
+		<manufacturer>Oldschool Is Beautiful</manufacturer>
+		<rom name="Master Tennis (2026)(Oldschool Is Beautiful).sms" size="65536" crc="03afc794"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5422,6 +5458,15 @@
 		<year>199?</year>
 		<manufacturer>Samsung</manufacturer>
 		<rom name="Sky Jaguar (Korea)(199x)(Samsung).sms" size="32768" crc="5b8e65e4"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="skyhaul" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>SkyHaul (HB, v0.0.1)</description>
+		<year>2026</year>
+		<manufacturer>haroldo-ok</manufacturer>
+		<rom name="SkyHaul v0.0.1 (2026)(haroldo-ok).sms" size="32768" crc="51fc7c6b"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

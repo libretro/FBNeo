@@ -168,6 +168,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="3kings" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>3Kings ~ Three Kingdoms (M2) (HB, v1.3)</description>
+		<year>2026</year>
+		<manufacturer>Gen Hasegawa</manufacturer>
+		<rom name="3Kings ~ Three Kingdoms v1.3 (2026)(Gen Hasegawa).rom" size="262144" crc="df7e7ca2"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="4x4offroad" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>NB: switch tape side at title screen.</comment>
 		<description>4x4 Off-Road Racing (Euro)</description>
@@ -393,6 +405,18 @@
 		<year>1988</year>
 		<manufacturer>Zigurat Software</manufacturer>
 		<rom name="Afteroids (Euro, ES)(1988)(Zigurat Software).rom" size="131072" crc="8a599dad"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="airplane" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Airplane (HB)</description>
+		<year>1982-2026</year>
+		<manufacturer>Jeroen Derwort</manufacturer>
+		<rom name="Airplane (1992-2026)(Jeroen Derwort).rom" size="32768" crc="a0b9e934"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -2055,6 +2079,18 @@
 		<year>2006</year>
 		<manufacturer>Darkstone</manufacturer>
 		<rom name="BeeZ (2006)(Darkstone).rom" size="32768" crc="c51814db"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="berzerk" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Berzerk (HB)</description>
+		<year>2026</year>
+		<manufacturer>Pixel Forge</manufacturer>
+		<rom name="Berzerk (2026)(Pixel Forge).rom" size="32768" crc="d129de5d"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -7000,6 +7036,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="flyingshark" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, TI-99 version made by Rasmus</comment>
+		<description>Flying Shark - TI992MSX (HB)</description>
+		<year>2026</year>
+		<manufacturer>Maggoo</manufacturer>
+		<rom name="Flying Shark - TI992MSX (2026)(Maggoo).rom" size="524288" crc="35310951"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="foggy" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew</comment>
 		<description>Foggy Quest (HB)</description>
@@ -7297,6 +7345,18 @@
 		<year>1984</year>
 		<manufacturer>Namco</manufacturer>
 		<rom name="Galaxian (Japan, Alt 1)(1984)(Namco).rom" size="8192" crc="4980ffac"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="galaxy" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Galaxy (HB)</description>
+		<year>2026</year>
+		<manufacturer>Gamecast Entertainment</manufacturer>
+		<rom name="Galaxy (2026)(Gamecast Entertainment).rom" size="32768" crc="be4cdb4c"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -9651,6 +9711,30 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kcmunch" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Porting of a Odyssey2 game</comment>
+		<description>K.C. Munchkin (HB)</description>
+		<year>2026</year>
+		<manufacturer>Maggoo</manufacturer>
+		<rom name="K.C. Munchkin (2026)(Maggoo).rom" size="32768" crc="a6e9336b"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kckrazy" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Porting of a Odyssey2 game</comment>
+		<description>K.C.'s Krazy Chase (HB)</description>
+		<year>2026</year>
+		<manufacturer>Maggoo</manufacturer>
+		<rom name="K.C.'s Krazy Chase (2026)(Maggoo).rom" size="32768" crc="3a98ace9"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kaerushoot" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Kaeru Shooter (Japan)</description>
 		<year>1984</year>
@@ -10935,6 +11019,17 @@
 		<year>2019</year>
 		<manufacturer>Radastan</manufacturer>
 		<rom name="Mag the Magician (2019)(Radastan).rom" size="32768" crc="3d2ab5c1"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mknight26" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Magic Knight Anniversary Collection (World)</description>
+		<year>2026</year>
+		<manufacturer>Mastertronic</manufacturer>
+		<rom name="Magic Knight Anniversary Collection (2026)(Mastertronic).rom" size="172032" crc="eaeb6972"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -12756,6 +12851,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="msxtennis" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>MSX Tennis (HB)</description>
+		<year>2026</year>
+		<manufacturer>Oldschool Is Beautiful</manufacturer>
+		<rom name="MSX Tennis (2026)(Oldschool Is Beautiful).rom" size="32768" crc="af0a4f71"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="unleashed" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Demo, Homebrew</comment>
 		<description>MSX Unleashed (HB, Tech-Demo)</description>
@@ -13094,6 +13201,18 @@
 		<year>2015</year>
 		<manufacturer>Baa</manufacturer>
 		<rom name="Nenokatas (2015)(Baa).rom" size="32768" crc="55fbd319"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="neonrev" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Neon Revenant (HB, Final)</description>
+		<year>2026</year>
+		<manufacturer>Kanon-ai</manufacturer>
+		<rom name="Neon Revenant Final (2026)(Kanon-ai).rom" size="524288" crc="80def2d5"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -13513,6 +13632,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="odyssey" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Odyssey, The (HB)</description>
+		<year>2026</year>
+		<manufacturer>Fausto Pracek</manufacturer>
+		<rom name="Odyssey, The (2026)(Fausto Pracek).rom" size="262144" crc="f429fa69"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ohmummy" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Oh Mummy!! (Euro)</description>
 		<year>1988</year>
@@ -13574,6 +13705,18 @@
 		<year>2021</year>
 		<manufacturer>Hakogame</manufacturer>
 		<rom name="Open Wide! (2021)(Hakogame).rom" size="131072" crc="286a11a6"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="operaew" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, MSX2 games not working</comment>
+		<description>Opera Soft: Early Works (HB)</description>
+		<year>2026</year>
+		<manufacturer>&lt;unknown&gt;</manufacturer>
+		<rom name="Opera Soft - Early Works (2026).rom" size="770048" crc="82268c9a"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -14317,6 +14460,18 @@
 		<year>1983</year>
 		<manufacturer>Magicsoft</manufacturer>
 		<rom name="Pillbox (Japan, Alt)(1983)(Magicsoft).rom" size="16384" crc="3345caef"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pinball99" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, TI-99 version made by Rasmus</comment>
+		<description>Pinball 99 - TI992MSX (HB)</description>
+		<year>2026</year>
+		<manufacturer>Maggoo</manufacturer>
+		<rom name="Pinball 99 - TI992MSX (2026)(Maggoo).rom" size="360448" crc="e555fef4"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -16458,6 +16613,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="snaik" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>snAIk (HB)</description>
+		<year>2026</year>
+		<manufacturer>Rubikon Lab</manufacturer>
+		<rom name="snAIk (2026)(Rubikon Lab).rom" size="16384" crc="7193d839"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="snailmaze" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew</comment>
 		<description>Snail Maze (HB)</description>
@@ -17110,6 +17277,18 @@
 		<year>1987</year>
 		<manufacturer>Topo Soft</manufacturer>
 		<rom name="Stardust (Euro, ES)(1987)(Topo Soft)[RUN'CAS-'].cas" size="94031" crc="697da5c1"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starling" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Starling (HB)</description>
+		<year>2026</year>
+		<manufacturer>Zydrel</manufacturer>
+		<rom name="Starling (2026)(Zydrel).rom" size="32768" crc="90d82c58"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -18992,6 +19171,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="turtles" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Porting of a Odyssey2 game</comment>
+		<description>Turtles (HB)</description>
+		<year>2026</year>
+		<manufacturer>adlroc</manufacturer>
+		<rom name="Turtles (2026)(adlroc).rom" size="32768" crc="d047bf40"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="tuttut" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew</comment>
 		<description>Tut Tut (HB)</description>
@@ -20049,6 +20240,18 @@
 		<year>2017</year>
 		<manufacturer>Paxanga Software</manufacturer>
 		<rom name="Yokai no Atuki Tatakai - Heated Yokai Battle, The (2017)(Paxanga Software).rom" size="65536" crc="e5a9b2ba"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="yokoxevi" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>YokoXevi (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>GW's Workshop</manufacturer>
+		<rom name="YokoXevi v1.1 (2026)(GW's Workshop).rom" size="49152" crc="2c6a13f9"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>

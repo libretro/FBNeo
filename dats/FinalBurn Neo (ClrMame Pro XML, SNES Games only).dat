@@ -1210,6 +1210,14 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="assaultsvrb" cloneof="cybernator" romof="cybernator" sourcefile="snes/d_snes.cpp">
+		<description>Assault Suits Valken (USA) (Retro-bit)</description>
+		<year>2024</year>
+		<manufacturer>Retro-bit</manufacturer>
+		<rom name="Assault Suits Valken (U)(2024)(Retro-bit).sfc" size="2097152" crc="b802fc5e"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="asterixobelix" sourcefile="snes/d_snes.cpp">
 		<description>Asterix &amp; Obelix (Euro)</description>
 		<year>1995</year>
@@ -11446,6 +11454,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="megamanxsa1p" cloneof="megamanx" romof="megamanx" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, SA-1 enhancement CPU</comment>
+		<description>Mega Man X - SA-1 Plus (Hack, v1.0.1)</description>
+		<year>2026</year>
+		<manufacturer>llethas</manufacturer>
+		<rom name="Mega Man X - SA-1 Plus v1.0.1 (2026)(llethas).sfc" size="1572864" crc="8e685ca9"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="megamanx2e" cloneof="megamanx2" romof="megamanx2" sourcefile="snes/d_snes.cpp">
 		<comment>CX4 enhancement chip</comment>
 		<description>Mega Man X2 (Euro)</description>
@@ -12047,6 +12064,15 @@
 		<year>1994</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Mortal Kombat II (U, Rev 1)(1994)(Acclaim Entertainment).sfc" size="3145728" crc="70bb5513"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mkma17" cloneof="mk" romof="mk" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mortal Kombat MA-17 (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Yoshihiro</manufacturer>
+		<rom name="Mortal Kombat MA-17 (2026)(Yoshihiro).sfc" size="4194304" crc="be05b9c8"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

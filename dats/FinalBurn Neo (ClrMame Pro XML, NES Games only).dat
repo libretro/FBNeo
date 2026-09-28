@@ -22083,6 +22083,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="tanker" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Tanker: Battle City Reimagined (HB)</description>
+		<year>2026</year>
+		<manufacturer>Slonenok Studio</manufacturer>
+		<rom name="Tanker - Battle City Reimagined (2026)(Slonenok Studio).nes" size="40976" crc="1f7b7d28"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="taote" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Tao (Hack, English)</description>
@@ -22956,6 +22965,15 @@
 		<year>1989</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="To The Earth (USA)(1989)(Nintendo).nes" size="65552" crc="4137b9b3"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="togyzqumalaq" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Togyzqumalaq (HB, v2.0.9)</description>
+		<year>2026</year>
+		<manufacturer>Jiucai Baobao</manufacturer>
+		<rom name="Togyzqumalaq v2.0.9 (2026)(Jiucai Baobao).nes" size="40976" crc="e09a3dda"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
