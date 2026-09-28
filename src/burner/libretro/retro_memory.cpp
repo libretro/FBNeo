@@ -115,6 +115,7 @@ static int StateGetMainRamAcb(BurnArea *pba)
 			return 0;
 		case HARDWARE_NES:
 		case HARDWARE_FDS:
+		case HARDWARE_NVS:
 			if ((strcmp(pba->szName, "CPU Ram") == 0)) {
 				sMemoryDescriptors[nMemoryCount].flags     = RETRO_MEMDESC_SYSTEM_RAM;
 				sMemoryDescriptors[nMemoryCount].ptr       = pba->Data;
