@@ -17589,7 +17589,7 @@ struct BurnDriver BurnDrvgg_pdrive = {
 
 // Power Strike II (Euro) ~ GG Aleste II (Japan)
 static struct BurnRomInfo gg_pstrike2RomDesc[] = {
-	{ "Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega).gg",	0x40000, 0x09de1528, BRF_PRG | BRF_ESS },
+	{ "Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega - Compile).gg",	0x40000, 0x09de1528, BRF_PRG | BRF_ESS },
 };
 
 STD_ROM_PICK(gg_pstrike2)
@@ -17597,7 +17597,7 @@ STD_ROM_FN(gg_pstrike2)
 
 struct BurnDriver BurnDrvgg_pstrike2 = {
 	"gg_pstrike2", NULL, NULL, NULL, "1993",
-	"Power Strike II (Euro) ~ GG Aleste II (Japan)\0", NULL, "Sega", "Sega Game Gear",
+	"Power Strike II (Euro) ~ GG Aleste II (Japan)\0", NULL, "Sega - Compile", "Sega Game Gear",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING, 1, HARDWARE_SEGA_GAME_GEAR, GBF_VERSHOOT, 0,
 	GGGetZipName, gg_pstrike2RomInfo, gg_pstrike2RomName, NULL, NULL, NULL, NULL, SMSInputInfo, GGDIPInfo,
@@ -22080,9 +22080,9 @@ struct BurnDriver BurnDrvsms_brucelee = {
 	256, 192, 4, 3
 };
 
-// Bubble Fight (HB, v1.1.0)
+// Bubble Fight (HB, v1.2.0)
 static struct BurnRomInfo sms_bubblefightRomDesc[] = {
-	{ "Bubble Fight v1.1.0 (2026)(SiRioHD).sms",	262144, 0xd07abe60, BRF_PRG | BRF_ESS },
+	{ "Bubble Fight v1.2.0 (2026)(SiRioHD).sms",	262144, 0xcf50f7e5, BRF_PRG | BRF_ESS },
 };
 
 STD_ROM_PICK(sms_bubblefight)
@@ -22090,7 +22090,7 @@ STD_ROM_FN(sms_bubblefight)
 
 struct BurnDriver BurnDrvsms_bubblefight = {
 	"sms_bubblefight", NULL, NULL, NULL, "2026",
-	"Bubble Fight (HB, v1.1.0)\0", "YM2413 FM sound chip supported", "SiRioHD", "Sega Master System",
+	"Bubble Fight (HB, v1.2.0)\0", "YM2413 FM sound chip supported", "SiRioHD", "Sega Master System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_MASTER_SYSTEM, GBF_ACTION, 0,
 	SMSGetZipName, sms_bubblefightRomInfo, sms_bubblefightRomName, NULL, NULL, NULL, NULL, SMSInputInfo, SMSDIPInfo,
@@ -23431,9 +23431,9 @@ struct BurnDriver BurnDrvsms_mbarbarricade = {
 	256, 192, 4, 3
 };
 
-// Master Tennis (HB)
+// Master Tennis (HB, v1.1)
 static struct BurnRomInfo sms_mtennisRomDesc[] = {
-	{ "Master Tennis (2026)(Oldschool Is Beautiful).sms",	65536, 0x03afc794, BRF_PRG | BRF_ESS },
+	{ "Master Tennis v1.1 (2026)(Oldschool Is Beautiful).sms",	65536, 0xd3bc9717, BRF_PRG | BRF_ESS },
 };
 
 STD_ROM_PICK(sms_mtennis)
@@ -23441,7 +23441,7 @@ STD_ROM_FN(sms_mtennis)
 
 struct BurnDriver BurnDrvsms_mtennis = {
 	"sms_mtennis", NULL, NULL, NULL, "2026",
-	"Master Tennis (HB)\0", NULL, "Oldschool Is Beautiful", "Sega Master System",
+	"Master Tennis (HB, v1.1)\0", NULL, "Oldschool Is Beautiful", "Sega Master System",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_SEGA_MASTER_SYSTEM, GBF_SPORTSMISC, 0,
 	SMSGetZipName, sms_mtennisRomInfo, sms_mtennisRomName, NULL, NULL, NULL, NULL, SMSInputInfo, SMSDIPInfo,
