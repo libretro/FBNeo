@@ -227,10 +227,10 @@
 	</game>
 	<game name="bubblefight" sourcefile="sg1000/d_sg1000.cpp">
 		<comment>Homebrew</comment>
-		<description>Bubble Fight (HB)</description>
+		<description>Bubble Fight (HB, v1.2.0)</description>
 		<year>2026</year>
 		<manufacturer>SiRioHD</manufacturer>
-		<rom name="Bubble Fight (2026)(SiRioHD).sg" size="32768" crc="836ed578"/>
+		<rom name="Bubble Fight v1.2.0 (2026)(SiRioHD).sg" size="32768" crc="4e6f8134"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

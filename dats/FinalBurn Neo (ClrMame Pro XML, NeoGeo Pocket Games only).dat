@@ -14,10 +14,10 @@
 	</header>
 	<game name="2048" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>2048 (HB, v11)</description>
+		<description>2048 (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="2048 v11 (2026)(Hardhat Warrior).ngp" size="42282" crc="336e0d6f"/>
+		<rom name="2048 v1.1 (2026)(Hardhat Warrior).ngp" size="2097152" crc="b40b0383"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -216,10 +216,10 @@
 	</game>
 	<game name="breakout" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Breakout (HB, v22)</description>
+		<description>Breakout (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Breakout v22 (2026)(Hardhat Warrior).ngp" size="2097152" crc="e65ba71a"/>
+		<rom name="Breakout v1.1 (2026)(Hardhat Warrior).ngp" size="2097152" crc="d8aad16a"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -551,10 +551,10 @@
 	</game>
 	<game name="farkle" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Farkle (HB, v14)</description>
+		<description>Farkle (HB, v1.0)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Farkle v14 (2026)(Hardhat Warrior).ngp" size="48550" crc="41453ddd"/>
+		<rom name="Farkle v1.0 (2026)(Hardhat Warrior).ngp" size="2097152" crc="398c1e7f"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -637,7 +637,7 @@
 		<description>Gardenia (HB, v1.4)</description>
 		<year>2026</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="6bf8b0aa"/>
+		<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="ef30cb24"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1968,10 +1968,10 @@
 	</game>
 	<game name="sudoku" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Sudoku (HB, v17)</description>
+		<description>Sudoku (HB, v1.0)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Sudoku v17 (2026)(Hardhat Warrior).ngp" size="42717" crc="9d522c5f"/>
+		<rom name="Sudoku v1.0 (2026)(Hardhat Warrior).ngp" size="2097152" crc="e637b177"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -2011,10 +2011,10 @@
 	</game>
 	<game name="tetris" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris (HB, v55)</description>
+		<description>Tetris (HB, v1.0)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Tetris v55 (2026)(Hardhat Warrior).ngp" size="43552" crc="7c0eae1d"/>
+		<rom name="Tetris v1.0 (2026)(Hardhat Warrior).ngp" size="2097152" crc="aff84a8f"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>

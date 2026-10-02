@@ -3677,6 +3677,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bingueros" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Bingueros, Los (Spanish) (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Jordi</manufacturer>
+		<rom name="Bingueros, Los ES 48K (2026)(Jordi).tap" size="29434" crc="d48d5e78"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="biniax" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Biniax 2.0 (128K) (HB)</description>
@@ -13794,10 +13804,10 @@
 	</game>
 	<game name="mrhair" cloneof="mrhairiv" romof="mrhairiv" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Hair Raising Adventures of Mr Hair, The (128K) (HB)</description>
+		<description>Hair Raising Adventures of Mr Hair, The (48K-128K) (HB)</description>
 		<year>2019</year>
 		<manufacturer>Lee Stevenson</manufacturer>
-		<rom name="Hair Raising Adventures of Mr Hair, The 128K (2019)(Lee Stevenson).tap" size="46747" crc="240d58bc"/>
+		<rom name="Hair Raising Adventures of Mr Hair, The 48K-128K (2019)(Lee Stevenson).tap" size="46747" crc="240d58bc"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -13805,10 +13815,10 @@
 	</game>
 	<game name="mrhairiv" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Hair Raising Adventures of Mr Hair, The - Imp. version (128K) (HB)</description>
+		<description>Hair Raising Adventures of Mr Hair, The - Imp. version (48K-128K) (HB)</description>
 		<year>2020-24</year>
 		<manufacturer>MicroChops</manufacturer>
-		<rom name="Hair Raising Adventures of Mr Hair, The - Imp. version 128K (2024)(MicroChops).tap" size="47133" crc="e8c66770"/>
+		<rom name="Hair Raising Adventures of Mr Hair, The - Imp. version 48K-128K (2024)(MicroChops).tap" size="47133" crc="e8c66770"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -13827,10 +13837,10 @@
 	</game>
 	<game name="hairyfly" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Hairy Fly, The (128K) (HB)</description>
+		<description>Hairy Fly, The (48K-128K) (HB)</description>
 		<year>2023</year>
 		<manufacturer>Chopz</manufacturer>
-		<rom name="Hairy Fly, The 128K (2023)(Chopz).tap" size="48184" crc="b1ef3fc2"/>
+		<rom name="Hairy Fly, The 48K-128K (2023)(Chopz).tap" size="48184" crc="b1ef3fc2"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -14496,6 +14506,26 @@
 		<manufacturer>DF Design</manufacturer>
 		<rom name="Hit the Fan 48K (2025)(DF Design).tap" size="45886" crc="631276b4"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hlipacs" cloneof="hlipaen" romof="hlipaen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Hlipa (Czech) (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Kasuha Software</manufacturer>
+		<rom name="Hlipa CS 48K (2026)(Kasuha Software).tap" size="35521" crc="93ec9bcb"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hlipaen" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Hlípa (English) (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Kasuha Software</manufacturer>
+		<rom name="Hlipa EN 48K (2026)(Kasuha Software).tap" size="35506" crc="a2fd8780"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15226,10 +15256,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="impossamole" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Impossamole (128K)</description>
+		<description>Impossamole (48K-128K)</description>
 		<year>1990</year>
 		<manufacturer>Gremlin Graphics</manufacturer>
-		<rom name="Impossamole 128K (1990)(Gremlin Graphics).tap" size="152632" crc="f1c505c7"/>
+		<rom name="Impossamole 48K-128K (1990)(Gremlin Graphics).tap" size="152632" crc="f1c505c7"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -16284,7 +16314,7 @@
 		<description>Jinj 2: Belmonte's Revenge (48K-128K) (HB)</description>
 		<year>2012</year>
 		<manufacturer>RetroWorks</manufacturer>
-		<rom name="Jinj 2 - Belmonte's Revenge 48K-128K (2012)(RetroWorks).tap" size="47956" crc="068ec259"/>
+		<rom name="Jinj 2 - Belmonte's Revenge 48K-128K (2012)(RetroWorks).tzx" size="26568" crc="ede7f3e3"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -16468,10 +16498,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="jonnyquest" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Jonny Quest in Doctor Zin's Underworld (128K)</description>
+		<description>Jonny Quest in Doctor Zin's Underworld (48K-128K)</description>
 		<year>1991</year>
 		<manufacturer>Hi-Tec Software</manufacturer>
-		<rom name="Jonny Quest in Doctor Zin's Underworld 128K (1991)(Hi-Tec).tap" size="54349" crc="d23f2c38"/>
+		<rom name="Jonny Quest in Doctor Zin's Underworld 48K-128K (1991)(Hi-Tec).tzx" size="54468" crc="eec62b89"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -20807,10 +20837,10 @@
 	</game>
 	<game name="mrhair2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Mr Hair &amp; The Fly (128K) (HB)</description>
+		<description>Mr Hair &amp; The Fly (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Bitmap Soft</manufacturer>
-		<rom name="Mr Hair &amp; THE FLY 128K (2021)(BitmapSoft).tap" size="48426" crc="a78da9b2"/>
+		<rom name="Mr Hair &amp; THE FLY 48K-128K (2021)(BitmapSoft).tap" size="48426" crc="a78da9b2"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -20818,10 +20848,10 @@
 	</game>
 	<game name="mrhairkk" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Mr Hair and the Kitty Katakombs (128K) (HB)</description>
+		<description>Mr Hair and the Kitty Katakombs (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>Chopz</manufacturer>
-		<rom name="Mr Hair and the Kitty Katakombs (2022)(Chopz).tap" size="48063" crc="cf8e1e19"/>
+		<rom name="Mr Hair and the Kitty Katakombs 48K-128K (2022)(Chopz).tap" size="48063" crc="cf8e1e19"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -20829,10 +20859,10 @@
 	</game>
 	<game name="mrhair3" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Mr Hair's - A Very Hairy RemiX (128K) (HB)</description>
+		<description>Mr Hair's A Very Hairy RemiX (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>Chopz</manufacturer>
-		<rom name="Mr Hairs A Very Hairy RemiX 128K (2022)(Chopz).tap" size="47052" crc="055ed60b"/>
+		<rom name="Mr Hairs A Very Hairy RemiX 48K-128K (2022)(Chopz).tap" size="47052" crc="055ed60b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -21120,10 +21150,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="mystical" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Mystical (128K)</description>
+		<description>Mystical (48K-128K)</description>
 		<year>1991</year>
 		<manufacturer>Infogrames</manufacturer>
-		<rom name="Mystical 128K (1991)(Infogrames).tap" size="260015" crc="f7df7363"/>
+		<rom name="Mystical 48K-128K (1991)(Infogrames).tap" size="260015" crc="f7df7363"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -21960,6 +21990,27 @@
 		<manufacturer>Oblo</manufacturer>
 		<rom name="O-Cman+ 48K (2025)(Oblo).tap" size="46060" crc="75abbf45"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ohblock128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>O-Hole Block (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Oblo</manufacturer>
+		<rom name="O-Hole Block 128K (2026)(Oblo).tzx" size="43645" crc="d19a3d96"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ohblock48" cloneof="ohblock128" romof="ohblock128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>O-Hole Block (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Oblo</manufacturer>
+		<rom name="O-Hole Block 48K (2026)(Oblo).tzx" size="37832" crc="82e35f37"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -23131,34 +23182,44 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="perilstick" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Perils of Stickman, The (48K) (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Steve Tyson</manufacturer>
+		<rom name="Perils of Stickman, The v1.1 48K (2026)(Steve Tyson).tap" size="35541" crc="de8d0f24"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="perilsofwilly128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Perils of Willy Plus, The (48K-128K) (HB)</description>
+		<year>2024</year>
+		<manufacturer>Highrise</manufacturer>
+		<rom name="Perils of Willy Plus, The 48K-128K (2024)(Highrise).tap" size="41963" crc="954c92c5"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="perilsofwilly48" cloneof="perilsofwilly128" romof="perilsofwilly128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Perils of Willy (48K) (HB)</description>
+		<description>Perils of Willy, The (48K) (HB)</description>
 		<year>2020</year>
 		<manufacturer>Highrise</manufacturer>
-		<rom name="Perils of Willy 48K (2020)(Highrise).tap" size="27718" crc="7d13ca0f"/>
+		<rom name="Perils of Willy, The 48K (2020)(Highrise).tap" size="27718" crc="7d13ca0f"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="perilsofwilly" cloneof="perilsofwilly128" romof="perilsofwilly128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Perils of Willy - Bog Roll Edition (48K) (HB)</description>
+		<description>Perils of Willy, The - Bog Roll Edition (48K) (HB)</description>
 		<year>2020</year>
 		<manufacturer>Highrise</manufacturer>
-		<rom name="Perils of Willy - Bog Roll Edition 48K (2020)(Highrise).tap" size="26968" crc="19e22f49"/>
+		<rom name="Perils of Willy, The - Bog Roll Edition 48K (2020)(Highrise).tap" size="26968" crc="19e22f49"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
-		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="perilsofwilly128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Homebrew</comment>
-		<description>Perils of Willy Plus (128K) (HB)</description>
-		<year>2024</year>
-		<manufacturer>Highrise</manufacturer>
-		<rom name="Perils of Willy Plus 128K (2024)(Highrise).tap" size="41963" crc="954c92c5"/>
-		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
-		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -25400,12 +25461,12 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="rescuerocket" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="rescuerocky" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Rescue Rocket (48K) (HB)</description>
+		<description>Rescue Rocky (48K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>KTB Productions</manufacturer>
-		<rom name="Rescue Rocket 48K (2026)(KTB Productions).tap" size="45453" crc="40e72923"/>
+		<rom name="Rescue Rocky 48K (2026)(KTB Productions).tap" size="45453" crc="40e72923"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -25538,7 +25599,7 @@
 		<description>Riding the Rapids (48K)</description>
 		<year>1987</year>
 		<manufacturer>Players Software</manufacturer>
-		<rom name="Riding the Rapids 48K (1987)(Players Software).tap" size="47675" crc="940cabf6"/>
+		<rom name="Riding the Rapids 48K (1987)(Players Software).tzx" size="47889" crc="7d8b5f50"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -27332,6 +27393,28 @@
 		<manufacturer>Beyond Software</manufacturer>
 		<rom name="Shadowfire 48K (1985)(Beyond Software).tzx" size="46876" crc="7913229c"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shabelialen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Shadows of Belial (English) (128K) (HB)</description>
+		<year>RetroWorks</year>
+		<manufacturer>2026</manufacturer>
+		<rom name="Shadows of Belial EN 128K (2016)(RetroWorks).tap" size="138695" crc="38f3a36d"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shabeliales" cloneof="shabelialen" romof="shabelialen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Shadows of Belial (Spanish) (128K) (HB)</description>
+		<year>RetroWorks</year>
+		<manufacturer>2026</manufacturer>
+		<rom name="Shadows of Belial ES 128K (2026)(RetroWorks).tap" size="139285" crc="febde4af"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -34311,6 +34394,27 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="zeddy128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Zeddy's Clean Sweep (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>zeddy48</manufacturer>
+		<rom name="Zeddy's Clean Sweep 128K (2026)(zeddy48).tap" size="56536" crc="af9b6be9"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zeddy48" cloneof="zeddy128" romof="zeddy128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Zeddy's Clean Sweep (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>zeddy48</manufacturer>
+		<rom name="Zeddy's Clean Sweep 48K (2026)(zeddy48).tap" size="41066" crc="1ba05eb1"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="zedextanks" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Zedex Tanks (128K) (HB, v1.2)</description>
@@ -34725,10 +34829,10 @@
 	</game>
 	<game name="zxtennis" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>ZX Tennis (48K) (HB)</description>
+		<description>ZX Tennis (48K) (HB, v1.2)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="ZX Tennis 48K (2026)(Oldschool Is Beautiful).tap" size="28676" crc="ec136250"/>
+		<rom name="ZX Tennis v1.2 48K (2026)(Oldschool Is Beautiful).tap" size="29544" crc="133a99ce"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

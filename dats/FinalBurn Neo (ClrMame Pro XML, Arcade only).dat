@@ -78053,7 +78053,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="hyxevious" cloneof="sxevious" romof="sxevious" sampleof="xevious" sourcefile="pre90s/d_galaga.cpp">
-		<comment>Hack, High difficulty level hack</comment>
+		<comment>Hack, Normal version</comment>
 		<description>Hyper Xevious (Hack, 2026-09-10)</description>
 		<year>2026</year>
 		<manufacturer>zeroco</manufacturer>
@@ -78079,6 +78079,44 @@
 		<rom name="xvi-10.6e" merge="xvi-10.6e" size="256" crc="3cb60975"/>
 		<rom name="hx_xvi-7.4h" size="512" crc="7c19819e"/>
 		<rom name="hx_xvi-6.4f" size="512" crc="a3a0aba5"/>
+		<rom name="xvi-4.3l" merge="xvi-4.3l" size="512" crc="fd8b9d91"/>
+		<rom name="xvi-5.3m" merge="xvi-5.3m" size="512" crc="bf906d82"/>
+		<rom name="xvi-2.7n" merge="xvi-2.7n" size="256" crc="550f06bc"/>
+		<rom name="xvi-1.5n" merge="xvi-1.5n" size="256" crc="77245b66"/>
+		<sample name="explo1" />
+		<sample name="explo2" />
+		<sample name="explo3" />
+		<sample name="explo4" />
+		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="hyexevious" cloneof="sxevious" romof="sxevious" sampleof="xevious" sourcefile="pre90s/d_galaga.cpp">
+		<comment>Hack, Easy version</comment>
+		<description>Hyper Xevious EZ (Hack, 2026-09-28)</description>
+		<year>2026</year>
+		<manufacturer>zeroco</manufacturer>
+		<rom name="hxe_cpu_3p.rom" size="4096" crc="6fd89621"/>
+		<rom name="hxe_cpu_3m.rom" size="4096" crc="fe415f81"/>
+		<rom name="hxe_xv3_3.2m" size="4096" crc="c5628af4"/>
+		<rom name="hxe_xv3_4.2l" size="4096" crc="ffa45371"/>
+		<rom name="hxe_xv3_5.3f" size="4096" crc="6346838b"/>
+		<rom name="hxe_xv3_6.3j" size="4096" crc="d917118d"/>
+		<rom name="hxe_xvi_7.2c" size="4096" crc="13707e32"/>
+		<rom name="hxe_xvi_12.3b" size="4096" crc="01de9009"/>
+		<rom name="hxe_xvi_13.3c" size="4096" crc="2d15b4f6"/>
+		<rom name="hxe_xvi_14.3d" size="4096" crc="17b87634"/>
+		<rom name="hxe_xvi_15.4m" size="8192" crc="a5b59dcf"/>
+		<rom name="hxe_xvi_18.4r" size="8192" crc="e5d614e4"/>
+		<rom name="xvi_17.4p" merge="xvi_17.4p" size="8192" crc="dfb587ce"/>
+		<rom name="hxe_xvi_16.4n" size="4096" crc="64e83f92"/>
+		<rom name="hxe_xvi_9.2a" size="4096" crc="bdf36d3f"/>
+		<rom name="hxe_xvi_10.2b" size="8192" crc="9802cff9"/>
+		<rom name="hxe_xvi_11.2c" size="4096" crc="a374dece"/>
+		<rom name="xvi-8.6a" merge="xvi-8.6a" size="256" crc="5cc2727f"/>
+		<rom name="xvi-9.6d" merge="xvi-9.6d" size="256" crc="5c8796cc"/>
+		<rom name="xvi-10.6e" merge="xvi-10.6e" size="256" crc="3cb60975"/>
+		<rom name="hxe_xvi-7.4h" size="512" crc="7c19819e"/>
+		<rom name="hxe_xvi-6.4f" size="512" crc="a3a0aba5"/>
 		<rom name="xvi-4.3l" merge="xvi-4.3l" size="512" crc="fd8b9d91"/>
 		<rom name="xvi-5.3m" merge="xvi-5.3m" size="512" crc="bf906d82"/>
 		<rom name="xvi-2.7n" merge="xvi-2.7n" size="256" crc="550f06bc"/>
@@ -172779,6 +172817,33 @@
 		<rom name="sza.11m" merge="sza.11m" size="2097152" crc="aa47a601"/>
 		<rom name="sza.12m" merge="sza.12m" size="2097152" crc="2237bc53"/>
 		<rom name="sfz2alj.key" size="20" crc="4c42320f"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sfz2aldash" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter Zero 2 Alpha Dash / Gold (Hack, RC2)</description>
+		<year>2026</year>
+		<manufacturer>Zer0-NexuS</manufacturer>
+		<rom name="sz2dash.03" size="524288" crc="25779eab"/>
+		<rom name="sz2dash.04" size="524288" crc="737ce842"/>
+		<rom name="szaa.05" merge="szaa.05" size="524288" crc="f053a55e"/>
+		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
+		<rom name="sz2dash.07" size="524288" crc="4e2c92ee"/>
+		<rom name="sz2dash.08" size="524288" crc="cccc750c"/>
+		<rom name="sz2dash.13m" size="4194304" crc="ba450a7e"/>
+		<rom name="sz2dash.15m" size="4194304" crc="df1728ae"/>
+		<rom name="sz2dash.17m" size="4194304" crc="21044cb9"/>
+		<rom name="sz2dash.19m" size="4194304" crc="72234cf0"/>
+		<rom name="sz2dash.14m" size="1048576" crc="445c63d2"/>
+		<rom name="sz2dash.16m" size="1048576" crc="87eff508"/>
+		<rom name="sz2dash.18m" size="1048576" crc="f1d8c9d8"/>
+		<rom name="sz2dash.20m" size="1048576" crc="f874c20e"/>
+		<rom name="sz2dash.01a" size="131072" crc="3bc82c35"/>
+		<rom name="sz2dash.02a" size="131072" crc="f6a8628b"/>
+		<rom name="sz2dash.11m" size="2097152" crc="ce184e92"/>
+		<rom name="sz2dash.12m" size="2097152" crc="08860e2a"/>
+		<rom name="phoenix.key" size="20" crc="2cf772b0"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

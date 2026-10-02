@@ -3367,8 +3367,8 @@
 	<game name="pstrike2" sourcefile="sms/d_sms.cpp">
 		<description>Power Strike II (Euro) ~ GG Aleste II (Japan)</description>
 		<year>1993</year>
-		<manufacturer>Sega</manufacturer>
-		<rom name="Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega).gg" size="262144" crc="09de1528"/>
+		<manufacturer>Sega - Compile</manufacturer>
+		<rom name="Power Strike II - GG Aleste II (Euro, Japan)(1993)(Sega - Compile).gg" size="262144" crc="09de1528"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

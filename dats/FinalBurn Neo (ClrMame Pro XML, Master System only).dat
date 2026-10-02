@@ -1135,10 +1135,10 @@
 	</game>
 	<game name="bubblefight" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew, YM2413 FM sound chip supported</comment>
-		<description>Bubble Fight (HB, v1.1.0)</description>
+		<description>Bubble Fight (HB, v1.2.0)</description>
 		<year>2026</year>
 		<manufacturer>SiRioHD</manufacturer>
-		<rom name="Bubble Fight v1.1.0 (2026)(SiRioHD).sms" size="262144" crc="d07abe60"/>
+		<rom name="Bubble Fight v1.2.0 (2026)(SiRioHD).sms" size="262144" crc="cf50f7e5"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3889,10 +3889,10 @@
 	</game>
 	<game name="mtennis" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Master Tennis (HB)</description>
+		<description>Master Tennis (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Master Tennis (2026)(Oldschool Is Beautiful).sms" size="65536" crc="03afc794"/>
+		<rom name="Master Tennis v1.1 (2026)(Oldschool Is Beautiful).sms" size="65536" crc="d3bc9717"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

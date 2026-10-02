@@ -7514,11 +7514,19 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="gsmikami" sourcefile="snes/d_snes.cpp">
+	<game name="gsmikami" cloneof="gsmikamite" romof="gsmikamite" sourcefile="snes/d_snes.cpp">
 		<description>Ghost Sweeper Mikami: Joreishi wa Nice Body (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Banalex</manufacturer>
 		<rom name="Ghost Sweeper Mikami - Joreishi wa Nice Body (J)(1993)(Banalex).sfc" size="1048576" crc="444c9962"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="gsmikamite" sourcefile="snes/d_snes.cpp">
+		<description>Ghost Sweeper Mikami: The Exorcist with a Nice Body (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>Pizzano</manufacturer>
+		<rom name="Ghost Sweeper Mikami - The Exorcist with a Nice Body T-Eng (2026)(Pizzano).sfc" size="1048576" crc="a381ca79"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
