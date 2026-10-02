@@ -14,10 +14,12 @@ ___________________________________________________________________________
   Copyright (c) 2004,2011 FinalDave (emudave (at) gmail.com)
   Copyright (c) 2005-2011 Gražvydas "notaz" Ignotas (notasas (at) gmail.com)
 
-  This code is licensed under the GNU General Public License version 2.0 and the MAME License.
-  You can choose the license that has the most advantages for you.
+  This code is licensed under the GNU General Public License version 2.0 and the MAME License
+  (from MAME versions prior to 0.172, see License.txt). You can choose the license that has
+  the most advantages for you.
 
-  Homepage: http://code.google.com/p/cyclone68000/
+  Homepage: https://github.com/notaz/cyclone68000/
+            https://code.google.com/p/cyclone68000/
 
 ___________________________________________________________________________
 

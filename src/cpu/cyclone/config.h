@@ -10,16 +10,52 @@
  * If you want Cyclone to make use of newer ARM instructions, enable the
  * options(s) below. You can also override this using make argument:
  *   make HAVE_ARMv6=1
+ * Note: The highest enabled architecture version implicitly enables
+ * all lower versions.
  */
+#ifndef HAVE_ARMv6T2
+#define HAVE_ARMv6T2                0
+#endif
 #ifndef HAVE_ARMv6
 #define HAVE_ARMv6                  1
 #endif
+#ifndef HAVE_ARMv5
+#define HAVE_ARMv5                  0
+#endif
+/*
+ * This option enables indirect call optimizations on ARMv4 targets
+ * which have a 5-stage pipeline with load-use interlocks.
+ * As a side effect, it also allows calling Thumb-mode callbacks.
+ * Generally, this should be enabled on ARM9 or StrongARM targets,
+ * but may be left disabled to reduce code size.
+ * This option is always enabled on ARMv5 and up, which has
+ * no code size trade-off for this optimization.
+ * It also has very little effect if MEMHANDLERS_DIRECT_PREFIX is
+ * enabled, which disables most indirect calls.
+ */
+#ifndef HAVE_ARMv4_ARM9
+#define HAVE_ARMv4_ARM9             0
+#endif
+
+/*
+ * If the following macro is defined, overrides the architecture default
+ * for unaligned data accesses. By default, ARMv6 and up will use
+ * unaligned accesses when fetching 32-bit operands for instructions.
+ * This should be explicitly disabled if the target system has unaligned
+ * access traps enabled, or if unaligned accesses have poor performance.
+ */
+#define HAVE_UNALIGNED_ACCESSES     0
 
 /*
  * If this option is enabled, Microsoft ARMASM compatible output is generated
  * (output file -  Cyclone.asm). Otherwise GNU as syntax is used (Cyclone.s).
  */
 #define USE_MS_SYNTAX               0
+
+/*
+ * If this option is enabled, UAL-compliant syntax is generated.
+ */
+#define USE_UAL_SYNTAX              0
 
 /*
  * Enable this option if you are going to use Cyclone to emulate Genesis /
@@ -37,6 +73,12 @@
  * CycloneRun(), or else it will crash.
  */
 #define COMPRESS_JUMPTABLE          1
+
+/*
+ * If enabled, inlines unrolled division in each DIVU/DIVS opcode handler.
+ * Saves 2 branches per divide, but costs ~1.3k instructions.
+ */
+#define INLINE_UNROLLED_DIV         0
 
 /*
  * Address mask for memory hadlers. The bits set will be masked out of address
@@ -102,8 +144,8 @@
  * Enable this if you need old PC, flags or cycles;
  * or you change cycles in your IrqCallback function.
  */
-#define INT_ACK_NEEDS_STUFF         0
-#define INT_ACK_CHANGES_CYCLES      0
+#define INT_ACK_NEEDS_STUFF         1
+#define INT_ACK_CHANGES_CYCLES      1
 
 /*
  * If enabled, .ResetCallback is called from the context, whenever RESET opcode is
