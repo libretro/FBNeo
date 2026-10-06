@@ -1250,9 +1250,9 @@
 	<game name="argondream" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew, No Sound</comment>
 		<description>Argon Dream (HB)</description>
-		<year>2025</year>
+		<year>2025-26</year>
 		<manufacturer>Johnybot</manufacturer>
-		<rom name="Argon Dream (2025)(Johnybot).nes" size="24592" crc="d4ab5d9c"/>
+		<rom name="Argon Dream (2025-26)(Johnybot).nes" size="40976" crc="192d41c1"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -10100,6 +10100,15 @@
 		<year>2025</year>
 		<manufacturer>RBG Entertainment</manufacturer>
 		<rom name="Hobo Albo's Halloween Adventure v1.5 (2025)(RBG Entertainment).nes" size="524304" crc="889637a6"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="hoboalbohaa" cloneof="hoboalboha" romof="hoboalboha" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Hobo Albo's Halloween Adventure (HB, v1.5, Alt)</description>
+		<year>2025</year>
+		<manufacturer>RBG Entertainment</manufacturer>
+		<rom name="Hobo Albo's Halloween Adventure v1.5 (Alt)(2025)(RBG Entertainment).nes" size="524304" crc="e3f081c6"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -21027,7 +21036,7 @@
 		<description>Super C (USA)</description>
 		<year>1990</year>
 		<manufacturer>Konami</manufacturer>
-		<rom name="Super C (USA)(1990)(Konami).nes" size="262160" crc="ed53852d"/>
+		<rom name="Super C (USA)(1990)(Konami).nes" size="262160" crc="1ac846f0"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

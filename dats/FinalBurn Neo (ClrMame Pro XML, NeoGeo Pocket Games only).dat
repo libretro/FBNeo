@@ -1024,10 +1024,10 @@
 	</game>
 	<game name="minesweep" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Minesweeper (HB, v15)</description>
+		<description>Minesweeper (HB, v1.0)</description>
 		<year>2026</year>
 		<manufacturer>Hardhat Warrior</manufacturer>
-		<rom name="Minesweeper v15 (2026)(Hardhat Warrior).ngp" size="41487" crc="5512e7df"/>
+		<rom name="Minesweeper v1.0 (2026)(Hardhat Warrior).ngp" size="2097152" crc="34d50e35"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1294,10 +1294,10 @@
 	</game>
 	<game name="overrev" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Over Rev (HB)</description>
+		<description>Over Rev (HB, v1.0)</description>
 		<year>2026</year>
 		<manufacturer>Tixul</manufacturer>
-		<rom name="Over Rev (2026)(Tixul).ngp" size="2097152" crc="a381d08a"/>
+		<rom name="Over Rev v1.0 (2026)(Tixul).ngp" size="2097152" crc="41722bb0"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>

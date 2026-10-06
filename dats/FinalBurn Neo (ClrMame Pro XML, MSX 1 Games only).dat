@@ -1455,6 +1455,52 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="avespacial1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Aventura Espacial I, La: Explorando Mundos (Euro, Spanish)</description>
+		<year>1990</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Aventura Espacial I, La - Explorando Mundos (Euro, ES)(1990)(Aventuras AD)(Side A)[RUN'CAS-'].cas" size="50543" crc="0de4c65e"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="avespacial2" cloneof="avespacial1" romof="avespacial1" sourcefile="msx/d_msx.cpp">
+		<comment>Password: CANES VENATICI</comment>
+		<description>Aventura Espacial II, La: En los Dominios del Cerebelo (Euro, Spanish)</description>
+		<year>1990</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Aventura Espacial II, La - En los Dominios del Cerebelo (Euro, ES)(1990)(Aventuras AD)(Side B)[RUN'CAS-'].cas" size="52071" crc="7718bb02"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="avoriginal1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Aventura Original I, La: La Busqueda (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Aventura Original I, La - La Busqueda (Euro, ES)(1989)(Aventuras AD)(Side A)[RUN'CAS-'].cas" size="50440" crc="9d5aeb55"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="avoriginal2" cloneof="avoriginal1" romof="avoriginal1" sourcefile="msx/d_msx.cpp">
+		<comment>Password: TIMACUS</comment>
+		<description>Aventura Original II, La: El Encuentro (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Aventura Original II, La - El Encuentro (Euro, ES)(1989)(Aventuras AD)(Side B)[RUN'CAS-'].cas" size="53944" crc="eeac4cca"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="averno" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Averno (Euro, Spanish)</description>
 		<year>1989</year>
@@ -3899,6 +3945,29 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="chichenitza1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Chichen Itza - Part 1 (Euro, Spanish)</description>
+		<year>1992</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Chichen Itza - Part 1 (Euro, ES)(1992)(Aventuras AD)(Side A)[RUN'CAS-'].cas" size="58151" crc="06b447ba"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="chichenitza2" cloneof="chichenitza1" romof="chichenitza1" sourcefile="msx/d_msx.cpp">
+		<comment>Password: RICO PAPASITO</comment>
+		<description>Chichen Itza - Part 2 (Euro, Spanish)</description>
+		<year>1992</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Chichen Itza - Part 2 (Euro, ES)(1992)(Aventuras AD)(Side B)[RUN'CAS-'].cas" size="51111" crc="d1e12c88"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="chickfighter" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Chick Fighter ~ Hiyoko Fighter (Japan)</description>
 		<year>1983</year>
@@ -5517,6 +5586,30 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cozumel1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Diosa de Cozumel, La - Part 1 (Euro, Spanish)</description>
+		<year>1990</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Diosa de Cozumel, La - Part 1 (Euro, ES)(1990)(Aventuras AD)(Side A)[RUN'CAS-'].cas" size="61338" crc="a97f3695"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cozumel2" cloneof="cozumel1" romof="cozumel1" sourcefile="msx/d_msx.cpp">
+		<comment>To start Part 2 change tape to Side B and enter PARTE2</comment>
+		<description>Diosa de Cozumel, La - Part 2 (Euro, Spanish)</description>
+		<year>1990</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Diosa de Cozumel, La - Part 2 (Euro, ES)(1990)(Aventuras AD)(Side B)[RUN'CAS-'].cas" size="60916" crc="158b94e7"/>
+		<rom name="Diosa de Cozumel, La - Part 2 (Euro, ES)(1990)(Aventuras AD)(PARTE2)[RUN'CAS-'].cas" size="554" crc="d5a4b94f"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dipdip" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Dip Dip (Euro, Spanish)</description>
 		<year>1985</year>
@@ -5612,6 +5705,18 @@
 		<year>1985</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Doki Doki Penguin Land (Japan, Alt)(1985)(Sega).rom" size="32768" crc="de4af7f6"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="quijote" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Password Part 2: EL INGENIOSO HIDALGO</comment>
+		<description>Don Quijote (Spanish) (HB)</description>
+		<year>2026</year>
+		<manufacturer>FX Software</manufacturer>
+		<rom name="Don Quijote ES (2026)(FX Software).rom" size="327680" crc="8614a193"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -8108,6 +8213,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gvajillas" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Password Part 2: SPIELBERG</comment>
+		<description>Guerra de las Vajillas, La (Spanish) (HB)</description>
+		<year>2019</year>
+		<manufacturer>FX Software</manufacturer>
+		<rom name="Guerra de las Vajillas, La ES (2019)(FX Software).rom" size="327680" crc="47dcd091"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gulkave" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Gulkave (Japan)</description>
 		<year>1986</year>
@@ -9350,6 +9467,29 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="jabato2" cloneof="jabato1" romof="jabato1" sourcefile="msx/d_msx.cpp">
+		<comment>Password: INEXES LOXIKO</comment>
+		<description>Jabato en Africa (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Jabato en Africa (Euro, ES)(1989)(Aventuras AD)(Side B)[RUN'CAS-'].cas" size="57339" crc="4f12b6be"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="jabato1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Jabato vs Imperio: Libertad (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Jabato vs Imperio - Libertad (Euro, ES)(1989)(Aventuras AD)(Side A)[RUN'CAS-'].cas" size="56255" crc="74c8abe0"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="nipper" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Jack the Nipper (Euro)</description>
 		<year>1986</year>
@@ -9762,6 +9902,17 @@
 		<year>1984</year>
 		<manufacturer>HAL Laboratory</manufacturer>
 		<rom name="Karamaru - Chindou Chuu (Japan)(1984)(HAL Laboratory).rom" size="16384" crc="12be29fc"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kerulenlospetas" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Ke rulen los petas (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Iber Software</manufacturer>
+		<rom name="Ke rulen los petas (Euro, ES)(1989)(Iber Software)[RUN'CAS-'].cas" size="63618" crc="fa3e99ae"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -10704,6 +10855,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="legend" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Passwords: Part IV: AL ARUTNEVA AUNITNOC / Part V: ASI ACABA LA LEYENDA</comment>
+		<description>Legend (Spanish) (HB)</description>
+		<year>2019</year>
+		<manufacturer>FX Software</manufacturer>
+		<rom name="Legend ES (2019)(FX Software).rom" size="524288" crc="04936f9a"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="legendk" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Legendly Knight ~ Daemaseong (Korea)</description>
 		<year>1988</year>
@@ -11310,6 +11473,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mantis" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Mantis 1 &amp; 2 (Spanish) (HB)</description>
+		<year>2021</year>
+		<manufacturer>FX Software</manufacturer>
+		<rom name="Mantis 1 &amp; 2 ES (2021)(FX Software).rom" size="327680" crc="f463a7eb"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mappy" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Mappy (Japan)</description>
 		<year>1984</year>
@@ -11588,6 +11763,18 @@
 		<year>2015</year>
 		<manufacturer>Oscar Toledo Gutierrez</manufacturer>
 		<rom name="Mecha 9 (2015)(Oscar Toledo Gutierrez).rom" size="131072" crc="a29176e3"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="megacorp" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Password Part 2: REBECA</comment>
+		<description>Mega-Corp (Spanish) (HB)</description>
+		<year>2024</year>
+		<manufacturer>FX Software</manufacturer>
+		<rom name="Mega-Corp ES (2024)(FX Software).rom" size="327680" crc="5a1f057b"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -18253,6 +18440,29 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sagradosp1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Templos Sagrados, Los - Part 1 (Euro, Spanish)</description>
+		<year>1991</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Templos Sagrados, Los - Part 1 (Euro, ES)(1991)(Aventuras AD)(Side A)[RUN'CAS-'].cas" size="54497" crc="ef299ea8"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sagradosp2" cloneof="sagradosp1" romof="sagradosp1" sourcefile="msx/d_msx.cpp">
+		<comment>Password: TUR KOS BON</comment>
+		<description>Templos Sagrados, Los - Part 2 (Euro, Spanish)</description>
+		<year>1991</year>
+		<manufacturer>Aventuras AD</manufacturer>
+		<rom name="Templos Sagrados, Los - Part 2 (Euro, ES)(1991)(Aventuras AD)(Side B)[RUN'CAS-'].cas" size="50065" crc="04a90ad0"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="temptations" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Temptations (Euro, Spanish)</description>
 		<year>1988</year>
@@ -19173,10 +19383,10 @@
 	</game>
 	<game name="turtles" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew, Porting of a Odyssey2 game</comment>
-		<description>Turtles (HB)</description>
+		<description>Turtles (HB, v2)</description>
 		<year>2026</year>
 		<manufacturer>adlroc</manufacturer>
-		<rom name="Turtles (2026)(adlroc).rom" size="32768" crc="d047bf40"/>
+		<rom name="Turtles v2 (2026)(adlroc).rom" size="32768" crc="8e6334d2"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -19511,6 +19721,18 @@
 		<year>1989</year>
 		<manufacturer>Topo Soft</manufacturer>
 		<rom name="Viaje al Centro de la Tierra (Euro, ES)(1989)(Topo Soft)[RUN'CAS-'].cas" size="139146" crc="aeae84ea"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="viajecentroe" cloneof="viajecentro" romof="viajecentro" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew, Passwords: Fase 2: EVAMARIASEFUE / Fase 3: LOU REED / Fase 4: MEGADETH / Fase 5: KREATOR</comment>
+		<description>Viaje al Centro de la Tierra - Version Extendida (Spanish) (HB, v1.3)</description>
+		<year>2017</year>
+		<manufacturer>Topo Siglo XXI - FX Software</manufacturer>
+		<rom name="Viaje al Centro de la Tierra - Version Extendida v1.3 ES (2017)(Topo Siglo XXI - FX Software)[RUN'CAS-'].cas" size="193480" crc="69246d1b"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -20454,6 +20676,29 @@
 		<year>1985</year>
 		<manufacturer>dB-Soft</manufacturer>
 		<rom name="Zexas Limited (Japan, Alt 1)(1985)(dB-Soft).rom" size="32768" crc="01a73292"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zipiyzape1" romof="msx" sourcefile="msx/d_msx.cpp">
+		<description>Zipi y Zape - Part 1 (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Dro Soft</manufacturer>
+		<rom name="Zipi y Zape - Part 1 (Euro, ES)(1989)(Dro Soft)(Side A)[RUN'CAS-'].cas" size="35224" crc="7061c0ca"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zipiyzape2" cloneof="zipiyzape1" romof="zipiyzape1" sourcefile="msx/d_msx.cpp">
+		<comment>Password: tito</comment>
+		<description>Zipi y Zape - Part 2 (Euro, Spanish)</description>
+		<year>1989</year>
+		<manufacturer>Dro Soft</manufacturer>
+		<rom name="Zipi y Zape - Part 2 (Euro, ES)(1989)(Dro Soft)(Side B)[RUN'CAS-'].cas" size="36065" crc="5baf3c84"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>

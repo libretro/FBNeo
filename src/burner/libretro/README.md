@@ -133,15 +133,18 @@ It also requires usage of specific romsets, meaning the rom must have the expect
 
 You can use specific folder's name for detection, it's the easiest and recommended method, especially if you are using RetroArch playlists or if your device is not compatible with subsystems (android and consoles) :
 
+* Bally Astrocade : `astro` | `astrohome` | `astrocade`
 * CBS ColecoVision : `coleco` | `colecovision`
 * Fairchild ChannelF : `chf` | `channelf`
 * MSX 1 : `msx` | `msx1`
 * Nec PC-Engine : `pce` | `pcengine`
+* Nec PC-Engine CD : `pcecd`
 * Nec SuperGrafX : `sgx` | `supergrafx`
 * Nec TurboGrafx-16 : `tg16`
 * Nintendo Entertainment System : `nes`
 * Nintendo Family Disk System : `fds`
 * Super Nintendo Entertainment System : `snes`
+* Nintendo Game Boy Advance : `gba`
 * Sega GameGear : `gamegear`
 * Sega Master System : `sms` | `mastersystem`
 * Sega Megadrive : `megadriv` | `megadrive` | `genesis`
@@ -152,15 +155,18 @@ You can use specific folder's name for detection, it's the easiest and recommend
 
 You can also emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension in the command line, or adding the `--subsystem XXX` argument, here is the list of available prefixes :
 
+* Bally Astrocade : `astro`
 * CBS ColecoVision : `cv`
 * Fairchild ChannelF : `chf`
 * MSX 1 : `msx`
 * Nec PC-Engine : `pce`
+* Nec PC-Engine CD : `pcecd`
 * Nec SuperGrafX : `sgx`
 * Nec TurboGrafx-16 : `tg`
 * Nintendo Entertainment System : `nes`
 * Nintendo Family Disk System : `fds`
 * Super Nintendo Entertainment System : `snes`
+* Nintendo Game Boy Advance : `gba`
 * Sega GameGear : `gg`
 * Sega Master System : `sms`
 * Sega Megadrive : `md`
@@ -181,12 +187,12 @@ The following bios romsets are required for some of the emulated arcade systems 
 
 | Romset name | Note                                       |
 |-------------|--------------------------------------------|
+| atarisy1    | Atari System 1 BIOS                        |
 | bubsys      | Bubble System BIOS                         |
 | cchip       | C-Chip Internal ROM                        |
 | decocass    | DECO Cassette System BIOS                  |
 | isgsm       | ISG Selection Master Type 2006 System BIOS |
 | midssio     | Midway SSIO Sound Board Internal ROM       |
-| msx         | MSX1 System BIOS                           |
 | namcoc69    | Namco C69 BIOS                             |
 | namcoc70    | Namco C70 BIOS                             |
 | namcoc75    | Namco C75 BIOS                             |
@@ -200,6 +206,7 @@ The following bios romsets are required for some of the emulated non-arcade syst
 
 | Romset name | Note                     |
 |-------------|--------------------------|
+| astrocde    | Bally Astrocade BIOS     |
 | channelf    | Fairchild Channel F BIOS |
 | coleco      | ColecoVision System BIOS |
 | dsp1        | SNES DSP-1               |
@@ -208,6 +215,8 @@ The following bios romsets are required for some of the emulated non-arcade syst
 | dsp3        | SNES DSP-3               |
 | dsp4        | SNES DSP-4               |
 | fdsbios     | FDS System BIOS          |
+| gba         | Game Boy Advance BIOS    |
+| msx         | MSX1 System BIOS         |
 | neocdz      | Neo Geo CDZ System BIOS  |
 | ngp         | NeoGeo Pocket BIOS       |
 | spectrum    | ZX Spectrum BIOS         |
@@ -215,72 +224,19 @@ The following bios romsets are required for some of the emulated non-arcade syst
 | spec1282a   | ZX Spectrum 128 +2a BIOS |
 | st010       | SNES Seta ST010          |
 | st011       | SNES Seta ST011          |
+| st018       | SNES Seta ST018          |
+| scdsys      | PCE CD BIOS              |
 
 ## Samples
 
 Samples should be put under `SYSTEM_DIRECTORY/fbneo/samples`.
 
-Here is a list of samples currently in use :
+You can get the list of samples (and download some of them) [here](https://wiki.neo-source.com/downloads).
 
-| Sample name  | Note                                                                   |
-|--------------|------------------------------------------------------------------------|
-| ad59mc07     | Known as `equites` in MAME                                             |
-| blockade     |                                                                        |
-| buckrog      |                                                                        |
-| carnival     |                                                                        |
-| cheekyms     | Not from MAME                                                          |
-| circus       |                                                                        |
-| congo        |                                                                        |
-| crash        |                                                                        |
-| deathnlead   | Not from MAME, megadrive                                               |
-| depthch      |                                                                        |
-| digger       | Not from MAME                                                          |
-| dkong        |                                                                        |
-| dkongjr      |                                                                        |
-| donpachi     | Not from MAME, optional, replace OG music by HQ music, requires dipsw. |
-| elim2        |                                                                        |
-| fantasy      |                                                                        |
-| galaga       |                                                                        |
-| gaplus       |                                                                        |
-| gridlee      |                                                                        |
-| heiankyo     | Not from MAME                                                          |
-| invaders     |                                                                        |
-| invds        | Not from MAME                                                          |
-| invinco      |                                                                        |
-| journey      |                                                                        |
-| mario        |                                                                        |
-| mmagic       |                                                                        |
-| natodef      |                                                                        |
-| nitedrvr     | Not from MAME                                                          |
-| nsub         |                                                                        |
-| paprium      | Not from MAME, megadrive, huge usage of disk space and ram (2.1GB)     |
-| qbert        |                                                                        |
-| radarscp     | Not from MAME                                                          |
-| rallyx       |                                                                        |
-| ripcord      |                                                                        |
-| robotbwl     |                                                                        |
-| safarir      |                                                                        |
-| sasuke       |                                                                        |
-| seawolf      |                                                                        |
-| sfz3mix      | Not from MAME, optional, replace OG music by HQ music, no dipsw.       |
-| sharkatt     |                                                                        |
-| sidetrac     | Not from MAME                                                          |
-| sot4w        | Not from MAME, megadrive                                               |
-| spacefb      |                                                                        |
-| spacfury     |                                                                        |
-| stinger      | Not from MAME                                                          |
-| subroc3d     |                                                                        |
-| targ         |                                                                        |
-| thehand      |                                                                        |
-| thief        |                                                                        |
-| tr606drumkit | Not from MAME                                                          |
-| turbo        |                                                                        |
-| twotiger     |                                                                        |
-| vanguard     |                                                                        |
-| xevious      |                                                                        |
-| zaxxon       |                                                                        |
-| zektor       |                                                                        |
-| zerohour     |                                                                        |
+Notes:
+* `donpachi` replaces original chip tune by high quality OST, it requires to be enabled in dipswitches.
+* `sfz3mix` replaces original chip tune by high quality OST.
+* `paprium` uses a lot of disk space and ram, you might need to set the `Song Preload` dipswitch to `On Demand` if your device lacks memory.
 
 ## Hiscores
 
@@ -391,10 +347,16 @@ Your hardware is probably too slow to run the game with your current settings. T
 * Try setting a value for frameskip in core options (note : "Fixed" frameskip is recommended, the other methods don't seem to be nearly as reliable).
 * Try lowering CPU clock in core options (note : some games don't support this feature).
 * Try lowering audio settings in the core options.
-* With m68k games (most boards from the late 80s and early 90s) on arm platforms, you can try enabling cyclone in core options, however this is really a last resort since some games won't work properly with this, furthermore it's causing savestates incompatibilities.
+* With m68k games (most boards from the late 80s and early 90s) on arm platforms, you can try enabling cyclone in core options as a last resort.
 * If it is not enough, upgrade/overclock your hardware, or use another core.
 
 We won't accept requests for "making the core faster", as far as we are concerned this core has a good balance between accuracy & speed, and for the most part will already run really well on low-end devices (rpi3, ...).
+
+Additional notes about cyclone:
+It is a dynamic recompiler for emulating the m68k cpu on arm 32-bits platform.
+Some games won't work with it, furthermore it's causing savestates incompatibilities.
+It is meant for older and ultra-low-end arm devices (the likes of rpi1), other arm devices really shouldn't use this (generally they are 64-bits hence can't).
+It is mostly unsupported (standalone and other platforms don't use this), so use it at your own risk. **Don't report issues if you are using it.**
 
 ### Why does game XXX have choppy sound ?
 
@@ -405,16 +367,15 @@ Most likely for the same reason as above.
 Overall, FBNeo is slower than old MAME version, because it's more accurate, meaning graphics, sound and gameplay are more likely to be faithful to the real machine.
 This libretro port also supports various features which are usually buggy or totally missing in MAME cores (runahead, netplay, rewind, retroachievements, ...), those features might require additional resources.
 
-### How do i launch a neogeo CD game ?
+### How do i launch a CD game ?
 
 There are several things to know :
 
 * You need to follow the instructions about [emulating consoles](#emulating-consoles-and-computers)
-* You need a copy of the `neocdz.zip` and `neogeo.zip` bioses
-* The supported format is single file MODE1/2352 cue/bin (the format where there is one .cue file with one single .bin file). Use "CDmage" to convert your dump if needed. **It must not be compressed**
+* You need the corresponding bioses in your FBNeo bios folder : `neocdz.zip` and `neogeo.zip` for neogeo CD, `scdsys.zip` for PCE CD
+* The image must not be compressed
 
-You can convert your unsupported dumps by following this tutorial :
-
+As of august 2026, all image formats should be supported, previously you needed a MODE1/2352 DAO dump (one .cue file and **one** .bin file), with the following known method for converting them :
 * Get [CDMage 1.02.1 (beta)](https://www.videohelp.com/software/CDMage) (freeware & no ads). **Don't get CDMage 1.01.5, it doesn't have the "Save As" function**
 * File > Open > select your dump (NB : always choose the .cue file if there is one)
 * File > Save As > write the name of your new file
@@ -524,6 +485,7 @@ Open your `retroarch.cfg` file and look for `system_directory`, or check `Settin
 
 - [Official FBNeo forum](https://neo-source.com/)
 - [Official FBNeo github repository](https://github.com/finalburnneo/FBNeo)
+- [Wiki and game list](https://wiki.neo-source.com/)
 - [Libretro FBNeo github repository](https://github.com/libretro/FBNeo)
 - [[GUIDE] Setting up RetroArch playlists with FBNeo](https://neo-source.com/index.php?topic=3725.0)
 - [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfsAHeGqGD-DkRzI87q7V_Q)

@@ -23331,6 +23331,30 @@
 		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bupacman" cloneof="puckman" romof="puckman" sourcefile="pre90s/d_pacman.cpp">
+		<comment>Hack</comment>
+		<description>Busy Pac-Man (Hack)</description>
+		<year>2026</year>
+		<manufacturer>zeroco</manufacturer>
+		<rom name="bupm1_prg1.6e" size="2048" crc="292c2004"/>
+		<rom name="bupm1_prg2.6k" size="2048" crc="bc02ee74"/>
+		<rom name="bupm1_prg3.6f" size="2048" crc="5a3d2bc0"/>
+		<rom name="bupm1_prg4.6m" size="2048" crc="1e878c6e"/>
+		<rom name="pm1_prg5.6h" merge="pm1_prg5.6h" size="2048" crc="6bf4f625"/>
+		<rom name="bupm1_prg6.6n" size="2048" crc="ada07b4d"/>
+		<rom name="bupm1_prg7.6j" size="2048" crc="32a1f575"/>
+		<rom name="bupm1_prg8.6p" size="2048" crc="31159185"/>
+		<rom name="bupm1_chg1.5e" size="2048" crc="3624374b"/>
+		<rom name="pm1_chg2.5h" merge="pm1_chg2.5h" size="2048" crc="3591b89d"/>
+		<rom name="bupm1_chg3.5f" size="2048" crc="2a05a00f"/>
+		<rom name="pm1_chg4.5j" merge="pm1_chg4.5j" size="2048" crc="1b1d9096"/>
+		<rom name="bupm1-1.7f" size="32" crc="76631e65"/>
+		<rom name="bupm1-4.4a" size="256" crc="4d111f36"/>
+		<rom name="pm1-3.1m" merge="pm1-3.1m" size="256" crc="a9cc86bf"/>
+		<rom name="pm1-2.3m" merge="pm1-2.3m" size="256" crc="77245b66"/>
+		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="dogfgtj" cloneof="dogfgt" romof="dogfgt" sourcefile="pre90s/d_dogfgt.cpp">
 		<description>But-ten Ohara's Suit-Cha Luck-a Dog-Fight (Japan)</description>
 		<year>1984</year>
@@ -123619,6 +123643,45 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="outrungb" cloneof="outrun" romof="outrun" sourcefile="sega/d_outrun.cpp">
+		<comment>Hack</comment>
+		<description>Out Run Gumball Edition (Hack)</description>
+		<year>2026</year>
+		<manufacturer>niknak</manufacturer>
+		<rom name="gb-epr-10380b.133" size="65536" crc="dc34c0e7"/>
+		<rom name="gb-epr-10382b.118" size="65536" crc="d8023805"/>
+		<rom name="gb-epr-10381b.132" size="65536" crc="d452b797"/>
+		<rom name="gb-epr-10383b.117" size="65536" crc="decbe6af"/>
+		<rom name="gb-epr-10327a.76" size="65536" crc="ed700498"/>
+		<rom name="gb-epr-10329a.58" size="65536" crc="beaec603"/>
+		<rom name="epr-10328a.75" merge="epr-10328a.75" size="65536" crc="d5ec5e5d"/>
+		<rom name="epr-10330a.57" merge="epr-10330a.57" size="65536" crc="ba9ec82a"/>
+		<rom name="gb-opr-10268.99" size="32768" crc="85fd8460"/>
+		<rom name="opr-10232.102" merge="opr-10232.102" size="32768" crc="776ba1eb"/>
+		<rom name="gb-opr-10267.100" size="32768" crc="fe365eb7"/>
+		<rom name="opr-10231.103" merge="opr-10231.103" size="32768" crc="8908bcbf"/>
+		<rom name="gb-opr-10266.101" size="32768" crc="84ab6c2f"/>
+		<rom name="opr-10230.104" merge="opr-10230.104" size="32768" crc="686f5e50"/>
+		<rom name="mpr-10371.9" merge="mpr-10371.9" size="131072" crc="7cc86208"/>
+		<rom name="mpr-10373.10" merge="mpr-10373.10" size="131072" crc="b0d26ac9"/>
+		<rom name="mpr-10375.11" merge="mpr-10375.11" size="131072" crc="59b60bd7"/>
+		<rom name="mpr-10377.12" merge="mpr-10377.12" size="131072" crc="17a1b04a"/>
+		<rom name="mpr-10372.13" merge="mpr-10372.13" size="131072" crc="b557078c"/>
+		<rom name="mpr-10374.14" merge="mpr-10374.14" size="131072" crc="8051e517"/>
+		<rom name="mpr-10376.15" merge="mpr-10376.15" size="131072" crc="f3b8f318"/>
+		<rom name="mpr-10378.16" merge="mpr-10378.16" size="131072" crc="a1062984"/>
+		<rom name="opr-10186.47" merge="opr-10186.47" size="32768" crc="22794426"/>
+		<rom name="opr-10185.11" merge="opr-10186.47" size="32768" crc="22794426"/>
+		<rom name="gb-epr-10187.88" size="32768" crc="e8639f00"/>
+		<rom name="opr-10193.66" merge="opr-10193.66" size="32768" crc="bcd10dde"/>
+		<rom name="opr-10192.67" merge="opr-10192.67" size="32768" crc="770f1270"/>
+		<rom name="opr-10191.68" merge="opr-10191.68" size="32768" crc="20a284ab"/>
+		<rom name="opr-10190.69" merge="opr-10190.69" size="32768" crc="7cab70e2"/>
+		<rom name="opr-10189.70" merge="opr-10189.70" size="32768" crc="01366b54"/>
+		<rom name="opr-10188.71" merge="opr-10188.71" size="32768" crc="bad30ad9"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="outzoneh" cloneof="outzone" romof="outzone" sourcefile="toaplan/d_toaplan1.cpp">
 		<description>Out Zone (harder)</description>
 		<year>1990</year>
@@ -166560,6 +166623,32 @@
 		<rom name="bprg1.11d" merge="bprg1.11d" size="279" crc="31793da7"/>
 		<rom name="ioc1.ic7" merge="ioc1.ic7" size="260" crc="a399772d"/>
 		<rom name="c632.ic1" merge="c632.ic1" size="279" crc="0fbd9270"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sf2bs" cloneof="sf2ce" romof="sf2ce" sourcefile="capcom/d_cps1.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter II': BONUS STAGE (Hack)</description>
+		<year>2026</year>
+		<manufacturer>zeroco</manufacturer>
+		<rom name="bs92e_23b.8f" size="524288" crc="3e74960a"/>
+		<rom name="bs92_22b.7f" size="524288" crc="c2a6dfb2"/>
+		<rom name="bs92_21a.6f" size="524288" crc="c0c44499"/>
+		<rom name="s92_01.bin" merge="s92-1m.3a" size="524288" crc="03b0d852"/>
+		<rom name="s92_02.bin" merge="s92-3m.5a" size="524288" crc="840289ec"/>
+		<rom name="s92_03.bin" merge="s92-2m.4a" size="524288" crc="cdb5f027"/>
+		<rom name="s92_04.bin" merge="s92-4m.6a" size="524288" crc="e2799472"/>
+		<rom name="s92_05.bin" merge="s92-5m.7a" size="524288" crc="ba8a2761"/>
+		<rom name="s92_06.bin" merge="s92-7m.9a" size="524288" crc="e584bfb5"/>
+		<rom name="s92_07.bin" merge="s92-6m.8a" size="524288" crc="21e3f87d"/>
+		<rom name="s92_08.bin" merge="s92-8m.10a" size="524288" crc="befc47df"/>
+		<rom name="s92_10.bin" merge="s92-10m.3c" size="524288" crc="960687d5"/>
+		<rom name="s92_11.bin" merge="s92-12m.5c" size="524288" crc="978ecd18"/>
+		<rom name="s92_12.bin" merge="s92-11m.4c" size="524288" crc="d6ec9a0a"/>
+		<rom name="s92_13.bin" merge="s92-13m.6c" size="524288" crc="ed2c67f6"/>
+		<rom name="s92_09.bin" merge="s92_09.11a" size="65536" crc="08f6b60e"/>
+		<rom name="s92_18.bin" merge="s92_18.11c" size="131072" crc="7f162009"/>
+		<rom name="s92_19.bin" merge="s92_19.12c" size="131072" crc="beade53f"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

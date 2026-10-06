@@ -16,6 +16,7 @@ SUPPORT_LARGE_FILES       := 1
 
 ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
   HAVE_NEON               := 1
+  USE_CYCLONE             := 1
   # see https://github.com/finalburnneo/FBNeo/issues/2201
   SUPPORT_LARGE_FILES     := 0
 endif

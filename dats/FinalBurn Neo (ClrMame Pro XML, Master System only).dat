@@ -1418,6 +1418,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="chuckieegg" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Chuckie Egg Remake (HB)</description>
+		<year>2026</year>
+		<manufacturer>Flying Carpet</manufacturer>
+		<rom name="Chuckie Egg Remake (2026)(Flying Carpet).sms" size="32768" crc="846b823f"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="circuit" cloneof="worldgp" romof="worldgp" sourcefile="sms/d_sms.cpp">
 		<description>Circuit, The (Japan)</description>
 		<year>1986</year>
@@ -1618,7 +1627,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="datastorm10" sourcefile="sms/d_sms.cpp">
+	<game name="datastorm" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
 		<description>Data Storm (HB)</description>
 		<year>2016</year>
@@ -2268,10 +2277,10 @@
 	</game>
 	<game name="flashback" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Flashback (HB, v0.0.5)</description>
+		<description>Flashback (HB, v0.0.7)</description>
 		<year>2026</year>
 		<manufacturer>haroldo-ok</manufacturer>
-		<rom name="Flashback v0.0.5 (2026)(haroldo-ok).sms" size="4194304" crc="9cb9e457"/>
+		<rom name="Flashback v0.0.7 (2026)(haroldo-ok).sms" size="4194304" crc="b2f984c8"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -6183,11 +6192,11 @@
 	</game>
 	<game name="smb" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew, YM2413 FM sound chip supported</comment>
-		<description>Super Mario Bros. (HB, v1.00)</description>
+		<description>Super Mario Bros. (HB, v1.10)</description>
 		<year>2026</year>
 		<manufacturer>Lack of Track</manufacturer>
-		<rom name="Super Mario Bros. v1.00 (2026)(Lack of Track).sms" size="262144" crc="5a74f2b6"/>
-		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<rom name="Super Mario Bros. v1.10 (2026)(Lack of Track).sms" size="262144" crc="cf970915"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="smgp" sourcefile="sms/d_sms.cpp">
@@ -6468,6 +6477,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="tempest2k" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Tempest 2K (HB, v0.0.1)</description>
+		<year>2026</year>
+		<manufacturer>haroldo-ok</manufacturer>
+		<rom name="Tempest 2K v0.0.1 (2026)(haroldo-ok).sms" size="4194304" crc="70786af5"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="tempojrgg2sms" sourcefile="sms/d_sms.cpp">
 		<comment>Hack</comment>
 		<description>Tempo Jr. (Hack, GG2SMS Conversion)</description>
@@ -6555,10 +6573,10 @@
 	</game>
 	<game name="tetris4gg" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris4GG (HB)</description>
+		<description>Tetris4GG (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Armix</manufacturer>
-		<rom name="Tetris4GG (2026)(Armix).sms" size="131072" crc="549390e6"/>
+		<rom name="Tetris4GG v1.1 (2026)(Armix).sms" size="131072" crc="93d2a287"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

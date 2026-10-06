@@ -171,6 +171,14 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="atetris" sourcefile="megadrive/d_megadrive.cpp">
+		<description>A-Tetris (HB, Alfa)</description>
+		<year>2026</year>
+		<manufacturer>Amiguetes Soft</manufacturer>
+		<rom name="A-Tetris Alfa (2026)(Amiguetes Soft).bin" size="3919872" crc="4976dd17"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="aaharima" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Aa Harimanada (Japan)</description>
 		<year>1993</year>
@@ -192,6 +200,15 @@
 		<year>1995</year>
 		<manufacturer>Viacom New Media</manufacturer>
 		<rom name="AAAHH!!! Real Monsters (USA)(1995)(Viacom New Media).bin" size="2097152" crc="fdc80bfc"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="abadcrim" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew, Very early beta: bugs expected</comment>
+		<description>Abadia del crimen, La (HB, Beta)</description>
+		<year>2026</year>
+		<manufacturer>Amiguetes Soft</manufacturer>
+		<rom name="Abadia del crimen, La Beta (2026)(Amiguetes Soft).bin" size="4063232" crc="041cda39"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -2334,10 +2351,10 @@
 	</game>
 	<game name="blacktiger" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Black Tiger (HB, v1.6)</description>
+		<description>Black Tiger (HB, v1.7)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Black Tiger v1.6 (2026)(rester159).bin" size="4194304" crc="b6058ed5"/>
+		<rom name="Black Tiger v1.7 (2026)(rester159).bin" size="4194304" crc="db4db4b9"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3949,6 +3966,15 @@
 		<year>1990</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Columns (World, v1.1)(1990)(Sega).bin" size="131072" crc="d783c244"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="columns2" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Columns II: The Voyage Through Time (HB)</description>
+		<year>2026</year>
+		<manufacturer>Master Linkuei</manufacturer>
+		<rom name="Columns II - The Voyage Through Time (2026)(Master Linkuei).bin" size="524288" crc="93dc3280"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -7524,6 +7550,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="fazathoth" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Flowers of Azathoth (HB)</description>
+		<year>2026</year>
+		<manufacturer>Mike Daw</manufacturer>
+		<rom name="Flowers of Azathoth (2026)(Mike Daw).bin" size="262144" crc="e0621243"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="flux" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Flux (Euro)</description>
 		<year>199?</year>
@@ -9192,6 +9227,15 @@
 		<year>1994</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Hyper Dunk - The Playoff Edition (Japan, Proto)(1994)(Konami).in" size="2097152" crc="db124bbb"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sidearms" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Hyper Dyne Side Arms (HB, v1.3)</description>
+		<year>2026</year>
+		<manufacturer>rester159</manufacturer>
+		<rom name="Hyper Dyne Side Arms v1.3 (2026)(rester159).bin" size="2621440" crc="960da98b"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18857,6 +18901,15 @@
 		<year>1994</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Soleil (Euro, Spanish)(1994)(Sega).bin" size="2097152" crc="9ed4c323"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="somalipirates" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Somali Pirates (HB, 20261003)</description>
+		<year>2026</year>
+		<manufacturer>4D Lix</manufacturer>
+		<rom name="Somali Pirates 20261003 (2026)(4D Lix).bin" size="4194304" crc="4005ecc0"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
