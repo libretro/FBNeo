@@ -38021,6 +38021,24 @@ struct BurnDriver BurnDrvmd_2048 = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Abadía del crimen, La (HB, Beta)
+static struct BurnRomInfo md_abadcrimRomDesc[] = {
+	{ "Abadia del crimen, La Beta (2026)(Amiguetes Soft).bin", 4063232, 0x041cda39, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_abadcrim)
+STD_ROM_FN(md_abadcrim)
+
+struct BurnDriver BurnDrvmd_abadcrim = {
+	"md_abadcrim", NULL, NULL, NULL, "2026",
+	"Abadia del crimen, La (HB, Beta)\0", "Very early beta: bugs expected", "Amiguetes Soft", "Genesis / Mega Drive",
+	L"Abad\u00eda del crimen, La (HB, Beta)\0", NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ADV, 0,
+	MegadriveGetZipName, md_abadcrimRomInfo, md_abadcrimRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // Abyssal Infants (HB)
 static struct BurnRomInfo md_abyssalRomDesc[] = {
 	{ "Abyssal Infants (2021)(kakoeimon).bin", 845624, 0xb893bea7, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
@@ -38272,6 +38290,24 @@ struct BurnDriver BurnDrvmd_astrosasa = {
 	L"Astrorobo Sasa (HB)\0\u30a2\u30b9\u30c8\u30ed\u30ed\u30dc Sasa\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION | GBF_MULTISHOOT, 0,
 	MegadriveGetZipName, md_astrosasaRomInfo, md_astrosasaRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// A-Tetris (HB, Alfa)
+static struct BurnRomInfo md_atetrisRomDesc[] = {
+	{ "A-Tetris Alfa (2026)(Amiguetes Soft).bin", 3919872, 0x4976dd17, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_atetris)
+STD_ROM_FN(md_atetris)
+
+struct BurnDriver BurnDrvmd_atetris = {
+	"md_atetris", NULL, NULL, NULL, "2026",
+	"A-Tetris (HB, Alfa)\0", NULL, "Amiguetes Soft", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PUZZLE, 0,
+	MegadriveGetZipName, md_atetrisRomInfo, md_atetrisRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
@@ -38603,10 +38639,10 @@ struct BurnDriver BurnDrvmd_bigfd = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Black Tiger (HB, v1.6)
+// Black Tiger (HB, v1.7)
 // https://rester159.itch.io/black-tiger-md
 static struct BurnRomInfo md_blacktigerRomDesc[] = {
-	{ "Black Tiger v1.6 (2026)(rester159).bin", 4194304, 0xb6058ed5, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Black Tiger v1.7 (2026)(rester159).bin", 4194304, 0xdb4db4b9, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_blacktiger)
@@ -38614,7 +38650,7 @@ STD_ROM_FN(md_blacktiger)
 
 struct BurnDriver BurnDrvmd_blacktiger = {
 	"md_blacktiger", NULL, NULL, NULL, "2026",
-	"Black Tiger (HB, v1.6)\0", NULL, "rester159", "Genesis / Mega Drive",
+	"Black Tiger (HB, v1.7)\0", NULL, "rester159", "Genesis / Mega Drive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM | GBF_RUNGUN, 0,
 	MegadriveGetZipName, md_blacktigerRomInfo, md_blacktigerRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -39277,6 +39313,25 @@ struct BurnDriver BurnDrvmd_colocodx = {
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION, 0,
 	MegadriveGetZipName, md_colocodxRomInfo, md_colocodxRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInitColocodx, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Columns II: The Voyage Through Time (HB)
+// https://master-linkuei.itch.io/columns-ii-md
+static struct BurnRomInfo md_columns2RomDesc[] = {
+	{ "Columns II - The Voyage Through Time (2026)(Master Linkuei).bin", 524288, 0x93dc3280, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_columns2)
+STD_ROM_FN(md_columns2)
+
+struct BurnDriver BurnDrvmd_columns2 = {
+	"md_columns2", NULL, NULL, NULL, "2026",
+	"Columns II: The Voyage Through Time (HB)\0", NULL, "Master Linkuei", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PUZZLE, 0,
+	MegadriveGetZipName, md_columns2RomInfo, md_columns2RomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
@@ -40251,6 +40306,25 @@ struct BurnDriver BurnDrvmd_flikisesc = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Flowers of Azathoth (HB)
+// https://mike-daw.itch.io/flowers-of-azathoth
+static struct BurnRomInfo md_fazathothRomDesc[] = {
+	{ "Flowers of Azathoth (2026)(Mike Daw).bin", 262144, 0xe0621243, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_fazathoth)
+STD_ROM_FN(md_fazathoth)
+
+struct BurnDriver BurnDrvmd_fazathoth = {
+	"md_fazathoth", NULL, NULL, NULL, "2026",
+	"Flowers of Azathoth (HB)\0", NULL, "Mike Daw", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION, 0,
+	MegadriveGetZipName, md_fazathothRomInfo, md_fazathothRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // Foxy Land (HB)
 static struct BurnRomInfo md_foxylandRomDesc[] = {
 	{ "Foxy Land (2020)(PSCD-Bug Studio).bin", 3014656, 0xba322eee, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
@@ -40761,6 +40835,25 @@ struct BurnDriver BurnDrvmd_huntergirls = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION | GBF_PLATFORM, 0,
 	MegadriveGetZipName, md_huntergirlsRomInfo, md_huntergirlsRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Hyper Dyne Side Arms (HB, v1.3)
+// https://rester159.itch.io/side-arms
+static struct BurnRomInfo md_sidearmsRomDesc[] = {
+	{ "Hyper Dyne Side Arms v1.3 (2026)(rester159).bin", 2621440, 0x960da98b, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_sidearms)
+STD_ROM_FN(md_sidearms)
+
+struct BurnDriver BurnDrvmd_sidearms = {
+	"md_sidearms", NULL, NULL, NULL, "2026",
+	"Hyper Dyne Side Arms (HB, v1.3)\0", NULL, "rester159", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_HORSHOOT, 0,
+	MegadriveGetZipName, md_sidearmsRomInfo, md_sidearmsRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
@@ -43422,6 +43515,25 @@ struct BurnDriver BurnDrvmd_smartmouse = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION | GBF_MAZE, 0,
 	MegadriveGetZipName, md_smartmouseRomInfo, md_smartmouseRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Somali Pirates (HB, 20261003)
+// https://4dlix.itch.io/somali-pirates
+static struct BurnRomInfo md_somalipiratesRomDesc[] = {
+	{ "Somali Pirates 20261003 (2026)(4D Lix).bin", 4194304, 0x4005ecc0, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_somalipirates)
+STD_ROM_FN(md_somalipirates)
+
+struct BurnDriver BurnDrvmd_somalipirates = {
+	"md_somalipirates", NULL, NULL, NULL, "2026",
+	"Somali Pirates (HB, 20261003)\0", NULL, "4D Lix", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION | GBF_ADV, 0,
+	MegadriveGetZipName, md_somalipiratesRomInfo, md_somalipiratesRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
