@@ -296,7 +296,7 @@ Rarely you could get a "Failed initializing driver" message, this is something y
 
 ### Is XXX supported ?
 
-You can check the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) or [gamelist.txt](https://raw.githubusercontent.com/libretro/FBNeo/refs/heads/master/gamelist.txt) to see if a game is supported.
+You can check our wiki's [game list](https://wiki.neo-source.com/database/list).
 
 We don't accept requests for supporting a game, and questions regarding the lack of support for a game are also regarded as requesting for its support.
 One exception to that rule would be for consoles/computers we already support, and you should make that request [here](https://neo-source.com/index.php?topic=3656.0).
@@ -375,7 +375,7 @@ There are several things to know :
 * You need the corresponding bioses in your FBNeo bios folder : `neocdz.zip` and `neogeo.zip` for neogeo CD, `scdsys.zip` for PCE CD
 * The image must not be compressed
 
-As of august 2026, all image formats should be supported, previously you needed a MODE1/2352 DAO dump (one .cue file and **one** .bin file), with the following known method for converting them :
+As of august 2026, all image formats should be supported. Previously you needed a MODE1/2352 DAO dump (one .cue file and **one** .bin file), and the following method could be used to convert them :
 * Get [CDMage 1.02.1 (beta)](https://www.videohelp.com/software/CDMage) (freeware & no ads). **Don't get CDMage 1.01.5, it doesn't have the "Save As" function**
 * File > Open > select your dump (NB : always choose the .cue file if there is one)
 * File > Save As > write the name of your new file
@@ -417,7 +417,7 @@ If you are comparing this to FBNeo standalone, you must be warned that the libre
 By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.
 
 Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Video Settings > Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
-Please note that it'll likely cause frame duping if your hardware is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.
+Please note that it'll likely cause frame duping if your video hardware (video card, screen) is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.
 
 ### Why do i get a black screen and/or can't i change bios in neogeo games ?
 
