@@ -35,6 +35,20 @@
   .type CycloneVer,%object
   .global CycloneJumpTab
   .type CycloneJumpTab,%object
+  .global CycloneSetRealTAS_JT
+  .type CycloneSetRealTAS_JT,%function
+  .global CycloneDoInterrupt
+  .type CycloneDoInterrupt,%function
+  .global CycloneDoTrace
+  .type CycloneDoTrace,%function
+  .global Op____
+  .type Op____,%function
+  .global Op6002
+  .type Op6002,%function
+  .global Op6602
+  .type Op6602,%function
+  .global Op6702
+  .type Op6702,%function
 
 CycloneVer: .long 0x0099
 
@@ -165,7 +179,80 @@ CycloneResetJT:
   ldmfd sp!,{r7,pc}
 
 CycloneSetRealTAS_JT:
+  tst r0,r0
+  add r12,r1,#0x4a00*4
+  add r12,r12,#0x00d0*4
+  adr r2,CycloneOT_TAS_
+  addeq r2,r2,#9*4
+  ldr r0,[r2,#0*4] ;@ Op4ad0
+  add r0,r0,r2
+  mov r1,#8
+setrtas_loop0: ;@ 4ad0-4ad7
+  subs r1,r1,#1
+  str r0,[r12],#4
+  bne setrtas_loop0
+  ldr r0,[r2,#1*4] ;@ Op4ad8
+  add r0,r0,r2
+  mov r1,#7
+setrtas_loop1: ;@ 4ad8-4ade
+  subs r1,r1,#1
+  str r0,[r12],#4
+  bne setrtas_loop1
+  ldr r0,[r2,#2*4] ;@ Op4adf
+  add r0,r0,r2
+  str r0,[r12],#4
+  ldr r0,[r2,#3*4] ;@ Op4ae0
+  add r0,r0,r2
+  mov r1,#7
+setrtas_loop2: ;@ 4ae0-4ae6
+  subs r1,r1,#1
+  str r0,[r12],#4
+  bne setrtas_loop2
+  ldr r0,[r2,#4*4] ;@ Op4ae7
+  add r0,r0,r2
+  str r0,[r12],#4
+  ldr r0,[r2,#5*4] ;@ Op4ae8
+  add r0,r0,r2
+  mov r1,#8
+setrtas_loop3: ;@ 4ae8-4aef
+  subs r1,r1,#1
+  str r0,[r12],#4
+  bne setrtas_loop3
+  ldr r0,[r2,#6*4] ;@ Op4af0
+  add r0,r0,r2
+  mov r1,#8
+setrtas_loop4: ;@ 4af0-4af7
+  subs r1,r1,#1
+  str r0,[r12],#4
+  bne setrtas_loop4
+  ldr r0,[r2,#7*4] ;@ Op4af8
+  add r0,r0,r2
+  str r0,[r12],#4
+  ldr r0,[r2,#8*4] ;@ Op4af9
+  add r0,r0,r2
+  str r0,[r12],#4
   bx lr
+
+CycloneOT_TAS_:
+  .long Op4ad0_-CycloneOT_TAS_
+  .long Op4ad8_-CycloneOT_TAS_
+  .long Op4adf_-CycloneOT_TAS_
+  .long Op4ae0_-CycloneOT_TAS_
+  .long Op4ae7_-CycloneOT_TAS_
+  .long Op4ae8_-CycloneOT_TAS_
+  .long Op4af0_-CycloneOT_TAS_
+  .long Op4af8_-CycloneOT_TAS_
+  .long Op4af9_-CycloneOT_TAS_
+CycloneOT_TAS:
+  .long Op4ad0-CycloneOT_TAS
+  .long Op4ad8-CycloneOT_TAS
+  .long Op4adf-CycloneOT_TAS
+  .long Op4ae0-CycloneOT_TAS
+  .long Op4ae7-CycloneOT_TAS
+  .long Op4ae8-CycloneOT_TAS
+  .long Op4af0-CycloneOT_TAS
+  .long Op4af8-CycloneOT_TAS
+  .long Op4af9-CycloneOT_TAS
 
 CycloneSetSr:
   mov r2,r1,lsr #8
@@ -29715,6 +29802,25 @@ Op4ad0:
   and r10,r1,#0x80000000 ;@ r10=N_flag
   orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
 
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#14 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4ad0_:
+;@ EaCalc : Get '(a0)' into r11:
+  and r2,r8,#0x000f
+  orr r2,r2,#0x8 ;@ A0-7
+  ldr r11,[r7,r2,lsl #2]
+;@ EaRead : Read '(a0)' (address in r11) into r1:
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
   orr r1,r1,#0x80000000 ;@ set bit7
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
   mov r1,r1,lsr #24
@@ -29746,6 +29852,26 @@ Op4ad8:
   and r10,r1,#0x80000000 ;@ r10=N_flag
   orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
 
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#14 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4ad8_:
+;@ EaCalc : Get '(a0)+' into r11:
+  and r2,r8,#0x000f
+  ldr r11,[r7,r2,lsl #2]
+  add r3,r11,#1 ;@ Post-increment An
+  str r3,[r7,r2,lsl #2]
+;@ EaRead : Read '(a0)+' (address in r11) into r1:
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
   orr r1,r1,#0x80000000 ;@ set bit7
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
   mov r1,r1,lsr #24
@@ -29769,6 +29895,25 @@ Op4adf:
   str r3,[r7,#0x3c] ;@ A7
 ;@ EaRead : Read '(a7)+' (address in r11) into r1:
   str r4,[r7,#0x40] ;@ Save PC
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#14 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4adf_:
+;@ EaCalc : Get '(a7)+' into r11:
+  ldr r11,[r7,#0x3c] ;@ A7
+  add r3,r11,#2 ;@ Post-increment An
+  str r3,[r7,#0x3c] ;@ A7
+;@ EaRead : Read '(a7)+' (address in r11) into r1:
   bic r0,r11,#0xff000000
   bl m68k_read8 ;@ Call read8(r0) handler
   movs r1,r0,asl #24
@@ -29808,6 +29953,27 @@ Op4ae0:
   and r10,r1,#0x80000000 ;@ r10=N_flag
   orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
 
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#16 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4ae0_:
+;@ EaCalc : Get '-(a0)' into r11:
+  and r2,r8,#0x000f
+  orr r2,r2,#0x8 ;@ A0-7
+  ldr r11,[r7,r2,lsl #2]
+  sub r11,r11,#1 ;@ Pre-decrement An
+  str r11,[r7,r2,lsl #2]
+;@ EaRead : Read '-(a0)' (address in r11) into r1:
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
   orr r1,r1,#0x80000000 ;@ set bit7
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
   mov r1,r1,lsr #24
@@ -29838,6 +30004,25 @@ Op4ae7:
   and r10,r1,#0x80000000 ;@ r10=N_flag
   orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
 
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#16 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4ae7_:
+;@ EaCalc : Get '-(a7)' into r11:
+  ldr r11,[r7,#0x3c] ;@ A7
+  sub r11,r11,#2 ;@ Pre-decrement An
+  str r11,[r7,#0x3c] ;@ A7
+;@ EaRead : Read '-(a7)' (address in r11) into r1:
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
   orr r1,r1,#0x80000000 ;@ set bit7
 ;@ EaWrite: Write r1 into '-(a7)' (address in r11):
   mov r1,r1,lsr #24
@@ -29855,6 +30040,27 @@ Op4ae8:
   str r4,[r7,#0x50] ;@ Save prev PC + 2
   str r5,[r7,#0x5c] ;@ Save Cycles
 
+;@ EaCalc : Get '($3333,a0)' into r11:
+  ldrsh r0,[r4],#2 ;@ Fetch offset
+  and r2,r8,#0x000f
+  ldr r2,[r7,r2,lsl #2]
+  add r11,r0,r2 ;@ Add on offset
+;@ EaRead : Read '($3333,a0)' (address in r11) into r1:
+  str r4,[r7,#0x40] ;@ Save PC
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#18 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4ae8_:
 ;@ EaCalc : Get '($3333,a0)' into r11:
   ldrsh r0,[r4],#2 ;@ Fetch offset
   and r2,r8,#0x000f
@@ -29907,6 +30113,34 @@ Op4af0:
   and r10,r1,#0x80000000 ;@ r10=N_flag
   orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
 
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#20 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4af0_:
+;@ EaCalc : Get '($33,a0,d3.w*2)' into r11:
+;@ Get extension word into r3:
+  ldrh r3,[r4],#2 ;@ ($Disp,PC,Rn)
+  movs r2,r3,lsr #12 ;@ r2=Index of Rn, carry set if Long
+  ldr r2,[r7,r2,lsl #2] ;@ r2=Rn.l
+  sxtb r3,r3 ;@ r3=Get 8-bit signed Disp
+  sxthcc r2,r2 ;@ r2=Rn.w
+  add r3,r3,r2 ;@ r3=Disp+Rn
+  and r2,r8,#0x000f
+  orr r2,r2,#0x8 ;@ A0-7
+  ldr r2,[r7,r2,lsl #2]
+  add r11,r2,r3 ;@ r11=Disp+An+Rn
+;@ EaRead : Read '($33,a0,d3.w*2)' (address in r11) into r1:
+  str r4,[r7,#0x40] ;@ Save PC
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
   orr r1,r1,#0x80000000 ;@ set bit7
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
   mov r1,r1,lsr #24
@@ -29935,6 +30169,24 @@ Op4af8:
   and r10,r1,#0x80000000 ;@ r10=N_flag
   orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
 
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#18 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4af8_:
+;@ EaCalc : Get '$3333.w' into r11:
+  ldrsh r11,[r4],#2 ;@ Fetch Absolute Short address
+;@ EaRead : Read '$3333.w' (address in r11) into r1:
+  str r4,[r7,#0x40] ;@ Save PC
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
   orr r1,r1,#0x80000000 ;@ set bit7
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
   mov r1,r1,lsr #24
@@ -29952,6 +30204,26 @@ Op4af9:
   str r4,[r7,#0x50] ;@ Save prev PC + 2
   str r5,[r7,#0x5c] ;@ Save Cycles
 
+;@ EaCalc : Get '$33333333.l' into r11:
+  ldrh r2,[r4],#2 ;@ Fetch Absolute Long address
+  ldrh r0,[r4],#2
+  orr r11,r0,r2,lsl #16
+;@ EaRead : Read '$33333333.l' (address in r11) into r1:
+  str r4,[r7,#0x40] ;@ Save PC
+  bic r0,r11,#0xff000000
+  bl m68k_read8 ;@ Call read8(r0) handler
+  movs r1,r0,asl #24
+
+  and r10,r1,#0x80000000 ;@ r10=N_flag
+  orreq r10,r10,#0x40000000 ;@ get NZ, clear CV
+
+  ldr r5,[r7,#0x5c] ;@ Load Cycles
+  ldrh r8,[r4],#2 ;@ Fetch next opcode
+  subs r5,r5,#22 ;@ Subtract cycles
+  ldrgt pc,[r6,r8,asl #2] ;@ Jump to opcode handler
+  b CycloneEnd
+
+Op4af9_:
 ;@ EaCalc : Get '$33333333.l' into r11:
   ldrh r2,[r4],#2 ;@ Fetch Absolute Long address
   ldrh r0,[r4],#2

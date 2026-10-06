@@ -63,7 +63,7 @@
  * several instructions were acting differently, for example TAS did'n have
  * the write-back phase. That will be emulated, if this option is enabled.
  */
-#define CYCLONE_FOR_GENESIS         0
+#define CYCLONE_FOR_GENESIS         2
 
 /*
  * This option compresses Cyclone's jumptable. Because of this the executable

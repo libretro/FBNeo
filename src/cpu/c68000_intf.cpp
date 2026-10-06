@@ -34,6 +34,10 @@ static UINT32 nSekAddressMask[SEK_MAX], nSekAddressMaskActive;
 struct Cyclone c68k[SEK_MAX];
 static bool bCycloneInited = false;
 
+// Jump table with Mega Drive TAS (no write-back to memory), requires CYCLONE_FOR_GENESIS 2
+static long c68k_jumptab_md[0x10000];
+static bool bCycloneJumpTabMDInited = false;
+
 static UINT8 nSekIsC68K[SEK_MAX];
 #define SEK_ACTIVE_IS_C68K	((nSekActive >= 0) && nSekIsC68K[nSekActive])
 
@@ -914,14 +918,12 @@ static INT32 SekInitCPUC68K(INT32 nCount, INT32 nCPUType)
 
 	if (!bCycloneInited) {
 		CycloneInit();
+		CycloneSetRealTAS(1);
 		bCycloneInited = true;
 	}
 
 	memset(&c68k[nCount], 0, sizeof(struct Cyclone));
-#ifdef CycloneReset
-	// newer Cyclone: CycloneRun() takes the jump table from the context
 	c68k[nCount].jumptab       = (uintptr_t)CycloneJumpTab;
-#endif
 	c68k[nCount].checkpc       = m68k_checkpc;
 	c68k[nCount].IrqCallback   = C68KIRQAcknowledge;
 	c68k[nCount].ResetCallback = C68KResetCallback;
@@ -2243,8 +2245,18 @@ INT32 SekSetTASCallback(pSekTASCallback pCallback)
 	pSekExt->TASCallback = pCallback;
 
 #ifdef EMU_C68K
-	if (SEK_ACTIVE_IS_C68K && pCallback) {
-		bprintf(PRINT_IMPORTANT, _T("Cyclone: TASCallback not supported (cpu #%d), use Musashi for this game\n"), nSekActive);
+	if (SEK_ACTIVE_IS_C68K) {
+		// Cyclone can't call it on every TAS: it is evaluated once here, its result must be constant
+		if (pCallback && pCallback() == 0) {
+			if (!bCycloneJumpTabMDInited) {
+				memcpy(c68k_jumptab_md, CycloneJumpTab, sizeof(c68k_jumptab_md));
+				CycloneSetRealTAS_JT(0, c68k_jumptab_md);
+				bCycloneJumpTabMDInited = true;
+			}
+			c68k[nSekActive].jumptab = (uintptr_t)c68k_jumptab_md;
+		} else {
+			c68k[nSekActive].jumptab = (uintptr_t)CycloneJumpTab;
+		}
 	}
 #endif
 
