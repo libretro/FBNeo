@@ -9,6 +9,7 @@
 
 ;@ git repository can be found at https://github.com/notaz/cyclone68000/
 
+  .syntax unified
   .arm
 
   .text
@@ -111,7 +112,7 @@ unc_loop:
   cmp r2,#0xf
   addeq r2,r2,#1 ;@ 0xf is really 0x10
   tst r2,r2
-  ldreqh r2,[r0],#2 ;@ counter is in next word
+  ldrheq r2,[r0],#2 ;@ counter is in next word
   tst r2,r2
   beq unc_finish ;@ done decompressing
   tst r1,r1
@@ -337,7 +338,7 @@ CycloneDoInterrupt:
   str r5,[r7,#0x5c] ;@ Save Cycles
   ldr r3,[r7,#0x8c] ;@ IrqCallback
   tst r3,r3
-  streqb r3,[r7,#0x47] ;@ just clear IRQ if there is no callback
+  strbeq r3,[r7,#0x47] ;@ just clear IRQ if there is no callback
   mvneq r0,#0 ;@ and simulate -1 return
   blxne r3
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -734,7 +735,7 @@ Opd040:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -844,7 +845,7 @@ Opb0b8:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -941,7 +942,7 @@ Op0c40:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -970,7 +971,7 @@ Op0c79:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -1244,7 +1245,7 @@ Opb038:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -1372,7 +1373,7 @@ Op5e40:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -1846,7 +1847,7 @@ Op0640:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -5604,7 +5605,7 @@ Op0400:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5638,7 +5639,7 @@ Op0410:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5675,7 +5676,7 @@ Op0418:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5711,7 +5712,7 @@ Op041f:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5749,7 +5750,7 @@ Op0420:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5785,7 +5786,7 @@ Op0427:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5822,7 +5823,7 @@ Op0428:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5866,7 +5867,7 @@ Op0430:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5900,7 +5901,7 @@ Op0438:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5936,7 +5937,7 @@ Op0439:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -5966,7 +5967,7 @@ Op0440:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6000,7 +6001,7 @@ Op0450:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6037,7 +6038,7 @@ Op0458:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6075,7 +6076,7 @@ Op0460:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6112,7 +6113,7 @@ Op0468:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6156,7 +6157,7 @@ Op0470:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6190,7 +6191,7 @@ Op0478:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6226,7 +6227,7 @@ Op0479:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6256,7 +6257,7 @@ Op0480:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6290,7 +6291,7 @@ Op0490:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6327,7 +6328,7 @@ Op0498:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6365,7 +6366,7 @@ Op04a0:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6402,7 +6403,7 @@ Op04a8:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6446,7 +6447,7 @@ Op04b0:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6480,7 +6481,7 @@ Op04b8:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6516,7 +6517,7 @@ Op04b9:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -6544,7 +6545,7 @@ Op0600:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -6577,7 +6578,7 @@ Op0610:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -6613,7 +6614,7 @@ Op0618:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -6648,7 +6649,7 @@ Op061f:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a7)+' (address in r11):
@@ -6685,7 +6686,7 @@ Op0620:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -6720,7 +6721,7 @@ Op0627:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a7)' (address in r11):
@@ -6756,7 +6757,7 @@ Op0628:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -6799,7 +6800,7 @@ Op0630:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -6832,7 +6833,7 @@ Op0638:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -6867,7 +6868,7 @@ Op0639:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -6902,7 +6903,7 @@ Op0650:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -6938,7 +6939,7 @@ Op0658:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -6975,7 +6976,7 @@ Op0660:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -7011,7 +7012,7 @@ Op0668:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -7054,7 +7055,7 @@ Op0670:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -7087,7 +7088,7 @@ Op0678:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -7122,7 +7123,7 @@ Op0679:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   adds r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -7151,7 +7152,7 @@ Op0680:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -7184,7 +7185,7 @@ Op0690:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -7220,7 +7221,7 @@ Op0698:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -7257,7 +7258,7 @@ Op06a0:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -7293,7 +7294,7 @@ Op06a8:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -7336,7 +7337,7 @@ Op06b0:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -7369,7 +7370,7 @@ Op06b8:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -7404,7 +7405,7 @@ Op06b9:
 
 ;@ Do arithmetic:
   adds r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -9884,7 +9885,7 @@ Op0c00:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -9913,7 +9914,7 @@ Op0c10:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -9944,7 +9945,7 @@ Op0c18:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -9974,7 +9975,7 @@ Op0c1f:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10006,7 +10007,7 @@ Op0c20:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10036,7 +10037,7 @@ Op0c27:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10067,7 +10068,7 @@ Op0c28:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10105,7 +10106,7 @@ Op0c30:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10133,7 +10134,7 @@ Op0c38:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10163,7 +10164,7 @@ Op0c39:
   mov r10,r10,asl #24
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10193,7 +10194,7 @@ Op0c50:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10224,7 +10225,7 @@ Op0c58:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10256,7 +10257,7 @@ Op0c60:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10287,7 +10288,7 @@ Op0c68:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10325,7 +10326,7 @@ Op0c70:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10353,7 +10354,7 @@ Op0c78:
   mov r10,r10,asl #16
 ;@ Do arithmetic:
   rsbs r1,r10,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10377,7 +10378,7 @@ Op0c80:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -10407,7 +10408,7 @@ Op0c90:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10439,7 +10440,7 @@ Op0c98:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10472,7 +10473,7 @@ Op0ca0:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10504,7 +10505,7 @@ Op0ca8:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10543,7 +10544,7 @@ Op0cb0:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10572,7 +10573,7 @@ Op0cb8:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -10603,7 +10604,7 @@ Op0cb9:
 
 ;@ Do arithmetic:
   rsbs r1,r10,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -22879,7 +22880,7 @@ Op4000:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -22914,7 +22915,7 @@ Op4010:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -22952,7 +22953,7 @@ Op4018:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -22989,7 +22990,7 @@ Op401f:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23028,7 +23029,7 @@ Op4020:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23065,7 +23066,7 @@ Op4027:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23103,7 +23104,7 @@ Op4028:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23148,7 +23149,7 @@ Op4030:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23183,7 +23184,7 @@ Op4038:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23220,7 +23221,7 @@ Op4039:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23251,7 +23252,7 @@ Op4040:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23286,7 +23287,7 @@ Op4050:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23324,7 +23325,7 @@ Op4058:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23363,7 +23364,7 @@ Op4060:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23401,7 +23402,7 @@ Op4068:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23446,7 +23447,7 @@ Op4070:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23481,7 +23482,7 @@ Op4078:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23518,7 +23519,7 @@ Op4079:
   sbcs r1,r0,#0 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23546,7 +23547,7 @@ Op4080:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23578,7 +23579,7 @@ Op4090:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23613,7 +23614,7 @@ Op4098:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23649,7 +23650,7 @@ Op40a0:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23684,7 +23685,7 @@ Op40a8:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23726,7 +23727,7 @@ Op40b0:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23758,7 +23759,7 @@ Op40b8:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -23792,7 +23793,7 @@ Op40b9:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   sbcs r1,r0,#0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -25398,7 +25399,7 @@ Op4400:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25428,7 +25429,7 @@ Op4410:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25461,7 +25462,7 @@ Op4418:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25493,7 +25494,7 @@ Op441f:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25527,7 +25528,7 @@ Op4420:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25559,7 +25560,7 @@ Op4427:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25592,7 +25593,7 @@ Op4428:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25632,7 +25633,7 @@ Op4430:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25662,7 +25663,7 @@ Op4438:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25694,7 +25695,7 @@ Op4439:
 ;@ Neg:
   mov r0,r0,asl #24
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25720,7 +25721,7 @@ Op4440:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25750,7 +25751,7 @@ Op4450:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25783,7 +25784,7 @@ Op4458:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25817,7 +25818,7 @@ Op4460:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25850,7 +25851,7 @@ Op4468:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25890,7 +25891,7 @@ Op4470:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25920,7 +25921,7 @@ Op4478:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25952,7 +25953,7 @@ Op4479:
 ;@ Neg:
   mov r0,r0,asl #16
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -25976,7 +25977,7 @@ Op4480:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26004,7 +26005,7 @@ Op4490:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26035,7 +26036,7 @@ Op4498:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26067,7 +26068,7 @@ Op44a0:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26098,7 +26099,7 @@ Op44a8:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26136,7 +26137,7 @@ Op44b0:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26164,7 +26165,7 @@ Op44b8:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -26194,7 +26195,7 @@ Op44b9:
 
 ;@ Neg:
   rsbs r1,r0,#0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -27921,7 +27922,7 @@ Op4800:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -27959,7 +27960,7 @@ Op4810:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28000,7 +28001,7 @@ Op4818:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28040,7 +28041,7 @@ Op481f:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28082,7 +28083,7 @@ Op4820:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28122,7 +28123,7 @@ Op4827:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28163,7 +28164,7 @@ Op4828:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28211,7 +28212,7 @@ Op4830:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28249,7 +28250,7 @@ Op4838:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -28289,7 +28290,7 @@ Op4839:
   orr r2,r0,r0,lsr #1
   mov r1,r1,lsl #24
   subs r1,r1,r2,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r0,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -31549,7 +31550,7 @@ Op5000:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -31578,7 +31579,7 @@ Op5010:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -31610,7 +31611,7 @@ Op5018:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -31641,7 +31642,7 @@ Op501f:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a7)+' (address in r11):
@@ -31674,7 +31675,7 @@ Op5020:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -31705,7 +31706,7 @@ Op5027:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a7)' (address in r11):
@@ -31737,7 +31738,7 @@ Op5028:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -31776,7 +31777,7 @@ Op5030:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -31805,7 +31806,7 @@ Op5038:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -31836,7 +31837,7 @@ Op5039:
   mov r0,r0,asl #24
 
   adds r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -31861,7 +31862,7 @@ Op5040:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -31907,7 +31908,7 @@ Op5050:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -31939,7 +31940,7 @@ Op5058:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -31972,7 +31973,7 @@ Op5060:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -32004,7 +32005,7 @@ Op5068:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -32043,7 +32044,7 @@ Op5070:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -32072,7 +32073,7 @@ Op5078:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -32103,7 +32104,7 @@ Op5079:
   mov r0,r0,asl #16
 
   adds r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -32125,7 +32126,7 @@ Op5080:
   ldr r0,[r7,r11,lsl #2]
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -32168,7 +32169,7 @@ Op5090:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -32197,7 +32198,7 @@ Op5098:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -32227,7 +32228,7 @@ Op50a0:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -32256,7 +32257,7 @@ Op50a8:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -32292,7 +32293,7 @@ Op50b0:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -32318,7 +32319,7 @@ Op50b8:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -32346,7 +32347,7 @@ Op50b9:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   adds r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -32602,7 +32603,7 @@ Op5100:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32632,7 +32633,7 @@ Op5110:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32665,7 +32666,7 @@ Op5118:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32697,7 +32698,7 @@ Op511f:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32731,7 +32732,7 @@ Op5120:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32763,7 +32764,7 @@ Op5127:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32796,7 +32797,7 @@ Op5128:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32836,7 +32837,7 @@ Op5130:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32866,7 +32867,7 @@ Op5138:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32898,7 +32899,7 @@ Op5139:
   mov r0,r0,asl #24
 
   subs r1,r0,#0x8000000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32924,7 +32925,7 @@ Op5140:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -32971,7 +32972,7 @@ Op5150:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33004,7 +33005,7 @@ Op5158:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33038,7 +33039,7 @@ Op5160:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33071,7 +33072,7 @@ Op5168:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33111,7 +33112,7 @@ Op5170:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33141,7 +33142,7 @@ Op5178:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33173,7 +33174,7 @@ Op5179:
   mov r0,r0,asl #16
 
   subs r1,r0,#0x80000
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33196,7 +33197,7 @@ Op5180:
   ldr r0,[r7,r11,lsl #2]
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33240,7 +33241,7 @@ Op5190:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33270,7 +33271,7 @@ Op5198:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33301,7 +33302,7 @@ Op51a0:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33331,7 +33332,7 @@ Op51a8:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33368,7 +33369,7 @@ Op51b0:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33395,7 +33396,7 @@ Op51b8:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -33424,7 +33425,7 @@ Op51b9:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   subs r1,r0,#0x0008
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -37008,7 +37009,7 @@ Op5e00:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -37039,7 +37040,7 @@ Op5e10:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -37073,7 +37074,7 @@ Op5e18:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -37106,7 +37107,7 @@ Op5e1f:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a7)+' (address in r11):
@@ -37141,7 +37142,7 @@ Op5e20:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -37174,7 +37175,7 @@ Op5e27:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a7)' (address in r11):
@@ -37208,7 +37209,7 @@ Op5e28:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -37249,7 +37250,7 @@ Op5e30:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -37280,7 +37281,7 @@ Op5e38:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -37313,7 +37314,7 @@ Op5e39:
   mov r0,r0,asl #24
 
   adds r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -37365,7 +37366,7 @@ Op5e50:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -37399,7 +37400,7 @@ Op5e58:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -37434,7 +37435,7 @@ Op5e60:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -37468,7 +37469,7 @@ Op5e68:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -37509,7 +37510,7 @@ Op5e70:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -37540,7 +37541,7 @@ Op5e78:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -37573,7 +37574,7 @@ Op5e79:
   mov r0,r0,asl #16
 
   adds r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -37597,7 +37598,7 @@ Op5e80:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r1 into register[r11]:
@@ -37644,7 +37645,7 @@ Op5e90:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)' (address in r11):
@@ -37675,7 +37676,7 @@ Op5e98:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '(a0)+' (address in r11):
@@ -37707,7 +37708,7 @@ Op5ea0:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '-(a0)' (address in r11):
@@ -37738,7 +37739,7 @@ Op5ea8:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($3333,a0)' (address in r11):
@@ -37776,7 +37777,7 @@ Op5eb0:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '($33,a0,d3.w*2)' (address in r11):
@@ -37804,7 +37805,7 @@ Op5eb8:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$3333.w' (address in r11):
@@ -37834,7 +37835,7 @@ Op5eb9:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   adds r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r1 into '$33333333.l' (address in r11):
@@ -38148,7 +38149,7 @@ Op5f00:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38180,7 +38181,7 @@ Op5f10:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38215,7 +38216,7 @@ Op5f18:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38249,7 +38250,7 @@ Op5f1f:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38285,7 +38286,7 @@ Op5f20:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38319,7 +38320,7 @@ Op5f27:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38354,7 +38355,7 @@ Op5f28:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38396,7 +38397,7 @@ Op5f30:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38428,7 +38429,7 @@ Op5f38:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38462,7 +38463,7 @@ Op5f39:
   mov r0,r0,asl #24
 
   subs r1,r0,r2,lsl #15
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38490,7 +38491,7 @@ Op5f40:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38541,7 +38542,7 @@ Op5f50:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38576,7 +38577,7 @@ Op5f58:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38612,7 +38613,7 @@ Op5f60:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38647,7 +38648,7 @@ Op5f68:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38689,7 +38690,7 @@ Op5f70:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38721,7 +38722,7 @@ Op5f78:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38755,7 +38756,7 @@ Op5f79:
   mov r0,r0,asl #16
 
   subs r1,r0,r2,lsl #7
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38780,7 +38781,7 @@ Op5f80:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38828,7 +38829,7 @@ Op5f90:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38860,7 +38861,7 @@ Op5f98:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38893,7 +38894,7 @@ Op5fa0:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38925,7 +38926,7 @@ Op5fa8:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38964,7 +38965,7 @@ Op5fb0:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -38993,7 +38994,7 @@ Op5fb8:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -39024,7 +39025,7 @@ Op5fb9:
   and r2,r8,#0x0e00 ;@ Get quick value
 
   subs r1,r0,r2,lsr #9
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -42021,7 +42022,7 @@ Op8100:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   subs r0,r0,r1,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -42074,7 +42075,7 @@ Op8108:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   subs r0,r0,r1,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -42128,7 +42129,7 @@ Op810f:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   subs r0,r0,r1,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -43921,7 +43922,7 @@ Op8f08:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   subs r0,r0,r1,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -43973,7 +43974,7 @@ Op8f0f:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   subs r0,r0,r1,lsl #22 ;@ subtract adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
@@ -44005,7 +44006,7 @@ Op9000:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44041,7 +44042,7 @@ Op9010:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44079,7 +44080,7 @@ Op9018:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44116,7 +44117,7 @@ Op901f:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44155,7 +44156,7 @@ Op9020:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44192,7 +44193,7 @@ Op9027:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44230,7 +44231,7 @@ Op9028:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44275,7 +44276,7 @@ Op9030:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44310,7 +44311,7 @@ Op9038:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44347,7 +44348,7 @@ Op9039:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44385,7 +44386,7 @@ Op903a:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44429,7 +44430,7 @@ Op903b:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44458,7 +44459,7 @@ Op903c:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44488,7 +44489,7 @@ Op9040:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44525,7 +44526,7 @@ Op9050:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44564,7 +44565,7 @@ Op9058:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44604,7 +44605,7 @@ Op9060:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44643,7 +44644,7 @@ Op9068:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44689,7 +44690,7 @@ Op9070:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44725,7 +44726,7 @@ Op9078:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44763,7 +44764,7 @@ Op9079:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44802,7 +44803,7 @@ Op907a:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44847,7 +44848,7 @@ Op907b:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44877,7 +44878,7 @@ Op907c:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44905,7 +44906,7 @@ Op9080:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44939,7 +44940,7 @@ Op9090:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -44975,7 +44976,7 @@ Op9098:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45012,7 +45013,7 @@ Op90a0:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45048,7 +45049,7 @@ Op90a8:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45091,7 +45092,7 @@ Op90b0:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45124,7 +45125,7 @@ Op90b8:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45159,7 +45160,7 @@ Op90b9:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45195,7 +45196,7 @@ Op90ba:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45237,7 +45238,7 @@ Op90bb:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45266,7 +45267,7 @@ Op90bc:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45642,7 +45643,7 @@ Op9100:
   sbcs r1,r11,r0,asl #24 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -45691,7 +45692,7 @@ Op9108:
   sbcs r1,r11,r0,asl #24 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -45741,7 +45742,7 @@ Op910f:
   sbcs r1,r11,r0,asl #24 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -45779,7 +45780,7 @@ Op9110:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45818,7 +45819,7 @@ Op9118:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45856,7 +45857,7 @@ Op911f:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45896,7 +45897,7 @@ Op9120:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45934,7 +45935,7 @@ Op9127:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -45973,7 +45974,7 @@ Op9128:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46019,7 +46020,7 @@ Op9130:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46055,7 +46056,7 @@ Op9138:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46093,7 +46094,7 @@ Op9139:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   subs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46132,7 +46133,7 @@ Op9140:
   sbcs r1,r11,r0,asl #16 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -46181,7 +46182,7 @@ Op9148:
   sbcs r1,r11,r0,asl #16 ;@ Defines CV
   orr r1,r1,r2,lsr #16 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -46219,7 +46220,7 @@ Op9150:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46258,7 +46259,7 @@ Op9158:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46298,7 +46299,7 @@ Op9160:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46337,7 +46338,7 @@ Op9168:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46383,7 +46384,7 @@ Op9170:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46419,7 +46420,7 @@ Op9178:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46457,7 +46458,7 @@ Op9179:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   subs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46493,7 +46494,7 @@ Op9180:
 
   sbcs r1,r11,r0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -46539,7 +46540,7 @@ Op9188:
 
   sbcs r1,r11,r0 ;@ Defines CV
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -46575,7 +46576,7 @@ Op9190:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46612,7 +46613,7 @@ Op9198:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46650,7 +46651,7 @@ Op91a0:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46687,7 +46688,7 @@ Op91a8:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46731,7 +46732,7 @@ Op91b0:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46765,7 +46766,7 @@ Op91b8:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -46801,7 +46802,7 @@ Op91b9:
 
 ;@ Do arithmetic:
   subs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
   str r10,[r7,#0x4c] ;@ Save X bit
 
@@ -47183,7 +47184,7 @@ Op9f08:
   sbcs r1,r11,r0,asl #24 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -47232,7 +47233,7 @@ Op9f0f:
   sbcs r1,r11,r0,asl #24 ;@ Defines CV
   orr r1,r1,r2,lsr #8 ;@ Set lower bits of result
   mvns r1,r1 ;@ Defines NZ
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -47266,7 +47267,7 @@ Opb000:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -47299,7 +47300,7 @@ Opb010:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47334,7 +47335,7 @@ Opb018:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47368,7 +47369,7 @@ Opb01f:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47404,7 +47405,7 @@ Opb020:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47438,7 +47439,7 @@ Opb027:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47473,7 +47474,7 @@ Opb028:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47515,7 +47516,7 @@ Opb030:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47549,7 +47550,7 @@ Opb039:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47584,7 +47585,7 @@ Opb03a:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47625,7 +47626,7 @@ Opb03b:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47651,7 +47652,7 @@ Opb03c:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -47677,7 +47678,7 @@ Opb040:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -47710,7 +47711,7 @@ Opb050:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47745,7 +47746,7 @@ Opb058:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47781,7 +47782,7 @@ Opb060:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47816,7 +47817,7 @@ Opb068:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47858,7 +47859,7 @@ Opb070:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47890,7 +47891,7 @@ Opb078:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47924,7 +47925,7 @@ Opb079:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -47959,7 +47960,7 @@ Opb07a:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48000,7 +48001,7 @@ Opb07b:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48026,7 +48027,7 @@ Opb07c:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -48050,7 +48051,7 @@ Opb080:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -48081,7 +48082,7 @@ Opb090:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48114,7 +48115,7 @@ Opb098:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48148,7 +48149,7 @@ Opb0a0:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48181,7 +48182,7 @@ Opb0a8:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48221,7 +48222,7 @@ Opb0b0:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48253,7 +48254,7 @@ Opb0b9:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48286,7 +48287,7 @@ Opb0ba:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48325,7 +48326,7 @@ Opb0bb:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48351,7 +48352,7 @@ Opb0bc:
 
 ;@ Do arithmetic:
   rsbs r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -48373,7 +48374,7 @@ Opb0c0:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -48402,7 +48403,7 @@ Opb0d0:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48433,7 +48434,7 @@ Opb0d8:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48465,7 +48466,7 @@ Opb0e0:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48496,7 +48497,7 @@ Opb0e8:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48534,7 +48535,7 @@ Opb0f0:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48562,7 +48563,7 @@ Opb0f8:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48592,7 +48593,7 @@ Opb0f9:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48623,7 +48624,7 @@ Opb0fa:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48660,7 +48661,7 @@ Opb0fb:
 
   sxth r0,r0 ;@ sign extend
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48681,7 +48682,7 @@ Opb0fc:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -48747,7 +48748,7 @@ Opb108:
   bl m68k_read8 ;@ Call read8(r0) handler
 
   rsbs r0,r11,r0,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -48783,7 +48784,7 @@ Opb10f:
   bl m68k_read8 ;@ Call read8(r0) handler
 
   rsbs r0,r11,r0,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49210,7 +49211,7 @@ Opb148:
   bl m68k_read16 ;@ Call read16(r0) handler
 
   rsbs r0,r11,r0,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49557,7 +49558,7 @@ Opb188:
   bl m68k_read32 ;@ Call read32(r0) handler
 
   rsbs r0,r11,r0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49841,7 +49842,7 @@ Opb1c0:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -49869,7 +49870,7 @@ Opb1d0:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49899,7 +49900,7 @@ Opb1d8:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49930,7 +49931,7 @@ Opb1e0:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49960,7 +49961,7 @@ Opb1e8:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -49997,7 +49998,7 @@ Opb1f0:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -50024,7 +50025,7 @@ Opb1f8:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -50053,7 +50054,7 @@ Opb1f9:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -50083,7 +50084,7 @@ Opb1fa:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -50119,7 +50120,7 @@ Opb1fb:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -50142,7 +50143,7 @@ Opb1fc:
   ldr r1,[r7,r1,lsr #7]
 
   cmp r1,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldrh r8,[r4],#2 ;@ Fetch next opcode
@@ -50177,7 +50178,7 @@ Opbf08:
   bl m68k_read8 ;@ Call read8(r0) handler
 
   rsbs r0,r11,r0,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -50212,7 +50213,7 @@ Opbf0f:
   bl m68k_read8 ;@ Call read8(r0) handler
 
   rsbs r0,r11,r0,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   eor r10,r10,#0x20000000 ;@ Invert carry
 
   ldr r5,[r7,#0x5c] ;@ Load Cycles
@@ -52018,7 +52019,7 @@ Opc100:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   adds r0,r0,r1,lsl #22 ;@ add adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
   str r2,[r7,#0x4c] ;@ Save X bit
@@ -52072,7 +52073,7 @@ Opc108:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   adds r0,r0,r1,lsl #22 ;@ add adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
   str r2,[r7,#0x4c] ;@ Save X bit
@@ -52127,7 +52128,7 @@ Opc10f:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   adds r0,r0,r1,lsl #22 ;@ add adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
   str r2,[r7,#0x4c] ;@ Save X bit
@@ -53695,7 +53696,7 @@ Opcf08:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   adds r0,r0,r1,lsl #22 ;@ add adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
   str r2,[r7,#0x4c] ;@ Save X bit
@@ -53748,7 +53749,7 @@ Opcf0f:
   orr r1,r2,r2,lsr #1
   mov r0,r0,lsl #24
   adds r0,r0,r1,lsl #22 ;@ add adjustment, handles undefined V behavior
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   orr r2,r10,r2,lsl #21 ;@ combine carry from adjustment check
   and r10,r2,r3 ;@ fix Z
   str r2,[r7,#0x4c] ;@ Save X bit
@@ -53779,7 +53780,7 @@ Opd000:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -53814,7 +53815,7 @@ Opd010:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -53851,7 +53852,7 @@ Opd018:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -53887,7 +53888,7 @@ Opd01f:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -53925,7 +53926,7 @@ Opd020:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -53961,7 +53962,7 @@ Opd027:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -53998,7 +53999,7 @@ Opd028:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54042,7 +54043,7 @@ Opd030:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54076,7 +54077,7 @@ Opd038:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54112,7 +54113,7 @@ Opd039:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54149,7 +54150,7 @@ Opd03a:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54192,7 +54193,7 @@ Opd03b:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54220,7 +54221,7 @@ Opd03c:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54256,7 +54257,7 @@ Opd050:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54294,7 +54295,7 @@ Opd058:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54333,7 +54334,7 @@ Opd060:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54371,7 +54372,7 @@ Opd068:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54416,7 +54417,7 @@ Opd070:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54451,7 +54452,7 @@ Opd078:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54488,7 +54489,7 @@ Opd079:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54526,7 +54527,7 @@ Opd07a:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54570,7 +54571,7 @@ Opd07b:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54599,7 +54600,7 @@ Opd07c:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54626,7 +54627,7 @@ Opd080:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54659,7 +54660,7 @@ Opd090:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54694,7 +54695,7 @@ Opd098:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54730,7 +54731,7 @@ Opd0a0:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54765,7 +54766,7 @@ Opd0a8:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54807,7 +54808,7 @@ Opd0b0:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54839,7 +54840,7 @@ Opd0b8:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54873,7 +54874,7 @@ Opd0b9:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54908,7 +54909,7 @@ Opd0ba:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54949,7 +54950,7 @@ Opd0bb:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -54977,7 +54978,7 @@ Opd0bc:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55352,7 +55353,7 @@ Opd100:
   orrcs r11,r11,r2,lsr #8 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -55401,7 +55402,7 @@ Opd108:
   orrcs r11,r11,r2,lsr #8 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -55451,7 +55452,7 @@ Opd10f:
   orrcs r11,r11,r2,lsr #8 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -55489,7 +55490,7 @@ Opd110:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55527,7 +55528,7 @@ Opd118:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55564,7 +55565,7 @@ Opd11f:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55603,7 +55604,7 @@ Opd120:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55640,7 +55641,7 @@ Opd127:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55678,7 +55679,7 @@ Opd128:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55723,7 +55724,7 @@ Opd130:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55758,7 +55759,7 @@ Opd138:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55795,7 +55796,7 @@ Opd139:
 ;@ Do arithmetic:
   mov r0,r0,asl #24
   adds r1,r0,r1,asl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55833,7 +55834,7 @@ Opd140:
   orrcs r11,r11,r2,lsr #16 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -55882,7 +55883,7 @@ Opd148:
   orrcs r11,r11,r2,lsr #16 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #16 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -55920,7 +55921,7 @@ Opd150:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55958,7 +55959,7 @@ Opd158:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -55997,7 +55998,7 @@ Opd160:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56035,7 +56036,7 @@ Opd168:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56080,7 +56081,7 @@ Opd170:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56115,7 +56116,7 @@ Opd178:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56152,7 +56153,7 @@ Opd179:
 ;@ Do arithmetic:
   mov r0,r0,asl #16
   adds r1,r0,r1,asl #16
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56186,7 +56187,7 @@ Opd180:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
 
   adcs r1,r11,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -56231,7 +56232,7 @@ Opd188:
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
 
   adcs r1,r11,r0 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -56267,7 +56268,7 @@ Opd190:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56303,7 +56304,7 @@ Opd198:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56340,7 +56341,7 @@ Opd1a0:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56376,7 +56377,7 @@ Opd1a8:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56419,7 +56420,7 @@ Opd1b0:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56452,7 +56453,7 @@ Opd1b8:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56487,7 +56488,7 @@ Opd1b9:
 
 ;@ Do arithmetic:
   adds r1,r0,r1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ Save result:
@@ -56868,7 +56869,7 @@ Opdf08:
   orrcs r11,r11,r2,lsr #8 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -56917,7 +56918,7 @@ Opdf0f:
   orrcs r11,r11,r2,lsr #8 ;@ Set lower bits of operand if Carry is set
 
   adcs r1,r11,r0,asl #24 ;@ Defines NZCV
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   and r10,r10,r3 ;@ fix Z
 
@@ -56944,7 +56945,7 @@ Ope000:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -56965,7 +56966,7 @@ Ope008:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -56988,7 +56989,7 @@ Ope010:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-23 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   mov r0,r0,lsr #24
 ;@ EaWrite: r0 into register[r11]:
@@ -57012,7 +57013,7 @@ Ope018:
 
 ;@ Rotate register:
   movs r0,r0,ror #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   strb r0,[r7,r11,lsl #2]
@@ -57042,7 +57043,7 @@ Ope020:
 
 ;@ Shift register:
   movs r0,r0,asr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -57073,7 +57074,7 @@ Ope028:
 
 ;@ Shift register:
   movs r0,r0,lsr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
   moveq r3,r0,lsr #7
@@ -57117,7 +57118,7 @@ Ope030:
   adds r0,r0,r3,lsl r1 ;@ Add reverse part, clear V flag
 
   movs r1,r0,lsl #24 ;@ Shift up and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57150,7 +57151,7 @@ Ope038:
   sub r5,r5,r2,asl #1 ;@ Take 2*n cycles
 
   movs r0,r0,ror r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   strb r0,[r7,r11,lsl #2]
@@ -57171,7 +57172,7 @@ Ope040:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57193,7 +57194,7 @@ Ope048:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57221,7 +57222,7 @@ Ope050:
   adds r0,r0,r3,lsl #8 ;@ Add reverse part, clear V flag
 
   movs r1,r0,lsl #16 ;@ Shift up and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57245,7 +57246,7 @@ Ope058:
 
 ;@ Rotate register:
   movs r0,r0,ror #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   strh r0,[r7,r11]
@@ -57275,7 +57276,7 @@ Ope060:
 
 ;@ Shift register:
   movs r0,r0,asr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -57307,7 +57308,7 @@ Ope068:
 
 ;@ Shift register:
   movs r0,r0,lsr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
   moveq r3,r0,lsr #15
@@ -57352,7 +57353,7 @@ Ope070:
   adds r0,r0,r3,lsl r1 ;@ Add reverse part, clear V flag
 
   movs r1,r0,lsl #16 ;@ Shift up and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57385,7 +57386,7 @@ Ope078:
   sub r5,r5,r2,asl #1 ;@ Take 2*n cycles
 
   movs r0,r0,ror r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   strh r0,[r7,r11]
@@ -57405,7 +57406,7 @@ Ope080:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57426,7 +57427,7 @@ Ope088:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57453,7 +57454,7 @@ Ope090:
   movs r0,r0,lsr #8 ;@ Shift forward part, set C flag
   orrs r0,r0,r3,lsl #24 ;@ Orr reverse part, set flags
 
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57474,7 +57475,7 @@ Ope098:
 ;@ Rotate register:
   adds r1,r1,#0 ;@ first clear V and C
   movs r0,r0,ror #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   str r0,[r7,r11,lsl #2]
@@ -57503,7 +57504,7 @@ Ope0a0:
 
 ;@ Shift register:
   movs r0,r0,asr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -57534,7 +57535,7 @@ Ope0a8:
 
 ;@ Shift register:
   movs r0,r0,lsr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -57574,7 +57575,7 @@ Ope0b0:
   movs r0,r0,lsr r2 ;@ Shift forward part, set C flag
   orrs r0,r0,r3,lsl r1 ;@ Orr reverse part, set flags
 
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57604,7 +57605,7 @@ Ope0b8:
   sub r5,r5,r2,asl #1 ;@ Take 2*n cycles
 
   movs r0,r0,ror r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   str r0,[r7,r11,lsl #2]
@@ -57632,7 +57633,7 @@ Ope0d0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
@@ -57665,7 +57666,7 @@ Ope0d8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
@@ -57699,7 +57700,7 @@ Ope0e0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
@@ -57732,7 +57733,7 @@ Ope0e8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
@@ -57772,7 +57773,7 @@ Ope0f0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
@@ -57802,7 +57803,7 @@ Ope0f8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
@@ -57834,7 +57835,7 @@ Ope0f9:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,asr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
@@ -57859,7 +57860,7 @@ Ope100:
   adds r3,r0,#0 ;@ clear C and V, also save old value for V flag calculation
 ;@ Shift register:
   movs r0,r0,asl #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ calculate V flag (set if sign bit changes at anytime):
@@ -57886,7 +57887,7 @@ Ope108:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57910,7 +57911,7 @@ Ope110:
   bic r0,r0,#0x1000000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   mov r0,r0,lsr #24
 ;@ EaWrite: r0 into register[r11]:
@@ -57935,7 +57936,7 @@ Ope118:
 ;@ Rotate register:
   movs r0,r0,ror #25 ;@ rotate left by 7, get carry for 8
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: r0 into register[r11]:
@@ -57966,7 +57967,7 @@ Ope120:
 
 ;@ Shift register:
   movs r0,r0,asl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -58003,7 +58004,7 @@ Ope128:
 
 ;@ Shift register:
   movs r0,r0,lsl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -58047,7 +58048,7 @@ Ope130:
   adds r0,r0,r3,lsr r1 ;@ Add reverse part, clear V flag
 
   movs r0,r0,asr #24 ;@ Shift down and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58106,7 +58107,7 @@ Ope140:
   adds r3,r0,#0 ;@ clear C and V, also save old value for V flag calculation
 ;@ Shift register:
   movs r0,r0,asl #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ calculate V flag (set if sign bit changes at anytime):
@@ -58133,7 +58134,7 @@ Ope148:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #24
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58163,7 +58164,7 @@ Ope150:
   adds r0,r0,r3,lsr #8 ;@ Add reverse part, clear V flag
 
   movs r0,r0,asr #16 ;@ Shift down and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58188,7 +58189,7 @@ Ope158:
 ;@ Rotate register:
   movs r0,r0,ror #25 ;@ rotate left by 7, get carry for 8
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58220,7 +58221,7 @@ Ope160:
 
 ;@ Shift register:
   movs r0,r0,asl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -58258,7 +58259,7 @@ Ope168:
 
 ;@ Shift register:
   movs r0,r0,lsl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -58303,7 +58304,7 @@ Ope170:
   adds r0,r0,r3,lsr r1 ;@ Add reverse part, clear V flag
 
   movs r0,r0,asr #16 ;@ Shift down and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58360,7 +58361,7 @@ Ope180:
   adds r3,r0,#0 ;@ clear C and V, also save old value for V flag calculation
 ;@ Shift register:
   movs r0,r0,asl #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ calculate V flag (set if sign bit changes at anytime):
@@ -58385,7 +58386,7 @@ Ope188:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #8
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58412,7 +58413,7 @@ Ope190:
   movs r0,r0,lsl #8 ;@ Shift forward part, set C flag
   orrs r0,r0,r3,lsr #24 ;@ Orr reverse part, set flags
 
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58433,7 +58434,7 @@ Ope198:
 ;@ Rotate register:
   movs r0,r0,ror #25 ;@ rotate left by 7, get carry for 8
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58463,7 +58464,7 @@ Ope1a0:
 
 ;@ Shift register:
   movs r0,r0,asl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -58498,7 +58499,7 @@ Ope1a8:
 
 ;@ Shift register:
   movs r0,r0,lsl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   cmp r2,#0 ;@ shifting by 0?
   strne r10,[r7,#0x4c] ;@ if not, Save X bit
 
@@ -58538,7 +58539,7 @@ Ope1b0:
   movs r0,r0,lsl r2 ;@ Shift forward part, set C flag
   orrs r0,r0,r3,lsr r1 ;@ Orr reverse part, set flags
 
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -58598,7 +58599,7 @@ Ope1d0:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
@@ -58630,7 +58631,7 @@ Ope1d8:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
@@ -58663,7 +58664,7 @@ Ope1e0:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
@@ -58695,7 +58696,7 @@ Ope1e8:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
@@ -58734,7 +58735,7 @@ Ope1f0:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
@@ -58763,7 +58764,7 @@ Ope1f8:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
@@ -58794,7 +58795,7 @@ Ope1f9:
 
 ;@ Shift register:
   adds r0,r0,r0 ;@ includes V flag
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
@@ -58820,7 +58821,7 @@ Ope210:
   bic r0,r0,#0x1000000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   mov r0,r0,lsr #24
 ;@ EaWrite: r0 into register[r11]:
@@ -58844,7 +58845,7 @@ Ope250:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   mov r0,r0,lsr #16
 ;@ EaWrite: r0 into register[r11]:
@@ -58866,7 +58867,7 @@ Ope290:
   adds r1,r1,#0 ;@ Clear V flag
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: r0 into register[r11]:
   str r0,[r7,r11,lsl #2]
@@ -58894,7 +58895,7 @@ Ope2d0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
@@ -58927,7 +58928,7 @@ Ope2d8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
@@ -58961,7 +58962,7 @@ Ope2e0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
@@ -58994,7 +58995,7 @@ Ope2e8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
@@ -59034,7 +59035,7 @@ Ope2f0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
@@ -59064,7 +59065,7 @@ Ope2f8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
@@ -59096,7 +59097,7 @@ Ope2f9:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsr #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
@@ -59122,7 +59123,7 @@ Ope310:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-23 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   mov r0,r0,lsr #24
 ;@ EaWrite: r0 into register[r11]:
@@ -59146,7 +59147,7 @@ Ope350:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   mov r0,r0,lsr #16
 ;@ EaWrite: r0 into register[r11]:
@@ -59167,7 +59168,7 @@ Ope390:
   ldr r2,[r7,#0x4c] ;@ X bit
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   adcs r0,r0,r0
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 ;@ EaWrite: r0 into register[r11]:
@@ -59195,7 +59196,7 @@ Ope3d0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
@@ -59227,7 +59228,7 @@ Ope3d8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
@@ -59260,7 +59261,7 @@ Ope3e0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
@@ -59292,7 +59293,7 @@ Ope3e8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
@@ -59331,7 +59332,7 @@ Ope3f0:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
@@ -59360,7 +59361,7 @@ Ope3f8:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
@@ -59391,7 +59392,7 @@ Ope3f9:
   adds r3,r3,#0 ;@ clear C and V, avoiding false register dependency on r0
 ;@ Shift register:
   movs r0,r0,lsl #17
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
@@ -59425,7 +59426,7 @@ Ope4d0:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59459,7 +59460,7 @@ Ope4d8:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
   mov r1,r0,lsr #16
@@ -59494,7 +59495,7 @@ Ope4e0:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59528,7 +59529,7 @@ Ope4e8:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59569,7 +59570,7 @@ Ope4f0:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
   mov r1,r0,lsr #16
@@ -59600,7 +59601,7 @@ Ope4f8:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
   mov r1,r0,lsr #16
@@ -59633,7 +59634,7 @@ Ope4f9:
   bic r0,r0,#0x10000
   movs r2,r2,lsl #3 ;@ Get X bit into Carry
   movs r0,r0,rrx
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
   mov r1,r0,lsr #16
@@ -59665,7 +59666,7 @@ Ope5d0:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59698,7 +59699,7 @@ Ope5d8:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
   mov r1,r0,lsr #16
@@ -59732,7 +59733,7 @@ Ope5e0:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59765,7 +59766,7 @@ Ope5e8:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59805,7 +59806,7 @@ Ope5f0:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
   mov r1,r0,lsr #16
@@ -59835,7 +59836,7 @@ Ope5f8:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
   mov r1,r0,lsr #16
@@ -59867,7 +59868,7 @@ Ope5f9:
   and r2,r2,#0x20000000 ;@ Isolate X bit
   adds r0,r0,r2,lsr #29-15 ;@ Clear V flag
   movs r0,r0,lsl #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
   mov r1,r0,lsr #16
@@ -59900,7 +59901,7 @@ Ope6d0:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -59934,7 +59935,7 @@ Ope6d8:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
   mov r1,r0,lsr #16
@@ -59969,7 +59970,7 @@ Ope6e0:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -60003,7 +60004,7 @@ Ope6e8:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
   mov r1,r0,lsr #16
@@ -60044,7 +60045,7 @@ Ope6f0:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
   mov r1,r0,lsr #16
@@ -60075,7 +60076,7 @@ Ope6f8:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
   mov r1,r0,lsr #16
@@ -60108,7 +60109,7 @@ Ope6f9:
 
 ;@ Rotate register:
   movs r0,r0,ror #1
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
   mov r1,r0,lsr #16
@@ -60142,7 +60143,7 @@ Ope7d0:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '(a0)' (address in r11):
@@ -60178,7 +60179,7 @@ Ope7d8:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '(a0)+' (address in r11):
@@ -60215,7 +60216,7 @@ Ope7e0:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '-(a0)' (address in r11):
@@ -60251,7 +60252,7 @@ Ope7e8:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '($3333,a0)' (address in r11):
@@ -60294,7 +60295,7 @@ Ope7f0:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '($33,a0,d3.w*2)' (address in r11):
@@ -60327,7 +60328,7 @@ Ope7f8:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '$3333.w' (address in r11):
@@ -60362,7 +60363,7 @@ Ope7f9:
 ;@ Rotate register:
   cmn r0,r0 ;@ get carry for rotation left by 1
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: Write r0 into '$33333333.l' (address in r11):
@@ -60392,7 +60393,7 @@ Opee00:
 
 ;@ Shift register:
   movs r0,r0,asr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60418,7 +60419,7 @@ Opee08:
 
 ;@ Shift register:
   movs r0,r0,lsr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60451,7 +60452,7 @@ Opee10:
   adds r0,r0,r3,lsl r1 ;@ Add reverse part, clear V flag
 
   movs r1,r0,lsl #24 ;@ Shift up and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60480,7 +60481,7 @@ Opee18:
   sub r5,r5,r2,asl #1 ;@ Take 2*n cycles
 
   movs r0,r0,ror r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   strb r0,[r7,r11,lsl #2]
@@ -60506,7 +60507,7 @@ Opee40:
 
 ;@ Shift register:
   movs r0,r0,asr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60533,7 +60534,7 @@ Opee48:
 
 ;@ Shift register:
   movs r0,r0,lsr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60567,7 +60568,7 @@ Opee50:
   adds r0,r0,r3,lsl r1 ;@ Add reverse part, clear V flag
 
   movs r1,r0,lsl #16 ;@ Shift up and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60596,7 +60597,7 @@ Opee58:
   sub r5,r5,r2,asl #1 ;@ Take 2*n cycles
 
   movs r0,r0,ror r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   strh r0,[r7,r11]
@@ -60621,7 +60622,7 @@ Opee80:
 
 ;@ Shift register:
   movs r0,r0,asr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60647,7 +60648,7 @@ Opee88:
 
 ;@ Shift register:
   movs r0,r0,lsr r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60679,7 +60680,7 @@ Opee90:
   movs r0,r0,lsr r2 ;@ Shift forward part, set C flag
   orrs r0,r0,r3,lsl r1 ;@ Orr reverse part, set flags
 
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60705,7 +60706,7 @@ Opee98:
   sub r5,r5,r2,asl #1 ;@ Take 2*n cycles
 
   movs r0,r0,ror r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
 
 ;@ EaWrite: r0 into register[r11]:
   str r0,[r7,r11,lsl #2]
@@ -60731,7 +60732,7 @@ Opef00:
 
 ;@ Shift register:
   movs r0,r0,asl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ calculate V flag (set if sign bit changes at anytime):
@@ -60763,7 +60764,7 @@ Opef08:
 
 ;@ Shift register:
   movs r0,r0,lsl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60798,7 +60799,7 @@ Opef10:
   adds r0,r0,r3,lsr r1 ;@ Add reverse part, clear V flag
 
   movs r0,r0,asr #24 ;@ Shift down and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60829,7 +60830,7 @@ Opef18:
   rsb r2,r2,#33 ;@ rotate left by N-1, get carry for N
   movs r0,r0,ror r2
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60857,7 +60858,7 @@ Opef40:
 
 ;@ Shift register:
   movs r0,r0,asl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ calculate V flag (set if sign bit changes at anytime):
@@ -60890,7 +60891,7 @@ Opef48:
 
 ;@ Shift register:
   movs r0,r0,lsl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60926,7 +60927,7 @@ Opef50:
   adds r0,r0,r3,lsr r1 ;@ Add reverse part, clear V flag
 
   movs r0,r0,asr #16 ;@ Shift down and get correct NC flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60957,7 +60958,7 @@ Opef58:
   rsb r2,r2,#33 ;@ rotate left by N-1, get carry for N
   movs r0,r0,ror r2
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: r0 into register[r11]:
@@ -60983,7 +60984,7 @@ Opef80:
 
 ;@ Shift register:
   movs r0,r0,asl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ calculate V flag (set if sign bit changes at anytime):
@@ -61013,7 +61014,7 @@ Opef88:
 
 ;@ Shift register:
   movs r0,r0,lsl r2
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -61045,7 +61046,7 @@ Opef90:
   movs r0,r0,lsl r2 ;@ Shift forward part, set C flag
   orrs r0,r0,r3,lsr r1 ;@ Orr reverse part, set flags
 
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   str r10,[r7,#0x4c] ;@ Save X bit
 
 ;@ EaWrite: r0 into register[r11]:
@@ -61072,7 +61073,7 @@ Opef98:
   rsb r2,r2,#33 ;@ rotate left by N-1, get carry for N
   movs r0,r0,ror r2
   adcs r0,r0,r0 ;@ rotate left by 1, setting flags
-  mrs r10,cpsr ;@ r10=flags
+  mrs r10,apsr ;@ r10=flags
   bic r10,r10,#0x10000000 ;@ make sure V is clear
 
 ;@ EaWrite: r0 into register[r11]:
