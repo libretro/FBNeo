@@ -38642,7 +38642,7 @@ struct BurnDriver BurnDrvmd_bigfd = {
 // Black Tiger (HB, v1.7)
 // https://rester159.itch.io/black-tiger-md
 static struct BurnRomInfo md_blacktigerRomDesc[] = {
-	{ "Black Tiger v1.7 (2026)(rester159).bin", 4194304, 0xdb4db4b9, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Black Tiger v1.7 (2026)(rester159).bin", 4194304, 0x3e195ffb, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_blacktiger)
@@ -40309,7 +40309,7 @@ struct BurnDriver BurnDrvmd_flikisesc = {
 // Flowers of Azathoth (HB)
 // https://mike-daw.itch.io/flowers-of-azathoth
 static struct BurnRomInfo md_fazathothRomDesc[] = {
-	{ "Flowers of Azathoth (2026)(Mike Daw).bin", 262144, 0xe0621243, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Flowers of Azathoth (2026)(Mike Daw).bin", 262144, 0x18f4795a, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_fazathoth)
@@ -40711,6 +40711,24 @@ struct BurnDriver BurnDrvmd_handyharvy = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Hang-On Jr. - Arcade Port (HB)
+static struct BurnRomInfo md_hangonjrarcRomDesc[] = {
+	{ "Hang-On Jr. - Arcade Port (2026)(yosoynacho).bin", 270416, 0xbf2dc938, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_hangonjrarc)
+STD_ROM_FN(md_hangonjrarc)
+
+struct BurnDriver BurnDrvmd_hangonjrarc = {
+	"md_hangonjrarc", NULL, NULL, NULL, "2026",
+	"Hang-On Jr. - Arcade Port (HB)\0", NULL, "yosoynacho", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_RACING, 0,
+	MegadriveGetZipName, md_hangonjrarcRomInfo, md_hangonjrarcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // Haruna's Big Snow Cleanup (HB)
 // https://warasibe1192.itch.io/harunas-big-snow-cleanup
 static struct BurnRomInfo md_harunasbsRomDesc[] = {
@@ -40842,7 +40860,7 @@ struct BurnDriver BurnDrvmd_huntergirls = {
 // Hyper Dyne Side Arms (HB, v1.3)
 // https://rester159.itch.io/side-arms
 static struct BurnRomInfo md_sidearmsRomDesc[] = {
-	{ "Hyper Dyne Side Arms v1.3 (2026)(rester159).bin", 2621440, 0x960da98b, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Hyper Dyne Side Arms v1.3 (2026)(rester159).bin", 2621440, 0x4016ab99, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sidearms)
@@ -43295,10 +43313,10 @@ struct BurnDriver BurnDrvmd_satyrhell = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Scoff (HB, v2.0)
+// Scoff (HB, v2)
 // https://mike-daw.itch.io/scoffmegadrive
 static struct BurnRomInfo md_scoffRomDesc[] = {
-	{ "Scoff v2.0 (2026)(Mike Daw).bin", 262144, 0xb403c4d9, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Scoff v2 (2026)(Mike Daw).bin", 262144, 0x5a06186b, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_scoff)
@@ -43306,7 +43324,7 @@ STD_ROM_FN(md_scoff)
 
 struct BurnDriver BurnDrvmd_scoff = {
 	"md_scoff", NULL, NULL, NULL, "2026",
-	"Scoff (HB, v2.0)\0", NULL, "Mike Daw", "Genesis / Mega Drive",
+	"Scoff (HB, v2)\0", NULL, "Mike Daw", "Genesis / Mega Drive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_ACTION, 0,
 	MegadriveGetZipName, md_scoffRomInfo, md_scoffRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -44054,6 +44072,25 @@ struct BurnDriver BurnDrvmd_terminate = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Tetris - Atari Games Arcade Port (HB, v1.02)
+// https://shinobiz72.itch.io/tetris-pce
+static struct BurnRomInfo md_tetrisarcRomDesc[] = {
+	{ "Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).bin", 2097152, 0x4b5be3f5, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_tetrisarc)
+STD_ROM_FN(md_tetrisarc)
+
+struct BurnDriver BurnDrvmd_tetrisarc = {
+	"md_tetrisarc", NULL, NULL, NULL, "2026",
+	"Tetris - Atari Games Arcade Port (HB, v1.02)\0", NULL, "ShinobiZ", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PUZZLE, 0,
+	MegadriveGetZipName, md_tetrisarcRomInfo, md_tetrisarcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // DINKNOTE/tofix: try to fix this one
 // Tetris (Pocket Player Pro)
 static struct BurnRomInfo md_tetrisppRomDesc[] = {
@@ -44395,6 +44432,25 @@ struct BurnDriver BurnDrvmd_wolfstn3d = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 1, HARDWARE_SEGA_MEGADRIVE, GBF_SHOOT, 0,
 	MegadriveGetZipName, md_wolfstn3dRomInfo, md_wolfstn3dRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Wonder Boy - Arcade Port (HB, v1.1)
+// https://shinobiz72.itch.io/tetris-pce
+static struct BurnRomInfo md_wboyarcRomDesc[] = {
+	{ "Wonder Boy - Arcade Port v1.1 (2026)(ShinobiZ).bin", 1638400, 0xe48b69f7, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_wboyarc)
+STD_ROM_FN(md_wboyarc)
+
+struct BurnDriver BurnDrvmd_wboyarc = {
+	"md_wboyarc", NULL, NULL, NULL, "2026",
+	"Wonder Boy - Arcade Port (HB, v1.1)\0", NULL, "ShinobiZ", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM, 0,
+	MegadriveGetZipName, md_wboyarcRomInfo, md_wboyarcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
