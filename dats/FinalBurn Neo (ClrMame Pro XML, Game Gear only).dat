@@ -2449,10 +2449,10 @@
 	</game>
 	<game name="rayeart2e" cloneof="rayeart2" romof="rayeart2" sourcefile="sms/d_sms.cpp">
 		<comment>Hack</comment>
-		<description>Magic Knight Rayearth 2: Making of Magic Knight (Hack, English v1.5)</description>
+		<description>Magic Knight Rayearth 2: Making of Magic Knight (Hack, English v1.5 Build 126)</description>
 		<year>2026</year>
 		<manufacturer>Patch Clan</manufacturer>
-		<rom name="Magic Knight Rayearth 2 - Making of Magic Knight T-Eng v1.5 (2026)(Patch Clan).gg" size="524288" crc="1a43ed27"/>
+		<rom name="Magic Knight Rayearth 2 - Making of Magic Knight T-Eng v1.5 Build 126 (2026)(Patch Clan).gg" size="524288" crc="6210fbe6"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

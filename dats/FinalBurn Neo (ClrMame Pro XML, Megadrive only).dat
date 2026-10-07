@@ -2354,7 +2354,7 @@
 		<description>Black Tiger (HB, v1.7)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Black Tiger v1.7 (2026)(rester159).bin" size="4194304" crc="db4db4b9"/>
+		<rom name="Black Tiger v1.7 (2026)(rester159).bin" size="4194304" crc="3e195ffb"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -7555,7 +7555,7 @@
 		<description>Flowers of Azathoth (HB)</description>
 		<year>2026</year>
 		<manufacturer>Mike Daw</manufacturer>
-		<rom name="Flowers of Azathoth (2026)(Mike Daw).bin" size="262144" crc="e0621243"/>
+		<rom name="Flowers of Azathoth (2026)(Mike Daw).bin" size="262144" crc="18f4795a"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -8805,6 +8805,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="hangonjrarc" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Hang-On Jr. - Arcade Port (HB)</description>
+		<year>2026</year>
+		<manufacturer>yosoynacho</manufacturer>
+		<rom name="Hang-On Jr. - Arcade Port (2026)(yosoynacho).bin" size="270416" crc="bf2dc938"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="harddriv" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Hard Drivin' (World)</description>
 		<year>1991</year>
@@ -9235,7 +9244,7 @@
 		<description>Hyper Dyne Side Arms (HB, v1.3)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Hyper Dyne Side Arms v1.3 (2026)(rester159).bin" size="2621440" crc="960da98b"/>
+		<rom name="Hyper Dyne Side Arms v1.3 (2026)(rester159).bin" size="2621440" crc="4016ab99"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17729,10 +17738,10 @@
 	</game>
 	<game name="scoff" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Scoff (HB, v2.0)</description>
+		<description>Scoff (HB, v2)</description>
 		<year>2026</year>
 		<manufacturer>Mike Daw</manufacturer>
-		<rom name="Scoff v2.0 (2026)(Mike Daw).bin" size="262144" crc="b403c4d9"/>
+		<rom name="Scoff v2 (2026)(Mike Daw).bin" size="262144" crc="5a06186b"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22348,6 +22357,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="preliminary"/>
 	</game>
+	<game name="tetrisarc" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Tetris - Atari Games Arcade Port (HB, v1.02)</description>
+		<year>2026</year>
+		<manufacturer>ShinobiZ</manufacturer>
+		<rom name="Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).bin" size="2097152" crc="4b5be3f5"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="tetrisredux" cloneof="tetris" romof="tetris" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>Tetris Redux (Hack)</description>
@@ -24460,6 +24478,15 @@
 		<year>2021</year>
 		<manufacturer>BillyTime! Games</manufacturer>
 		<rom name="Wolverine Adamantium Redux (2021)(BillyTime! Games).bin" size="2621440" crc="ab3f89b0"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wboyarc" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Wonder Boy - Arcade Port (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>ShinobiZ</manufacturer>
+		<rom name="Wonder Boy - Arcade Port v1.1 (2026)(ShinobiZ).bin" size="1638400" crc="e48b69f7"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

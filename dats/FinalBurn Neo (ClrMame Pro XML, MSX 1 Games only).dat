@@ -3232,6 +3232,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="c0man" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>c0MAN (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>FONY</manufacturer>
+		<rom name="c0MAN v1.1 (2026)(FONY).rom" size="16384" crc="8c63b2c0"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cso" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>C_So! (Japan)</description>
 		<year>1985</year>
@@ -4559,10 +4571,10 @@
 	</game>
 	<game name="congobongo3d" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew</comment>
-		<description>Congo Bongo - The Isometric Edition (HB)</description>
+		<description>Congo Bongo: The Isometric Edition (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Mastropiero</manufacturer>
-		<rom name="Congo Bongo - The Isometric Edition (2026)(Mastropiero).rom" size="32768" crc="3c403f70"/>
+		<rom name="Congo Bongo - The Isometric Edition v1.1 (2026)(Mastropiero).rom" size="32768" crc="3c403f70"/>
 		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
 		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
@@ -11985,6 +11997,18 @@
 		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="preliminary"/>
+	</game>
+	<game name="mikerodys" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>Mikero-Odyssey (HB, v1.7.2)</description>
+		<year>2026</year>
+		<manufacturer>Kanon-ai</manufacturer>
+		<rom name="Mikero-Odyssey v1.7.2 (2026)(Kanon-ai).rom" size="524288" crc="0b7d4047"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
 	</game>
 	<game name="mikie" romof="msx" sourcefile="msx/d_msx.cpp">
 		<description>Mikie: Shinnyuushain Tooru-Kun (Japan)</description>

@@ -1543,6 +1543,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="crocopinball" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Croco Pinball (HB, v0.5)</description>
+		<year>2026</year>
+		<manufacturer>Oldschool Is Beautiful</manufacturer>
+		<rom name="Croco Pinball v0.5 (2026)(Oldschool Is Beautiful).sms" size="524288" crc="b8e36582"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cybers" sourcefile="sms/d_sms.cpp">
 		<description>Cyber Shinobi, The (Euro, Brazil)</description>
 		<year>1990</year>
