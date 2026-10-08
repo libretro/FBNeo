@@ -1377,6 +1377,14 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="borgmane" cloneof="cyborgh" romof="cyborgh" sourcefile="sms/d_sms.cpp">
+		<description>Chouon Senshi Borgman (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>FomaLSSJ</manufacturer>
+		<rom name="Chouon Senshi Borgman T-Eng (2026)(FomaLSSJ).sms" size="131072" crc="afd6e0d0"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="borgman" cloneof="cyborgh" romof="cyborgh" sourcefile="sms/d_sms.cpp">
 		<description>Chouon Senshi Borgman (Japan)</description>
 		<year>1988</year>
@@ -3907,10 +3915,10 @@
 	</game>
 	<game name="mtennis" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Master Tennis (HB, v1.1)</description>
+		<description>Master Tennis (HB, v1.2)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Master Tennis v1.1 (2026)(Oldschool Is Beautiful).sms" size="65536" crc="d3bc9717"/>
+		<rom name="Master Tennis v1.2 (2026)(Oldschool Is Beautiful).sms" size="65536" crc="88033cd3"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -4545,6 +4553,15 @@
 		<year>19??</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Pat Riley Basketball (USA, Proto)(19xx)(Sega).sms" size="262144" crc="9aefe664"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pedrisco" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Pedrisco (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>vosges6128</manufacturer>
+		<rom name="Pedrisco v1.1 (2026)(vosges6128).sms" size="131072" crc="271296bc"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5938,6 +5955,15 @@
 		<year>1986</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Spy vs Spy (USA, Display Unit Sample)(1986)(Sega).sms" size="262144" crc="b87e1b2b"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sqrdoom" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Square Doom (HB, v0.0.3)</description>
+		<year>2026</year>
+		<manufacturer>haroldo-ok</manufacturer>
+		<rom name="Square Doom v0.0.3 (2026)(haroldo-ok).sms" size="1048576" crc="df11b06c"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

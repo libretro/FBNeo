@@ -38101,6 +38101,35 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="vamprest" cloneof="dstlk" romof="dstlk" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Darkstalkers: The Night Warriors (Hack, English Restoration RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="vamre.03a" size="524288" crc="f36d0886"/>
+		<rom name="vamre.04b" size="524288" crc="48f49597"/>
+		<rom name="vamj.05a" size="524288" crc="6c497e92"/>
+		<rom name="vamj.06a" size="524288" crc="f1bbecb6"/>
+		<rom name="vamj.07a" size="524288" crc="1067ad84"/>
+		<rom name="vamj.08a" size="524288" crc="4b89f41f"/>
+		<rom name="vamre.09a" size="524288" crc="744507a9"/>
+		<rom name="vamj.10a" size="524288" crc="9270c26b"/>
+		<rom name="vamre.13m" size="4194304" crc="2c48a876"/>
+		<rom name="vamre.15m" size="4194304" crc="6465e083"/>
+		<rom name="vamre.17m" size="4194304" crc="c613f6eb"/>
+		<rom name="vamre.19m" size="4194304" crc="29424b8d"/>
+		<rom name="vam.14m" merge="vam.14m" size="1048576" crc="bd87243c"/>
+		<rom name="vam.16m" merge="vam.16m" size="1048576" crc="afec855f"/>
+		<rom name="vam.18m" merge="vam.18m" size="1048576" crc="3a033625"/>
+		<rom name="vam.20m" merge="vam.20m" size="1048576" crc="2bff6a89"/>
+		<rom name="vam.01" merge="vam.01" size="131072" crc="64b685d5"/>
+		<rom name="vam.02" merge="vam.02" size="131072" crc="cf7c97c7"/>
+		<rom name="vam.11m" merge="vam.11m" size="2097152" crc="4a39deb2"/>
+		<rom name="vam.12m" merge="vam.12m" size="2097152" crc="1a3e5c03"/>
+		<rom name="vampj.key" size="20" crc="8418cc6f"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dstlkh" cloneof="dstlk" romof="dstlk" sourcefile="capcom/d_cps2.cpp">
 		<description>Darkstalkers: The Night Warriors (Hispanic 940818)</description>
 		<year>1994</year>
@@ -85474,6 +85503,169 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="kinstp47" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
+		<comment>Prototype</comment>
+		<description>Killer Instinct (ROM proto ver. 4.7)</description>
+		<year>1994</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki-p47.u98" size="524288" crc="05e67bcb"/>
+		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
+		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
+		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
+		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
+		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
+		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
+		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
+		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst13" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct (ROM ver. 1.3)</description>
+		<year>1994</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki-l13.u98" size="524288" crc="65f7ea31"/>
+		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
+		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
+		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
+		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
+		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
+		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
+		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
+		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst14" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct (ROM ver. 1.4)</description>
+		<year>1994</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki-l14.u98" size="524288" crc="afedb75f"/>
+		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
+		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
+		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
+		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
+		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
+		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
+		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
+		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst15ai" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
+		<comment>Hack</comment>
+		<description>Killer Instinct (ROM ver. 1.5 AnyIDE)</description>
+		<year>1994</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki_l15di.u98" size="524288" crc="230f55fb"/>
+		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
+		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
+		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
+		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
+		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
+		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
+		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
+		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct (ROM ver. 1.5d)</description>
+		<year>1994</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki-l15d.u98" size="524288" crc="7b65ca3d"/>
+		<rom name="u10-l1" size="524288" crc="b6cc155f"/>
+		<rom name="u11-l1" size="524288" crc="0b5e05df"/>
+		<rom name="u12-l1" size="524288" crc="d05ce6ad"/>
+		<rom name="u13-l1" size="524288" crc="7d0954ea"/>
+		<rom name="u33-l1" size="524288" crc="8bbe4f0c"/>
+		<rom name="u34-l1" size="524288" crc="b2e73603"/>
+		<rom name="u35-l1" size="524288" crc="0aaef4fc"/>
+		<rom name="u36-l1" size="524288" crc="0577bb60"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst210" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct II (ROM ver. 1.0)</description>
+		<year>1995</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki2-l10.u98" size="524288" crc="b17b4b3d"/>
+		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
+		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
+		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
+		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
+		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
+		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
+		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
+		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst211" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct II (ROM ver. 1.1)</description>
+		<year>1995</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki2-l11.u98" size="524288" crc="0cb8de1e"/>
+		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
+		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
+		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
+		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
+		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
+		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
+		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
+		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst213" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct II (ROM ver. 1.3)</description>
+		<year>1995</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki2-l13.u98" size="524288" crc="25ebde3b"/>
+		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
+		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
+		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
+		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
+		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
+		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
+		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
+		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst214ai" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
+		<comment>Hack</comment>
+		<description>Killer Instinct II (ROM ver. 1.4 AnyIDE)</description>
+		<year>1995</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki2_l14p.u98" size="524288" crc="d80c937a"/>
+		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
+		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
+		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
+		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
+		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
+		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
+		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
+		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst2" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct II (ROM ver. 1.4)</description>
+		<year>1995</year>
+		<manufacturer>Rare/Nintendo</manufacturer>
+		<rom name="ki2-l14.u98" size="524288" crc="27d0285e"/>
+		<rom name="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
+		<rom name="ki2_l1.u11" size="524288" crc="f9e70024"/>
+		<rom name="ki2_l1.u12" size="524288" crc="2994c199"/>
+		<rom name="ki2_l1.u13" size="524288" crc="3fe6327b"/>
+		<rom name="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
+		<rom name="ki2_l1.u34" size="524288" crc="5db48206"/>
+		<rom name="ki2_l1.u35" size="524288" crc="7245ce69"/>
+		<rom name="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kingballj" cloneof="kingball" romof="kingball" sourcefile="galaxian/d_galaxian.cpp">
 		<description>King &amp; Balloon (Japan)</description>
 		<year>1980</year>
@@ -99146,10 +99338,10 @@
 	</game>
 	<game name="mshvsfexj" cloneof="mshvsf" romof="mshvsf" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, Japan RC2)</description>
+		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, Japan RC3)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="mvsexj.03i" size="524288" crc="3a606dc3"/>
+		<rom name="mvsexj.03i" size="524288" crc="8f52f63d"/>
 		<rom name="mvsex.04i" size="524288" crc="aee80449"/>
 		<rom name="mvsex.05h" size="524288" crc="c6dca8ff"/>
 		<rom name="mvsex.06a" size="524288" crc="444fb179"/>
@@ -99175,10 +99367,10 @@
 	</game>
 	<game name="mshvsfex" cloneof="mshvsf" romof="mshvsf" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, USA RC2)</description>
+		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, USA RC3)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="mvsex.03i" size="524288" crc="8d895d94"/>
+		<rom name="mvsex.03i" size="524288" crc="38bbc66a"/>
 		<rom name="mvsex.04i" size="524288" crc="aee80449"/>
 		<rom name="mvsex.05h" size="524288" crc="c6dca8ff"/>
 		<rom name="mvsex.06a" size="524288" crc="444fb179"/>
@@ -119867,6 +120059,35 @@
 		<rom name="vph.11m" size="2097152" crc="e1837d33"/>
 		<rom name="vph.12m" size="2097152" crc="fbd3cd90"/>
 		<rom name="nwarr.key" size="20" crc="618a13ca"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="nwarrre" cloneof="nwarr" romof="nwarr" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Night Warriors: Darkstalkers' Revenge (Hack, English Restoration RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="vphre.03f" size="524288" crc="8bb491f7"/>
+		<rom name="vphre.04c" size="524288" crc="5a592e49"/>
+		<rom name="vphre.05d" size="524288" crc="832ea9f4"/>
+		<rom name="vphj.06c" size="524288" crc="ac3bd3d5"/>
+		<rom name="vphj.07b" size="524288" crc="0761309f"/>
+		<rom name="vphj.08b" size="524288" crc="5a5c2bf5"/>
+		<rom name="vphj.09b" size="524288" crc="823d6d99"/>
+		<rom name="vphre.10b" size="524288" crc="daa98fe2"/>
+		<rom name="vphre.13m" size="4194304" crc="da6e5f0d"/>
+		<rom name="vphre.15m" size="4194304" crc="82fe8661"/>
+		<rom name="vph.17m" merge="vph.17m" size="4194304" crc="4f2408e0"/>
+		<rom name="vphre.19m" size="4194304" crc="d3789851"/>
+		<rom name="vph.14m" merge="vph.14m" size="4194304" crc="7a0e1add"/>
+		<rom name="vph.16m" merge="vph.16m" size="4194304" crc="2f41ca75"/>
+		<rom name="vph.18m" merge="vph.18m" size="4194304" crc="64498eed"/>
+		<rom name="vph.20m" merge="vph.20m" size="4194304" crc="17f2433f"/>
+		<rom name="vph.01" merge="vph.01" size="131072" crc="5045dcac"/>
+		<rom name="vph.02" merge="vph.02" size="131072" crc="86b60e59"/>
+		<rom name="vph.11m" merge="vph.11m" size="2097152" crc="e1837d33"/>
+		<rom name="vph.12m" merge="vph.12m" size="2097152" crc="fbd3cd90"/>
+		<rom name="vhuntj.key" size="20" crc="72854f68"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -166323,10 +166544,10 @@
 	</game>
 	<game name="sfa2ds" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Alpha 2 Dash (Europe, PS2 Backport RC5)</description>
+		<description>Street Fighter Alpha 2 Dash (Europe, PS2 Backport RC6)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2ds.03" size="524288" crc="6ae112d9"/>
+		<rom name="sz2ds.03" size="524288" crc="daa64229"/>
 		<rom name="sz2ds.04" size="524288" crc="7e5a7f0f"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
@@ -166348,13 +166569,40 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sfa2ex" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter Alpha 2 EX (Hack, USA RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="sz2ex.03" size="524288" crc="f361ad05"/>
+		<rom name="sz2ex.04" size="524288" crc="afcf0a4e"/>
+		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
+		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
+		<rom name="sz2ex.07" size="524288" crc="bf97619c"/>
+		<rom name="sz2ex.08" size="524288" crc="9ee4e0be"/>
+		<rom name="sz2ex.13m" size="4194304" crc="08d22680"/>
+		<rom name="sz2ex.15m" size="4194304" crc="1a402a21"/>
+		<rom name="sz2ex.17m" size="4194304" crc="7c574c07"/>
+		<rom name="sz2ex.19m" size="4194304" crc="6bed9c85"/>
+		<rom name="sza.14m" merge="sza.14m" size="1048576" crc="0560c6aa"/>
+		<rom name="sza.16m" merge="sza.16m" size="1048576" crc="ae940f87"/>
+		<rom name="sza.18m" merge="sza.18m" size="1048576" crc="4bc3c8bc"/>
+		<rom name="sza.20m" merge="sza.20m" size="1048576" crc="39e674c0"/>
+		<rom name="sz2ds.01" size="131072" crc="81a567c1"/>
+		<rom name="sz2ds.02" size="131072" crc="c45ee83c"/>
+		<rom name="sz2ds.11m" size="4194304" crc="f23db54d"/>
+		<rom name="sz2ds.12m" size="4194304" crc="c824a1ea"/>
+		<rom name="sfz2al.key" merge="sfz2al.key" size="20" crc="2904963e"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sfa2gl" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Alpha 2 Gold (USA, PS2 Backport RC5)</description>
+		<description>Street Fighter Alpha 2 Gold (USA, PS2 Backport RC6)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2gl.03" size="524288" crc="bf3d3398"/>
-		<rom name="sz2gl.04" size="524288" crc="92274244"/>
+		<rom name="sz2gl.03" size="524288" crc="0f22578e"/>
+		<rom name="sz2gl.04" size="524288" crc="8b168698"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
 		<rom name="sz2gl.07" size="524288" crc="3fd0b420"/>
@@ -166917,12 +167165,12 @@
 	</game>
 	<game name="sf2mix" cloneof="sf2ce" romof="sf2ce" sourcefile="capcom/d_cps1.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter II Mix (v1.6)</description>
-		<year>2025</year>
+		<description>Street Fighter II Mix (v1.7)</description>
+		<year>2025-26</year>
 		<manufacturer>hack</manufacturer>
-		<rom name="smxe_23b.8f" size="524288" crc="41877bf2"/>
-		<rom name="smx_22b.7f" size="524288" crc="ecc7e105"/>
-		<rom name="smx_21a.6f" size="524288" crc="07fb17ea"/>
+		<rom name="smxe_23b.8f" size="524288" crc="60d0d40d"/>
+		<rom name="smx_22b.7f" size="524288" crc="f7bd54e7"/>
+		<rom name="smx_21a.6f" size="524288" crc="b580c709"/>
 		<rom name="smx-1m.3a" size="524288" crc="a8f70643"/>
 		<rom name="smx-3m.5a" size="524288" crc="f73f1913"/>
 		<rom name="smx-2m.4a" size="524288" crc="a80234b4"/>
@@ -173445,10 +173693,10 @@
 	</game>
 	<game name="sfz2dsa" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Zero 2 Dash (Asia, PS2 Backport RC5)</description>
+		<description>Street Fighter Zero 2 Dash (Asia, PS2 Backport RC6)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2dsa.03a" size="524288" crc="52e91d33"/>
+		<rom name="sz2dsa.03a" size="524288" crc="422b0c9a"/>
 		<rom name="sz2dsa.04a" size="524288" crc="14845042"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
@@ -173472,10 +173720,10 @@
 	</game>
 	<game name="sfz2ds" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Zero 2 Dash (Japan, PS2 Backport RC5)</description>
+		<description>Street Fighter Zero 2 Dash (Japan, PS2 Backport RC6)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2dsj.03a" size="524288" crc="10afac2b"/>
+		<rom name="sz2dsj.03a" size="524288" crc="28f810c9"/>
 		<rom name="sz2dsj.04a" size="524288" crc="97d1b04e"/>
 		<rom name="szaj.05a" size="524288" crc="c88ebf88"/>
 		<rom name="szaj.06a" size="524288" crc="35ed5b7a"/>
@@ -173485,6 +173733,33 @@
 		<rom name="sz2dsj.15m" size="4194304" crc="6fd70f52"/>
 		<rom name="sz2dsj.17m" size="4194304" crc="c6caea78"/>
 		<rom name="sz2dsj.19m" size="4194304" crc="0956de4d"/>
+		<rom name="sza.14m" merge="sza.14m" size="1048576" crc="0560c6aa"/>
+		<rom name="sza.16m" merge="sza.16m" size="1048576" crc="ae940f87"/>
+		<rom name="sza.18m" merge="sza.18m" size="1048576" crc="4bc3c8bc"/>
+		<rom name="sza.20m" merge="sza.20m" size="1048576" crc="39e674c0"/>
+		<rom name="sz2ds.01" size="131072" crc="81a567c1"/>
+		<rom name="sz2ds.02" size="131072" crc="c45ee83c"/>
+		<rom name="sz2ds.11m" size="4194304" crc="f23db54d"/>
+		<rom name="sz2ds.12m" size="4194304" crc="c824a1ea"/>
+		<rom name="sfz2alj.key" size="20" crc="4c42320f"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sfz2exj" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter Zero 2 EX (Hack, Japan RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="sz2exj.03" size="524288" crc="44c9c370"/>
+		<rom name="sz2exj.04" size="524288" crc="5a1712f0"/>
+		<rom name="szaj.05a" size="524288" crc="c88ebf88"/>
+		<rom name="szaj.06a" size="524288" crc="35ed5b7a"/>
+		<rom name="sz2exj.07" size="524288" crc="59b681df"/>
+		<rom name="sz2exj.08" size="524288" crc="87beae3c"/>
+		<rom name="sz2exj.13m" size="4194304" crc="d3322c27"/>
+		<rom name="sz2exj.15m" size="4194304" crc="59a27a38"/>
+		<rom name="sz2exj.17m" size="4194304" crc="8c60de42"/>
+		<rom name="sz2exj.19m" size="4194304" crc="6f711940"/>
 		<rom name="sza.14m" merge="sza.14m" size="1048576" crc="0560c6aa"/>
 		<rom name="sza.16m" merge="sza.16m" size="1048576" crc="ae940f87"/>
 		<rom name="sza.18m" merge="sza.18m" size="1048576" crc="4bc3c8bc"/>
@@ -179931,24 +180206,24 @@
 	</game>
 	<game name="ssf2xucj" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, Japan RC4)</description>
+		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, Japan RC5)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sfxucj.03d" size="524288" crc="27c7261d"/>
-		<rom name="sfxucj.04a" size="524288" crc="6cd52f68"/>
+		<rom name="sfxucj.03d" size="524288" crc="0c93760f"/>
+		<rom name="sfxucj.04a" size="524288" crc="3f2a364e"/>
 		<rom name="sfxuc.05" size="524288" crc="477b0a5e"/>
-		<rom name="sfxucj.06b" size="524288" crc="c1066cb1"/>
-		<rom name="sfxuc.07a" size="524288" crc="890e641d"/>
+		<rom name="sfxucj.06b" size="524288" crc="5c492210"/>
+		<rom name="sfxucj.07a" size="524288" crc="f2f87e14"/>
 		<rom name="sfxuc.08" size="524288" crc="ea0d1d90"/>
 		<rom name="sfx.09" merge="sfx.09" size="524288" crc="642fae3f"/>
-		<rom name="sfxucj.13m" size="2097152" crc="f9c3a941"/>
-		<rom name="sfxucj.15m" size="2097152" crc="e2de77da"/>
-		<rom name="sfxucj.17m" size="2097152" crc="287e2aac"/>
-		<rom name="sfxucj.19m" size="2097152" crc="5f0aefbc"/>
-		<rom name="sfxuc.14m" size="1048576" crc="1a6e6aa9"/>
-		<rom name="sfxuc.16m" size="1048576" crc="0f6251bd"/>
-		<rom name="sfxuc.18m" size="1048576" crc="8b1eccaf"/>
-		<rom name="sfxuc.20m" size="1048576" crc="26eb0233"/>
+		<rom name="sfxucj.13m" size="2097152" crc="d9bf2280"/>
+		<rom name="sfxucj.15m" size="2097152" crc="d70f65e7"/>
+		<rom name="sfxucj.17m" size="2097152" crc="bd7f8933"/>
+		<rom name="sfxucj.19m" size="2097152" crc="77455a16"/>
+		<rom name="sfxuc.14m" size="1048576" crc="92735f0d"/>
+		<rom name="sfxuc.16m" size="1048576" crc="1717ef2d"/>
+		<rom name="sfxuc.18m" size="1048576" crc="c62f240b"/>
+		<rom name="sfxuc.20m" size="1048576" crc="d662a657"/>
 		<rom name="sfxuc.21m" size="1048576" crc="94b141da"/>
 		<rom name="sfxuc.23m" size="1048576" crc="359e2c32"/>
 		<rom name="sfxuc.25m" size="1048576" crc="99008d5f"/>
@@ -179963,24 +180238,24 @@
 	</game>
 	<game name="ssf2tuc" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, USA RC4)</description>
+		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, USA RC5)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sfxuc.03d" size="524288" crc="a2d97153"/>
-		<rom name="sfxuc.04a" size="524288" crc="45b204e6"/>
+		<rom name="sfxuc.03d" size="524288" crc="8b3a2dc4"/>
+		<rom name="sfxuc.04a" size="524288" crc="164d1dc0"/>
 		<rom name="sfxuc.05" size="524288" crc="477b0a5e"/>
-		<rom name="sfxuc.06b" size="524288" crc="f4d71289"/>
-		<rom name="sfxuc.07a" size="524288" crc="890e641d"/>
+		<rom name="sfxuc.06b" size="524288" crc="69985c28"/>
+		<rom name="sfxuc.07a" size="524288" crc="11d390a0"/>
 		<rom name="sfxuc.08" size="524288" crc="ea0d1d90"/>
 		<rom name="sfx.09" merge="sfx.09" size="524288" crc="642fae3f"/>
-		<rom name="sfxuc.13m" size="2097152" crc="438dbbdf"/>
-		<rom name="sfxuc.15m" size="2097152" crc="38b5b44c"/>
-		<rom name="sfxuc.17m" size="2097152" crc="6812d6a5"/>
-		<rom name="sfxuc.19m" size="2097152" crc="784795aa"/>
-		<rom name="sfxuc.14m" size="1048576" crc="1a6e6aa9"/>
-		<rom name="sfxuc.16m" size="1048576" crc="0f6251bd"/>
-		<rom name="sfxuc.18m" size="1048576" crc="8b1eccaf"/>
-		<rom name="sfxuc.20m" size="1048576" crc="26eb0233"/>
+		<rom name="sfxuc.13m" size="2097152" crc="63f1301e"/>
+		<rom name="sfxuc.15m" size="2097152" crc="0d64a671"/>
+		<rom name="sfxuc.17m" size="2097152" crc="fd13753a"/>
+		<rom name="sfxuc.19m" size="2097152" crc="50082000"/>
+		<rom name="sfxuc.14m" size="1048576" crc="92735f0d"/>
+		<rom name="sfxuc.16m" size="1048576" crc="1717ef2d"/>
+		<rom name="sfxuc.18m" size="1048576" crc="c62f240b"/>
+		<rom name="sfxuc.20m" size="1048576" crc="d662a657"/>
 		<rom name="sfxuc.21m" size="1048576" crc="94b141da"/>
 		<rom name="sfxuc.23m" size="1048576" crc="359e2c32"/>
 		<rom name="sfxuc.25m" size="1048576" crc="99008d5f"/>

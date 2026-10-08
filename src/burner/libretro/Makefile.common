@@ -64,7 +64,6 @@ M6809_CPU_DIR			:= $(FBNEO_CPU_DIR)/m6809
 M68K_CPU_DIR			:= $(FBNEO_CPU_DIR)/m68k
 MB88XX_CPU_DIR			:= $(FBNEO_CPU_DIR)/mb88xx
 MIPS3_CPU_DIR			:= $(FBNEO_CPU_DIR)/mips3
-MIPS3_X64_DRC_CPU_DIR	:= $(MIPS3_CPU_DIR)/x64
 NEC_CPU_DIR				:= $(FBNEO_CPU_DIR)/nec
 PIC16C5X_CPU_DIR		:= $(FBNEO_CPU_DIR)/pic16c5x
 SH2_CPU_DIR				:= $(FBNEO_CPU_DIR)/sh2
@@ -273,18 +272,6 @@ endif
 ifeq (,$(findstring msvc,$(platform)))
 	CXXFLAGS += -std=gnu++98
 endif
-
-#ifeq ($(USE_X64_DRC), 1)
-#	FBNEO_DEFINES  += -DXBYAK_NO_OP_NAMES -DMIPS3_X64_DRC
-#	FBNEO_SRC_DIRS += $(MIPS3_X64_DRC_CPU_DIR)
-#	ifeq (,$(findstring msvc,$(platform)))
-#		CXXFLAGS += -std=gnu++11
-#	endif
-#else
-#	ifeq (,$(findstring msvc,$(platform)))
-#		CXXFLAGS += -std=gnu++98
-#	endif
-#endif
 
 NEON_FLAGS=
 

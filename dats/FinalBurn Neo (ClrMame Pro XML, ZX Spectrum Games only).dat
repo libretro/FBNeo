@@ -4361,6 +4361,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="boltzx" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>BOLT: Escape from the Factory (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>DD Studios</manufacturer>
+		<rom name="BOLT - Escape from the Factory 128K (2026)(DD Studios).tap" size="26783" crc="302a4c01"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bomb" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Bomb (48K) (HB)</description>
@@ -7426,10 +7437,10 @@
 	</game>
 	<game name="cronopiosen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cronopios y Famas (English) (128K) (HB)</description>
+		<description>Cronopios y Famas (English) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Zankle Soft</manufacturer>
-		<rom name="Cronopios y Famas EN 128K (2021)(Zankle Soft).tap" size="42169" crc="c64db30e"/>
+		<rom name="Cronopios y Famas EN 48K-128K (2021)(Zankle Soft).tap" size="42169" crc="c64db30e"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -7437,10 +7448,10 @@
 	</game>
 	<game name="cronopiosfr" cloneof="cronopiosen" romof="cronopiosen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cronopios y Famas (French) (128K) (HB)</description>
+		<description>Cronopios y Famas (French) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Zankle Soft</manufacturer>
-		<rom name="Cronopios y Famas FR 128K (2021)(Zankle Soft).tap" size="42169" crc="61fb2ea9"/>
+		<rom name="Cronopios y Famas FR 48K-128K (2021)(Zankle Soft).tap" size="42169" crc="61fb2ea9"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -7448,10 +7459,10 @@
 	</game>
 	<game name="cronopiosde" cloneof="cronopiosen" romof="cronopiosen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cronopios y Famas (German) (128K) (HB)</description>
+		<description>Cronopios y Famas (German) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Zankle Soft</manufacturer>
-		<rom name="Cronopios y Famas DE 128K (2021)(Zankle Soft).tap" size="42169" crc="91be72a8"/>
+		<rom name="Cronopios y Famas DE 48K-128K (2021)(Zankle Soft).tap" size="42169" crc="91be72a8"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -7459,10 +7470,10 @@
 	</game>
 	<game name="cronopiosit" cloneof="cronopiosen" romof="cronopiosen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cronopios y Famas (Italian) (128K) (HB)</description>
+		<description>Cronopios y Famas (Italian) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Zankle Soft</manufacturer>
-		<rom name="Cronopios y Famas IT 128K (2021)(Zankle Soft).tap" size="42169" crc="a28f595b"/>
+		<rom name="Cronopios y Famas IT 48K-128K (2021)(Zankle Soft).tap" size="42169" crc="a28f595b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -7470,10 +7481,10 @@
 	</game>
 	<game name="cronopiospt" cloneof="cronopiosen" romof="cronopiosen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cronopios y Famas (Portuguese) (128K) (HB)</description>
+		<description>Cronopios y Famas (Portuguese) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Zankle Soft</manufacturer>
-		<rom name="Cronopios y Famas PT 128K (2021)(Zankle Soft).tap" size="42169" crc="11902f8d"/>
+		<rom name="Cronopios y Famas PT 48K-128K (2021)(Zankle Soft).tap" size="42169" crc="11902f8d"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -7481,10 +7492,10 @@
 	</game>
 	<game name="cronopioses" cloneof="cronopiosen" romof="cronopiosen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Cronopios y Famas (Spanish) (128K) (HB)</description>
+		<description>Cronopios y Famas (Spanish) (48K-128K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Zankle Soft</manufacturer>
-		<rom name="Cronopios y Famas ES 128K (2021)(Zankle Soft).tap" size="42169" crc="306e3003"/>
+		<rom name="Cronopios y Famas ES 48K-128K (2021)(Zankle Soft).tap" size="42169" crc="306e3003"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -10924,10 +10935,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="escplanetrobotmon" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Escape from the Planet of the Robot Monsters (128K)</description>
+		<description>Escape from the Planet of the Robot Monsters (48K-128K)</description>
 		<year>1990</year>
 		<manufacturer>Domark</manufacturer>
-		<rom name="Escape from the Planet of the Robot Monsters 128K (1990)(Domark).tap" size="111578" crc="9f95584c"/>
+		<rom name="Escape from the Planet of the Robot Monsters 48K-128K (1990)(Domark).tap" size="111578" crc="9f95584c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -12198,7 +12209,7 @@
 		<description>Frightmare (128K)</description>
 		<year>1988</year>
 		<manufacturer>Cascade Games</manufacturer>
-		<rom name="Frightmare 128K (1988)(Cascade Games).tap" size="59861" crc="a5ba5804"/>
+		<rom name="Frightmare 128K (1988)(Cascade Games).tzx" size="59986" crc="cb957497"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -13450,7 +13461,7 @@
 		<description>Grand Prix Circuit (128K)</description>
 		<year>1990</year>
 		<manufacturer>Accolade</manufacturer>
-		<rom name="Grand Prix Circuit 128K (1990)(Accolade).z80" size="60323" crc="1203a59d"/>
+		<rom name="Grand Prix Circuit 128K (1990)(Accolade).tzx" size="101394" crc="106296ba"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

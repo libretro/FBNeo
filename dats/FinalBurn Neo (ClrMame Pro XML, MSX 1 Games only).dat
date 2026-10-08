@@ -2532,6 +2532,18 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="boltmsx" romof="msx" sourcefile="msx/d_msx.cpp">
+		<comment>Homebrew</comment>
+		<description>BOLT: Escape from the Factory (HB)</description>
+		<year>2026</year>
+		<manufacturer>DD Studios</manufacturer>
+		<rom name="BOLT - Escape from the Factory (2026)(DD Studios).rom" size="32768" crc="8aaa6bbe"/>
+		<rom name="msx.rom" merge="msx.rom" size="32768" crc="a317e6b4"/>
+		<rom name="msxj.rom" merge="msxj.rom" size="32768" crc="071135e0"/>
+		<rom name="kanji.rom" merge="kanji.rom" size="262144" crc="1f6406fb"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bombjack" romof="msx" sourcefile="msx/d_msx.cpp">
 		<comment>Homebrew</comment>
 		<description>Bomb Jack (HB, v1.2)</description>

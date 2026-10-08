@@ -22,7 +22,6 @@ BURN_BLACKLIST += $(ADSP2100_CPU_DIR)/2100ops.c \
 	$(M68K_CPU_DIR)/m68kmake.c \
 	$(M68K_CPU_DIR)/m68kfpu.c \
 	$(M68K_CPU_DIR)/m68kdasm.c \
-	$(MIPS3_CPU_DIR)/mips3_dasm.cpp \
 	$(NEC_CPU_DIR)/v25sfr.c \
 	$(NEC_CPU_DIR)/v25instr.c \
 	$(NEC_CPU_DIR)/necinstr.c \
@@ -81,16 +80,6 @@ BURN_BLACKLIST += $(ADSP2100_CPU_DIR)/2100ops.c \
 	$(FBNEO_INTERFACE_DIR)/audio/aud_interface.cpp \
 	$(ATARI_DIR)/WHATSNEW.txt.cpp
 
-# removing everything related to kinst as it's not worth keeping and only causing issues :
-# - the driver is tagged as not working and for debug builds only
-# - the related mips3 cpu core won't even build with recentish version of gcc (11+ ?)
-BURN_BLACKLIST += $(FBNEO_CPU_DIR)/mips3_intf.cpp \
-	$(MIPS3_CPU_DIR)/cop0.cpp \
-	$(MIPS3_CPU_DIR)/cop1.cpp \
-	$(MIPS3_CPU_DIR)/mips3.cpp \
-	$(MIDWAY_DIR)/d_kinst.cpp \
-	$(MIDWAY_DIR)/ide.cpp
-
 ifeq ($(USE_CYCLONE), 1)
 	FBNEO_DEFINES		+= -DUSE_CYCLONE
 	INCLUDE_DIRS	+= $(FBNEO_CPU_DIR)/cyclone
@@ -115,6 +104,7 @@ SOURCES_CXX += $(FBNEO_BURN_DIR)/burn_bitmap.cpp \
 	$(FBNEO_BURN_DIR)/burn_pal.cpp \
 	$(FBNEO_BURN_DIR)/burn_sha1.cpp \
 	$(FBNEO_BURN_DIR)/burn_shift.cpp \
+	$(FBNEO_BURN_DIR)/burn_hdd.cpp \
 	$(FBNEO_BURN_DIR)/tilemap_generic.cpp \
 	$(FBNEO_BURN_DIR)/tiles_generic.cpp \
 	$(FBNEO_BURN_DIR)/vector.cpp \

@@ -896,10 +896,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="angeliquete" sourcefile="snes/d_snes.cpp">
-		<description>Angelique (Hack, English, v0.99)</description>
+		<description>Angelique (Hack, English, v0.99a)</description>
 		<year>2026</year>
 		<manufacturer>Neocrypton</manufacturer>
-		<rom name="Angelique T-Eng v0.99 (2026)(Neocrypton).sfc" size="4194304" crc="89fc8894"/>
+		<rom name="Angelique T-Eng v0.99a (2026)(Neocrypton).sfc" size="4194304" crc="46be57be"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -9466,7 +9466,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kamenrider" sourcefile="snes/d_snes.cpp">
+	<game name="kamenriderte" sourcefile="snes/d_snes.cpp">
+		<description>Kamen Rider (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>kamencoder</manufacturer>
+		<rom name="Kamen Rider T-Eng (2026)(kamencoder).sfc" size="2097152" crc="7602d9b2"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kamenrider" cloneof="kamenriderte" romof="kamenriderte" sourcefile="snes/d_snes.cpp">
 		<description>Kamen Rider (Japan, Rev. 1)</description>
 		<year>1993</year>
 		<manufacturer>Bandai</manufacturer>
@@ -18377,10 +18385,10 @@
 	</game>
 	<game name="supermkartfse" cloneof="supermkart" romof="supermkart" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, DSP-1B enhancement chip</comment>
-		<description>Super Mario Kart - Fullscreen Edition (Hack, v1.3)</description>
+		<description>Super Mario Kart - Fullscreen Edition (Hack, v1.5)</description>
 		<year>2026</year>
 		<manufacturer>Psicopompo</manufacturer>
-		<rom name="Super Mario Kart - Fullscreen Edition v1.3 (2026)(Psicopompo).sfc" size="1048576" crc="3cb1596a"/>
+		<rom name="Super Mario Kart - Fullscreen Edition v1.5 (2026)(Psicopompo).sfc" size="1048576" crc="6af5145e"/>
 		<rom name="dsp1b.bin" merge="dsp1b.bin" size="10240" crc="453557e0"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

@@ -3204,6 +3204,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="pedrisco" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Pedrisco (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>vosges6128</manufacturer>
+		<rom name="Pedrisco v1.1 (2026)(vosges6128).gg" size="131072" crc="bfe924cd"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="pegged" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
 		<description>Pegged (HB, v1.02)</description>
