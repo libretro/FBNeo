@@ -85517,6 +85517,7 @@
 		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
 		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
 		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85533,6 +85534,7 @@
 		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
 		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
 		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85549,6 +85551,7 @@
 		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
 		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
 		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85566,6 +85569,7 @@
 		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
 		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
 		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
+		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85582,6 +85586,7 @@
 		<rom name="u34-l1" size="524288" crc="b2e73603"/>
 		<rom name="u35-l1" size="524288" crc="0aaef4fc"/>
 		<rom name="u36-l1" size="524288" crc="0577bb60"/>
+		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85598,6 +85603,7 @@
 		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
 		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
 		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85614,6 +85620,7 @@
 		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
 		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
 		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85630,6 +85637,7 @@
 		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
 		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
 		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85647,6 +85655,7 @@
 		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
 		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
 		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -85663,6 +85672,7 @@
 		<rom name="ki2_l1.u34" size="524288" crc="5db48206"/>
 		<rom name="ki2_l1.u35" size="524288" crc="7245ce69"/>
 		<rom name="ki2_l1.u36" size="524288" crc="8920acbb"/>
+		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

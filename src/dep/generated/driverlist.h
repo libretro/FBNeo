@@ -14206,6 +14206,7 @@ DRV		BurnDrvMia2;
 DRV		BurnDrvMia;
 DRV		BurnDrvMiaj;
 DRV		BurnSpecMovie;
+DRV		BurnDrvmd_mrajoyknu;
 DRV		BurnDrvnes_mule;
 DRV		BurnDrvnes_muscle;
 DRV		BurnDrvmd_musha;
@@ -43735,6 +43736,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMia,				// M.I.A. - Missing in Action (version T)
 	&BurnDrvMiaj,				// M.I.A.: Missing in Action (Japan, version R)
 	&BurnSpecMovie,				// M.O.V.I.E. (48K)
+	&BurnDrvmd_mrajoyknu,		// M.Rajoy & Knuckles (Hack)
 	&BurnDrvnes_mule,			// M.U.L.E. (USA)
 	&BurnDrvnes_muscle,			// M.U.S.C.L.E. (USA)
 	&BurnDrvmd_musha,			// M.U.S.H.A. - Metallic Uniframe Super Hybrid Armor (USA)
@@ -58046,7 +58048,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsg1k_wboyt,			// Wonder Boy (Taiwan)
 	&BurnDrvWboyblt,			// Wonder Boy (Tecfri bootleg)
 	&BurnDrvWboyub,				// Wonder Boy (US bootleg)
-	&BurnDrvmd_wboyarc,			// Wonder Boy - Arcade Port (HB, v1.1)
+	&BurnDrvmd_wboyarc,			// Wonder Boy - Arcade Port (HB, v1.2)
 	&BurnDrvWbdeluxe,			// Wonder Boy Deluxe
 #if defined FBNEO_DEBUG
 	&BurnDrvWb3bbl,				// Wonder Boy III - Monster Lair (bootleg) [no comment, NOT WORKING]
@@ -73176,6 +73178,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "mia", "konami/d_tmnt.cpp"},
 	{ "miaj", "konami/d_twin16.cpp"},
 	{ "spec_movie", "spectrum/d_spectrum.cpp"},
+	{ "md_mrajoyknu", "megadrive/d_megadrive.cpp"},
 	{ "nes_mule", "nes/d_nes.cpp"},
 	{ "nes_muscle", "nes/d_nes.cpp"},
 	{ "md_musha", "megadrive/d_megadrive.cpp"},
