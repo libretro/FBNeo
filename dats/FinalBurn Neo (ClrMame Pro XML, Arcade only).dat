@@ -146490,22 +146490,15 @@
 	</game>
 	<game name="robocopng" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
-		<description>Robocop - Neo Geo Conversion (HB)</description>
+		<description>Robocop - Neo Geo Conversion (HB, Beta 9)</description>
 		<year>2026</year>
 		<manufacturer>Teo Tormo</manufacturer>
-		<rom name="robocopng-p1.p1" size="1048576" crc="fb7146ff"/>
+		<rom name="robocopng-p1.p1" size="1048576" crc="eb0ffaed"/>
 		<rom name="robocopng-s1.s1" size="131072" crc="2ad60481"/>
-		<rom name="robocopng-c1.c1" size="524288" crc="bfece2db"/>
-		<rom name="robocopng-c2.c2" size="524288" crc="73d6bbdc"/>
-		<rom name="robocopng-m1.m1" size="65536" crc="4686b60d"/>
-		<rom name="robocopng-v1.v1" size="2097152" crc="e04149c3"/>
-		<rom name="robocopng-v2.v2" size="2097152" crc="4d49946c"/>
-		<rom name="robocopng-v3.v3" size="2097152" crc="ee55d37d"/>
-		<rom name="robocopng-v4.v4" size="2097152" crc="9ea51796"/>
-		<rom name="robocopng-v5.v5" size="2097152" crc="6ac6ddb5"/>
-		<rom name="robocopng-v6.v6" size="2097152" crc="008bdfc1"/>
-		<rom name="robocopng-v7.v7" size="2097152" crc="5ae7034d"/>
-		<rom name="robocopng-v8.v8" size="2097152" crc="7f59fffc"/>
+		<rom name="robocopng-c1.c1" size="524288" crc="44593b72"/>
+		<rom name="robocopng-c2.c2" size="524288" crc="03182a3a"/>
+		<rom name="robocopng-m1.m1" size="65536" crc="19dab516"/>
+		<rom name="robocopng-v1.v1" size="16777216" crc="2cbffd4b"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
@@ -172328,6 +172321,55 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sfiii3tag" cloneof="sfiii3" romof="sfiii3" sourcefile="cps3/d_cps3.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter III 3rd Strike: Fight for the Future (Hack, Tag v4.3)</description>
+		<year>2026</year>
+		<manufacturer>hack</manufacturer>
+		<rom name="sfiii3_japan_nocd.29f400.u2" size="524288" crc="1edc6366"/>
+		<rom name="sfiii3tag-simm1.0" size="2097152" crc="06095f64"/>
+		<rom name="sfiii3tag-simm1.1" size="2097152" crc="c62aeb15"/>
+		<rom name="sfiii3tag-simm1.2" size="2097152" crc="665af926"/>
+		<rom name="sfiii3tag-simm1.3" size="2097152" crc="45ba277e"/>
+		<rom name="sfiii3tag-simm2.0" size="2097152" crc="ed89b9f3"/>
+		<rom name="sfiii3tag-simm2.1" size="2097152" crc="1e7c8853"/>
+		<rom name="sfiii3tag-simm2.2" size="2097152" crc="e5d0719e"/>
+		<rom name="sfiii3tag-simm2.3" size="2097152" crc="6843f894"/>
+		<rom name="sfiii3-simm3.0" merge="sfiii3-simm3.0" size="2097152" crc="7baa1f79"/>
+		<rom name="sfiii3-simm3.1" merge="sfiii3-simm3.1" size="2097152" crc="234bf8fe"/>
+		<rom name="sfiii3-simm3.2" merge="sfiii3-simm3.2" size="2097152" crc="d9ebc308"/>
+		<rom name="sfiii3-simm3.3" merge="sfiii3-simm3.3" size="2097152" crc="293cba77"/>
+		<rom name="sfiii3-simm3.4" merge="sfiii3-simm3.4" size="2097152" crc="6055e747"/>
+		<rom name="sfiii3-simm3.5" merge="sfiii3-simm3.5" size="2097152" crc="499aa6fc"/>
+		<rom name="sfiii3-simm3.6" merge="sfiii3-simm3.6" size="2097152" crc="6c13879e"/>
+		<rom name="sfiii3-simm3.7" merge="sfiii3-simm3.7" size="2097152" crc="cf4f8ede"/>
+		<rom name="sfiii3-simm4.0" merge="sfiii3-simm4.0" size="2097152" crc="091fd5ba"/>
+		<rom name="sfiii3-simm4.1" merge="sfiii3-simm4.1" size="2097152" crc="0bca8917"/>
+		<rom name="sfiii3-simm4.2" merge="sfiii3-simm4.2" size="2097152" crc="a0fd578b"/>
+		<rom name="sfiii3-simm4.3" merge="sfiii3-simm4.3" size="2097152" crc="4bf8c699"/>
+		<rom name="sfiii3-simm4.4" merge="sfiii3-simm4.4" size="2097152" crc="137b8785"/>
+		<rom name="sfiii3-simm4.5" merge="sfiii3-simm4.5" size="2097152" crc="4fb70671"/>
+		<rom name="sfiii3-simm4.6" merge="sfiii3-simm4.6" size="2097152" crc="832374a4"/>
+		<rom name="sfiii3-simm4.7" merge="sfiii3-simm4.7" size="2097152" crc="1c88576d"/>
+		<rom name="sfiii3-simm5.0" merge="sfiii3-simm5.0" size="2097152" crc="c67d9190"/>
+		<rom name="sfiii3-simm5.1" merge="sfiii3-simm5.1" size="2097152" crc="6cb79868"/>
+		<rom name="sfiii3-simm5.2" merge="sfiii3-simm5.2" size="2097152" crc="df69930e"/>
+		<rom name="sfiii3-simm5.3" merge="sfiii3-simm5.3" size="2097152" crc="333754e0"/>
+		<rom name="sfiii3-simm5.4" merge="sfiii3-simm5.4" size="2097152" crc="78f6d417"/>
+		<rom name="sfiii3-simm5.5" merge="sfiii3-simm5.5" size="2097152" crc="8ccad9b1"/>
+		<rom name="sfiii3-simm5.6" merge="sfiii3-simm5.6" size="2097152" crc="85de59e5"/>
+		<rom name="sfiii3-simm5.7" merge="sfiii3-simm5.7" size="2097152" crc="ee7e29b3"/>
+		<rom name="sfiii3-simm6.0" merge="sfiii3-simm6.0" size="2097152" crc="8da69042"/>
+		<rom name="sfiii3-simm6.1" merge="sfiii3-simm6.1" size="2097152" crc="1c8c7ac4"/>
+		<rom name="sfiii3-simm6.2" merge="sfiii3-simm6.2" size="2097152" crc="a671341d"/>
+		<rom name="sfiii3-simm6.3" merge="sfiii3-simm6.3" size="2097152" crc="1a990249"/>
+		<rom name="sfiii3-simm6.4" merge="sfiii3-simm6.4" size="2097152" crc="20cb39ac"/>
+		<rom name="sfiii3-simm6.5" merge="sfiii3-simm6.5" size="2097152" crc="5f844b2f"/>
+		<rom name="sfiii3-simm6.6" merge="sfiii3-simm6.6" size="2097152" crc="450e8d28"/>
+		<rom name="sfiii3-simm6.7" merge="sfiii3-simm6.7" size="2097152" crc="cc5f4187"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sfiii3jr1" cloneof="sfiii3" romof="sfiii3" sourcefile="cps3/d_cps3.cpp">
 		<description>Street Fighter III 3rd Strike: Fight for the Future (Japan 990512)</description>
 		<year>1999</year>
@@ -180553,6 +180595,38 @@
 		<rom name="sfnl.23m" size="1048576" crc="efd2eb24"/>
 		<rom name="sfnl.25m" size="1048576" crc="3294c78b"/>
 		<rom name="sfnl.27m" size="1048576" crc="fc283290"/>
+		<rom name="sfx.01" merge="sfx.01" size="131072" crc="b47b8835"/>
+		<rom name="sfx.02" merge="sfx.02" size="131072" crc="0022633f"/>
+		<rom name="sfx.11m" merge="sfx.11m" size="2097152" crc="9bdbd476"/>
+		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
+		<rom name="ssf2t.key" merge="ssf2t.key" size="20" crc="524d608e"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ssf2ttag" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Super Street Fighter II Turbo Tag (Hack, V3)</description>
+		<year>2026</year>
+		<manufacturer>hack</manufacturer>
+		<rom name="sfxtag.03c" size="524288" crc="4afb091d"/>
+		<rom name="sfxtag.04a" size="524288" crc="6d6bd06a"/>
+		<rom name="sfxe.05" merge="sfxe.05" size="524288" crc="65222964"/>
+		<rom name="sfxe.06a" merge="sfxe.06a" size="524288" crc="8fe9f531"/>
+		<rom name="sfxtag.07" size="524288" crc="33f87a59"/>
+		<rom name="sfxe.08" merge="sfxe.08" size="524288" crc="74c24062"/>
+		<rom name="sfx.09" merge="sfx.09" size="524288" crc="642fae3f"/>
+		<rom name="sfx.13m" merge="sfx.13m" size="2097152" crc="cf94d275"/>
+		<rom name="sfx.15m" merge="sfx.15m" size="2097152" crc="5eb703af"/>
+		<rom name="sfx.17m" merge="sfx.17m" size="2097152" crc="ffa60e0f"/>
+		<rom name="sfx.19m" merge="sfx.19m" size="2097152" crc="34e825c5"/>
+		<rom name="sfx.14m" merge="sfx.14m" size="1048576" crc="b7cc32e7"/>
+		<rom name="sfx.16m" merge="sfx.16m" size="1048576" crc="8376ad18"/>
+		<rom name="sfx.18m" merge="sfx.18m" size="1048576" crc="f5b1b336"/>
+		<rom name="sfx.20m" merge="sfx.20m" size="1048576" crc="459d5c6b"/>
+		<rom name="sfx.21m" merge="sfx.21m" size="1048576" crc="e32854af"/>
+		<rom name="sfx.23m" merge="sfx.23m" size="1048576" crc="760f2927"/>
+		<rom name="sfx.25m" merge="sfx.25m" size="1048576" crc="1ee90208"/>
+		<rom name="sfx.27m" merge="sfx.27m" size="1048576" crc="f814400f"/>
 		<rom name="sfx.01" merge="sfx.01" size="131072" crc="b47b8835"/>
 		<rom name="sfx.02" merge="sfx.02" size="131072" crc="0022633f"/>
 		<rom name="sfx.11m" merge="sfx.11m" size="2097152" crc="9bdbd476"/>
@@ -205263,6 +205337,28 @@
 		<rom name="tk1-ma2u.4f" size="1048576" crc="5ce20c2c"/>
 		<rom name="c69.bin" merge="c69.bin" size="16384" crc="349134d9"/>
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tinyvaders" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<comment>Hack</comment>
+		<description>Tiny Vaders (Hack)</description>
+		<year>2026</year>
+		<manufacturer>zeroco</manufacturer>
+		<rom name="tv9316b-0869_m739h.h1" size="2048" crc="bf3121f7"/>
+		<rom name="tv9316b-0856_m739g.g1" size="2048" crc="ac58c700"/>
+		<rom name="tv9316b-0855_m739f.f1" size="2048" crc="4d5cbcf8"/>
+		<rom name="tv9316b-0854_m739e.e1" size="2048" crc="387e15f9"/>
+		<sample name="1" />
+		<sample name="2" />
+		<sample name="3" />
+		<sample name="4" />
+		<sample name="5" />
+		<sample name="6" />
+		<sample name="7" />
+		<sample name="8" />
+		<sample name="9" />
+		<sample name="18" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="tiptop" cloneof="congo" romof="congo" sampleof="congo" sourcefile="sega/d_zaxxon.cpp">

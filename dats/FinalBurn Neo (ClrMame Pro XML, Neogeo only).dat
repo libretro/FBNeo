@@ -21913,22 +21913,15 @@
 	</game>
 	<game name="robocopng" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
-		<description>Robocop - Neo Geo Conversion (HB)</description>
+		<description>Robocop - Neo Geo Conversion (HB, Beta 9)</description>
 		<year>2026</year>
 		<manufacturer>Teo Tormo</manufacturer>
-		<rom name="robocopng-p1.p1" size="1048576" crc="fb7146ff"/>
+		<rom name="robocopng-p1.p1" size="1048576" crc="eb0ffaed"/>
 		<rom name="robocopng-s1.s1" size="131072" crc="2ad60481"/>
-		<rom name="robocopng-c1.c1" size="524288" crc="bfece2db"/>
-		<rom name="robocopng-c2.c2" size="524288" crc="73d6bbdc"/>
-		<rom name="robocopng-m1.m1" size="65536" crc="4686b60d"/>
-		<rom name="robocopng-v1.v1" size="2097152" crc="e04149c3"/>
-		<rom name="robocopng-v2.v2" size="2097152" crc="4d49946c"/>
-		<rom name="robocopng-v3.v3" size="2097152" crc="ee55d37d"/>
-		<rom name="robocopng-v4.v4" size="2097152" crc="9ea51796"/>
-		<rom name="robocopng-v5.v5" size="2097152" crc="6ac6ddb5"/>
-		<rom name="robocopng-v6.v6" size="2097152" crc="008bdfc1"/>
-		<rom name="robocopng-v7.v7" size="2097152" crc="5ae7034d"/>
-		<rom name="robocopng-v8.v8" size="2097152" crc="7f59fffc"/>
+		<rom name="robocopng-c1.c1" size="524288" crc="44593b72"/>
+		<rom name="robocopng-c2.c2" size="524288" crc="03182a3a"/>
+		<rom name="robocopng-m1.m1" size="65536" crc="19dab516"/>
+		<rom name="robocopng-v1.v1" size="16777216" crc="2cbffd4b"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>

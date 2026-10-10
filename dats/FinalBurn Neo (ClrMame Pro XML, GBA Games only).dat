@@ -24399,6 +24399,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="starfall" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Starfall Advance (HB)</description>
+		<year>2026</year>
+		<manufacturer>Dreamnoid</manufacturer>
+		<rom name="Starfall Advance (2026)(Dreamnoid).gba" size="9253592" crc="2c8d9b59"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="starskyh" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Starsky &amp; Hutch (Europe, M5)</description>
 		<year>2003</year>
