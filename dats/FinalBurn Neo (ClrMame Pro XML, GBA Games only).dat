@@ -5700,6 +5700,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="dwchiikawa" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Dance With Chiikawa (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Dance With Chiikawa (2026)(Enarkz).gba" size="543492" crc="13ed94a6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="dancswrd" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Dancing Sword - Senkou (Japan)</description>
 		<year>2003</year>
@@ -8281,10 +8291,10 @@
 	</game>
 	<game name="dundurban" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew</comment>
-		<description>Dungeon Durban (HB, v1.0.0)</description>
+		<description>Dungeon Durban (HB, v1.0.1)</description>
 		<year>2026</year>
 		<manufacturer>Durban Games</manufacturer>
-		<rom name="Dungeon Durban v1.0.0 (2026)(Durban Games).gba" size="3377160" crc="ca21f79b"/>
+		<rom name="Dungeon Durban v1.0.1 (2026)(Durban Games).gba" size="3377424" crc="9c5d3395"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -8596,6 +8606,16 @@
 		<year>2007</year>
 		<manufacturer>Disney Interactive Studios</manufacturer>
 		<rom name="enchanted - once upon andalasia (usa) (en,fr).bin" size="8388608" crc="af23ffff"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="envirogun" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Envirogun (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Envirogun (2026)(Enarkz).gba" size="64364" crc="c7e58892"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -10484,6 +10504,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="godyssey" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Galactic Odyssey (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Galactic Odyssey (2026)(Enarkz).gba" size="52872" crc="adbe4943"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="galaxyan" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Galaxy Angel Game Boy Advance - Moridakusan Tenshi no Full-Course - Okawari Jiyuu (Japan)</description>
 		<year>2002</year>
@@ -11335,6 +11365,16 @@
 		<year>2006</year>
 		<manufacturer>Global Star Software</manufacturer>
 		<rom name="global star - sudoku fever (usa).bin" size="4194304" crc="51a42f19"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="glomarch" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Glorious March (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Glorious March (2026)(Enarkz).gba" size="56592" crc="fccc818f"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -13111,6 +13151,16 @@
 		<year>2002</year>
 		<manufacturer>Electronic Arts</manufacturer>
 		<rom name="lego island - xtreme stunts (usa, europe) (en,fr,de,es,it,nl,sv,da).bin" size="4194304" crc="3beb5446"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="isocraft" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>IsoCraft (HB)</description>
+		<year>2026</year>
+		<manufacturer>ERIS Games</manufacturer>
+		<rom name="IsoCraft (2026)(ERIS Games).gba" size="144688" crc="912f26cd"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -16526,6 +16576,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="mscrabble" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Mega Scrabble (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Mega Scrabble (2026)(Enarkz).gba" size="21238072" crc="0d5fe6a2"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="meinprax" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Meine Tierarztpraxis (Germany)</description>
 		<year>2006</year>
@@ -16871,6 +16931,16 @@
 		<year>2002</year>
 		<manufacturer>Ubi Soft</manufacturer>
 		<rom name="mike tyson boxing (usa) (en,fr,de,es,it).bin" size="4194304" crc="48109f8d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="millebornes" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Mille Bornes (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Mille Bornes (2026)(Enarkz).gba" size="69584" crc="4f787828"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -20016,6 +20086,16 @@
 		<year>2026</year>
 		<manufacturer>knurmrty</manufacturer>
 		<rom name="Polybius (2026)(knurmrty).gba" size="31204" crc="dd271b30"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="pongping" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>PongPing (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="PongPing (2026)(Enarkz).gba" size="52680" crc="6e038114"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -24668,6 +24748,16 @@
 		<year>2005</year>
 		<manufacturer>Atlus</manufacturer>
 		<rom name="super army war (usa).bin" size="4194304" crc="baf484be"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="sastraland" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Astra Land (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Super Astra Land (2026)(Enarkz).gba" size="88296" crc="65db354b"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -29582,6 +29672,16 @@
 		<year>2004</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="Zoku Bokura no Taiyou - Taiyou Shounen Django (J, Rev 1)(2004)(Konami).gba" size="16777216" crc="71e2cd01"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="zombienest" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Zombie Nest (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Zombie Nest (2026)(Enarkz).gba" size="56828" crc="e75276b3"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

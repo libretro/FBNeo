@@ -2827,12 +2827,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="grailegacy" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Grail Legacy (Raycast), The (HB, v0.50)</description>
+		<year>2026</year>
+		<manufacturer>GuyDeNaville</manufacturer>
+		<rom name="Grail Legacy (Raycast), The v0.50 (2026)(GuyDeNaville).sms" size="262144" crc="8c3e2d0e"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="grailgods" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Grail of the Gods (HB, v0.99)</description>
-		<year>2023-25</year>
+		<description>Grail of the Gods (HB, v1.0)</description>
+		<year>2023-26</year>
 		<manufacturer>GuyDeNaville</manufacturer>
-		<rom name="Grail of the Gods v0.99 (2023-25)(GuyDeNaville).sms" size="131072" crc="fb3a8ab3"/>
+		<rom name="Grail of the Gods v1.0 (2023-26)(GuyDeNaville).sms" size="131072" crc="f144fb31"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3124,6 +3133,15 @@
 		<year>2020</year>
 		<manufacturer>Ichigo Bankai</manufacturer>
 		<rom name="Heroes Against Demons v1.04b (2020)(Ichigo).sms" size="262144" crc="8c77f8bf"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hexapawn" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Hexapawn (HB, v1.1.0)</description>
+		<year>2026</year>
+		<manufacturer>chirinea</manufacturer>
+		<rom name="Hexapawn v1.1.0 (2026)(chirinea).sms" size="49152" crc="5fbf2dd8"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5353,6 +5371,15 @@
 		<year>1987</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Sega Graphic Board (Japan, Proto v2.0)(1987)(Sega).sms" size="32768" crc="276aa542"/>
+		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="segaswirl" sourcefile="sms/d_sms.cpp">
+		<comment>Homebrew</comment>
+		<description>Sega Swirl (HB, v0.632)</description>
+		<year>2026</year>
+		<manufacturer>Popixel Games</manufacturer>
+		<rom name="Sega Swirl v0.632 (2026)(Popixel Games).sms" size="262144" crc="a5b4909c"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

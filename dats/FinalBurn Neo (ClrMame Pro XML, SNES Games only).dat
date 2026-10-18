@@ -7430,11 +7430,37 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="daikugensan" sourcefile="snes/d_snes.cpp">
+	<game name="daikugensante" sourcefile="snes/d_snes.cpp">
+		<description>Ganbare! Daiku no Gen-san (Hack, English)</description>
+		<year>2026</year>
+		<manufacturer>Retroplaying BCN</manufacturer>
+		<rom name="Ganbare! Daiku no Gen-san T-Eng (2026)(Retroplaying BCN).sfc" size="2097152" crc="1299babb"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="daikugensan" cloneof="daikugensante" romof="daikugensante" sourcefile="snes/d_snes.cpp">
 		<description>Ganbare! Daiku no Gen-san (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Irem Corp.</manufacturer>
 		<rom name="Ganbare! Daiku no Gen-san (J)(1993)(Irem Corp.).sfc" size="1048576" crc="206bd866"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="daikugensanfr" cloneof="daikugensante" romof="daikugensante" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Ganbare! Daiku no Gen-san - FastROM (Hack)</description>
+		<year>2023</year>
+		<manufacturer>kandowontu</manufacturer>
+		<rom name="Ganbare! Daiku no Gen-san - FastROM (2023)(kandowontu).sfc" size="1048576" crc="b6cc7c94"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="daikugensanfrte" cloneof="daikugensante" romof="daikugensante" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Ganbare! Daiku no Gen-san - FastROM (Hack, English)</description>
+		<year>2023-26</year>
+		<manufacturer>kandowontu &amp; Retroplaying BCN</manufacturer>
+		<rom name="Ganbare! Daiku no Gen-san - FastROM T-Eng (2023-26)(kandowontu &amp; Retroplaying BCN).sfc" size="2097152" crc="579ba3de"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18543,10 +18569,10 @@
 	</game>
 	<game name="supermkartfse" cloneof="supermkart" romof="supermkart" sourcefile="snes/d_snes.cpp">
 		<comment>Hack, DSP-1B enhancement chip</comment>
-		<description>Super Mario Kart - Fullscreen Edition (Hack, v1.5)</description>
+		<description>Super Mario Kart - Fullscreen Edition (Hack, v2.0)</description>
 		<year>2026</year>
 		<manufacturer>Psicopompo</manufacturer>
-		<rom name="Super Mario Kart - Fullscreen Edition v1.5 (2026)(Psicopompo).sfc" size="1048576" crc="6af5145e"/>
+		<rom name="Super Mario Kart - Fullscreen Edition v2.0 (2026)(Psicopompo).sfc" size="1048576" crc="e9b8c210"/>
 		<rom name="dsp1b.bin" merge="dsp1b.bin" size="10240" crc="453557e0"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

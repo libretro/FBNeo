@@ -2417,7 +2417,7 @@
 		<comment>Press 'B' to use controller and 'S' to start game</comment>
 		<description>Atlantis (48K)</description>
 		<year>1985</year>
-		<manufacturer>Anirog</manufacturer>
+		<manufacturer>Anirog Software</manufacturer>
 		<rom name="Atlantis 48K (1985)(Anirog).tap" size="27049" crc="460ac502"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -3740,10 +3740,10 @@
 	</game>
 	<game name="bingueros" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Bingueros, Los (Spanish) (48K) (HB)</description>
+		<description>Bingueros, Los (Spanish) (48K) (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Jordi</manufacturer>
-		<rom name="Bingueros, Los ES 48K (2026)(Jordi).tap" size="29434" crc="d48d5e78"/>
+		<rom name="Bingueros, Los v1.1 ES 48K (2026)(Jordi).tap" size="29826" crc="e70731d3"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -7422,6 +7422,16 @@
 		<year>1990</year>
 		<manufacturer>Bulldog Software</manufacturer>
 		<rom name="Crazy House (1990)(Bulldog).z80" size="18580" crc="876275b0"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="crazyraces" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Crazy Races (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>BAD BITS</manufacturer>
+		<rom name="Crazy Races 48K (2026)(BAD BITS).tap" size="34970" crc="8a5d9d67"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -17398,6 +17408,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kokaos" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Krypt of Kaos (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>North of Midnight</manufacturer>
+		<rom name="Krypt of Kaos 128K (2026)(North of Midnight).tzx" size="76953" crc="a735138a"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="krypto" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Krypto Game (48K) (HB)</description>
@@ -17422,7 +17443,7 @@
 		<description>Kuatris (48K-128K) (HB)</description>
 		<year>2022</year>
 		<manufacturer>Mr. Rancio</manufacturer>
-		<rom name="Kuatris 48K-128K (2022)(Mr Rancio).tap" size="47935" crc="8c7c0245"/>
+		<rom name="Kuatris 48K-128K (2022)(Mr Rancio).tzx" size="47969" crc="b214ebe3"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -17464,6 +17485,27 @@
 		<rom name="Kwik Snax Dizzy 48K-128K (1990)(Codemasters).tzx" size="100777" crc="c90db9ca"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kwirkzx128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Kwirk ZX (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>kirby2000</manufacturer>
+		<rom name="Kwirk ZX 128K (2026)(kirby2000).tzx" size="62150" crc="1e0436a2"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kwirkzx48" cloneof="kwirkzx128" romof="kwirkzx128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Kwirk ZX (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>kirby2000</manufacturer>
+		<rom name="Kwirk ZX 48K (2026)(kirby2000).tzx" size="31975" crc="330d8026"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20270,10 +20312,21 @@
 	</game>
 	<game name="min128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, Default Keys: W, S, A, D, M</comment>
-		<description>Min! (128K) (HB)</description>
+		<description>Min! (48K-128K) (HB)</description>
 		<year>2024</year>
 		<manufacturer>Zebra Games</manufacturer>
-		<rom name="Min! 128K (2024)(Zebra Games).tap" size="40788" crc="284058a3"/>
+		<rom name="Min! 48K-128K (2024)(Zebra Games).tap" size="40788" crc="284058a3"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="modrains" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Mind of Drains (48K-128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Orbit Leisure</manufacturer>
+		<rom name="Mind of Drains 48K-128K (2026)(Orbit Leisure).tap" size="39283" crc="131bd28c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -20385,7 +20438,7 @@
 	<game name="missiledef" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Missile Defence (48K)</description>
 		<year>1983</year>
-		<manufacturer>Anirog</manufacturer>
+		<manufacturer>Anirog Software</manufacturer>
 		<rom name="Missile Defence 48K (1983)(Anirog).tzx" size="26253" crc="66c8718e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -21015,6 +21068,17 @@
 		<year>1989</year>
 		<manufacturer>Codemasters</manufacturer>
 		<rom name="Moto Cross Simulator 48K-128K (1989)(Codemasters).tap" size="51225" crc="7abd5f87"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="motomncs" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Motocross Maniacs (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>kirby2000</manufacturer>
+		<rom name="Motocross Maniacs 128K (2026)(kirby2000).tzx" size="51417" crc="3e5d2ca2"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -22429,10 +22493,10 @@
 	</game>
 	<game name="octuktty" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>OctuKitty (128K) (HB)</description>
+		<description>OctuKitty (48K-128K) (HB)</description>
 		<year>2018</year>
 		<manufacturer>UltraNarwhal</manufacturer>
-		<rom name="OctuKitty 128K (2018)(UltraNarwhal).tap" size="43800" crc="28b574a6"/>
+		<rom name="OctuKitty 48K-128K (2018)(UltraNarwhal).tap" size="43800" crc="28b574a6"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -24156,6 +24220,16 @@
 		<year>1984</year>
 		<manufacturer>Computer &amp; Video Games</manufacturer>
 		<rom name="Pole Position 48K (1984)(C&amp;VG).tap" size="11325" crc="049b1e06"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="poleposzx" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>Pole Position ZX (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>FG&amp;AI</manufacturer>
+		<rom name="Pole Position ZX 48K-AY (2026)(FG&amp;AI).tap" size="46896" crc="0704669e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -34140,10 +34214,10 @@
 	</game>
 	<game name="whitejaguar" cloneof="whitejaguarzx" romof="whitejaguarzx" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>White Jaguar (128K) (HB)</description>
+		<description>White Jaguar (48K-128K) (HB)</description>
 		<year>2020</year>
 		<manufacturer>Romancha</manufacturer>
-		<rom name="White Jaguar 128K (2020)(Romancha).tap" size="24324" crc="bb1edf8f"/>
+		<rom name="White Jaguar 48K-128K (2020)(Romancha).tap" size="24324" crc="bb1edf8f"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -34151,10 +34225,10 @@
 	</game>
 	<game name="whitejaguarzx" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>White Jaguar (128K) (HB, v1.3)</description>
+		<description>White Jaguar (48K-128K) (HB, v1.3)</description>
 		<year>2023</year>
 		<manufacturer>ZX-Online - Romancha</manufacturer>
-		<rom name="White Jaguar v1.3 128K (2023)(ZX-Online).tap" size="72533" crc="b82f465f"/>
+		<rom name="White Jaguar v1.3 48K-128K (2023)(ZX-Online).tap" size="72533" crc="b82f465f"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -34472,9 +34546,9 @@
 	<game name="wizballee" cloneof="wizball" romof="wizball" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Hack</comment>
 		<description>Wizball - Enhanced Edition (128K) (Hack)</description>
-		<year>1987</year>
+		<year>2026</year>
 		<manufacturer>Gravious</manufacturer>
-		<rom name="Wizball - Enhanced Edition 128K (1987)(Gravious).z80" size="80330" crc="c60a3966"/>
+		<rom name="Wizball - Enhanced Edition 128K (2026)(Gravious).z80" size="80330" crc="c60a3966"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -34662,7 +34736,7 @@
 		<description>Xavior (48K)</description>
 		<year>1984</year>
 		<manufacturer>PSS</manufacturer>
-		<rom name="Xavior 48K (1984)(PSS).tap" size="50074" crc="2c36bcdb"/>
+		<rom name="Xavior 48K (1984)(PSS).tzx" size="49046" crc="79e26eb2"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -34697,10 +34771,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="xeno2" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Xeno II (16K)</description>
+		<description>Xeno II (48K)</description>
 		<year>1983</year>
-		<manufacturer>Anirog</manufacturer>
-		<rom name="Xeno II 16K (1983)(Anirog).z80" size="23368" crc="0406cb03"/>
+		<manufacturer>Anirog Software</manufacturer>
+		<rom name="Xeno II 48K (1983)(Anirog).tzx" size="28369" crc="8844ecb0"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -35006,6 +35080,27 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="zanaczx128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Zanac ZX (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>FG&amp;AI</manufacturer>
+		<rom name="Zanac ZX 128K (2026)(FG&amp;AI).tap" size="49433" crc="ba142bdd"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zanaczx48" cloneof="zanaczx128" romof="zanaczx128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>Zanac ZX (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>FG&amp;AI</manufacturer>
+		<rom name="Zanac ZX 48K-AY (2026)(FG&amp;AI).tap" size="47303" crc="d3583531"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="zanthrax" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Zanthrax: Race of The Future (48K)</description>
 		<year>1989</year>
@@ -35021,6 +35116,17 @@
 		<manufacturer>U.S. Gold</manufacturer>
 		<rom name="Zaxxon 48K (1985)(U.S. Gold).tap" size="49889" crc="6d169dbf"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zeddygfb128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Zeddy Goes Full Blast (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>zeddy48</manufacturer>
+		<rom name="Zeddy Goes Full Blast 128K (2026)(zeddy48).tap" size="176836" crc="afac4514"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -35080,7 +35186,7 @@
 		<description>Zenji (48K)</description>
 		<year>1984</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="Zenji 48K (1984)(Activision).tap" size="23232" crc="62e604e5"/>
+		<rom name="Zenji 48K (1984)(Activision).tzx" size="23290" crc="1b605673"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

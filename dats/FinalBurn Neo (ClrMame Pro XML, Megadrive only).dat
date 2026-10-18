@@ -2972,10 +2972,10 @@
 	</game>
 	<game name="cabal" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Cabal (HB, Beta 2a)</description>
+		<description>Cabal (HB, Beta 3)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Cabal Beta 2a (2026)(Oldschool Is Beautiful).bin" size="2097152" crc="d4dd88df"/>
+		<rom name="Cabal Beta 3 (2026)(Oldschool Is Beautiful).bin" size="2097152" crc="86a39e28"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3300,6 +3300,15 @@
 		<year>2026</year>
 		<manufacturer>Andor</manufacturer>
 		<rom name="Castlevania - Circle of the Moon Demo (2026)(Andor).bin" size="7077888" crc="92137666"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="catabyss3d" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Catacomb Abyss 3D, The (HB, v0.0.1)</description>
+		<year>2026</year>
+		<manufacturer>haroldo-ok</manufacturer>
+		<rom name="Catacomb Abyss 3D, The v0.0.1 (2026)(haroldo-ok).bin" size="2883584" crc="b7375b10"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -6024,10 +6033,10 @@
 	</game>
 	<game name="dundurban" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Dungeon Durban (HB, v0.9.0)</description>
+		<description>Dungeon Durban (HB, v0.9.1)</description>
 		<year>2026</year>
 		<manufacturer>Durban Games</manufacturer>
-		<rom name="Dungeon Durban v0.9.0 (2026)(Durban Games).bin" size="1966080" crc="991e2234"/>
+		<rom name="Dungeon Durban v0.9.1 (2026)(Durban Games).bin" size="1966080" crc="d2a02888"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12016,10 +12025,10 @@
 	</game>
 	<game name="mcommando" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Mega Commando (HB, v0.8b)</description>
+		<description>Mega Commando (HB, v0.81b)</description>
 		<year>2026</year>
 		<manufacturer>MXRetroDev</manufacturer>
-		<rom name="Mega Commando v0.8b (2026)(MXRetroDev).bin" size="2752512" crc="da4a0edd"/>
+		<rom name="Mega Commando v0.81b (2026)(MXRetroDev).bin" size="2752512" crc="96a6d27f"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13791,6 +13800,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="neoglide" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Neo Glide (HB, v1.01)</description>
+		<year>2026</year>
+		<manufacturer>nicomegadrive</manufacturer>
+		<rom name="Neo Glide v1.01 (2026)(nicomegadrive).bin" size="1572864" crc="b46467b1"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="n3dgpebb" cloneof="pebble" romof="pebble" sourcefile="megadrive/d_megadrive.cpp">
 		<description>New 3D Golf Simulation - Pebble Beach no Hatou (Japan)</description>
 		<year>1993</year>
@@ -14750,10 +14768,10 @@
 	</game>
 	<game name="pang" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Pang (DavidGames) (HB, Beta v0.81)</description>
+		<description>Pang (DavidGames) (HB, Beta v0.98)</description>
 		<year>2026</year>
 		<manufacturer>DavidGames</manufacturer>
-		<rom name="Pang Beta v0.81 (2026)(DavidGames).bin" size="1441792" crc="eb641d44"/>
+		<rom name="Pang Beta v0.98 (2026)(DavidGames).bin" size="1441792" crc="bfe14ffc"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15100,10 +15118,10 @@
 	</game>
 	<game name="parasol" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Parasol Stars (HB, Beta 1)</description>
+		<description>Parasol Stars (HB, v1.0 RC3)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Parasol Stars Beta 1 (2026)(Oldschool Is Beautiful).bin" size="8388608" crc="3d3c10fd"/>
+		<rom name="Parasol Stars v1.0 RC3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="181b816a"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18598,10 +18616,10 @@
 	</game>
 	<game name="shinobi" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Shinobi (HB, Beta 1)</description>
+		<description>Shinobi (HB, Beta 3)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Shinobi Beta 1 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="1c33bd69"/>
+		<rom name="Shinobi Beta 3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="53a81527"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22338,10 +22356,10 @@
 	</game>
 	<game name="tmntarcade" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.3.6b)</description>
+		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.3.7)</description>
 		<year>2026</year>
 		<manufacturer>Gustavo Valenzuela</manufacturer>
-		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.6b (2026)(Gustavo Valenzuela).bin" size="4063232" crc="4de8ffb4"/>
+		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.7 (2026)(Gustavo Valenzuela).bin" size="4194304" crc="962efc2f"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22788,10 +22806,10 @@
 	</game>
 	<game name="tigeroad" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Tiger Road (hombreimaginario) (HB, Beta 17)</description>
+		<description>Tiger Road (hombreimaginario) (HB, 2026-10-17)</description>
 		<year>2026</year>
 		<manufacturer>hombreimaginario</manufacturer>
-		<rom name="Tiger Road Beta 17 (2026)(hombreimaginario).bin" size="2490368" crc="407b4191"/>
+		<rom name="Tiger Road 2026-10-17 (2026)(hombreimaginario).bin" size="2490368" crc="92480e61"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
