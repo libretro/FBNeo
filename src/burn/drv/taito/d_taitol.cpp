@@ -4437,7 +4437,7 @@ struct BurnDriver BurnDrvSpeccies = {
 // SQIJ!
 
 static struct BurnRomInfo sqijRomDesc[] = {
-	{ "sqij.ic10",			0x0f000, 0x214ba802, 1 | BRF_PRG | BRF_ESS }, //  0 main z80 code
+	{ "sqij.ic10",			0x0f000, 0x793c8b97, 1 | BRF_PRG | BRF_ESS }, //  0 main z80 code
 
 	{ "sqij.ic9",			0x10000, 0xc4de729b, 4 | BRF_GRA },           //  1 graphics data
 	{ "sqij.ic8",			0x10000, 0x978df42d, 4 | BRF_GRA },           //  2
@@ -4478,7 +4478,7 @@ struct BurnDriver BurnDrvJetpac = {
     "jetpac", NULL, NULL, NULL, "2026",
     "Jetpac (HB)\0", NULL, "Tardis Remakes", "Taito L System",
     NULL, NULL, NULL, NULL,
-    BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_TAITO_MISC, GBF_PUZZLE, 0,
+    BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_TAITO_MISC, GBF_ACTION, 0,
     NULL, jetpacRomInfo, jetpacRomName, NULL, NULL, NULL, NULL, PlottingInputInfo, PlottingDIPInfo,
     PlottingInit, DrvExit, Z80x1Frame, DrvDraw, DrvScan, &DrvRecalc, 0x100,
     320, 224, 4, 3

@@ -9180,11 +9180,30 @@ STD_ROM_PICK(snes_Daikugensan)
 STD_ROM_FN(snes_Daikugensan)
 
 struct BurnDriver BurnDrvsnes_Daikugensan = {
-	"snes_daikugensan", NULL, NULL, NULL, "1993",
+	"snes_daikugensan", "snes_daikugensante", NULL, NULL, "1993",
 	"Ganbare! Daiku no Gen-san (Japan)\0", NULL, "Irem Corp.", "SNES / Super Famicom",
 	L"Ganbare! Daiku no Gen-san (Japan)\0\u304c\u3093\u3070\u308c! \u5927\u5de5\u306e\u6e90\u3055\u3093\0", NULL, NULL, NULL,
-	BDF_GAME_WORKING, 1, HARDWARE_SNES, GBF_PLATFORM, 0,
+	BDF_GAME_WORKING | BDF_CLONE, 1, HARDWARE_SNES, GBF_PLATFORM, 0,
 	SNESGetZipName, snes_DaikugensanRomInfo, snes_DaikugensanRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Ganbare! Daiku no Gen-san (Hack, English)
+// https://github.com/Retroplayingbcn/gen-san-sfc-english
+static struct BurnRomInfo snes_DaikugensanteRomDesc[] = {
+	{ "Ganbare! Daiku no Gen-san T-Eng (2026)(Retroplaying BCN).sfc", 2097152, 0x1299babb, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Daikugensante)
+STD_ROM_FN(snes_Daikugensante)
+
+struct BurnDriver BurnDrvsnes_Daikugensante = {
+	"snes_daikugensante", NULL, NULL, NULL, "2026",
+	"Ganbare! Daiku no Gen-san (Hack, English)\0", NULL, "Retroplaying BCN", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING, 1, HARDWARE_SNES, GBF_PLATFORM, 0,
+	SNESGetZipName, snes_DaikugensanteRomInfo, snes_DaikugensanteRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
 	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
 	512, 448, 4, 3
 };
@@ -48211,6 +48230,45 @@ struct BurnDriver BurnDrvsnes_Fzeroml = {
 	512, 448, 4, 3
 };
 
+// Ganbare! Daiku no Gen-san - FastROM (Hack)
+// https://www.patreon.com/Kandowontu/posts/ganbare-daiku-no-82033798
+static struct BurnRomInfo snes_DaikugensanfrRomDesc[] = {
+	{ "Ganbare! Daiku no Gen-san - FastROM (2023)(kandowontu).sfc", 1048576, 0xb6cc7c94, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Daikugensanfr)
+STD_ROM_FN(snes_Daikugensanfr)
+
+struct BurnDriver BurnDrvsnes_Daikugensanfr = {
+	"snes_daikugensanfr", "snes_daikugensante", NULL, NULL, "2023",
+	"Ganbare! Daiku no Gen-san - FastROM (Hack)\0", NULL, "kandowontu", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM, 0,
+	SNESGetZipName, snes_DaikugensanfrRomInfo, snes_DaikugensanfrRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
+// Ganbare! Daiku no Gen-san - FastROM (Hack, English)
+// https://www.patreon.com/Kandowontu/posts/ganbare-daiku-no-82033798
+// https://github.com/Retroplayingbcn/gen-san-sfc-english
+static struct BurnRomInfo snes_DaikugensanfrteRomDesc[] = {
+	{ "Ganbare! Daiku no Gen-san - FastROM T-Eng (2023-26)(kandowontu & Retroplaying BCN).sfc", 2097152, 0x579ba3de, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(snes_Daikugensanfrte)
+STD_ROM_FN(snes_Daikugensanfrte)
+
+struct BurnDriver BurnDrvsnes_Daikugensanfrte = {
+	"snes_daikugensanfrte", "snes_daikugensante", NULL, NULL, "2023-26",
+	"Ganbare! Daiku no Gen-san - FastROM (Hack, English)\0", NULL, "kandowontu & Retroplaying BCN", "SNES / Super Famicom",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 1, HARDWARE_SNES, GBF_PLATFORM, 0,
+	SNESGetZipName, snes_DaikugensanfrteRomInfo, snes_DaikugensanfrteRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,
+	DrvInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x8000,
+	512, 448, 4, 3
+};
+
 // Ganbare Goemon 4 - Time Pilot (Hack)
 // https://www.romhacking.net/hacks/7066/
 static struct BurnRomInfo snes_Ganbgoemon4tpRomDesc[] = {
@@ -51292,10 +51350,10 @@ struct BurnDriver BurnDrvsnes_Supermetroidxf = {
 	512, 448, 4, 3
 };
 
-// Super Mario Kart - Fullscreen Edition (Hack, v1.5)
+// Super Mario Kart - Fullscreen Edition (Hack, v2.0)
 // https://www.romhacking.net/hacks/10083/
 static struct BurnRomInfo snes_SupermkartfseRomDesc[] = {
-	{ "Super Mario Kart - Fullscreen Edition v1.5 (2026)(Psicopompo).sfc", 1048576, 0x6af5145e, BRF_ESS | BRF_PRG },
+	{ "Super Mario Kart - Fullscreen Edition v2.0 (2026)(Psicopompo).sfc", 1048576, 0xe9b8c210, BRF_ESS | BRF_PRG },
 };
 
 STDROMPICKEXT(snes_Supermkartfse, snes_Supermkartfse, snes_dsp1b)
@@ -51303,7 +51361,7 @@ STD_ROM_FN(snes_Supermkartfse)
 
 struct BurnDriver BurnDrvsnes_Supermkartfse = {
 	"snes_supermkartfse", "snes_supermkart", "snes_dsp1b", NULL, "2026",
-	"Super Mario Kart - Fullscreen Edition (Hack, v1.5)\0", "DSP-1B enhancement chip", "Psicopompo", "SNES / Super Famicom",
+	"Super Mario Kart - Fullscreen Edition (Hack, v2.0)\0", "DSP-1B enhancement chip", "Psicopompo", "SNES / Super Famicom",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_SNES, GBF_RACING, 0,
 	SNESGetZipName, snes_SupermkartfseRomInfo, snes_SupermkartfseRomName, NULL, NULL, NULL, NULL, SNESInputInfo, SNESDIPInfo,

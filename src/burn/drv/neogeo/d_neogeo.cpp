@@ -30604,11 +30604,11 @@ struct BurnDriver BurnDrvEswatng = {
 };
 
 
-// Hang-On - Neo Geo Conversion (HB, v2.0)
+// Hang-On - Neo Geo Conversion (HB, v2.1)
 // https://shinobiz72.itch.io/hangon
 
 static struct BurnRomInfo hangonngRomDesc[] = {
-	{ "hangonng-p1.p1",	0x100000, 0x317040d4, 1 | BRF_ESS | BRF_PRG }, 	//  0 68K code
+	{ "hangonng-p1.p1",	0x100000, 0x8cdee388, 1 | BRF_ESS | BRF_PRG }, 	//  0 68K code
 	{ "hangonng-p2.p2",	0x500000, 0x500b59ea, 1 | BRF_ESS | BRF_PRG }, 	//  1
 
 	{ "hangonng-s1.s1",	0x020000, 0x72b4653d, 2 | BRF_GRA },           	//  2 Text layer tiles
@@ -30616,7 +30616,7 @@ static struct BurnRomInfo hangonngRomDesc[] = {
 	{ "hangonng-c1.c1",	0x800000, 0x4440a35d, 3 | BRF_GRA },           	//  3 Sprite data
 	{ "hangonng-c2.c2",	0x800000, 0x83018efe, 3 | BRF_GRA },           	//  4
 
-	{ "hangonng-m1.m1",	0x040000, 0x9c53a21d, 4 | BRF_ESS | BRF_PRG }, 	//  5 Z80 code
+	{ "hangonng-m1.m1",	0x040000, 0xca5311b0, 4 | BRF_ESS | BRF_PRG }, 	//  5 Z80 code
 
 	{ "hangonng-v1.v1",	0x200000, 0x3aed32bd, 5 | BRF_SND },           	//  6 Sound data
 };
@@ -30626,7 +30626,7 @@ STD_ROM_FN(hangonng)
 
 struct BurnDriver BurnDrvHangonng = {
 	"hangonng", NULL, "neogeo", NULL, "2026",
-	"Hang-On - Neo Geo Conversion (HB, v2.0)\0", NULL, "ShinobiZ", "Neo Geo MVS",
+	"Hang-On - Neo Geo Conversion (HB, v2.1)\0", NULL, "ShinobiZ", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RACING, 0,
 	NULL, hangonngRomInfo, hangonngRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
@@ -30752,6 +30752,41 @@ struct BurnDriver BurnDrvWarriorman = {
 	NULL, warriormanRomInfo, warriormanRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000, 304, 224, 4, 3
+};
+
+
+// Wolfenstein 3-D (HB, v1.2.0)
+// https://www.wolfmvs.com/
+
+static struct BurnRomInfo wolfn3dRomDesc[] = {
+	{ "wolfn3d-p1.bin", 0x080000, 0x00b38f35, 1 | BRF_ESS | BRF_PRG }, // 0 code 68000
+
+	{ "wolfn3d-s1.bin", 0x020000, 0x67bfa3a2, 2 | BRF_GRA }, // 1 tuiles de la couche fix
+
+	{ "wolfn3d-c1.bin", 0x1000000, 0xcba29aef, 3 | BRF_GRA }, // 2 sprites
+	{ "wolfn3d-c2.bin", 0x1000000, 0xe88b4a64, 3 | BRF_GRA }, // 3
+	{ "wolfn3d-c3.bin", 0x1000000, 0x958b670f, 3 | BRF_GRA }, // 4
+	{ "wolfn3d-c4.bin", 0x1000000, 0x8b4d1874, 3 | BRF_GRA }, // 5
+	{ "wolfn3d-c5.bin", 0x1000000, 0x14b469a4, 3 | BRF_GRA }, // 6
+	{ "wolfn3d-c6.bin", 0x1000000, 0xdf9048ab, 3 | BRF_GRA }, // 7
+
+	{ "wolfn3d-m1.bin", 0x020000, 0x60e0acb9, 4 | BRF_ESS | BRF_PRG }, // 8 code Z80
+
+	{ "wolfn3d-v1.bin", 0x200000, 0xcc0f0f7d, 5 | BRF_SND }, // 9 son ADPCM-A
+	{ "wolfn3d-v2.bin", 0x200000, 0xcc0f0f7d, 6 | BRF_SND }, // 10 son ADPCM-B (région 6)
+};
+
+STDROMPICKEXT(wolfn3d, wolfn3d, neogeo)
+STD_ROM_FN(wolfn3d)
+
+struct BurnDriver BurnDrvWolfn3d = {
+	"wolfn3d", NULL, "neogeo", NULL, "2026",
+	"Wolfenstein 3-D (HB, v1.2.0)\0", NULL, "Thibaut Lion", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_SHOOT, 0,
+	NULL, wolfn3dRomInfo, wolfn3dRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 320, 224, 4, 3
 };
 
 
