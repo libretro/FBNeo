@@ -15968,6 +15968,69 @@
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="bigfightj" cloneof="bigfight" romof="bigfight" sourcefile="pst90s/d_cyclwarr.cpp">
+		<description>Big Fight - Big Trouble In The Atlantic Ocean (Japan, rev F)</description>
+		<year>1992</year>
+		<manufacturer>Tatsumi</manufacturer>
+		<rom name="bfj16f.ic77" size="131072" crc="9141a488"/>
+		<rom name="bf18f.ic98" size="131072" crc="f23a4935"/>
+		<rom name="bf17e.ic78" size="131072" crc="5e5d023d"/>
+		<rom name="bf19e.ic99" size="131072" crc="5329e151"/>
+		<rom name="bf20.ic100" size="131072" crc="5bd44e11"/>
+		<rom name="bf22.ic102" size="131072" crc="e52c29ab"/>
+		<rom name="bf21d.ic101" size="131072" crc="c4c2f969"/>
+		<rom name="bf23d.ic103" size="131072" crc="c05ae1fe"/>
+		<rom name="bf36b.ic91" merge="rom20.ic91" size="65536" crc="b3add091"/>
+		<rom name="bf00d.ic26" size="262144" crc="f506d508"/>
+		<rom name="bf08d.ic45" size="262144" crc="4bf948b9"/>
+		<rom name="bf02d.ic28" size="262144" crc="af30acf7"/>
+		<rom name="bf10d.ic47" size="262144" crc="ffddb7f8"/>
+		<rom name="bf01d.ic27" size="131072" crc="ec3f5f17"/>
+		<rom name="bf09d.ic46" size="131072" crc="284837ed"/>
+		<rom name="bf03d.ic29" size="131072" crc="2ba0398e"/>
+		<rom name="bf11d.ic48" size="131072" crc="3f2fa72f"/>
+		<rom name="bf04d.ic30" size="262144" crc="6203d320"/>
+		<rom name="bf12d.ic49" size="262144" crc="d261dfa7"/>
+		<rom name="bf06d.ic32" size="262144" crc="be187c3c"/>
+		<rom name="bf14d.ic51" size="262144" crc="60f2ab3d"/>
+		<rom name="bf05d.ic31" size="131072" crc="2229acbc"/>
+		<rom name="bf13d.ic50" size="131072" crc="1e46cd79"/>
+		<rom name="bf07d.ic33" size="131072" crc="4940b0bb"/>
+		<rom name="bf15d.ic52" size="131072" crc="dab0c80a"/>
+		<rom name="bf27.ic128" merge="rom21.ic128" size="131072" crc="da027dcf"/>
+		<rom name="bf30.ic73" merge="rom24.ic73" size="131072" crc="c564185d"/>
+		<rom name="bf29.ic72" merge="rom23.ic72" size="131072" crc="f8bb340b"/>
+		<rom name="bf28.ic71" merge="rom22.ic71" size="131072" crc="fb505074"/>
+		<rom name="bf24.ic39" size="131072" crc="9db80c8a"/>
+		<rom name="bf25.ic40" size="131072" crc="630154c4"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bigfight" sourcefile="pst90s/d_cyclwarr.cpp">
+		<description>Big Fight - Big Trouble In The Atlantic Ocean</description>
+		<year>1992</year>
+		<manufacturer>Tatsumi</manufacturer>
+		<rom name="rom16.ic77" size="262144" crc="e7304ec8"/>
+		<rom name="rom17.ic98" size="262144" crc="4cf090f6"/>
+		<rom name="rom18.ic100" size="262144" crc="49df6207"/>
+		<rom name="rom19.ic102" size="262144" crc="c12aa9e9"/>
+		<rom name="rom20.ic91" size="65536" crc="b3add091"/>
+		<rom name="rom0.ic26" size="524288" crc="a4a3c8d6"/>
+		<rom name="rom8.ic45" size="524288" crc="220956ed"/>
+		<rom name="rom2.ic28" size="524288" crc="c4f6d243"/>
+		<rom name="rom10.ic47" size="524288" crc="0212d472"/>
+		<rom name="rom4.ic30" size="524288" crc="999ff7e9"/>
+		<rom name="rom12.ic49" size="524288" crc="cb4c1f0b"/>
+		<rom name="rom6.ic32" size="524288" crc="f70e2d47"/>
+		<rom name="rom14.ic51" size="524288" crc="77430bc9"/>
+		<rom name="rom21.ic128" size="131072" crc="da027dcf"/>
+		<rom name="rom24.ic73" size="131072" crc="c564185d"/>
+		<rom name="rom23.ic72" size="131072" crc="f8bb340b"/>
+		<rom name="rom22.ic71" size="131072" crc="fb505074"/>
+		<rom name="rom15.ic39" size="262144" crc="58d136e8"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bigkarnka" cloneof="bigkarnk" romof="bigkarnk" sourcefile="pst90s/d_gaelco.cpp">
 		<description>Big Karnak (ver. 1.0, checksum 1e38b94)</description>
 		<year>1991</year>
@@ -36285,6 +36348,120 @@
 		<rom name="a80_18" size="2048" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="preliminary"/>
+	</game>
+	<game name="cyclwarra" cloneof="cyclwarr" romof="cyclwarr" sourcefile="pst90s/d_cyclwarr.cpp">
+		<description>Cycle Warriors (rev B)</description>
+		<year>1991</year>
+		<manufacturer>Tatsumi</manufacturer>
+		<rom name="cw16b.ic77" size="131072" crc="cb1a737a"/>
+		<rom name="cw18b.ic98" size="131072" crc="0633ddcb"/>
+		<rom name="cw17a.ic78" size="131072" crc="2ad6f836"/>
+		<rom name="cw19a.ic99" size="131072" crc="d3853658"/>
+		<rom name="cw20a.ic100" size="131072" crc="c3578ac1"/>
+		<rom name="cw22a.ic102" size="131072" crc="5339ed24"/>
+		<rom name="cw21.ic101" merge="cw21.ic101" size="131072" crc="ed90d956"/>
+		<rom name="cw23.ic103" merge="cw23.ic103" size="131072" crc="009cdc78"/>
+		<rom name="cw26a.ic91" merge="cw26a.ic91" size="65536" crc="f7a70e3a"/>
+		<rom name="cw00a.ic26" merge="cw00a.ic26" size="131072" crc="058a77f1"/>
+		<rom name="cw08a.ic45" merge="cw08a.ic45" size="131072" crc="f53993e7"/>
+		<rom name="cw02a.ic28" merge="cw02a.ic28" size="131072" crc="4dadf3cb"/>
+		<rom name="cw10a.ic47" merge="cw10a.ic47" size="131072" crc="3b7cd251"/>
+		<rom name="cw01a.ic27" merge="cw01a.ic27" size="131072" crc="7c639948"/>
+		<rom name="cw09a.ic46" merge="cw09a.ic46" size="131072" crc="4ba24af5"/>
+		<rom name="cw03a.ic29" merge="cw03a.ic29" size="131072" crc="3ca6f98e"/>
+		<rom name="cw11a.ic48" merge="cw11a.ic48" size="131072" crc="5d760392"/>
+		<rom name="cw04a.ic30" merge="cw04a.ic30" size="131072" crc="f05f594d"/>
+		<rom name="cw12a.ic49" merge="cw12a.ic49" size="131072" crc="4ac07e8b"/>
+		<rom name="cw06a.ic32" merge="cw06a.ic32" size="131072" crc="f628edc9"/>
+		<rom name="cw14a.ic51" merge="cw14a.ic51" size="131072" crc="a9131f5f"/>
+		<rom name="cw05a.ic31" merge="cw05a.ic31" size="131072" crc="c8f5faa9"/>
+		<rom name="cw13a.ic50" merge="cw13a.ic50" size="131072" crc="8091d381"/>
+		<rom name="cw07a.ic33" merge="cw07a.ic33" size="131072" crc="314579b5"/>
+		<rom name="cw15a.ic52" merge="cw15a.ic52" size="131072" crc="7ed4b721"/>
+		<rom name="cw27.ic128" merge="cw27.ic128" size="131072" crc="2db48a9e"/>
+		<rom name="cw30.ic73" merge="cw30.ic73" size="131072" crc="331d0711"/>
+		<rom name="cw29.ic72" merge="cw29.ic72" size="131072" crc="64dd519c"/>
+		<rom name="cw28.ic71" merge="cw28.ic71" size="131072" crc="3fc568ed"/>
+		<rom name="cw24a.ic39" merge="cw24a.ic39" size="131072" crc="22600cba"/>
+		<rom name="cw25a.ic40" merge="cw25a.ic40" size="131072" crc="372c6bc8"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cyclwarr" sourcefile="pst90s/d_cyclwarr.cpp">
+		<description>Cycle Warriors (rev C)</description>
+		<year>1991</year>
+		<manufacturer>Tatsumi</manufacturer>
+		<rom name="cw16c.ic77" size="131072" crc="4d88892b"/>
+		<rom name="cw18c.ic98" size="131072" crc="4ff56209"/>
+		<rom name="cw17b.ic78" size="131072" crc="da998afc"/>
+		<rom name="cw19b.ic99" size="131072" crc="c15a8413"/>
+		<rom name="cw20b.ic100" size="131072" crc="4d75292a"/>
+		<rom name="cw22b.ic102" size="131072" crc="0aec0ba4"/>
+		<rom name="cw21.ic101" size="131072" crc="ed90d956"/>
+		<rom name="cw23.ic103" size="131072" crc="009cdc78"/>
+		<rom name="cw26a.ic91" size="65536" crc="f7a70e3a"/>
+		<rom name="cw00a.ic26" size="131072" crc="058a77f1"/>
+		<rom name="cw08a.ic45" size="131072" crc="f53993e7"/>
+		<rom name="cw02a.ic28" size="131072" crc="4dadf3cb"/>
+		<rom name="cw10a.ic47" size="131072" crc="3b7cd251"/>
+		<rom name="cw01a.ic27" size="131072" crc="7c639948"/>
+		<rom name="cw09a.ic46" size="131072" crc="4ba24af5"/>
+		<rom name="cw03a.ic29" size="131072" crc="3ca6f98e"/>
+		<rom name="cw11a.ic48" size="131072" crc="5d760392"/>
+		<rom name="cw04a.ic30" size="131072" crc="f05f594d"/>
+		<rom name="cw12a.ic49" size="131072" crc="4ac07e8b"/>
+		<rom name="cw06a.ic32" size="131072" crc="f628edc9"/>
+		<rom name="cw14a.ic51" size="131072" crc="a9131f5f"/>
+		<rom name="cw05a.ic31" size="131072" crc="c8f5faa9"/>
+		<rom name="cw13a.ic50" size="131072" crc="8091d381"/>
+		<rom name="cw07a.ic33" size="131072" crc="314579b5"/>
+		<rom name="cw15a.ic52" size="131072" crc="7ed4b721"/>
+		<rom name="cw27.ic128" size="131072" crc="2db48a9e"/>
+		<rom name="cw30.ic73" size="131072" crc="331d0711"/>
+		<rom name="cw29.ic72" size="131072" crc="64dd519c"/>
+		<rom name="cw28.ic71" size="131072" crc="3fc568ed"/>
+		<rom name="cw24a.ic39" size="131072" crc="22600cba"/>
+		<rom name="cw25a.ic40" size="131072" crc="372c6bc8"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cyclwarrb" cloneof="cyclwarr" romof="cyclwarr" sourcefile="pst90s/d_cyclwarr.cpp">
+		<description>Cycle Warriors</description>
+		<year>1991</year>
+		<manufacturer>Tatsumi</manufacturer>
+		<rom name="cw16.ic77" size="131072" crc="47d57cf9"/>
+		<rom name="cw18.ic98" size="131072" crc="7d541f9e"/>
+		<rom name="cw17.ic78" size="131072" crc="008bdf09"/>
+		<rom name="cw19.ic99" size="131072" crc="e82244e0"/>
+		<rom name="cw20.ic100" size="131072" crc="c7a6fa85"/>
+		<rom name="cw22.ic102" size="131072" crc="917c1a2a"/>
+		<rom name="cw21.ic101" merge="cw21.ic101" size="131072" crc="ed90d956"/>
+		<rom name="cw23.ic103" merge="cw23.ic103" size="131072" crc="009cdc78"/>
+		<rom name="cw26.ic91" size="65536" crc="a6485a3a"/>
+		<rom name="cw00.ic26" size="131072" crc="ba00c582"/>
+		<rom name="cw08.ic45" size="131072" crc="1583e576"/>
+		<rom name="cw02.ic28" size="131072" crc="8376a744"/>
+		<rom name="cw10.ic47" size="131072" crc="901d849d"/>
+		<rom name="cw01.ic27" size="131072" crc="35979022"/>
+		<rom name="cw09.ic46" size="131072" crc="8114be09"/>
+		<rom name="cw03.ic29" size="131072" crc="951ed812"/>
+		<rom name="cw11.ic48" size="131072" crc="a7e5bf0b"/>
+		<rom name="cw04.ic30" size="131072" crc="890ea7b1"/>
+		<rom name="cw12.ic49" size="131072" crc="1587e96d"/>
+		<rom name="cw06.ic32" size="131072" crc="47decb23"/>
+		<rom name="cw14.ic51" size="131072" crc="a75072a1"/>
+		<rom name="cw05.ic31" size="131072" crc="4e49fcc5"/>
+		<rom name="cw13.ic50" size="131072" crc="51aee710"/>
+		<rom name="cw07.ic33" size="131072" crc="4f6b3c72"/>
+		<rom name="cw15.ic52" size="131072" crc="9cfc3b14"/>
+		<rom name="cw27.ic128" merge="cw27.ic128" size="131072" crc="2db48a9e"/>
+		<rom name="cw30.ic73" merge="cw30.ic73" size="131072" crc="331d0711"/>
+		<rom name="cw29.ic72" merge="cw29.ic72" size="131072" crc="64dd519c"/>
+		<rom name="cw28.ic71" merge="cw28.ic71" size="131072" crc="3fc568ed"/>
+		<rom name="cw24.ic39" size="131072" crc="08656756"/>
+		<rom name="cw25.ic40" size="131072" crc="36c0b8a6"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
 	</game>
 	<game name="cyvernj" cloneof="cyvern" romof="cyvern" sourcefile="pst90s/d_suprnova.cpp">
 		<description>Cyvern - The Dragon Weapons (Japan)</description>

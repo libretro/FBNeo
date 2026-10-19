@@ -3138,10 +3138,10 @@
 	</game>
 	<game name="hexapawn" sourcefile="sms/d_sms.cpp">
 		<comment>Homebrew</comment>
-		<description>Hexapawn (HB, v1.1.0)</description>
+		<description>Hexapawn (HB, v1.1.1)</description>
 		<year>2026</year>
-		<manufacturer>chirinea</manufacturer>
-		<rom name="Hexapawn v1.1.0 (2026)(chirinea).sms" size="49152" crc="5fbf2dd8"/>
+		<manufacturer>Blue Gorilla</manufacturer>
+		<rom name="Hexapawn v1.1.1 (2026)(Blue Gorilla).sms" size="49152" crc="b19295fe"/>
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
