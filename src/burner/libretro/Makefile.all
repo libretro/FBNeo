@@ -25,6 +25,7 @@ BURN_BLACKLIST += $(ADSP2100_CPU_DIR)/2100ops.c \
 	$(NEC_CPU_DIR)/v25sfr.c \
 	$(NEC_CPU_DIR)/v25instr.c \
 	$(NEC_CPU_DIR)/necinstr.c \
+	$(NEC_CPU_DIR)/i186.c \
 	$(TMS34010_CPU_DIR)/34010fld.c \
 	$(TMS34010_CPU_DIR)/34010gfx.c \
 	$(TMS34010_CPU_DIR)/34010ops.c \

@@ -2588,6 +2588,8 @@ DRV		BurnDrvfds_bigchadogspi;
 DRV		BurnDrvfds_bigchagogobo;
 DRV		BurnDrvfds_bigchagunfig;
 DRV		BurnDrvfds_bigchajuusen;
+DRV		BurnDrvBigfightj;
+DRV		BurnDrvBigfight;
 DRV		BurnDrvBigkarnka;
 DRV		BurnDrvBigkarnk;
 DRV		BurnDrvBigkong;
@@ -5581,6 +5583,9 @@ DRV		BurnDrvsms_cyborgz;
 DRV		BurnDrvCyclemb;
 DRV		BurnDrvnes_cyclerac;
 DRV		BurnDrvCyclshtg;
+DRV		BurnDrvCyclwarra;
+DRV		BurnDrvCyclwarr;
+DRV		BurnDrvCyclwarrb;
 DRV		BurnSpecCyclone;
 DRV		BurnSpecCyclus1;
 DRV		BurnSpecCyclus2;
@@ -32285,6 +32290,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvfds_bigchagogobo,	// Big Challenge! Go! Go! Bowling (Japan)
 	&BurnDrvfds_bigchagunfig,	// Big Challenge! Gun Fighter (Japan)
 	&BurnDrvfds_bigchajuusen,	// Big Challenge! Juudou Senshuken (Japan)
+	&BurnDrvBigfightj,			// Big Fight - Big Trouble In The Atlantic Ocean (Japan, rev F)
+	&BurnDrvBigfight,			// Big Fight - Big Trouble In The Atlantic Ocean
 	&BurnDrvBigkarnka,			// Big Karnak (ver. 1.0, checksum 1e38b94)
 	&BurnDrvBigkarnk,			// Big Karnak (ver. 1.0, checksum 1e38c94)
 	&BurnDrvBigkong,			// Big Kong
@@ -35278,6 +35285,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCyclemb,			// Cycle Maabou (Japan)
 	&BurnDrvnes_cyclerac,		// Cycle Race: Road Man (Japan)
 	&BurnDrvCyclshtg,			// Cycle Shooting [Not Emulated, GFX/layer priority issues, NOT WORKING]
+	&BurnDrvCyclwarra,			// Cycle Warriors (rev B)
+	&BurnDrvCyclwarr,			// Cycle Warriors (rev C)
+	&BurnDrvCyclwarrb,			// Cycle Warriors
 	&BurnSpecCyclone,			// Cyclone (48K)
 	&BurnSpecCyclus1,			// Cyclus - Part 1 (128K) (HB)
 	&BurnSpecCyclus2,			// Cyclus - Part 2 (128K) (HB)
@@ -40941,7 +40951,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvHexpoola,			// Hex Pool (Senko)
 	&BurnDrvHexpool,			// Hex Pool (Shinkai)
 	&BurnDrvHexa,				// Hexa
-	&BurnDrvsms_hexapawn,		// Hexapawn (HB, v1.1.0)
+	&BurnDrvsms_hexapawn,		// Hexapawn (HB, v1.1.1)
 	&BurnDrvgba_hexavirus,		// HexaVirus (HB)
 	&BurnDrvHexionb,			// Hexion (Asia ver AAA, bootleg)
 	&BurnDrvHexion,				// Hexion (Japan ver JAB)
@@ -61968,6 +61978,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "fds_bigchagogobo", "nes/d_nes.cpp"},
 	{ "fds_bigchagunfig", "nes/d_nes.cpp"},
 	{ "fds_bigchajuusen", "nes/d_nes.cpp"},
+	{ "bigfightj", "pst90s/d_cyclwarr.cpp"},
+	{ "bigfight", "pst90s/d_cyclwarr.cpp"},
 	{ "bigkarnka", "pst90s/d_gaelco.cpp"},
 	{ "bigkarnk", "pst90s/d_gaelco.cpp"},
 	{ "bigkong", "pre90s/d_cclimber.cpp"},
@@ -64941,6 +64953,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "cyclemb", "taito/d_cyclemb.cpp"},
 	{ "nes_cyclerac", "nes/d_nes.cpp"},
 	{ "cyclshtg", "taito/d_nycaptor.cpp"},
+	{ "cyclwarra", "pst90s/d_cyclwarr.cpp"},
+	{ "cyclwarr", "pst90s/d_cyclwarr.cpp"},
+	{ "cyclwarrb", "pst90s/d_cyclwarr.cpp"},
 	{ "spec_cyclone", "spectrum/d_spectrum.cpp"},
 	{ "spec_cyclus1", "spectrum/d_spectrum.cpp"},
 	{ "spec_cyclus2", "spectrum/d_spectrum.cpp"},
