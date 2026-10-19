@@ -1952,6 +1952,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="astraquarium" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Astra Aquarium (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Astra Aquarium (2026)(Enarkz).gba" size="74228" crc="f6ac6b01"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="astroboy" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Astro Boy - Omega Factor (Europe)</description>
 		<year>2003</year>
@@ -14929,6 +14939,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="lcinjection" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Lethal Code Injection (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Lethal Code Injection (2026)(Enarkz).gba" size="42448" crc="33777521"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="liccachn" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Licca-chan no Oshare Nikki (Japan)</description>
 		<year>2004</year>
@@ -16982,6 +17002,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="minipets" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Mini Pets GBA (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Mini Pets GBA (2026)(Enarkz).gba" size="142208" crc="d92d6ca7"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="minicraft3d" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew</comment>
 		<description>Minicraft 3D (HB, v0.6.4)</description>
@@ -18169,6 +18199,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="nemeshit" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Nemeshit (HB)</description>
+		<year>2026</year>
+		<manufacturer>Clankerbast Software</manufacturer>
+		<rom name="Nemeshit (2026)(Clankerbast Software).gba" size="2041856" crc="90dac67d"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="neonnoir" romof="gba" sourcefile="gba/d_gba.cpp">
 		<comment>Homebrew</comment>
 		<description>NEONnoir (HB)</description>
@@ -18950,6 +18990,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="paragonbld" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Paragon Builder (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Paragon Builder (2026)(Enarkz).gba" size="64052" crc="621de1f6"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="pawclwdc" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Paws &amp; Claws - Best Friends - Dogs &amp; Cats (USA)</description>
 		<year>2007</year>
@@ -18986,11 +19036,31 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="pazaak" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Pazaak (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Pazaak (2026)(Enarkz).gba" size="69056" crc="fa500735"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="pazuninn" cloneof="gemsmash" romof="gemsmash" sourcefile="gba/d_gba.cpp">
 		<description>Pazuninn: Umininn no Puzzle de Nimu (Japan)</description>
 		<year>2003</year>
 		<manufacturer>Metro3D</manufacturer>
 		<rom name="Pazuninn - Umininn no Puzzle de Nimu (J)(2003)(Metro3D).gba" size="4194304" crc="8daa89c9"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="peegle" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Peegle GBA (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Peegle GBA (2026)(Enarkz).gba" size="134784" crc="d15b75e6"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -21680,6 +21750,16 @@
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
 	</game>
+	<game name="stmartials" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Saint Martial's Casino (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Saint Martial's Casino (2026)(Enarkz).gba" size="36764" crc="ebd2d50a"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
 	<game name="sakuramo" romof="gba" sourcefile="gba/d_gba.cpp">
 		<description>Sakura Momoko no UkiUki Carnival (Japan)</description>
 		<year>2002</year>
@@ -21973,6 +22053,16 @@
 		<year>2005</year>
 		<manufacturer>THQ</manufacturer>
 		<rom name="scooby-doo - unmasked (usa) (en,fr).bin" size="8388608" crc="96bdd6c1"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="scorched" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Scorched Earth (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Scorched Earth (2026)(Enarkz).gba" size="66124" crc="dd179ba0"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>
@@ -27541,6 +27631,16 @@
 		<year>2021</year>
 		<manufacturer>Cinemint Games</manufacturer>
 		<rom name="Tremblay Island v1.10 (2021)(Cinemint Games).gba" size="16239516" crc="ce85ba07"/>
+		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
+		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
+		<driver status="good"/>
+	</game>
+	<game name="thetrials" romof="gba" sourcefile="gba/d_gba.cpp">
+		<comment>Homebrew</comment>
+		<description>Trials, The (HB)</description>
+		<year>2026</year>
+		<manufacturer>Enarkz</manufacturer>
+		<rom name="Trials, The (2026)(Enarkz).gba" size="178364" crc="60674eae"/>
 		<rom name="gba_bios.bin" merge="gba_bios.bin" size="16384" crc="81977335"/>
 		<video type="raster" orientation="horizontal" width="240" height="160" aspectx="3" aspecty="2"/>
 		<driver status="good"/>

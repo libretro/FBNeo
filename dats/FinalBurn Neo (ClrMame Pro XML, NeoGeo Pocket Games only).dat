@@ -230,7 +230,7 @@
 		<description>Bubble Bobble (HB, Demo)</description>
 		<year>2026</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Bubble Bobble Demo (2026)(Chris Ahchay).ngp" size="2226982" crc="16d265b2"/>
+		<rom name="Bubble Bobble Demo (2026)(Chris Ahchay).ngp" size="2230574" crc="c8bd0f41"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -637,7 +637,7 @@
 		<description>Gardenia (HB, v1.4)</description>
 		<year>2026</year>
 		<manufacturer>Chris Ahchay</manufacturer>
-		<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="ef30cb24"/>
+		<rom name="Gardenia v1.4 (2026)(Chris Ahchay).ngp" size="2097152" crc="6bf8b0aa"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1316,10 +1316,10 @@
 	</game>
 	<game name="overrev" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
 		<comment>Homebrew</comment>
-		<description>Over Rev (HB, v1.0)</description>
+		<description>Over Rev (HB, v2.0)</description>
 		<year>2026</year>
 		<manufacturer>Tixul</manufacturer>
-		<rom name="Over Rev v1.0 (2026)(Tixul).ngp" size="2097152" crc="41722bb0"/>
+		<rom name="Over Rev v2.0 (2026)(Tixul).ngp" size="2097152" crc="bd6dcde5"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
@@ -1522,6 +1522,17 @@
 		<year>1999</year>
 		<manufacturer>SNK - Yumekobo</manufacturer>
 		<rom name="Pocket Tennis Color - Pocket Sports Series (World)(1999)(SNK - Yumekobo).ngp" size="524288" crc="d8590b96"/>
+		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
+		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
+		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="princeper" romof="ngp" sourcefile="pst90s/d_ngp.cpp">
+		<comment>Homebrew</comment>
+		<description>Prince of Persia (HB)</description>
+		<year>2026</year>
+		<manufacturer>JAJABINX35</manufacturer>
+		<rom name="Prince of Persia (2026)(JAJABINX35).ngp" size="2097152" crc="c381be55"/>
 		<rom name="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket BIOS (1998)(SNK)(en-ja).bin" size="65536" crc="6232df8d"/>
 		<rom name="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" merge="SNK Neo-Geo Pocket Color BIOS (1999)(SNK)(en-ja).bin" size="65536" crc="6eeb6f40"/>
 		<video type="raster" orientation="horizontal" width="160" height="152" aspectx="4" aspecty="3"/>

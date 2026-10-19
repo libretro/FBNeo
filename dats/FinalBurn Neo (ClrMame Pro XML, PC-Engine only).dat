@@ -2721,10 +2721,10 @@
 	</game>
 	<game name="tetrisarc" sourcefile="pce/d_pce.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris - Atari Games Arcade Port (HB, v1.01)</description>
+		<description>Tetris - Atari Games Arcade Port (HB, v1.02)</description>
 		<year>2026</year>
 		<manufacturer>ShinobiZ</manufacturer>
-		<rom name="Tetris - Atari Games Arcade Port v1.01 (2026)(ShinobiZ).pce" size="524288" crc="5fccd826"/>
+		<rom name="Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).pce" size="524288" crc="6e1de759"/>
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

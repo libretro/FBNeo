@@ -13376,10 +13376,10 @@
 	</game>
 	<game name="go9x9" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Go 9x9 (128K) (HB, v2.0.1)</description>
+		<description>Go 9x9 (128K) (HB, v3.0)</description>
 		<year>2026</year>
 		<manufacturer>LAWLORD</manufacturer>
-		<rom name="Go 9x9 v2.0.1 128K (2026)(LAWLORD).tap" size="96306" crc="c9785e8e"/>
+		<rom name="Go 9x9 v3.0 128K (2026)(LAWLORD).tap" size="108011" crc="bdb4b53d"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -22671,10 +22671,10 @@
 	</game>
 	<game name="opgreenup1es" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Operacion Greenup - Parte 1 (Spanish) (128K) (HB)</description>
+		<description>Operacion Greenup - Parte 1 (Spanish) (128K) (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Molisoft</manufacturer>
-		<rom name="Operacion Greenup - Parte 1 ES 128K (2026)(Molisoft).tap" size="121201" crc="2e79b60d"/>
+		<rom name="Operacion Greenup - Parte 1 v1.1 ES 128K (2026)(Molisoft).tap" size="121206" crc="5ae34463"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -22704,10 +22704,10 @@
 	</game>
 	<game name="opgreenup1en" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Operation Greenup - Part 1 (English) (128K) (HB)</description>
+		<description>Operation Greenup - Part 1 (English) (128K) (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Molisoft</manufacturer>
-		<rom name="Operation Greenup - Part 1 EN 128K (2026)(Molisoft).tap" size="120944" crc="2120674b"/>
+		<rom name="Operation Greenup - Part 1 v1.1 EN 128K (2026)(Molisoft).tap" size="120948" crc="eb9a6e7c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

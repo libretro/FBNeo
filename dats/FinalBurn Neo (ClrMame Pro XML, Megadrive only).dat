@@ -172,10 +172,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="atetris" sourcefile="megadrive/d_megadrive.cpp">
-		<description>A-Tetris (HB, Alfa)</description>
+		<description>A-Tetris (HB, Alfa 2)</description>
 		<year>2026</year>
 		<manufacturer>Amiguetes Soft</manufacturer>
-		<rom name="A-Tetris Alfa (2026)(Amiguetes Soft).bin" size="3919872" crc="4976dd17"/>
+		<rom name="A-Tetris Alfa 2 (2026)(Amiguetes Soft).bin" size="4192744" crc="b14244da"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12025,10 +12025,10 @@
 	</game>
 	<game name="mcommando" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Mega Commando (HB, v0.81b)</description>
+		<description>Mega Commando (HB, v0.82b)</description>
 		<year>2026</year>
 		<manufacturer>MXRetroDev</manufacturer>
-		<rom name="Mega Commando v0.81b (2026)(MXRetroDev).bin" size="2752512" crc="96a6d27f"/>
+		<rom name="Mega Commando v0.82b (2026)(MXRetroDev).bin" size="3276800" crc="4aa12954"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22356,10 +22356,10 @@
 	</game>
 	<game name="tmntarcade" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.3.7)</description>
+		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.3.9)</description>
 		<year>2026</year>
 		<manufacturer>Gustavo Valenzuela</manufacturer>
-		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.7 (2026)(Gustavo Valenzuela).bin" size="4194304" crc="962efc2f"/>
+		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.9 (2026)(Gustavo Valenzuela).bin" size="3932160" crc="37edbe49"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22584,10 +22584,10 @@
 	</game>
 	<game name="tetrisarc" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris - Atari Games Arcade Port (HB, v1.02)</description>
+		<description>Tetris - Atari Games Arcade Port (HB, v1.04)</description>
 		<year>2026</year>
 		<manufacturer>ShinobiZ</manufacturer>
-		<rom name="Tetris - Atari Games Arcade Port v1.02 (2026)(ShinobiZ).bin" size="2097152" crc="4b5be3f5"/>
+		<rom name="Tetris - Atari Games Arcade Port v1.04 (2026)(ShinobiZ).bin" size="2097152" crc="1aad8339"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -24735,10 +24735,10 @@
 	</game>
 	<game name="wboyarc" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Wonder Boy - Arcade Port (HB, v1.2)</description>
+		<description>Wonder Boy - Arcade Port (HB, v1.5)</description>
 		<year>2026</year>
 		<manufacturer>ShinobiZ</manufacturer>
-		<rom name="Wonder Boy - Arcade Port v1.2 (2026)(ShinobiZ).bin" size="2097152" crc="e8a52997"/>
+		<rom name="Wonder Boy - Arcade Port v1.5 (2026)(ShinobiZ).bin" size="2097152" crc="bf96b19b"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
