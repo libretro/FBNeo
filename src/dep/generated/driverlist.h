@@ -14870,6 +14870,7 @@ DRV		BurnDrvCpsMshbh;
 DRV		BurnDrvCpsMshbr1;
 DRV		BurnDrvCpsMshb;
 DRV		BurnDrvCpsMsh;
+DRV		BurnDrvCpsMshtag;
 DRV		BurnDrvCpsMshh;
 DRV		BurnDrvCpsMshjr1;
 DRV		BurnDrvCpsMshj;
@@ -14906,6 +14907,7 @@ DRV		BurnDrvCpsMvscb;
 DRV		BurnDrvCpsMvscem;
 DRV		BurnDrvCpsMvscr1;
 DRV		BurnDrvCpsMvsc;
+DRV		BurnDrvCpsMvscdhc;
 DRV		BurnDrvCpsMvsch;
 DRV		BurnDrvCpsMvscjr1;
 DRV		BurnDrvCpsMvscjsing;
@@ -23988,6 +23990,7 @@ DRV		BurnDrvSfiii3na;
 DRV		BurnDrvSfiii3bh;
 DRV		BurnDrvSfiii3r1;
 DRV		BurnDrvSfiii3;
+DRV		BurnDrvSfiii3tag6p;
 DRV		BurnDrvSfiii3tag;
 DRV		BurnDrvSfiii3jr1;
 DRV		BurnDrvSfiii3nr1;
@@ -29072,6 +29075,7 @@ DRV		BurnDrvCpsXmcotab;
 DRV		BurnDrvCpsXmcotar1d;
 DRV		BurnDrvCpsXmcotar1;
 DRV		BurnDrvCpsXmcota;
+DRV		BurnDrvCpsXmcotatag;
 DRV		BurnDrvCpsXmcotahr1;
 DRV		BurnDrvCpsXmcotah;
 DRV		BurnDrvCpsXmcotajr;
@@ -32302,8 +32306,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvfds_bigchagogobo,	// Big Challenge! Go! Go! Bowling (Japan)
 	&BurnDrvfds_bigchagunfig,	// Big Challenge! Gun Fighter (Japan)
 	&BurnDrvfds_bigchajuusen,	// Big Challenge! Juudou Senshuken (Japan)
-	&BurnDrvBigfightj,			// Big Fight - Big Trouble In The Atlantic Ocean (Japan, rev F)
-	&BurnDrvBigfight,			// Big Fight - Big Trouble In The Atlantic Ocean
+	&BurnDrvBigfightj,			// Big Fight: Big Trouble In The Atlantic Ocean (Japan, Rev. F)
+	&BurnDrvBigfight,			// Big Fight: Big Trouble In The Atlantic Ocean
 	&BurnDrvBigkarnka,			// Big Karnak (ver. 1.0, checksum 1e38b94)
 	&BurnDrvBigkarnk,			// Big Karnak (ver. 1.0, checksum 1e38c94)
 	&BurnDrvBigkong,			// Big Kong
@@ -35297,8 +35301,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCyclemb,			// Cycle Maabou (Japan)
 	&BurnDrvnes_cyclerac,		// Cycle Race: Road Man (Japan)
 	&BurnDrvCyclshtg,			// Cycle Shooting [Not Emulated, GFX/layer priority issues, NOT WORKING]
-	&BurnDrvCyclwarra,			// Cycle Warriors (rev B)
-	&BurnDrvCyclwarr,			// Cycle Warriors (rev C)
+	&BurnDrvCyclwarra,			// Cycle Warriors (Rev. B)
+	&BurnDrvCyclwarr,			// Cycle Warriors (Rev. C)
 	&BurnDrvCyclwarrb,			// Cycle Warriors
 	&BurnSpecCyclone,			// Cyclone (48K)
 	&BurnSpecCyclus1,			// Cyclus - Part 1 (128K) (HB)
@@ -44583,6 +44587,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsMshbr1,			// Marvel Super Heroes (Brazil 951024)
 	&BurnDrvCpsMshb,			// Marvel Super Heroes (Brazil 951117)
 	&BurnDrvCpsMsh,				// Marvel Super Heroes (Europe 951024)
+	&BurnDrvCpsMshtag,			// Marvel Super Heroes (Hack, Tag v1.2)
 	&BurnDrvCpsMshh,			// Marvel Super Heroes (Hispanic 951117)
 	&BurnDrvCpsMshjr1,			// Marvel Super Heroes (Japan 951024)
 	&BurnDrvCpsMshj,			// Marvel Super Heroes (Japan 951117)
@@ -44619,6 +44624,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsMvscem,			// Marvel Vs. Capcom: Clash of Super Heroes (Easy Moves, Hack)
 	&BurnDrvCpsMvscr1,			// Marvel Vs. Capcom: Clash of Super Heroes (Europe 980112)
 	&BurnDrvCpsMvsc,			// Marvel Vs. Capcom: Clash of Super Heroes (Europe 980123)
+	&BurnDrvCpsMvscdhc,			// Marvel Vs. Capcom: Clash of Super Heroes (Hack, Delayed Hyper Combo v11)
 	&BurnDrvCpsMvsch,			// Marvel Vs. Capcom: Clash of Super Heroes (Hispanic 980123)
 	&BurnDrvCpsMvscjr1,			// Marvel Vs. Capcom: Clash of Super Heroes (Japan 980112)
 	&BurnDrvCpsMvscjsing,		// Marvel Vs. Capcom: Clash of Super Heroes (Japan 980123) (Single PCB)
@@ -50134,7 +50140,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_revx,			// Revolution X (Euro, USA)
 	&BurnDrvRevxp5,				// Revolution X (prototype, revision 5.0 5/23/94)
 	&BurnDrvRevx1,				// Revolution X (revision 1.0 6/16/94)
-	&BurnDrvRevx,				// Revolution X (revision 2.0 9/8/94) [no comment, NOT WORKING]
+	&BurnDrvRevx,				// Revolution X (revision 2.0 9/8/94)
 	&BurnDrvsnes_Revx,			// Revolution X (USA)
 	&BurnDrvnes_revgems,		// Revolving Gems (HB)
 	&BurnDrvsnes_Rexronan,		// Rex Ronan: Experimental Surgeon (USA)
@@ -50931,7 +50937,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvSsho2emb,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Move Modeasy Special Attacks V4, Hack)
 	&BurnDrvSamsho2,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (NGM-063 ~ NGH-063)
 	&BurnDrvSamsho2t,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Optimized, Hack)
-	&BurnDrvSamsho2pe,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 2.9, Hack)
+	&BurnDrvSamsho2pe,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.0, Hack)
 	&BurnDrvSamsh2sp,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Special 2017, Hack)
 	&BurnDrvSamsh3bs,			// Samurai Shodown III / Samurai Spirits - Zankurou Musouken (Boss, Hack)
 	&BurnDrvSamSho3h,			// Samurai Shodown III / Samurai Spirits - Zankurou Musouken (NGH-087)
@@ -53701,6 +53707,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvSfiii3bh,			// Street Fighter III 3rd Strike: Fight for the Future (Boss Hack)
 	&BurnDrvSfiii3r1,			// Street Fighter III 3rd Strike: Fight for the Future (Europe 990512)
 	&BurnDrvSfiii3,				// Street Fighter III 3rd Strike: Fight for the Future (Europe 990608)
+	&BurnDrvSfiii3tag6p,		// Street Fighter III 3rd Strike: Fight for the Future (Hack, Tag 6 Players, v4.3)
 	&BurnDrvSfiii3tag,			// Street Fighter III 3rd Strike: Fight for the Future (Hack, Tag v4.3)
 	&BurnDrvSfiii3jr1,			// Street Fighter III 3rd Strike: Fight for the Future (Japan 990512)
 	&BurnDrvSfiii3nr1,			// Street Fighter III 3rd Strike: Fight for the Future (Japan 990512, NO CD)
@@ -58785,6 +58792,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsXmcotar1d,		// X-Men: Children of the Atom (Europe 950105 Phoenix Edition) (bootleg)
 	&BurnDrvCpsXmcotar1,		// X-Men: Children of the Atom (Europe 950105)
 	&BurnDrvCpsXmcota,			// X-Men: Children of the Atom (Europe 950331)
+	&BurnDrvCpsXmcotatag,		// X-Men: Children of the Atom (Hack, Tag v5.6)
 	&BurnDrvCpsXmcotahr1,		// X-Men: Children of the Atom (Hispanic 950105)
 	&BurnDrvCpsXmcotah,			// X-Men: Children of the Atom (Hispanic 950331)
 	&BurnDrvCpsXmcotajr,		// X-Men: Children of the Atom (Japan 941208 rent version)
@@ -74206,6 +74214,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "mshbr1", "capcom/d_cps2.cpp"},
 	{ "mshb", "capcom/d_cps2.cpp"},
 	{ "msh", "capcom/d_cps2.cpp"},
+	{ "mshtag", "capcom/d_cps2.cpp"},
 	{ "mshh", "capcom/d_cps2.cpp"},
 	{ "mshjr1", "capcom/d_cps2.cpp"},
 	{ "mshj", "capcom/d_cps2.cpp"},
@@ -74242,6 +74251,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "mvscem", "capcom/d_cps2.cpp"},
 	{ "mvscr1", "capcom/d_cps2.cpp"},
 	{ "mvsc", "capcom/d_cps2.cpp"},
+	{ "mvscdhc", "capcom/d_cps2.cpp"},
 	{ "mvsch", "capcom/d_cps2.cpp"},
 	{ "mvscjr1", "capcom/d_cps2.cpp"},
 	{ "mvscjsing", "capcom/d_cps2.cpp"},
@@ -83258,6 +83268,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sfiii3bh", "cps3/d_cps3.cpp"},
 	{ "sfiii3r1", "cps3/d_cps3.cpp"},
 	{ "sfiii3", "cps3/d_cps3.cpp"},
+	{ "sfiii3tag6p", "cps3/d_cps3.cpp"},
 	{ "sfiii3tag", "cps3/d_cps3.cpp"},
 	{ "sfiii3jr1", "cps3/d_cps3.cpp"},
 	{ "sfiii3nr1", "cps3/d_cps3.cpp"},
@@ -88298,6 +88309,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "xmcotar1d", "capcom/d_cps2.cpp"},
 	{ "xmcotar1", "capcom/d_cps2.cpp"},
 	{ "xmcota", "capcom/d_cps2.cpp"},
+	{ "xmcotatag", "capcom/d_cps2.cpp"},
 	{ "xmcotahr1", "capcom/d_cps2.cpp"},
 	{ "xmcotah", "capcom/d_cps2.cpp"},
 	{ "xmcotajr", "capcom/d_cps2.cpp"},
