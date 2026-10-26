@@ -2369,10 +2369,10 @@
 	</game>
 	<game name="blacktiger" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Black Tiger (HB, v1.7)</description>
+		<description>Black Tiger (HB, v1.9.1)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Black Tiger v1.7 (2026)(rester159).bin" size="4194304" crc="3e195ffb"/>
+		<rom name="Black Tiger v1.9.1 (2026)(rester159).bin" size="4194304" crc="a1b19794"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -2972,10 +2972,10 @@
 	</game>
 	<game name="cabal" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Cabal (HB, Beta 3)</description>
+		<description>Cabal (HB, v1.0)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Cabal Beta 3 (2026)(Oldschool Is Beautiful).bin" size="2097152" crc="86a39e28"/>
+		<rom name="Cabal v1.0 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="06dc93c5"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -14768,10 +14768,10 @@
 	</game>
 	<game name="pang" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Pang (DavidGames) (HB, Beta v0.98)</description>
+		<description>Pang (DavidGames) (HB, Beta v1.03)</description>
 		<year>2026</year>
 		<manufacturer>DavidGames</manufacturer>
-		<rom name="Pang Beta v0.98 (2026)(DavidGames).bin" size="1441792" crc="bfe14ffc"/>
+		<rom name="Pang Beta v1.03 (2026)(DavidGames).bin" size="1310720" crc="bdd4517a"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18616,10 +18616,10 @@
 	</game>
 	<game name="shinobi" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Shinobi (HB, Beta 3)</description>
+		<description>Shinobi (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Shinobi Beta 3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="53a81527"/>
+		<rom name="Shinobi v1.1 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="e8989d45"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18812,10 +18812,10 @@
 	</game>
 	<game name="sidearms" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Side Arms - Hyper Dyne (HB, v2.1)</description>
+		<description>Side Arms - Hyper Dyne (HB, v2.2)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Side Arms - Hyper Dyne v2.1 (2026)(rester159).bin" size="4194304" crc="b36c3a67"/>
+		<rom name="Side Arms - Hyper Dyne v2.2 (2026)(rester159).bin" size="4194304" crc="e48ffac5"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -20588,10 +20588,10 @@
 	</game>
 	<game name="sf248m" cloneof="sf2" romof="sf2" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter II' - Special Champion Edition - 48 MBits Blast Processing Edition (Hack, v1.6)</description>
+		<description>Street Fighter II' - Special Champion Edition - 48 MBits Blast Processing Edition (Hack, v2.2)</description>
 		<year>2026</year>
 		<manufacturer>marcel_law</manufacturer>
-		<rom name="Street Fighter II' - Special Champion Edition - 48 MBits Blast Processing Edition v1.6 (2026)(marcel_law).bin" size="6291456" crc="09579505"/>
+		<rom name="Street Fighter II' - Special Champion Edition - 48 MBits Blast Processing Edition v2.2 (2026)(marcel_law).bin" size="6291456" crc="61f0ef0b"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22356,10 +22356,10 @@
 	</game>
 	<game name="tmntarcade" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.3.9)</description>
+		<description>Teenage Mutant Ninja Turtles: The Arcade Game (HB, v0.3.9d)</description>
 		<year>2026</year>
 		<manufacturer>Gustavo Valenzuela</manufacturer>
-		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.9 (2026)(Gustavo Valenzuela).bin" size="3932160" crc="37edbe49"/>
+		<rom name="Teenage Mutant Ninja Turtles - The Arcade Game v0.3.9d (2026)(Gustavo Valenzuela).bin" size="3932160" crc="8c1caf2e"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22806,10 +22806,10 @@
 	</game>
 	<game name="tigeroad" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Tiger Road (hombreimaginario) (HB, 2026-10-17)</description>
+		<description>Tiger Road (hombreimaginario) (HB, 2026-10-23)</description>
 		<year>2026</year>
 		<manufacturer>hombreimaginario</manufacturer>
-		<rom name="Tiger Road 2026-10-17 (2026)(hombreimaginario).bin" size="2490368" crc="92480e61"/>
+		<rom name="Tiger Road 2026-10-23 (2026)(hombreimaginario).bin" size="2490368" crc="8db153ab"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

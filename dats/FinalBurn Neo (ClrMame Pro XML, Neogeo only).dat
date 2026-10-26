@@ -25001,6 +25001,58 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="shadowlf" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
+		<comment>Homebrew</comment>
+		<description>Shadow League Fighting (HB, v3)</description>
+		<year>2026</year>
+		<manufacturer>Eagle Software</manufacturer>
+		<rom name="shadowlf_p1.p1" size="3145728" crc="127535e0"/>
+		<rom name="shadowlf_s1.s1" size="131072" crc="636d9736"/>
+		<rom name="shadowlf_c1.c1" size="8388608" crc="ac935b79"/>
+		<rom name="shadowlf_c2.c2" size="8388608" crc="d65c95ab"/>
+		<rom name="shadowlf_m1.m1" size="131072" crc="ceabdb57"/>
+		<rom name="shadowlf_v1.v1" size="7979264" crc="63c1b4e6"/>
+		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
+		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
+		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
+		<rom name="sp-u2.sp1" merge="sp-u2.sp1" size="131072" crc="e72943de"/>
+		<rom name="sp1-u2" merge="sp1-u2" size="131072" crc="62f021f4"/>
+		<rom name="sp-e.sp1" merge="sp-e.sp1" size="131072" crc="2723a5b5"/>
+		<rom name="sp1-u4.bin" merge="sp1-u4.bin" size="131072" crc="1179a30f"/>
+		<rom name="sp1-u3.bin" merge="sp1-u3.bin" size="131072" crc="2025b7a2"/>
+		<rom name="vs-bios.rom" merge="vs-bios.rom" size="131072" crc="f0e8f27d"/>
+		<rom name="sp-j2.sp1" merge="sp-j2.sp1" size="131072" crc="acede59c"/>
+		<rom name="sp1.jipan.1024" merge="sp1.jipan.1024" size="131072" crc="9fb0abe4"/>
+		<rom name="sp-45.sp1" merge="sp-45.sp1" size="524288" crc="03cc9f6a"/>
+		<rom name="sp-j3.sp1" merge="sp-j3.sp1" size="524288" crc="486cb450"/>
+		<rom name="japan-j3.bin" merge="japan-j3.bin" size="131072" crc="dff6d41f"/>
+		<rom name="sp1-j3.bin" merge="sp1-j3.bin" size="131072" crc="fbc6d469"/>
+		<rom name="neo-po.bin" merge="neo-po.bin" size="131072" crc="16d0c132"/>
+		<rom name="neo-epo.bin" merge="neo-epo.bin" size="131072" crc="d27a71f1"/>
+		<rom name="neodebug.bin" merge="neodebug.bin" size="131072" crc="698ebb7d"/>
+		<rom name="sp-1v1_3db8c.bin" merge="sp-1v1_3db8c.bin" size="131072" crc="162f0ebe"/>
+		<rom name="uni-bios_4_0.rom" merge="uni-bios_4_0.rom" size="131072" crc="a7aab458"/>
+		<rom name="uni-bios_3_3.rom" merge="uni-bios_3_3.rom" size="131072" crc="24858466"/>
+		<rom name="uni-bios_3_2.rom" merge="uni-bios_3_2.rom" size="131072" crc="a4e8b9b3"/>
+		<rom name="uni-bios_3_1.rom" merge="uni-bios_3_1.rom" size="131072" crc="0c58093f"/>
+		<rom name="uni-bios_3_0.rom" merge="uni-bios_3_0.rom" size="131072" crc="a97c89a9"/>
+		<rom name="uni-bios_2_3.rom" merge="uni-bios_2_3.rom" size="131072" crc="27664eb5"/>
+		<rom name="uni-bios_2_3o.rom" merge="uni-bios_2_3o.rom" size="131072" crc="601720ae"/>
+		<rom name="uni-bios_2_2.rom" merge="uni-bios_2_2.rom" size="131072" crc="2d50996a"/>
+		<rom name="uni-bios_2_1.rom" merge="uni-bios_2_1.rom" size="131072" crc="8dabf76b"/>
+		<rom name="uni-bios_2_0.rom" merge="uni-bios_2_0.rom" size="131072" crc="0c12c2ad"/>
+		<rom name="uni-bios_1_3.rom" merge="uni-bios_1_3.rom" size="131072" crc="b24b44a0"/>
+		<rom name="uni-bios_1_2.rom" merge="uni-bios_1_2.rom" size="131072" crc="4fa698e9"/>
+		<rom name="uni-bios_1_2o.rom" merge="uni-bios_1_2o.rom" size="131072" crc="e19d3ce9"/>
+		<rom name="uni-bios_1_1.rom" merge="uni-bios_1_1.rom" size="131072" crc="5dda0d84"/>
+		<rom name="uni-bios_1_0.rom" merge="uni-bios_1_0.rom" size="131072" crc="0ce453a0"/>
+		<rom name="neopen.sp1" merge="neopen.sp1" size="131072" crc="cb915e76"/>
+		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
+		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
+		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="beast" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Demo</comment>
 		<description>Shadow of the Beast (Neo Geo demo)</description>
@@ -25335,10 +25387,10 @@
 	</game>
 	<game name="skylance" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
-		<description>Sky Lance (HB, RC1)</description>
+		<description>Sky Lance (HB, v2)</description>
 		<year>2026</year>
 		<manufacturer>Eagle Software</manufacturer>
-		<rom name="skylance-p1.p1" size="524288" crc="29e1968d"/>
+		<rom name="skylance-p1.p1" size="524288" crc="ae68c9a1"/>
 		<rom name="skylance-s1.s1" size="131072" crc="bd69c9ff"/>
 		<rom name="skylance-c1.c1" size="4194304" crc="e80e7df9"/>
 		<rom name="skylance-c2.c2" size="4194304" crc="0668da32"/>
@@ -38781,12 +38833,12 @@
 		<description>Warrior Man (HB)</description>
 		<year>2026</year>
 		<manufacturer>NK Home Entertainment</manufacturer>
-		<rom name="warman-p1.p1" size="524288" crc="7a91cc78"/>
-		<rom name="warman-s1.s1" size="131072" crc="4c175fa4"/>
-		<rom name="warman-c1.c1" size="4194304" crc="7864d85f"/>
-		<rom name="warman-c2.c2" size="4194304" crc="b7f686ec"/>
-		<rom name="warman-m1.m1" size="131072" crc="a3e65a9c"/>
-		<rom name="warman-v1.v1" size="16777216" crc="3dccb4ad"/>
+		<rom name="warman-p1.p1" size="576944" crc="fcf4dc87"/>
+		<rom name="warman-s1.s1" size="131072" crc="cf448b94"/>
+		<rom name="warman-c1.c1" size="8388608" crc="4fadbb5d"/>
+		<rom name="warman-c2.c2" size="8388608" crc="4c50ca6b"/>
+		<rom name="warman-m1.m1" size="131072" crc="b0cf3a68"/>
+		<rom name="warman-v1.v1" size="16777216" crc="8175e920"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
@@ -38825,7 +38877,7 @@
 		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
-		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="wjammeb" cloneof="wjammers" romof="wjammers" sourcefile="neogeo/d_neogeo.cpp">
@@ -39634,6 +39686,58 @@
 		<rom name="wrldrc32-c2.c2" size="524288" crc="43dc168f"/>
 		<rom name="wrldrc32-m1.m1" size="65536" crc="f10683ac"/>
 		<rom name="wrldrc32-v1.v1" size="524288" crc="a4763f5d"/>
+		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
+		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
+		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
+		<rom name="sp-u2.sp1" merge="sp-u2.sp1" size="131072" crc="e72943de"/>
+		<rom name="sp1-u2" merge="sp1-u2" size="131072" crc="62f021f4"/>
+		<rom name="sp-e.sp1" merge="sp-e.sp1" size="131072" crc="2723a5b5"/>
+		<rom name="sp1-u4.bin" merge="sp1-u4.bin" size="131072" crc="1179a30f"/>
+		<rom name="sp1-u3.bin" merge="sp1-u3.bin" size="131072" crc="2025b7a2"/>
+		<rom name="vs-bios.rom" merge="vs-bios.rom" size="131072" crc="f0e8f27d"/>
+		<rom name="sp-j2.sp1" merge="sp-j2.sp1" size="131072" crc="acede59c"/>
+		<rom name="sp1.jipan.1024" merge="sp1.jipan.1024" size="131072" crc="9fb0abe4"/>
+		<rom name="sp-45.sp1" merge="sp-45.sp1" size="524288" crc="03cc9f6a"/>
+		<rom name="sp-j3.sp1" merge="sp-j3.sp1" size="524288" crc="486cb450"/>
+		<rom name="japan-j3.bin" merge="japan-j3.bin" size="131072" crc="dff6d41f"/>
+		<rom name="sp1-j3.bin" merge="sp1-j3.bin" size="131072" crc="fbc6d469"/>
+		<rom name="neo-po.bin" merge="neo-po.bin" size="131072" crc="16d0c132"/>
+		<rom name="neo-epo.bin" merge="neo-epo.bin" size="131072" crc="d27a71f1"/>
+		<rom name="neodebug.bin" merge="neodebug.bin" size="131072" crc="698ebb7d"/>
+		<rom name="sp-1v1_3db8c.bin" merge="sp-1v1_3db8c.bin" size="131072" crc="162f0ebe"/>
+		<rom name="uni-bios_4_0.rom" merge="uni-bios_4_0.rom" size="131072" crc="a7aab458"/>
+		<rom name="uni-bios_3_3.rom" merge="uni-bios_3_3.rom" size="131072" crc="24858466"/>
+		<rom name="uni-bios_3_2.rom" merge="uni-bios_3_2.rom" size="131072" crc="a4e8b9b3"/>
+		<rom name="uni-bios_3_1.rom" merge="uni-bios_3_1.rom" size="131072" crc="0c58093f"/>
+		<rom name="uni-bios_3_0.rom" merge="uni-bios_3_0.rom" size="131072" crc="a97c89a9"/>
+		<rom name="uni-bios_2_3.rom" merge="uni-bios_2_3.rom" size="131072" crc="27664eb5"/>
+		<rom name="uni-bios_2_3o.rom" merge="uni-bios_2_3o.rom" size="131072" crc="601720ae"/>
+		<rom name="uni-bios_2_2.rom" merge="uni-bios_2_2.rom" size="131072" crc="2d50996a"/>
+		<rom name="uni-bios_2_1.rom" merge="uni-bios_2_1.rom" size="131072" crc="8dabf76b"/>
+		<rom name="uni-bios_2_0.rom" merge="uni-bios_2_0.rom" size="131072" crc="0c12c2ad"/>
+		<rom name="uni-bios_1_3.rom" merge="uni-bios_1_3.rom" size="131072" crc="b24b44a0"/>
+		<rom name="uni-bios_1_2.rom" merge="uni-bios_1_2.rom" size="131072" crc="4fa698e9"/>
+		<rom name="uni-bios_1_2o.rom" merge="uni-bios_1_2o.rom" size="131072" crc="e19d3ce9"/>
+		<rom name="uni-bios_1_1.rom" merge="uni-bios_1_1.rom" size="131072" crc="5dda0d84"/>
+		<rom name="uni-bios_1_0.rom" merge="uni-bios_1_0.rom" size="131072" crc="0ce453a0"/>
+		<rom name="neopen.sp1" merge="neopen.sp1" size="131072" crc="cb915e76"/>
+		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
+		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
+		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wrallyng" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
+		<comment>Homebrew</comment>
+		<description>World Rally Championship - Neo Geo Conversion (HB)</description>
+		<year>2026</year>
+		<manufacturer>Arkretro</manufacturer>
+		<rom name="wrallyng-p1.p1" size="2097152" crc="66ae3de4"/>
+		<rom name="wrallyng-s1.s1" size="131072" crc="39913a0a"/>
+		<rom name="wrallyng-c1.c1" size="4194304" crc="b11347c2"/>
+		<rom name="wrallyng-c2.c2" size="4194304" crc="2bfcd5fc"/>
+		<rom name="wrallyng-m1.m1" size="65536" crc="8a3b1946"/>
+		<rom name="wrallyng-v1.v1" size="4194304" crc="edc105d0"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>

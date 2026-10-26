@@ -1112,6 +1112,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="ambersa" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Amber's Super Adventure (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Doby Games</manufacturer>
+		<rom name="Amber's Super Adventure v1.1 (2026)(Doby Games).nes" size="524304" crc="93fbdd60"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="americandream" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>American Dream (Hack, English)</description>
@@ -13816,6 +13825,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="maryworth" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Mary Worth Spills the Tea (HB)</description>
+		<year>2026</year>
+		<manufacturer>Recreational Runners</manufacturer>
+		<rom name="Mary Worth Spills the Tea (2026)(Recreational Runners).nes" size="131088" crc="08e8522d"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="mashieiydenwatgaj" cloneof="mashieiydenwatga" romof="mashieiydenwatga" sourcefile="nes/d_nes.cpp">
 		<description>Mashin Eiyuu Den Wataru Gaiden (Japan)</description>
 		<year>1990</year>
@@ -17548,6 +17566,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="puzzlepals" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Puzzle Pals (HB, v08)</description>
+		<year>2026</year>
+		<manufacturer>Sija Game</manufacturer>
+		<rom name="Puzzle Pals v08 (2026)(Sija Game).nes" size="32784" crc="c7b0d775"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="puzznic" sourcefile="nes/d_nes.cpp">
 		<description>Puzznic (USA)</description>
 		<year>1990</year>
@@ -20923,6 +20950,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="stuntcar" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Stunt Car Racer (HB)</description>
+		<year>2026</year>
+		<manufacturer>cobbpg</manufacturer>
+		<rom name="Stunt Car Racer (2026)(cobbpg).nes" size="262160" crc="192c7f2d"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="stuntkids" sourcefile="nes/d_nes.cpp">
 		<description>Stunt Kids (USA)</description>
 		<year>1992</year>
@@ -21147,6 +21183,15 @@
 		<year>1997</year>
 		<manufacturer>Hosenkan Electronics</manufacturer>
 		<rom name="Super Donkey Kong (Taiwan)(Unl)(1997)(Hosenkan Electronics).nes" size="262160" crc="06f84d16"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="sfmario" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Flappy Mario (HB)</description>
+		<year>2026</year>
+		<manufacturer>PurpBatBoi</manufacturer>
+		<rom name="Super Flappy Mario (2026)(PurpBatBoi).nes" size="98320" crc="d61d64e8"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -23902,6 +23947,15 @@
 		<year>2011-2016</year>
 		<manufacturer>Second Dimension - Sly Dog Studios</manufacturer>
 		<rom name="Virus Cleaner (2016)(Second Dimension).nes" size="40976" crc="5f17cb98"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="voidbreaker" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Voidbreaker (HB)</description>
+		<year>2026</year>
+		<manufacturer>PolyBound</manufacturer>
+		<rom name="Voidbreaker (2026)(PolyBound).nes" size="393232" crc="64cbcec6"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
