@@ -57,6 +57,7 @@
 #define IDD_HARDFXSETTINGS                  84
 #define IDD_ROMDATA_MANAGER					85
 #define IDD_ROMDATA_COVER_DLG				86
+#define IDD_HOTKEYS							87
 
 #define IDR_MENU                        	100
 #define IDR_MENU_BLITTER_1					110
@@ -64,6 +65,7 @@
 #define IDR_MENU_BLITTER_3					112
 #define IDR_MENU_BLITTER_4					113
 #define IDR_MENU_BLITTER_5					114
+#define IDR_MENU_BLITTER_6					115
 #define IDR_MENU_AUD_PLUGIN_1				130
 #define IDR_MENU_AUD_PLUGIN_2				131
 #define	IDR_MENU_GAMESEL					140
@@ -550,6 +552,14 @@
 #define IDC_ROMDATA_LABELDAT				21215
 #define IDC_ROMDATA_LABELDRIVER				21216
 #define IDC_ROMDATA_COVER_PREVIEW_PIC		21217
+
+#define IDC_HOTKEYS_LIST					21400
+#define IDC_HOTKEYS_STATUS					21401
+#define IDC_HOTKEYS_SET						21402
+#define IDC_HOTKEYS_SETALT					21403
+#define IDC_HOTKEYS_CLEAR					21404
+#define IDC_HOTKEYS_DEFAULT					21405
+#define IDC_HOTKEYS_RESETALL				21406
 
 #define MENU_LOAD                       	10001
 #define MENU_STARTNET			 			10002
@@ -1093,6 +1103,12 @@
 #define MENU_DX9_ALT_HARDWAREVERTEX			11703
 #define MENU_DX9_ALT_MOTIONBLUR				11704
 
+#define MENU_D3D11_SHADER_LOAD				11720
+#define MENU_D3D11_SHADER_NONE				11721
+#define MENU_D3D11_SHADER_PARAMS			11722
+#define MENU_D3D11_SHADER_MRU_CLEAR			11723
+#define MENU_D3D11_SHADER_MRU				11730	// 11730 - 11739: recently used shaders
+
 #define ID_LUA_OPEN							11812
 #define ID_LUA_CLOSE_ALL					11813
 
@@ -1111,6 +1127,12 @@
 #define GAMESEL_MENU_VIEWEMMA				11902
 #define GAMESEL_MENU_FAVORITE				11903
 #define GAMESEL_MENU_ROMDATA				11904
+#define MENU_UI_LIGHT_MODE                  11905
+#define MENU_UI_DARK_MODE                   11906
+#define BMP_DARK_MODE_SPLASH                11907 
+#define MENU_UI_DEFAULT_MODE                11908
+
+#define MENU_HOTKEYS                        11960
 
 // Next default values for new objects
 //

@@ -45,6 +45,7 @@
     <ClCompile Include="..\..\src\burner\win32\bzip.cpp" />
     <ClCompile Include="..\..\src\burner\win32\choose_monitor.cpp" />
     <ClCompile Include="..\..\src\burner\win32\cona.cpp" />
+    <ClCompile Include="..\..\src\burner\win32\d3d11shaderparams.cpp" />
     <ClCompile Include="..\..\src\burner\win32\d3dkmt_sync.cpp" />
     <ClCompile Include="..\..\src\burner\win32\debugger.cpp" />
     <ClCompile Include="..\..\src\burner\win32\drv.cpp" />
@@ -1462,6 +1463,7 @@ del %(Filename).exe
     <ClCompile Include="..\..\src\intf\input\inp_interface.cpp" />
     <ClCompile Include="..\..\src\intf\input\win32\dinput_core.cpp" />
     <ClCompile Include="..\..\src\intf\input\win32\inp_dinput.cpp" />
+    <ClCompile Include="..\..\src\intf\input\win32\inp_xinput.cpp" />
     <ClCompile Include="..\..\src\intf\interface.cpp" />
     <ClCompile Include="..\..\src\intf\perfcount\prf_interface.cpp" />
     <ClCompile Include="..\..\src\intf\perfcount\win32\prf_performance_counter.cpp" />
@@ -1486,6 +1488,8 @@ del %(Filename).exe
     <ClCompile Include="..\..\src\intf\video\win32\ddraw_core.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\directx9_core.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_d3d.cpp" />
+    <ClCompile Include="..\..\src\intf\video\win32\vid_d3d11.cpp" />
+    <ClCompile Include="..\..\src\intf\video\win32\vid_d3d11_shader.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_ddraw.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_ddrawfx.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_directx9.cpp" />
