@@ -1006,7 +1006,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="allhellunl" cloneof="allhellunl666" romof="allhellunl666" sourcefile="nes/d_nes.cpp">
+	<game name="allhellunl" cloneof="allhellunlue" romof="allhellunlue" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>All Hell Unleashed (HB)</description>
 		<year>2025</year>
@@ -1015,12 +1015,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="allhellunl666" sourcefile="nes/d_nes.cpp">
+	<game name="allhellunl666" cloneof="allhellunlue" romof="allhellunlue" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
 		<description>All Hell Unleashed (HB, v6.66)</description>
 		<year>2025</year>
 		<manufacturer>Fista Productions</manufacturer>
 		<rom name="All Hell Unleashed v6.66 (2025)(Fista Productions).nes" size="524304" crc="4203e09a"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="allhellunlue" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>All Hell Unleashed - Ultimate Edition (HB)</description>
+		<year>2025-26</year>
+		<manufacturer>Fista Productions</manufacturer>
+		<rom name="All Hell Unleashed - Ultimate Edition (2025-26)(Fista Productions).nes" size="524304" crc="205da9ad"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -1143,6 +1152,15 @@
 		<year>1991</year>
 		<manufacturer>GameTek</manufacturer>
 		<rom name="American Gladiators (USA)(1991)(GameTek).nes" size="262160" crc="74c08f86"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="angrynerd" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Angry Video Game Nerd 8-bit, The (HB)</description>
+		<year>2025</year>
+		<manufacturer>Retroware - Mega Cat Studios</manufacturer>
+		<rom name="Angry Video Game Nerd 8-bit, The (2025)(Retroware - Mega Cat Studios).nes" size="786448" crc="fd8ddfb7"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -13219,7 +13237,7 @@
 		<description>Mad Mix Game R (HB)</description>
 		<year>2026</year>
 		<manufacturer>Magic Games</manufacturer>
-		<rom name="Mad Mix Game R (2026)(Magic Games).nes" size="2097168" crc="58702f7d"/>
+		<rom name="Mad Mix Game R (2026)(Magic Games).nes" size="2097168" crc="bb5d8cc7"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>

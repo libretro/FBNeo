@@ -10411,7 +10411,7 @@
 		<description>Maiya: Super Nature Girl (HB, v4)</description>
 		<year>2026</year>
 		<manufacturer>Eagle Software</manufacturer>
-		<rom name="maiya-p1.p1" size="524288" crc="5fe28a51"/>
+		<rom name="maiya-p1.p1" size="524288" crc="ecef6baa"/>
 		<rom name="maiya-s1.s1" size="131072" crc="5c7951e1"/>
 		<rom name="maiya-c1.c1" size="4194304" crc="48638505"/>
 		<rom name="maiya-c2.c2" size="4194304" crc="66a5c0e2"/>
@@ -20091,7 +20091,7 @@
 	</game>
 	<game name="pulstarae" cloneof="pulstar" romof="pulstar" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Pulstar Aegis (Hack)</description>
+		<description>Pulstar Aegis (Hack, v1.0.0)</description>
 		<year>2026</year>
 		<manufacturer>Boomchil</manufacturer>
 		<rom name="089-p1ae.p1" size="1048576" crc="dcb02236"/>
@@ -22133,7 +22133,7 @@
 		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
-		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="robocopng" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
@@ -38882,7 +38882,7 @@
 	</game>
 	<game name="wjammeb" cloneof="wjammers" romof="wjammers" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Windjammers / Flying Power Disc (Endless Breeze, Hack, v1.2.0)</description>
+		<description>Windjammers / Flying Power Disc - Endless Breeze (Hack, v1.2.0)</description>
 		<year>2025-26</year>
 		<manufacturer>Boomchil</manufacturer>
 		<rom name="065-p1eb.p1" size="1048576" crc="e82fae8b"/>

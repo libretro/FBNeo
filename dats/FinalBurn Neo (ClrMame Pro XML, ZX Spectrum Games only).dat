@@ -2981,7 +2981,7 @@
 		<description>Barmy Burgers (48K)</description>
 		<year>1983</year>
 		<manufacturer>Blaby Computer Games</manufacturer>
-		<rom name="Barmy Burgers 48K (1983)(Blaby Computer Games).z80" size="28248" crc="138faacd"/>
+		<rom name="Barmy Burgers 48K (1983)(Blaby Computer Games).tzx" size="31126" crc="70455c9d"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -5674,6 +5674,15 @@
 		<year>1989</year>
 		<manufacturer>Iber Software</manufacturer>
 		<rom name="Casanova ES 48K (1989)(Iber Software).tzx" size="48265" crc="aa30e60b"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="caseyjones" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Casey Jones (48K)</description>
+		<year>1984</year>
+		<manufacturer>Blaby Computer Games</manufacturer>
+		<rom name="Casey Jones 48K (1984)(Blaby Computer Games).tzx" size="36421" crc="de4b4598"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -20472,6 +20481,26 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="minealert" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Mine Alert (48K)</description>
+		<year>1987</year>
+		<manufacturer>Ramon Gallastegui</manufacturer>
+		<rom name="Mine Alert 48K (1987)(Ramon Gallastegui).tzx" size="31444" crc="8d6e6afa"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="minealert2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Mine Alert 2 (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>namco/nexgen</manufacturer>
+		<rom name="Mine Alert 2 128K (2026)(namco-nexgen).tap" size="85093" crc="2eca386a"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="minedout" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Mined Out (48K)</description>
 		<year>1983</year>
@@ -20957,10 +20986,10 @@
 	</game>
 	<game name="moonranger" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Moon Ranger (128K) (HB)</description>
+		<description>Moon Ranger (48K-128K) (HB)</description>
 		<year>2020</year>
 		<manufacturer>Gabriele Amore</manufacturer>
-		<rom name="Moon Ranger 128K (2020)(Gabriele Amore).tap" size="29940" crc="d33c199a"/>
+		<rom name="Moon Ranger 48K-128K (2020)(Gabriele Amore).tap" size="29940" crc="d33c199a"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -20968,10 +20997,10 @@
 	</game>
 	<game name="moonrangerv2" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Moon Ranger (128K) (HB, v2)</description>
+		<description>Moon Ranger (48K-128K) (HB, v2)</description>
 		<year>2021</year>
 		<manufacturer>Gabriele Amore</manufacturer>
-		<rom name="Moon Ranger v2 128K (2021)(Gabriele Amore).tap" size="45527" crc="ebb5c2a1"/>
+		<rom name="Moon Ranger v2 48K-128K (2021)(Gabriele Amore).tap" size="45527" crc="ebb5c2a1"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -22424,6 +22453,15 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="nukelear" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Nuke Lear (48K)</description>
+		<year>1984</year>
+		<manufacturer>CCS</manufacturer>
+		<rom name="Nuke Lear 48K (1984)(CCS).tzx" size="30334" crc="f3e65284"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="numbpaint" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Number Painter (48K)</description>
 		<year>1984</year>
@@ -23067,6 +23105,16 @@
 		<year>2018</year>
 		<manufacturer>Heavy Spectrum Limited</manufacturer>
 		<rom name="Oure - Dawn Of Hope 48K (2018)(Heavy Spectrum Limited).tap" size="48603" crc="e9047023"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="outpost" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Outpost (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>usebox.net</manufacturer>
+		<rom name="Outpost 48K (2026)(usebox.net).tap" size="22114" crc="2ac59251"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -26349,11 +26397,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="riveraidplus" cloneof="riveraid" romof="riveraid" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Hack</comment>
-		<description>River Raid+ (48K) (Hack, v0.2)</description>
+		<comment>Hack, AY Sound supported</comment>
+		<description>River Raid+ (48K) (Hack, v0.7)</description>
 		<year>2026</year>
 		<manufacturer>theALFEST</manufacturer>
-		<rom name="River Raid+ v0.2 48K (2026)(theALFEST).tap" size="22554" crc="2e917c63"/>
+		<rom name="River Raid+ v0.7 48K-AY (2026)(theALFEST).tap" size="26652" crc="53f67db2"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -28108,10 +28156,32 @@
 	</game>
 	<game name="shabelialen" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Shadows of Belial (English) (128K) (HB, v1.0.4)</description>
+		<description>Shadows of Belial (English) (128K) (HB, v1.0.5)</description>
 		<year>RetroWorks</year>
 		<manufacturer>2026</manufacturer>
-		<rom name="Shadows of Belial EN v1.0.4 128K (2016)(RetroWorks).tap" size="138736" crc="caf1f445"/>
+		<rom name="Shadows of Belial EN v1.0.5 128K (2026)(RetroWorks).tap" size="138687" crc="4ac79734"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shabelialpt" cloneof="shabelialen" romof="shabelialen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Shadows of Belial (Portuguese) (128K) (HB, v1.0.5)</description>
+		<year>RetroWorks</year>
+		<manufacturer>2026</manufacturer>
+		<rom name="Shadows of Belial PT v1.0.5 128K (2026)(RetroWorks).tap" size="139372" crc="b20c499b"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shabelialru" cloneof="shabelialen" romof="shabelialen" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Shadows of Belial (Russian) (128K) (HB, v1.0.5)</description>
+		<year>RetroWorks</year>
+		<manufacturer>2026</manufacturer>
+		<rom name="Shadows of Belial RU v1.0.5 128K (2026)(RetroWorks).tap" size="139086" crc="719f3964"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -28119,10 +28189,10 @@
 	</game>
 	<game name="shabeliales" cloneof="shabelialen" romof="shabelialen" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Shadows of Belial (Spanish) (128K) (HB, v1.0.4)</description>
+		<description>Shadows of Belial (Spanish) (128K) (HB, v1.0.5)</description>
 		<year>RetroWorks</year>
 		<manufacturer>2026</manufacturer>
-		<rom name="Shadows of Belial ES v1.0.4 128K (2026)(RetroWorks).tap" size="139295" crc="07167c28"/>
+		<rom name="Shadows of Belial ES v1.0.5 128K (2026)(RetroWorks).tap" size="139297" crc="2faa2142"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -34190,6 +34260,25 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="vulcan128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Vulcan ~ The Tunisian Campaign (128K)</description>
+		<year>1986</year>
+		<manufacturer>CCS</manufacturer>
+		<rom name="Vulcan 128K (1986)(CCS).tzx" size="53740" crc="c1299a09"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vulcan48" cloneof="vulcan128" romof="vulcan128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Vulcan ~ The Tunisian Campaign (48K)</description>
+		<year>1986</year>
+		<manufacturer>CCS</manufacturer>
+		<rom name="Vulcan 48K (1986)(CCS).tzx" size="49796" crc="378fc601"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="wackydarts" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Press SPACE and ENTER to choose and set options</comment>
 		<description>Wacky Darts (48K-128K)</description>
@@ -34454,12 +34543,23 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="whodareswinsii" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="wdwii" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Who Dares Wins II (48K)</description>
 		<year>1986</year>
 		<manufacturer>Alligata Software</manufacturer>
-		<rom name="Who Dares Wins II 48K (1986)(Alligata).tap" size="48631" crc="02dc6931"/>
+		<rom name="Who Dares Wins II 48K (1986)(Alligata).tzx" size="48692" crc="bf14f1aa"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wdwiii" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Who Dares Wins III (128K) (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>namco/nexgen</manufacturer>
+		<rom name="Who Dares Wins III v1.1 128K (2026)(namco-nexgen).tap" size="73967" crc="b8f9cc8b"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -35060,6 +35160,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="xpong48" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>XPong48 (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>CodeBiters</manufacturer>
+		<rom name="XPong48 48K-AY (2026)(CodeBiters).tap" size="32548" crc="c563401a"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="yabbadoo" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Yabba Dabba Doo! - Flintstones (48K)</description>
 		<year>1985</year>
@@ -35513,12 +35623,22 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="zoinho" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+	<game name="zoinho25" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, Set 'Cursor Keys' to use controller</comment>
+		<description>Zoinho: In the Garden of the Fools (English) (48K) (HB)</description>
+		<year>2025</year>
+		<manufacturer>R.C. Nunes</manufacturer>
+		<rom name="Zoinho - In the Garden of the Fools 48K (2025)(R.C. Nunes).tap" size="42058" crc="7ec6faaa"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zoinho" cloneof="zoinho25" romof="zoinho25" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Zoinho (Spanish) (48K) (HB)</description>
+		<description>Zoinho: No Jardim dos Tolos (Spanish) (48K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Bitnamic</manufacturer>
-		<rom name="Zoinho 48K (2021)(Bitnamic).tap" size="29137" crc="a64d5e5a"/>
+		<rom name="Zoinho - No Jardim dos Tolos 48K (2021)(Bitnamic).tap" size="29137" crc="a64d5e5a"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -35588,7 +35708,7 @@
 		<description>Zombie Calavera Prologue (48K) (HB)</description>
 		<year>2010</year>
 		<manufacturer>The Mojon Twins</manufacturer>
-		<rom name="Zombie Calavera Prologue 48K (2010)(Mojon Twins).tap" size="37966" crc="9eaf2b79"/>
+		<rom name="Zombie Calavera Prologue 48K (2010)(The Mojon Twins).tzx" size="38000" crc="bb2c916b"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

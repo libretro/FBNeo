@@ -2369,10 +2369,10 @@
 	</game>
 	<game name="blacktiger" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Black Tiger (HB, v1.9.1)</description>
+		<description>Black Tiger (HB, v1.9.3)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Black Tiger v1.9.1 (2026)(rester159).bin" size="4194304" crc="a1b19794"/>
+		<rom name="Black Tiger v1.9.3 (2026)(rester159).bin" size="4194304" crc="e5debe42"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -14768,19 +14768,19 @@
 	</game>
 	<game name="pang" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Pang (DavidGames) (HB, Beta v1.03)</description>
+		<description>Pang (DavidGames) (HB, v1.00)</description>
 		<year>2026</year>
 		<manufacturer>DavidGames</manufacturer>
-		<rom name="Pang Beta v1.03 (2026)(DavidGames).bin" size="1310720" crc="bdd4517a"/>
+		<rom name="Pang v1.00 (2026)(DavidGames).bin" size="1310720" crc="2d816dcb"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="pangoib" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Pang (Oldschool Is Beautiful) (HB, Beta 3)</description>
+		<description>Pang (Oldschool Is Beautiful) (HB, v1.00)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Pang Beta 3 (2026)(Oldschool Is Beautiful).bin" size="3877096" crc="a789941b"/>
+		<rom name="Pang v1.00 (2026)(Oldschool Is Beautiful).bin" size="3909708" crc="2022a547"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -15118,10 +15118,10 @@
 	</game>
 	<game name="parasol" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Parasol Stars (HB, v1.0 RC3)</description>
+		<description>Parasol Stars (HB, v1.0.2)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Parasol Stars v1.0 RC3 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="181b816a"/>
+		<rom name="Parasol Stars v1.0.2 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="72fc1b17"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22806,10 +22806,10 @@
 	</game>
 	<game name="tigeroad" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Tiger Road (hombreimaginario) (HB, 2026-10-23)</description>
+		<description>Tiger Road (hombreimaginario) (HB, 2026-10-26)</description>
 		<year>2026</year>
 		<manufacturer>hombreimaginario</manufacturer>
-		<rom name="Tiger Road 2026-10-23 (2026)(hombreimaginario).bin" size="2490368" crc="8db153ab"/>
+		<rom name="Tiger Road 2026-10-26 (2026)(hombreimaginario).bin" size="2490368" crc="98decaf0"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
