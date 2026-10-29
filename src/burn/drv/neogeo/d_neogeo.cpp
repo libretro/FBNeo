@@ -12562,7 +12562,7 @@ struct BurnDriver BurnDrvPulstar = {
 };
 
 
-// Pulstar Aegis (Hack)
+// Pulstar Aegis (Hack, v1.0.0)
 // https://github.com/Boomchil/neo-geo-romhacks/tree/main/public/patches/pulstar
 static struct BurnRomInfo pulstaraeRomDesc[] = {
 	{ "089-p1ae.p1",  0x100000, 0xdcb02236, 1 | BRF_ESS | BRF_PRG }, //  0 68K code			/ mask rom TC538200
@@ -12590,7 +12590,7 @@ STD_ROM_FN(pulstarae)
 
 struct BurnDriver BurnDrvPulstarae = {
 	"pulstarae", "pulstar", "neogeo", NULL, "2026",
-	"Pulstar Aegis (Hack)\0", NULL, "Boomchil", "Neo Geo MVS",
+	"Pulstar Aegis (Hack, v1.0.0)\0", NULL, "Boomchil", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_HORSHOOT, 0,
 	NULL, pulstaraeRomInfo, pulstaraeRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
@@ -12745,7 +12745,7 @@ struct BurnDriver BurnDrvWjammers = {
 };
 
 
-// Windjammers / Flying Power Disc (Endless Breeze, Hack, v1.2.0)
+// Windjammers / Flying Power Disc - Endless Breeze (Hack, v1.2.0)
 // https://github.com/Boomchil/neo-geo-romhacks/tree/main/public/patches/wjammers
 
 static struct BurnRomInfo wjammebRomDesc[] = {
@@ -12771,7 +12771,7 @@ STD_ROM_FN(wjammeb)
 
 struct BurnDriver BurnDrvWjammeb = {
 	"wjammeb", "wjammers", "neogeo", NULL, "2025-26",
-	"Windjammers / Flying Power Disc (Endless Breeze, Hack, v1.2.0)\0", NULL, "Boomchil", "Neo Geo MVS",
+	"Windjammers / Flying Power Disc - Endless Breeze (Hack, v1.2.0)\0", NULL, "Boomchil", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_SPORTSMISC, 0,
 	NULL, wjammebRomInfo, wjammebRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
@@ -28294,7 +28294,7 @@ struct BurnDriver BurnDrvRobocopi = {
 	BDF_GAME_WORKING | BDF_DEMO, 1, HARDWARE_SNK_NEOGEO, GBF_MISC, 0,
 	NULL, robocopiRomInfo, robocopiRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeouniDIPInfo,
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
-	0x1000,	304, 224, 4, 3
+	0x1000,	320, 224, 4, 3
 };
 
 
@@ -30444,7 +30444,7 @@ struct BurnDriver BurnDrvKarnovng = {
 // Maiya: Super Nature Girl (HB, v4)
 
 static struct BurnRomInfo maiyaRomDesc[] = {
-	{ "maiya-p1.p1",    0x080000, 0x5fe28a51, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "maiya-p1.p1",    0x080000, 0xecef6baa, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "maiya-s1.s1",    0x020000, 0x5c7951e1, 2 | BRF_GRA },           //  1 Text layer tiles
 

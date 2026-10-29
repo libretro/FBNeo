@@ -60,6 +60,10 @@ struct lua_hotkey_handler hotkey_debounces[] = {
 	{ NULL, 0, 0, NULL }
 };
 
+bool EmulatorAppIsFast() {
+	return bAppDoFast;
+}
+
 void EmulatorAppDoFast(bool dofast) {
 	bAppDoFast = dofast;
 	bAppDoFasttoggled = 0;
@@ -168,31 +172,59 @@ static int GetInput(bool bCopy)
 	return 0;
 }
 
-static time_t fpstimer;
-static unsigned int nPreviousFrames;
+static LARGE_INTEGER qpcFreq, qpcLast;
+static UINT32 nLastEmu;
 
 static void DisplayFPSInit()
 {
 	nDoFPS = 0;
-	fpstimer = 0;
-	nPreviousFrames = (bAppDoFast) ? nFramesEmulated : nFramesRendered;
+	QueryPerformanceFrequency(&qpcFreq);
+	QueryPerformanceCounter(&qpcLast);
+	nLastEmu = nFramesEmulated;
 }
 
 static void DisplayFPS()
 {
-	const int nFPSTotal = (bAppDoFast) ? nFramesEmulated : nFramesRendered;
+	LARGE_INTEGER now;
+	QueryPerformanceCounter(&now);
+	double dt = (double)(now.QuadPart - qpcLast.QuadPart) / qpcFreq.QuadPart;
+	if (dt < 1.0) return; // update once per second
 
-	TCHAR fpsstring[20];
-	time_t temptime = clock();
-	double fps = (double)(nFPSTotal - nPreviousFrames) * CLOCKS_PER_SEC / (temptime - fpstimer);
+	double fps = (nFramesEmulated - nLastEmu) / dt;
 
-	_sntprintf(fpsstring, 7, _T("%2.2lf"), fps);
-	if (fpstimer && temptime - fpstimer>0) { // avoid strange fps values
-		VidSNewShortMsg(fpsstring, 0xDFDFFF, 480, 0);
+	TCHAR s[32];
+	_sntprintf(s, 32, _T("%2.2lf"), fps);
+	VidSNewShortMsg(s, 0xDFDFFF, 480, 0);
+
+	qpcLast = now;
+	nLastEmu = nFramesEmulated;
+}
+
+static void DisplayFPSCheckState()
+{
+	static int bLastFast = -1, bLastPause = -1;
+	static LONGLONG nLastCall = 0;
+	static int timer = 0;
+
+	LARGE_INTEGER now;
+	QueryPerformanceCounter(&now);
+
+	// frame normally runs every ~16.67ms (at 60hz)
+	// a gap over 100ms means something blocked the loop: menu, window drag, dialog, loading...
+	const bool bStalled = nLastCall && qpcFreq.QuadPart &&
+	                      (now.QuadPart - nLastCall) > qpcFreq.QuadPart / 10;
+	nLastCall = now.QuadPart;
+
+	if (bStalled || bAppDoFast != bLastFast || bRunPause != bLastPause) {
+		timer = 30;
+		bLastFast  = bAppDoFast;
+		bLastPause = bRunPause;
 	}
-
-	fpstimer = temptime;
-	nPreviousFrames = nFPSTotal;
+	if (timer > 0) {
+		// it takes a few frames to stabilize...
+		timer--;
+		DisplayFPSInit();
+	}
 }
 
 // define this function somewhere above RunMessageLoop()
@@ -225,6 +257,62 @@ void do_shonky_profile()
 }
 #endif
 
+// Present pacing when no video sync is active.
+// Frames are produced when the audio engine signals a free segment, which happens on
+// its own period (~10ms on Vista+), so frame times alternate e.g. 20/20/10ms.
+// Presents are held back to a steady QPC schedule which follows the audio clock.
+static LARGE_INTEGER qpcPaceFreq;
+static LONGLONG nPaceNext = 0;
+
+static bool RunPaceActive()
+{
+	if (bVidVSync || (bVidDWMSync && !nVidFullscreen)) return false;
+	if (bAppDoFast || kNetGame) return false;
+
+	return true;
+}
+
+static void RunPacePresent()
+{
+	if (!RunPaceActive()) {
+		nPaceNext = 0;
+		return;
+	}
+
+	if (qpcPaceFreq.QuadPart == 0) {
+		QueryPerformanceFrequency(&qpcPaceFreq);
+	}
+
+	LONGLONG nPeriod;
+	if (bAudPlaying && nBurnSoundRate > 0 && nBurnSoundLen > 0) {
+		nPeriod = qpcPaceFreq.QuadPart * nBurnSoundLen / nBurnSoundRate;
+	} else {
+		nPeriod = qpcPaceFreq.QuadPart * 100 / nAppVirtualFps;
+	}
+
+	LARGE_INTEGER now;
+	QueryPerformanceCounter(&now);
+
+	LONGLONG nLead = nPaceNext - now.QuadPart;
+	if (nPaceNext == 0 || nLead < 0) {
+		// late (or first frame): present now, the schedule follows
+		nPaceNext = now.QuadPart;
+	} else if (nLead > nPeriod) {
+		// schedule drifted ahead of the frame source, pull it back
+		nPaceNext = now.QuadPart + nPeriod;
+	}
+
+	const LONGLONG nSleepMargin = qpcPaceFreq.QuadPart * 2 / 1000;
+	for (;;) {
+		QueryPerformanceCounter(&now);
+		LONGLONG nRemain = nPaceNext - now.QuadPart;
+		if (nRemain <= 0) break;
+		Sleep((bEnableHighResTimer && nRemain > nSleepMargin) ? 1 : 0);
+	}
+
+	nPaceNext += nPeriod;
+}
+
 // With or without sound, run one frame.
 // If bDraw is true, it's the last frame before we are up to date, and so we should draw the screen
 int RunFrame(int bDraw, int bPause)
@@ -232,7 +320,10 @@ int RunFrame(int bDraw, int bPause)
 	static int bPrevPause = 0;
 	static int bPrevDraw = 0;
 
+	if (bShowFPS) DisplayFPSCheckState();
+
 	if (bPrevDraw && !bPause) {
+		RunPacePresent();
 		VidPaint(0);							// paint the screen (no need to validate)
 
 		if (!nVidFullscreen && bVidDWMSync)     // Sync to DWM (Win7+, windowed)
@@ -489,6 +580,7 @@ int RunReset()
 {
 	// Reset the speed throttling code
 	nNormalLast = 0; nNormalFrac = 0;
+	nPaceNext = 0;
 
 	// Reset FPS display
 	DisplayFPSInit();
