@@ -2369,10 +2369,10 @@
 	</game>
 	<game name="blacktiger" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Black Tiger (HB, v1.9.3)</description>
+		<description>Black Tiger (HB, v1.9.6)</description>
 		<year>2026</year>
 		<manufacturer>rester159</manufacturer>
-		<rom name="Black Tiger v1.9.3 (2026)(rester159).bin" size="4194304" crc="e5debe42"/>
+		<rom name="Black Tiger v1.9.6 (2026)(rester159).bin" size="4194304" crc="ae0d7433"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5723,6 +5723,33 @@
 		<year>1994</year>
 		<manufacturer>Tradewest</manufacturer>
 		<rom name="Double Dragon V - The Shadow Falls (USA)(1994)(Tradewest).bin" size="3145728" crc="27e59e35"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ddragonze" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Double Dragon Zeebo (English) (HB, v4)</description>
+		<year>2025-26</year>
+		<manufacturer>carachapadu</manufacturer>
+		<rom name="Double Dragon Zeebo EN v4 (2025-26)(carachapadu).bin" size="4194304" crc="96e394c3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ddragonzp" cloneof="ddragonze" romof="ddragonze" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Double Dragon Zeebo (Portuguese) (HB, v4)</description>
+		<year>2025-26</year>
+		<manufacturer>carachapadu</manufacturer>
+		<rom name="Double Dragon Zeebo PT v4 (2025-26)(carachapadu).bin" size="4194304" crc="395215fb"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ddragonzs" cloneof="ddragonze" romof="ddragonze" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Double Dragon Zeebo (Spanish) (HB, v4)</description>
+		<year>2025-26</year>
+		<manufacturer>carachapadu</manufacturer>
+		<rom name="Double Dragon Zeebo ES v4 (2025-26)(carachapadu).bin" size="4194304" crc="b6618f60"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12025,10 +12052,10 @@
 	</game>
 	<game name="mcommando" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Mega Commando (HB, v0.82b)</description>
+		<description>Mega Commando (HB, v0.83b)</description>
 		<year>2026</year>
 		<manufacturer>MXRetroDev</manufacturer>
-		<rom name="Mega Commando v0.82b (2026)(MXRetroDev).bin" size="3276800" crc="4aa12954"/>
+		<rom name="Mega Commando v0.83b (2026)(MXRetroDev).bin" size="3276800" crc="cfd5b395"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -12186,10 +12213,10 @@
 	</game>
 	<game name="megapang" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Mega Pang (HB, v0.3 Beta)</description>
+		<description>Mega Pang (HB, v0.4 Beta)</description>
 		<year>2025-26</year>
 		<manufacturer>RCampeador</manufacturer>
-		<rom name="Mega Pang v0.3 Beta (2025-26)(RCampeador).bin" size="1572864" crc="edc09063"/>
+		<rom name="Mega Pang v0.4 Beta (2025-26)(RCampeador).bin" size="2490368" crc="a983b48a"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18616,10 +18643,10 @@
 	</game>
 	<game name="shinobi" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Shinobi (HB, v1.1)</description>
+		<description>Shinobi (HB, v1.2.1)</description>
 		<year>2026</year>
 		<manufacturer>Oldschool Is Beautiful</manufacturer>
-		<rom name="Shinobi v1.1 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="e8989d45"/>
+		<rom name="Shinobi v1.2.1 (2026)(Oldschool Is Beautiful).bin" size="4194304" crc="010364e5"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22806,10 +22833,10 @@
 	</game>
 	<game name="tigeroad" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew</comment>
-		<description>Tiger Road (hombreimaginario) (HB, 2026-10-26)</description>
+		<description>Tiger Road (hombreimaginario) (HB, 2026-10-29i)</description>
 		<year>2026</year>
 		<manufacturer>hombreimaginario</manufacturer>
-		<rom name="Tiger Road 2026-10-26 (2026)(hombreimaginario).bin" size="2490368" crc="98decaf0"/>
+		<rom name="Tiger Road 2026-10-29i (2026)(hombreimaginario).bin" size="2490368" crc="1c68844f"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

@@ -1379,6 +1379,7 @@ DRV		BurnDrvCpsArea88r;
 DRV		BurnDrvCpsArea88;
 DRV		BurnDrvsnes_Area88;
 DRV		BurnDrvgg_arena;
+DRV		BurnDrvArena2;
 DRV		BurnDrvLwingsja;
 DRV		BurnDrvLwingsj;
 DRV		BurnDrvsnes_Arethate;
@@ -7037,6 +7038,9 @@ DRV		BurnDrvsnes_Ddragon5e;
 DRV		BurnDrvmd_ddragon5s;
 DRV		BurnDrvmd_ddragon5;
 DRV		BurnDrvsnes_Ddragon5;
+DRV		BurnDrvmd_ddragonze;
+DRV		BurnDrvmd_ddragonzp;
+DRV		BurnDrvmd_ddragonzs;
 DRV		BurnDrvnes_doubledream;
 DRV		BurnDrvDdribblep;
 DRV		BurnDrvnes_doubledribble;
@@ -20487,6 +20491,7 @@ DRV		BurnDrvmd_rsbtp2;
 DRV		BurnDrvmd_rsbtp1;
 DRV		BurnDrvmd_rsbt;
 DRV		BurnDrvnes_rickmortyrdw;
+DRV		BurnDrvRanggyu;
 DRV		BurnSpecrickdang;
 DRV		BurnDrvgba_rickdang;
 DRV		BurnDrvsnes_Rickdang;
@@ -27729,8 +27734,8 @@ DRV		BurnDrvmd_uxmen;
 DRV		BurnDrvUballoon;
 DRV		BurnDrvgba_ultrakei;
 DRV		BurnDrvsnes_Ultrasevenj;
-DRV		BurnDrvCpsUsf2xj;
-DRV		BurnDrvCpsUsf2t;
+DRV		BurnDrvCpsUsf2j;
+DRV		BurnDrvCpsUsf2u;
 DRV		BurnDrvUtoukond;
 DRV		BurnDrvUltraxg;
 DRV		BurnDrvUltrax;
@@ -31179,6 +31184,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsArea88,			// Area 88 (Japan)
 	&BurnDrvsnes_Area88,		// Area 88 (Japan)
 	&BurnDrvgg_arena,			// Arena (Euro, USA)
+	&BurnDrvArena2,				// Arena 2 (HB)
 	&BurnDrvLwingsja,			// Ares no Tsubasa (Japan, rev. A)
 	&BurnDrvLwingsj,			// Ares no Tsubasa (Japan, rev. B)
 	&BurnDrvsnes_Arethate,		// Aretha (Hack, English)
@@ -32592,7 +32598,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecblktiger,			// Black Tiger (128K)
 	&BurnDrvBlktigerb1,			// Black Tiger (bootleg set 1)
 	&BurnDrvblktigerb2,			// Black Tiger (bootleg set 2)
-	&BurnDrvmd_blacktiger,		// Black Tiger (HB, v1.9.3)
+	&BurnDrvmd_blacktiger,		// Black Tiger (HB, v1.9.6)
 	&BurnDrvBlktigera,			// Black Tiger (older)
 	&BurnDrvBlktigerb3,			// Black Tiger / Black Dragon (mixed bootleg?)
 	&BurnDrvBlktiger,			// Black Tiger
@@ -36837,6 +36843,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_ddragon5s,		// Double Dragon V: The Shadow Falls (Hack, Spanish)
 	&BurnDrvmd_ddragon5,		// Double Dragon V: The Shadow Falls (USA)
 	&BurnDrvsnes_Ddragon5,		// Double Dragon V: The Shadow Falls (USA)
+	&BurnDrvmd_ddragonze,		// Double Dragon Zeebo (English) (HB, v4)
+	&BurnDrvmd_ddragonzp,		// Double Dragon Zeebo (Portuguese) (HB, v4)
+	&BurnDrvmd_ddragonzs,		// Double Dragon Zeebo (Spanish) (HB, v4)
 	&BurnDrvnes_doubledream,	// Double Dream (HB, v0.2.0)
 	&BurnDrvDdribblep,			// Double Dribble (prototype?)
 	&BurnDrvnes_doubledribble,	// Double Dribble (USA)
@@ -42473,7 +42482,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_jurl,			// Jurl (HB)
 	&BurnDrvngpc_jurl,			// Jurl (HB)
 	&BurnDrvjurl,				// Jurl (HB, v0.3c)
-	&BurnDrvsnes_Jurl,			// Jurl (HB, v0.5a)
+	&BurnDrvsnes_Jurl,			// Jurl (HB, v0.6a)
 	&BurnDrvsms_jurl,			// Jurl (HB, v0.9a)
 	&BurnDrvpce_jurl,			// Jurl (HB, v0.9b)
 	&BurnDrvmd_jurl,			// Jurl (HB, v1.0c)
@@ -45000,7 +45009,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_casanova2,		// Mega Casanova 2 (HB)
 	&BurnDrvmd_casanova3,		// Mega Casanova 3 (HB)
 	&BurnDrvmd_cperils,			// Mega Cheril Perils (HB)
-	&BurnDrvmd_mcommando,		// Mega Commando (HB, v0.82b)
+	&BurnDrvmd_mcommando,		// Mega Commando (HB, v0.83b)
 	&BurnDrvmd_megaflappy,		// Mega Flappy Sis (HB)
 	&BurnDrvMegaforcu,			// Mega Force (US)
 	&BurnDrvMegaforc,			// Mega Force (World)
@@ -45108,7 +45117,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_mmworld2,		// Mega Marble World 2 (HB, v1.03)
 	&BurnDrvmd_megameatboy,		// Mega Meat Boy (HB, v0.31)
 	&BurnDrvmd_mindtris,		// Mega Mindtris (HB, v1.2)
-	&BurnDrvmd_megapang,		// Mega Pang (HB, v0.3 Beta)
+	&BurnDrvmd_megapang,		// Mega Pang (HB, v0.4 Beta)
 	&BurnSpecMegaphoenix,		// Mega Phoenix (48K-128K)
 	&BurnDrvMegaphx,			// Mega Phoenix
 	&BurnDrvmd_megapushori,		// Mega Pushori (HB, v1.1)
@@ -50287,6 +50296,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_rsbtp1,			// Richard Scarry's Busytown (Prototype, 19940826)
 	&BurnDrvmd_rsbt,			// Richard Scarry's BusyTown (USA)
 	&BurnDrvnes_rickmortyrdw,	// Rick and Morty REDRAW (Hack)
+	&BurnDrvRanggyu,			// Rick Astley - Never Gonna Give You Up (Demo)
 	&BurnSpecrickdang,			// Rick Dangerous (48K-128K)
 	&BurnDrvgba_rickdang,		// Rick Dangerous (HB)
 	&BurnDrvsnes_Rickdang,		// Rick Dangerous (HB)
@@ -51070,7 +51080,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvSsho2emb,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Move Modeasy Special Attacks V4, Hack)
 	&BurnDrvSamsho2,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (NGM-063 ~ NGH-063)
 	&BurnDrvSamsho2t,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Optimized, Hack)
-	&BurnDrvSamsho2pe,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.0, Hack)
+	&BurnDrvSamsho2pe,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.1, Hack)
 	&BurnDrvSamsh2sp,			// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Special 2017, Hack)
 	&BurnDrvSamsh3bs,			// Samurai Shodown III / Samurai Spirits - Zankurou Musouken (Boss, Hack)
 	&BurnDrvSamSho3h,			// Samurai Shodown III / Samurai Spirits - Zankurou Musouken (NGH-087)
@@ -51808,7 +51818,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecshinobi,			// Shinobi (128K)
 	&BurnDrvShinoblb,			// Shinobi (Beta bootleg)
 	&BurnDrvsms_shinobi,		// Shinobi (Euro, USA, Brazil, v1)
-	&BurnDrvmd_shinobi,			// Shinobi (HB, v1.1)
+	&BurnDrvmd_shinobi,			// Shinobi (HB, v1.2.1)
 	&BurnDrvpce_shinobi,		// Shinobi (Japan)
 	&BurnDrvsms_shinobij,		// Shinobi (Japan, Brazil, v0)
 	&BurnDrvShinobi1d,			// Shinobi (set 1, System 16A) (bootleg of FD1094 317-0050 set)
@@ -53898,7 +53908,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSfz2alre,		// Street Fighter Zero 2 Alpha (Hack, English Restoration RC2)
 	&BurnDrvCpsSfz2alh,			// Street Fighter Zero 2 Alpha (Hispanic 960813)
 	&BurnDrvCpsSfz2alj,			// Street Fighter Zero 2 Alpha (Japan 960805)
-	&BurnDrvCpsSfz2aldash,		// Street Fighter Zero 2 Alpha Dash / Gold (Hack, v1.2.1)
+	&BurnDrvCpsSfz2aldash,		// Street Fighter Zero 2 Alpha Dash / Gold (Hack, v1.2.2)
 	&BurnDrvCpsSfz2adl,			// Street Fighter Zero 2 Alpha: Dragon Level (Hack by pipi899, Ver.2009-04-24)
 	&BurnDrvCpsSfz2dsa,			// Street Fighter Zero 2 Dash (Asia, PS2 Backport RC7)
 	&BurnDrvCpsSfz2dsj,			// Street Fighter Zero 2 Dash (Japan, PS2 Backport RC7)
@@ -54157,7 +54167,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_ssridersu,		// Sunset Riders (USA)
 	&BurnDrvsnes_Sunsetriders,	// Sunset Riders (USA)
 	&BurnSpecSupaplex,			// Supaplex (128K) (HB)
-	&BurnDrvsnes_Supaplex,		// Supaplex (HB, v0.2)
+	&BurnDrvsnes_Supaplex,		// Supaplex (HB, v0.4)
 	&BurnDrvsnes_Supapoon,		// Supapoon (Japan)
 	&BurnDrvsnes_Supapoondx,	// Supapoon DX (Japan)
 	&BurnDrvMSX_suparobo,		// Suparobo (Japan)
@@ -54960,7 +54970,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSsf2tgmc,		// Super Street Fighter II Turbo: Grand Master Challenge (Hack, English Restoration RC4)
 	&BurnDrvgba_ssf2tj,			// Super Street Fighter II X - Revival (Japan)
 	&BurnDrvCpsSsf2xjr1trn,		// Super Street Fighter II X: GMC Trainer (Japan 940223)
-	&BurnDrvCpsSsf2xdced,		// Super Street Fighter II X: Grand Master Challenge (Hack, Dreamcast Gouki RC1)
+	&BurnDrvCpsSsf2xdced,		// Super Street Fighter II X: Grand Master Challenge (Hack, Dreamcast Gouki RC2)
 	&BurnDrvCpsSsf2xjr1d,		// Super Street Fighter II X: Grand Master Challenge (Japan 940223 Phoenix Edition) (bootleg)
 	&BurnDrvCpsSsf2xjr1r,		// Super Street Fighter II X: Grand Master Challenge (Japan 940223 rent version)
 	&BurnDrvCpsSsf2xjr1,		// Super Street Fighter II X: Grand Master Challenge (Japan 940223)
@@ -56552,7 +56562,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Tick,			// Tick, The (USA)
 	&BurnSpecTiddly,			// Tiddly Drinks (48K)
 	&BurnSpectigeroad,			// Tiger Road (128K)
-	&BurnDrvmd_tigeroad,		// Tiger Road (hombreimaginario) (HB, 2026-10-26)
+	&BurnDrvmd_tigeroad,		// Tiger Road (hombreimaginario) (HB, 2026-10-29i)
 	&BurnDrvmd_tigeroadoib,		// Tiger Road (Oldschool Is Beautiful) (HB, Alpha)
 	&BurnDrvTigeroadb,			// Tiger Road (US bootleg, set 1)
 	&BurnDrvTigeroadba,			// Tiger Road (US bootleg, set 2)
@@ -57529,8 +57539,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvUballoon,			// Ultra Balloon
 	&BurnDrvgba_ultrakei,		// Ultra Keibitai - Monster Attack (Japan)
 	&BurnDrvsnes_Ultrasevenj,	// Ultra Seven (Japan)
-	&BurnDrvCpsUsf2xj,			// Ultra Street Fighter II: The Final Challengers (Japan, Backport RC4)
-	&BurnDrvCpsUsf2t,			// Ultra Street Fighter II: The Final Challengers (USA, Backport RC4)
+	&BurnDrvCpsUsf2j,			// Ultra Street Fighter II: The Final Challengers (Japan, Backport RC5)
+	&BurnDrvCpsUsf2u,			// Ultra Street Fighter II: The Final Challengers (USA, Backport RC5)
 	&BurnDrvUtoukond,			// Ultra Toukon Densetsu (Japan)
 	&BurnDrvUltraxg,			// Ultra X Weapons / Ultra Keibitai (Gamest review build)
 	&BurnDrvUltrax,				// Ultra X Weapons / Ultra Keibitai
@@ -59482,7 +59492,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_zoidsagf,		// Zoids Saga Fuzors (Japan)
 	&BurnDrvgba_zoidsag2,		// Zoids Saga II (Japan)
 	&BurnSpecZoinho25,			// Zoinho: In the Garden of the Fools (English) (48K) (HB)
-	&BurnSpecZoinho,			// Zoinho: No Jardim dos Tolos (Spanish) (48K) (HB)
+	&BurnSpecZoinho,			// Zoinho: No Jardim dos Tolos (Portuguese) (48K) (HB)
 	&BurnDrvgba_boktai2ja,		// Zoku Bokura no Taiyou: Taiyou Shounen Django (Japan)
 	&BurnDrvgba_boktai2j,		// Zoku Bokura no Taiyou: Taiyou Shounen Django (Japan, Rev. 1)
 	&BurnSpecZombmalle,			// Zombi Mall (English) (48K) (HB)
@@ -60971,6 +60981,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "area88", "capcom/d_cps1.cpp"},
 	{ "snes_area88", "snes/d_snes.cpp"},
 	{ "gg_arena", "sms/d_sms.cpp"},
+	{ "arena2", "neogeo/d_neogeo.cpp"},
 	{ "lwingsja", "pre90s/d_lwings.cpp"},
 	{ "lwingsj", "pre90s/d_lwings.cpp"},
 	{ "snes_arethate", "snes/d_snes.cpp"},
@@ -66595,6 +66606,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_ddragon5s", "megadrive/d_megadrive.cpp"},
 	{ "md_ddragon5", "megadrive/d_megadrive.cpp"},
 	{ "snes_ddragon5", "snes/d_snes.cpp"},
+	{ "md_ddragonze", "megadrive/d_megadrive.cpp"},
+	{ "md_ddragonzp", "megadrive/d_megadrive.cpp"},
+	{ "md_ddragonzs", "megadrive/d_megadrive.cpp"},
 	{ "nes_doubledream", "nes/d_nes.cpp"},
 	{ "ddribblep", "konami/d_ddribble.cpp"},
 	{ "nes_doubledribble", "nes/d_nes.cpp"},
@@ -79963,6 +79977,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_rsbtp1", "megadrive/d_megadrive.cpp"},
 	{ "md_rsbt", "megadrive/d_megadrive.cpp"},
 	{ "nes_rickmortyrdw", "nes/d_nes.cpp"},
+	{ "ranggyu", "neogeo/d_neogeo.cpp"},
 	{ "spec_rickdang", "spectrum/d_spectrum.cpp"},
 	{ "gba_rickdang", "gba/d_gba.cpp"},
 	{ "snes_rickdang", "snes/d_snes.cpp"},
@@ -87143,8 +87158,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "uballoon", "pst90s/d_suna16.cpp"},
 	{ "gba_ultrakei", "gba/d_gba.cpp"},
 	{ "snes_ultrasevenj", "snes/d_snes.cpp"},
-	{ "usf2xj", "capcom/d_cps2.cpp"},
-	{ "usf2t", "capcom/d_cps2.cpp"},
+	{ "usf2j", "capcom/d_cps2.cpp"},
+	{ "usf2u", "capcom/d_cps2.cpp"},
 	{ "utoukond", "pst90s/d_seta.cpp"},
 	{ "ultraxg", "pst90s/d_ssv.cpp"},
 	{ "ultrax", "pst90s/d_ssv.cpp"},

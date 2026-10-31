@@ -35635,10 +35635,10 @@
 	</game>
 	<game name="zoinho" cloneof="zoinho25" romof="zoinho25" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Zoinho: No Jardim dos Tolos (Spanish) (48K) (HB)</description>
+		<description>Zoinho: No Jardim dos Tolos (Portuguese) (48K) (HB)</description>
 		<year>2021</year>
 		<manufacturer>Bitnamic</manufacturer>
-		<rom name="Zoinho - No Jardim dos Tolos 48K (2021)(Bitnamic).tap" size="29137" crc="a64d5e5a"/>
+		<rom name="Zoinho - No Jardim dos Tolos PT 48K (2021)(Bitnamic).tap" size="29137" crc="a64d5e5a"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

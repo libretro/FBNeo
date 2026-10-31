@@ -9471,10 +9471,10 @@
 	</game>
 	<game name="jurl" sourcefile="snes/d_snes.cpp">
 		<comment>Homebrew</comment>
-		<description>Jurl (HB, v0.5a)</description>
-		<year>2025</year>
+		<description>Jurl (HB, v0.6a)</description>
+		<year>2025-26</year>
 		<manufacturer>Tonsomo Entertainment</manufacturer>
-		<rom name="Jurl v0.5a (2025)(Tonsomo Entertainment).sfc" size="262144" crc="eccff965"/>
+		<rom name="Jurl v0.6a (2025-26)(Tonsomo Entertainment).sfc" size="262144" crc="d38977f9"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17237,10 +17237,10 @@
 	</game>
 	<game name="supaplex" sourcefile="snes/d_snes.cpp">
 		<comment>Homebrew, SA-1 enhancement CPU</comment>
-		<description>Supaplex (HB, v0.2)</description>
+		<description>Supaplex (HB, v0.4)</description>
 		<year>2026</year>
 		<manufacturer>ludufre</manufacturer>
-		<rom name="Supaplex v0.2 (2026)(ludufre).sfc" size="4194304" crc="146e59dc"/>
+		<rom name="Supaplex v0.4 (2026)(ludufre).sfc" size="4194304" crc="53ac956d"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
