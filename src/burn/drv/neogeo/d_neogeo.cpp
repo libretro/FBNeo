@@ -22004,16 +22004,26 @@ struct BurnDriver BurnDrvSamsh2jq = {
 };
 
 
-// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.0, Hack)
+// Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.1, Hack)
 // Modified by Bear
-// 20260924
+// 20261028
 
 static struct BurnRomInfo samsho2peRomDesc[] = {
-	{ "063-p1pe.p1",	0x100000, 0xb3b0c7df, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "063-p2pe.sp2",	0x100000, 0x0efb4875, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "063-p1pe.p1",	0x100000, 0xd814a8f5, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "063-p2pe.sp2",	0x100000, 0x3a8e5b15, 1 | BRF_ESS | BRF_PRG }, //  1
 	{ "063-p3pe.p3",	0x020000, 0x5e912569, 1 | BRF_ESS | BRF_PRG }, //  2 Extra ROM
 
-	SAMSHO2_COMPONENTS
+	SAMSHO2_TEXT
+
+	SAMSHO2_SPR1
+	SAMSHO2_SPR2
+	SAMSHO2_SPR3
+	{ "063-c7pe.c7",	0x200000, 0x423f2fe0, 3 | BRF_GRA },           //  7
+	{ "063-c8pe.c8",	0x200000, 0x9d54dae0, 3 | BRF_GRA },           //  8
+
+	SAMSHO2_Z80
+
+	SAMSHO2_SND
 };
 
 STDROMPICKEXT(samsho2pe, samsho2pe, neogeo)
@@ -22021,8 +22031,8 @@ STD_ROM_FN(samsho2pe)
 
 struct BurnDriver BurnDrvSamsho2pe = {
 	"samsho2pe", "samsho2", "neogeo", NULL, "2023-26",
-	"Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.0, Hack)\0", NULL, "Bear", "Neo Geo MVS",
-	L"Samurai Shodown II\0\u771F Samurai Spirits - \u8987\u738B\u4E38\u5730\u7344\u5909 (Perfect V. 3.0, Hack)\0", NULL, NULL, NULL,
+	"Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.1, Hack)\0", NULL, "Bear", "Neo Geo MVS",
+	L"Samurai Shodown II\0\u771F Samurai Spirits - \u8987\u738B\u4E38\u5730\u7344\u5909 (Perfect V. 3.1, Hack)\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_VSFIGHT, FBF_SAMSHO,
 	NULL, samsho2peRomInfo, samsho2peRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neoForceMVSDIPInfo,
 	samsh2spInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
@@ -30537,6 +30547,36 @@ struct BurnDriver BurnDrvAltbeastng = {
 };
 
 
+// Arena 2 (HB)
+// https://delarfab.itch.io/arena2
+
+static struct BurnRomInfo arena2RomDesc[] = {
+	{ "arena2-p1.p1",	0x100000, 0x9ed6466d, 1 | BRF_ESS | BRF_PRG }, 	//  0 68K code
+
+	{ "arena2-s1.s1",	0x020000, 0xb2d1bed5, 2 | BRF_GRA },           	//  1 Text layer tiles
+
+	{ "arena2-c1.c1",	0x200000, 0x86856821, 3 | BRF_GRA },           	//  2 Sprite data
+	{ "arena2-c2.c2",	0x200000, 0x2f2b10e6, 3 | BRF_GRA },           	//  3
+
+	{ "arena2-m1.m1",	0x020000, 0xeb05a2c5, 4 | BRF_ESS | BRF_PRG }, 	//  4 Z80 code
+
+	{ "arena2-v1.v1",	0x080000, 0x634c279c, 5 | BRF_SND },           	//  5 Sound data
+};
+
+STDROMPICKEXT(arena2, arena2, neogeo)
+STD_ROM_FN(arena2)
+
+struct BurnDriver BurnDrvArena2 = {
+	"arena2", NULL, "neogeo", NULL, "2026",
+	"Arena 2 (HB)\0", NULL, "delarfab", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_PLATFORM, 0,
+	NULL, arena2RomInfo, arena2RomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 320, 224, 4, 3
+};
+
+
 // Bubble Open (HB, Demo 1)
 // https://neslou.itch.io/bubble-open
 
@@ -30630,6 +30670,37 @@ struct BurnDriver BurnDrvHangonng = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_HOMEBREW, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RACING, 0,
 	NULL, hangonngRomInfo, hangonngRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 320, 224, 4, 3
+};
+
+
+// Rick Astley - Never Gonna Give You Up (Demo)
+// https://hoffman.home.blog/2026/10/28/rolling-thunder-neogeo-ai-port/
+
+static struct BurnRomInfo ranggyuRomDesc[] = {
+	{ "ranggyu-p1.p1",	0x0100000, 0x6e0de1d6, 1 | BRF_ESS | BRF_PRG }, 	//  0 68K code
+	{ "ranggyu-p2.sp2",	0x0600000, 0x8f5852de, 1 | BRF_ESS | BRF_PRG }, 	//  1
+	
+	{ "ranggyu-s1.s1",	0x0020000, 0x7ee8cdcd, 2 | BRF_GRA },           	//  2 Text layer tiles
+
+	{ "ranggyu-c1.c1",	0x2000000, 0xf4d017de, 3 | BRF_GRA },           	//  3 Sprite data
+	{ "ranggyu-c2.c2",	0x2000000, 0xc510d183, 3 | BRF_GRA },           	//  4
+
+	{ "ranggyu-m1.m1",	0x0010000, 0xd28bd7a6, 4 | BRF_ESS | BRF_PRG }, 	//  5 Z80 code
+
+	{ "ranggyu-v1.v1",	0x0400000, 0x9e6db10a, 5 | BRF_SND },           	//  6x Sound data
+};
+
+STDROMPICKEXT(ranggyu, ranggyu, neogeo)
+STD_ROM_FN(ranggyu)
+
+struct BurnDriver BurnDrvRanggyu = {
+	"ranggyu", NULL, "neogeo", NULL, "2026",
+	"Rick Astley - Never Gonna Give You Up (Demo)\0", NULL, "Hoffman", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_DEMO, 1, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_PLATFORM | GBF_MISC, 0,
+	NULL, ranggyuRomInfo, ranggyuRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000, 320, 224, 4, 3
 };
@@ -30758,12 +30829,12 @@ struct BurnDriver BurnDrvSwsodan = {
 // https://nicoklem.itch.io/warrior-man
 
 static struct BurnRomInfo warriormanRomDesc[] = {
-	{ "warman-p1.p1",	0x08cdb0,  0xfcf4dc87, 1 | BRF_ESS | BRF_PRG }, 	//  0 68K code
+	{ "warman-p1.p1",	0x08da9c,  0x04567d6a, 1 | BRF_ESS | BRF_PRG }, 	//  0 68K code
 
 	{ "warman-s1.s1",	0x020000,  0xcf448b94, 2 | BRF_GRA },           	//  1 Text layer tiles
 
-	{ "warman-c1.c1",	0x800000,  0x4fadbb5d, 3 | BRF_GRA },           	//  2 Sprite data
-	{ "warman-c2.c2",	0x800000,  0x4c50ca6b, 3 | BRF_GRA },           	//  3
+	{ "warman-c1.c1",	0x800000,  0x8ab6df31, 3 | BRF_GRA },           	//  2 Sprite data
+	{ "warman-c2.c2",	0x800000,  0x7c9f5790, 3 | BRF_GRA },           	//  3
 
 	{ "warman-m1.m1",	0x020000,  0xb0cf3a68, 4 | BRF_ESS | BRF_PRG }, 	//  4 Z80 code
 
