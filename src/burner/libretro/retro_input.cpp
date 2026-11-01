@@ -1681,6 +1681,23 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 		}
 	}
 
+	// tx1
+	if ((parentrom && strcmp(parentrom, "tx1") == 0) ||
+		(drvname && strcmp(drvname, "tx1") == 0) ||
+		(parentrom && strcmp(parentrom, "buggyboy") == 0) ||
+		(drvname && strcmp(drvname, "buggyboy") == 0)
+	) {
+		if (strcmp("Accelerator", description) == 0) {
+			GameInpAnalog2RetroInpAnalog(pgi, nPlayer, RETRO_DEVICE_ID_JOYPAD_R2, RETRO_DEVICE_INDEX_ANALOG_BUTTON, description);
+		}
+		if (strcmp("Brake", description) == 0) {
+			GameInpAnalog2RetroInpAnalog(pgi, nPlayer, RETRO_DEVICE_ID_JOYPAD_L2, RETRO_DEVICE_INDEX_ANALOG_BUTTON, description);
+		}
+		if (strcmp("Gear Change", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, nPlayer, RETRO_DEVICE_ID_JOYPAD_B, description);
+		}
+	}
+
 	// Heavyweight Champ
 	if ((parentrom && strcmp(parentrom, "hwchamp") == 0) ||
 		(drvname && strcmp(drvname, "hwchamp") == 0)
