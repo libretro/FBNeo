@@ -66409,6 +66409,34 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gngprincess" cloneof="gng" romof="gng" sourcefile="pre90s/d_gng.cpp">
+		<comment>Hack</comment>
+		<description>Ghosts'n Goblins - Princess Prin Prin Edition (World? 1)</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying</manufacturer>
+		<rom name="mm_c_princess_04" size="16384" crc="3b6d9dcf"/>
+		<rom name="mm_c_princess_03" size="32768" crc="134db50c"/>
+		<rom name="mm_c_princess_05" size="32768" crc="d7e126e2"/>
+		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
+		<rom name="gg1princess.bin" size="16384" crc="7935494f"/>
+		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
+		<rom name="gg10.bin" merge="gg10.bin" size="16384" crc="7302529d"/>
+		<rom name="gg9.bin" merge="gg9.bin" size="16384" crc="20035bda"/>
+		<rom name="gg8.bin" merge="gg8.bin" size="16384" crc="f12ba271"/>
+		<rom name="gg7.bin" merge="gg7.bin" size="16384" crc="e525207d"/>
+		<rom name="gg6.bin" merge="gg6.bin" size="16384" crc="2d77e9b2"/>
+		<rom name="gg17princess.bin" size="16384" crc="e2043162"/>
+		<rom name="gg16princess.bin" size="16384" crc="1ad1d899"/>
+		<rom name="gg15princess.bin" size="16384" crc="439d6e7b"/>
+		<rom name="gg14princess.bin" size="16384" crc="19847a61"/>
+		<rom name="gg13princess.bin" size="16384" crc="05e0c809"/>
+		<rom name="gg12princess.bin" size="16384" crc="28fe68a2"/>
+		<rom name="tbp24s10.14k" merge="tbp24s10.14k" size="256" crc="0eaf5158"/>
+		<rom name="63s141.2e" merge="63s141.2e" size="256" crc="4a1285a4"/>
+		<rom name="gg-pal10l8.bin" merge="gg-pal10l8.bin" size="44" crc="87f1b7e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ghoulsu" cloneof="ghouls" romof="ghouls" sourcefile="capcom/d_cps1.cpp">
 		<description>Ghouls'n Ghosts (USA)</description>
 		<year>1988</year>
@@ -98276,6 +98304,33 @@
 		<rom name="gng16maiden.l4" size="16384" crc="2eeb6ef5"/>
 		<rom name="gg13maiden.bin" size="16384" crc="ca6622c1"/>
 		<rom name="gg12maiden.bin" size="16384" crc="83f8a22c"/>
+		<rom name="tbp24s10.14k" merge="tbp24s10.14k" size="256" crc="0eaf5158"/>
+		<rom name="63s141.2e" merge="63s141.2e" size="256" crc="4a1285a4"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="makprincess" cloneof="gng" romof="gng" sourcefile="pre90s/d_gng.cpp">
+		<comment>Hack</comment>
+		<description>Makaimura - Princess Prin Prin Edition</description>
+		<year>2026</year>
+		<manufacturer>GoodLuckTrying</manufacturer>
+		<rom name="10nprincess.rom" size="16384" crc="49dc2d12"/>
+		<rom name="8nprincess.rom" size="32768" crc="ff005be0"/>
+		<rom name="12nprincess.rom" size="32768" crc="7c2064ca"/>
+		<rom name="gg2.bin" merge="gg2.bin" size="32768" crc="615f5b6f"/>
+		<rom name="gg1princess.bin" size="16384" crc="7935494f"/>
+		<rom name="gg11.bin" merge="gg11.bin" size="16384" crc="ddd56fa9"/>
+		<rom name="gg10.bin" merge="gg10.bin" size="16384" crc="7302529d"/>
+		<rom name="gg9.bin" merge="gg9.bin" size="16384" crc="20035bda"/>
+		<rom name="gg8.bin" merge="gg8.bin" size="16384" crc="f12ba271"/>
+		<rom name="gg7.bin" merge="gg7.bin" size="16384" crc="e525207d"/>
+		<rom name="gg6.bin" merge="gg6.bin" size="16384" crc="2d77e9b2"/>
+		<rom name="gng13princess.n4" size="16384" crc="07c9138a"/>
+		<rom name="gg16princess.bin" size="16384" crc="1ad1d899"/>
+		<rom name="gg15princess.bin" size="16384" crc="439d6e7b"/>
+		<rom name="gng16princess.l4" size="16384" crc="3cc87995"/>
+		<rom name="gg13princess.bin" size="16384" crc="05e0c809"/>
+		<rom name="gg12princess.bin" size="16384" crc="28fe68a2"/>
 		<rom name="tbp24s10.14k" merge="tbp24s10.14k" size="256" crc="0eaf5158"/>
 		<rom name="63s141.2e" merge="63s141.2e" size="256" crc="4a1285a4"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>

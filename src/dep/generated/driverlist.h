@@ -10079,6 +10079,7 @@ DRV		BurnDrvGngc;
 DRV		BurnDrvnes_ghostsngoblinsh;
 DRV		BurnDrvGngknight;
 DRV		BurnDrvGngmaiden;
+DRV		BurnDrvGngprincess;
 DRV		BurnDrvcv_gnz;
 DRV		BurnDrvnes_ghoulgrind;
 DRV		BurnDrvsnes_Ghoulpatrole;
@@ -14695,6 +14696,7 @@ DRV		BurnDrvMakaimug;
 DRV		BurnDrvnes_makaimura;
 DRV		BurnDrvMakknight;
 DRV		BurnDrvMakmaiden;
+DRV		BurnDrvMakprincess;
 DRV		BurnDrvnes_makaimuraarcade;
 DRV		BurnDrvMSX_makethemfall;
 DRV		BurnDrvMSX_makethemjump;
@@ -39927,6 +39929,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_ghostsngoblinsh,// Ghosts'n Goblins - Easy Mode (Hack, v2.0)
 	&BurnDrvGngknight,			// Ghosts'n Goblins - Knight Artoria Edition
 	&BurnDrvGngmaiden,			// Ghosts'n Goblins - Maiden Artoria Edition
+	&BurnDrvGngprincess,		// Ghosts'n Goblins - Princess Prin Prin Edition (World? 1)
 	&BurnDrvcv_gnz,				// Ghosts'n Zombies (HB)
 	&BurnDrvnes_ghoulgrind,		// Ghoul Grind Night of the Necromancer (HB)
 	&BurnDrvsnes_Ghoulpatrole,	// Ghoul Patrol (Euro)
@@ -44543,6 +44546,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_makaimura,		// Makaimura (Japan)
 	&BurnDrvMakknight,			// Makaimura - Knight Artoria Edition
 	&BurnDrvMakmaiden,			// Makaimura - Maiden Artoria Edition
+	&BurnDrvMakprincess,		// Makaimura - Princess Prin Prin Edition
 	&BurnDrvnes_makaimuraarcade,// Makaimura Arcade (Hack)
 	&BurnDrvMSX_makethemfall,	// Make Them Fall (HB)
 	&BurnDrvMSX_makethemjump,	// Make Them Jump (HB)
@@ -69721,6 +69725,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_ghostsngoblinsh", "nes/d_nes.cpp"},
 	{ "gngknight", "pre90s/d_gng.cpp"},
 	{ "gngmaiden", "pre90s/d_gng.cpp"},
+	{ "gngprincess", "pre90s/d_gng.cpp"},
 	{ "cv_gnz", "coleco/d_coleco.cpp"},
 	{ "nes_ghoulgrind", "nes/d_nes.cpp"},
 	{ "snes_ghoulpatrole", "snes/d_snes.cpp"},
@@ -74301,6 +74306,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_makaimura", "nes/d_nes.cpp"},
 	{ "makknight", "pre90s/d_gng.cpp"},
 	{ "makmaiden", "pre90s/d_gng.cpp"},
+	{ "makprincess", "pre90s/d_gng.cpp"},
 	{ "nes_makaimuraarcade", "nes/d_nes.cpp"},
 	{ "msx_makethemfall", "msx/d_msx.cpp"},
 	{ "msx_makethemjump", "msx/d_msx.cpp"},
