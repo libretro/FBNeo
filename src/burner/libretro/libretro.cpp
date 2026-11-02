@@ -82,7 +82,8 @@ static bool bVidImageNeedRealloc     = false;
 static bool bRotationDone            = false;
 static int16_t *pAudBuffer           = NULL;
 static char text_missing_files[2048] = "";
-static bool bCDEmuStarted                 = false;
+static bool bCDEmuStarted            = false;
+static bool bRomdataStarting         = false;
 
 // Frameskipping v2 Support
 #define FRAMESKIP_MAX 30
@@ -885,6 +886,23 @@ static void locate_archive(std::vector<located_archive>& pathList, const char* c
 
 	if (bPatchedRomsetsEnabled)
 	{
+		if (bRomdataStarting)
+		{
+			// Search romdatas directory
+			snprintf_nowarn(path, sizeof(path), "%s%c%s", szAppRomdatasPath, PATH_DEFAULT_SLASH_C(), romName);
+			if (ZipOpen(path) == 0)
+			{
+				g_find_list_path.push_back(located_archive());
+				located_archive *located = &g_find_list_path.back();
+				located->path = path;
+				located->ignoreCrc = false;
+				ZipClose();
+				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Romdata found at %s\n", path);
+			}
+			else
+				HandleMessage(RETRO_LOG_INFO, "[FBNeo] No romdata found at %s\n", path);
+		}
+
 		// Search system fbneo "patched" subdirectory
 		snprintf_nowarn(path, sizeof(path), "%s%cfbneo%cpatched%c%s", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), romName);
 		if (ZipOpen(path) == 0)
@@ -1321,6 +1339,7 @@ void retro_reset()
 
 	// RomData & IPS Patches can be selected before retro_reset() and will be reset after retro_reset(),
 	// at which point the data is processed and returned to determine whether to subsequently Reset or Re-Init.
+	bRomdataStarting = false;
 	INT32 nIndex   = apply_romdatas_from_variables();
 	INT32 nPatches = apply_ipses_from_variables();
 
@@ -1349,7 +1368,7 @@ void retro_reset()
 		retro_incomplete_exit();
 
 		if (nPatches > 0) IpsPatchInit();
-		if (nIndex >= 0) RomDataInit();
+		if (nIndex >= 0) { bRomdataStarting = true; RomDataInit(); }
 
 		retro_load_game_common();
 	} 
