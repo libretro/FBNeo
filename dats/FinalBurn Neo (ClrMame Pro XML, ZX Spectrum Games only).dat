@@ -32515,10 +32515,10 @@
 	</game>
 	<game name="tetriszx128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris ZX (128K) (HB)</description>
+		<description>Tetris ZX (128K) (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>kirby2000</manufacturer>
-		<rom name="Tetris ZX 128K (2026)(kirby2000).tap" size="80844" crc="d2abaf42"/>
+		<rom name="Tetris ZX v1.1 128K (2026)(kirby2000).tap" size="80839" crc="583c4c5c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -32526,10 +32526,10 @@
 	</game>
 	<game name="tetriszx48" cloneof="tetriszx128" romof="tetriszx128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris ZX (48K) (HB)</description>
+		<description>Tetris ZX (48K) (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>kirby2000</manufacturer>
-		<rom name="Tetris ZX 48K (2026)(kirby2000).tap" size="47997" crc="07247f8b"/>
+		<rom name="Tetris ZX v1.1 48K (2026)(kirby2000).tap" size="47992" crc="113f7874"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
