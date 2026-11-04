@@ -22823,11 +22823,11 @@
 	</game>
 	<game name="samsho2pe" cloneof="samsho2" romof="samsho2" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.1, Hack)</description>
+		<description>Samurai Shodown II / Shin Samurai Spirits - Haohmaru Jigokuhen (Perfect V. 3.2, Hack)</description>
 		<year>2023-26</year>
 		<manufacturer>Bear</manufacturer>
-		<rom name="063-p1pe.p1" size="1048576" crc="d814a8f5"/>
-		<rom name="063-p2pe.sp2" size="1048576" crc="3a8e5b15"/>
+		<rom name="063-p1pe.p1" size="1048576" crc="8928e40a"/>
+		<rom name="063-p2pe.sp2" size="1048576" crc="4813c6ce"/>
 		<rom name="063-p3pe.p3" size="131072" crc="5e912569"/>
 		<rom name="063-s1.s1" merge="063-s1.s1" size="131072" crc="64a5cd66"/>
 		<rom name="063-c1.c1" merge="063-c1.c1" size="2097152" crc="86cd307c"/>
