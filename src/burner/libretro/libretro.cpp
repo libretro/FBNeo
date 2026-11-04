@@ -21,6 +21,9 @@
 #ifdef BUILD_PCE
 #include "pcecdlist.h"
 #endif
+#ifdef BUILD_MEGADRIVE
+#include "segacdlist.h"
+#endif
 
 #include <file/file_path.h>
 
@@ -369,7 +372,7 @@ void retro_set_environment(retro_environment_t cb)
 	static const struct retro_subsystem_rom_info subsystem_rom[] = {
 		{ "Rom", "zip|7z", true, true, true, NULL, 0 },
 	};
-#if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
 	static const struct retro_subsystem_rom_info subsystem_iso[] = {
 #ifdef INCLUDE_CHD_SUPPORT
 		{ "Iso", "ccd|cue|chd",    true, true, true, NULL, 0 },
@@ -380,53 +383,54 @@ void retro_set_environment(retro_environment_t cb)
 #endif
 	static const struct retro_subsystem_info subsystems[] = {
 #ifdef BUILD_ASTROHOME
-		{ "Bally Astrocade Home Computer",       "astro", subsystem_rom, 1, RETRO_GAME_TYPE_ASTRO },
+		{ "Bally Astrocade Home Computer",       "astro",  subsystem_rom, 1, RETRO_GAME_TYPE_ASTRO  },
 #endif
 #ifdef BUILD_COLECO
-		{ "CBS ColecoVision",                    "cv",    subsystem_rom, 1, RETRO_GAME_TYPE_CV    },
+		{ "CBS ColecoVision",                    "cv",     subsystem_rom, 1, RETRO_GAME_TYPE_CV     },
 #endif
 #ifdef BUILD_CHANNELF
-		{ "Fairchild ChannelF",                  "chf",   subsystem_rom, 1, RETRO_GAME_TYPE_CHF   },
+		{ "Fairchild ChannelF",                  "chf",    subsystem_rom, 1, RETRO_GAME_TYPE_CHF    },
 #endif
 #ifdef BUILD_MSX
-		{ "MSX 1",                               "msx",   subsystem_rom, 1, RETRO_GAME_TYPE_MSX   },
+		{ "MSX 1",                               "msx",    subsystem_rom, 1, RETRO_GAME_TYPE_MSX    },
 #endif
 #ifdef BUILD_PCE
-		{ "Nec PC-Engine",                       "pce",   subsystem_rom, 1, RETRO_GAME_TYPE_PCE   },
-		{ "Nec SuperGrafX",                      "sgx",   subsystem_rom, 1, RETRO_GAME_TYPE_SGX   },
-		{ "Nec TurboGrafx-16",                   "tg16",  subsystem_rom, 1, RETRO_GAME_TYPE_TG    },
+		{ "Nec PC-Engine",                       "pce",    subsystem_rom, 1, RETRO_GAME_TYPE_PCE    },
+		{ "Nec SuperGrafX",                      "sgx",    subsystem_rom, 1, RETRO_GAME_TYPE_SGX    },
+		{ "Nec TurboGrafx-16",                   "tg16",   subsystem_rom, 1, RETRO_GAME_TYPE_TG     },
 #endif
 #ifdef BUILD_NES
-		{ "Nintendo Entertainment System",       "nes",   subsystem_rom, 1, RETRO_GAME_TYPE_NES   },
-		{ "Nintendo Family Disk System",         "fds",   subsystem_rom, 1, RETRO_GAME_TYPE_FDS   },
+		{ "Nintendo Entertainment System",       "nes",    subsystem_rom, 1, RETRO_GAME_TYPE_NES    },
+		{ "Nintendo Family Disk System",         "fds",    subsystem_rom, 1, RETRO_GAME_TYPE_FDS    },
 #endif
 #ifdef BUILD_SNES
-		{ "Super Nintendo Entertainment System", "snes",  subsystem_rom, 1, RETRO_GAME_TYPE_SNES  },
+		{ "Super Nintendo Entertainment System", "snes",   subsystem_rom, 1, RETRO_GAME_TYPE_SNES   },
 #endif
 #ifdef BUILD_GBA
-		{ "Nintendo Gameboy Advance",            "gba",   subsystem_rom, 1, RETRO_GAME_TYPE_GBA   },
+		{ "Nintendo Gameboy Advance",            "gba",    subsystem_rom, 1, RETRO_GAME_TYPE_GBA    },
 #endif
 #ifdef BUILD_SMS
-		{ "Sega GameGear",                       "gg",    subsystem_rom, 1, RETRO_GAME_TYPE_GG    },
-		{ "Sega Master System",                  "sms",   subsystem_rom, 1, RETRO_GAME_TYPE_SMS   },
+		{ "Sega GameGear",                       "gg",     subsystem_rom, 1, RETRO_GAME_TYPE_GG     },
+		{ "Sega Master System",                  "sms",    subsystem_rom, 1, RETRO_GAME_TYPE_SMS    },
 #endif
 #ifdef BUILD_MEGADRIVE
-		{ "Sega Megadrive",                      "md",    subsystem_rom, 1, RETRO_GAME_TYPE_MD    },
+		{ "Sega Megadrive",                      "md",     subsystem_rom, 1, RETRO_GAME_TYPE_MD     },
+		{ "Sega CD",                             "segacd", subsystem_iso, 1, RETRO_GAME_TYPE_SEGACD },
 #endif
 #ifdef BUILD_SG1000
-		{ "Sega SG-1000",                        "sg1k",  subsystem_rom, 1, RETRO_GAME_TYPE_SG1K  },
+		{ "Sega SG-1000",                        "sg1k",   subsystem_rom, 1, RETRO_GAME_TYPE_SG1K   },
 #endif
 #ifdef BUILD_PST90S
-		{ "SNK Neo Geo Pocket",                  "ngp",   subsystem_rom, 1, RETRO_GAME_TYPE_NGP   },
+		{ "SNK Neo Geo Pocket",                  "ngp",    subsystem_rom, 1, RETRO_GAME_TYPE_NGP    },
 #endif
 #ifdef BUILD_SPECTRUM
-		{ "ZX Spectrum",                         "spec",  subsystem_rom, 1, RETRO_GAME_TYPE_SPEC  },
+		{ "ZX Spectrum",                         "spec",   subsystem_rom, 1, RETRO_GAME_TYPE_SPEC   },
 #endif
 #ifdef BUILD_NEOGEO
-		{ "Neogeo CD",                           "neocd", subsystem_iso, 1, RETRO_GAME_TYPE_NEOCD },
+		{ "Neogeo CD",                           "neocd",  subsystem_iso, 1, RETRO_GAME_TYPE_NEOCD  },
 #endif
 #ifdef BUILD_PCE
-		{ "Nec PC-Engine CD",                    "pcecd", subsystem_iso, 1, RETRO_GAME_TYPE_PCECD },
+		{ "Nec PC-Engine CD",                    "pcecd",  subsystem_iso, 1, RETRO_GAME_TYPE_PCECD  },
 #endif
 		{ NULL },
 	};
@@ -2127,9 +2131,9 @@ static bool retro_load_game_common()
 		AudioBufferInit(nBurnSoundRate, 6000);
 		HandleMessage(RETRO_LOG_INFO, "[FBNeo] Samplerate set to %d\n", nBurnSoundRate);
 
-#if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
 		// Start CD reader emulation if needed
-		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD) {
+		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD || nGameType == RETRO_GAME_TYPE_SEGACD) {
 			const char* ext = path_get_extension(CDEmuImage);
 			if (!string_is_equal_noncase(ext, "cue")
 			 && !string_is_equal_noncase(ext, "ccd")
@@ -2161,6 +2165,12 @@ static bool retro_load_game_common()
 			if (nGameType == RETRO_GAME_TYPE_PCECD) {
 				PceCDInfo_Init();
 				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Starting PC Engine CD\n");
+			}
+#endif
+#ifdef BUILD_MEGADRIVE
+			if (nGameType == RETRO_GAME_TYPE_SEGACD) {
+				SegaCDInfo_Init();
+				HandleMessage(RETRO_LOG_INFO, "[FBNeo] Starting Sega CD\n");
 			}
 #endif
 		}
@@ -2528,6 +2538,20 @@ bool retro_load_game(const struct retro_game_info *info)
 		ready = true;
 	}
 #endif
+#ifdef BUILD_MEGADRIVE
+	if (!ready && (strcmp(g_rom_parent_dir, "segacd")==0 || strncmp(g_driver_name, "segacd_", 7)==0)) {
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem segacd identified from parent folder\n");
+		prefix = "";
+		nGameType = RETRO_GAME_TYPE_SEGACD;
+		if (!SetCDEmuImage(szRomsetPath)) {
+			RomDataExit();
+			IpsPatchExit();
+			return false;
+		}
+		extract_basename(g_driver_name, "md_segacd", sizeof(g_driver_name), prefix);
+		ready = true;
+	}
+#endif
 	if (!ready) {
 		extract_basename(g_driver_name, szRomsetPath, sizeof(g_driver_name), prefix);
 	}
@@ -2624,12 +2648,15 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 			prefix = "astro_";
 			break;
 #endif
-#if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
 #ifdef BUILD_NEOGEO
 		case RETRO_GAME_TYPE_NEOCD:
 #endif
 #ifdef BUILD_PCE
 		case RETRO_GAME_TYPE_PCECD:
+#endif
+#ifdef BUILD_MEGADRIVE
+		case RETRO_GAME_TYPE_SEGACD:
 #endif
 			prefix = "";
 			if (!SetCDEmuImage(info->path)) {
@@ -2652,6 +2679,10 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 #ifdef BUILD_PCE
 	if(nGameType == RETRO_GAME_TYPE_PCECD)
 		extract_basename(g_driver_name, "pce_scdsys", sizeof(g_driver_name), "");
+#endif
+#ifdef BUILD_MEGADRIVE
+	if(nGameType == RETRO_GAME_TYPE_SEGACD)
+		extract_basename(g_driver_name, "pce_segacd", sizeof(g_driver_name), "");
 #endif
 
 	return retro_load_game_common();
@@ -2723,8 +2754,8 @@ static void retro_incomplete_exit()
 		if (BurnNvramSave(g_autofs_path) == 0 && path_is_valid(g_autofs_path))
 			HandleMessage(RETRO_LOG_INFO, "[FBNeo] EEPROM succesfully saved to %s\n", g_autofs_path);
 		BurnDrvExit();
-#if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
-		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD)
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
+		if (nGameType == RETRO_GAME_TYPE_NEOCD || nGameType == RETRO_GAME_TYPE_PCECD || nGameType == RETRO_GAME_TYPE_SEGACD)
 			CDEmuExit();
 #endif
 		nBurnDrvActive = ~0U;

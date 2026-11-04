@@ -2588,7 +2588,19 @@ bool SekDbgSetRegister(SekRegister nRegister, UINT32 nValue)
 		case SEK_REG_D5:
 		case SEK_REG_D6:
 		case SEK_REG_D7:
+#ifdef EMU_C68K
+			if (SEK_ACTIVE_IS_C68K) {
+				c68k[nSekActive].d[nRegister - SEK_REG_D0] = nValue;
+				return true;
+			}
+#endif
+			if (nSekCPUType[nSekActive] == 0) break;
+#ifdef EMU_M68K
+			m68k_set_reg((m68k_register_t)(M68K_REG_D0 + (nRegister - SEK_REG_D0)), nValue);
+			return true;
+#else
 			break;
+#endif
 
 		case SEK_REG_A0:
 		case SEK_REG_A1:
@@ -2598,7 +2610,19 @@ bool SekDbgSetRegister(SekRegister nRegister, UINT32 nValue)
 		case SEK_REG_A5:
 		case SEK_REG_A6:
 		case SEK_REG_A7:
+#ifdef EMU_C68K
+			if (SEK_ACTIVE_IS_C68K) {
+				c68k[nSekActive].a[nRegister - SEK_REG_A0] = nValue;
+				return true;
+			}
+#endif
+			if (nSekCPUType[nSekActive] == 0) break;
+#ifdef EMU_M68K
+			m68k_set_reg((m68k_register_t)(M68K_REG_A0 + (nRegister - SEK_REG_A0)), nValue);
+			return true;
+#else
 			break;
+#endif
 
 		case SEK_REG_PC:
 #ifdef EMU_C68K
@@ -2610,11 +2634,22 @@ bool SekDbgSetRegister(SekRegister nRegister, UINT32 nValue)
 			} else {
 				m68k_set_reg(M68K_REG_PC, nValue);
 			}
-			SekClose();
 			return true;
 
 		case SEK_REG_SR:
+#ifdef EMU_C68K
+			if (SEK_ACTIVE_IS_C68K) {
+				CycloneSetSr(&c68k[nSekActive], nValue);
+				return true;
+			}
+#endif
+			if (nSekCPUType[nSekActive] == 0) break;
+#ifdef EMU_M68K
+			m68k_set_reg(M68K_REG_SR, nValue);
+			return true;
+#else
 			break;
+#endif
 
 		case SEK_REG_SP:
 		case SEK_REG_USP:

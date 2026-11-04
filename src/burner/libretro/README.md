@@ -148,6 +148,7 @@ You can use specific folder's name for detection, it's the easiest and recommend
 * Sega GameGear : `gamegear`
 * Sega Master System : `sms` | `mastersystem`
 * Sega Megadrive : `megadriv` | `megadrive` | `genesis`
+* Sega CD : `segacd`
 * Sega SG-1000 : `sg1000`
 * SNK Neo-Geo Pocket : `ngp`
 * SNK Neo-Geo CD : `neocd`
@@ -170,6 +171,7 @@ You can also emulate consoles by prefixing the name of the roms with `XXX_` and 
 * Sega GameGear : `gg`
 * Sega Master System : `sms`
 * Sega Megadrive : `md`
+* Sega CD : `segacd`
 * Sega SG-1000 : `sg1k`
 * SNK Neo-Geo Pocket : `ngp`
 * SNK Neo-Geo CD : `neocd`
@@ -219,6 +221,7 @@ The following bios romsets are required for some of the emulated non-arcade syst
 | msx         | MSX1 System BIOS         |
 | neocdz      | Neo Geo CDZ System BIOS  |
 | ngp         | NeoGeo Pocket BIOS       |
+| segacd      | Sega CD BIOS             |
 | spectrum    | ZX Spectrum BIOS         |
 | spec128     | ZX Spectrum 128 BIOS     |
 | spec1282a   | ZX Spectrum 128 +2a BIOS |

@@ -2,7 +2,7 @@
 
 #include "retro_common.h"
 
-#if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
 #include "cd_interface.h"
 #include "burner.h"
 #include "burnint.h"

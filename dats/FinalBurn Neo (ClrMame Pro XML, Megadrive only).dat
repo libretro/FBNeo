@@ -18096,6 +18096,17 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="segacd" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>System - media selected separately</comment>
+		<description>Sega CD / Mega-CD System</description>
+		<year>1992</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Sega CD BIOS (USA, v1.10).bin" size="131072" crc="c6d10268"/>
+		<rom name="Mega-CD BIOS (Europe, v1.00).bin" size="131072" crc="529ac15a"/>
+		<rom name="Mega-CD BIOS (Japan, v1.00P).bin" size="131072" crc="9d2da8f2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="segachnla" cloneof="segachnl" romof="segachnl" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Network Tool</comment>
 		<description>Sega Channel (General Instrument) (USA)</description>

@@ -21701,6 +21701,7 @@ DRV		BurnDrvSectrzon;
 DRV		BurnDrvSectrzona;
 DRV		BurnDrvgba_segaag;
 DRV		BurnDrvgba_segaagu;
+DRV		BurnDrvmd_segacd;
 DRV		BurnDrvmd_segachnla;
 DRV		BurnDrvmd_segachnl;
 DRV		BurnDrvmd_segachd;
@@ -51568,6 +51569,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvSectrzona,			// Sector Zone (set 2)
 	&BurnDrvgba_segaag,			// Sega Arcade Gallery (Europe)
 	&BurnDrvgba_segaagu,		// Sega Arcade Gallery (USA)
+	&BurnDrvmd_segacd,			// Sega CD / Mega-CD System
 	&BurnDrvmd_segachnla,		// Sega Channel (General Instrument) (USA) [Network Tool, NOT WORKING]
 	&BurnDrvmd_segachnl,		// Sega Channel (Scientific Atlanta) (USA)
 	&BurnDrvmd_segachd,			// Sega Channel Demo (USA)
@@ -81303,6 +81305,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sectrzona", "pre90s/d_seicross.cpp"},
 	{ "gba_segaag", "gba/d_gba.cpp"},
 	{ "gba_segaagu", "gba/d_gba.cpp"},
+	{ "md_segacd", "megadrive/d_megadrive.cpp"},
 	{ "md_segachnla", "megadrive/d_megadrive.cpp"},
 	{ "md_segachnl", "megadrive/d_megadrive.cpp"},
 	{ "md_segachd", "megadrive/d_megadrive.cpp"},
