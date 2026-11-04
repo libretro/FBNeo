@@ -35,6 +35,11 @@ CDEmuStatusValue CDEmuStatus;
 TCHAR CDEmuImage[MAX_PATH];
 UINT8 CDEmuImageTOCSHA1[MAX_PATH] = { 0, };
 
+static INT32 bCDEmuTraySupported = 0;
+static INT32 bCDEmuTrayOpen = 0;
+static INT32 bCDEmuChanging = 0;
+static UINT32 nCDEmuDiscChanges = 0;
+
 // variables from cd_img.h
 // we don't need to share them across files so it's fine if they are not in a header
 
@@ -83,6 +88,10 @@ INT32 CDEmuExit() {
 INT32 CDEmuInit() {
 	INT32 nRet;
 	CDEmuStatus = idle;
+	if (!bCDEmuChanging) {
+		bCDEmuTraySupported = 0;
+		bCDEmuTrayOpen = 0;
+	}
 	if ((nRet = cdimgInit()) == 0) {
 		bCDEmuOkay = true;
 	}
@@ -149,6 +158,60 @@ INT32 CDEmuScan(INT32 nAction, INT32 *pnMin)
 		return 1;
 	}
 	return cdimgScan(nAction, pnMin);
+}
+
+// disc swapping, same as src/intf/cd/cd_interface.cpp
+
+void CDEmuSetTraySupported(INT32 bSupported)
+{
+	bCDEmuTraySupported = bSupported ? 1 : 0;
+}
+
+INT32 CDEmuIsTraySupported()
+{
+	return bCDEmuTraySupported;
+}
+
+INT32 CDEmuChangeImage(const TCHAR* pszImage)
+{
+	TCHAR szPrevious[MAX_PATH];
+
+	if (pszImage == NULL || _tcslen(pszImage) >= MAX_PATH) {
+		return 1;
+	}
+
+	_tcscpy(szPrevious, CDEmuImage);
+
+	bCDEmuChanging = 1;
+	CDEmuExit();
+	_tcscpy(CDEmuImage, pszImage);
+
+	if (CDEmuInit()) {
+		_tcscpy(CDEmuImage, szPrevious);
+		CDEmuInit();
+		bCDEmuChanging = 0;
+		return 1;
+	}
+	bCDEmuChanging = 0;
+
+	nCDEmuDiscChanges++;
+
+	return 0;
+}
+
+void CDEmuSetTrayOpen(INT32 bOpen)
+{
+	bCDEmuTrayOpen = bOpen ? 1 : 0;
+}
+
+INT32 CDEmuIsTrayOpen()
+{
+	return bCDEmuTrayOpen;
+}
+
+UINT32 CDEmuGetDiscChanges()
+{
+	return nCDEmuDiscChanges;
 }
 
 #endif
