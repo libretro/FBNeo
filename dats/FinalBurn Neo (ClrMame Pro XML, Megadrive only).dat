@@ -3225,6 +3225,16 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="castlillmdp" cloneof="castlill" romof="castlill" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Hack</comment>
+		<description>Castle of Illusion Starring Mickey Mouse (Hack, MD+, Grant Kirkhope Arranged)</description>
+		<year>2021</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="MD+ Castle Of Illusion (Grant Kirkhope Arranged).md" size="1048576" crc="39601b88"/>
+		<disk name="md_castlillmdp" sha1="63cbf9c46268f7ffaf494e0f3d939949263b5eb1" />
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="castlills" cloneof="castlill" romof="castlill" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>Castle of Illusion Starring Mickey Mouse (Hack, Spanish v2.0)</description>

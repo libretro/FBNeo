@@ -3567,6 +3567,7 @@ DRV		BurnDrvBuckyea;
 DRV		BurnDrvBucky;
 DRV		BurnDrvBuckyjaa;
 DRV		BurnDrvBuckyuab;
+DRV		BurnDrvnes_buckyoharese;
 DRV		BurnDrvMSX_bdg110;
 DRV		BurnDrvMSX_budokan;
 DRV		BurnSpecBudokan;
@@ -4007,11 +4008,13 @@ DRV		BurnDrvsnes_Captsubasa3ts;
 DRV		BurnDrvsnes_Captsubasa3j;
 DRV		BurnDrvsnes_Captsubasa4j;
 DRV		BurnDrvsnes_Captsubasa4te;
+DRV		BurnDrvnes_captaintsubasaplus;
 DRV		BurnDrvsnes_Captsubasa5j;
 DRV		BurnDrvnes_captatsuvolii;
 DRV		BurnDrvnes_captatsuvoliitsc;
 DRV		BurnDrvnes_captatsuvoliic;
 DRV		BurnDrvnes_captatsuvoliij;
+DRV		BurnDrvnes_captatsuvoliiplus;
 DRV		BurnDrvsms_capturego;
 #if defined FBNEO_DEBUG
 DRV		BurnDrvCar2;			// No sound
@@ -4026,6 +4029,7 @@ DRV		BurnDrvMSX_carjamb;
 DRV		BurnDrvMSX_carjamba;
 DRV		BurnDrvCarjmbre;
 DRV		BurnDrvgg_carlicen;
+DRV		BurnDrvnes_carpark;
 DRV		BurnSpecCarwars;
 DRV		BurnDrvMSX_carrace;
 DRV		BurnDrvMSX_carraceb;
@@ -4118,6 +4122,7 @@ DRV		BurnDrvsms_castlill;
 DRV		BurnDrvmd_castlill;
 DRV		BurnDrvgg_castlill;
 DRV		BurnDrvsms_castlilli;
+DRV		BurnDrvmd_castlillmdp;
 DRV		BurnDrvmd_castlills;
 DRV		BurnDrvsms_castlillc;
 DRV		BurnDrvsms_castlillu;
@@ -7179,6 +7184,9 @@ DRV		BurnDrvgba_dballj;
 DRV		BurnDrvgba_dballk;
 DRV		BurnDrvgba_dball;
 DRV		BurnDrvgba_dballu;
+DRV		BurnDrvnes_dragobal3gokdenj;
+DRV		BurnDrvnes_dragobal3gokdentp;
+DRV		BurnDrvnes_dragobal3gokdents;
 DRV		BurnDrvnes_dragobal3gokden;
 DRV		BurnDrvgba_dballgt;
 DRV		BurnDrvDbza;
@@ -7213,10 +7221,10 @@ DRV		BurnDrvDbz2;
 DRV		BurnDrvnes_dragonballz5;
 DRV		BurnDrvnes_dragobalzgaisajinze;
 DRV		BurnDrvnes_dragobalzgaisajinzeje;
-DRV		BurnDrvnes_dragobalziigefr;
 DRV		BurnDrvnes_dragobalziigefrj;
-DRV		BurnDrvnes_dragobalziiirejini;
+DRV		BurnDrvnes_dragobalziigefr;
 DRV		BurnDrvnes_dragobalziiirejinic;
+DRV		BurnDrvnes_dragobalziiirejini;
 DRV		BurnDrvnes_dragobalziiirejinij;
 DRV		BurnDrvnes_dragobalzkyosajinv2;
 DRV		BurnDrvnes_dragobalzkyosajin;
@@ -28712,6 +28720,7 @@ DRV		BurnDrvsnes_Wings2ah;
 DRV		BurnDrvmd_wingswor;
 DRV		BurnDrvWink;
 DRV		BurnDrvWinka;
+DRV		BurnDrvnes_winkorc;
 DRV		BurnDrvcv_winktrap;
 DRV		BurnDrvgba_2pohray3;
 DRV		BurnDrvgba_poohrumb;
@@ -33435,6 +33444,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvBucky,				// Bucky O'Hare (ver EAB)
 	&BurnDrvBuckyjaa,			// Bucky O'Hare (ver JAA)
 	&BurnDrvBuckyuab,			// Bucky O'Hare (ver UAB)
+	&BurnDrvnes_buckyoharese,	// Bucky O'Hare - Special Edition (Hack)
 	&BurnDrvMSX_bdg110,			// Buddhagillie (HB, v1.1)
 	&BurnDrvMSX_budokan,		// Budokan (Euro)
 	&BurnSpecBudokan,			// Budokan: The Martial Spirit (48K)
@@ -33875,11 +33885,13 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Captsubasa3j,	// Captain Tsubasa III - Koutei no Chousen (Japan)
 	&BurnDrvsnes_Captsubasa4j,	// Captain Tsubasa IV - Pro no Rival Tachi (Japan)
 	&BurnDrvsnes_Captsubasa4te,	// Captain Tsubasa IV - Professional Rivals (Hack, English v0.9)
+	&BurnDrvnes_captaintsubasaplus,// Captain Tsubasa Plus (Hack)
 	&BurnDrvsnes_Captsubasa5j,	// Captain Tsubasa V - Hasha no Shougou Campione (Japan)
 	&BurnDrvnes_captatsuvolii,	// Captain Tsubasa Vol. II: Super Striker (Hack, English)
 	&BurnDrvnes_captatsuvoliitsc,// Captain Tsubasa Vol. II: Super Striker (Hack, Simplified Chinese)
 	&BurnDrvnes_captatsuvoliic,	// Captain Tsubasa Vol. II: Super Striker (Hack, Spanish)
 	&BurnDrvnes_captatsuvoliij,	// Captain Tsubasa Vol. II: Super Striker (Japan)
+	&BurnDrvnes_captatsuvoliiplus,// Captain Tsubasa Vol. II: Super Striker Plus (Hack, v1.2)
 	&BurnDrvsms_capturego,		// Capture Go (HB)
 #if defined FBNEO_DEBUG
 	&BurnDrvCar2,				// Car 2 (bootleg of Head On 2) [No sound]
@@ -33894,6 +33906,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_carjamba,		// Car Jamboree (Japan, Alt)
 	&BurnDrvCarjmbre,			// Car Jamboree
 	&BurnDrvgg_carlicen,		// Car Licence (Japan)
+	&BurnDrvnes_carpark,		// Car Park (HB)
 	&BurnSpecCarwars,			// Car Wars (128K) (HB)
 	&BurnDrvMSX_carrace,		// Car-Race (Japan)
 	&BurnDrvMSX_carraceb,		// Car-Race (Japan, Alt 2)
@@ -33986,6 +33999,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_castlill,		// Castle of Illusion Starring Mickey Mouse (Euro, USA)
 	&BurnDrvgg_castlill,		// Castle of Illusion Starring Mickey Mouse (Euro, USA, SMS Mode)
 	&BurnDrvsms_castlilli,		// Castle of Illusion Starring Mickey Mouse (Hack, Italian v0.99)
+	&BurnDrvmd_castlillmdp,		// Castle of Illusion Starring Mickey Mouse (Hack, MD+, Grant Kirkhope Arranged)
 	&BurnDrvmd_castlills,		// Castle of Illusion Starring Mickey Mouse (Hack, Spanish v2.0)
 	&BurnDrvsms_castlillc,		// Castle of Illusion Starring Mickey Mouse (Hack, Spanish v2.0)
 	&BurnDrvsms_castlillu,		// Castle of Illusion Starring Mickey Mouse (USA)
@@ -37047,7 +37061,10 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_dballk,			// Dragon Ball - Advance Adventure (Korea)
 	&BurnDrvgba_dball,			// Dragon Ball - Advanced Adventure (Europe)
 	&BurnDrvgba_dballu,			// Dragon Ball - Advanced Adventure (USA)
-	&BurnDrvnes_dragobal3gokden,// Dragon Ball 3: Gokuu Den (Japan)
+	&BurnDrvnes_dragobal3gokdenj,// Dragon Ball 3: Gokuu Den (Japan, Rev. 1)
+	&BurnDrvnes_dragobal3gokdentp,// Dragon Ball 3: La Lenda de Goku (Hack, Portuguese v1.1)
+	&BurnDrvnes_dragobal3gokdents,// Dragon Ball 3: La Leyenda de Goku (Hack, Spanish v1.1)
+	&BurnDrvnes_dragobal3gokden,// Dragon Ball 3: Legend of Goku (Hack, English v1.1)
 	&BurnDrvgba_dballgt,		// Dragon Ball GT - Transformation (USA)
 	&BurnDrvDbza,				// Dragon Ball Z (rev A)
 	&BurnDrvDbz,				// Dragon Ball Z (rev B)
@@ -37079,12 +37096,12 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsnes_Dragballz3ef,	// Dragon Ball Z - Ultime Menace (Euro, French)
 	&BurnDrvDbz2,				// Dragon Ball Z 2 - Super Battle
 	&BurnDrvnes_dragonballz5,	// Dragon Ball Z 5 (China) (Unl)
-	&BurnDrvnes_dragobalzgaisajinze,// Dragon Ball Z Gaiden: Saiya Jin Zetsumetsu Keikaku (Hack, English)
+	&BurnDrvnes_dragobalzgaisajinze,// Dragon Ball Z Gaiden: Plan to Eliminate the Saiyans (Hack, English)
 	&BurnDrvnes_dragobalzgaisajinzeje,// Dragon Ball Z Gaiden: Saiya Jin Zetsumetsu Keikaku (Japan)
-	&BurnDrvnes_dragobalziigefr,// Dragon Ball Z II: Gekishin Freeza!! (Hack, English v1.02)
 	&BurnDrvnes_dragobalziigefrj,// Dragon Ball Z II: Gekishin Freeza!! (Japan)
-	&BurnDrvnes_dragobalziiirejini,// Dragon Ball Z III: Ressen Jinzou Ningen (Hack, English)
-	&BurnDrvnes_dragobalziiirejinic,// Dragon Ball Z III: Ressen Jinzou Ningen (Hack, Spanish v1.0a)
+	&BurnDrvnes_dragobalziigefr,// Dragon Ball Z II: Tyrant Freeza!! (Hack, English v1.02)
+	&BurnDrvnes_dragobalziiirejinic,// Dragon Ball Z III: Feroz Batalla Androide (Hack, Spanish v1.0a)
+	&BurnDrvnes_dragobalziiirejini,// Dragon Ball Z III: Killer Androids (Hack, English)
 	&BurnDrvnes_dragobalziiirejinij,// Dragon Ball Z III: Ressen Jinzou Ningen (Japan)
 	&BurnDrvnes_dragobalzkyosajinv2,// Dragon Ball Z: Assault of the Saiyans (Hack, English v2)
 	&BurnDrvnes_dragobalzkyosajin,// Dragon Ball Z: Assault of the Saiyans (Hack, English)
@@ -54181,7 +54198,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_studyhall,		// Study Hall (HB)
 	&BurnDrvStuntair,			// Stunt Air
 	&BurnSpecstuntcar,			// Stunt Car Racer (48K-128K)
-	&BurnDrvnes_stuntcar,		// Stunt Car Racer (HB)
+	&BurnDrvnes_stuntcar,		// Stunt Car Racer (HB, v1.1)
 	&BurnDrvnes_stuntkids,		// Stunt Kids (USA)
 	&BurnSpecStuntmanseymour,	// Stunt Man Seymour (48K-128K)
 	&BurnDrvsnes_stuntfxe,		// Stunt Race FX (Euro)
@@ -58580,6 +58597,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_wingswor,		// Wings of Wor (USA)
 	&BurnDrvWink,				// Wink (set 1)
 	&BurnDrvWinka,				// Wink (set 2)
+	&BurnDrvnes_winkorc,		// Wink and the Orchard (HB)
 	&BurnDrvcv_winktrap,		// Winky Trap (HB)
 	&BurnDrvgba_2pohray3,		// Winnie the Pooh's Rumbly Tumbly Adventure & Rayman 3 (Europe)
 	&BurnDrvgba_poohrumb,		// Winnie the Pooh's Rumbly Tumbly Adventure (Europe, M6)
@@ -63283,6 +63301,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "bucky", "konami/d_moo.cpp"},
 	{ "buckyjaa", "konami/d_moo.cpp"},
 	{ "buckyuab", "konami/d_moo.cpp"},
+	{ "nes_buckyoharese", "nes/d_nes.cpp"},
 	{ "msx_bdg110", "msx/d_msx.cpp"},
 	{ "msx_budokan", "msx/d_msx.cpp"},
 	{ "spec_budokan", "spectrum/d_spectrum.cpp"},
@@ -63723,11 +63742,13 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "snes_captsubasa3j", "snes/d_snes.cpp"},
 	{ "snes_captsubasa4j", "snes/d_snes.cpp"},
 	{ "snes_captsubasa4te", "snes/d_snes.cpp"},
+	{ "nes_captaintsubasaplus", "nes/d_nes.cpp"},
 	{ "snes_captsubasa5j", "snes/d_snes.cpp"},
 	{ "nes_captatsuvolii", "nes/d_nes.cpp"},
 	{ "nes_captatsuvoliitsc", "nes/d_nes.cpp"},
 	{ "nes_captatsuvoliic", "nes/d_nes.cpp"},
 	{ "nes_captatsuvoliij", "nes/d_nes.cpp"},
+	{ "nes_captatsuvoliiplus", "nes/d_nes.cpp"},
 	{ "sms_capturego", "sms/d_sms.cpp"},
 	{ "car2", "pre90s/d_vicdual.cpp"},
 	{ "gba_carbatlj", "gba/d_gba.cpp"},
@@ -63738,6 +63759,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "msx_carjamba", "msx/d_msx.cpp"},
 	{ "carjmbre", "pre90s/d_carjmbre.cpp"},
 	{ "gg_carlicen", "sms/d_sms.cpp"},
+	{ "nes_carpark", "nes/d_nes.cpp"},
 	{ "spec_carwars", "spectrum/d_spectrum.cpp"},
 	{ "msx_carrace", "msx/d_msx.cpp"},
 	{ "msx_carraceb", "msx/d_msx.cpp"},
@@ -63828,6 +63850,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_castlill", "megadrive/d_megadrive.cpp"},
 	{ "gg_castlill", "sms/d_sms.cpp"},
 	{ "sms_castlilli", "sms/d_sms.cpp"},
+	{ "md_castlillmdp", "megadrive/d_megadrive.cpp"},
 	{ "md_castlills", "megadrive/d_megadrive.cpp"},
 	{ "sms_castlillc", "sms/d_sms.cpp"},
 	{ "sms_castlillu", "sms/d_sms.cpp"},
@@ -66873,6 +66896,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gba_dballk", "gba/d_gba.cpp"},
 	{ "gba_dball", "gba/d_gba.cpp"},
 	{ "gba_dballu", "gba/d_gba.cpp"},
+	{ "nes_dragobal3gokdenj", "nes/d_nes.cpp"},
+	{ "nes_dragobal3gokdentp", "nes/d_nes.cpp"},
+	{ "nes_dragobal3gokdents", "nes/d_nes.cpp"},
 	{ "nes_dragobal3gokden", "nes/d_nes.cpp"},
 	{ "gba_dballgt", "gba/d_gba.cpp"},
 	{ "dbza", "konami/d_dbz.cpp"},
@@ -66907,10 +66933,10 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_dragonballz5", "nes/d_nes.cpp"},
 	{ "nes_dragobalzgaisajinze", "nes/d_nes.cpp"},
 	{ "nes_dragobalzgaisajinzeje", "nes/d_nes.cpp"},
-	{ "nes_dragobalziigefr", "nes/d_nes.cpp"},
 	{ "nes_dragobalziigefrj", "nes/d_nes.cpp"},
-	{ "nes_dragobalziiirejini", "nes/d_nes.cpp"},
+	{ "nes_dragobalziigefr", "nes/d_nes.cpp"},
 	{ "nes_dragobalziiirejinic", "nes/d_nes.cpp"},
+	{ "nes_dragobalziiirejini", "nes/d_nes.cpp"},
 	{ "nes_dragobalziiirejinij", "nes/d_nes.cpp"},
 	{ "nes_dragobalzkyosajinv2", "nes/d_nes.cpp"},
 	{ "nes_dragobalzkyosajin", "nes/d_nes.cpp"},
@@ -88252,6 +88278,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_wingswor", "megadrive/d_megadrive.cpp"},
 	{ "wink", "pre90s/d_wink.cpp"},
 	{ "winka", "pre90s/d_wink.cpp"},
+	{ "nes_winkorc", "nes/d_nes.cpp"},
 	{ "cv_winktrap", "coleco/d_coleco.cpp"},
 	{ "gba_2pohray3", "gba/d_gba.cpp"},
 	{ "gba_poohrumb", "gba/d_gba.cpp"},

@@ -3015,6 +3015,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="buckyoharese" cloneof="buckyohare" romof="buckyohare" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Bucky O'Hare - Special Edition (Hack)</description>
+		<year>2026</year>
+		<manufacturer>DarthVaderX</manufacturer>
+		<rom name="Bucky O'Hare - Special Edition (2026)(DarthVaderX).nes" size="262160" crc="3ca18c64"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="buggypopper" cloneof="bumpnjump" romof="bumpnjump" sourcefile="nes/d_nes.cpp">
 		<description>Buggy Popper (Japan)</description>
 		<year>1986</year>
@@ -3264,6 +3273,15 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
+	<game name="captaintsubasaplus" cloneof="tecmocup" romof="tecmocup" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Captain Tsubasa Plus (Hack)</description>
+		<year>2026</year>
+		<manufacturer>V. Hernandez</manufacturer>
+		<rom name="Captain Tsubasa Plus (2026)(V. Hernandez).nes" size="393232" crc="204f8edc"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
 	<game name="captatsuvolii" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
 		<description>Captain Tsubasa Vol. II: Super Striker (Hack, English)</description>
@@ -3296,6 +3314,23 @@
 		<year>1990</year>
 		<manufacturer>Tecmo</manufacturer>
 		<rom name="Captain Tsubasa Vol. II - Super Striker (Japan)(1990)(Tecmo).nes" size="393232" crc="14a366bb"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="captatsuvoliiplus" cloneof="captatsuvolii" romof="captatsuvolii" sourcefile="nes/d_nes.cpp">
+		<description>Captain Tsubasa Vol. II: Super Striker Plus (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>V. Hernandez</manufacturer>
+		<rom name="Captain Tsubasa Vol. II - Super Striker Plus v1.2 (2026)(V. Hernandez).nes" size="786448" crc="2d17945d"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="carpark" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Car Park (HB)</description>
+		<year>2025</year>
+		<manufacturer>EvgenyKz &amp; Lancuster</manufacturer>
+		<rom name="Car Park (2025)(EvgenyKz &amp; Lancuster).nes" size="49168" crc="02d74be5"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -4013,8 +4048,8 @@
 		<comment>Hack</comment>
 		<description>Chouyoku Senki ESTIQUE - God Mode (Hack)</description>
 		<year>2025</year>
-		<manufacturer>darthvaderx</manufacturer>
-		<rom name="Chouyoku Senki ESTIQUE - God Mode (Japan)(2025)(darthvaderx).nes" size="524304" crc="b412dbca"/>
+		<manufacturer>DarthVaderX</manufacturer>
+		<rom name="Chouyoku Senki ESTIQUE - God Mode (Japan)(2025)(DarthVaderX).nes" size="524304" crc="b412dbca"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -6075,11 +6110,38 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="dragobal3gokden" sourcefile="nes/d_nes.cpp">
-		<description>Dragon Ball 3: Gokuu Den (Japan)</description>
+	<game name="dragobal3gokdenj" cloneof="dragobal3gokden" romof="dragobal3gokden" sourcefile="nes/d_nes.cpp">
+		<description>Dragon Ball 3: Gokuu Den (Japan, Rev. 1)</description>
 		<year>1989</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball 3 - Gokuu Den (Japan)(1989)(Bandai).nes" size="393232" crc="0544b2a4"/>
+		<rom name="Dragon Ball 3 - Gokuu Den (Japan, Rev 1)(1989)(Bandai).nes" size="393232" crc="ed45ce26"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragobal3gokdentp" cloneof="dragobal3gokden" romof="dragobal3gokden" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball 3: La Lenda de Goku (Hack, Portuguese v1.1)</description>
+		<year>2026</year>
+		<manufacturer>PatchClan, Melhorado</manufacturer>
+		<rom name="Dragon Ball 3 - La Lenda de Goku T-Por v1.1 (2026)(PatchClan, Melhorado).nes" size="524304" crc="ddd21dec"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragobal3gokdents" cloneof="dragobal3gokden" romof="dragobal3gokden" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball 3: La Leyenda de Goku (Hack, Spanish v1.1)</description>
+		<year>2026</year>
+		<manufacturer>PatchClan, Mejorado</manufacturer>
+		<rom name="Dragon Ball 3 - La Leyenda de Goku T-Spa v1.1 (2026)(PatchClan, Mejorado).nes" size="524304" crc="323532d7"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragobal3gokden" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball 3: Legend of Goku (Hack, English v1.1)</description>
+		<year>2026</year>
+		<manufacturer>PatchClan</manufacturer>
+		<rom name="Dragon Ball 3 - Legend of Goku T-Eng v1.1 (2026)(PatchClan).nes" size="524304" crc="7164bbd1"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -6093,10 +6155,10 @@
 	</game>
 	<game name="dragobalzgaisajinze" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Dragon Ball Z Gaiden: Saiya Jin Zetsumetsu Keikaku (Hack, English)</description>
+		<description>Dragon Ball Z Gaiden: Plan to Eliminate the Saiyans (Hack, English)</description>
 		<year>2007</year>
 		<manufacturer>Twilight Translations</manufacturer>
-		<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (T-Eng).nes" size="524304" crc="e7a5a03d"/>
+		<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku T-Eng (2007)(Twilight Translations).nes" size="524304" crc="e7a5a03d"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -6104,16 +6166,7 @@
 		<description>Dragon Ball Z Gaiden: Saiya Jin Zetsumetsu Keikaku (Japan)</description>
 		<year>1993</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan).nes" size="524304" crc="69ae6291"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragobalziigefr" sourcefile="nes/d_nes.cpp">
-		<comment>Hack</comment>
-		<description>Dragon Ball Z II: Gekishin Freeza!! (Hack, English v1.02)</description>
-		<year>2019</year>
-		<manufacturer>Gyroballer</manufacturer>
-		<rom name="Dragon Ball Z II - Gekishin Freeza!! (T-Eng).nes" size="524304" crc="ffa1e20e"/>
+		<rom name="Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (Japan)(1993)(Bandai).nes" size="524304" crc="69ae6291"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -6121,25 +6174,34 @@
 		<description>Dragon Ball Z II: Gekishin Freeza!! (Japan)</description>
 		<year>1991</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z II - Gekishin Freeza!! (Japan).nes" size="524304" crc="d396d28a"/>
+		<rom name="Dragon Ball Z II - Gekishin Freeza!! (Japan)(1991)(Bandai).nes" size="524304" crc="d396d28a"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
-	<game name="dragobalziiirejini" sourcefile="nes/d_nes.cpp">
+	<game name="dragobalziigefr" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Dragon Ball Z III: Ressen Jinzou Ningen (Hack, English)</description>
-		<year>2007</year>
-		<manufacturer>Twilight Translations</manufacturer>
-		<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (T-Eng).nes" size="524304" crc="209955ea"/>
+		<description>Dragon Ball Z II: Tyrant Freeza!! (Hack, English v1.02)</description>
+		<year>2019</year>
+		<manufacturer>Gyroballer</manufacturer>
+		<rom name="Dragon Ball Z II - Gekishin Freeza!! T-Eng (2019)(Gyroballer).nes" size="524304" crc="ffa1e20e"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
 	<game name="dragobalziiirejinic" cloneof="dragobalziiirejini" romof="dragobalziiirejini" sourcefile="nes/d_nes.cpp">
 		<comment>Hack</comment>
-		<description>Dragon Ball Z III: Ressen Jinzou Ningen (Hack, Spanish v1.0a)</description>
+		<description>Dragon Ball Z III: Feroz Batalla Androide (Hack, Spanish v1.0a)</description>
 		<year>2016</year>
 		<manufacturer>TransGen</manufacturer>
 		<rom name="Dragon Ball Z III - Ressen Jinzou Ningen T-Spa v1.0a (2016)(TransGen).nes" size="524304" crc="ff1d3cf3"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragobalziiirejini" sourcefile="nes/d_nes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball Z III: Killer Androids (Hack, English)</description>
+		<year>2007</year>
+		<manufacturer>Twilight Translations</manufacturer>
+		<rom name="Dragon Ball Z III - Ressen Jinzou Ningen T-Eng (2007)(Twilight Translations).nes" size="524304" crc="209955ea"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -6147,7 +6209,7 @@
 		<description>Dragon Ball Z III: Ressen Jinzou Ningen (Japan)</description>
 		<year>1992</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (Japan).nes" size="524304" crc="a69079d4"/>
+		<rom name="Dragon Ball Z III - Ressen Jinzou Ningen (Japan)(1992)(Bandai).nes" size="524304" crc="a69079d4"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -20970,10 +21032,10 @@
 	</game>
 	<game name="stuntcar" sourcefile="nes/d_nes.cpp">
 		<comment>Homebrew</comment>
-		<description>Stunt Car Racer (HB)</description>
+		<description>Stunt Car Racer (HB, v1.1)</description>
 		<year>2026</year>
 		<manufacturer>cobbpg</manufacturer>
-		<rom name="Stunt Car Racer (2026)(cobbpg).nes" size="262160" crc="192c7f2d"/>
+		<rom name="Stunt Car Racer v1.1 (2026)(cobbpg).nes" size="262160" crc="eeb6dd16"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
@@ -24404,6 +24466,15 @@
 		<year>2024</year>
 		<manufacturer>Red Art Games - Sunsoft</manufacturer>
 		<rom name="Wing of Madoola, The (2024)(Red Art Games).nes" size="65552" crc="37c7ccd0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
+		<driver status="good"/>
+	</game>
+	<game name="winkorc" sourcefile="nes/d_nes.cpp">
+		<comment>Homebrew</comment>
+		<description>Wink and the Orchard (HB)</description>
+		<year>2022</year>
+		<manufacturer>Max Oakland</manufacturer>
+		<rom name="Wink and the Orchard (2022)(Max Oakland).nes" size="40976" crc="68887c42"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="256" aspecty="224"/>
 		<driver status="good"/>
 	</game>
