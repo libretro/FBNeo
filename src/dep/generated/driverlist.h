@@ -14994,6 +14994,7 @@ DRV		BurnDrvCpsMvscem;
 DRV		BurnDrvCpsMvscr1;
 DRV		BurnDrvCpsMvsc;
 DRV		BurnDrvCpsMvscdhc;
+DRV		BurnDrvCpsMvschr;
 DRV		BurnDrvCpsMvsch;
 DRV		BurnDrvCpsMvscjr1;
 DRV		BurnDrvCpsMvscjsing;
@@ -23903,6 +23904,7 @@ DRV		BurnDrvCpsSfa3ud;
 DRV		BurnDrvCpsSfa3u;
 DRV		BurnDrvgba_sfa3u;
 DRV		BurnDrvCpsSfa3re;
+DRV		BurnDrvCpsSfa3up;
 DRV		BurnDrvCpsSfa3ce;
 DRV		BurnDrvCpsSfa3xl;
 DRV		BurnDrvCpsSfaex;
@@ -24182,6 +24184,7 @@ DRV		BurnDrvCpsSfz3j;
 DRV		BurnDrvCpsSfz3mix13;
 DRV		BurnDrvCpsSfz3mix;
 DRV		BurnDrvCpsSfz3rej;
+DRV		BurnDrvCpsSfz3up;
 DRV		BurnDrvgba_sfa3j;
 DRV		BurnDrvCpsSfz3te;
 DRV		BurnDrvCpsSfzexa;
@@ -44871,6 +44874,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsMvscr1,			// Marvel Vs. Capcom: Clash of Super Heroes (Europe 980112)
 	&BurnDrvCpsMvsc,			// Marvel Vs. Capcom: Clash of Super Heroes (Europe 980123)
 	&BurnDrvCpsMvscdhc,			// Marvel Vs. Capcom: Clash of Super Heroes (Hack, Delayed Hyper Combo v11)
+	&BurnDrvCpsMvschr,			// Marvel Vs. Capcom: Clash of Super Heroes (Hack, Heroes Reborn V0.3)
 	&BurnDrvCpsMvsch,			// Marvel Vs. Capcom: Clash of Super Heroes (Hispanic 980123)
 	&BurnDrvCpsMvscjr1,			// Marvel Vs. Capcom: Clash of Super Heroes (Japan 980112)
 	&BurnDrvCpsMvscjsing,		// Marvel Vs. Capcom: Clash of Super Heroes (Japan 980123) (Single PCB)
@@ -53780,6 +53784,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSfa3u,			// Street Fighter Alpha 3 (USA 980904)
 	&BurnDrvgba_sfa3u,			// Street Fighter Alpha 3 (USA)
 	&BurnDrvCpsSfa3re,			// Street Fighter Alpha 3 Restoration (Hack, USA RC5)
+	&BurnDrvCpsSfa3up,			// Street Fighter Alpha 3 Upper (Hack, USA RC1)
 	&BurnDrvCpsSfa3ce,			// Street Fighter Alpha 3: Challenger's Edition
 	&BurnDrvCpsSfa3xl,			// Street Fighter Alpha 3: Xiang Long Edition (Hack by pipi899, Ver.2009-05-10)
 	&BurnDrvCpsSfaex,			// Street Fighter Alpha EX: Warriors' Dreams (Hack, USA RC3)
@@ -54059,6 +54064,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSfz3mix13,		// Street Fighter Zero 3 Mix v0.13
 	&BurnDrvCpsSfz3mix,			// Street Fighter Zero 3 Mix v0.32
 	&BurnDrvCpsSfz3rej,			// Street Fighter Zero 3 Restoration (Hack, Japan RC5)
+	&BurnDrvCpsSfz3up,			// Street Fighter Zero 3 Upper (Hack, Japan RC1)
 	&BurnDrvgba_sfa3j,			// Street Fighter Zero 3 Upper (Japan)
 	&BurnDrvCpsSfz3te,			// Street Fighter Zero 3: Training Edition v1.2 (Japan 980629)
 	&BurnDrvCpsSfzexa,			// Street Fighter Zero EX (Hack, Asia RC3)
@@ -74658,6 +74664,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "mvscr1", "capcom/d_cps2.cpp"},
 	{ "mvsc", "capcom/d_cps2.cpp"},
 	{ "mvscdhc", "capcom/d_cps2.cpp"},
+	{ "mvschr", "capcom/d_cps2.cpp"},
 	{ "mvsch", "capcom/d_cps2.cpp"},
 	{ "mvscjr1", "capcom/d_cps2.cpp"},
 	{ "mvscjsing", "capcom/d_cps2.cpp"},
@@ -83511,6 +83518,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sfa3u", "capcom/d_cps2.cpp"},
 	{ "gba_sfa3u", "gba/d_gba.cpp"},
 	{ "sfa3re", "capcom/d_cps2.cpp"},
+	{ "sfa3up", "capcom/d_cps2_custom.cpp"},
 	{ "sfa3ce", "capcom/d_cps2.cpp"},
 	{ "sfa3xl", "capcom/d_cps2.cpp"},
 	{ "sfaex", "capcom/d_cps2.cpp"},
@@ -83780,6 +83788,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sfz3mix13", "capcom/d_cps2.cpp"},
 	{ "sfz3mix", "capcom/d_cps2_custom.cpp"},
 	{ "sfz3rej", "capcom/d_cps2.cpp"},
+	{ "sfz3up", "capcom/d_cps2_custom.cpp"},
 	{ "gba_sfa3j", "gba/d_gba.cpp"},
 	{ "sfz3te", "capcom/d_cps2.cpp"},
 	{ "sfzexa", "capcom/d_cps2.cpp"},

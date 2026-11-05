@@ -248,6 +248,7 @@ extern bool bAllowDepth32;
 extern bool bPatchedRomsetsEnabled;
 extern bool bLibretroSupportsAudioBuffStatus;
 extern bool bLowPassFilterEnabled;
+extern bool bRumbleEnabled;
 extern UINT32 nVerticalMode;
 extern UINT32 nNewWidth;
 extern UINT32 nNewHeight;

@@ -100874,6 +100874,35 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mvschr" cloneof="mvsc" romof="mvsc" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Marvel Vs. Capcom: Clash of Super Heroes (Hack, Heroes Reborn V0.3)</description>
+		<year>2026</year>
+		<manufacturer>hack (N41)</manufacturer>
+		<rom name="mvchr.03a" size="524288" crc="283c6b7a"/>
+		<rom name="mvchr.04a" size="524288" crc="28153025"/>
+		<rom name="mvchr.05a" size="524288" crc="e20ca6b8"/>
+		<rom name="mvchr.06a" size="524288" crc="e44b6038"/>
+		<rom name="mvchr.07" size="524288" crc="bdf522ad"/>
+		<rom name="mvc.08" merge="mvc.08" size="524288" crc="bc002fcd"/>
+		<rom name="mvc.09" merge="mvc.09" size="524288" crc="c67b26df"/>
+		<rom name="mvchr.10" size="524288" crc="2dad85e9"/>
+		<rom name="mvchr.13m" size="4194304" crc="e760e5ce"/>
+		<rom name="mvchr.15m" size="4194304" crc="578b47eb"/>
+		<rom name="mvchr.17m" size="4194304" crc="11f1426f"/>
+		<rom name="mvchr.19m" size="4194304" crc="8252314f"/>
+		<rom name="mvc.14m" merge="mvc.14m" size="4194304" crc="7f1df4e4"/>
+		<rom name="mvc.16m" merge="mvc.16m" size="4194304" crc="90bd3203"/>
+		<rom name="mvc.18m" merge="mvc.18m" size="4194304" crc="67aaf727"/>
+		<rom name="mvc.20m" merge="mvc.20m" size="4194304" crc="8b0bade8"/>
+		<rom name="mvc.01" merge="mvc.01" size="131072" crc="41629e95"/>
+		<rom name="mvc.02" merge="mvc.02" size="131072" crc="963abf6b"/>
+		<rom name="mvc.11m" merge="mvc.11m" size="4194304" crc="850fe663"/>
+		<rom name="mvc.12m" merge="mvc.12m" size="4194304" crc="7ccb1896"/>
+		<rom name="mvsc.key" merge="mvsc.key" size="20" crc="7e101e09"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mvsch" cloneof="mvsc" romof="mvsc" sourcefile="capcom/d_cps2.cpp">
 		<description>Marvel Vs. Capcom: Clash of Super Heroes (Hispanic 980123)</description>
 		<year>1998</year>
@@ -168606,6 +168635,46 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="sfa3up" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2_custom.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter Alpha 3 Upper (Hack, USA RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="sz3upu.03c" size="524288" crc="7915c758"/>
+		<rom name="sz3upu.04c" size="524288" crc="5f1f6a5f"/>
+		<rom name="sz3up.05c" size="524288" crc="e88579d0"/>
+		<rom name="sz3up.06c" size="524288" crc="72ea9db2"/>
+		<rom name="sz3up.07c" size="524288" crc="1c11e502"/>
+		<rom name="sz3upu.08c" size="524288" crc="fcdd63d4"/>
+		<rom name="sz3upu.09c" size="524288" crc="9c05a8db"/>
+		<rom name="sz3upu.10b" size="524288" crc="7e55f9dd"/>
+		<rom name="sz3upu.prg" size="4194304" crc="49f89c7d"/>
+		<rom name="sz3upu.13m" size="4194304" crc="61becdec"/>
+		<rom name="sz3upu.15m" size="4194304" crc="af681c33"/>
+		<rom name="sz3upu.17m" size="4194304" crc="0c285d90"/>
+		<rom name="sz3upu.19m" size="4194304" crc="c7668d4f"/>
+		<rom name="sz3upu.14m" size="4194304" crc="8b0ff042"/>
+		<rom name="sz3upu.16m" size="4194304" crc="45b9ef07"/>
+		<rom name="sz3upu.18m" size="4194304" crc="96efde1e"/>
+		<rom name="sz3upu.20m" size="4194304" crc="fa4ba5de"/>
+		<rom name="sz3upu.c9" size="4194304" crc="29f889bf"/>
+		<rom name="sz3upu.c10" size="4194304" crc="677c42d4"/>
+		<rom name="sz3upu.c11" size="4194304" crc="54908458"/>
+		<rom name="sz3upu.c12" size="4194304" crc="f112bbe0"/>
+		<rom name="sz3upu.c13" size="4194304" crc="ce032f1b"/>
+		<rom name="sz3upu.c14" size="4194304" crc="02441263"/>
+		<rom name="sz3upu.c15" size="4194304" crc="5d4a533b"/>
+		<rom name="sz3upu.c16" size="4194304" crc="d908a66e"/>
+		<rom name="sz3up.01" size="131072" crc="66064fde"/>
+		<rom name="sz3up.02" size="131072" crc="92270c80"/>
+		<rom name="sz3up.z80" size="262144" crc="08785e94"/>
+		<rom name="sz3.11m" merge="sz3.11m" size="4194304" crc="1c89eed1"/>
+		<rom name="sz3.12m" merge="sz3.12m" size="4194304" crc="f392b13a"/>
+		<rom name="sz3up.q3" size="25165824" crc="3338dcbc"/>
+		<rom name="sfz3j.key" size="20" crc="d30cca8d"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sfa3ce" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2.cpp">
 		<description>Street Fighter Alpha 3: Challenger's Edition</description>
 		<year>2022</year>
@@ -175960,6 +176029,46 @@
 		<rom name="sz3.02" merge="sz3.02" size="131072" crc="72445dc4"/>
 		<rom name="sz3.11m" merge="sz3.11m" size="4194304" crc="1c89eed1"/>
 		<rom name="sz3.12m" merge="sz3.12m" size="4194304" crc="f392b13a"/>
+		<rom name="sfz3j.key" size="20" crc="d30cca8d"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sfz3up" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2_custom.cpp">
+		<comment>Hack</comment>
+		<description>Street Fighter Zero 3 Upper (Hack, Japan RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="sz3upj.03c" size="524288" crc="fcd838fd"/>
+		<rom name="sz3upj.04c" size="524288" crc="34a998eb"/>
+		<rom name="sz3up.05c" size="524288" crc="e88579d0"/>
+		<rom name="sz3up.06c" size="524288" crc="72ea9db2"/>
+		<rom name="sz3up.07c" size="524288" crc="1c11e502"/>
+		<rom name="sz3upj.08c" size="524288" crc="afac9595"/>
+		<rom name="sz3upj.09c" size="524288" crc="3631fa4e"/>
+		<rom name="sz3upj.10b" size="524288" crc="dcf1f0a1"/>
+		<rom name="sz3upj.prg" size="4194304" crc="724978c8"/>
+		<rom name="sz3upj.13m" size="4194304" crc="007da368"/>
+		<rom name="sz3upj.15m" size="4194304" crc="dbcb4662"/>
+		<rom name="sz3upj.17m" size="4194304" crc="c0a990d3"/>
+		<rom name="sz3upj.19m" size="4194304" crc="d099bd8e"/>
+		<rom name="sz3upj.14m" size="4194304" crc="c8290ab1"/>
+		<rom name="sz3upj.16m" size="4194304" crc="ae1172ca"/>
+		<rom name="sz3upj.18m" size="4194304" crc="35dcf0a0"/>
+		<rom name="sz3upj.20m" size="4194304" crc="a7a364e4"/>
+		<rom name="sz3upj.c9" size="4194304" crc="f3026e14"/>
+		<rom name="sz3upj.c10" size="4194304" crc="775f7fab"/>
+		<rom name="sz3upj.c11" size="4194304" crc="2645a852"/>
+		<rom name="sz3upj.c12" size="4194304" crc="e93fa063"/>
+		<rom name="sz3upj.c13" size="4194304" crc="ae1cd7b3"/>
+		<rom name="sz3upj.c14" size="4194304" crc="b42a03bf"/>
+		<rom name="sz3upj.c15" size="4194304" crc="0339e89c"/>
+		<rom name="sz3upj.c16" size="4194304" crc="03c0ac9c"/>
+		<rom name="sz3up.01" size="131072" crc="66064fde"/>
+		<rom name="sz3up.02" size="131072" crc="92270c80"/>
+		<rom name="sz3up.z80" size="262144" crc="08785e94"/>
+		<rom name="sz3.11m" merge="sz3.11m" size="4194304" crc="1c89eed1"/>
+		<rom name="sz3.12m" merge="sz3.12m" size="4194304" crc="f392b13a"/>
+		<rom name="sz3up.q3" size="25165824" crc="3338dcbc"/>
 		<rom name="sfz3j.key" size="20" crc="d30cca8d"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

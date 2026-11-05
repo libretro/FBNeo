@@ -60,6 +60,7 @@ bool bAllowDepth32                    = false;
 bool bPatchedRomsetsEnabled           = true;
 bool bLibretroSupportsAudioBuffStatus = false;
 bool bLowPassFilterEnabled            = false;
+bool bRumbleEnabled                   = true;
 UINT32 nVerticalMode                  = 0;
 UINT32 nNewWidth                      = 640;
 UINT32 nNewHeight                     = 480;
@@ -366,6 +367,20 @@ static struct retro_core_option_v2_definition var_fbneo_socd = {
 		{ NULL, NULL },
 	},
 	"3"
+};
+static struct retro_core_option_v2_definition var_fbneo_rumble = {
+	"fbneo-rumble",
+	"Rumble",
+	NULL,
+	"Allow games with force feedback (vibration motor, shaker...) to use controller rumble",
+	NULL,
+	"input",
+	{
+		{ "disabled", NULL },
+		{ "enabled",  NULL },
+		{ NULL,       NULL },
+	},
+	"enabled"
 };
 static struct retro_core_option_v2_definition var_fbneo_lightgun_crosshair_emulation = {
 	"fbneo-lightgun-crosshair-emulation",
@@ -1024,6 +1039,8 @@ void set_environment()
 	var_fbneo_lightgun_crosshair_emulation.values[2].value = RETRO_CROSSHAIR_VALUE_2;
 	var_fbneo_lightgun_crosshair_emulation.default_value   = RETRO_CROSSHAIR_VALUE_0;
 	vars_systems.push_back(&var_fbneo_lightgun_crosshair_emulation);
+
+	vars_systems.push_back(&var_fbneo_rumble);
 
 	// Add the video core options
 	var_fbneo_force_60hz.desc                              = RETRO_FORCE60_CAT_DESC;
@@ -2007,6 +2024,14 @@ void check_variables(void)
 		else if (strcmp(var.value, RETRO_CROSSHAIR_VALUE_2) == 0)
 			nLightgunCrosshairEmulation = 2;
 		RefreshLightgunCrosshair();
+	}
+
+	var.key = var_fbneo_rumble.key;
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+	{
+		bRumbleEnabled = (strcmp(var.value, "enabled") == 0);
+		if (!bRumbleEnabled)
+			InputStopRumble();
 	}
 
 #ifdef USE_CYCLONE

@@ -45,6 +45,9 @@ static bool bInputInitialized = false;
 static bool bControllersNeedRefresh = true;
 static bool bControllersSetOnce = false;
 static bool bLibretroSupportsBitmasks = false;
+static bool bRumbleAvailable = false;
+static struct retro_rumble_interface sRumbleInterface;
+static UINT16 nRumbleState[MAX_PLAYERS][2];
 static char* pDirections[MAX_PLAYERS][6];
 UINT32 nDiagInputHoldCounter = 0;
 
@@ -3530,6 +3533,49 @@ void RefreshLightgunCrosshair()
 			bBurnGunHide[i] = (nLightgunCrosshairEmulation == 0 && (nDeviceType[i] == RETRO_DEVICE_LIGHTGUN || nDeviceType[i] == RETRO_DEVICE_TOUCHSCREEN)) || (nLightgunCrosshairEmulation == 1);
 }
 
+static void RumbleSet(unsigned port, UINT16 nStrong, UINT16 nWeak)
+{
+	if (nRumbleState[port][0] != nStrong) {
+		sRumbleInterface.set_rumble_state(port, RETRO_RUMBLE_STRONG, nStrong);
+		nRumbleState[port][0] = nStrong;
+	}
+	if (nRumbleState[port][1] != nWeak) {
+		sRumbleInterface.set_rumble_state(port, RETRO_RUMBLE_WEAK, nWeak);
+		nRumbleState[port][1] = nWeak;
+	}
+}
+
+void InputStopRumble()
+{
+	if (!bRumbleAvailable)
+		return;
+
+	for (unsigned port = 0; port < MAX_PLAYERS; port++)
+		RumbleSet(port, 0, 0);
+}
+
+// Called by drivers through BurnRumble(), player n is libretro port n
+static INT32 __cdecl RetroSetRumble(INT32 nPlayer, INT32 nStrong, INT32 nWeak)
+{
+	if (!bRumbleAvailable)
+		return 1;
+
+	if (nPlayer < 0) {
+		InputStopRumble();
+		return 0;
+	}
+
+	if (nPlayer >= MAX_PLAYERS)
+		return 1;
+
+	if (!bRumbleEnabled)
+		nStrong = nWeak = 0;
+
+	RumbleSet(nPlayer, nStrong, nWeak);
+
+	return 0;
+}
+
 void InputInit()
 {
 	if (environ_cb(RETRO_ENVIRONMENT_GET_INPUT_BITMASKS, NULL))
@@ -3562,11 +3608,19 @@ void InputInit()
 	GameInpInit();
 	GameInpDefault();
 
+	memset(nRumbleState, 0, sizeof(nRumbleState));
+	bRumbleAvailable = environ_cb(RETRO_ENVIRONMENT_GET_RUMBLE_INTERFACE, &sRumbleInterface) && sRumbleInterface.set_rumble_state;
+	BurnExtRumbleCallback = RetroSetRumble;
+
 	bInputInitialized = true;
 }
 
 void InputExit()
 {
+	InputStopRumble();
+	BurnExtRumbleCallback = NULL;
+	bRumbleAvailable = false;
+
 	if (GameInp) {
 		free(GameInp);
 		GameInp = NULL;

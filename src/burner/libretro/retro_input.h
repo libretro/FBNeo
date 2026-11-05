@@ -61,6 +61,7 @@ void RefreshLightgunCrosshair();
 void InputMake(void);
 void InputInit();
 void InputExit();
+void InputStopRumble();
 void SetDefaultDeviceTypes();
 void SetControllerInfo();
 
