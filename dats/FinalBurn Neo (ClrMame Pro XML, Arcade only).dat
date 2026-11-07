@@ -70597,6 +70597,29 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gstrik2j" cloneof="gstrik2" romof="gstrik2" sourcefile="pst90s/d_metro.cpp">
+		<description>Grand Striker 2 (Japan)</description>
+		<year>1996</year>
+		<manufacturer>Human Amusement</manufacturer>
+		<rom name="prg0.107" size="524288" crc="e60a8c19"/>
+		<rom name="prg1.108" size="524288" crc="853f6f7c"/>
+		<rom name="prg2.109" merge="prg2.109" size="524288" crc="ead86919"/>
+		<rom name="prg3.110" merge="prg3.110" size="524288" crc="e0b026e3"/>
+		<rom name="sprg.30" merge="sprg.30" size="131072" crc="aeef6045"/>
+		<rom name="chr0.80" merge="chr0.80" size="2097152" crc="f63a52a9"/>
+		<rom name="chr1.79" merge="chr1.79" size="2097152" crc="4110c184"/>
+		<rom name="chr2.78" merge="chr2.78" size="2097152" crc="ddb4b9ee"/>
+		<rom name="chr3.77" merge="chr3.77" size="2097152" crc="5ab367db"/>
+		<rom name="chr4.84" merge="chr4.84" size="2097152" crc="77d7ef99"/>
+		<rom name="chr5.83" merge="chr5.83" size="2097152" crc="a4d49e95"/>
+		<rom name="chr6.82" merge="chr6.82" size="2097152" crc="32eb33b0"/>
+		<rom name="chr7.81" merge="chr7.81" size="2097152" crc="2d30a21e"/>
+		<rom name="psacrom.60" merge="psacrom.60" size="2097152" crc="73f1f279"/>
+		<rom name="sndpcm-b.22" merge="sndpcm-b.22" size="2097152" crc="a5d844d2"/>
+		<rom name="sndpcm-a.23" merge="sndpcm-a.23" size="2097152" crc="e6d32373"/>
+		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="grndtour" sourcefile="pre90s/d_iqblock.cpp">
 		<description>Grand Tour (V100U)</description>
 		<year>1993</year>
@@ -79194,6 +79217,30 @@
 		<rom name="hs2.15m" merge="hs2.15m" size="8388608" crc="10a0ae4d"/>
 		<rom name="hs2.17m" merge="hs2.17m" size="8388608" crc="adfa7726"/>
 		<rom name="hs2.19m" merge="hs2.19m" size="8388608" crc="bb3ae322"/>
+		<rom name="hs2.01" merge="hs2.01" size="131072" crc="c1a13786"/>
+		<rom name="hs2.02" merge="hs2.02" size="131072" crc="2d8794aa"/>
+		<rom name="hs2.11m" merge="hs2.11m" size="8388608" crc="0e15c359"/>
+		<rom name="hsf2j.key" size="20" crc="19455a93"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hsf2re" cloneof="hsf2" romof="hsf2" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Hyper Street Fighter II: The Anniversary Edition (English Restoration, 2026-11-05)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="hs2re.03c" size="524288" crc="c773cb30"/>
+		<rom name="hs2re.04b" size="524288" crc="008c3478"/>
+		<rom name="hs2j.05" merge="hs2.05" size="524288" crc="dde34a35"/>
+		<rom name="hs2j.06" merge="hs2.06" size="524288" crc="f4e56dda"/>
+		<rom name="hs2j.07" merge="hs2.07" size="524288" crc="ee4420fc"/>
+		<rom name="hs2j.08" merge="hs2.08" size="524288" crc="c9441533"/>
+		<rom name="hs2j.09" merge="hs2.09" size="524288" crc="3fc638a8"/>
+		<rom name="hs2re.10" size="524288" crc="49529980"/>
+		<rom name="hs2re.13m" size="8388608" crc="448c3ede"/>
+		<rom name="hs2re.15m" size="8388608" crc="642e11ec"/>
+		<rom name="hs2re.17m" size="8388608" crc="0aeb0c24"/>
+		<rom name="hs2re.19m" size="8388608" crc="180c1a31"/>
 		<rom name="hs2.01" merge="hs2.01" size="131072" crc="c1a13786"/>
 		<rom name="hs2.02" merge="hs2.02" size="131072" crc="2d8794aa"/>
 		<rom name="hs2.11m" merge="hs2.11m" size="8388608" crc="0e15c359"/>
@@ -168190,15 +168237,15 @@
 	</game>
 	<game name="sfa2ds" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Alpha 2 Dash (Europe, PS2 Backport RC7)</description>
+		<description>Street Fighter Alpha 2 Dash (Europe, PS2 Backport RC8)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2ds.03" size="524288" crc="9c4956b7"/>
-		<rom name="sz2ds.04" size="524288" crc="f2b045ba"/>
+		<rom name="sz2ds.03" size="524288" crc="7cce63b3"/>
+		<rom name="sz2ds.04" size="524288" crc="266c987b"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
 		<rom name="sz2ds.07" size="524288" crc="7e22f11e"/>
-		<rom name="sz2ds.08" size="524288" crc="1f7691f0"/>
+		<rom name="sz2ds.08" size="524288" crc="45aedca6"/>
 		<rom name="sz2ds.13m" size="4194304" crc="771fdfaa"/>
 		<rom name="sz2ds.15m" size="4194304" crc="b29bda7a"/>
 		<rom name="sz2ds.17m" size="4194304" crc="c2dca3e0"/>
@@ -168217,24 +168264,24 @@
 	</game>
 	<game name="sfa2ex" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter Alpha 2 EX (Hack, USA RC3)</description>
+		<description>Street Fighter Alpha 2 EX (Hack, USA RC4)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sz2ex.03" size="524288" crc="03c5978c"/>
-		<rom name="sz2ex.04" size="524288" crc="7a3d6732"/>
+		<rom name="sz2ex.03" size="524288" crc="e5d2b958"/>
+		<rom name="sz2ex.04" size="524288" crc="d2e7073d"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
-		<rom name="sz2ex.07" size="524288" crc="a37a6f6a"/>
-		<rom name="sz2ex.08" size="524288" crc="9f231db8"/>
-		<rom name="sz2ex.13m" size="4194304" crc="a27253f3"/>
-		<rom name="sz2ex.15m" size="4194304" crc="2a0c5df1"/>
-		<rom name="sz2ex.17m" size="4194304" crc="140cdbb2"/>
-		<rom name="sz2ex.19m" size="4194304" crc="b5beabf6"/>
+		<rom name="sz2ex.07" size="524288" crc="20bd7520"/>
+		<rom name="sz2ex.08" size="524288" crc="1ae055f9"/>
+		<rom name="sz2ex.13m" size="4194304" crc="e2aa130c"/>
+		<rom name="sz2ex.15m" size="4194304" crc="4d0a4828"/>
+		<rom name="sz2ex.17m" size="4194304" crc="6abd6a7a"/>
+		<rom name="sz2ex.19m" size="4194304" crc="fa0ebaf3"/>
 		<rom name="sz2ex.14m" size="1048576" crc="33403c39"/>
 		<rom name="sz2ex.16m" size="1048576" crc="f947ab53"/>
 		<rom name="sz2ex.18m" size="1048576" crc="998bcd46"/>
 		<rom name="sz2ex.20m" size="1048576" crc="736317fa"/>
-		<rom name="sz2ex.01" size="131072" crc="fa497904"/>
+		<rom name="sz2ex.01" size="131072" crc="04e71681"/>
 		<rom name="sz2ds.02" size="131072" crc="c45ee83c"/>
 		<rom name="sz2ds.11m" size="4194304" crc="f23db54d"/>
 		<rom name="sz2ds.12m" size="4194304" crc="c824a1ea"/>
@@ -168244,15 +168291,15 @@
 	</game>
 	<game name="sfa2gl" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Alpha 2 Gold (USA, PS2 Backport RC7)</description>
+		<description>Street Fighter Alpha 2 Gold (USA, PS2 Backport RC8)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2gl.03" size="524288" crc="94bdce5a"/>
-		<rom name="sz2gl.04" size="524288" crc="09f3e26d"/>
+		<rom name="sz2gl.03" size="524288" crc="72711ffa"/>
+		<rom name="sz2gl.04" size="524288" crc="7ddaee23"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
 		<rom name="sz2gl.07" size="524288" crc="04ae74fc"/>
-		<rom name="sz2gl.08" size="524288" crc="2a16319f"/>
+		<rom name="sz2gl.08" size="524288" crc="70ce7cc9"/>
 		<rom name="sz2gl.13m" size="4194304" crc="0be1771d"/>
 		<rom name="sz2gl.15m" size="4194304" crc="895cab31"/>
 		<rom name="sz2gl.17m" size="4194304" crc="118cba69"/>
@@ -175615,15 +175662,15 @@
 	</game>
 	<game name="sfz2dsa" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Zero 2 Dash (Asia, PS2 Backport RC7)</description>
+		<description>Street Fighter Zero 2 Dash (Asia, PS2 Backport RC8)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2dsa.03a" size="524288" crc="da38f64d"/>
-		<rom name="sz2dsa.04a" size="524288" crc="3146ab3e"/>
+		<rom name="sz2dsa.03a" size="524288" crc="21502954"/>
+		<rom name="sz2dsa.04a" size="524288" crc="99e8bf7e"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
 		<rom name="sz2dsa.07a" size="524288" crc="74b0a2d0"/>
-		<rom name="sz2dsa.08a" size="524288" crc="1a469525"/>
+		<rom name="sz2dsa.08a" size="524288" crc="409ed873"/>
 		<rom name="sz2dsa.13m" size="4194304" crc="e35cbaae"/>
 		<rom name="sz2dsa.15m" size="4194304" crc="045e1960"/>
 		<rom name="sz2dsa.17m" size="4194304" crc="42e56efc"/>
@@ -175642,15 +175689,15 @@
 	</game>
 	<game name="sfz2dsj" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Street Fighter Zero 2 Dash (Japan, PS2 Backport RC7)</description>
+		<description>Street Fighter Zero 2 Dash (Japan, PS2 Backport RC8)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2dsj.03a" size="524288" crc="aefd56e8"/>
-		<rom name="sz2dsj.04a" size="524288" crc="bb9526b6"/>
+		<rom name="sz2dsj.03a" size="524288" crc="ae51726a"/>
+		<rom name="sz2dsj.04a" size="524288" crc="7b435b38"/>
 		<rom name="szaj.05a" size="524288" crc="c88ebf88"/>
 		<rom name="szaj.06a" size="524288" crc="35ed5b7a"/>
 		<rom name="sz2dsj.07a" size="524288" crc="1ccf395a"/>
-		<rom name="sz2dsj.08a" size="524288" crc="efcc529b"/>
+		<rom name="sz2dsj.08a" size="524288" crc="9376e7b3"/>
 		<rom name="sz2dsj.13m" size="4194304" crc="ae258b4a"/>
 		<rom name="sz2dsj.15m" size="4194304" crc="6fd70f52"/>
 		<rom name="sz2dsj.17m" size="4194304" crc="c6caea78"/>
@@ -175669,15 +175716,15 @@
 	</game>
 	<game name="sfz2exj" cloneof="sfz2al" romof="sfz2al" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter Zero 2 EX (Hack, Japan RC3)</description>
+		<description>Street Fighter Zero 2 EX (Hack, Japan RC4)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sz2exj.03a" size="524288" crc="085726a0"/>
-		<rom name="sz2exj.04a" size="524288" crc="9b8329a2"/>
+		<rom name="sz2exj.03a" size="524288" crc="0b79e260"/>
+		<rom name="sz2exj.04a" size="524288" crc="2f8116a9"/>
 		<rom name="szaj.05a" size="524288" crc="c88ebf88"/>
 		<rom name="szaj.06a" size="524288" crc="35ed5b7a"/>
-		<rom name="sz2exj.07a" size="524288" crc="3cbb8ebc"/>
-		<rom name="sz2exj.08a" size="524288" crc="58220a6e"/>
+		<rom name="sz2exj.07a" size="524288" crc="966a1729"/>
+		<rom name="sz2exj.08a" size="524288" crc="3f68a835"/>
 		<rom name="sz2exj.13m" size="4194304" crc="415077c3"/>
 		<rom name="sz2exj.15m" size="4194304" crc="e4593f76"/>
 		<rom name="sz2exj.17m" size="4194304" crc="22f96062"/>
@@ -175686,7 +175733,7 @@
 		<rom name="sz2exj.16m" size="1048576" crc="42e971a6"/>
 		<rom name="sz2exj.18m" size="1048576" crc="fd1227f3"/>
 		<rom name="sz2exj.20m" size="1048576" crc="d06ed26a"/>
-		<rom name="sz2ex.01" size="131072" crc="fa497904"/>
+		<rom name="sz2ex.01" size="131072" crc="04e71681"/>
 		<rom name="sz2ds.02" size="131072" crc="c45ee83c"/>
 		<rom name="sz2ds.11m" size="4194304" crc="f23db54d"/>
 		<rom name="sz2ds.12m" size="4194304" crc="c824a1ea"/>
@@ -226521,6 +226568,34 @@
 		<rom name="065-a06.1d" merge="065-a06.1f" size="2097152" crc="5adbcee0"/>
 		<rom name="xmen_ucb.nv" size="128" crc="f3d0f682"/>
 		<video type="raster" orientation="horizontal" width="576" height="224" aspectx="8" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="xmvsfplus" cloneof="xmvsf" romof="xmvsf" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>X-Men vs Street Fighter PLUS (Europe 961004, v1.0, Hack)</description>
+		<year>2026</year>
+		<manufacturer>rob2d</manufacturer>
+		<rom name="xvsplus.03f" size="524288" crc="5ad5cbcc"/>
+		<rom name="xvsplus.04f" size="524288" crc="8f54364f"/>
+		<rom name="xvsplus.05a" size="524288" crc="37043f19"/>
+		<rom name="xvs.06a" merge="xvs.06a" size="524288" crc="e8e2c75c"/>
+		<rom name="xvs.07" merge="xvs.07" size="524288" crc="08f0abed"/>
+		<rom name="xvsplus.08" size="524288" crc="755bc53a"/>
+		<rom name="xvsplus.09" size="524288" crc="1e356679"/>
+		<rom name="xvsplus.13m" size="4194304" crc="4cc93228"/>
+		<rom name="xvsplus.15m" size="4194304" crc="64681ae8"/>
+		<rom name="xvsplus.17m" size="4194304" crc="2693a030"/>
+		<rom name="xvsplus.19m" size="4194304" crc="1754a1bf"/>
+		<rom name="xvs.14m" merge="xvs.14m" size="4194304" crc="bcac2e41"/>
+		<rom name="xvs.16m" merge="xvs.16m" size="4194304" crc="ea04a272"/>
+		<rom name="xvs.18m" merge="xvs.18m" size="4194304" crc="b0def86a"/>
+		<rom name="xvs.20m" merge="xvs.20m" size="4194304" crc="4b40ff9f"/>
+		<rom name="xvsplus.01" size="131072" crc="dfcaf174"/>
+		<rom name="xvs.02" merge="xvs.02" size="131072" crc="101bdee9"/>
+		<rom name="xvs.11m" merge="xvs.11m" size="2097152" crc="9cadcdbc"/>
+		<rom name="xvs.12m" merge="xvs.12m" size="2097152" crc="7b11e460"/>
+		<rom name="xmvsf.key" merge="xmvsf.key" size="20" crc="d5c07311"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="xmvsfar3" cloneof="xmvsf" romof="xmvsf" sourcefile="capcom/d_cps2.cpp">

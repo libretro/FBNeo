@@ -4052,7 +4052,7 @@
 		<description>Blasteroids (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Image Works</manufacturer>
-		<rom name="Blasteroids 48K-128K (1989)(Image Works).tap" size="50430" crc="5cfaa878"/>
+		<rom name="Blasteroids 48K-128K (1989)(Image Works).tzx" size="48165" crc="14fff351"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -6288,6 +6288,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cherilbosque" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Cheril of the Bosque (48K) (HB)</description>
+		<year>2010</year>
+		<manufacturer>The Mojon Twins</manufacturer>
+		<rom name="Cheril of the Bosque 48K (2010)(The Mojon Twins).tzx" size="37565" crc="2e1efa58"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cherilgod" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Cheril the Goddess (48K) (HB, v2.0)</description>
@@ -6473,7 +6483,7 @@
 		<description>Chopper Drop (48K-128K) (HB, v1.1)</description>
 		<year>2011</year>
 		<manufacturer>Paul Jenkinson</manufacturer>
-		<rom name="Chopper Drop 48K-128K (2011)(Paul Jenkinson).tap" size="31591" crc="8c4eb3fe"/>
+		<rom name="Chopper Drop v1.1 48K-128K (2011)(Paul Jenkinson).tzx" size="31631" crc="6df809fc"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -6926,8 +6936,8 @@
 		<comment>Homebrew</comment>
 		<description>Coloco (48K) (HB)</description>
 		<year>2020</year>
-		<manufacturer>The Mojon Twins</manufacturer>
-		<rom name="Coloco 48K (2020)(The Mojon Twins).tap" size="46855" crc="dd07fa17"/>
+		<manufacturer>Tuxedo Games</manufacturer>
+		<rom name="Coloco 48K (2020)(Tuxedo Games).tap" size="46855" crc="dd07fa17"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -7242,10 +7252,10 @@
 	</game>
 	<game name="cooper" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, AY Sound supported</comment>
-		<description>Cooper Run (48K) (HB)</description>
+		<description>Cooper Run (48K) (HB, v1.1)</description>
 		<year>2026</year>
-		<manufacturer>MnnPT</manufacturer>
-		<rom name="Cooper Run 48K-AY (2026)(MnnPT).tap" size="27714" crc="1d3f8db6"/>
+		<manufacturer>MmmPT</manufacturer>
+		<rom name="Cooper Run v1.1 48K-AY (2026)(MmmPT).tap" size="30306" crc="81b13f65"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -9044,6 +9054,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="demonatk" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>Demon Attack ZX (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>FG&amp;AI</manufacturer>
+		<rom name="Demon Attack ZX 48K-AY (2026)(FG&amp;AI).tap" size="30311" crc="5940751f"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="demonjar" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Demon Jar, The (128K) (HB, v1.04)</description>
@@ -9328,7 +9348,7 @@
 		<description>Dingo (48K) (HB, v1.3)</description>
 		<year>2015</year>
 		<manufacturer>Tardis Remakes</manufacturer>
-		<rom name="Dingo v1.3 48K (2015)(Sokurah, Tardis).tap" size="41567" crc="b22b60c3"/>
+		<rom name="Dingo v1.3 48K (2011-15)(Sokurah, Tardis Remakes).tzx" size="41595" crc="8077c3c4"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -9752,6 +9772,17 @@
 		<manufacturer>Codemasters</manufacturer>
 		<rom name="Dizzy - The Ultimate Cartoon Adventure - Crash Special Edition 48K (1987)(Codemasters).tap" size="48581" crc="83d585be"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dizzzruptor" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Demo, Homebrew</comment>
+		<description>Dizzzruptor (128K) (HB, Tech-Demo)</description>
+		<year>2012</year>
+		<manufacturer>Hooy-Program, Tygrys</manufacturer>
+		<rom name="Dizzzruptor 128K (2012)(Hooy-Program, Tygrys).tap" size="200169" crc="75acc4f4"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -11290,10 +11321,10 @@
 	</game>
 	<game name="escfob" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Escape from Omega Base (48K) (HB, v1.3)</description>
+		<description>Escape from Omega Base (48K) (HB, v1.4)</description>
 		<year>2026</year>
-		<manufacturer>ZXCesco</manufacturer>
-		<rom name="Escape from Omega Base v1.3 48K (2026)(ZXCesco).tzx" size="32840" crc="39f32c49"/>
+		<manufacturer>Francesco Scagnelli</manufacturer>
+		<rom name="Escape from Omega Base v1.4 48K (2026)(Francesco Scagnelli).tzx" size="33352" crc="9af82650"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -12421,17 +12452,17 @@
 		<description>Frank N Stein (48K)</description>
 		<year>1984</year>
 		<manufacturer>PSS</manufacturer>
-		<rom name="Frank N Stein 48K (1984)(PSS).tap" size="47860" crc="3ff60912"/>
+		<rom name="Frank N Stein 48K (1984)(PSS).tzx" size="47918" crc="37c1c1d1"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="franknsteinrbt" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Frank N Stein Re-booted (48K) (HB)</description>
+		<description>Frank N Stein Re-booted (48K) (HB, v2.17)</description>
 		<year>2011</year>
 		<manufacturer>Colin Stewart</manufacturer>
-		<rom name="Frank N Stein Re-booted 48K (2011)(Colin Stewart).tap" size="45250" crc="00dec00d"/>
+		<rom name="Frank N Stein Re-booted v2.17 48K (2011)(Colin Stewart).tzx" size="45314" crc="1cbcdc75"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -13895,6 +13926,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="goonieszx" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Goonies ZX, The (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>FG&amp;AI</manufacturer>
+		<rom name="Goonies ZX, The 128K (2026)(FG&amp;AI).tap" size="87659" crc="d5b90d4e"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="goonies" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>NB: it's not a malfunction, the bg-music is horrible!</comment>
 		<description>Goonies, The (48K)</description>
@@ -14476,6 +14518,16 @@
 		<year>2021</year>
 		<manufacturer>EJVG</manufacturer>
 		<rom name="Hallowed Knight v1.4 48K (2021)(EJVG).tap" size="46199" crc="489c76cc"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="halloween" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, type VOCABULARY to get a list of all commands the game understands</comment>
+		<description>Halloween (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Petr Kain</manufacturer>
+		<rom name="Halloween 48K (2026)(Petr Kain).tap" size="24220" crc="f617051a"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -15280,7 +15332,7 @@
 		<description>Horace &amp; the Spiders (16K)</description>
 		<year>1983</year>
 		<manufacturer>Sinclair Research</manufacturer>
-		<rom name="Horace &amp; the Spiders 16K (1983)(Sinclair Research).tap" size="16327" crc="b3095abe"/>
+		<rom name="Horace &amp; the Spiders 16K (1983)(Sinclair Research).tzx" size="16355" crc="5bc5bbb4"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -17128,10 +17180,20 @@
 		<driver status="good"/>
 	</game>
 	<game name="jjack" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<description>Jumping Jack (48K)</description>
+		<description>Jumping Jack (16K)</description>
 		<year>1983</year>
 		<manufacturer>Imagine Software</manufacturer>
-		<rom name="Jumping Jack 48K (1983)(Imagine Software).tap" size="11833" crc="c54ae2a8"/>
+		<rom name="Jumping Jack 16K (1983)(Imagine Software).tap" size="11833" crc="c54ae2a8"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="jjackenh" cloneof="jjack" romof="jjack" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Hack</comment>
+		<description>Jumping Jack - Enhanced (48K) (Hack)</description>
+		<year>1983-2026</year>
+		<manufacturer>FlunkyRetro &amp; Claude AI'26</manufacturer>
+		<rom name="Jumping Jack - Enhanced 48K-AY (1983-2026)(FlunkyRetro &amp; Claude AI'26).tap" size="21745" crc="97d0f8b9"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -18067,7 +18129,7 @@
 		<description>Lala Prologue (48K) (HB)</description>
 		<year>2010</year>
 		<manufacturer>The Mojon Twins</manufacturer>
-		<rom name="Lala Prologue 48K (2010)(The Mojon Twins).tap" size="32855" crc="547b6601"/>
+		<rom name="Lala Prologue 48K (2010)(The Mojon Twins).tzx" size="32889" crc="9c55b5cb"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -25128,6 +25190,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="prism" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Prism (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>AlColella</manufacturer>
+		<rom name="Prism 128K (2026)(AlColella).tap" size="101385" crc="5b445111"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="prisriot" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Prison Riot (48K-128K)</description>
 		<year>1990</year>
@@ -26712,6 +26785,17 @@
 		<manufacturer>Miguetelo</manufacturer>
 		<rom name="Reverse Pong 48K (2020)(Miguetelo).tap" size="26652" crc="6ecd4a6f"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rewindquiz" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Rewind Quiz (128K) (HB, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>MmmPT</manufacturer>
+		<rom name="Rewind Quiz v1.1 128K (2026)(MmmPT).tap" size="81608" crc="9b89db47"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -34554,6 +34638,16 @@
 		<manufacturer>Under4Mhz</manufacturer>
 		<rom name="Vexed 48K v1.08 (2023)(Under4Mhz).tap" size="17352" crc="ada67981"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="viajenapa" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Viaje al Centro de la Napia (48K) (HB)</description>
+		<year>2010</year>
+		<manufacturer>The Mojon Twins</manufacturer>
+		<rom name="Viaje al Centro de la Napia 48K (2010)(The Mojon Twins).tzx" size="36831" crc="53cfdc0a"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

@@ -15677,12 +15677,16 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="psolar" sourcefile="megadrive/d_megadrive.cpp">
-		<comment>Homebrew, 64 Mbit (8MB) cartridge</comment>
+	<game name="psolar" romof="segacd" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew, 64 Mbit (8MB) cartridge, Enhanced Soundtrack Disc with the Mega CD</comment>
 		<description>Pier Solar and the Great Architects (World, Rev. C) (HB)</description>
 		<year>2010</year>
 		<manufacturer>WaterMelon</manufacturer>
 		<rom name="Pier Solar and the Great Architects (World)(Rev C)(2010)(WaterMelon).bin" size="8388608" crc="dfb94f1b"/>
+		<rom name="Sega CD BIOS (USA, v1.10).bin" merge="Sega CD BIOS (USA, v1.10).bin" size="131072" crc="c6d10268"/>
+		<rom name="Mega-CD BIOS (Europe, v1.00).bin" merge="Mega-CD BIOS (Europe, v1.00).bin" size="131072" crc="529ac15a"/>
+		<rom name="Mega-CD BIOS (Japan, v1.00P).bin" merge="Mega-CD BIOS (Japan, v1.00P).bin" size="131072" crc="9d2da8f2"/>
+		<disk name="Pier Solar and the Great Architects - Enhanced Soundtrack Disc (USA)" sha1="05dcd8e5d8dba48ed612f8c737fcf9c3e9812e57" optional="yes" />
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
