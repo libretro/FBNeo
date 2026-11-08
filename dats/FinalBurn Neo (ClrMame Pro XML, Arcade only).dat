@@ -92692,6 +92692,30 @@
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="bagmanf" cloneof="bagman" romof="bagman" sourcefile="pre90s/d_cclimber.cpp">
+		<comment>Bootleg, No speech</comment>
+		<description>Le Bagnard (bootleg on Crazy Kong hardware)</description>
+		<year>1982</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="01.d5.bin" merge="e9_b05.bin" size="4096" crc="e0156191"/>
+		<rom name="02.f5.bin" merge="f9_b06.bin" size="4096" crc="7b758982"/>
+		<rom name="03.h5.bin" merge="f9_b07.bin" size="4096" crc="302a077b"/>
+		<rom name="04.k5.bin" size="4096" crc="b704d761"/>
+		<rom name="05.l5.bin" size="4096" crc="4f0088ab"/>
+		<rom name="2732 05 pos dboard.bin" size="4096" crc="91570033"/>
+		<rom name="12.k11.bin" merge="e1_b02.bin" size="4096" crc="4a0a6b55"/>
+		<rom name="11.h11.bin" size="4096" crc="8043bc1a"/>
+		<rom name="10.n11.bin" merge="j1_b04.bin" size="4096" crc="c680ef04"/>
+		<rom name="09.l11.bin" size="4096" crc="060b044c"/>
+		<rom name="u6" size="32" crc="26aada9e"/>
+		<rom name="v6" size="32" crc="b3fc1505"/>
+		<rom name="t6" size="32" crc="676b3166"/>
+		<rom name="daughterboard.prom" merge="r6.bin" size="32" crc="c58a4f6a"/>
+		<rom name="2732 07 pos dboard.bin" merge="r9_b11.bin" size="4096" crc="2e0057ff"/>
+		<rom name="2732 08 pos dboard.bin" merge="t9_b12.bin" size="4096" crc="b2120edd"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="bagnardi" cloneof="bagman" romof="bagman" sourcefile="pre90s/d_bagman.cpp">
 		<description>Le Bagnard (Itisa, Spain)</description>
 		<year>1983</year>
@@ -100638,21 +100662,21 @@
 	</game>
 	<game name="mshvsfexj" cloneof="mshvsf" romof="mshvsf" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, Japan RC5)</description>
+		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, Japan RC6)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="mvsexj.03i" size="524288" crc="862fef6a"/>
-		<rom name="mvsex.04i" size="524288" crc="cb721ddb"/>
-		<rom name="mvsex.05h" size="524288" crc="626f8eab"/>
+		<rom name="mvsexj.03i" size="524288" crc="8e50ee75"/>
+		<rom name="mvsex.04i" size="524288" crc="d9196f9c"/>
+		<rom name="mvsex.05h" size="524288" crc="ef82fbee"/>
 		<rom name="mvsex.06a" size="524288" crc="444fb179"/>
 		<rom name="mvsex.07b" size="524288" crc="e9cbc426"/>
 		<rom name="mvs.08a" merge="mvs.08a" size="524288" crc="c2813884"/>
 		<rom name="mvsex.09b" size="524288" crc="2be6f5e0"/>
-		<rom name="mvsex.10b" size="524288" crc="d0128c04"/>
-		<rom name="mvsex.13m" size="4194304" crc="5a0765f2"/>
-		<rom name="mvsex.15m" size="4194304" crc="ca4700c6"/>
-		<rom name="mvsex.17m" size="4194304" crc="20979aee"/>
-		<rom name="mvsex.19m" size="4194304" crc="a4e6969f"/>
+		<rom name="mvsex.10b" size="524288" crc="bad46d8a"/>
+		<rom name="mvsex.13m" size="4194304" crc="2d9e887e"/>
+		<rom name="mvsex.15m" size="4194304" crc="d65f6ecb"/>
+		<rom name="mvsex.17m" size="4194304" crc="b2cbd772"/>
+		<rom name="mvsex.19m" size="4194304" crc="690674ec"/>
 		<rom name="mvs.14m" merge="mvs.14m" size="4194304" crc="b3b1972d"/>
 		<rom name="mvs.16m" merge="mvs.16m" size="4194304" crc="08aadb5d"/>
 		<rom name="mvs.18m" merge="mvs.18m" size="4194304" crc="c1228b35"/>
@@ -100667,17 +100691,17 @@
 	</game>
 	<game name="mshvsfex" cloneof="mshvsf" romof="mshvsf" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, USA RC5)</description>
+		<description>Marvel Super Heroes Vs. Street Fighter EX (Hack, USA RC6)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="mvsex.03i" size="524288" crc="31c6df3d"/>
-		<rom name="mvsex.04i" size="524288" crc="cb721ddb"/>
-		<rom name="mvsex.05h" size="524288" crc="626f8eab"/>
+		<rom name="mvsex.03i" size="524288" crc="943102b0"/>
+		<rom name="mvsex.04i" size="524288" crc="d9196f9c"/>
+		<rom name="mvsex.05h" size="524288" crc="5334b038"/>
 		<rom name="mvsex.06a" size="524288" crc="444fb179"/>
 		<rom name="mvsex.07b" size="524288" crc="e9cbc426"/>
 		<rom name="mvs.08a" merge="mvs.08a" size="524288" crc="c2813884"/>
 		<rom name="mvsex.09b" size="524288" crc="2be6f5e0"/>
-		<rom name="mvsex.10b" size="524288" crc="d0128c04"/>
+		<rom name="mvsex.10b" size="524288" crc="bad46d8a"/>
 		<rom name="mvsex.13m" size="4194304" crc="5a0765f2"/>
 		<rom name="mvsex.15m" size="4194304" crc="ca4700c6"/>
 		<rom name="mvsex.17m" size="4194304" crc="20979aee"/>
@@ -121396,38 +121420,38 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="vhunt2s02" cloneof="vhunt2" romof="vhunt2" sourcefile="capcom/d_cps2_custom.cpp">
+	<game name="vhunt2aru" cloneof="vhunt2" romof="vhunt2" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Night Warriors 2 Arrange (Hack, English RC3)</description>
+		<description>Night Warriors 2 Arrange (Hack, English RC4)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="c75s02.p1" size="524288" crc="9354e632"/>
-		<rom name="c75s02.p2" size="524288" crc="7f10f35e"/>
-		<rom name="c75s02.p3" size="524288" crc="87edf306"/>
-		<rom name="c75s02.p4" size="524288" crc="94118a84"/>
-		<rom name="c75s02.p5" size="524288" crc="a324ffeb"/>
-		<rom name="c75s02.p6" size="524288" crc="17b37f5a"/>
-		<rom name="c75s02.p7" size="524288" crc="f3159a3a"/>
-		<rom name="c75s02.p8" size="524288" crc="ecd2d939"/>
-		<rom name="c75s02.p9" size="4194304" crc="673d43b1"/>
-		<rom name="c75s02.c1" size="4194304" crc="82e825c6"/>
-		<rom name="c75s02.c2" size="4194304" crc="678feab2"/>
-		<rom name="c75s02.c3" size="4194304" crc="b9e1cbf8"/>
-		<rom name="c75s02.c4" size="4194304" crc="68d603b4"/>
+		<rom name="vh2aru.03a" size="524288" crc="88b7237b"/>
+		<rom name="vh2aru.04a" size="524288" crc="90a816fb"/>
+		<rom name="vh2ar.05" size="524288" crc="87edf306"/>
+		<rom name="vh2ar.06" size="524288" crc="94118a84"/>
+		<rom name="vh2ar.07" size="524288" crc="a324ffeb"/>
+		<rom name="vh2aru.08" size="524288" crc="72f7271d"/>
+		<rom name="vh2ar.09" size="524288" crc="f3159a3a"/>
+		<rom name="vh2ar.10" size="524288" crc="ecd2d939"/>
+		<rom name="vh2aru.prg" size="4194304" crc="16699598"/>
+		<rom name="vh2aru.13m" size="4194304" crc="ac0ce4f6"/>
+		<rom name="vh2aru.15m" size="4194304" crc="e9a55721"/>
+		<rom name="vh2aru.17m" size="4194304" crc="e089ed6a"/>
+		<rom name="vh2aru.19m" size="4194304" crc="61a131f7"/>
 		<rom name="vh2.14m" merge="vh2.14m" size="4194304" crc="cd09bd63"/>
 		<rom name="vh2.16m" merge="vh2.16m" size="4194304" crc="e0182c15"/>
 		<rom name="vh2.18m" merge="vh2.18m" size="4194304" crc="778dc4f6"/>
 		<rom name="vh2.20m" merge="vh2.20m" size="4194304" crc="605d9d1d"/>
-		<rom name="c75s02.c9" size="2097152" crc="d7d4fecc"/>
-		<rom name="c75s02.c10" size="2097152" crc="95c0d576"/>
-		<rom name="c75s02.c11" size="2097152" crc="66a27497"/>
-		<rom name="c75s02.c12" size="2097152" crc="958494ec"/>
-		<rom name="c75s02.m1" size="131072" crc="f6088d87"/>
-		<rom name="c75s02.m2" size="131072" crc="7c4fae46"/>
-		<rom name="c75s02.m3" size="262144" crc="04ef903d"/>
+		<rom name="vh2aru.c9" size="2097152" crc="b800e4e8"/>
+		<rom name="vh2aru.c10" size="2097152" crc="26221630"/>
+		<rom name="vh2aru.c11" size="2097152" crc="fc786da5"/>
+		<rom name="vh2aru.c12" size="2097152" crc="76766ce6"/>
+		<rom name="vh2ar.01" size="131072" crc="446a8e7f"/>
+		<rom name="vh2ar.02" size="131072" crc="7c4fae46"/>
+		<rom name="vh2ar.z80" size="262144" crc="488a0886"/>
 		<rom name="vh2.11m" merge="vh2.11m" size="4194304" crc="38922efd"/>
 		<rom name="vh2.12m" merge="vh2.12m" size="4194304" crc="6e2430af"/>
-		<rom name="c75s02.q3" size="8388608" crc="24813909"/>
+		<rom name="vh2ar.q3" size="8388608" crc="24813909"/>
 		<rom name="vhunt2.key" merge="vhunt2.key" size="20" crc="61306b20"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -214390,78 +214414,78 @@
 	</game>
 	<game name="usf2j" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Ultra Street Fighter II: The Final Challengers (Japan, Backport RC5)</description>
+		<description>Ultra Street Fighter II: The Final Challengers (Japan, Backport RC6)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="usfxj.03d" size="524288" crc="e3c398a2"/>
-		<rom name="usfxj.04a" size="524288" crc="14b3193b"/>
+		<rom name="usfxj.03d" size="524288" crc="aa47ce72"/>
+		<rom name="usfxj.04a" size="524288" crc="768b62cd"/>
 		<rom name="sfxj.05" size="524288" crc="f4ff18f5"/>
 		<rom name="sfxj.06b" size="524288" crc="413477c2"/>
 		<rom name="usfx.07a" size="524288" crc="43efd652"/>
 		<rom name="usfx.08" size="524288" crc="5859ada7"/>
-		<rom name="usfx.09" size="524288" crc="84f7cb0a"/>
-		<rom name="usf2j.10" size="524288" crc="d67d4eba"/>
+		<rom name="usfx.09" size="524288" crc="b1b33baf"/>
+		<rom name="usf2j.10" size="524288" crc="84679ff3"/>
 		<rom name="usfxj.13m" size="2097152" crc="94f21f8d"/>
 		<rom name="usfxj.15m" size="2097152" crc="8491c9ab"/>
 		<rom name="usfxj.17m" size="2097152" crc="4787477e"/>
 		<rom name="usfxj.19m" size="2097152" crc="61747526"/>
-		<rom name="usfx.14m" size="1048576" crc="e66a5dfd"/>
-		<rom name="usfx.16m" size="1048576" crc="64b83be2"/>
-		<rom name="usfx.18m" size="1048576" crc="8ab760f9"/>
-		<rom name="usfx.20m" size="1048576" crc="7d0eaac0"/>
-		<rom name="usfxj.21m" size="1048576" crc="5170e49d"/>
-		<rom name="usfxj.23m" size="1048576" crc="ae0ced10"/>
-		<rom name="usfxj.25m" size="1048576" crc="977d53ad"/>
-		<rom name="usfxj.27m" size="1048576" crc="08f3adfd"/>
+		<rom name="usfx.14m" size="1048576" crc="f7a04936"/>
+		<rom name="usfx.16m" size="1048576" crc="38ad2876"/>
+		<rom name="usfx.18m" size="1048576" crc="12d01362"/>
+		<rom name="usfx.20m" size="1048576" crc="d03072e4"/>
+		<rom name="usfxj.21m" size="1048576" crc="047e8795"/>
+		<rom name="usfxj.23m" size="1048576" crc="1a6b01b3"/>
+		<rom name="usfxj.25m" size="1048576" crc="0b4d2b85"/>
+		<rom name="usfxj.27m" size="1048576" crc="aca27f61"/>
 		<rom name="usf2j.29m" size="4194304" crc="0b2d8770"/>
 		<rom name="usf2j.31m" size="4194304" crc="89415ad3"/>
 		<rom name="usf2j.33m" size="4194304" crc="c95d337c"/>
 		<rom name="usf2j.35m" size="4194304" crc="2bada15c"/>
-		<rom name="usfxj.01" size="131072" crc="4995819f"/>
-		<rom name="usfxj.02" size="131072" crc="c4b1c9b7"/>
-		<rom name="usfxj.11m" size="2097152" crc="30189f69"/>
+		<rom name="usfxj.01" size="131072" crc="74d80c14"/>
+		<rom name="usfxj.02" size="131072" crc="6c21208a"/>
+		<rom name="usfxj.11m" size="2097152" crc="1bd92fa6"/>
 		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
-		<rom name="usf2j.13m" size="2097152" crc="d7d2f8a3"/>
-		<rom name="usf2j.14m" size="2097152" crc="373a57f3"/>
+		<rom name="usf2j.13m" size="2097152" crc="669b302f"/>
+		<rom name="usf2j.14m" size="2097152" crc="baf344b7"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="usf2u" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Ultra Street Fighter II: The Final Challengers (USA, Backport RC5)</description>
+		<description>Ultra Street Fighter II: The Final Challengers (USA, Backport RC6)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="usfx.03d" size="524288" crc="b68685d2"/>
-		<rom name="usfx.04a" size="524288" crc="98f735de"/>
+		<rom name="usfx.03d" size="524288" crc="89050d4b"/>
+		<rom name="usfx.04a" size="524288" crc="facf4e28"/>
 		<rom name="sfxj.05" size="524288" crc="f4ff18f5"/>
 		<rom name="sfxj.06b" size="524288" crc="413477c2"/>
 		<rom name="usfx.07a" size="524288" crc="43efd652"/>
 		<rom name="usfx.08" size="524288" crc="5859ada7"/>
-		<rom name="usfx.09" size="524288" crc="84f7cb0a"/>
-		<rom name="usf2.10" size="524288" crc="6f854475"/>
+		<rom name="usfx.09" size="524288" crc="b1b33baf"/>
+		<rom name="usf2.10" size="524288" crc="7f592733"/>
 		<rom name="usfx.13m" size="2097152" crc="2ebc0d13"/>
 		<rom name="usfx.15m" size="2097152" crc="5efa0a3d"/>
 		<rom name="usfx.17m" size="2097152" crc="07ebbb77"/>
 		<rom name="usfx.19m" size="2097152" crc="46390f30"/>
-		<rom name="usfx.14m" size="1048576" crc="e66a5dfd"/>
-		<rom name="usfx.16m" size="1048576" crc="64b83be2"/>
-		<rom name="usfx.18m" size="1048576" crc="8ab760f9"/>
-		<rom name="usfx.20m" size="1048576" crc="7d0eaac0"/>
-		<rom name="usfx.21m" size="1048576" crc="202e9862"/>
-		<rom name="usfx.23m" size="1048576" crc="a2ef7f9e"/>
-		<rom name="usfx.25m" size="1048576" crc="1f898618"/>
-		<rom name="usfx.27m" size="1048576" crc="35ddb04c"/>
+		<rom name="usfx.14m" size="1048576" crc="f7a04936"/>
+		<rom name="usfx.16m" size="1048576" crc="38ad2876"/>
+		<rom name="usfx.18m" size="1048576" crc="12d01362"/>
+		<rom name="usfx.20m" size="1048576" crc="d03072e4"/>
+		<rom name="usfx.21m" size="1048576" crc="7520fb6a"/>
+		<rom name="usfx.23m" size="1048576" crc="1688933d"/>
+		<rom name="usfx.25m" size="1048576" crc="83b9fe30"/>
+		<rom name="usfx.27m" size="1048576" crc="918c62d0"/>
 		<rom name="usf2.29m" size="4194304" crc="6f42f97c"/>
 		<rom name="usf2.31m" size="4194304" crc="35500301"/>
 		<rom name="usf2.33m" size="4194304" crc="d196bfe8"/>
 		<rom name="usf2.35m" size="4194304" crc="6269be38"/>
-		<rom name="usfx.01" size="131072" crc="64d97dd7"/>
-		<rom name="usfx.02" size="131072" crc="cd62eac8"/>
-		<rom name="usfx.11m" size="2097152" crc="46cf3a83"/>
+		<rom name="usfx.01" size="131072" crc="35040008"/>
+		<rom name="usfx.02" size="131072" crc="65f203f5"/>
+		<rom name="usfx.11m" size="2097152" crc="263c594d"/>
 		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
-		<rom name="usf2.13m" size="2097152" crc="77cbabdf"/>
-		<rom name="usf2.14m" size="2097152" crc="be78e7b0"/>
+		<rom name="usf2.13m" size="2097152" crc="3bfc2325"/>
+		<rom name="usf2.14m" size="2097152" crc="91a490f8"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -215446,38 +215470,38 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="vhunt2s03" cloneof="vhunt2" romof="vhunt2" sourcefile="capcom/d_cps2_custom.cpp">
+	<game name="vhunt2arj" cloneof="vhunt2" romof="vhunt2" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Vampire Hunter 2 Arrange (Hack, Japan RC3)</description>
+		<description>Vampire Hunter 2 Arrange (Hack, Japan RC4)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="c75s03.p1" size="524288" crc="7797e2a4"/>
-		<rom name="c75s03.p2" size="524288" crc="c0703475"/>
-		<rom name="c75s03.p3" size="524288" crc="87edf306"/>
-		<rom name="c75s03.p4" size="524288" crc="94118a84"/>
-		<rom name="c75s03.p5" size="524288" crc="a324ffeb"/>
-		<rom name="c75s03.p6" size="524288" crc="79dbd15c"/>
-		<rom name="c75s03.p7" size="524288" crc="f3159a3a"/>
-		<rom name="c75s03.p8" size="524288" crc="ecd2d939"/>
-		<rom name="c75s03.p9" size="4194304" crc="2d91d6a5"/>
-		<rom name="c75s03.c1" size="4194304" crc="6a3d7b6a"/>
-		<rom name="c75s03.c2" size="4194304" crc="ebcb10da"/>
-		<rom name="c75s03.c3" size="4194304" crc="da8cfcd4"/>
-		<rom name="c75s03.c4" size="4194304" crc="108fd9e0"/>
+		<rom name="vh2arj.03a" size="524288" crc="84419879"/>
+		<rom name="vh2arj.04a" size="524288" crc="5a27829a"/>
+		<rom name="vh2ar.05" size="524288" crc="87edf306"/>
+		<rom name="vh2ar.06" size="524288" crc="94118a84"/>
+		<rom name="vh2ar.07" size="524288" crc="a324ffeb"/>
+		<rom name="vh2arj.08" size="524288" crc="1c9f891b"/>
+		<rom name="vh2ar.09" size="524288" crc="f3159a3a"/>
+		<rom name="vh2ar.10" size="524288" crc="ecd2d939"/>
+		<rom name="vh2arj.prg" size="4194304" crc="49eb2839"/>
+		<rom name="vh2arj.13m" size="4194304" crc="44d9ba5a"/>
+		<rom name="vh2arj.15m" size="4194304" crc="65e1ad49"/>
+		<rom name="vh2arj.17m" size="4194304" crc="83e4da46"/>
+		<rom name="vh2arj.19m" size="4194304" crc="19f8eba3"/>
 		<rom name="vh2.14m" merge="vh2.14m" size="4194304" crc="cd09bd63"/>
 		<rom name="vh2.16m" merge="vh2.16m" size="4194304" crc="e0182c15"/>
 		<rom name="vh2.18m" merge="vh2.18m" size="4194304" crc="778dc4f6"/>
 		<rom name="vh2.20m" merge="vh2.20m" size="4194304" crc="605d9d1d"/>
-		<rom name="c75s03.c9" size="2097152" crc="069fd6cc"/>
-		<rom name="c75s03.c10" size="2097152" crc="dfde0582"/>
-		<rom name="c75s03.c11" size="2097152" crc="2438f71b"/>
-		<rom name="c75s03.c12" size="2097152" crc="df587c66"/>
-		<rom name="c75s03.m1" size="131072" crc="f6088d87"/>
-		<rom name="c75s03.m2" size="131072" crc="7c4fae46"/>
-		<rom name="c75s03.m3" size="262144" crc="04ef903d"/>
+		<rom name="vh2arj.c9" size="2097152" crc="ae36a899"/>
+		<rom name="vh2arj.c10" size="2097152" crc="2df7cb0b"/>
+		<rom name="vh2arj.c11" size="2097152" crc="766c6782"/>
+		<rom name="vh2arj.c12" size="2097152" crc="fb4b2d38"/>
+		<rom name="vh2ar.01" size="131072" crc="446a8e7f"/>
+		<rom name="vh2ar.02" size="131072" crc="7c4fae46"/>
+		<rom name="vh2ar.z80" size="262144" crc="488a0886"/>
 		<rom name="vh2.11m" merge="vh2.11m" size="4194304" crc="38922efd"/>
 		<rom name="vh2.12m" merge="vh2.12m" size="4194304" crc="6e2430af"/>
-		<rom name="c75s03.q3" size="8388608" crc="24813909"/>
+		<rom name="vh2ar.q3" size="8388608" crc="24813909"/>
 		<rom name="vhunt2.key" merge="vhunt2.key" size="20" crc="61306b20"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -215679,80 +215703,80 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="vsav2s05" cloneof="vsav2" romof="vsav2" sourcefile="capcom/d_cps2_custom.cpp">
+	<game name="vsav2aru" cloneof="vsav2" romof="vsav2" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Vampire Savior 2 Arrange (Hack, English RC3)</description>
+		<description>Vampire Savior 2 Arrange (Hack, English RC4)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="c76s05.p1" size="524288" crc="eeefba15"/>
-		<rom name="c76s05.p2" size="524288" crc="e39be4dc"/>
-		<rom name="c76s05.p3" size="524288" crc="5fbed75f"/>
-		<rom name="c76s05.p4" size="524288" crc="253b76ef"/>
+		<rom name="vs2aru.03" size="524288" crc="a3dda3c2"/>
+		<rom name="vs2aru.04" size="524288" crc="3e5acf94"/>
+		<rom name="vs2ar.05" size="524288" crc="5fbed75f"/>
+		<rom name="vs2ar.06" size="524288" crc="253b76ef"/>
 		<rom name="vs2j.07" merge="vs2j.07" size="524288" crc="8f885809"/>
-		<rom name="c76s05.p6" size="524288" crc="4e1b8eae"/>
+		<rom name="vs2aru.08" size="524288" crc="44f0ac2a"/>
 		<rom name="vs2j.09" merge="vs2j.09" size="524288" crc="fac3c217"/>
-		<rom name="c76s05.p8" size="524288" crc="1e8a3df5"/>
-		<rom name="c76s05.p9" size="4194304" crc="d524fdaa"/>
-		<rom name="c76s05.c1" size="4194304" crc="b0c5665b"/>
-		<rom name="c76s05.c2" size="4194304" crc="c5b6049f"/>
-		<rom name="c76s05.c3" size="4194304" crc="a6448812"/>
-		<rom name="c76s05.c4" size="4194304" crc="84067f87"/>
+		<rom name="vs2ar.10" size="524288" crc="1e8a3df5"/>
+		<rom name="vs2aru.prg" size="4194304" crc="76b01bed"/>
+		<rom name="vs2aru.13m" size="4194304" crc="9e21a76b"/>
+		<rom name="vs2aru.15m" size="4194304" crc="4b9cb90c"/>
+		<rom name="vs2aru.17m" size="4194304" crc="ff2cae80"/>
+		<rom name="vs2aru.19m" size="4194304" crc="8d714dc4"/>
 		<rom name="vs2.14m" merge="vs2.14m" size="4194304" crc="cd09bd63"/>
 		<rom name="vs2.16m" merge="vs2.16m" size="4194304" crc="e0182c15"/>
 		<rom name="vs2.18m" merge="vs2.18m" size="4194304" crc="778dc4f6"/>
 		<rom name="vs2.20m" merge="vs2.20m" size="4194304" crc="605d9d1d"/>
-		<rom name="c76s05.c9" size="4194304" crc="a45e1119"/>
-		<rom name="c76s05.c10" size="4194304" crc="8b6832d1"/>
-		<rom name="c76s05.c11" size="4194304" crc="58cacc2f"/>
-		<rom name="c76s05.c12" size="4194304" crc="3d1408fe"/>
-		<rom name="c76s05.c13" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s05.c14" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s05.c15" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s05.c16" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s05.m1" size="131072" crc="880f16d1"/>
+		<rom name="vs2ar.c9" size="4194304" crc="f3ef4c9d"/>
+		<rom name="vs2ar.c10" size="4194304" crc="cf6f5c17"/>
+		<rom name="vs2ar.c11" size="4194304" crc="9a6f4b62"/>
+		<rom name="vs2ar.c12" size="4194304" crc="04bd70d0"/>
+		<rom name="vs2ar.c13" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.c14" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.c15" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.c16" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.01" size="131072" crc="7a687293"/>
 		<rom name="vs2.02" merge="vs2.02" size="131072" crc="c32dba09"/>
 		<rom name="vs2.11m" merge="vs2.11m" size="4194304" crc="d67e47b7"/>
 		<rom name="vs2.12m" merge="vs2.12m" size="4194304" crc="6d020a14"/>
-		<rom name="c76s05.q3" size="8388608" crc="eb50211e"/>
+		<rom name="vs2ar.q3" size="8388608" crc="eb50211e"/>
 		<rom name="vsav2.key" merge="vsav2.key" size="20" crc="289028ce"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="vsav2s06" cloneof="vsav2" romof="vsav2" sourcefile="capcom/d_cps2_custom.cpp">
+	<game name="vsav2arj" cloneof="vsav2" romof="vsav2" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Vampire Savior 2 Arrange (Hack, Japan RC3)</description>
+		<description>Vampire Savior 2 Arrange (Hack, Japan RC4)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="c76s06.p1" size="524288" crc="300870ae"/>
-		<rom name="c76s06.p2" size="524288" crc="cfe4a7b2"/>
-		<rom name="c76s06.p3" size="524288" crc="5fbed75f"/>
-		<rom name="c76s06.p4" size="524288" crc="253b76ef"/>
+		<rom name="vs2arj.03" size="524288" crc="6364adf4"/>
+		<rom name="vs2arj.04" size="524288" crc="edcde614"/>
+		<rom name="vs2ar.05" size="524288" crc="5fbed75f"/>
+		<rom name="vs2ar.06" size="524288" crc="253b76ef"/>
 		<rom name="vs2j.07" merge="vs2j.07" size="524288" crc="8f885809"/>
-		<rom name="c76s06.p6" size="524288" crc="7bc795c2"/>
+		<rom name="vs2arj.08" size="524288" crc="712cb746"/>
 		<rom name="vs2j.09" merge="vs2j.09" size="524288" crc="fac3c217"/>
-		<rom name="c76s06.p8" size="524288" crc="1e8a3df5"/>
-		<rom name="c76s06.p9" size="4194304" crc="1421c60b"/>
-		<rom name="c76s06.c1" size="4194304" crc="b7751dee"/>
-		<rom name="c76s06.c2" size="4194304" crc="a6dcea63"/>
-		<rom name="c76s06.c3" size="4194304" crc="968eeeb0"/>
-		<rom name="c76s06.c4" size="4194304" crc="591944a1"/>
+		<rom name="vs2ar.10" size="524288" crc="1e8a3df5"/>
+		<rom name="vs2arj.prg" size="4194304" crc="f95a5333"/>
+		<rom name="vs2arj.13m" size="4194304" crc="9991dcde"/>
+		<rom name="vs2arj.15m" size="4194304" crc="28f657f0"/>
+		<rom name="vs2arj.17m" size="4194304" crc="cfe6c822"/>
+		<rom name="vs2arj.19m" size="4194304" crc="506e76e2"/>
 		<rom name="vs2.14m" merge="vs2.14m" size="4194304" crc="cd09bd63"/>
 		<rom name="vs2.16m" merge="vs2.16m" size="4194304" crc="e0182c15"/>
 		<rom name="vs2.18m" merge="vs2.18m" size="4194304" crc="778dc4f6"/>
 		<rom name="vs2.20m" merge="vs2.20m" size="4194304" crc="605d9d1d"/>
-		<rom name="c76s06.c9" size="4194304" crc="a45e1119"/>
-		<rom name="c76s06.c10" size="4194304" crc="8b6832d1"/>
-		<rom name="c76s06.c11" size="4194304" crc="58cacc2f"/>
-		<rom name="c76s06.c12" size="4194304" crc="3d1408fe"/>
-		<rom name="c76s06.c13" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s06.c14" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s06.c15" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s06.c16" size="4194304" crc="7d5b6975"/>
-		<rom name="c76s06.m1" size="131072" crc="880f16d1"/>
+		<rom name="vs2ar.c9" size="4194304" crc="f3ef4c9d"/>
+		<rom name="vs2ar.c10" size="4194304" crc="cf6f5c17"/>
+		<rom name="vs2ar.c11" size="4194304" crc="9a6f4b62"/>
+		<rom name="vs2ar.c12" size="4194304" crc="04bd70d0"/>
+		<rom name="vs2ar.c13" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.c14" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.c15" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.c16" size="4194304" crc="7d5b6975"/>
+		<rom name="vs2ar.01" size="131072" crc="7a687293"/>
 		<rom name="vs2.02" merge="vs2.02" size="131072" crc="c32dba09"/>
 		<rom name="vs2.11m" merge="vs2.11m" size="4194304" crc="d67e47b7"/>
 		<rom name="vs2.12m" merge="vs2.12m" size="4194304" crc="6d020a14"/>
-		<rom name="c76s06.q3" size="8388608" crc="eb50211e"/>
+		<rom name="vs2ar.q3" size="8388608" crc="eb50211e"/>
 		<rom name="vsav2.key" merge="vsav2.key" size="20" crc="289028ce"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -215843,74 +215867,74 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="vsavs01" cloneof="vsav" romof="vsav" sourcefile="capcom/d_cps2_custom.cpp">
+	<game name="vsavaru" cloneof="vsav" romof="vsav" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Vampire Savior Arrange (Hack, English RC4)</description>
+		<description>Vampire Savior Arrange (Hack, English RC5)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="c71s01.p1" size="524288" crc="1f2f188a"/>
-		<rom name="c71s01.p2" size="524288" crc="8926858a"/>
-		<rom name="c71s01.p3" size="524288" crc="2b02f280"/>
+		<rom name="vm3aru.03d" size="524288" crc="1f2f188a"/>
+		<rom name="vm3aru.04d" size="524288" crc="49142187"/>
+		<rom name="vm3ar.05a" size="524288" crc="2b02f280"/>
 		<rom name="vm3j.06b" size="524288" crc="2c4297e0"/>
-		<rom name="c71s01.p5" size="524288" crc="7854576e"/>
+		<rom name="vm3aru.07b" size="524288" crc="e876176f"/>
 		<rom name="vm3j.08a" size="524288" crc="5773e5c9"/>
-		<rom name="c71s01.p7" size="524288" crc="6428a025"/>
-		<rom name="c71s01.p8" size="524288" crc="29316daa"/>
-		<rom name="c71s01.p9" size="4194304" crc="7399ea53"/>
-		<rom name="c71s01.c1" size="4194304" crc="6a3fe97b"/>
-		<rom name="c71s01.c2" size="4194304" crc="d64c3c03"/>
-		<rom name="c71s01.c3" size="4194304" crc="93423093"/>
-		<rom name="c71s01.c4" size="4194304" crc="76f89f2b"/>
+		<rom name="vm3ar.09b" size="524288" crc="6428a025"/>
+		<rom name="vm3ar.10b" size="524288" crc="29316daa"/>
+		<rom name="vm3aru.prg" size="4194304" crc="a3b0f232"/>
+		<rom name="vm3ar.13m" size="4194304" crc="89cb24a0"/>
+		<rom name="vm3ar.15m" size="4194304" crc="b7f11cc3"/>
+		<rom name="vm3ar.17m" size="4194304" crc="89f26e3b"/>
+		<rom name="vm3ar.19m" size="4194304" crc="61c42073"/>
 		<rom name="vm3.14m" merge="vm3.14m" size="4194304" crc="c1a28e6c"/>
 		<rom name="vm3.16m" merge="vm3.16m" size="4194304" crc="194a7304"/>
 		<rom name="vm3.18m" merge="vm3.18m" size="4194304" crc="df9a9f47"/>
 		<rom name="vm3.20m" merge="vm3.20m" size="4194304" crc="c22fc3d9"/>
-		<rom name="c71s01.c9" size="2097152" crc="d015d692"/>
-		<rom name="c71s01.c10" size="2097152" crc="0fa94d8b"/>
-		<rom name="c71s01.c11" size="2097152" crc="07f100d0"/>
-		<rom name="c71s01.c12" size="2097152" crc="1ce74d45"/>
-		<rom name="c71s01.m1" size="131072" crc="b866c03c"/>
+		<rom name="vm3ar.c9" size="2097152" crc="d015d692"/>
+		<rom name="vm3ar.c10" size="2097152" crc="0fa94d8b"/>
+		<rom name="vm3ar.c11" size="2097152" crc="07f100d0"/>
+		<rom name="vm3ar.c12" size="2097152" crc="1ce74d45"/>
+		<rom name="vm3ar.01" size="131072" crc="b866c03c"/>
 		<rom name="vm3.02" merge="vm3.02" size="131072" crc="cc09faa1"/>
-		<rom name="c71s01.m3" size="262144" crc="ad73c4e2"/>
+		<rom name="vm3ar.z80" size="262144" crc="ad73c4e2"/>
 		<rom name="vm3.11m" merge="vm3.11m" size="4194304" crc="e80e956e"/>
 		<rom name="vm3.12m" merge="vm3.12m" size="4194304" crc="9cd71557"/>
-		<rom name="c71s01.q3" size="8388608" crc="fd3a78ec"/>
+		<rom name="vm3ar.q3" size="8388608" crc="fd3a78ec"/>
 		<rom name="vsavj.key" size="20" crc="36d28ab8"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="vsavs02" cloneof="vsav" romof="vsav" sourcefile="capcom/d_cps2_custom.cpp">
+	<game name="vsavarj" cloneof="vsav" romof="vsav" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Vampire Savior Arrange (Hack, Japan RC4)</description>
+		<description>Vampire Savior Arrange (Hack, Japan RC5)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="c71s02.p1" size="524288" crc="2924c56a"/>
-		<rom name="c71s02.p2" size="524288" crc="326ca702"/>
-		<rom name="c71s02.p3" size="524288" crc="2b02f280"/>
+		<rom name="vm3arj.03d" size="524288" crc="2924c56a"/>
+		<rom name="vm3arj.04d" size="524288" crc="f25e030f"/>
+		<rom name="vm3ar.05a" size="524288" crc="2b02f280"/>
 		<rom name="vm3j.06b" size="524288" crc="2c4297e0"/>
-		<rom name="c71s02.p5" size="524288" crc="8791d88c"/>
+		<rom name="vm3arj.07b" size="524288" crc="17b3988d"/>
 		<rom name="vm3j.08a" size="524288" crc="5773e5c9"/>
-		<rom name="c71s02.p7" size="524288" crc="6428a025"/>
-		<rom name="c71s02.p8" size="524288" crc="29316daa"/>
-		<rom name="c71s02.p9" size="4194304" crc="3670226d"/>
-		<rom name="c71s02.c1" size="4194304" crc="6a3fe97b"/>
-		<rom name="c71s02.c2" size="4194304" crc="d64c3c03"/>
-		<rom name="c71s02.c3" size="4194304" crc="93423093"/>
-		<rom name="c71s02.c4" size="4194304" crc="76f89f2b"/>
+		<rom name="vm3ar.09b" size="524288" crc="6428a025"/>
+		<rom name="vm3ar.10b" size="524288" crc="29316daa"/>
+		<rom name="vm3arj.prg" size="4194304" crc="e6593a0c"/>
+		<rom name="vm3ar.13m" size="4194304" crc="89cb24a0"/>
+		<rom name="vm3ar.15m" size="4194304" crc="b7f11cc3"/>
+		<rom name="vm3ar.17m" size="4194304" crc="89f26e3b"/>
+		<rom name="vm3ar.19m" size="4194304" crc="61c42073"/>
 		<rom name="vm3.14m" merge="vm3.14m" size="4194304" crc="c1a28e6c"/>
 		<rom name="vm3.16m" merge="vm3.16m" size="4194304" crc="194a7304"/>
 		<rom name="vm3.18m" merge="vm3.18m" size="4194304" crc="df9a9f47"/>
 		<rom name="vm3.20m" merge="vm3.20m" size="4194304" crc="c22fc3d9"/>
-		<rom name="c71s02.c9" size="2097152" crc="d015d692"/>
-		<rom name="c71s02.c10" size="2097152" crc="0fa94d8b"/>
-		<rom name="c71s02.c11" size="2097152" crc="07f100d0"/>
-		<rom name="c71s02.c12" size="2097152" crc="1ce74d45"/>
-		<rom name="c71s02.m1" size="131072" crc="b866c03c"/>
+		<rom name="vm3ar.c9" size="2097152" crc="d015d692"/>
+		<rom name="vm3ar.c10" size="2097152" crc="0fa94d8b"/>
+		<rom name="vm3ar.c11" size="2097152" crc="07f100d0"/>
+		<rom name="vm3ar.c12" size="2097152" crc="1ce74d45"/>
+		<rom name="vm3ar.01" size="131072" crc="b866c03c"/>
 		<rom name="vm3.02" merge="vm3.02" size="131072" crc="cc09faa1"/>
-		<rom name="c71s02.m3" size="262144" crc="ad73c4e2"/>
+		<rom name="vm3ar.z80" size="262144" crc="ad73c4e2"/>
 		<rom name="vm3.11m" merge="vm3.11m" size="4194304" crc="e80e956e"/>
 		<rom name="vm3.12m" merge="vm3.12m" size="4194304" crc="9cd71557"/>
-		<rom name="c71s02.q3" size="8388608" crc="fd3a78ec"/>
+		<rom name="vm3ar.q3" size="8388608" crc="fd3a78ec"/>
 		<rom name="vsavj.key" size="20" crc="36d28ab8"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
