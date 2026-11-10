@@ -133,6 +133,7 @@ It also requires usage of specific romsets, meaning the rom must have the expect
 
 You can use specific folder's name for detection, it's the easiest and recommended method, especially if you are using RetroArch playlists or if your device is not compatible with subsystems (android and consoles) :
 
+* Atari 2600 : `a2600` | `atari2600`
 * Bally Astrocade : `astro` | `astrohome` | `astrocade`
 * CBS ColecoVision : `coleco` | `colecovision`
 * Fairchild ChannelF : `chf` | `channelf`
@@ -156,6 +157,7 @@ You can use specific folder's name for detection, it's the easiest and recommend
 
 You can also emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension in the command line, or adding the `--subsystem XXX` argument, here is the list of available prefixes :
 
+* Atari 2600 : `a26`
 * Bally Astrocade : `astro`
 * CBS ColecoVision : `cv`
 * Fairchild ChannelF : `chf`

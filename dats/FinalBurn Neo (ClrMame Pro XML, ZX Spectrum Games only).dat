@@ -18544,13 +18544,13 @@
 		<description>Linaje (English) - Part 1 (48K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Furillo Productions</manufacturer>
-		<rom name="Linaje EN - Part 1 48K (2026)(Furillo Productions).tap" size="39704" crc="ac382c4f"/>
+		<rom name="Linaje EN - Part 1 48K (2026)(Furillo Productions).tap" size="39704" crc="8ab2dc3e"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="linajen2" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Homebrew</comment>
+	<game name="linajen2" cloneof="linajen1" romof="linajen1" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, Password: alii venient</comment>
 		<description>Linaje (English) - Part 2 (48K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Furillo Productions</manufacturer>
@@ -18569,8 +18569,8 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="linajes2" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Homebrew</comment>
+	<game name="linajes2" cloneof="linajes1" romof="linajes1" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, Password: alii venient</comment>
 		<description>Linaje (Spanish) - Parte 2 (48K) (HB)</description>
 		<year>2026</year>
 		<manufacturer>Furillo Productions</manufacturer>
@@ -32889,11 +32889,11 @@
 		<driver status="good"/>
 	</game>
 	<game name="tetriszx128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
-		<comment>Homebrew</comment>
-		<description>Tetris ZX (128K) (HB, v1.1)</description>
+		<comment>Homebrew, AY Sound supported</comment>
+		<description>Tetris ZX (128K) (HB, v1.1.0)</description>
 		<year>2026</year>
 		<manufacturer>kirby2000</manufacturer>
-		<rom name="Tetris ZX v1.1 128K (2026)(kirby2000).tap" size="80839" crc="583c4c5c"/>
+		<rom name="Tetris ZX v1.1.0 128K (2026)(kirby2000).tap" size="80839" crc="583c4c5c"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -32901,10 +32901,20 @@
 	</game>
 	<game name="tetriszx48" cloneof="tetriszx128" romof="tetriszx128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Tetris ZX (48K) (HB, v1.1)</description>
+		<description>Tetris ZX (48K) (HB, v1.1.0)</description>
 		<year>2026</year>
 		<manufacturer>kirby2000</manufacturer>
-		<rom name="Tetris ZX v1.1 48K (2026)(kirby2000).tap" size="47992" crc="113f7874"/>
+		<rom name="Tetris ZX v1.1.0 48K (2026)(kirby2000).tap" size="47992" crc="113f7874"/>
+		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tetriszxm48" cloneof="tetriszx128" romof="tetriszx128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Tetris ZX Mono (48K) (HB, v1.1.0)</description>
+		<year>2026</year>
+		<manufacturer>kirby2000</manufacturer>
+		<rom name="Tetris ZX Mono v1.1.0 48K (2026)(kirby2000).tap" size="47992" crc="78c4740b"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

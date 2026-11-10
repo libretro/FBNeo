@@ -11,26 +11,27 @@
 #define SSTR( x ) static_cast< const std::ostringstream & >(( std::ostringstream() << std::dec << x ) ).str()
 #define snprintf_nowarn(...) (snprintf(__VA_ARGS__) < 0 ? abort() : (void)0)
 
-#define RETRO_GAME_TYPE_CV		1
-#define RETRO_GAME_TYPE_GG		2
-#define RETRO_GAME_TYPE_MD		3
-#define RETRO_GAME_TYPE_MSX		4
-#define RETRO_GAME_TYPE_PCE		5
-#define RETRO_GAME_TYPE_SG1K	6
-#define RETRO_GAME_TYPE_SGX		7
-#define RETRO_GAME_TYPE_SMS		8
-#define RETRO_GAME_TYPE_TG		9
-#define RETRO_GAME_TYPE_SPEC	10
-#define RETRO_GAME_TYPE_NES		11
-#define RETRO_GAME_TYPE_FDS		12
-#define RETRO_GAME_TYPE_NEOCD	13
-#define RETRO_GAME_TYPE_NGP		14
-#define RETRO_GAME_TYPE_CHF		15
-#define RETRO_GAME_TYPE_SNES	16
-#define RETRO_GAME_TYPE_ASTRO	17
-#define RETRO_GAME_TYPE_PCECD	18
-#define RETRO_GAME_TYPE_GBA		19
-#define RETRO_GAME_TYPE_SEGACD	20
+#define RETRO_GAME_TYPE_CV      1
+#define RETRO_GAME_TYPE_GG      2
+#define RETRO_GAME_TYPE_MD      3
+#define RETRO_GAME_TYPE_MSX     4
+#define RETRO_GAME_TYPE_PCE     5
+#define RETRO_GAME_TYPE_SG1K    6
+#define RETRO_GAME_TYPE_SGX     7
+#define RETRO_GAME_TYPE_SMS     8
+#define RETRO_GAME_TYPE_TG      9
+#define RETRO_GAME_TYPE_SPEC   10
+#define RETRO_GAME_TYPE_NES    11
+#define RETRO_GAME_TYPE_FDS    12
+#define RETRO_GAME_TYPE_NEOCD  13
+#define RETRO_GAME_TYPE_NGP    14
+#define RETRO_GAME_TYPE_CHF    15
+#define RETRO_GAME_TYPE_SNES   16
+#define RETRO_GAME_TYPE_ASTRO  17
+#define RETRO_GAME_TYPE_PCECD  18
+#define RETRO_GAME_TYPE_GBA    19
+#define RETRO_GAME_TYPE_SEGACD 20
+#define RETRO_GAME_TYPE_A26    21
 
 #define PERCENT_VALUES \
 	  {"25%",	NULL }, \

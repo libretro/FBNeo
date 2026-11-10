@@ -79226,7 +79226,7 @@
 	</game>
 	<game name="hsf2re" cloneof="hsf2" romof="hsf2" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Hyper Street Fighter II: The Anniversary Edition (English Restoration, 2026-11-05)</description>
+		<description>Hyper Street Fighter II: The Anniversary Edition (Hack, English Restoration RC1)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
 		<rom name="hs2re.03c" size="524288" crc="c773cb30"/>
@@ -100667,16 +100667,16 @@
 		<manufacturer>Strygo</manufacturer>
 		<rom name="mvsexj.03i" size="524288" crc="8e50ee75"/>
 		<rom name="mvsex.04i" size="524288" crc="d9196f9c"/>
-		<rom name="mvsex.05h" size="524288" crc="ef82fbee"/>
+		<rom name="mvsexj.05h" size="524288" crc="ef82fbee"/>
 		<rom name="mvsex.06a" size="524288" crc="444fb179"/>
 		<rom name="mvsex.07b" size="524288" crc="e9cbc426"/>
 		<rom name="mvs.08a" merge="mvs.08a" size="524288" crc="c2813884"/>
 		<rom name="mvsex.09b" size="524288" crc="2be6f5e0"/>
 		<rom name="mvsex.10b" size="524288" crc="bad46d8a"/>
-		<rom name="mvsex.13m" size="4194304" crc="2d9e887e"/>
-		<rom name="mvsex.15m" size="4194304" crc="d65f6ecb"/>
-		<rom name="mvsex.17m" size="4194304" crc="b2cbd772"/>
-		<rom name="mvsex.19m" size="4194304" crc="690674ec"/>
+		<rom name="mvsexj.13m" size="4194304" crc="2d9e887e"/>
+		<rom name="mvsexj.15m" size="4194304" crc="d65f6ecb"/>
+		<rom name="mvsexj.17m" size="4194304" crc="b2cbd772"/>
+		<rom name="mvsexj.19m" size="4194304" crc="690674ec"/>
 		<rom name="mvs.14m" merge="mvs.14m" size="4194304" crc="b3b1972d"/>
 		<rom name="mvs.16m" merge="mvs.16m" size="4194304" crc="08aadb5d"/>
 		<rom name="mvs.18m" merge="mvs.18m" size="4194304" crc="c1228b35"/>

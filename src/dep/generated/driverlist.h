@@ -17610,7 +17610,7 @@ DRV		BurnDrvCnightst2;
 DRV		BurnDrvNightstrj;
 DRV		BurnDrvNightstru;
 DRV		BurnDrvNightstr;
-DRV		BurnDrvCpsVhunt2s02;
+DRV		BurnDrvCpsVhunt2aru;
 DRV		BurnDrvCpsVhunt2te;
 DRV		BurnDrvCpsNwarra;
 DRV		BurnDrvCpsNwarrb;
@@ -26622,6 +26622,7 @@ DRV		BurnDrvgba_tetrswldj;
 DRV		BurnDrvgba_tetrswldu;
 DRV		BurnSpecTetriszx128;
 DRV		BurnSpecTetriszx48;
+DRV		BurnSpecTetriszxm48;
 DRV		BurnDrvgg_tetris4gg;
 DRV		BurnDrvsms_tetris4gg;
 DRV		BurnSpecTetrisce;
@@ -28438,7 +28439,7 @@ DRV		BurnDrvVamphalfk;
 DRV		BurnDrvMSX_vampire;
 DRV		BurnDrvsms_vampire;
 DRV		BurnDrvVampire;
-DRV		BurnDrvCpsVhunt2s03;
+DRV		BurnDrvCpsVhunt2arj;
 DRV		BurnDrvCpsVhunt2d;
 DRV		BurnDrvCpsVhunt2r1;
 DRV		BurnDrvCpsVhunt2;
@@ -28447,13 +28448,13 @@ DRV		BurnDrvCpsVhuntjr1s;
 DRV		BurnDrvCpsVhuntjr1;
 DRV		BurnDrvCpsVhuntj;
 DRV		BurnSpecVampkiller;
-DRV		BurnDrvCpsVsav2s05;
-DRV		BurnDrvCpsVsav2s06;
+DRV		BurnDrvCpsVsav2aru;
+DRV		BurnDrvCpsVsav2arj;
 DRV		BurnDrvCpsVsav2te;
 DRV		BurnDrvCpsVsav2d;
 DRV		BurnDrvCpsVsav2;
-DRV		BurnDrvCpsVsavs01;
-DRV		BurnDrvCpsVsavs02;
+DRV		BurnDrvCpsVsavaru;
+DRV		BurnDrvCpsVsavarj;
 DRV		BurnDrvCpsVsava;
 DRV		BurnDrvCpsVsavb;
 DRV		BurnDrvCpsVsavd;
@@ -42292,7 +42293,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsHsf2a,			// Hyper Street Fighter II: The Anniversary Edition (Asia 040202)
 	&BurnDrvCpsHsf2df,			// Hyper Street Fighter II: The Anniversary Edition (Difficulty Fix, Hack)
 	&BurnDrvCpsHsf2ev2,			// Hyper Street Fighter II: The Anniversary Edition (Easy Move v2, Hack)
-	&BurnDrvCpsHsf2re,			// Hyper Street Fighter II: The Anniversary Edition (English Restoration, 2026-11-05)
+	&BurnDrvCpsHsf2re,			// Hyper Street Fighter II: The Anniversary Edition (Hack, English Restoration RC1)
 	&BurnDrvCpsHsf2j2,			// Hyper Street Fighter II: The Anniversary Edition (Japan 031222)
 	&BurnDrvCpsHsf2j1,			// Hyper Street Fighter II: The Anniversary Edition (Japan 040123)
 	&BurnDrvCpsHsf2j,			// Hyper Street Fighter II: The Anniversary Edition (Japan 040202)
@@ -47961,7 +47962,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvNightstrj,			// Night Striker (Japan)
 	&BurnDrvNightstru,			// Night Striker (US)
 	&BurnDrvNightstr,			// Night Striker (World)
-	&BurnDrvCpsVhunt2s02,		// Night Warriors 2 Arrange (Hack, English RC4)
+	&BurnDrvCpsVhunt2aru,		// Night Warriors 2 Arrange (Hack, English RC4)
 	&BurnDrvCpsVhunt2te,		// Night Warriors 2: Darkstalkers Revenge (Hack, English RC3)
 	&BurnDrvCpsNwarra,			// Night Warriors: Darkstalkers' Revenge (Asia 950302)
 	&BurnDrvCpsNwarrb,			// Night Warriors: Darkstalkers' Revenge (Brazil 950403)
@@ -56971,8 +56972,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_tetrswldja,		// Tetris Worlds (Japan)
 	&BurnDrvgba_tetrswldj,		// Tetris Worlds (Japan, rev. 1)
 	&BurnDrvgba_tetrswldu,		// Tetris Worlds (USA)
-	&BurnSpecTetriszx128,		// Tetris ZX (128K) (HB, v1.1)
-	&BurnSpecTetriszx48,		// Tetris ZX (48K) (HB, v1.1)
+	&BurnSpecTetriszx128,		// Tetris ZX (128K) (HB, v1.1.0)
+	&BurnSpecTetriszx48,		// Tetris ZX (48K) (HB, v1.1.0)
+	&BurnSpecTetriszxm48,		// Tetris ZX Mono (48K) (HB, v1.1.0)
 	&BurnDrvgg_tetris4gg,		// Tetris4GG (HB, v1.1)
 	&BurnDrvsms_tetris4gg,		// Tetris4GG (HB, v1.1)
 	&BurnSpecTetrisce,			// Tetris: Championship Edition (48K-128K) (HB, v1.1)
@@ -58789,7 +58791,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_vampire,		// Vampire (Euro)
 	&BurnDrvsms_vampire,		// Vampire (Euro, Prototype)
 	&BurnDrvVampire,			// Vampire (prototype?)
-	&BurnDrvCpsVhunt2s03,		// Vampire Hunter 2 Arrange (Hack, Japan RC4)
+	&BurnDrvCpsVhunt2arj,		// Vampire Hunter 2 Arrange (Hack, Japan RC4)
 	&BurnDrvCpsVhunt2d,			// Vampire Hunter 2: Darkstalkers Revenge (Japan 970913 Phoenix Edition) (bootleg)
 	&BurnDrvCpsVhunt2r1,		// Vampire Hunter 2: Darkstalkers Revenge (Japan 970913)
 	&BurnDrvCpsVhunt2,			// Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)
@@ -58798,13 +58800,13 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsVhuntjr1,		// Vampire Hunter: Darkstalkers' Revenge (Japan 950307)
 	&BurnDrvCpsVhuntj,			// Vampire Hunter: Darkstalkers' Revenge (Japan 950316)
 	&BurnSpecVampkiller,		// Vampire Killer (48K)
-	&BurnDrvCpsVsav2s05,		// Vampire Savior 2 Arrange (Hack, English RC4)
-	&BurnDrvCpsVsav2s06,		// Vampire Savior 2 Arrange (Hack, Japan RC4)
+	&BurnDrvCpsVsav2aru,		// Vampire Savior 2 Arrange (Hack, English RC4)
+	&BurnDrvCpsVsav2arj,		// Vampire Savior 2 Arrange (Hack, Japan RC4)
 	&BurnDrvCpsVsav2te,			// Vampire Savior 2: The Lord of Vampire (Hack, English RC3)
 	&BurnDrvCpsVsav2d,			// Vampire Savior 2: The Lord of Vampire (Japan 970913 Phoenix Edition) (bootleg)
 	&BurnDrvCpsVsav2,			// Vampire Savior 2: The Lord of Vampire (Japan 970913)
-	&BurnDrvCpsVsavs01,			// Vampire Savior Arrange (Hack, English RC5)
-	&BurnDrvCpsVsavs02,			// Vampire Savior Arrange (Hack, Japan RC5)
+	&BurnDrvCpsVsavaru,			// Vampire Savior Arrange (Hack, English RC5)
+	&BurnDrvCpsVsavarj,			// Vampire Savior Arrange (Hack, Japan RC5)
 	&BurnDrvCpsVsava,			// Vampire Savior: The Lord of Vampire (Asia 970519)
 	&BurnDrvCpsVsavb,			// Vampire Savior: The Lord of Vampire (Brazil 970519)
 	&BurnDrvCpsVsavd,			// Vampire Savior: The Lord of Vampire (Europe 970519 Phoenix Edition) (bootleg)
@@ -87158,6 +87160,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gba_tetrswldu", "gba/d_gba.cpp"},
 	{ "spec_tetriszx128", "spectrum/d_spectrum.cpp"},
 	{ "spec_tetriszx48", "spectrum/d_spectrum.cpp"},
+	{ "spec_tetriszxm48", "spectrum/d_spectrum.cpp"},
 	{ "gg_tetris4gg", "sms/d_sms.cpp"},
 	{ "sms_tetris4gg", "sms/d_sms.cpp"},
 	{ "spec_tetrisce", "spectrum/d_spectrum.cpp"},

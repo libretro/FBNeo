@@ -382,6 +382,9 @@ void retro_set_environment(retro_environment_t cb)
 	};
 #endif
 	static const struct retro_subsystem_info subsystems[] = {
+#ifdef BUILD_ATARI2600
+		{ "Atari 2600",                          "a26",    subsystem_rom, 1, RETRO_GAME_TYPE_A26    },
+#endif
 #ifdef BUILD_ASTROHOME
 		{ "Bally Astrocade Home Computer",       "astro",  subsystem_rom, 1, RETRO_GAME_TYPE_ASTRO  },
 #endif
@@ -1255,6 +1258,11 @@ int CreateAllDatfiles(char* dat_folder)
 #ifdef BUILD_ASTROHOME
 	snprintf_nowarn(szFilename, sizeof(szFilename), "%s%c%s (%s).dat", dat_folder, PATH_DEFAULT_SLASH_C(), APP_TITLE, "ClrMame Pro XML, Bally Astrocade Games only");
 	create_datfile(szFilename, DAT_ASTROHOME_ONLY);
+#endif
+
+#ifdef BUILD_ATARI2600
+	snprintf_nowarn(szFilename, sizeof(szFilename), "%s%c%s (%s).dat", dat_folder, PATH_DEFAULT_SLASH_C(), APP_TITLE, "ClrMame Pro XML, Atari 2600 Games only");
+	create_datfile(szFilename, DAT_ATARI2600_ONLY);
 #endif
 
 	return nRet;
@@ -2690,6 +2698,12 @@ bool retro_load_game(const struct retro_game_info *info)
 		if (strncmp(g_driver_name, "astro_", 6) != 0) prefix = "astro_";
 	}
 #endif
+#ifdef BUILD_ATARI2600
+	if(strcmp(g_rom_parent_dir, "a2600")==0 || strcmp(g_rom_parent_dir, "atari2600")==0) {
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem a2600 identified from parent folder\n");
+		if (strncmp(g_driver_name, "a26_", 4) != 0) prefix = "a26_";
+	}
+#endif
 
 	// prepare g_driver_name
 	static bool ready = false;
@@ -2829,6 +2843,11 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 #ifdef BUILD_ASTROHOME
 		case RETRO_GAME_TYPE_ASTRO:
 			prefix = "astro_";
+			break;
+#endif
+#ifdef BUILD_ATARI2600
+		case RETRO_GAME_TYPE_A26:
+			prefix = "a26_";
 			break;
 #endif
 #if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
