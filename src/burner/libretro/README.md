@@ -15,13 +15,13 @@ The libretro core provides wide compatibility with platforms and features suppor
 ## Difference from MAME
 
 FBNeo strives for accuracy, just like MAME. There are some arcade boards where one or the other will be more accurate, but for the most part they should be equally accurate.
-The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is mostly focused on preservation and documentation. "Quality of life" hacks include things like :
+The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is more focused on preservation and documentation. "Quality of life" hacks include things like :
 
 * improving original game's sound (some games like "Burger Time" have noise which was clearly unintended by their developpers, we are removing it)
 * implementing alternative colors for games where the colors don't look right (sometimes there are controversies about which colors are right for an arcade board, like "Tropical Angel", we implement alternative colors as dipswitches)
 * having control alternatives that didn't exist on original cabinet (play rotary stick games like twin-stick shooters, use lightguns in "Rambo 3", use simplified 8-way directional controls for "Battlezone", ...)
 * improving the gaming experience by cutting what we deem as unnecessary aspect of emulation (you don't have to spend 20 minutes "installing" CPS-3 games, neither 100s loading Deco Cassette games)
-* reducing hardware requirements by cutting what we deem as unnecessary corners in the emulation code
+* reducing hardware requirements by cutting what we deem as unnecessary corners in the emulation code (idle loop where the game does absolutely nothing aside from wasting resources, ...)
 * supporting popular romhacks
 
 Note: some of those "quality of life" hacks might be doable with programming skills and lua language on MAME
@@ -389,7 +389,9 @@ As of august 2026, all image formats should be supported. Previously you needed 
 
 ### Why can't i launch Killer instinct ? I heard it's supported.
 
-That driver was disabled, it didn't meet our quality criteria. There are no plans for fixing it at the moment.
+~~That driver was disabled, it didn't meet our quality criteria. There are no plans for fixing it at the moment.~~
+
+As of october 2026, Killer Instinct was promoted back to working state.
 
 ### Where is the hires dipswitch on vector games ? It seems gone.
 
