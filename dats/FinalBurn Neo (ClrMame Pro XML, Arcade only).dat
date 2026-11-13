@@ -7352,6 +7352,31 @@
 		<video type="raster" orientation="vertical" width="240" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="asonson" cloneof="sonson" romof="sonson" sourcefile="pre90s/d_sonson.cpp">
+		<comment>Homebrew</comment>
+		<description>Another Sonson (Zeroco)</description>
+		<year>2026</year>
+		<manufacturer>Zeroco</manufacturer>
+		<rom name="ass.01e" size="16384" crc="9779c180"/>
+		<rom name="ass.02e" size="16384" crc="42b15fd0"/>
+		<rom name="ass.03e" size="16384" crc="e71dc323"/>
+		<rom name="ss_6.c11" merge="ss_6.c11" size="8192" crc="1135c48a"/>
+		<rom name="ss_7.b6" merge="ss_7.b6" size="8192" crc="990890b1"/>
+		<rom name="ss_8.b5" merge="ss_8.b5" size="8192" crc="9388ff82"/>
+		<rom name="ss_9.m5" merge="ss_9.m5" size="8192" crc="8cb1cacf"/>
+		<rom name="ss_10.m6" merge="ss_10.m6" size="8192" crc="f802815e"/>
+		<rom name="ss_11.m3" merge="ss_11.m3" size="8192" crc="4dbad88a"/>
+		<rom name="ss_12.m4" merge="ss_12.m4" size="8192" crc="aa05e687"/>
+		<rom name="ss_13.m1" merge="ss_13.m1" size="8192" crc="66119bfa"/>
+		<rom name="ss_14.m2" merge="ss_14.m2" size="8192" crc="e14ef54e"/>
+		<rom name="ssb4.b2" merge="ssb4.b2" size="32" crc="c8eaf234"/>
+		<rom name="ssb5.b1" merge="ssb5.b1" size="32" crc="0e434add"/>
+		<rom name="ssb2.c4" merge="ssb2.c4" size="256" crc="c53321c6"/>
+		<rom name="ssb3.h7" merge="ssb3.h7" size="256" crc="7d2c324a"/>
+		<rom name="ssb1.k11" merge="ssb1.k11" size="256" crc="a04b0cfe"/>
+		<video type="raster" orientation="horizontal" width="240" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="anteater" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Anteater</description>
 		<year>1982</year>
@@ -78345,6 +78370,28 @@
 		<video type="raster" orientation="vertical" width="240" height="384" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="hovvbovv" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Homebrew</comment>
+		<description>Hovver Bovver</description>
+		<year>2026</year>
+		<manufacturer>Lambco</manufacturer>
+		<rom name="s1.2d" size="2048" crc="013a2909"/>
+		<rom name="s2.2e" size="2048" crc="c0207df6"/>
+		<rom name="s3.2f" size="2048" crc="65c80db9"/>
+		<rom name="s4.2h" size="2048" crc="8e0a2aec"/>
+		<rom name="s5.2j" size="2048" crc="cdb4cd52"/>
+		<rom name="s6.2l" size="2048" crc="914a99a1"/>
+		<rom name="s7.2m" size="2048" crc="4cb9456f"/>
+		<rom name="s8.2p" size="2048" crc="da14b38b"/>
+		<rom name="ot1.5c" size="2048" crc="09f0053e"/>
+		<rom name="ot2.5d" size="2048" crc="48a6e43d"/>
+		<rom name="ot3.5e" size="2048" crc="f1e8ba9e"/>
+		<rom name="c2.5f" size="2048" crc="d145d380"/>
+		<rom name="c1.5h" size="2048" crc="9b2ad485"/>
+		<rom name="c01s.6e" size="32" crc="6664dbf0"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="happy6100cn" cloneof="happy6" romof="happy6" sourcefile="pgm/d_pgm.cpp">
 		<comment>Incomplete Dump</comment>
 		<description>Huanle Liu He Yi (Happy 6-in-1) (M68K ver. V100, ARM ver. V100CN)</description>
@@ -132206,6 +132253,424 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="poleposa1n" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position (Atari version 1 on Namco PCB)</description>
+		<year>1982</year>
+		<manufacturer>Namco (Atari license)</manufacturer>
+		<rom name="pp2_9.6h" size="8192" crc="c918c043"/>
+		<rom name="pp2_10.5h" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="pp2_1.8m" size="8192" crc="8c2cf172"/>
+		<rom name="pp2_2.8l" size="8192" crc="51018857"/>
+		<rom name="pp2_5.4m" size="8192" crc="af4fc019"/>
+		<rom name="pp2_6.4l" size="8192" crc="ba0045f3"/>
+		<rom name="pp2_28.1f" size="4096" crc="a949aa85"/>
+		<rom name="pp1_29.1e" merge="pp1_29.1e" size="4096" crc="706e888a"/>
+		<rom name="pp2_25.1n" size="8192" crc="34c2d310"/>
+		<rom name="pp2_26.1m" size="8192" crc="ba3005f3"/>
+		<rom name="pp2_17.5n" merge="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="pp2_19.4n" size="8192" crc="1c5c05b7"/>
+		<rom name="pp2_21.3n" size="8192" crc="020f4de5"/>
+		<rom name="pp2_18.5m" merge="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="pp2_20.4m" size="8192" crc="b8a0411c"/>
+		<rom name="pp2_22.3m" size="8192" crc="4fbf3e94"/>
+		<rom name="pp1_30.3a" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="pp1_31.2a" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="pp1_32.1a" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="pp1_27.1l" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="pp1-7.8l" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="pp1-8.9l" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="pp1-9.10l" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="pp2-10.2h" merge="pp2-10.2h" size="256" crc="1e8d0491"/>
+		<rom name="pp1-11.4d" merge="pp1-11.4d" size="256" crc="0e4fe8a0"/>
+		<rom name="pp1-15.9a" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="pp1-16.10a" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="pp1-17.11a" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="pp1-12.3c" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="pp2-6.6m" size="1024" crc="b448c934"/>
+		<rom name="pp1-13.8e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="pp1-14.9e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-118.11d" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="136014-110.12f" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="136014-111.12e" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="136014-106.9c" merge="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="136014-117.7l" merge="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="137316-001.2n" size="52" crc="dd37bd15"/>
+		<rom name="137316-001.5c" size="52" crc="dd37bd15"/>
+		<rom name="137279-001.7c" size="235" crc="4ddc51ba"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="poleposa1" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position (Atari version 1)</description>
+		<year>1982</year>
+		<manufacturer>Namco (Atari license)</manufacturer>
+		<rom name="136014-105.7h" size="8192" crc="c918c043"/>
+		<rom name="136014-116.7f" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="136014-101.3l" size="8192" crc="8c2cf172"/>
+		<rom name="136014-102.4l" size="8192" crc="51018857"/>
+		<rom name="136014-103.3e" size="8192" crc="af4fc019"/>
+		<rom name="136014-104.4e" size="8192" crc="ba0045f3"/>
+		<rom name="136014-132.7n" size="4096" crc="a949aa85"/>
+		<rom name="136014-133.6n" merge="pp1_29.1e" size="4096" crc="706e888a"/>
+		<rom name="136014-125.13n" size="8192" crc="e7a09c93"/>
+		<rom name="136014-126.12n" size="8192" crc="dee7d687"/>
+		<rom name="136014-119.13j" merge="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="136014-121.13k" size="8192" crc="a7e3a1c6"/>
+		<rom name="136014-123.13l" size="8192" crc="8992d381"/>
+		<rom name="136014-120.12j" merge="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="136014-122.12k" size="8192" crc="6c5c6e68"/>
+		<rom name="136014-124.12l" size="8192" crc="111896ad"/>
+		<rom name="136014-127.2l" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="136014-128.2m" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="136014-134.2n" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="136014-131.11n" size="4096" crc="5921777f"/>
+		<rom name="136014-137.11e" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="136014-138.11d" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="136014-139.11c" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="136014-140.8m" merge="pp2-10.2h" size="256" crc="1e8d0491"/>
+		<rom name="136014-141.5k" merge="pp1-11.4d" size="256" crc="0e4fe8a0"/>
+		<rom name="136014-142.2d" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="136014-143.2c" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="136014-144.2b" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="136014-145.4l" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="136014-146.12h" size="1024" crc="ca4ba741"/>
+		<rom name="136014-135.6e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-136.6d" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-118.11d" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="136014-110.12f" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="136014-111.12e" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="136014-106.9c" merge="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="136014-117.7l" merge="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="137316-001.2n" size="52" crc="dd37bd15"/>
+		<rom name="137316-001.5c" size="52" crc="dd37bd15"/>
+		<rom name="137279-001.7c" size="235" crc="4ddc51ba"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="poleposa2" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position (Atari version 2)</description>
+		<year>1982</year>
+		<manufacturer>Namco (Atari license)</manufacturer>
+		<rom name="136014-105.7h" size="8192" crc="c918c043"/>
+		<rom name="136014-116.7f" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="136014-101.3l" size="8192" crc="8c2cf172"/>
+		<rom name="136014-102.4l" size="8192" crc="51018857"/>
+		<rom name="136014-203.3e" size="8192" crc="eedea6e7"/>
+		<rom name="136014-204.4e" size="8192" crc="c52c98ed"/>
+		<rom name="136014-132.7n" size="4096" crc="a949aa85"/>
+		<rom name="136014-133.6n" merge="pp1_29.1e" size="4096" crc="706e888a"/>
+		<rom name="136014-125.13n" size="8192" crc="e7a09c93"/>
+		<rom name="136014-126.12n" size="8192" crc="dee7d687"/>
+		<rom name="136014-119.13j" merge="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="136014-121.13k" size="8192" crc="a7e3a1c6"/>
+		<rom name="136014-123.13l" size="8192" crc="8992d381"/>
+		<rom name="136014-120.12j" merge="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="136014-122.12k" size="8192" crc="6c5c6e68"/>
+		<rom name="136014-124.12l" size="8192" crc="111896ad"/>
+		<rom name="136014-127.2l" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="136014-128.2m" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="136014-134.2n" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="136014-231.11n" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="136014-137.11e" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="136014-138.11d" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="136014-139.11c" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="136014-140.8m" merge="pp2-10.2h" size="256" crc="1e8d0491"/>
+		<rom name="136014-141.5k" merge="pp1-11.4d" size="256" crc="0e4fe8a0"/>
+		<rom name="136014-142.2d" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="136014-143.2c" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="136014-144.2b" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="136014-145.4l" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="136014-146.12h" size="1024" crc="ca4ba741"/>
+		<rom name="136014-135.6e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-136.6d" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-118.11d" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="136014-110.12f" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="136014-111.12e" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="136014-106.9c" merge="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="136014-117.7l" merge="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="137316-001.2n" size="52" crc="dd37bd15"/>
+		<rom name="137316-001.5c" size="52" crc="dd37bd15"/>
+		<rom name="137279-001.7c" size="235" crc="4ddc51ba"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="poleposj" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position (Japan)</description>
+		<year>1982</year>
+		<manufacturer>Namco</manufacturer>
+		<rom name="pp1_9b.6h" size="8192" crc="94436b70"/>
+		<rom name="pp1_10b.5h" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="pp1_1b.8m" size="8192" crc="361c56dd"/>
+		<rom name="pp1_2b.8l" size="8192" crc="582b530a"/>
+		<rom name="pp1_5b.4m" size="8192" crc="5cdf5294"/>
+		<rom name="pp1_6b.4l" size="8192" crc="81696272"/>
+		<rom name="pp1_28.1f" size="4096" crc="5b277daf"/>
+		<rom name="pp1_29.1e" merge="pp1_29.1e" size="4096" crc="706e888a"/>
+		<rom name="pp1_25.1n" size="8192" crc="ac8e28c1"/>
+		<rom name="pp1_26.1m" size="8192" crc="94443079"/>
+		<rom name="pp1_17.5n" merge="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="pp1_19.4n" merge="pp1_19.4n" size="8192" crc="43ff83e1"/>
+		<rom name="pp1_21.3n" merge="pp1_21.3n" size="8192" crc="5f958eb4"/>
+		<rom name="pp1_18.5m" merge="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="pp1_20.4m" merge="pp1_20.4m" size="8192" crc="ec18075b"/>
+		<rom name="pp1_22.3m" merge="pp1_22.3m" size="8192" crc="1d2f30b1"/>
+		<rom name="pp1_30.3a" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="pp1_31.2a" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="pp1_32.1a" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="pp1_27.1l" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="pp1-7.8l" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="pp1-8.9l" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="pp1-9.10l" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="pp1-10.2h" merge="pp2-10.2h" size="256" crc="1e8d0491"/>
+		<rom name="pp1-11.4d" merge="pp1-11.4d" size="256" crc="0e4fe8a0"/>
+		<rom name="pp1-15.9a" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="pp1-16.10a" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="pp1-17.11a" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="pp1-12.3c" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="pp1-6.6m" size="1024" crc="2f1079ee"/>
+		<rom name="pp1-13.8e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="pp1-14.9e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="pp1-5.3b" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="pp1_15.6a" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="pp1_16.5a" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="pp1_11.2e" size="8192" crc="45b9bfeb"/>
+		<rom name="pp1_12.2f" size="8192" crc="a31b4be5"/>
+		<rom name="pp1_13.1e" size="8192" crc="a4237466"/>
+		<rom name="pp1_14.1f" size="8192" crc="944580f9"/>
+		<rom name="pp1-4.9h" merge="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position (World)</description>
+		<year>1982</year>
+		<manufacturer>Namco</manufacturer>
+		<rom name="pp3_9.6h" size="8192" crc="c0511173"/>
+		<rom name="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="pp3_1.8m" size="8192" crc="65c1c2c2"/>
+		<rom name="pp3_2.8l" size="8192" crc="fafb9049"/>
+		<rom name="pp3_5.4m" size="8192" crc="46e5c99a"/>
+		<rom name="pp3_6.4l" size="8192" crc="acc1ebc3"/>
+		<rom name="pp3_28.1f" size="4096" crc="2e77187e"/>
+		<rom name="pp1_29.1e" size="4096" crc="706e888a"/>
+		<rom name="pp3_25.1n" size="8192" crc="b52c086b"/>
+		<rom name="pp3_26.1m" size="8192" crc="d24a5707"/>
+		<rom name="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="pp1_19.4n" size="8192" crc="43ff83e1"/>
+		<rom name="pp1_21.3n" size="8192" crc="5f958eb4"/>
+		<rom name="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="pp1_20.4m" size="8192" crc="ec18075b"/>
+		<rom name="pp1_22.3m" size="8192" crc="1d2f30b1"/>
+		<rom name="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="pp2-10.2h" size="256" crc="1e8d0491"/>
+		<rom name="pp1-11.4d" size="256" crc="0e4fe8a0"/>
+		<rom name="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="pp3-6.6m" size="1024" crc="63fb6057"/>
+		<rom name="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="pp1-14.9e" size="32" crc="4330a51b"/>
+		<rom name="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="pp2_12.2f" size="8192" crc="32b694c2"/>
+		<rom name="pp2_13.1e" size="8192" crc="8842138a"/>
+		<rom name="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="polepos2a" cloneof="polepos2" romof="polepos2" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position II (Atari)</description>
+		<year>1983</year>
+		<manufacturer>Namco (Atari license)</manufacturer>
+		<rom name="136014-180.7h" size="8192" crc="f85212c4"/>
+		<rom name="136014-183.7f" merge="pp4_10.5h" size="4096" crc="a9d4c380"/>
+		<rom name="136014-176.3l" size="8192" crc="8aeaec98"/>
+		<rom name="136014-177.4l" size="8192" crc="7051df35"/>
+		<rom name="136014-178.3e" size="8192" crc="eac35cfa"/>
+		<rom name="136014-179.4e" size="8192" crc="613e917d"/>
+		<rom name="136014-184.3d" size="8192" crc="d893c4ed"/>
+		<rom name="136014-185.4d" size="8192" crc="899de75e"/>
+		<rom name="136014-172.7n" size="8192" crc="fbe5e72f"/>
+		<rom name="136014-173.6n" merge="pp4_29.1e" size="8192" crc="ec3ec6e6"/>
+		<rom name="136014-170.13n" size="8192" crc="455d79a0"/>
+		<rom name="136014-171.12n" size="8192" crc="78372b81"/>
+		<rom name="136014-119.13j" merge="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="136014-166.13k" size="8192" crc="2b0517bd"/>
+		<rom name="136014-168.13l" size="8192" crc="4d7916d9"/>
+		<rom name="136014-175.13m" size="8192" crc="bd6df480"/>
+		<rom name="136014-120.12j" merge="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="136014-167.12k" size="8192" crc="411e21b5"/>
+		<rom name="136014-169.12l" size="8192" crc="662ff24b"/>
+		<rom name="136014-174.12m" size="8192" crc="f0c571dc"/>
+		<rom name="136014-127.2l" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="136014-128.2m" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="136014-134.2n" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="136014-231.11n" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="136014-186.11e" merge="pp4-7.8l" size="256" crc="16d69c31"/>
+		<rom name="136014-187.11d" merge="pp4-8.9l" size="256" crc="07340311"/>
+		<rom name="136014-188.11c" merge="pp4-9.10l" size="256" crc="1efc84d7"/>
+		<rom name="136014-189.8m" merge="pp4-10.2h" size="256" crc="064d51a0"/>
+		<rom name="136014-190.5k" merge="pp4-11.4d" size="256" crc="7880c5af"/>
+		<rom name="136014-142.2d" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="136014-143.2c" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="136014-144.2b" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="136014-191.4l" merge="pp4-12.3c" size="1024" crc="8b270902"/>
+		<rom name="136014-192.12h" size="1024" crc="caddb0b0"/>
+		<rom name="136014-135.6e" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-136.6d" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014-118.11d" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="136014-181.12f" merge="pp4_15.6a" size="8192" crc="7d93bc1c"/>
+		<rom name="136014-182.12e" merge="pp4_15.6a" size="8192" crc="7d93bc1c"/>
+		<rom name="136014-106.9c" size="8192" crc="5b4cf05e"/>
+		<rom name="136014-117.7l" merge="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="137316-001.2n" size="52" crc="dd37bd15"/>
+		<rom name="137316-001.5c" size="52" crc="dd37bd15"/>
+		<rom name="137279-001.7c" size="235" crc="4ddc51ba"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="polepos2b" cloneof="polepos2" romof="polepos2" sourcefile="pre90s/d_polepos.cpp">
+		<comment>Bootleg</comment>
+		<description>Pole Position II (bootleg)</description>
+		<year>1983</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="136014.180" size="8192" crc="f85212c4"/>
+		<rom name="136014.183" merge="pp4_10.5h" size="4096" crc="a9d4c380"/>
+		<rom name="3lcpu.rom" size="8192" crc="cf95a6b7"/>
+		<rom name="4lcpu.rom" size="8192" crc="643483f7"/>
+		<rom name="cpu-4k.rom" size="4096" crc="97a496b3"/>
+		<rom name="136014.178" size="8192" crc="eac35cfa"/>
+		<rom name="136014.179" size="8192" crc="613e917d"/>
+		<rom name="136014.184" size="8192" crc="d893c4ed"/>
+		<rom name="136014.185" size="8192" crc="899de75e"/>
+		<rom name="136014.172" size="8192" crc="fbe5e72f"/>
+		<rom name="136014.173" merge="pp4_29.1e" size="8192" crc="ec3ec6e6"/>
+		<rom name="136014.170" size="8192" crc="455d79a0"/>
+		<rom name="136014.171" size="8192" crc="78372b81"/>
+		<rom name="136014.119" merge="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="136014.166" size="8192" crc="2b0517bd"/>
+		<rom name="136014.168" size="8192" crc="4d7916d9"/>
+		<rom name="136014.175" size="8192" crc="bd6df480"/>
+		<rom name="136014.120" merge="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="136014.167" size="8192" crc="411e21b5"/>
+		<rom name="136014.169" size="8192" crc="662ff24b"/>
+		<rom name="136014.174" size="8192" crc="f0c571dc"/>
+		<rom name="136014.127" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="136014.128" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="136014.134" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="136014.231" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="136014.186" merge="pp4-7.8l" size="256" crc="16d69c31"/>
+		<rom name="136014.187" merge="pp4-8.9l" size="256" crc="07340311"/>
+		<rom name="136014.188" merge="pp4-9.10l" size="256" crc="1efc84d7"/>
+		<rom name="136014.189" merge="pp4-10.2h" size="256" crc="064d51a0"/>
+		<rom name="136014.190" merge="pp4-11.4d" size="256" crc="7880c5af"/>
+		<rom name="136014.142" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="136014.143" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="136014.144" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="136014.191" merge="pp4-12.3c" size="1024" crc="8b270902"/>
+		<rom name="136014.192" size="1024" crc="caddb0b0"/>
+		<rom name="136014.135" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014.136" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014.118" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="136014.181" merge="pp4_15.6a" size="8192" crc="7d93bc1c"/>
+		<rom name="136014.182" merge="pp4_15.6a" size="8192" crc="7d93bc1c"/>
+		<rom name="136014.106" size="8192" crc="5b4cf05e"/>
+		<rom name="136014.117" merge="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="polepos2" sourcefile="pre90s/d_polepos.cpp">
+		<description>Pole Position II (Japan)</description>
+		<year>1983</year>
+		<manufacturer>Namco</manufacturer>
+		<rom name="pp4_9.6h" size="8192" crc="bcf87004"/>
+		<rom name="pp4_10.5h" size="4096" crc="a9d4c380"/>
+		<rom name="pp4_1.8m" size="8192" crc="3f6ac294"/>
+		<rom name="pp4_2.8l" size="8192" crc="51b9a669"/>
+		<rom name="pp4_5.4m" size="8192" crc="c3053cae"/>
+		<rom name="pp4_6.4l" size="8192" crc="38d04e0f"/>
+		<rom name="pp4_7.3m" size="4096" crc="ad1c8994"/>
+		<rom name="pp4_8.3l" size="4096" crc="ef25a2ee"/>
+		<rom name="pp4_28.1f" size="8192" crc="280dde7d"/>
+		<rom name="pp4_29.1e" size="8192" crc="ec3ec6e6"/>
+		<rom name="pp4_25.1n" size="8192" crc="fd098e65"/>
+		<rom name="pp4_26.1m" size="8192" crc="35ac62b3"/>
+		<rom name="pp1_17.5n" size="8192" crc="2e134b46"/>
+		<rom name="pp1_19.4n" size="8192" crc="43ff83e1"/>
+		<rom name="pp1_21.3n" size="8192" crc="5f958eb4"/>
+		<rom name="pp4_23.2n" size="8192" crc="9e056fcd"/>
+		<rom name="pp1_18.5m" size="8192" crc="6f9997d2"/>
+		<rom name="pp1_20.4m" size="8192" crc="ec18075b"/>
+		<rom name="pp1_22.3m" size="8192" crc="1d2f30b1"/>
+		<rom name="pp4_24.2m" size="8192" crc="795268cf"/>
+		<rom name="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="pp4-7.8l" size="256" crc="16d69c31"/>
+		<rom name="pp4-8.9l" size="256" crc="07340311"/>
+		<rom name="pp4-9.10l" size="256" crc="1efc84d7"/>
+		<rom name="pp4-10.2h" size="256" crc="064d51a0"/>
+		<rom name="pp4-11.4d" size="256" crc="7880c5af"/>
+		<rom name="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="pp4-12.3c" size="1024" crc="8b270902"/>
+		<rom name="pp4-6.6m" size="1024" crc="647212b5"/>
+		<rom name="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="pp1-14.9e" size="32" crc="4330a51b"/>
+		<rom name="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="pp4_15.6a" size="8192" crc="7d93bc1c"/>
+		<rom name="pp4_16.5a" size="8192" crc="7d93bc1c"/>
+		<rom name="pp1_11.2e" size="8192" crc="45b9bfeb"/>
+		<rom name="pp1_13.1e" size="8192" crc="a4237466"/>
+		<rom name="pp1_12.2f" size="8192" crc="a31b4be5"/>
+		<rom name="pp1_14.1f" size="8192" crc="944580f9"/>
+		<rom name="pp1-4.9h" size="256" crc="2401c817"/>
+		<rom name="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="polluxn" cloneof="pollux" romof="pollux" sourcefile="pst90s/d_dooyong.cpp">
 		<description>Pollux (Japan, NTC license, distributed by Atlus)</description>
 		<year>1991</year>
@@ -165092,6 +165557,55 @@
 		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="ppspeed" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<comment>Bootleg</comment>
+		<description>Speed Up (Spanish bootleg of Pole Position)</description>
+		<year>1983</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="tr9b.bin" size="8192" crc="538bd0cb"/>
+		<rom name="tr10.bin" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="tr1b.bin" size="8192" crc="127f0750"/>
+		<rom name="tr2b.bin" size="8192" crc="6bd4ff6b"/>
+		<rom name="tr5b.bin" size="8192" crc="4e5f7b9c"/>
+		<rom name="tr6b.bin" size="8192" crc="b3641d0c"/>
+		<rom name="tr28.bin" size="4096" crc="cd80b4c3"/>
+		<rom name="tr29.bin" size="4096" crc="c6e15c21"/>
+		<rom name="tr25.bin" size="8192" crc="f44d33c1"/>
+		<rom name="tr26.bin" size="8192" crc="87e8482d"/>
+		<rom name="tr17.bin" size="8192" crc="613ab0df"/>
+		<rom name="tr19.bin" size="8192" crc="1ea04ccd"/>
+		<rom name="tr21.bin" size="8192" crc="bd7b4a62"/>
+		<rom name="tr18.bin" size="8192" crc="5fd933e3"/>
+		<rom name="tr20.bin" size="8192" crc="c572c6ed"/>
+		<rom name="tr22.bin" size="8192" crc="db1bcdd8"/>
+		<rom name="tr30.bin" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="tr31.bin" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="tr32.bin" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="tr27.bin" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="tr15.bin" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="tr16.bin" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="7052-7.k21" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="7052-8.k20" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="7052-9.k19" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="7052-10.h15" size="256" crc="5af3f710"/>
+		<rom name="7052-11.j15" size="256" crc="8c90e36e"/>
+		<rom name="7052-15.d1" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="7052-16.d2" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="7052-17.d3" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="7122.a19" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="7122.e7" size="1024" crc="2f1079ee"/>
+		<rom name="7051-13.l7" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="7051-14.l8" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="7052-5.e9" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="tr11.b1" merge="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="7052-4.c14" size="256" crc="0e742cb1"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="spelunkrj" cloneof="spelunkr" romof="spelunkr" sampleof="tr606drumkit" sourcefile="irem/d_m62.cpp">
 		<description>Spelunker (Japan)</description>
 		<year>1985</year>
@@ -168708,34 +169222,34 @@
 	</game>
 	<game name="sfa3up" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter Alpha 3 Upper (Hack, USA RC1)</description>
+		<description>Street Fighter Alpha 3 Upper (Hack, USA RC2)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sz3upu.03c" size="524288" crc="7915c758"/>
-		<rom name="sz3upu.04c" size="524288" crc="5f1f6a5f"/>
+		<rom name="sz3upu.03c" size="524288" crc="8f8aa0d5"/>
+		<rom name="sz3upu.04c" size="524288" crc="19e53f85"/>
 		<rom name="sz3up.05c" size="524288" crc="e88579d0"/>
-		<rom name="sz3up.06c" size="524288" crc="72ea9db2"/>
+		<rom name="sz3up.06c" size="524288" crc="5d665555"/>
 		<rom name="sz3up.07c" size="524288" crc="1c11e502"/>
 		<rom name="sz3upu.08c" size="524288" crc="fcdd63d4"/>
-		<rom name="sz3upu.09c" size="524288" crc="9c05a8db"/>
-		<rom name="sz3upu.10b" size="524288" crc="7e55f9dd"/>
-		<rom name="sz3upu.prg" size="4194304" crc="49f89c7d"/>
-		<rom name="sz3upu.13m" size="4194304" crc="61becdec"/>
-		<rom name="sz3upu.15m" size="4194304" crc="af681c33"/>
-		<rom name="sz3upu.17m" size="4194304" crc="0c285d90"/>
-		<rom name="sz3upu.19m" size="4194304" crc="c7668d4f"/>
-		<rom name="sz3upu.14m" size="4194304" crc="8b0ff042"/>
-		<rom name="sz3upu.16m" size="4194304" crc="45b9ef07"/>
-		<rom name="sz3upu.18m" size="4194304" crc="96efde1e"/>
-		<rom name="sz3upu.20m" size="4194304" crc="fa4ba5de"/>
-		<rom name="sz3upu.c9" size="4194304" crc="29f889bf"/>
-		<rom name="sz3upu.c10" size="4194304" crc="677c42d4"/>
-		<rom name="sz3upu.c11" size="4194304" crc="54908458"/>
-		<rom name="sz3upu.c12" size="4194304" crc="f112bbe0"/>
-		<rom name="sz3upu.c13" size="4194304" crc="ce032f1b"/>
-		<rom name="sz3upu.c14" size="4194304" crc="02441263"/>
-		<rom name="sz3upu.c15" size="4194304" crc="5d4a533b"/>
-		<rom name="sz3upu.c16" size="4194304" crc="d908a66e"/>
+		<rom name="sz3upu.09c" size="524288" crc="9a5d01c3"/>
+		<rom name="sz3upu.10b" size="524288" crc="9efc3305"/>
+		<rom name="sz3upu.prg" size="4194304" crc="ff4f593c"/>
+		<rom name="sz3upu.13m" size="4194304" crc="65efed02"/>
+		<rom name="sz3upu.15m" size="4194304" crc="3f96ee07"/>
+		<rom name="sz3upu.17m" size="4194304" crc="05f60113"/>
+		<rom name="sz3upu.19m" size="4194304" crc="6b7eccee"/>
+		<rom name="sz3upu.14m" size="4194304" crc="8598055a"/>
+		<rom name="sz3upu.16m" size="4194304" crc="579b0116"/>
+		<rom name="sz3upu.18m" size="4194304" crc="688028bc"/>
+		<rom name="sz3upu.20m" size="4194304" crc="e56e5e97"/>
+		<rom name="sz3upu.c9" size="4194304" crc="e3efa926"/>
+		<rom name="sz3upu.c10" size="4194304" crc="f3f163fd"/>
+		<rom name="sz3upu.c11" size="4194304" crc="ac7ea2e1"/>
+		<rom name="sz3upu.c12" size="4194304" crc="a41555a7"/>
+		<rom name="sz3upu.c13" size="4194304" crc="f975df46"/>
+		<rom name="sz3upu.c14" size="4194304" crc="2574fc48"/>
+		<rom name="sz3upu.c15" size="4194304" crc="af231ea1"/>
+		<rom name="sz3upu.c16" size="4194304" crc="9adfd997"/>
 		<rom name="sz3up.01" size="131072" crc="66064fde"/>
 		<rom name="sz3up.02" size="131072" crc="92270c80"/>
 		<rom name="sz3up.z80" size="262144" crc="08785e94"/>
@@ -176106,34 +176620,34 @@
 	</game>
 	<game name="sfz3up" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter Zero 3 Upper (Hack, Japan RC1)</description>
+		<description>Street Fighter Zero 3 Upper (Hack, Japan RC2)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sz3upj.03c" size="524288" crc="fcd838fd"/>
-		<rom name="sz3upj.04c" size="524288" crc="34a998eb"/>
+		<rom name="sz3upj.03c" size="524288" crc="5bc13308"/>
+		<rom name="sz3upj.04c" size="524288" crc="46288371"/>
 		<rom name="sz3up.05c" size="524288" crc="e88579d0"/>
-		<rom name="sz3up.06c" size="524288" crc="72ea9db2"/>
+		<rom name="sz3up.06c" size="524288" crc="5d665555"/>
 		<rom name="sz3up.07c" size="524288" crc="1c11e502"/>
 		<rom name="sz3upj.08c" size="524288" crc="afac9595"/>
-		<rom name="sz3upj.09c" size="524288" crc="3631fa4e"/>
-		<rom name="sz3upj.10b" size="524288" crc="dcf1f0a1"/>
-		<rom name="sz3upj.prg" size="4194304" crc="724978c8"/>
-		<rom name="sz3upj.13m" size="4194304" crc="007da368"/>
-		<rom name="sz3upj.15m" size="4194304" crc="dbcb4662"/>
-		<rom name="sz3upj.17m" size="4194304" crc="c0a990d3"/>
-		<rom name="sz3upj.19m" size="4194304" crc="d099bd8e"/>
-		<rom name="sz3upj.14m" size="4194304" crc="c8290ab1"/>
-		<rom name="sz3upj.16m" size="4194304" crc="ae1172ca"/>
-		<rom name="sz3upj.18m" size="4194304" crc="35dcf0a0"/>
-		<rom name="sz3upj.20m" size="4194304" crc="a7a364e4"/>
-		<rom name="sz3upj.c9" size="4194304" crc="f3026e14"/>
-		<rom name="sz3upj.c10" size="4194304" crc="775f7fab"/>
-		<rom name="sz3upj.c11" size="4194304" crc="2645a852"/>
-		<rom name="sz3upj.c12" size="4194304" crc="e93fa063"/>
-		<rom name="sz3upj.c13" size="4194304" crc="ae1cd7b3"/>
-		<rom name="sz3upj.c14" size="4194304" crc="b42a03bf"/>
-		<rom name="sz3upj.c15" size="4194304" crc="0339e89c"/>
-		<rom name="sz3upj.c16" size="4194304" crc="03c0ac9c"/>
+		<rom name="sz3upj.09c" size="524288" crc="30695356"/>
+		<rom name="sz3upj.10b" size="524288" crc="0dc01b37"/>
+		<rom name="sz3upj.prg" size="4194304" crc="f7bfe2fd"/>
+		<rom name="sz3upj.13m" size="4194304" crc="5b7a6965"/>
+		<rom name="sz3upj.15m" size="4194304" crc="c13fa288"/>
+		<rom name="sz3upj.17m" size="4194304" crc="72c30783"/>
+		<rom name="sz3upj.19m" size="4194304" crc="9361f582"/>
+		<rom name="sz3upj.14m" size="4194304" crc="49bb1d15"/>
+		<rom name="sz3upj.16m" size="4194304" crc="fb120e2d"/>
+		<rom name="sz3upj.18m" size="4194304" crc="8a98076a"/>
+		<rom name="sz3upj.20m" size="4194304" crc="c0522ff7"/>
+		<rom name="sz3upj.c9" size="4194304" crc="a1508200"/>
+		<rom name="sz3upj.c10" size="4194304" crc="3adbd97a"/>
+		<rom name="sz3upj.c11" size="4194304" crc="0aec5da2"/>
+		<rom name="sz3upj.c12" size="4194304" crc="d9b10802"/>
+		<rom name="sz3upj.c13" size="4194304" crc="f55d1427"/>
+		<rom name="sz3upj.c14" size="4194304" crc="99bab603"/>
+		<rom name="sz3upj.c15" size="4194304" crc="aec99853"/>
+		<rom name="sz3upj.c16" size="4194304" crc="8fe87501"/>
 		<rom name="sz3up.01" size="131072" crc="66064fde"/>
 		<rom name="sz3up.02" size="131072" crc="92270c80"/>
 		<rom name="sz3up.z80" size="262144" crc="08785e94"/>
@@ -208750,6 +209264,104 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="topracera" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<comment>Bootleg</comment>
+		<description>Top Racer (with MB8841 + MB8842, 1983)</description>
+		<year>1983</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="tr9.f17" size="8192" crc="94436b70"/>
+		<rom name="tr10.f16" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="tr1b.f11" size="8192" crc="127f0750"/>
+		<rom name="tr2b.f8" size="8192" crc="6bd4ff6b"/>
+		<rom name="tr5b.f7" size="8192" crc="4e5f7b9c"/>
+		<rom name="tr6b.f5" size="8192" crc="b3641d0c"/>
+		<rom name="tr28.j9" size="4096" crc="b8217c96"/>
+		<rom name="tr29.k9" size="4096" crc="c6e15c21"/>
+		<rom name="tr25.d5" size="8192" crc="9e1a9c3b"/>
+		<rom name="tr26.d8" size="8192" crc="3b39a176"/>
+		<rom name="tr17.a5" size="8192" crc="613ab0df"/>
+		<rom name="tr19.b5" size="8192" crc="f8e7f551"/>
+		<rom name="tr21.c5" size="8192" crc="17c798b0"/>
+		<rom name="tr18.a8" size="8192" crc="5fd933e3"/>
+		<rom name="tr20.b8" size="8192" crc="7053e219"/>
+		<rom name="tr22.c8" size="8192" crc="5fe9b365"/>
+		<rom name="tr30.b15" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="tr31.a15" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="tr32.c15" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="tr27.d3" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="7052-7.k21" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="7052-8.k20" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="7052-9.k19" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="7052-10.h15" size="256" crc="5af3f710"/>
+		<rom name="7052-11.j15" size="256" crc="8c90e36e"/>
+		<rom name="7052-15.d1" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="7052-16.d2" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="7052-17.d3" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="7122.a19" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="7122.e7" size="1024" crc="2f1079ee"/>
+		<rom name="7051-13.l7" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="7051-14.l8" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="7052-5.e9" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="tr15.a8" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="tr16.b9" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="tr11.b1" merge="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="7052-4.c14" size="256" crc="0e742cb1"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="topracer" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
+		<comment>Bootleg</comment>
+		<description>Top Racer (with MB8841 + MB8842, 1984)</description>
+		<year>1984</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="pp1_9b.6h" size="8192" crc="94436b70"/>
+		<rom name="136014.116" merge="pp1_10b.5h" size="4096" crc="7174bcb7"/>
+		<rom name="tr1b.bin" size="8192" crc="127f0750"/>
+		<rom name="tr2b.bin" size="8192" crc="6bd4ff6b"/>
+		<rom name="tr5b.bin" size="8192" crc="4e5f7b9c"/>
+		<rom name="tr6b.bin" size="8192" crc="9d038ada"/>
+		<rom name="tr28.bin" size="4096" crc="b8217c96"/>
+		<rom name="tr29.bin" size="4096" crc="c6e15c21"/>
+		<rom name="trus25.bin" size="8192" crc="9e1a9c3b"/>
+		<rom name="trus26.bin" size="8192" crc="3b39a176"/>
+		<rom name="pp17.bin" size="8192" crc="613ab0df"/>
+		<rom name="tr19.bin" size="8192" crc="f8e7f551"/>
+		<rom name="tr21.bin" size="8192" crc="17c798b0"/>
+		<rom name="pp18.bin" size="8192" crc="5fd933e3"/>
+		<rom name="tr20.bin" size="8192" crc="7053e219"/>
+		<rom name="tr22.bin" size="8192" crc="5fe9b365"/>
+		<rom name="136014.158" merge="pp1_30.3a" size="8192" crc="ee6b3315"/>
+		<rom name="136014.159" merge="pp1_31.2a" size="8192" crc="6d1e7042"/>
+		<rom name="136014.134" merge="pp1_32.1a" size="4096" crc="4e97f101"/>
+		<rom name="136014.231" merge="pp1_27.1l" size="4096" crc="a61bff15"/>
+		<rom name="136014.137" merge="pp1-7.8l" size="256" crc="f07ff2ad"/>
+		<rom name="136014.138" merge="pp1-8.9l" size="256" crc="adbde7d7"/>
+		<rom name="136014.139" merge="pp1-9.10l" size="256" crc="ddac786a"/>
+		<rom name="7052-10.h15" size="256" crc="5af3f710"/>
+		<rom name="7052-11.j15" size="256" crc="8c90e36e"/>
+		<rom name="136014.142" merge="pp1-15.9a" size="256" crc="2d502464"/>
+		<rom name="136014.143" merge="pp1-16.10a" size="256" crc="027aa62c"/>
+		<rom name="136014.144" merge="pp1-17.11a" size="256" crc="1f8d0df3"/>
+		<rom name="136014.145" merge="pp1-12.3c" size="1024" crc="7afc7cfc"/>
+		<rom name="7122.e7" size="1024" crc="2f1079ee"/>
+		<rom name="136014.135" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014.136" merge="pp1-13.8e" size="32" crc="4330a51b"/>
+		<rom name="136014.118" merge="pp1-5.3b" size="256" crc="8568decc"/>
+		<rom name="136014.110" merge="pp1_15.6a" size="8192" crc="b5ad4d5f"/>
+		<rom name="136014.111" merge="pp1_16.5a" size="8192" crc="8fdd2f6f"/>
+		<rom name="136014.106" merge="pp2_11.2e" size="8192" crc="5b4cf05e"/>
+		<rom name="7052-4.c14" size="256" crc="0e742cb1"/>
+		<rom name="51xx.bin" merge="51xx.bin" size="1024" crc="c2f57ef8"/>
+		<rom name="52xx.bin" merge="52xx.bin" size="1024" crc="3257d11e"/>
+		<rom name="53xx.bin" merge="53xx.bin" size="1024" crc="b326fecb"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="trstarj" cloneof="trstar" romof="trstar" sourcefile="taito/d_taitof3.cpp">
 		<description>Top Ranking Stars (Ver 2.1J 1993/05/21) (New Version)</description>
 		<year>1993</year>
@@ -211756,6 +212368,46 @@
 		<rom name="map-00.rom" size="524288" crc="8c879cfe"/>
 		<rom name="hl03-.j15" size="131072" crc="01b81da0"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tunhuntc" cloneof="tunhunt" romof="tunhunt" sourcefile="atari/d_tunhunt.cpp">
+		<description>Tunnel Hunt (Centuri)</description>
+		<year>1981</year>
+		<manufacturer>Atari (Centuri license)</manufacturer>
+		<rom name="001.lm1" merge="001.lm1" size="2048" crc="2601a3a4"/>
+		<rom name="002.k1" merge="002.k1" size="2048" crc="29bbf3df"/>
+		<rom name="003.j1" size="2048" crc="360c0f47"/>
+		<rom name="004.fh1" merge="004.fh1" size="2048" crc="4d6c920e"/>
+		<rom name="005.ef1" merge="005.ef1" size="2048" crc="e17badf0"/>
+		<rom name="006.d1" merge="006.d1" size="2048" crc="c3ae8519"/>
+		<rom name="019.c10" merge="019.c10" size="1024" crc="d6fd45a9"/>
+		<rom name="016.a8" merge="016.a8" size="512" crc="830e6c34"/>
+		<rom name="017.b8" merge="017.b8" size="512" crc="5bef8b5a"/>
+		<rom name="013.d11" merge="013.d11" size="32" crc="66f1f5eb"/>
+		<rom name="014.c11" merge="014.c11" size="32" crc="662444b2"/>
+		<rom name="015.n4" merge="015.n4" size="256" crc="00e224a0"/>
+		<rom name="018.h9" merge="018.h9" size="1024" crc="6547c208"/>
+		<video type="raster" orientation="vertical" width="240" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="tunhunt" sourcefile="atari/d_tunhunt.cpp">
+		<description>Tunnel Hunt</description>
+		<year>1979</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="001.lm1" size="2048" crc="2601a3a4"/>
+		<rom name="002.k1" size="2048" crc="29bbf3df"/>
+		<rom name="136000.103" size="2048" crc="1a6a60a4"/>
+		<rom name="004.fh1" size="2048" crc="4d6c920e"/>
+		<rom name="005.ef1" size="2048" crc="e17badf0"/>
+		<rom name="006.d1" size="2048" crc="c3ae8519"/>
+		<rom name="019.c10" size="1024" crc="d6fd45a9"/>
+		<rom name="016.a8" size="512" crc="830e6c34"/>
+		<rom name="017.b8" size="512" crc="5bef8b5a"/>
+		<rom name="013.d11" size="32" crc="66f1f5eb"/>
+		<rom name="014.c11" size="32" crc="662444b2"/>
+		<rom name="015.n4" size="256" crc="00e224a0"/>
+		<rom name="018.h9" size="1024" crc="6547c208"/>
+		<video type="raster" orientation="vertical" width="240" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="turboa" cloneof="turbo" romof="turbo" sampleof="turbo" sourcefile="sega/d_turbo.cpp">

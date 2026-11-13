@@ -13,23 +13,40 @@
 		<clrmamepro forcenodump="ignore"/>
 	</header>
 	<game name="3dtictac" sourcefile="atari/d_atari2600.cpp">
-		<description>3-D Tic-Tac-Toe</description>
+		<description>3-D Tic-Tac-Toe (USA)</description>
 		<year>1978</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="3-D Tic-Tac-Toe (1978)(Atari).bin" size="2048" crc="58805709"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="aardvark" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, 32K + Superchip RAM (128 bytes)</comment>
+		<description>Aardvark (HB)</description>
+		<year>2019</year>
+		<manufacturer>Oscar Toledo G.</manufacturer>
+		<rom name="Aardvark (2019)(Oscar Toledo G.).bin" size="32768" crc="3a6ca45b"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="abrete" sourcefile="atari/d_atari2600.cpp">
-		<description>Abre-te, Sesamo!</description>
+		<description>Abre-te, Sesamo! (USA)</description>
 		<year>1983</year>
 		<manufacturer>CCE</manufacturer>
 		<rom name="Abre-te, Sesamo! (1983)(CCE).bin" size="4096" crc="8cf511a4"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="decathln" sourcefile="atari/d_atari2600.cpp">
+		<description>Activision Decathlon, The (USA)</description>
+		<year>1983</year>
+		<manufacturer>Activision</manufacturer>
+		<rom name="Activision Decathlon, The (1983)(Activision).bin" size="8192" crc="3feb39b1"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="adventur" sourcefile="atari/d_atari2600.cpp">
-		<description>Adventure</description>
+		<description>Adventure (USA)</description>
 		<year>1978</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Adventure (1978)(Atari).bin" size="4096" crc="a6db4b3a"/>
@@ -37,7 +54,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="advtron" sourcefile="atari/d_atari2600.cpp">
-		<description>Adventures of Tron</description>
+		<description>Adventures of Tron (USA)</description>
 		<year>1983</year>
 		<manufacturer>Mattel Electronics</manufacturer>
 		<rom name="Adventures of Tron (1983)(Mattel Electronics).bin" size="4096" crc="1b8019d6"/>
@@ -45,7 +62,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="airraids" sourcefile="atari/d_atari2600.cpp">
-		<description>Air Raiders</description>
+		<description>Air Raiders (USA)</description>
 		<year>1982</year>
 		<manufacturer>Mattel Electronics</manufacturer>
 		<rom name="Air Raiders (1982)(Mattel Electronics).bin" size="4096" crc="bb16539d"/>
@@ -53,7 +70,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="airseaba" sourcefile="atari/d_atari2600.cpp">
-		<description>Air-Sea Battle</description>
+		<description>Air-Sea Battle (USA)</description>
 		<year>1977</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Air-Sea Battle (1977)(Atari).bin" size="2048" crc="1fc6c0f1"/>
@@ -61,7 +78,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="airlock" sourcefile="atari/d_atari2600.cpp">
-		<description>Airlock</description>
+		<description>Airlock (USA)</description>
 		<year>1982</year>
 		<manufacturer>Data Age</manufacturer>
 		<rom name="Airlock (1982)(Data Age).bin" size="4096" crc="25c90ce7"/>
@@ -69,7 +86,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="alien" sourcefile="atari/d_atari2600.cpp">
-		<description>Alien (20th Century Fox)</description>
+		<description>Alien (USA)</description>
 		<year>1982</year>
 		<manufacturer>20th Century Fox</manufacturer>
 		<rom name="Alien (1982)(20th Century Fox).bin" size="4096" crc="6d61059f"/>
@@ -77,7 +94,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="amidar" sourcefile="atari/d_atari2600.cpp">
-		<description>Amidar</description>
+		<description>Amidar (USA)</description>
 		<year>1983</year>
 		<manufacturer>Parker Bros</manufacturer>
 		<rom name="Amidar (1983)(Parker Bros).bin" size="4096" crc="8eb5bd72"/>
@@ -85,7 +102,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="aquavent" sourcefile="atari/d_atari2600.cpp">
-		<description>Aquaventure</description>
+		<description>Aquaventure (USA)</description>
 		<year>198?</year>
 		<manufacturer>CCE</manufacturer>
 		<rom name="Aquaventure (198x)(CCE).bin" size="8192" crc="7fa61fa0"/>
@@ -93,7 +110,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="armoramb" sourcefile="atari/d_atari2600.cpp">
-		<description>Armor Ambush</description>
+		<description>Armor Ambush (USA)</description>
 		<year>1982</year>
 		<manufacturer>Mattel Electronics</manufacturer>
 		<rom name="Armor Ambush (1982)(Mattel Electronics).bin" size="4096" crc="fc35704b"/>
@@ -101,7 +118,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="artduel" sourcefile="atari/d_atari2600.cpp">
-		<description>Artillery Duel</description>
+		<description>Artillery Duel (USA)</description>
 		<year>1983</year>
 		<manufacturer>Xonox</manufacturer>
 		<rom name="Artillery Duel (1983)(Xonox).bin" size="8192" crc="1d0f7e8d"/>
@@ -109,7 +126,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="assault" sourcefile="atari/d_atari2600.cpp">
-		<description>Assault</description>
+		<description>Assault (USA)</description>
 		<year>1983</year>
 		<manufacturer>Bomb</manufacturer>
 		<rom name="Assault (1983)(Bomb).bin" size="4096" crc="ab3a2b77"/>
@@ -117,7 +134,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="asteroid" sourcefile="atari/d_atari2600.cpp">
-		<description>Asteroids</description>
+		<description>Asteroids (USA)</description>
 		<year>1981</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Asteroids (1981)(Atari).bin" size="8192" crc="c7d64c94"/>
@@ -125,7 +142,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="astrblst" sourcefile="atari/d_atari2600.cpp">
-		<description>Astroblast</description>
+		<description>Astroblast (USA)</description>
 		<year>1982</year>
 		<manufacturer>Mattel Electronics</manufacturer>
 		<rom name="Astroblast (1982)(Mattel Electronics).bin" size="4096" crc="1de25331"/>
@@ -133,7 +150,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="astrowar" sourcefile="atari/d_atari2600.cpp">
-		<description>Astrowar</description>
+		<description>Astrowar (USA)</description>
 		<year>1983</year>
 		<manufacturer>Starsoft</manufacturer>
 		<rom name="Astrowar (1983)(Starsoft).bin" size="4096" crc="7b4b7eaf"/>
@@ -141,7 +158,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="avc" sourcefile="atari/d_atari2600.cpp">
-		<description>Atari Video Cube</description>
+		<description>Atari Video Cube (USA)</description>
 		<year>1982</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Atari Video Cube (1982)(Atari).bin" size="4096" crc="272ae37f"/>
@@ -149,7 +166,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="atlantis" sourcefile="atari/d_atari2600.cpp">
-		<description>Atlantis (Imagic)</description>
+		<description>Atlantis (USA)</description>
 		<year>1982</year>
 		<manufacturer>Imagic</manufacturer>
 		<rom name="Atlantis (1982)(Imagic).bin" size="4096" crc="92560498"/>
@@ -189,7 +206,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="bzone" sourcefile="atari/d_atari2600.cpp">
-		<description>Battlezone</description>
+		<description>Battlezone (USA)</description>
 		<year>1983</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Battlezone (1983)(Atari).bin" size="8192" crc="9155dd1d"/>
@@ -197,7 +214,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="beamridr" sourcefile="atari/d_atari2600.cpp">
-		<description>Beamrider</description>
+		<description>Beamrider (USA)</description>
 		<year>1984</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Beamrider (1984)(Activision).bin" size="8192" crc="1618565b"/>
@@ -205,7 +222,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="beanbopp" sourcefile="atari/d_atari2600.cpp">
-		<description>Beany Bopper (20th Century Fox)</description>
+		<description>Beany Bopper (USA)</description>
 		<year>1983</year>
 		<manufacturer>20th Century Fox</manufacturer>
 		<rom name="Beany Bopper (1983)(20th Century Fox).bin" size="4096" crc="b722bc8f"/>
@@ -341,7 +358,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="buckrog" sourcefile="atari/d_atari2600.cpp">
-		<description>Buck Rogers - Planet of Zoom</description>
+		<description>Buck Rogers: Planet of Zoom (USA)</description>
 		<year>1983</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Buck Rogers - Planet of Zoom (1983)(Sega).bin" size="8192" crc="2030f686"/>
@@ -349,7 +366,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="bugs" sourcefile="atari/d_atari2600.cpp">
-		<description>Bugs</description>
+		<description>Bugs (USA)</description>
 		<year>1982</year>
 		<manufacturer>Data Age</manufacturer>
 		<rom name="Bugs (1982)(Data Age).bin" size="4096" crc="1202427c"/>
@@ -357,10 +374,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="bnj" sourcefile="atari/d_atari2600.cpp">
-		<description>Bump 'n' Jump</description>
+		<description>Bump 'n' Jump (USA)</description>
 		<year>1983</year>
-		<manufacturer>M Network</manufacturer>
-		<rom name="Bump 'n' Jump (1983)(M Network).bin" size="16384" crc="df2bc303"/>
+		<manufacturer>Telegames</manufacturer>
+		<rom name="Bump 'n' Jump (1983)(Telegames).bin" size="16384" crc="df2bc303"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -557,10 +574,19 @@
 		<driver status="good"/>
 	</game>
 	<game name="congo" sourcefile="atari/d_atari2600.cpp">
-		<description>Congo Bongo</description>
+		<description>Congo Bongo (USA)</description>
 		<year>1983</year>
 		<manufacturer>Sega</manufacturer>
 		<rom name="Congo Bongo (1983)(Sega).bin" size="8192" crc="3f6e7e0c"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="conqmars" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Conquest of Mars (HB)</description>
+		<year>2006</year>
+		<manufacturer>Champ Games</manufacturer>
+		<rom name="Conquest of Mars (2006)(Champ Games).bin" size="16384" crc="bace5a14"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -796,19 +822,28 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dkong" sourcefile="atari/d_atari2600.cpp">
+		<description>Donkey Kong (USA)</description>
+		<year>1987</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="Donkey Kong (1987)(Atari).bin" size="4096" crc="f331b069"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dkongjr" sourcefile="atari/d_atari2600.cpp">
-		<description>Donkey Kong Junior</description>
+		<description>Donkey Kong Junior (USA)</description>
 		<year>1987</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Donkey Kong Junior (1987)(Atari).bin" size="8192" crc="9ef649e5"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dkong" sourcefile="atari/d_atari2600.cpp">
-		<description>Donkey Kong</description>
-		<year>1987</year>
-		<manufacturer>Atari</manufacturer>
-		<rom name="Donkey Kong (1987)(Atari).bin" size="4096" crc="f331b069"/>
+	<game name="dkongvcs" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, 32K + Superchip RAM (128 bytes)</comment>
+		<description>Donkey Kong VCS (HB)</description>
+		<year>2017</year>
+		<manufacturer>Andreas Dietrich</manufacturer>
+		<rom name="Donkey Kong VCS (2017)(Andreas Dietrich).bin" size="32768" crc="6c87f24e"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -828,6 +863,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="draconian" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>Draconian (HB)</description>
+		<year>2017</year>
+		<manufacturer>SpiceWare</manufacturer>
+		<rom name="Draconian (2017)(SpiceWare).bin" size="32768" crc="d104b3d9"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dragfire" sourcefile="atari/d_atari2600.cpp">
 		<description>Dragonfire</description>
 		<year>1982</year>
@@ -841,6 +885,24 @@
 		<year>1980</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Dragster (1980)(Activision).bin" size="2048" crc="4042d3ab"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="drone" cloneof="dronedx" romof="dronedx" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Drone Attack (HB)</description>
+		<year>2025</year>
+		<manufacturer>Artefacto Games</manufacturer>
+		<rom name="Drone Attack (2025)(Artefacto Games).bin" size="8192" crc="1790e5d6"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dronedx" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Drone Attack DX (HB)</description>
+		<year>2025</year>
+		<manufacturer>Artefacto Games</manufacturer>
+		<rom name="Drone Attack DX (2025)(Artefacto Games).bin" size="16384" crc="32ba4d8c"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1100,6 +1162,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="galagon" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>Galagon (HB)</description>
+		<year>2019</year>
+		<manufacturer>Champ Games</manufacturer>
+		<rom name="Galagon (2019)(Champ Games).bin" size="32768" crc="31d4975f"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="galaxian" sourcefile="atari/d_atari2600.cpp">
 		<description>Galaxian</description>
 		<year>1983</year>
@@ -1316,6 +1387,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="iran" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>I Ran (HB)</description>
+		<year>2020</year>
+		<manufacturer>VHZC Games</manufacturer>
+		<rom name="I Ran (2020)(VHZC).bin" size="16384" crc="bcdc3f73"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="iwantmom" sourcefile="atari/d_atari2600.cpp">
 		<description>I Want My Mommy</description>
 		<year>1983</year>
@@ -1436,8 +1516,26 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="junofirst" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Juno First (HB)</description>
+		<year>2009</year>
+		<manufacturer>Chris Walton</manufacturer>
+		<rom name="Juno First (2009)(Chris Walton).bin" size="32768" crc="30baa209"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="jutskies" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, Enhanced DPC coprocessor</comment>
+		<description>Jutland Skies (HB)</description>
+		<year>2023</year>
+		<manufacturer>KiKi</manufacturer>
+		<rom name="Jutland Skies (2023)(KiKi).bin" size="32768" crc="b4f01093"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kaboom" sourcefile="atari/d_atari2600.cpp">
-		<description>Kaboom!</description>
+		<description>Kaboom! (USA)</description>
 		<year>1981</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Kaboom! (1981)(Activision).bin" size="2048" crc="813f00f6"/>
@@ -1445,7 +1543,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="kangaroo" sourcefile="atari/d_atari2600.cpp">
-		<description>Kangaroo</description>
+		<description>Kangaroo (USA)</description>
 		<year>1983</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Kangaroo (1983)(Atari).bin" size="8192" crc="b9ab57e6"/>
@@ -1453,7 +1551,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="karate" sourcefile="atari/d_atari2600.cpp">
-		<description>Karate</description>
+		<description>Karate (USA)</description>
 		<year>1982</year>
 		<manufacturer>Ultravision</manufacturer>
 		<rom name="Karate (1982)(Ultravision).bin" size="4096" crc="ac0a9ce0"/>
@@ -1461,7 +1559,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="keykaper" sourcefile="atari/d_atari2600.cpp">
-		<description>Keystone Kapers</description>
+		<description>Keystone Kapers (USA)</description>
 		<year>1983</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Keystone Kapers (1983)(Activision).bin" size="4096" crc="3e55f3a1"/>
@@ -1469,15 +1567,33 @@
 		<driver status="good"/>
 	</game>
 	<game name="kingkong" sourcefile="atari/d_atari2600.cpp">
-		<description>King Kong</description>
+		<description>King Kong (USA)</description>
 		<year>1982</year>
 		<manufacturer>Tigervision</manufacturer>
 		<rom name="King Kong (1982)(Tigervision).bin" size="4096" crc="cb6f5617"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="knightguy" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Knight Guy (HB)</description>
+		<year>2018</year>
+		<manufacturer>VHZC Games</manufacturer>
+		<rom name="Knight Guy (2018)(VHZC Games).bin" size="16384" crc="2f04be66"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="knightguy2" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Knight Guy: Castle Days (HB)</description>
+		<year>2021</year>
+		<manufacturer>VHZC Games</manufacturer>
+		<rom name="Knight Guy - Castle Days (2021)(VHZC Games).bin" size="32768" crc="87333357"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="koolaidm" sourcefile="atari/d_atari2600.cpp">
-		<description>Kool-Aid Man</description>
+		<description>Kool-Aid Man (USA)</description>
 		<year>1983</year>
 		<manufacturer>M Network</manufacturer>
 		<rom name="Kool-Aid Man (1983)(M Network).bin" size="4096" crc="d9bd009b"/>
@@ -1497,6 +1613,15 @@
 		<year>1987</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Kung-Fu Master (1987)(Activision).bin" size="8192" crc="5fea6e51"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ladybugarc" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>Lady Bug Arcade (HB)</description>
+		<year>2021</year>
+		<manufacturer>Champ Games</manufacturer>
+		<rom name="Lady Bug Arcade (2021)(Champ Games).bin" size="32768" crc="59a3ed32"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1645,15 +1770,24 @@
 		<driver status="good"/>
 	</game>
 	<game name="mazecraz" sourcefile="atari/d_atari2600.cpp">
-		<description>Maze Craze - A Game of Cops 'n Robbers - Maze Mania - A Game of Cops 'n Robbers</description>
+		<description>Maze Craze: A Game of Cops 'n Robbers (USA)</description>
 		<year>1980</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Maze Craze - A Game of Cops 'n Robbers (1980)(Atari).bin" size="4096" crc="0098e428"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="medmayhem" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Medieval Mayhem (HB)</description>
+		<year>2006</year>
+		<manufacturer>SpiceWare</manufacturer>
+		<rom name="Medieval Mayhem (2006)(SpiceWare).bin" size="32768" crc="b5344ce4"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="megafrce" sourcefile="atari/d_atari2600.cpp">
-		<description>Mega Force</description>
+		<description>Mega Force (USA)</description>
 		<year>1982</year>
 		<manufacturer>20th Century Fox Video Games</manufacturer>
 		<rom name="Mega Force (1982)(20th Century Fox Video Games).bin" size="4096" crc="9e6ae8c2"/>
@@ -1929,6 +2063,15 @@
 		<year>1983</year>
 		<manufacturer>CBS Electronics</manufacturer>
 		<rom name="Omega Race (1983)(CBS Electronics).bin" size="12288" crc="e9876116"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="oozysq" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Oozy the Goo: Slime Quest (HB)</description>
+		<year>2022</year>
+		<manufacturer>VHZC Games</manufacturer>
+		<rom name="Oozy the Goo - Slime Quest (2022)(VHZC Games).bin" size="32768" crc="dd56e194"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -2404,6 +2547,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="rw2684" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>RobotWar 2684 (HB)</description>
+		<year>2021</year>
+		<manufacturer>Champ Games</manufacturer>
+		<rom name="RobotWar 2684 (2021)(Champ Games).bin" size="32768" crc="039bf799"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="rocnrope" sourcefile="atari/d_atari2600.cpp">
 		<description>Roc 'n Rope</description>
 		<year>1984</year>
@@ -2541,7 +2693,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="skiing" sourcefile="atari/d_atari2600.cpp">
-		<description>Skiing - Le Ski</description>
+		<description>Skiing ~ Le Ski (USA)</description>
 		<year>1980</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Skiing (1980)(Activision).bin" size="2048" crc="35f80a22"/>
@@ -2549,7 +2701,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="skydiver" sourcefile="atari/d_atari2600.cpp">
-		<description>Sky Diver - Dare Diver</description>
+		<description>Sky Diver ~ Dare Diver (USA)</description>
 		<year>1979</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Sky Diver (1979)(Atari).bin" size="2048" crc="00312ea9"/>
@@ -2557,7 +2709,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="skyjink" sourcefile="atari/d_atari2600.cpp">
-		<description>Sky Jinks</description>
+		<description>Sky Jinks (USA)</description>
 		<year>1982</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Sky Jinks (1982)(Activision).bin" size="2048" crc="96f8cf59"/>
@@ -3253,7 +3405,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="taz" sourcefile="atari/d_atari2600.cpp">
-		<description>Taz</description>
+		<description>Taz (USA)</description>
 		<year>1983</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="Taz (1983)(Atari).bin" size="8192" crc="c9d7ec9b"/>
@@ -3265,14 +3417,6 @@
 		<year>1981</year>
 		<manufacturer>Activision</manufacturer>
 		<rom name="Tennis (1981)(Activision).bin" size="2048" crc="0a42515b"/>
-		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="decathln" sourcefile="atari/d_atari2600.cpp">
-		<description>The Activision Decathlon</description>
-		<year>1983</year>
-		<manufacturer>Activision</manufacturer>
-		<rom name="The Activision Decathlon (1983)(Activision).bin" size="8192" crc="3feb39b1"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3364,11 +3508,29 @@
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="tonymg" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>Tony Montezuma's Gold (HB)</description>
+		<year>2025</year>
+		<manufacturer>Monochrome Productions</manufacturer>
+		<rom name="Tony Montezuma's Gold (2025)(Monochrome Productions).bin" size="32768" crc="bb2dc54c"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="toothpro" sourcefile="atari/d_atari2600.cpp">
 		<description>Tooth Protectors</description>
 		<year>1983</year>
 		<manufacturer>DSD-Camelot</manufacturer>
 		<rom name="Tooth Protectors (1983)(DSD-Camelot).bin" size="8192" crc="fd8c81e5"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="towrubble" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew</comment>
+		<description>Tower of Rubble (HB, v1.1)</description>
+		<year>2018</year>
+		<manufacturer>DionoiD</manufacturer>
+		<rom name="Tower of Rubble v1.1 (2018)(DionoiD).bin" size="8192" crc="45082a89"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -3565,7 +3727,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="wingames" sourcefile="atari/d_atari2600.cpp">
-		<description>Winter Games</description>
+		<description>Winter Games (USA)</description>
 		<year>1987</year>
 		<manufacturer>Epyx</manufacturer>
 		<rom name="Winter Games (1987)(Epyx).bin" size="16384" crc="ddff6850"/>
@@ -3573,15 +3735,24 @@
 		<driver status="good"/>
 	</game>
 	<game name="wow" sourcefile="atari/d_atari2600.cpp">
-		<description>Wizard of Wor</description>
+		<description>Wizard of Wor (USA)</description>
 		<year>1982</year>
 		<manufacturer>CBS Electronics</manufacturer>
 		<rom name="Wizard of Wor (1982)(CBS Electronics).bin" size="4096" crc="926f6f11"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="wowarc" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>Wizard of Wor Arcade (HB)</description>
+		<year>2019</year>
+		<manufacturer>Champ Games</manufacturer>
+		<rom name="Wizard of Wor Arcade (2019)(Champ Games).bin" size="32768" crc="11bc3a97"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="wordzap" sourcefile="atari/d_atari2600.cpp">
-		<description>Word Zapper</description>
+		<description>Word Zapper (USA)</description>
 		<year>1982</year>
 		<manufacturer>U.S. Games Corporation</manufacturer>
 		<rom name="Word Zapper (1982)(U.S. Games Corporation).bin" size="4096" crc="a11eeeab"/>
@@ -3625,6 +3796,15 @@
 		<year>1982</year>
 		<manufacturer>Coleco</manufacturer>
 		<rom name="Zaxxon (1982)(Coleco).bin" size="8192" crc="265aa87f"/>
+		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zookeep" sourcefile="atari/d_atari2600.cpp">
+		<comment>Homebrew, CDF coprocessor</comment>
+		<description>Zoo Keeper (HB)</description>
+		<year>2020</year>
+		<manufacturer>Champ Games</manufacturer>
+		<rom name="Zoo Keeper (2020)(Champ Games).bin" size="32768" crc="8ce0b8f4"/>
 		<video type="raster" orientation="horizontal" width="320" height="456" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
