@@ -3281,6 +3281,8 @@ DRV		BurnDrvBosco1;
 DRV		BurnDrvBosco1o;
 DRV		BurnDrvBosco3;
 DRV		BurnDrvBosco;
+DRV		BurnDrvBosco87m;
+DRV		BurnDrvBosco87;
 DRV		BurnDrvMSX_bosco;
 DRV		BurnDrvMSX_boscob;
 DRV		BurnDrvMSX_boscoa;
@@ -33668,6 +33670,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvBosco1o,			// Bosconian - Star Destroyer (version 1, older)
 	&BurnDrvBosco3,				// Bosconian - Star Destroyer (version 3)
 	&BurnDrvBosco,				// Bosconian - Star Destroyer (version 5)
+	&BurnDrvBosco87m,			// Bosconian 87 Arcade (Midway version)
+	&BurnDrvBosco87,			// Bosconian 87 Arcade
 	&BurnDrvMSX_bosco,			// Bosconian, Star Destroyer (Japan)
 	&BurnDrvMSX_boscob,			// Bosconian, Star Destroyer (Japan, Alt 2)
 	&BurnDrvMSX_boscoa,			// Bosconian, Star Destroyer (Japan, Alt)
@@ -64037,6 +64041,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "bosco1o", "pre90s/d_galaga.cpp"},
 	{ "bosco3", "pre90s/d_galaga.cpp"},
 	{ "bosco", "pre90s/d_galaga.cpp"},
+	{ "bosco87m", "pre90s/d_galaga.cpp"},
+	{ "bosco87", "pre90s/d_galaga.cpp"},
 	{ "msx_bosco", "msx/d_msx.cpp"},
 	{ "msx_boscob", "msx/d_msx.cpp"},
 	{ "msx_boscoa", "msx/d_msx.cpp"},

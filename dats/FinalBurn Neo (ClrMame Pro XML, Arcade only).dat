@@ -20646,6 +20646,62 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bosco87m" cloneof="bosco" romof="bosco" sourcefile="pre90s/d_galaga.cpp">
+		<comment>Hack</comment>
+		<description>Bosconian 87 Arcade (Midway version)</description>
+		<year>2026</year>
+		<manufacturer>hack</manufacturer>
+		<rom name="3n" size="4096" crc="286ac876"/>
+		<rom name="3m" size="4096" crc="a3c5c7ef"/>
+		<rom name="3l" size="4096" crc="6ca9a0cf"/>
+		<rom name="3k" size="4096" crc="f34970c8"/>
+		<rom name="3j" size="4096" crc="4374e39a"/>
+		<rom name="3h" size="4096" crc="04e9fcef"/>
+		<rom name="bos1_7.3e" size="4096" crc="9ac7836c"/>
+		<rom name="bos1_14.5d" merge="bos1_14.5d" size="4096" crc="a956d3c5"/>
+		<rom name="bos1_13.5e" merge="bos1_13.5e" size="4096" crc="e869219c"/>
+		<rom name="bos1-4.2r" merge="bos1-4.2r" size="256" crc="9b69b543"/>
+		<rom name="bos1-6.6b" merge="bos1-6.6b" size="32" crc="d2b96fb0"/>
+		<rom name="bos1-5.4m" merge="bos1-5.4m" size="256" crc="4e15d59c"/>
+		<rom name="bos1-3.2d" merge="bos1-3.2d" size="32" crc="b88d5ba9"/>
+		<rom name="bos1-7.7h" merge="bos1-7.7h" size="32" crc="87d61353"/>
+		<rom name="bos1-1.1d" merge="bos1-1.1d" size="256" crc="de2316c6"/>
+		<rom name="bos1-2.5c" merge="bos1-2.5c" size="256" crc="77245b66"/>
+		<rom name="bos1_9.5n" merge="bos1_9.5n" size="4096" crc="09acc978"/>
+		<rom name="bos1_10.5m" merge="bos1_10.5m" size="4096" crc="e571e959"/>
+		<rom name="bos1_11.5k" merge="bos1_11.5k" size="4096" crc="17ac9511"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bosco87" cloneof="bosco" romof="bosco" sourcefile="pre90s/d_galaga.cpp">
+		<comment>Hack</comment>
+		<description>Bosconian 87 Arcade</description>
+		<year>2026</year>
+		<manufacturer>hack</manufacturer>
+		<rom name="bos3_1.3n" size="4096" crc="4c8dac81"/>
+		<rom name="bos1_2.3m" size="4096" crc="2d8f3ebe"/>
+		<rom name="bos1_3.3l" size="4096" crc="68db1a66"/>
+		<rom name="bos1_4b.3k" size="4096" crc="7d2f7af0"/>
+		<rom name="bos1_5c.3j" size="4096" crc="a7c8e432"/>
+		<rom name="bos3_6.3h" size="4096" crc="4543cf82"/>
+		<rom name="bos1_7.3e" size="4096" crc="9ac7836c"/>
+		<rom name="bos1_14.5d" merge="bos1_14.5d" size="4096" crc="a956d3c5"/>
+		<rom name="bos1_13.5e" merge="bos1_13.5e" size="4096" crc="e869219c"/>
+		<rom name="bos1-4.2r" merge="bos1-4.2r" size="256" crc="9b69b543"/>
+		<rom name="bos1-6.6b" merge="bos1-6.6b" size="32" crc="d2b96fb0"/>
+		<rom name="bos1-5.4m" merge="bos1-5.4m" size="256" crc="4e15d59c"/>
+		<rom name="bos1-3.2d" merge="bos1-3.2d" size="32" crc="b88d5ba9"/>
+		<rom name="bos1-7.7h" merge="bos1-7.7h" size="32" crc="87d61353"/>
+		<rom name="bos1-1.1d" merge="bos1-1.1d" size="256" crc="de2316c6"/>
+		<rom name="bos1-2.5c" merge="bos1-2.5c" size="256" crc="77245b66"/>
+		<rom name="bos1_9.5n" merge="bos1_9.5n" size="4096" crc="09acc978"/>
+		<rom name="bos1_10.5m" merge="bos1_10.5m" size="4096" crc="e571e959"/>
+		<rom name="bos1_11.5k" merge="bos1_11.5k" size="4096" crc="17ac9511"/>
+		<rom name="54xx.bin" merge="54xx.bin" size="1024" crc="ee7357e0"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="botanic" sourcefile="pre90s/d_bagman.cpp">
 		<description>Botanic (English / Spanish)</description>
 		<year>1983</year>
