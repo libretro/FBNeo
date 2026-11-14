@@ -32,6 +32,7 @@
 #define RETRO_GAME_TYPE_GBA    19
 #define RETRO_GAME_TYPE_SEGACD 20
 #define RETRO_GAME_TYPE_A26    21
+#define RETRO_GAME_TYPE_S32X   22
 
 #define PERCENT_VALUES \
 	  {"25%",	NULL }, \

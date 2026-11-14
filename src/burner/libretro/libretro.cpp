@@ -420,6 +420,7 @@ void retro_set_environment(retro_environment_t cb)
 #ifdef BUILD_MEGADRIVE
 		{ "Sega Megadrive",                      "md",     subsystem_rom, 1, RETRO_GAME_TYPE_MD     },
 		{ "Sega CD",                             "segacd", subsystem_iso, 1, RETRO_GAME_TYPE_SEGACD },
+		{ "Sega 32X",                            "s32x",   subsystem_rom, 1, RETRO_GAME_TYPE_S32X   },
 #endif
 #ifdef BUILD_SG1000
 		{ "Sega SG-1000",                        "sg1k",   subsystem_rom, 1, RETRO_GAME_TYPE_SG1K   },
@@ -1187,6 +1188,9 @@ int CreateAllDatfiles(char* dat_folder)
 #ifdef BUILD_MEGADRIVE
 	snprintf_nowarn(szFilename, sizeof(szFilename), "%s%c%s (%s).dat", dat_folder, PATH_DEFAULT_SLASH_C(), APP_TITLE, "ClrMame Pro XML, Megadrive only");
 	create_datfile(szFilename, DAT_MEGADRIVE_ONLY);
+
+	snprintf_nowarn(szFilename, sizeof(szFilename), "%s%c%s (%s).dat", dat_folder, PATH_DEFAULT_SLASH_C(), APP_TITLE, "ClrMame Pro XML, Sega 32X only");
+	create_datfile(szFilename, DAT_32X_ONLY);
 #endif
 
 #ifdef BUILD_SG1000
@@ -2629,6 +2633,10 @@ bool retro_load_game(const struct retro_game_info *info)
 		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem md identified from parent folder\n");
 		if (strncmp(g_driver_name, "md_", 3) != 0) prefix = "md_";
 	}
+	if(strcmp(g_rom_parent_dir, "s32x")==0 || strcmp(g_rom_parent_dir, "32x")==0 || strcmp(g_rom_parent_dir, "sega32x")==0) {
+		HandleMessage(RETRO_LOG_INFO, "[FBNeo] subsystem s32x identified from parent folder\n");
+		if (strncmp(g_driver_name, "s32x_", 5) != 0) prefix = "s32x_";
+	}
 #endif
 #ifdef BUILD_MSX
 	if(strcmp(g_rom_parent_dir, "msx")==0 || strcmp(g_rom_parent_dir, "msx1")==0) {
@@ -2788,6 +2796,9 @@ bool retro_load_game_special(unsigned game_type, const struct retro_game_info *i
 #ifdef BUILD_MEGADRIVE
 		case RETRO_GAME_TYPE_MD:
 			prefix = "md_";
+			break;
+		case RETRO_GAME_TYPE_S32X:
+			prefix = "s32x_";
 			break;
 #endif
 #ifdef BUILD_MSX

@@ -54,7 +54,8 @@ UINT32 nDiagInputHoldCounter = 0;
 // hardware macros
 #define HW_NEOGEO (((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_SNK_NEOGEO) || ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_SNK_NEOCD))
 #define HW_NES    (((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_NES) || ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_FDS))
-#define HW_MISC   ((!HW_NEOGEO) && (!HW_NES) && ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) != HARDWARE_SEGA_MEGADRIVE))
+#define HW_MD     (((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_SEGA_MEGADRIVE) || ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_SEGA_32X))
+#define HW_MISC   ((!HW_NEOGEO) && (!HW_NES) && (!HW_MD))
 
 // positional button macros (when position is considered important)
 #define RETRO_DEVICE_ID_1ST_COL_TOP    RETRO_DEVICE_ID_JOYPAD_Y
@@ -2014,7 +2015,7 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 #endif
 
 	// Handle megadrive
-	if ((nHardwareCode & HARDWARE_PUBLIC_MASK) == HARDWARE_SEGA_MEGADRIVE) {
+	if ((nHardwareCode & HARDWARE_PUBLIC_MASK) == HARDWARE_SEGA_MEGADRIVE || (nHardwareCode & HARDWARE_PUBLIC_MASK) == HARDWARE_SEGA_32X) {
 		// Those games were clearly designed to be played with 6 buttons
 		// So let's use the original 6-buttons layout for them.
 		if ((parentrom && strcmp(parentrom, "md_sf2") == 0) ||
@@ -2036,7 +2037,11 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 			// mk2 requires enabling 6-buttons in options, while others auto-detect it,
 			// is this maybe an emulation bug ?
 			(parentrom && strcmp(parentrom, "md_mk2") == 0) ||
-			(drvname && strcmp(drvname, "md_mk2") == 0)
+			(drvname && strcmp(drvname, "md_mk2") == 0) ||
+			(parentrom && strcmp(parentrom, "s32x_mk2") == 0) ||
+			(drvname && strcmp(drvname, "s32x_mk2") == 0) ||
+			(parentrom && strcmp(parentrom, "s32x_cybrawl") == 0) ||
+			(drvname && strcmp(drvname, "s32x_cybrawl") == 0)
 		) {
 			if (strcmp("Button A", description) == 0) {
 				GameInpDigital2RetroInpKey(pgi, nPlayer, RETRO_DEVICE_ID_1ST_COL_BOTTOM, description);

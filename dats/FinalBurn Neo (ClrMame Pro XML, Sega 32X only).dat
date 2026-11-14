@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<!DOCTYPE datafile PUBLIC "-//FinalBurn Neo//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+
+<datafile>
+	<header>
+		<name>FinalBurn Neo - Sega 32X Games</name>
+		<description>FinalBurn Neo v1.0.0.03 Sega 32X Games</description>
+		<category>Standard DatFile</category>
+		<version>1.0.0.03</version>
+		<author>FinalBurn Neo</author>
+		<homepage>https://neo-source.com/</homepage>
+		<url>https://neo-source.com/</url>
+		<clrmamepro forcenodump="ignore"/>
+	</header>
+	<game name="aburnere" cloneof="aburner" romof="aburner" sourcefile="megadrive/d_sega32x.cpp">
+		<description>After Burner Complete (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="After Burner Complete (Europe).32x" size="2097152" crc="029106f5"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="aburner" sourcefile="megadrive/d_sega32x.cpp">
+		<description>After Burner Complete ~ After Burner (Japan, USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="After Burner Complete ~ After Burner (Japan, USA).32x" size="2097152" crc="204044c4"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bcracers" sourcefile="megadrive/d_sega32x.cpp">
+		<description>BC Racers (USA)</description>
+		<year>1995</year>
+		<manufacturer>Core Design</manufacturer>
+		<rom name="BC Racers (USA).32x" size="3145728" crc="936c3d27"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="blackthn" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Blackthorne (USA)</description>
+		<year>1995</year>
+		<manufacturer>Interplay</manufacturer>
+		<rom name="Blackthorne (USA).32x" size="3145728" crc="d1a60a47"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="brutal" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Brutal - Above the Claw (USA)</description>
+		<year>1995</year>
+		<manufacturer>GameTek</manufacturer>
+		<rom name="Brutal - Above the Claw (USA).32x" size="3145728" crc="7a72c939"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="clayfgt2" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Prototype</comment>
+		<description>ClayFighter 2 (USA, Prototype 19950428)</description>
+		<year>1995</year>
+		<manufacturer>Interplay</manufacturer>
+		<rom name="ClayFighter 2 (USA) (Proto) (1995-04-28).32x" size="1048576" crc="59701755"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmiccr" cloneof="cybrawl" romof="cybrawl" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Cosmic Carnage (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Cosmic Carnage (Europe).32x" size="3145728" crc="9f3fdbc2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cybrawl" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Cyber Brawl ~ Cosmic Carnage (Japan, USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Cyber Brawl ~ Cosmic Carnage (Japan, USA).32x" size="3145728" crc="7c7be6a2"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="darxide" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Darxide (Europe)</description>
+		<year>1996</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Darxide (Europe) (En,Fr,De,Es).32x" size="2097152" crc="22d7c906"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="doome" cloneof="doom" romof="doom" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Doom (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Doom (Europe).32x" size="3145728" crc="53734e3a"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="doom" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Doom (Japan, USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Doom (Japan, USA).32x" size="3145728" crc="208332fd"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="eccod" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Demo</comment>
+		<description>Ecco the Dolphin (USA, Demo)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Ecco the Dolphin (USA) (Demo) (Developer Cart).32x" size="3145728" crc="b06178df"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="fifa96" sourcefile="megadrive/d_sega32x.cpp">
+		<description>FIFA Soccer 96 (Europe)</description>
+		<year>1995</year>
+		<manufacturer>EA Sports</manufacturer>
+		<rom name="FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv).32x" size="3145728" crc="fb14a7c8"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="golfmage" cloneof="golfmag" romof="golfmag" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe).32x" size="3145728" crc="6ef99202"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="golfmag" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Japan, USA).32x" size="3145728" crc="d3d0a2fe"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="chaotixe" cloneof="chaotix" romof="chaotix" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Knuckles' Chaotix (Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Knuckles' Chaotix (Europe).32x" size="3145728" crc="41d63572"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="chaotix" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Knuckles' Chaotix (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Knuckles' Chaotix (Japan, USA) (En).32x" size="3145728" crc="d0b0b842"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kolibri" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Kolibri (USA, Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Kolibri (USA, Europe).32x" size="3145728" crc="20ca53ef"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="megamw2" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Homebrew, Prototype</comment>
+		<description>Mega Marble World 2 (World, Prototype)</description>
+		<year>2020</year>
+		<manufacturer>&lt;unknown&gt;</manufacturer>
+		<rom name="Mega Marble World 2 (World) (Proto) (Aftermarket) (Unl).32x" size="515852" crc="c00c76e6"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="metalhede" cloneof="metalhed" romof="metalhed" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Metal Head (Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Metal Head (Europe) (En,Ja).32x" size="3145728" crc="bf9b8376"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="metalhed" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Metal Head (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Metal Head (Japan, USA) (En,Ja).32x" size="3145728" crc="ef5553ff"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mk2e" cloneof="mk2" romof="mk2" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Mortal Kombat II (Europe)</description>
+		<year>1995</year>
+		<manufacturer>Acclaim</manufacturer>
+		<rom name="Mortal Kombat II (Europe).32x" size="4194304" crc="211085ce"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mk2" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Mortal Kombat II (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Acclaim</manufacturer>
+		<rom name="Mortal Kombat II (Japan, USA).32x" size="4194304" crc="773c0a85"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zaxxonmbe" cloneof="zaxxonmb" romof="zaxxonmb" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Motherbase (Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Motherbase (Europe).32x" size="2097152" crc="0d6523a3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="motoxche" cloneof="motoxch" romof="motoxch" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Motocross Championship (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Motocross Championship (Europe).32x" size="2097152" crc="ae3364e9"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="motoxch" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Motocross Championship (USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Motocross Championship (USA).32x" size="2097152" crc="a21c5761"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="nbajamte" sourcefile="megadrive/d_sega32x.cpp">
+		<description>NBA Jam - Tournament Edition (World)</description>
+		<year>1995</year>
+		<manufacturer>Acclaim</manufacturer>
+		<rom name="NBA Jam - Tournament Edition (World).32x" size="4194304" crc="6b7994aa"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="nflqbc" sourcefile="megadrive/d_sega32x.cpp">
+		<description>NFL Quarterback Club (World)</description>
+		<year>1995</year>
+		<manufacturer>Acclaim</manufacturer>
+		<rom name="NFL Quarterback Club (World).32x" size="3145728" crc="0bc7018d"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pinocchi" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Prototype</comment>
+		<description>Pinocchio (Europe, Prototype 19950612)</description>
+		<year>1995</year>
+		<manufacturer>Virgin Interactive</manufacturer>
+		<rom name="Pinocchio (Europe) (Proto) (1995-06-12).32x" size="4194304" crc="390a90f9"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pitfall" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Pitfall - The Mayan Adventure (USA)</description>
+		<year>1995</year>
+		<manufacturer>Activision</manufacturer>
+		<rom name="Pitfall - The Mayan Adventure (USA).32x" size="3145728" crc="f9126f15"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="primrage" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Primal Rage (USA, Europe)</description>
+		<year>1995</year>
+		<manufacturer>Time Warner Interactive</manufacturer>
+		<rom name="Primal Rage (USA, Europe).32x" size="4194304" crc="e78a4d28"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rbi95" sourcefile="megadrive/d_sega32x.cpp">
+		<description>RBI Baseball '95 (USA)</description>
+		<year>1995</year>
+		<manufacturer>Time Warner Interactive</manufacturer>
+		<rom name="RBI Baseball '95 (USA).32x" size="2097152" crc="ff795fdc"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sangoku4" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Sangokushi IV (Japan)</description>
+		<year>1995</year>
+		<manufacturer>Koei</manufacturer>
+		<rom name="Sangokushi IV (Japan).32x" size="4194304" crc="e4de7625"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sonic" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Homebrew</comment>
+		<description>Sonic the Hedgehog (World)</description>
+		<year>2007</year>
+		<manufacturer>&lt;unknown&gt;</manufacturer>
+		<rom name="Sonic the Hedgehog (World) (Aftermarket) (Unl).32x" size="533958" crc="2221c701"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="soulstrx" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Prototype</comment>
+		<description>Soulstar X (USA, Prototype)</description>
+		<year>1995</year>
+		<manufacturer>Core Design</manufacturer>
+		<rom name="Soulstar X (USA) (Proto).32x" size="2097152" crc="5ea52f22"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sharriere" cloneof="sharrier" romof="sharrier" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Space Harrier (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Space Harrier (Europe).32x" size="2097152" crc="5cac3587"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sharrier" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Space Harrier (Japan, USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Space Harrier (Japan, USA).32x" size="2097152" crc="86e7f989"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="spotgoh" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Prototype</comment>
+		<description>Spot Goes to Hollywood (USA, Prototype)</description>
+		<year>1995</year>
+		<manufacturer>Virgin Interactive</manufacturer>
+		<rom name="Spot Goes to Hollywood (USA) (Proto).32x" size="3145728" crc="ce6c4b99"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stfleet" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)</description>
+		<year>1995</year>
+		<manufacturer>Interplay</manufacturer>
+		<rom name="Star Trek - Starfleet Academy - Starship Bridge Simulator (USA).32x" size="2097152" crc="dd9708b9"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="swarcadee" cloneof="swarcade" romof="swarcade" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Star Wars Arcade (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Star Wars Arcade (Europe).32x" size="2621440" crc="82e82660"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="swarcadej" cloneof="swarcade" romof="swarcade" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Star Wars Arcade (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Star Wars Arcade (Japan).32x" size="2621440" crc="f4e9b846"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="swarcade" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Star Wars Arcade (USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Star Wars Arcade (USA).32x" size="2621440" crc="2f16b44a"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stelaslj" cloneof="stelasl" romof="stelasl" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Stellar Assault (Japan)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Stellar Assault (Japan).32x" size="2097152" crc="fce4c8c7"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stelasl" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Stellar Assault (USA, Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Stellar Assault (USA, Europe).32x" size="2097152" crc="60c49e4d"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tmek" sourcefile="megadrive/d_sega32x.cpp">
+		<description>T-MEK (USA, Europe)</description>
+		<year>1995</year>
+		<manufacturer>Time Warner Interactive</manufacturer>
+		<rom name="T-MEK (USA, Europe).32x" size="3145728" crc="66d2c48f"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tempo" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Tempo (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Tempo (Japan, USA).32x" size="3145728" crc="14e5c575"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="spidwof" sourcefile="megadrive/d_sega32x.cpp">
+		<description>The Amazing Spider-Man - Web of Fire (USA)</description>
+		<year>1996</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Amazing Spider-Man, The - Web of Fire (USA).32x" size="3145728" crc="29dce257"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="toughman" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Toughman Contest (USA, Europe)</description>
+		<year>1995</year>
+		<manufacturer>EA Sports</manufacturer>
+		<rom name="Toughman Contest (USA, Europe).32x" size="4194304" crc="14eac7a6"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vfe" cloneof="vf" romof="vf" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Virtua Fighter (Europe)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Virtua Fighter (Europe).32x" size="4194304" crc="25aea73c"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vf" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Virtua Fighter (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Virtua Fighter (Japan, USA).32x" size="4194304" crc="b5de9626"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vhamster" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Prototype</comment>
+		<description>Virtua Hamster (USA, Prototype)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Virtua Hamster (USA) (Proto).32x" size="2097152" crc="cd54ac37"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vrdxe" cloneof="vrdx" romof="vrdx" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Virtua Racing Deluxe (Europe)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Virtua Racing Deluxe (Europe).32x" size="3145728" crc="27f14b5f"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vrdxj" cloneof="vrdx" romof="vrdx" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Virtua Racing Deluxe (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Virtua Racing Deluxe (Japan).32x" size="3145728" crc="0908e888"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vrdx" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Virtua Racing Deluxe (USA)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Virtua Racing Deluxe (USA).32x" size="3145728" crc="7896b62e"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wsbaseb" sourcefile="megadrive/d_sega32x.cpp">
+		<description>World Series Baseball Starring Deion Sanders (USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="World Series Baseball Starring Deion Sanders (USA).32x" size="3145728" crc="6de1bc75"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wwfraw" sourcefile="megadrive/d_sega32x.cpp">
+		<description>WWF Raw (World)</description>
+		<year>1995</year>
+		<manufacturer>Acclaim</manufacturer>
+		<rom name="WWF Raw (World).32x" size="4194304" crc="8eb7cd2c"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wwfwma" sourcefile="megadrive/d_sega32x.cpp">
+		<description>WWF WrestleMania - The Arcade Game (USA)</description>
+		<year>1995</year>
+		<manufacturer>Acclaim</manufacturer>
+		<rom name="WWF WrestleMania - The Arcade Game (USA).32x" size="4194304" crc="61833503"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="xrick" sourcefile="megadrive/d_sega32x.cpp">
+		<comment>Homebrew</comment>
+		<description>xRick (World, v1.1)</description>
+		<year>2011</year>
+		<manufacturer>&lt;unknown&gt;</manufacturer>
+		<rom name="xRick (World) (v1.1) (Aftermarket) (Unl).32x" size="4194304" crc="79cb7f70"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="zaxxonmb" sourcefile="megadrive/d_sega32x.cpp">
+		<description>Zaxxon's Motherbase 2000 (Japan, USA)</description>
+		<year>1995</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="Zaxxon's Motherbase 2000 (Japan, USA) (En).32x" size="2097152" crc="447d44be"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+</datafile>
