@@ -74413,7 +74413,7 @@
 		<rom name="mpr-16502.ic41" merge="mpr-16502.ic41" size="2097152" crc="ffc3147e"/>
 		<rom name="mpr-16506.ic1" merge="mpr-16506.1" size="2097152" crc="e779f5ed"/>
 		<rom name="mpr-16507.ic2" merge="mpr-16507.2" size="2097152" crc="31e068d3"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="harddunk" sourcefile="sega/d_segas32.cpp">
@@ -74435,7 +74435,7 @@
 		<rom name="mpr-16502.ic41" size="2097152" crc="ffc3147e"/>
 		<rom name="mpr-16506.1" size="2097152" crc="e779f5ed"/>
 		<rom name="mpr-16507.2" size="2097152" crc="31e068d3"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="hardhat" sourcefile="pre90s/d_exidy.cpp">
@@ -125982,7 +125982,7 @@
 		<rom name="mpr-15547.ic41" merge="mpr-15547.ic41" size="2097152" crc="edcb2a43"/>
 		<rom name="mpr-15551.ic1" merge="mpr-15551.ic1" size="2097152" crc="4894bc73"/>
 		<rom name="mpr-15552.ic2" merge="mpr-15552.ic2" size="2097152" crc="1c4b5e73"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="orunnersu" cloneof="orunners" romof="orunners" sourcefile="sega/d_segas32.cpp">
@@ -126006,7 +126006,7 @@
 		<rom name="mpr-15547.ic41" merge="mpr-15547.ic41" size="2097152" crc="edcb2a43"/>
 		<rom name="mpr-15551.ic1" merge="mpr-15551.ic1" size="2097152" crc="4894bc73"/>
 		<rom name="mpr-15552.ic2" merge="mpr-15552.ic2" size="2097152" crc="1c4b5e73"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="orunners" sourcefile="sega/d_segas32.cpp">
@@ -126030,7 +126030,7 @@
 		<rom name="mpr-15547.ic41" size="2097152" crc="edcb2a43"/>
 		<rom name="mpr-15551.ic1" size="2097152" crc="4894bc73"/>
 		<rom name="mpr-15552.ic2" size="2097152" crc="1c4b5e73"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="overtop" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
@@ -166871,7 +166871,7 @@
 		<rom name="mpr-15031.ic1" merge="mpr-15031.ic1" size="1048576" crc="6af139dc"/>
 		<rom name="mpr-15032.ic2" merge="mpr-15032.ic2" size="1048576" crc="915d6096"/>
 		<rom name="epr-15033.ic17" merge="epr-15033.ic17" size="131072" crc="dc19ac00"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="scross" sourcefile="sega/d_segas32.cpp">
@@ -166896,7 +166896,7 @@
 		<rom name="mpr-15031.ic1" size="1048576" crc="6af139dc"/>
 		<rom name="mpr-15032.ic2" size="1048576" crc="915d6096"/>
 		<rom name="epr-15033.ic17" size="131072" crc="dc19ac00"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="scrossa" cloneof="scross" romof="scross" sourcefile="sega/d_segas32.cpp">
@@ -166921,7 +166921,7 @@
 		<rom name="mpr-15031.ic1" merge="mpr-15031.ic1" size="1048576" crc="6af139dc"/>
 		<rom name="mpr-15032.ic2" merge="mpr-15032.ic2" size="1048576" crc="915d6096"/>
 		<rom name="epr-15033.ic17" merge="epr-15033.ic17" size="131072" crc="dc19ac00"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="stadhr96" sourcefile="dataeast/d_decomlc.cpp">
@@ -208319,7 +208319,7 @@
 		<rom name="mpr-15372.ic18" merge="mpr-15372.ic18" size="2097152" crc="c187c36a"/>
 		<rom name="mpr-15374.ic41" merge="mpr-15374.ic41" size="2097152" crc="e026aab0"/>
 		<rom name="mpr-15385.ic1" merge="mpr-15385.ic1" size="2097152" crc="5a9b0aa0"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="titlefu" cloneof="titlef" romof="titlef" sourcefile="sega/d_segas32.cpp">
@@ -208341,7 +208341,7 @@
 		<rom name="mpr-15372.ic18" merge="mpr-15372.ic18" size="2097152" crc="c187c36a"/>
 		<rom name="mpr-15374.ic41" merge="mpr-15374.ic41" size="2097152" crc="e026aab0"/>
 		<rom name="mpr-15385.ic1" merge="mpr-15385.ic1" size="2097152" crc="5a9b0aa0"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="titlef" sourcefile="sega/d_segas32.cpp">
@@ -208363,7 +208363,7 @@
 		<rom name="mpr-15372.ic18" size="2097152" crc="c187c36a"/>
 		<rom name="mpr-15374.ic41" size="2097152" crc="e026aab0"/>
 		<rom name="mpr-15385.ic1" size="2097152" crc="5a9b0aa0"/>
-		<video type="raster" orientation="horizontal" width="640" height="224" aspectx="8" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="toffy" sourcefile="pre90s/d_ddragon.cpp">
