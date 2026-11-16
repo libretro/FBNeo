@@ -8856,6 +8856,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dmdraw" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Dead Man's Draw (48K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Frogotten Games</manufacturer>
+		<rom name="Dead Man's Draw 48K (2026)(Frogotten Games).tzx" size="21926" crc="8ffb70ad"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="deadspace" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
 		<description>Dead Space (48K) (HB)</description>
@@ -10664,6 +10674,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="duelzx" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Duel ZX (English/Italian) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Wellfields Games</manufacturer>
+		<rom name="Duel ZX EN-IT 128K (2026)(Wellfields Games).tap" size="61203" crc="07a6e71e"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="duet" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Q, A, E, R and Z default keys for player 1</comment>
 		<description>Duet (48K)</description>
@@ -10737,7 +10758,7 @@
 		<description>Dynamite Dan (48K)</description>
 		<year>1985</year>
 		<manufacturer>Mirrorsoft</manufacturer>
-		<rom name="Dynamite Dan 48K (1985)(Mirrorsoft).z80" size="42664" crc="218460b1"/>
+		<rom name="Dynamite Dan 48K (1985)(Mirrorsoft).tzx" size="49833" crc="fd66031c"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -10746,17 +10767,17 @@
 		<description>Dynamite Dan II: Dr. Blitzen and the Islands of Arcanum (48K)</description>
 		<year>1986</year>
 		<manufacturer>Mirrorsoft</manufacturer>
-		<rom name="Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum 48K (1985)(Mirrorsoft).z80" size="43758" crc="df00027d"/>
+		<rom name="Dynamite Dan II - Dr Blitzen And The Islands Of Arcanum 48K (1986)(Mirrorsoft).tzx" size="46482" crc="08e2f2e1"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="dynamdux" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Press '2' to use controller</comment>
-		<description>Dynamite Dux (128K)</description>
+		<description>Dynamite Dux (48K-128K)</description>
 		<year>1989</year>
 		<manufacturer>Activision</manufacturer>
-		<rom name="Dynamite Dux 128K (1989)(Activision).tap" size="150855" crc="c13fc9c0"/>
+		<rom name="Dynamite Dux 48K-128K (1989)(Activision).tap" size="150855" crc="c13fc9c0"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -14738,6 +14759,16 @@
 		<rom name="Hard Drivin' 48K-128K (1989)(Domark).tap" size="47211" crc="f55dc984"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hardmack" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew, Press SPACE to begin game</comment>
+		<description>Hard Hat Mack (48K) (HB, v1.0.1)</description>
+		<year>2026</year>
+		<manufacturer>ZikiTrake</manufacturer>
+		<rom name="Hard Hat Mack v1.0.1 48K (2026)(ZikiTrake).tap" size="48497" crc="d78f9b65"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -23543,6 +23574,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="orbsovlord" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Orbs of Overlord (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>7 Tower Soft Games</manufacturer>
+		<rom name="Orbs of Overlord 128K (2026)(7 Tower Soft Games).tap" size="121457" crc="70c7a932"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="orcattack" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Orc Attack (48K)</description>
 		<year>1984</year>
@@ -24325,6 +24367,16 @@
 		<manufacturer>Pat Morita Team</manufacturer>
 		<rom name="Penguin Attack v1.0 48K (2024)(Pat Morita Team).tap" size="44423" crc="455ddf3d"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pengpickup" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Penguin Pick-up (48K) (HB, v1.2.1)</description>
+		<year>2026</year>
+		<manufacturer>boredofjam</manufacturer>
+		<rom name="Penguin Pick-up v1.2.1 48K (2026)(boredofjam).tap" size="28744" crc="31db8df9"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -26273,7 +26325,7 @@
 		<description>Ramparts (48K)</description>
 		<year>1988</year>
 		<manufacturer>Go!</manufacturer>
-		<rom name="Ramparts 48K (1988)(Go!).tap" size="37824" crc="d6391cbe"/>
+		<rom name="Ramparts 48K (1988)(Go!).tzx" size="53825" crc="8690ba70"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -30451,7 +30503,7 @@
 		<description>Speccies 2, The (16K) (HB, v1.1)</description>
 		<year>2013</year>
 		<manufacturer>Tardis Remakes</manufacturer>
-		<rom name="Speccies 2, The v1.1 16K (2013)(Tardis Remakes).tap" size="15678" crc="eb239bb9"/>
+		<rom name="Speccies 2, The v1.1 16K (2013)(Sokurah, Tardis Remakes).tzx" size="15706" crc="153f93a0"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -30461,7 +30513,7 @@
 		<description>Speccies, The (48K) (HB, v1.2)</description>
 		<year>2013</year>
 		<manufacturer>Tardis Remakes</manufacturer>
-		<rom name="Speccies, The v1.2 48K (2013)(Tardis Remakes).tap" size="44236" crc="7b5ffc84"/>
+		<rom name="Speccies, The v1.2 48K (2013)(Sokurah, Tardis Remakes).tzx" size="44264" crc="7c388864"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -30862,7 +30914,7 @@
 		<description>SQIJ! ZX (48K) (HB)</description>
 		<year>2018</year>
 		<manufacturer>Tardis Remakes</manufacturer>
-		<rom name="Sqij ZX 48K (2018)(Psytronik Software).tap" size="46020" crc="d0af1a22"/>
+		<rom name="Sqij ZX 48K (2018)(Sokurah, Tardis Remakes).tzx" size="46048" crc="a17bf181"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -31924,6 +31976,17 @@
 		<manufacturer>Silversoft</manufacturer>
 		<rom name="Super Mutt 48K (1984)(Silversoft).tzx" size="47839" crc="e6527c8b"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="supoval128" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Super Oval ZX (128K) (HB, v2)</description>
+		<year>2026</year>
+		<manufacturer>Guardi Rock</manufacturer>
+		<rom name="Super Oval ZX v2 128K (2026(Guardi Rock).tzx" size="48942" crc="6389e693"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -34618,7 +34681,7 @@
 		<description>Vallation (48K) (HB, v1.1)</description>
 		<year>2016</year>
 		<manufacturer>Tardis Remakes</manufacturer>
-		<rom name="Vallation v1.1 48K (2016)(Tardis Remakes).tap" size="41179" crc="e67312ca"/>
+		<rom name="Vallation v1.1 48K (2016)(Sokurah, Tardis Remakes).tzx" size="41207" crc="4869ba37"/>
 		<rom name="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -34628,7 +34691,7 @@
 		<description>Vallation 128K Edition (128K) (HB)</description>
 		<year>2017</year>
 		<manufacturer>Tardis Remakes</manufacturer>
-		<rom name="Vallation 128K (2017)(Tardis Remakes).tap" size="68513" crc="a30a4662"/>
+		<rom name="Vallation 128K (2017)(Sokurah, Tardis Remakes).tzx" size="68565" crc="2e4b612b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

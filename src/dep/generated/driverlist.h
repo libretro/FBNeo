@@ -6059,6 +6059,7 @@ DRV		BurnDrvDeadconxj;
 DRV		BurnDrvDeadconx;
 DRV		BurnDrvsnes_Deaddance;
 DRV		BurnSpecDfboy;
+DRV		BurnSpecDmdraw;
 DRV		BurnDrvtg_deadmoon;
 DRV		BurnDrvpce_deadmoon;
 DRV		BurnSpecDeadspace;
@@ -7653,6 +7654,7 @@ DRV		BurnDrvgba_duelmsscu;
 DRV		BurnDrvgba_duelms2i;
 DRV		BurnDrvgba_duelms2k;
 DRV		BurnDrvgba_duelmst3;
+DRV		BurnSpecDuelzx;
 DRV		BurnDrvsnes_Dueltdiie;
 DRV		BurnDrvsnes_Dueltdii;
 DRV		BurnSpecDuet;
@@ -11255,6 +11257,7 @@ DRV		BurnDrvmd_harddriv;
 DRV		BurnDrvHarddunkj;
 DRV		BurnDrvHarddunk;
 DRV		BurnDrvcv_hardhat;
+DRV		BurnSpecHardmack;
 DRV		BurnDrvcv_hardhatmack;
 DRV		BurnDrvHardhat;
 DRV		BurnDrvHardheadb;
@@ -18155,6 +18158,7 @@ DRV		BurnDrvnes_oratorio;
 DRV		BurnDrvcv_orbit;
 DRV		BurnDrvOrbitron;
 DRV		BurnDrvOrbs;
+DRV		BurnSpecOrbsovlord;
 DRV		BurnSpecOrcattack;
 DRV		BurnSpecOrderslpdrag;
 DRV		BurnDrvtg_griffon;
@@ -18813,6 +18817,7 @@ DRV		BurnDrvMSX_pengcatch;
 DRV		BurnDrvsms_pengland;
 DRV		BurnDrvcv_penguinland;
 DRV		BurnDrvMSX_pengmind;
+DRV		BurnSpecPengpickup;
 DRV		BurnDrvMSX_pengrace;
 DRV		BurnDrvcv_penguinwars;
 DRV		BurnDrvMSX_penguinw;
@@ -25492,6 +25497,7 @@ DRV		BurnDrvsnes_Superoffroadbaja;
 DRV		BurnDrvmd_jordanb1;
 DRV		BurnDrvmd_jordanb;
 DRV		BurnDrvmd_jordanbj;
+DRV		BurnSpecSupoval128;
 DRV		BurnDrvSuperpcs;
 DRV		BurnDrvMSX_superpacman;
 DRV		BurnDrvSuperpacm;
@@ -36525,6 +36531,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvDeadconx,			// Dead Connection (World)
 	&BurnDrvsnes_Deaddance,		// Dead Dance (Japan)
 	&BurnSpecDfboy,				// Dead Flesh Boy (128K) (HB)
+	&BurnSpecDmdraw,			// Dead Man's Draw (48K) (HB)
 	&BurnDrvtg_deadmoon,		// Dead Moon (USA)
 	&BurnDrvpce_deadmoon,		// Dead Moon: Tsuki Sekai no Akumu (Japan)
 	&BurnSpecDeadspace,			// Dead Space (48K) (HB)
@@ -38119,6 +38126,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_duelms2i,		// Duel Masters 2 - Invincible Advance (Japan)
 	&BurnDrvgba_duelms2k,		// Duel Masters 2 - Kirifuda Shoubu Ver. (Japan)
 	&BurnDrvgba_duelmst3,		// Duel Masters 3 (Japan)
+	&BurnSpecDuelzx,			// Duel ZX (English/Italian) (128K) (HB)
 	&BurnDrvsnes_Dueltdiie,		// Duel, The - Test Drive II (Euro)
 	&BurnDrvsnes_Dueltdii,		// Duel, The - Test Drive II (USA)
 	&BurnSpecDuet,				// Duet (48K)
@@ -38231,7 +38239,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvDyndukeu,			// Dynamite Duke (US, 25JUL89)
 	&BurnDrvmd_dynduke1,		// Dynamite Duke (World)
 	&BurnDrvmd_dynduke,			// Dynamite Duke (World, Rev. A)
-	&BurnSpecDynamdux,			// Dynamite Dux (128K)
+	&BurnSpecDynamdux,			// Dynamite Dux (48K-128K)
 	&BurnDrvDduxbl,				// Dynamite Dux (Datsu bootleg) [no comment, NOT WORKING]
 	&BurnDrvsms_ddux,			// Dynamite Dux (Euro, Brazil)
 	&BurnDrvsms_dduxfm,			// Dynamite Dux (Hack, FM Mod)
@@ -41721,6 +41729,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvHarddunkj,			// Hard Dunk (Japan)
 	&BurnDrvHarddunk,			// Hard Dunk (World)
 	&BurnDrvcv_hardhat,			// Hard Hat (HB)
+	&BurnSpecHardmack,			// Hard Hat Mack (48K) (HB, v1.0.1)
 	&BurnDrvcv_hardhatmack,		// Hard Hat Mack (SGM) (HB)
 	&BurnDrvHardhat,			// Hard Hat
 	&BurnDrvHardheadb,			// Hard Head (bootleg, set 1)
@@ -48621,6 +48630,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvcv_orbit,			// Orbit (USA, Prototype)
 	&BurnDrvOrbitron,			// Orbitron
 	&BurnDrvOrbs,				// Orbs (10/7/94 prototype?)
+	&BurnSpecOrbsovlord,		// Orbs of Overlord (128K) (HB)
 	&BurnSpecOrcattack,			// Orc Attack (48K)
 	&BurnSpecOrderslpdrag,		// Order of Sleeping Dragon, The (128K) (HB)
 	&BurnDrvtg_griffon,			// Order of the Griffon (USA)
@@ -49279,6 +49289,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsms_pengland,		// Penguin Land (Euro, USA)
 	&BurnDrvcv_penguinland,		// Penguin Land (HB)
 	&BurnDrvMSX_pengmind,		// Penguin Mind (HB)
+	&BurnSpecPengpickup,		// Penguin Pick-up (48K) (HB, v1.2.1)
 	&BurnDrvMSX_pengrace,		// Penguin Race (HB)
 	&BurnDrvcv_penguinwars,		// Penguin Wars (SGM) (HB)
 	&BurnDrvMSX_penguinw,		// Penguin-kun Wars (Japan)
@@ -55958,6 +55969,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_jordanb1,		// Super One on One - Jordan Vs Bird (Euro, USA)
 	&BurnDrvmd_jordanb,			// Super One on One - Jordan Vs Bird (Euro, USA, Rev. 1)
 	&BurnDrvmd_jordanbj,		// Super One on One - Jordan Vs Bird (Japan)
+	&BurnSpecSupoval128,		// Super Oval ZX (128K) (HB, v2)
 	&BurnDrvSuperpcs,			// Super Pac-Man (always small)
 	&BurnDrvMSX_superpacman,	// Super Pac-Man (HB)
 	&BurnDrvSuperpacm,			// Super Pac-Man (Midway)
@@ -66957,6 +66969,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "deadconx", "taito/d_taitof2.cpp"},
 	{ "snes_deaddance", "snes/d_snes.cpp"},
 	{ "spec_dfboy", "spectrum/d_spectrum.cpp"},
+	{ "spec_dmdraw", "spectrum/d_spectrum.cpp"},
 	{ "tg_deadmoon", "pce/d_pce.cpp"},
 	{ "pce_deadmoon", "pce/d_pce.cpp"},
 	{ "spec_deadspace", "spectrum/d_spectrum.cpp"},
@@ -68541,6 +68554,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gba_duelms2i", "gba/d_gba.cpp"},
 	{ "gba_duelms2k", "gba/d_gba.cpp"},
 	{ "gba_duelmst3", "gba/d_gba.cpp"},
+	{ "spec_duelzx", "spectrum/d_spectrum.cpp"},
 	{ "snes_dueltdiie", "snes/d_snes.cpp"},
 	{ "snes_dueltdii", "snes/d_snes.cpp"},
 	{ "spec_duet", "spectrum/d_spectrum.cpp"},
@@ -72135,6 +72149,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "harddunkj", "sega/d_segas32.cpp"},
 	{ "harddunk", "sega/d_segas32.cpp"},
 	{ "cv_hardhat", "coleco/d_coleco.cpp"},
+	{ "spec_hardmack", "spectrum/d_spectrum.cpp"},
 	{ "cv_hardhatmack", "coleco/d_coleco.cpp"},
 	{ "hardhat", "pre90s/d_exidy.cpp"},
 	{ "hardheadb", "pre90s/d_suna8.cpp"},
@@ -78985,6 +79000,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "cv_orbit", "coleco/d_coleco.cpp"},
 	{ "orbitron", "galaxian/d_galaxian.cpp"},
 	{ "orbs", "pst90s/d_seta.cpp"},
+	{ "spec_orbsovlord", "spectrum/d_spectrum.cpp"},
 	{ "spec_orcattack", "spectrum/d_spectrum.cpp"},
 	{ "spec_orderslpdrag", "spectrum/d_spectrum.cpp"},
 	{ "tg_griffon", "pce/d_pce.cpp"},
@@ -79637,6 +79653,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sms_pengland", "sms/d_sms.cpp"},
 	{ "cv_penguinland", "coleco/d_coleco.cpp"},
 	{ "msx_pengmind", "msx/d_msx.cpp"},
+	{ "spec_pengpickup", "spectrum/d_spectrum.cpp"},
 	{ "msx_pengrace", "msx/d_msx.cpp"},
 	{ "cv_penguinwars", "coleco/d_coleco.cpp"},
 	{ "msx_penguinw", "msx/d_msx.cpp"},
@@ -86266,6 +86283,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_jordanb1", "megadrive/d_megadrive.cpp"},
 	{ "md_jordanb", "megadrive/d_megadrive.cpp"},
 	{ "md_jordanbj", "megadrive/d_megadrive.cpp"},
+	{ "spec_supoval128", "spectrum/d_spectrum.cpp"},
 	{ "superpcs", "pre90s/d_mappy.cpp"},
 	{ "msx_superpacman", "msx/d_msx.cpp"},
 	{ "superpacm", "pre90s/d_mappy.cpp"},
