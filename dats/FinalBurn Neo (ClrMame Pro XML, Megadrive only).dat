@@ -14961,186 +14961,42 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="papriumarc" cloneof="paprium" romof="paprium" sampleof="paprium" sourcefile="megadrive/d_megadrive.cpp">
+	<game name="papriumarc" cloneof="paprium" romof="paprium" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack, Homebrew, NB: at first boot hit 'reset' after selecting language.</comment>
 		<description>Paprium (Arcade Mode) (World) (HB, Hack)</description>
 		<year>2026</year>
 		<manufacturer>adroxe</manufacturer>
 		<rom name="Paprium (Arcade Mode)(World)(2026)(adroxe).bin" size="8388608" crc="755caf5e"/>
-		<sample name="01 Theme of Paprium" />
-		<sample name="02 90's Acid Dub Character Select" />
-		<sample name="03 Bone Crusher" />
-		<sample name="04 Drumbass Boss" />
-		<sample name="05 Asian Chill" />
-		<sample name="06 Techno Beats" />
-		<sample name="07 Cool Groove" />
-		<sample name="08 90's Dance" />
-		<sample name="09 Retro Beat" />
-		<sample name="10 Spiral" />
-		<sample name="11 Hardcore BP2" />
-		<sample name="12 Stage Clear" />
-		<sample name="13 Hard Rock" />
-		<sample name="14 Neon Rider" />
-		<sample name="15 Electro Acid Funk" />
-		<sample name="16 Jazzy Shuffle" />
-		<sample name="17 Indie Shuffle" />
-		<sample name="18 Slow Asian Beat" />
-		<sample name="19 Neo Metal" />
-		<sample name="20 Sadness" />
-		<sample name="21 Cyborg Invasion" />
-		<sample name="22 Hardcore BP1" />
-		<sample name="23 Continue" />
-		<sample name="24 Intro" />
-		<sample name="25 Indie Break Beat" />
-		<sample name="26 Club Shuffle" />
-		<sample name="27 Dark Rock" />
-		<sample name="28 Evolve" />
-		<sample name="29 Dark &amp; Power Mad" />
-		<sample name="30 Cyber Interlude" />
-		<sample name="31 Bad Dudes vs Paprium" />
-		<sample name="32 Summer Breeze" />
-		<sample name="33 Funk Enhanced Mix" />
-		<sample name="34 Transe" />
-		<sample name="35 Cyberpunk Funk" />
-		<sample name="36 Cyberpunk Ninja" />
-		<sample name="37 Urban" />
-		<sample name="38 Hardcore BP3" />
-		<sample name="39 Ending" />
-		<sample name="40 Score" />
-		<sample name="41 Game Over" />
-		<sample name="42 1988 Commercial" />
-		<sample name="43 Blade FM" />
-		<sample name="44 Dark Alley" />
-		<sample name="45 Dubstep Groove" />
-		<sample name="46 Gothic" />
-		<sample name="47 House" />
-		<sample name="48 Slow Mood" />
-		<sample name="49 Smooth Coords" />
-		<sample name="50 Tension" />
-		<sample name="51 Water" />
-		<sample name="52 Waterfront Beat" />
+		<rom name="little_man_firmware.bin" merge="little_man_firmware.bin" size="262144" crc="9c2025cb"/>
+		<rom name="Sega CD BIOS (USA, v1.10).bin" merge="Sega CD BIOS (USA, v1.10).bin" size="131072" crc="c6d10268"/>
+		<rom name="Mega-CD BIOS (Europe, v1.00).bin" merge="Mega-CD BIOS (Europe, v1.00).bin" size="131072" crc="529ac15a"/>
+		<rom name="Mega-CD BIOS (Japan, v1.00P).bin" merge="Mega-CD BIOS (Japan, v1.00P).bin" size="131072" crc="9d2da8f2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="papriumunlck" cloneof="paprium" romof="paprium" sampleof="paprium" sourcefile="megadrive/d_megadrive.cpp">
+	<game name="papriumunlck" cloneof="paprium" romof="paprium" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack, Homebrew, NB: at first boot hit 'reset' after selecting language.</comment>
 		<description>Paprium (Unlocked) (World) (HB, Hack)</description>
 		<year>2025</year>
 		<manufacturer>knightofthewind89</manufacturer>
 		<rom name="Paprium (Unlocked)(World)(2025)(knightofthewind89).bin" size="8388608" crc="868dd234"/>
-		<sample name="01 Theme of Paprium" />
-		<sample name="02 90's Acid Dub Character Select" />
-		<sample name="03 Bone Crusher" />
-		<sample name="04 Drumbass Boss" />
-		<sample name="05 Asian Chill" />
-		<sample name="06 Techno Beats" />
-		<sample name="07 Cool Groove" />
-		<sample name="08 90's Dance" />
-		<sample name="09 Retro Beat" />
-		<sample name="10 Spiral" />
-		<sample name="11 Hardcore BP2" />
-		<sample name="12 Stage Clear" />
-		<sample name="13 Hard Rock" />
-		<sample name="14 Neon Rider" />
-		<sample name="15 Electro Acid Funk" />
-		<sample name="16 Jazzy Shuffle" />
-		<sample name="17 Indie Shuffle" />
-		<sample name="18 Slow Asian Beat" />
-		<sample name="19 Neo Metal" />
-		<sample name="20 Sadness" />
-		<sample name="21 Cyborg Invasion" />
-		<sample name="22 Hardcore BP1" />
-		<sample name="23 Continue" />
-		<sample name="24 Intro" />
-		<sample name="25 Indie Break Beat" />
-		<sample name="26 Club Shuffle" />
-		<sample name="27 Dark Rock" />
-		<sample name="28 Evolve" />
-		<sample name="29 Dark &amp; Power Mad" />
-		<sample name="30 Cyber Interlude" />
-		<sample name="31 Bad Dudes vs Paprium" />
-		<sample name="32 Summer Breeze" />
-		<sample name="33 Funk Enhanced Mix" />
-		<sample name="34 Transe" />
-		<sample name="35 Cyberpunk Funk" />
-		<sample name="36 Cyberpunk Ninja" />
-		<sample name="37 Urban" />
-		<sample name="38 Hardcore BP3" />
-		<sample name="39 Ending" />
-		<sample name="40 Score" />
-		<sample name="41 Game Over" />
-		<sample name="42 1988 Commercial" />
-		<sample name="43 Blade FM" />
-		<sample name="44 Dark Alley" />
-		<sample name="45 Dubstep Groove" />
-		<sample name="46 Gothic" />
-		<sample name="47 House" />
-		<sample name="48 Slow Mood" />
-		<sample name="49 Smooth Coords" />
-		<sample name="50 Tension" />
-		<sample name="51 Water" />
-		<sample name="52 Waterfront Beat" />
+		<rom name="little_man_firmware.bin" merge="little_man_firmware.bin" size="262144" crc="9c2025cb"/>
+		<rom name="Sega CD BIOS (USA, v1.10).bin" merge="Sega CD BIOS (USA, v1.10).bin" size="131072" crc="c6d10268"/>
+		<rom name="Mega-CD BIOS (Europe, v1.00).bin" merge="Mega-CD BIOS (Europe, v1.00).bin" size="131072" crc="529ac15a"/>
+		<rom name="Mega-CD BIOS (Japan, v1.00P).bin" merge="Mega-CD BIOS (Japan, v1.00P).bin" size="131072" crc="9d2da8f2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="paprium" sourcefile="megadrive/d_megadrive.cpp">
+	<game name="paprium" romof="segacd" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Homebrew, NB: at first boot hit 'reset' after selecting language.</comment>
 		<description>Paprium (World) (HB)</description>
 		<year>2020</year>
 		<manufacturer>WaterMelon</manufacturer>
 		<rom name="Paprium (World)(2020)(WaterMelon).bin" size="8388608" crc="28f16e0b"/>
-		<sample name="01 Theme of Paprium" />
-		<sample name="02 90's Acid Dub Character Select" />
-		<sample name="03 Bone Crusher" />
-		<sample name="04 Drumbass Boss" />
-		<sample name="05 Asian Chill" />
-		<sample name="06 Techno Beats" />
-		<sample name="07 Cool Groove" />
-		<sample name="08 90's Dance" />
-		<sample name="09 Retro Beat" />
-		<sample name="10 Spiral" />
-		<sample name="11 Hardcore BP2" />
-		<sample name="12 Stage Clear" />
-		<sample name="13 Hard Rock" />
-		<sample name="14 Neon Rider" />
-		<sample name="15 Electro Acid Funk" />
-		<sample name="16 Jazzy Shuffle" />
-		<sample name="17 Indie Shuffle" />
-		<sample name="18 Slow Asian Beat" />
-		<sample name="19 Neo Metal" />
-		<sample name="20 Sadness" />
-		<sample name="21 Cyborg Invasion" />
-		<sample name="22 Hardcore BP1" />
-		<sample name="23 Continue" />
-		<sample name="24 Intro" />
-		<sample name="25 Indie Break Beat" />
-		<sample name="26 Club Shuffle" />
-		<sample name="27 Dark Rock" />
-		<sample name="28 Evolve" />
-		<sample name="29 Dark &amp; Power Mad" />
-		<sample name="30 Cyber Interlude" />
-		<sample name="31 Bad Dudes vs Paprium" />
-		<sample name="32 Summer Breeze" />
-		<sample name="33 Funk Enhanced Mix" />
-		<sample name="34 Transe" />
-		<sample name="35 Cyberpunk Funk" />
-		<sample name="36 Cyberpunk Ninja" />
-		<sample name="37 Urban" />
-		<sample name="38 Hardcore BP3" />
-		<sample name="39 Ending" />
-		<sample name="40 Score" />
-		<sample name="41 Game Over" />
-		<sample name="42 1988 Commercial" />
-		<sample name="43 Blade FM" />
-		<sample name="44 Dark Alley" />
-		<sample name="45 Dubstep Groove" />
-		<sample name="46 Gothic" />
-		<sample name="47 House" />
-		<sample name="48 Slow Mood" />
-		<sample name="49 Smooth Coords" />
-		<sample name="50 Tension" />
-		<sample name="51 Water" />
-		<sample name="52 Waterfront Beat" />
+		<rom name="little_man_firmware.bin" size="262144" crc="9c2025cb"/>
+		<rom name="Sega CD BIOS (USA, v1.10).bin" merge="Sega CD BIOS (USA, v1.10).bin" size="131072" crc="c6d10268"/>
+		<rom name="Mega-CD BIOS (Europe, v1.00).bin" merge="Mega-CD BIOS (Europe, v1.00).bin" size="131072" crc="529ac15a"/>
+		<rom name="Mega-CD BIOS (Japan, v1.00P).bin" merge="Mega-CD BIOS (Japan, v1.00P).bin" size="131072" crc="9d2da8f2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
