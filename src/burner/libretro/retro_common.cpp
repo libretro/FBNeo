@@ -954,7 +954,6 @@ void set_environment()
 {
 	std::vector<const retro_core_option_v2_definition*> vars_systems;
 	struct retro_core_option_v2_definition *option_defs_us;
-	struct retro_vfs_interface_info vfs_iface_info;
 
 	// Add the uncategorized core options
 	var_fbneo_allow_patched_romsets.desc                   = RETRO_PATCHED_CAT_DESC;
@@ -1564,15 +1563,6 @@ error:
 			free(variables);
 			variables = NULL;
 		}
-	}
-
-	vfs_iface_info.required_interface_version = FILESTREAM_REQUIRED_VFS_VERSION;
-	vfs_iface_info.iface                      = NULL;
-	if (environ_cb(RETRO_ENVIRONMENT_GET_VFS_INTERFACE, &vfs_iface_info))
-	{
-		dirent_vfs_init(&vfs_iface_info);
-		filestream_vfs_init(&vfs_iface_info);
-		path_vfs_init(&vfs_iface_info);
 	}
 }
 
