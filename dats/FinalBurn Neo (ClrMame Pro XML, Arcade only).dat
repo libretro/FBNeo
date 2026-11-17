@@ -215122,78 +215122,78 @@
 	</game>
 	<game name="usf2j" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Ultra Street Fighter II: The Final Challengers (Japan, Backport RC6)</description>
+		<description>Ultra Street Fighter II: The Final Challengers (Japan, Backport RC7)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="usfxj.03d" size="524288" crc="aa47ce72"/>
-		<rom name="usfxj.04a" size="524288" crc="768b62cd"/>
+		<rom name="usfxj.03d" size="524288" crc="dfd45884"/>
+		<rom name="usfxj.04a" size="524288" crc="f2e86661"/>
 		<rom name="sfxj.05" size="524288" crc="f4ff18f5"/>
 		<rom name="sfxj.06b" size="524288" crc="413477c2"/>
-		<rom name="usfx.07a" size="524288" crc="43efd652"/>
+		<rom name="usfx.07a" size="524288" crc="32c849b4"/>
 		<rom name="usfx.08" size="524288" crc="5859ada7"/>
-		<rom name="usfx.09" size="524288" crc="b1b33baf"/>
-		<rom name="usfxj.10" size="524288" crc="84679ff3"/>
-		<rom name="usfxj.13m" size="2097152" crc="94f21f8d"/>
-		<rom name="usfxj.15m" size="2097152" crc="8491c9ab"/>
-		<rom name="usfxj.17m" size="2097152" crc="4787477e"/>
-		<rom name="usfxj.19m" size="2097152" crc="61747526"/>
+		<rom name="usfx.09" size="524288" crc="22342d8f"/>
+		<rom name="usfxj.10" size="524288" crc="58849a10"/>
+		<rom name="usfxj.13m" size="2097152" crc="503aaf69"/>
+		<rom name="usfxj.15m" size="2097152" crc="18411df5"/>
+		<rom name="usfxj.17m" size="2097152" crc="172e5175"/>
+		<rom name="usfxj.19m" size="2097152" crc="477368e9"/>
 		<rom name="usfx.14m" size="1048576" crc="f7a04936"/>
 		<rom name="usfx.16m" size="1048576" crc="38ad2876"/>
 		<rom name="usfx.18m" size="1048576" crc="12d01362"/>
 		<rom name="usfx.20m" size="1048576" crc="d03072e4"/>
-		<rom name="usfxj.21m" size="1048576" crc="047e8795"/>
-		<rom name="usfxj.23m" size="1048576" crc="1a6b01b3"/>
-		<rom name="usfxj.25m" size="1048576" crc="0b4d2b85"/>
-		<rom name="usfxj.27m" size="1048576" crc="aca27f61"/>
-		<rom name="usfxj.22m" size="4194304" crc="0b2d8770"/>
-		<rom name="usfxj.24m" size="4194304" crc="89415ad3"/>
-		<rom name="usfxj.26m" size="4194304" crc="c95d337c"/>
-		<rom name="usfxj.28m" size="4194304" crc="2bada15c"/>
-		<rom name="usfxj.01" size="131072" crc="74d80c14"/>
-		<rom name="usfxj.02" size="131072" crc="6c21208a"/>
-		<rom name="usfxj.11m" size="2097152" crc="1bd92fa6"/>
-		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
-		<rom name="usfxj.q3" size="2097152" crc="669b302f"/>
-		<rom name="usfxj.q4" size="2097152" crc="baf344b7"/>
+		<rom name="usfxj.21m" size="1048576" crc="8de97b2d"/>
+		<rom name="usfxj.23m" size="1048576" crc="a2362ec2"/>
+		<rom name="usfxj.25m" size="1048576" crc="2915872f"/>
+		<rom name="usfxj.27m" size="1048576" crc="c0a8072b"/>
+		<rom name="usfxj.22m" size="4194304" crc="efb2b592"/>
+		<rom name="usfxj.24m" size="4194304" crc="93d6b145"/>
+		<rom name="usfxj.26m" size="4194304" crc="eb984064"/>
+		<rom name="usfxj.28m" size="4194304" crc="439cf35d"/>
+		<rom name="usfxj.01" size="131072" crc="bbb94908"/>
+		<rom name="usfxj.02" size="131072" crc="0f1d2747"/>
+		<rom name="usfxj.11m" size="2097152" crc="8504ed02"/>
+		<rom name="usfxj.12m" size="2097152" crc="cde333ac"/>
+		<rom name="usfxj.q3" size="2097152" crc="51e4ab24"/>
+		<rom name="usfxj.q4" size="2097152" crc="3ffaecc6"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="usf2u" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Ultra Street Fighter II: The Final Challengers (USA, Backport RC6)</description>
+		<description>Ultra Street Fighter II: The Final Challengers (USA, Backport RC7)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="usfx.03d" size="524288" crc="89050d4b"/>
-		<rom name="usfx.04a" size="524288" crc="facf4e28"/>
+		<rom name="usfx.03d" size="524288" crc="f9db2d24"/>
+		<rom name="usfx.04a" size="524288" crc="8d459084"/>
 		<rom name="sfxj.05" size="524288" crc="f4ff18f5"/>
 		<rom name="sfxj.06b" size="524288" crc="413477c2"/>
-		<rom name="usfx.07a" size="524288" crc="43efd652"/>
+		<rom name="usfx.07a" size="524288" crc="a2d9c979"/>
 		<rom name="usfx.08" size="524288" crc="5859ada7"/>
-		<rom name="usfx.09" size="524288" crc="b1b33baf"/>
-		<rom name="usfx.10" size="524288" crc="7f592733"/>
-		<rom name="usfx.13m" size="2097152" crc="2ebc0d13"/>
-		<rom name="usfx.15m" size="2097152" crc="5efa0a3d"/>
-		<rom name="usfx.17m" size="2097152" crc="07ebbb77"/>
-		<rom name="usfx.19m" size="2097152" crc="46390f30"/>
+		<rom name="usfx.09" size="524288" crc="22342d8f"/>
+		<rom name="usfx.10" size="524288" crc="05bd1a78"/>
+		<rom name="usfx.13m" size="2097152" crc="ea74bdf7"/>
+		<rom name="usfx.15m" size="2097152" crc="c22ade63"/>
+		<rom name="usfx.17m" size="2097152" crc="5742ad7c"/>
+		<rom name="usfx.19m" size="2097152" crc="603e12ff"/>
 		<rom name="usfx.14m" size="1048576" crc="f7a04936"/>
 		<rom name="usfx.16m" size="1048576" crc="38ad2876"/>
 		<rom name="usfx.18m" size="1048576" crc="12d01362"/>
 		<rom name="usfx.20m" size="1048576" crc="d03072e4"/>
-		<rom name="usfx.21m" size="1048576" crc="7520fb6a"/>
-		<rom name="usfx.23m" size="1048576" crc="1688933d"/>
-		<rom name="usfx.25m" size="1048576" crc="83b9fe30"/>
-		<rom name="usfx.27m" size="1048576" crc="918c62d0"/>
-		<rom name="usfx.22m" size="4194304" crc="6f42f97c"/>
-		<rom name="usfx.24m" size="4194304" crc="35500301"/>
-		<rom name="usfx.26m" size="4194304" crc="d196bfe8"/>
-		<rom name="usfx.28m" size="4194304" crc="6269be38"/>
-		<rom name="usfx.01" size="131072" crc="35040008"/>
-		<rom name="usfx.02" size="131072" crc="65f203f5"/>
-		<rom name="usfx.11m" size="2097152" crc="263c594d"/>
-		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
-		<rom name="usfx.q3" size="2097152" crc="3bfc2325"/>
-		<rom name="usfx.q4" size="2097152" crc="91a490f8"/>
+		<rom name="usfx.21m" size="1048576" crc="fcb707d2"/>
+		<rom name="usfx.23m" size="1048576" crc="aed5bc4c"/>
+		<rom name="usfx.25m" size="1048576" crc="a1e1529a"/>
+		<rom name="usfx.27m" size="1048576" crc="fd861a9a"/>
+		<rom name="usfx.22m" size="4194304" crc="a2d56d09"/>
+		<rom name="usfx.24m" size="4194304" crc="8a284e49"/>
+		<rom name="usfx.26m" size="4194304" crc="f838f250"/>
+		<rom name="usfx.28m" size="4194304" crc="64e3f674"/>
+		<rom name="usfx.01" size="131072" crc="dceded4b"/>
+		<rom name="usfx.02" size="131072" crc="59329df7"/>
+		<rom name="usfx.11m" size="2097152" crc="86e1cde2"/>
+		<rom name="usfx.12m" size="2097152" crc="e8b3ebbc"/>
+		<rom name="usfx.q3" size="2097152" crc="78576176"/>
+		<rom name="usfx.q4" size="2097152" crc="16b5b6a2"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>

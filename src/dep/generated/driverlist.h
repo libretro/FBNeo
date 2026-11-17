@@ -58858,8 +58858,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvUballoon,			// Ultra Balloon
 	&BurnDrvgba_ultrakei,		// Ultra Keibitai - Monster Attack (Japan)
 	&BurnDrvsnes_Ultrasevenj,	// Ultra Seven (Japan)
-	&BurnDrvCpsUsf2j,			// Ultra Street Fighter II: The Final Challengers (Japan, Backport RC6)
-	&BurnDrvCpsUsf2u,			// Ultra Street Fighter II: The Final Challengers (USA, Backport RC6)
+	&BurnDrvCpsUsf2j,			// Ultra Street Fighter II: The Final Challengers (Japan, Backport RC7)
+	&BurnDrvCpsUsf2u,			// Ultra Street Fighter II: The Final Challengers (USA, Backport RC7)
 	&BurnDrvUtoukond,			// Ultra Toukon Densetsu (Japan)
 	&BurnDrvUltraxg,			// Ultra X Weapons / Ultra Keibitai (Gamest review build)
 	&BurnDrvUltrax,				// Ultra X Weapons / Ultra Keibitai
