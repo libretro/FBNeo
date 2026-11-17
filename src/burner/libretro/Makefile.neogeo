@@ -11,10 +11,12 @@ SOURCES_CXX += $(FBNEO_CPU_DIR)/m68000_intf.cpp \
 	$(Z80_CPU_DIR)/z80ctc.cpp \
 	$(Z80_CPU_DIR)/z80daisy.cpp \
 	$(Z80_CPU_DIR)/z80pio.cpp \
+	$(FBNEO_BURN_SND_DIR)/burn_ost.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2203.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2608.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2610.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2612.cpp \
+	$(FBNEO_BURN_SND_DIR)/samples.cpp \
 	$(FBNEO_BURN_DEVICES_DIR)/joyprocess.cpp \
 	$(FBNEO_BURN_DEVICES_DIR)/resnet.cpp \
 	$(NEOGEO_DIR)/d_neogeo.cpp \

@@ -12,6 +12,7 @@ SOURCES_CXX += $(FBNEO_CPU_DIR)/m68000_intf.cpp \
 	$(Z80_CPU_DIR)/z80ctc.cpp \
 	$(Z80_CPU_DIR)/z80daisy.cpp \
 	$(Z80_CPU_DIR)/z80pio.cpp \
+	$(FBNEO_BURN_SND_DIR)/burn_ost.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2151.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2203.cpp \
 	$(FBNEO_BURN_SND_DIR)/burn_ym2608.cpp \

@@ -9138,6 +9138,7 @@ DRV		BurnDrvFitterbl;
 DRV		BurnDrvFitter;
 DRV		BurnDrvnes_fivedays;
 DRV		BurnDrvmd_fixitfelixjr;
+DRV		BurnDrvFixfelix;
 DRV		BurnDrvFixeight;
 DRV		BurnDrvFixeightt;
 DRV		BurnDrvFixeighth;
@@ -39610,6 +39611,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvFitter,				// Fitter
 	&BurnDrvnes_fivedays,		// Five Days (Unl)
 	&BurnDrvmd_fixitfelixjr,	// Fix It Felix Jr. (HB)
+	&BurnDrvFixfelix,			// Fix-It Felix Jr. (homebrew, 1942 hardware)
 	&BurnDrvFixeight,			// FixEight (Europe)
 	&BurnDrvFixeightt,			// FixEight (Europe, Taito license)
 	&BurnDrvFixeighth,			// FixEight (Hong Kong)
@@ -70034,6 +70036,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "fitter", "pre90s/d_thepit.cpp"},
 	{ "nes_fivedays", "nes/d_nes.cpp"},
 	{ "md_fixitfelixjr", "megadrive/d_megadrive.cpp"},
+	{ "fixfelix", "pre90s/d_1942.cpp"},
 	{ "fixeight", "toaplan/d_fixeight.cpp"},
 	{ "fixeightt", "toaplan/d_fixeight.cpp"},
 	{ "fixeighth", "toaplan/d_fixeight.cpp"},
