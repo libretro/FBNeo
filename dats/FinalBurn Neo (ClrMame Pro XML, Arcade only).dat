@@ -30832,7 +30832,7 @@
 	<game name="drgnwrldv21j" cloneof="drgnwrld" romof="drgnwrld" sourcefile="pst90s/d_igs011.cpp">
 		<description>Chuugokuryuu (Japan, V021J)</description>
 		<year>1995</year>
-		<manufacturer>IGS</manufacturer>
+		<manufacturer>IGS / Alta</manufacturer>
 		<rom name="v-021j" size="524288" crc="2f87f6e4"/>
 		<rom name="igs-d0301.u39" merge="igs-d0301.u39" size="4194304" crc="78ab45d9"/>
 		<rom name="cg" size="131072" crc="2dda0be3"/>
@@ -41164,6 +41164,32 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="digdugat1" cloneof="digdug" romof="digdug" sourcefile="pre90s/d_galaga.cpp">
+		<description>Dig Dug (Atari, rev 1)</description>
+		<year>1982</year>
+		<manufacturer>Namco (Atari license)</manufacturer>
+		<rom name="136007.101" size="4096" crc="b9198079"/>
+		<rom name="136007.102" size="4096" crc="b2acbe49"/>
+		<rom name="136007.103" size="4096" crc="d6407b49"/>
+		<rom name="136007.104" size="4096" crc="b3ad42c3"/>
+		<rom name="136007.105" size="4096" crc="0a2aef4a"/>
+		<rom name="136007.106" size="4096" crc="a2876d6e"/>
+		<rom name="136007.107" merge="dd1.7" size="4096" crc="a41bce72"/>
+		<rom name="136007.108" size="2048" crc="3d24a3af"/>
+		<rom name="136007.116" merge="dd1.15" size="4096" crc="e22957c8"/>
+		<rom name="136007.117" size="4096" crc="a3bbfd85"/>
+		<rom name="136007.118" merge="dd1.13" size="4096" crc="458499e9"/>
+		<rom name="136007.119" merge="dd1.12" size="4096" crc="c58252a0"/>
+		<rom name="136007.115" size="4096" crc="754539be"/>
+		<rom name="136007.114" size="4096" crc="d6822397"/>
+		<rom name="136007.113" merge="136007.113" size="32" crc="4cb9da99"/>
+		<rom name="136007.111" merge="136007.111" size="256" crc="00c7c419"/>
+		<rom name="136007.112" merge="136007.112" size="256" crc="e9b3e08e"/>
+		<rom name="136007.110" merge="136007.110" size="256" crc="7a2815b4"/>
+		<rom name="136007.109" merge="136007.109" size="256" crc="77245b66"/>
+		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="digdugat" cloneof="digdug" romof="digdug" sourcefile="pre90s/d_galaga.cpp">
 		<description>Dig Dug (Atari, rev 2)</description>
 		<year>1982</year>
@@ -41182,6 +41208,32 @@
 		<rom name="136007.119" merge="dd1.12" size="4096" crc="c58252a0"/>
 		<rom name="136007.115" size="4096" crc="754539be"/>
 		<rom name="136007.114" size="4096" crc="d6822397"/>
+		<rom name="136007.113" merge="136007.113" size="32" crc="4cb9da99"/>
+		<rom name="136007.111" merge="136007.111" size="256" crc="00c7c419"/>
+		<rom name="136007.112" merge="136007.112" size="256" crc="e9b3e08e"/>
+		<rom name="136007.110" merge="136007.110" size="256" crc="7a2815b4"/>
+		<rom name="136007.109" merge="136007.109" size="256" crc="77245b66"/>
+		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="digsid" cloneof="digdug" romof="digdug" sourcefile="pre90s/d_galaga.cpp">
+		<description>Dig Dug (manufactured by Sidam)</description>
+		<year>1982</year>
+		<manufacturer>Namco (Sidam license)</manufacturer>
+		<rom name="digdug0.0" size="4096" crc="602197f0"/>
+		<rom name="digdug1.1" size="4096" crc="c6c8306b"/>
+		<rom name="digdug2.2" size="4096" crc="b695ec17"/>
+		<rom name="digdug3.3" size="4096" crc="17bbfa40"/>
+		<rom name="digdug4.4" size="4096" crc="370ef9b4"/>
+		<rom name="digdug5.5" size="4096" crc="d751df5d"/>
+		<rom name="digdug6.6" merge="dd1.7" size="4096" crc="a41bce72"/>
+		<rom name="digdug8.8" merge="dd1.9" size="2048" crc="f14a6fe1"/>
+		<rom name="digdug14.14" merge="dd1.15" size="4096" crc="e22957c8"/>
+		<rom name="digdug13.13" merge="dd1.14" size="4096" crc="2829ec99"/>
+		<rom name="digdug12.12" merge="dd1.13" size="4096" crc="458499e9"/>
+		<rom name="digdug11.11" merge="dd1.12" size="4096" crc="c58252a0"/>
+		<rom name="digdug10.10" merge="dd1.11" size="4096" crc="7b383983"/>
+		<rom name="digdug9.9" merge="dd1.10b" size="4096" crc="2cf399c2"/>
 		<rom name="136007.113" merge="136007.113" size="32" crc="4cb9da99"/>
 		<rom name="136007.111" merge="136007.111" size="256" crc="00c7c419"/>
 		<rom name="136007.112" merge="136007.112" size="256" crc="e9b3e08e"/>
@@ -42462,7 +42514,7 @@
 		<rom name="ddpdoj_spa0.u9" size="16777216" crc="1232c1b4"/>
 		<rom name="ddpdoj_spb0.u18" size="16777216" crc="6a9e2cbf"/>
 		<rom name="ddpdoj_wave0.u12" size="16777216" crc="2b71a324"/>
-		<rom name="ddpdojh_sram" size="65536" crc="af99e304"/>
+		<rom name="ddpdojt_sram" size="65536" crc="af99e304"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42478,7 +42530,7 @@
 		<rom name="ddpdoj_sprite_mask.bin" size="16777216" crc="16a4ec9e"/>
 		<rom name="ddpdoj_sprite_colour.bin" size="33554432" crc="b08d7891"/>
 		<rom name="ddpdoj_wave.bin" size="16777216" crc="e2f1745a"/>
-		<rom name="ddpdoj_nvram.bin" merge="ddpdojh_sram" size="65536" crc="af99e304"/>
+		<rom name="ddpdoj_nvram.bin" merge="ddpdojt_sram" size="65536" crc="af99e304"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -47076,7 +47128,7 @@
 		<manufacturer>IGS</manufacturer>
 		<rom name="china-dr-v-0210.u3" size="524288" crc="60c2b018"/>
 		<rom name="igs-d0301.u39" merge="igs-d0301.u39" size="4194304" crc="78ab45d9"/>
-		<rom name="igs-s0302.u43" merge="igs-s0302.u43" size="262144" crc="fde63ce1"/>
+		<rom name="china-dr-sp.u43" merge="igs-s0302.u43" size="262144" crc="fde63ce1"/>
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -61595,6 +61647,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="galagamf" cloneof="galaga" romof="galaga" sampleof="galaga" sourcefile="pre90s/d_galaga.cpp">
+		<comment>Hack</comment>
 		<description>Galaga (Midway set 1 with fast shoot hack)</description>
 		<year>1981</year>
 		<manufacturer>Namco (Midway license)</manufacturer>
@@ -70163,7 +70216,7 @@
 		<rom name="g02_u44-j.u44" size="524288" crc="42b35ec5"/>
 		<rom name="g02_u43-j.u43" size="524288" crc="c94c596b"/>
 		<rom name="g02_u42-j.u42" size="524288" crc="4f4c8270"/>
-		<rom name="g02_u3-j.u3a" size="131072" crc="eead01f1"/>
+		<rom name="g02_u3-j.u3" size="131072" crc="eead01f1"/>
 		<rom name="g02.u61" merge="g02.u61" size="2097152" crc="91e30398"/>
 		<rom name="g02.u62" merge="g02.u62" size="2097152" crc="d9455dd7"/>
 		<rom name="g02.u63" merge="g02.u63" size="2097152" crc="4d20560b"/>
@@ -88859,25 +88912,6 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kov2nl_300" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 2 New Legend (V300, Overseas)</description>
-		<year>2008</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="kov2nl_igs036_oversea.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
-		<rom name="blank_kov2nl_overseas_card.pg2" merge="blank_kov2nl_overseas_card.pg2" size="264" crc="1155f01f"/>
-		<rom name="kov2nl_v300fa.u7" size="8388608" crc="08da7552"/>
-		<rom name="ig-a3_text.u4" merge="ig-a3_text.u4" size="2097152" crc="214530ff"/>
-		<rom name="ig-a3_bgl.u35" merge="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
-		<rom name="ig-a3_bgh.u36" merge="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
-		<rom name="ig-a3_bml.u12" merge="ig-a3_bml.u12" size="16777216" crc="0bf63836"/>
-		<rom name="ig-a3_bmh.u16" merge="ig-a3_bmh.u16" size="16777216" crc="4a378542"/>
-		<rom name="ig-a3_cgl.u18" merge="ig-a3_cgl.u18" size="33554432" crc="8d923e1f"/>
-		<rom name="ig-a3_cgh.u26" merge="ig-a3_cgh.u26" size="33554432" crc="5b6fbf3f"/>
-		<rom name="ig-a3_sp.u37" merge="ig-a3_sp.u37" size="33554432" crc="45cdf422"/>
-		<rom name="gsyx_nvram" merge="gsyx_nvram" size="65536" crc="22400c16"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="kov2nl_300tw" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
 		<description>Knights of Valour 2 New Legend (V300, Taiwan)</description>
 		<year>2008</year>
@@ -88923,25 +88957,6 @@
 		<rom name="kov2nl_igs036_japan.rom" size="16384" crc="46344f1a"/>
 		<rom name="blank_kov2nl_japan_card.pg2" size="264" crc="0d63cb64"/>
 		<rom name="kov2nl_v301jp.u7" size="8388608" crc="c4595c2c"/>
-		<rom name="ig-a3_text.u4" merge="ig-a3_text.u4" size="2097152" crc="214530ff"/>
-		<rom name="ig-a3_bgl.u35" merge="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
-		<rom name="ig-a3_bgh.u36" merge="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
-		<rom name="ig-a3_bml.u12" merge="ig-a3_bml.u12" size="16777216" crc="0bf63836"/>
-		<rom name="ig-a3_bmh.u16" merge="ig-a3_bmh.u16" size="16777216" crc="4a378542"/>
-		<rom name="ig-a3_cgl.u18" merge="ig-a3_cgl.u18" size="33554432" crc="8d923e1f"/>
-		<rom name="ig-a3_cgh.u26" merge="ig-a3_cgh.u26" size="33554432" crc="5b6fbf3f"/>
-		<rom name="ig-a3_sp.u37" merge="ig-a3_sp.u37" size="33554432" crc="45cdf422"/>
-		<rom name="gsyx_nvram" merge="gsyx_nvram" size="65536" crc="22400c16"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kov2nl_301" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 2 New Legend (V301, Overseas)</description>
-		<year>2008</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="kov2nl_igs036_oversea.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
-		<rom name="blank_kov2nl_overseas_card.pg2" merge="blank_kov2nl_overseas_card.pg2" size="264" crc="1155f01f"/>
-		<rom name="kov2nl_v301fa.u7" size="8388608" crc="c4595c2c"/>
 		<rom name="ig-a3_text.u4" merge="ig-a3_text.u4" size="2097152" crc="214530ff"/>
 		<rom name="ig-a3_bgl.u35" merge="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
 		<rom name="ig-a3_bgh.u36" merge="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
@@ -89011,25 +89026,6 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 2 New Legend (V302, Overseas)</description>
-		<year>2008</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
-		<rom name="blank_kov2nl_overseas_card.pg2" size="264" crc="1155f01f"/>
-		<rom name="kov2nl_v302fa.u7" size="8388608" crc="b19cf540"/>
-		<rom name="ig-a3_text.u4" size="2097152" crc="214530ff"/>
-		<rom name="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
-		<rom name="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
-		<rom name="ig-a3_bml.u12" size="16777216" crc="0bf63836"/>
-		<rom name="ig-a3_bmh.u16" size="16777216" crc="4a378542"/>
-		<rom name="ig-a3_cgl.u18" size="33554432" crc="8d923e1f"/>
-		<rom name="ig-a3_cgh.u26" size="33554432" crc="5b6fbf3f"/>
-		<rom name="ig-a3_sp.u37" size="33554432" crc="45cdf422"/>
-		<rom name="gsyx_nvram" size="65536" crc="22400c16"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="kov2nl_302tw" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
 		<description>Knights of Valour 2 New Legend (V302, Taiwan)</description>
 		<year>2008</year>
@@ -89050,7 +89046,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="kov2nld_300" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qianjun (V300, Decrypted)</description>
+		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V300, Decrypted)</description>
 		<year>2008</year>
 		<manufacturer>IGS</manufacturer>
 		<rom name="kov2nl_core_v100.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
@@ -89065,8 +89061,27 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kov2nl_300" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V300, Oversea)</description>
+		<year>2008</year>
+		<manufacturer>IGS</manufacturer>
+		<rom name="kov2nl_igs036_oversea.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
+		<rom name="blank_kov2nl_overseas_card.pg2" merge="blank_kov2nl_overseas_card.pg2" size="264" crc="1155f01f"/>
+		<rom name="kov2nl_v300fa.u7" size="8388608" crc="08da7552"/>
+		<rom name="ig-a3_text.u4" merge="ig-a3_text.u4" size="2097152" crc="214530ff"/>
+		<rom name="ig-a3_bgl.u35" merge="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
+		<rom name="ig-a3_bgh.u36" merge="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
+		<rom name="ig-a3_bml.u12" merge="ig-a3_bml.u12" size="16777216" crc="0bf63836"/>
+		<rom name="ig-a3_bmh.u16" merge="ig-a3_bmh.u16" size="16777216" crc="4a378542"/>
+		<rom name="ig-a3_cgl.u18" merge="ig-a3_cgl.u18" size="33554432" crc="8d923e1f"/>
+		<rom name="ig-a3_cgh.u26" merge="ig-a3_cgh.u26" size="33554432" crc="5b6fbf3f"/>
+		<rom name="ig-a3_sp.u37" merge="ig-a3_sp.u37" size="33554432" crc="45cdf422"/>
+		<rom name="gsyx_nvram" merge="gsyx_nvram" size="65536" crc="22400c16"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kov2nld_301" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qianjun (V301, Decrypted)</description>
+		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V301, Decrypted)</description>
 		<year>2008</year>
 		<manufacturer>IGS</manufacturer>
 		<rom name="kov2nl_core_v100.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
@@ -89081,8 +89096,27 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kov2nl_301" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V301, Oversea)</description>
+		<year>2008</year>
+		<manufacturer>IGS</manufacturer>
+		<rom name="kov2nl_igs036_oversea.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
+		<rom name="blank_kov2nl_overseas_card.pg2" merge="blank_kov2nl_overseas_card.pg2" size="264" crc="1155f01f"/>
+		<rom name="kov2nl_v301fa.u7" size="8388608" crc="c4595c2c"/>
+		<rom name="ig-a3_text.u4" merge="ig-a3_text.u4" size="2097152" crc="214530ff"/>
+		<rom name="ig-a3_bgl.u35" merge="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
+		<rom name="ig-a3_bgh.u36" merge="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
+		<rom name="ig-a3_bml.u12" merge="ig-a3_bml.u12" size="16777216" crc="0bf63836"/>
+		<rom name="ig-a3_bmh.u16" merge="ig-a3_bmh.u16" size="16777216" crc="4a378542"/>
+		<rom name="ig-a3_cgl.u18" merge="ig-a3_cgl.u18" size="33554432" crc="8d923e1f"/>
+		<rom name="ig-a3_cgh.u26" merge="ig-a3_cgh.u26" size="33554432" crc="5b6fbf3f"/>
+		<rom name="ig-a3_sp.u37" merge="ig-a3_sp.u37" size="33554432" crc="45cdf422"/>
+		<rom name="gsyx_nvram" merge="gsyx_nvram" size="65536" crc="22400c16"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kov2nld" cloneof="kov2nl" romof="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qianjun (V302, Decrypted)</description>
+		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V302, Decrypted)</description>
 		<year>2008</year>
 		<manufacturer>IGS</manufacturer>
 		<rom name="kov2nl_core_v100.rom" merge="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
@@ -89094,6 +89128,25 @@
 		<rom name="kov2nl_sprite_colour.bin" size="67108864" crc="dd113257"/>
 		<rom name="kov2nl_wave.bin" size="33554432" crc="b5213efe"/>
 		<rom name="kov2nl_nvram.bin" merge="gsyx_nvram" size="65536" crc="22400c16"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kov2nl" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V302, Oversea)</description>
+		<year>2008</year>
+		<manufacturer>IGS</manufacturer>
+		<rom name="kov2nl_igs036_oversea.rom" size="16384" crc="25ec60cd"/>
+		<rom name="blank_kov2nl_overseas_card.pg2" size="264" crc="1155f01f"/>
+		<rom name="kov2nl_v302fa.u7" size="8388608" crc="b19cf540"/>
+		<rom name="ig-a3_text.u4" size="2097152" crc="214530ff"/>
+		<rom name="ig-a3_bgl.u35" size="8388608" crc="2d46b1f6"/>
+		<rom name="ig-a3_bgh.u36" size="8388608" crc="df710c36"/>
+		<rom name="ig-a3_bml.u12" size="16777216" crc="0bf63836"/>
+		<rom name="ig-a3_bmh.u16" size="16777216" crc="4a378542"/>
+		<rom name="ig-a3_cgl.u18" size="33554432" crc="8d923e1f"/>
+		<rom name="ig-a3_cgh.u26" size="33554432" crc="5b6fbf3f"/>
+		<rom name="ig-a3_sp.u37" size="33554432" crc="45cdf422"/>
+		<rom name="gsyx_nvram" size="65536" crc="22400c16"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89303,7 +89356,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="kov3_100" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 (V100, China)</description>
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V100, China, Hong Kong, Taiwan)</description>
 		<year>2011</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="kov3_igs036_china.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
@@ -89321,8 +89374,24 @@
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kov3d_100" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V100, China, Hong Kong, Taiwan, Decrypted)</description>
+		<year>2011</year>
+		<manufacturer>IGS (Huatong license)</manufacturer>
+		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
+		<rom name="kov3_main_v100.rom" size="8388608" crc="6bd53c57"/>
+		<rom name="kov3_blank_card.pg2" merge="blank_kov3_china_card.pg2" size="264" crc="bd5a968f"/>
+		<rom name="kov3_text.bin" size="4194304" crc="0112648a"/>
+		<rom name="kov3_map.bin" size="33554432" crc="13e8519a"/>
+		<rom name="kov3_sprite_mask.bin" size="67108864" crc="6f2e52f4"/>
+		<rom name="kov3_sprite_colour.bin" size="134217728" crc="8d9cdfc0"/>
+		<rom name="kov3_wave.bin" size="67108864" crc="635f2a0e"/>
+		<rom name="kov3_nvram.bin" merge="kov3_sram" size="65536" crc="d9608102"/>
+		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kov3_101" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 (V101, China)</description>
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V101, China, Hong Kong, Taiwan)</description>
 		<year>2011</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="kov3_igs036_china.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
@@ -89340,8 +89409,24 @@
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kov3d_101" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V101, China, Hong Kong, Taiwan, Decrypted)</description>
+		<year>2011</year>
+		<manufacturer>IGS (Huatong license)</manufacturer>
+		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
+		<rom name="kov3_main_v101.rom" size="8388608" crc="52be5340"/>
+		<rom name="kov3_blank_card.pg2" merge="blank_kov3_china_card.pg2" size="264" crc="bd5a968f"/>
+		<rom name="kov3_text.bin" size="4194304" crc="0112648a"/>
+		<rom name="kov3_map.bin" size="33554432" crc="13e8519a"/>
+		<rom name="kov3_sprite_mask.bin" size="67108864" crc="6f2e52f4"/>
+		<rom name="kov3_sprite_colour.bin" size="134217728" crc="8d9cdfc0"/>
+		<rom name="kov3_wave.bin" size="67108864" crc="635f2a0e"/>
+		<rom name="kov3_nvram.bin" merge="kov3_sram" size="65536" crc="d9608102"/>
+		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kov3_102" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 (V102, China)</description>
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong Kong, Taiwan)</description>
 		<year>2011</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="kov3_igs036_china.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
@@ -89359,8 +89444,24 @@
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kov3d_102" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong Kong, Taiwan, Decrypted)</description>
+		<year>2011</year>
+		<manufacturer>IGS</manufacturer>
+		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
+		<rom name="kov3_main_v102.rom" size="8388608" crc="d17d698f"/>
+		<rom name="kov3_blank_card.pg2" merge="blank_kov3_china_card.pg2" size="264" crc="bd5a968f"/>
+		<rom name="kov3_text.bin" size="4194304" crc="0112648a"/>
+		<rom name="kov3_map.bin" size="33554432" crc="13e8519a"/>
+		<rom name="kov3_sprite_mask.bin" size="67108864" crc="6f2e52f4"/>
+		<rom name="kov3_sprite_colour.bin" size="134217728" crc="8d9cdfc0"/>
+		<rom name="kov3_wave.bin" size="67108864" crc="635f2a0e"/>
+		<rom name="kov3_nvram.bin" merge="kov3_sram" size="65536" crc="d9608102"/>
+		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 (V104, China)</description>
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V104, China, Hong Kong, Taiwan)</description>
 		<year>2011</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
@@ -89378,56 +89479,8 @@
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="kov3d_100" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V100, China, Hong kong, Taiwan, Decrypted)</description>
-		<year>2011</year>
-		<manufacturer>IGS (Huatong license)</manufacturer>
-		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
-		<rom name="kov3_main_v100.rom" size="8388608" crc="6bd53c57"/>
-		<rom name="kov3_blank_card.pg2" merge="blank_kov3_china_card.pg2" size="264" crc="bd5a968f"/>
-		<rom name="kov3_text.bin" size="4194304" crc="0112648a"/>
-		<rom name="kov3_map.bin" size="33554432" crc="13e8519a"/>
-		<rom name="kov3_sprite_mask.bin" size="67108864" crc="6f2e52f4"/>
-		<rom name="kov3_sprite_colour.bin" size="134217728" crc="8d9cdfc0"/>
-		<rom name="kov3_wave.bin" size="67108864" crc="635f2a0e"/>
-		<rom name="kov3_nvram.bin" merge="kov3_sram" size="65536" crc="d9608102"/>
-		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kov3d_101" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V101, China, Hong kong, Taiwan, Decrypted)</description>
-		<year>2011</year>
-		<manufacturer>IGS (Huatong license)</manufacturer>
-		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
-		<rom name="kov3_main_v101.rom" size="8388608" crc="52be5340"/>
-		<rom name="kov3_blank_card.pg2" merge="blank_kov3_china_card.pg2" size="264" crc="bd5a968f"/>
-		<rom name="kov3_text.bin" size="4194304" crc="0112648a"/>
-		<rom name="kov3_map.bin" size="33554432" crc="13e8519a"/>
-		<rom name="kov3_sprite_mask.bin" size="67108864" crc="6f2e52f4"/>
-		<rom name="kov3_sprite_colour.bin" size="134217728" crc="8d9cdfc0"/>
-		<rom name="kov3_wave.bin" size="67108864" crc="635f2a0e"/>
-		<rom name="kov3_nvram.bin" merge="kov3_sram" size="65536" crc="d9608102"/>
-		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kov3d_102" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong kong, Taiwan, Decrypted)</description>
-		<year>2011</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
-		<rom name="kov3_main_v102.rom" size="8388608" crc="d17d698f"/>
-		<rom name="kov3_blank_card.pg2" merge="blank_kov3_china_card.pg2" size="264" crc="bd5a968f"/>
-		<rom name="kov3_text.bin" size="4194304" crc="0112648a"/>
-		<rom name="kov3_map.bin" size="33554432" crc="13e8519a"/>
-		<rom name="kov3_sprite_mask.bin" size="67108864" crc="6f2e52f4"/>
-		<rom name="kov3_sprite_colour.bin" size="134217728" crc="8d9cdfc0"/>
-		<rom name="kov3_wave.bin" size="67108864" crc="635f2a0e"/>
-		<rom name="kov3_nvram.bin" merge="kov3_sram" size="65536" crc="d9608102"/>
-		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="kov3d" cloneof="kov3" romof="kov3" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V104, China, Hong kong, Taiwan, Decrypted)</description>
+		<description>Knights of Valour 3 / Sanguo Zhan Ji 3 (V104, China, Hong Kong, Taiwan, Decrypted)</description>
 		<year>2011</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="kov3_core_v100.rom" merge="kov3_igs036_china.rom" size="16384" crc="c7d33764"/>
@@ -124876,26 +124929,8 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="orleg2_101jp" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 (V101, Japan)</description>
-		<year>2007</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="ol2_a10.igs036" size="16384" crc="69375284"/>
-		<rom name="ol2_v101a10.u7" size="8388608" crc="45805b53"/>
-		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
-		<rom name="ig-a_bgl.u35" merge="ig-a_bgl.u35" size="8388608" crc="083a8315"/>
-		<rom name="ig-a_bgh.u36" merge="ig-a_bgh.u36" size="8388608" crc="e197221d"/>
-		<rom name="ig-a_bml.u12" merge="ig-a_bml.u12" size="16777216" crc="113a331c"/>
-		<rom name="ig-a_bmh.u16" merge="ig-a_bmh.u16" size="16777216" crc="fbf411c8"/>
-		<rom name="ig-a_cgl.u18" merge="ig-a_cgl.u18" size="33554432" crc="43501fa6"/>
-		<rom name="ig-a_cgh.u26" merge="ig-a_cgh.u26" size="33554432" crc="7051d020"/>
-		<rom name="ig-a_sp.u2" merge="ig-a_sp.u2" size="16777216" crc="8250688c"/>
-		<rom name="xyj2_nvram" merge="xyj2_nvram" size="65536" crc="ccccc71c"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="orleg2_101" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 (V101, Overseas)</description>
+		<description>Oriental Legend 2 (V101, Oversea)</description>
 		<year>2007</year>
 		<manufacturer>IGS</manufacturer>
 		<rom name="ol2_fa.igs036" merge="ol2_fa.igs036" size="16384" crc="cc4d398a"/>
@@ -124950,26 +124985,8 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="orleg2_103jp" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 (V103, Japan)</description>
-		<year>2007</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="ol2_a10.igs036" size="16384" crc="69375284"/>
-		<rom name="ol2_v103a10.u7" size="8388608" crc="21c1fae8"/>
-		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
-		<rom name="ig-a_bgl.u35" merge="ig-a_bgl.u35" size="8388608" crc="083a8315"/>
-		<rom name="ig-a_bgh.u36" merge="ig-a_bgh.u36" size="8388608" crc="e197221d"/>
-		<rom name="ig-a_bml.u12" merge="ig-a_bml.u12" size="16777216" crc="113a331c"/>
-		<rom name="ig-a_bmh.u16" merge="ig-a_bmh.u16" size="16777216" crc="fbf411c8"/>
-		<rom name="ig-a_cgl.u18" merge="ig-a_cgl.u18" size="33554432" crc="43501fa6"/>
-		<rom name="ig-a_cgh.u26" merge="ig-a_cgh.u26" size="33554432" crc="7051d020"/>
-		<rom name="ig-a_sp.u2" merge="ig-a_sp.u2" size="16777216" crc="8250688c"/>
-		<rom name="xyj2_nvram" merge="xyj2_nvram" size="65536" crc="ccccc71c"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="orleg2_103" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 (V103, Overseas)</description>
+		<description>Oriental Legend 2 (V103, Oversea)</description>
 		<year>2007</year>
 		<manufacturer>IGS</manufacturer>
 		<rom name="ol2_fa.igs036" merge="ol2_fa.igs036" size="16384" crc="cc4d398a"/>
@@ -125024,26 +125041,8 @@
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="orleg2_104jp" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 (V104, Japan)</description>
-		<year>2007</year>
-		<manufacturer>IGS</manufacturer>
-		<rom name="ol2_a10.igs036" size="16384" crc="69375284"/>
-		<rom name="ol2_v104a10.u7" merge="ol2_v104fa.u7" size="8388608" crc="7c24a4f5"/>
-		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
-		<rom name="ig-a_bgl.u35" merge="ig-a_bgl.u35" size="8388608" crc="083a8315"/>
-		<rom name="ig-a_bgh.u36" merge="ig-a_bgh.u36" size="8388608" crc="e197221d"/>
-		<rom name="ig-a_bml.u12" merge="ig-a_bml.u12" size="16777216" crc="113a331c"/>
-		<rom name="ig-a_bmh.u16" merge="ig-a_bmh.u16" size="16777216" crc="fbf411c8"/>
-		<rom name="ig-a_cgl.u18" merge="ig-a_cgl.u18" size="33554432" crc="43501fa6"/>
-		<rom name="ig-a_cgh.u26" merge="ig-a_cgh.u26" size="33554432" crc="7051d020"/>
-		<rom name="ig-a_sp.u2" merge="ig-a_sp.u2" size="16777216" crc="8250688c"/>
-		<rom name="xyj2_nvram" merge="xyj2_nvram" size="65536" crc="ccccc71c"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 (V104, Overseas)</description>
+		<description>Oriental Legend 2 (V104, Oversea)</description>
 		<year>2007</year>
 		<manufacturer>IGS</manufacturer>
 		<rom name="ol2_fa.igs036" size="16384" crc="cc4d398a"/>
@@ -125080,7 +125079,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="orleg2d_101" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 / Xi You Shi E Zhuan 2 (V101, Decrypted)</description>
+		<description>Oriental Legend 2 / Xiyou Shi E Zhuan 2 (V101, Decrypted)</description>
 		<year>2007</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="orleg2_core_v100.rom" merge="ol2_fa.igs036" size="16384" crc="cc4d398a"/>
@@ -125096,7 +125095,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="orleg2d_103" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 / Xi You Shi E Zhuan 2 (V103, Decrypted)</description>
+		<description>Oriental Legend 2 / Xiyou Shi E Zhuan 2 (V103, Decrypted)</description>
 		<year>2007</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="orleg2_core_v100.rom" merge="ol2_fa.igs036" size="16384" crc="cc4d398a"/>
@@ -125112,7 +125111,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="orleg2d" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
-		<description>Oriental Legend 2 / Xi You Shi E Zhuan 2 (V104, Decrypted)</description>
+		<description>Oriental Legend 2 / Xiyou Shi E Zhuan 2 (V104, Decrypted)</description>
 		<year>2007</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
 		<rom name="orleg2_core_v100.rom" merge="ol2_fa.igs036" size="16384" crc="cc4d398a"/>
@@ -134285,7 +134284,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="pwrinst2k" cloneof="pwrinst2" romof="pwrinst2" sourcefile="cave/d_pwrinst2.cpp">
-		<description>Power instinct 2 (Korea, Ver. 94/04/08)</description>
+		<description>Power Instinct 2 (Korea, Ver. 94.04.08)</description>
 		<year>1994</year>
 		<manufacturer>Atlus</manufacturer>
 		<rom name="g02k.u45" size="524288" crc="5468cbe5"/>
@@ -151560,6 +151559,60 @@
 		<rom name="jsd-08.bin" merge="jsd-08.bin" size="131072" crc="40704962"/>
 		<rom name="prom.14m" merge="prom.14m" size="512" crc="1d877538"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="orleg2_101jp" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Saiyuu Shakuyakuden 2 (V101, Japan)</description>
+		<year>2007</year>
+		<manufacturer>IGS (Alta license)</manufacturer>
+		<rom name="ol2_a10.igs036" size="16384" crc="69375284"/>
+		<rom name="ol2_v101a10.u7" size="8388608" crc="45805b53"/>
+		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
+		<rom name="ig-a_bgl.u35" merge="ig-a_bgl.u35" size="8388608" crc="083a8315"/>
+		<rom name="ig-a_bgh.u36" merge="ig-a_bgh.u36" size="8388608" crc="e197221d"/>
+		<rom name="ig-a_bml.u12" merge="ig-a_bml.u12" size="16777216" crc="113a331c"/>
+		<rom name="ig-a_bmh.u16" merge="ig-a_bmh.u16" size="16777216" crc="fbf411c8"/>
+		<rom name="ig-a_cgl.u18" merge="ig-a_cgl.u18" size="33554432" crc="43501fa6"/>
+		<rom name="ig-a_cgh.u26" merge="ig-a_cgh.u26" size="33554432" crc="7051d020"/>
+		<rom name="ig-a_sp.u2" merge="ig-a_sp.u2" size="16777216" crc="8250688c"/>
+		<rom name="xyj2_nvram" merge="xyj2_nvram" size="65536" crc="ccccc71c"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="orleg2_103jp" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Saiyuu Shakuyakuden 2 (V103, Japan)</description>
+		<year>2007</year>
+		<manufacturer>IGS (Alta license)</manufacturer>
+		<rom name="ol2_a10.igs036" size="16384" crc="69375284"/>
+		<rom name="ol2_v103a10.u7" size="8388608" crc="21c1fae8"/>
+		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
+		<rom name="ig-a_bgl.u35" merge="ig-a_bgl.u35" size="8388608" crc="083a8315"/>
+		<rom name="ig-a_bgh.u36" merge="ig-a_bgh.u36" size="8388608" crc="e197221d"/>
+		<rom name="ig-a_bml.u12" merge="ig-a_bml.u12" size="16777216" crc="113a331c"/>
+		<rom name="ig-a_bmh.u16" merge="ig-a_bmh.u16" size="16777216" crc="fbf411c8"/>
+		<rom name="ig-a_cgl.u18" merge="ig-a_cgl.u18" size="33554432" crc="43501fa6"/>
+		<rom name="ig-a_cgh.u26" merge="ig-a_cgh.u26" size="33554432" crc="7051d020"/>
+		<rom name="ig-a_sp.u2" merge="ig-a_sp.u2" size="16777216" crc="8250688c"/>
+		<rom name="xyj2_nvram" merge="xyj2_nvram" size="65536" crc="ccccc71c"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="orleg2_104jp" cloneof="orleg2" romof="orleg2" sourcefile="pgm2/d_pgm2.cpp">
+		<description>Saiyuu Shakuyakuden 2 (V104, Japan)</description>
+		<year>2007</year>
+		<manufacturer>IGS (Alta license)</manufacturer>
+		<rom name="ol2_a10.igs036" size="16384" crc="69375284"/>
+		<rom name="ol2_v104a10.u7" merge="ol2_v104fa.u7" size="8388608" crc="7c24a4f5"/>
+		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
+		<rom name="ig-a_bgl.u35" merge="ig-a_bgl.u35" size="8388608" crc="083a8315"/>
+		<rom name="ig-a_bgh.u36" merge="ig-a_bgh.u36" size="8388608" crc="e197221d"/>
+		<rom name="ig-a_bml.u12" merge="ig-a_bml.u12" size="16777216" crc="113a331c"/>
+		<rom name="ig-a_bmh.u16" merge="ig-a_bmh.u16" size="16777216" crc="fbf411c8"/>
+		<rom name="ig-a_cgl.u18" merge="ig-a_cgl.u18" size="33554432" crc="43501fa6"/>
+		<rom name="ig-a_cgh.u26" merge="ig-a_cgh.u26" size="33554432" crc="7051d020"/>
+		<rom name="ig-a_sp.u2" merge="ig-a_sp.u2" size="16777216" crc="8250688c"/>
+		<rom name="xyj2_nvram" merge="xyj2_nvram" size="65536" crc="ccccc71c"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="salamandt" cloneof="salamand" romof="salamand" sourcefile="konami/d_nemesis.cpp">
@@ -198026,7 +198079,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="kof98umh" sourcefile="pgm2/d_pgm2.cpp">
-		<description>The King of Fighters '98: Ultimate Match HERO (China, V100)</description>
+		<description>The King of Fighters '98: Ultimate Match HERO (China, V100, 09-08-23)</description>
 		<year>2009</year>
 		<manufacturer>IGS / SNK Playmore / New Channel</manufacturer>
 		<rom name="kof98umh_internal_rom.bin" size="16384" crc="3ed2e50f"/>
@@ -229516,7 +229569,7 @@
 	</game>
 	<game name="xeviousd" cloneof="xevious" romof="xevious" sampleof="xevious" sourcefile="pre90s/d_galaga.cpp">
 		<description>Xevious (Atari, set 4)</description>
-		<year>1982</year>
+		<year>1983</year>
 		<manufacturer>Namco (Atari license)</manufacturer>
 		<rom name="1983_atari_8309_136018_218.1m" size="8192" crc="cf690308"/>
 		<rom name="1983_atari_8307_136018_219.1l" size="8192" crc="408c4b64"/>
@@ -229526,9 +229579,9 @@
 		<rom name="1983_atari_8307_136018_105.3c" merge="xvi_13.3c" size="4096" crc="de60ba25"/>
 		<rom name="1983_atari_8307_136018_106.3d" merge="xvi_14.3d" size="4096" crc="535cdbbc"/>
 		<rom name="1983_atari_8307_136018_107.4m" merge="xvi_15.4m" size="8192" crc="dc2c0ecb"/>
-		<rom name="1983_atari_8307_136018_109.4p" merge="xvi_18.4r" size="8192" crc="02417d19"/>
-		<rom name="1983_atari_8307_136018_108.4n" merge="xvi_17.4p" size="8192" crc="dfb587ce"/>
-		<rom name="1983_atari_8307_136018_110.4r" merge="xvi_16.4n" size="4096" crc="605ca889"/>
+		<rom name="1983_atari_8307_136018_110.4r" merge="xvi_18.4r" size="8192" crc="02417d19"/>
+		<rom name="1983_atari_8307_136018_109.4p" merge="xvi_17.4p" size="8192" crc="dfb587ce"/>
+		<rom name="1983_atari_8307_136018_108.4n" merge="xvi_16.4n" size="4096" crc="605ca889"/>
 		<rom name="1983_atari_8307_136018_101.2a" merge="xvi_9.2a" size="4096" crc="57ed9879"/>
 		<rom name="1983_atari_8307_136018_102.2b" merge="xvi_10.2b" size="8192" crc="ae3ba9e5"/>
 		<rom name="1983_atari_8307_136018_103.2c" merge="xvi_11.2c" size="4096" crc="31e244dd"/>
@@ -229709,7 +229762,7 @@
 		<description>Xiyou Shi E Zhuan 2 (V101, China)</description>
 		<year>2007</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
-		<rom name="xyj2_igs036_china.rom" size="16384" crc="bcce7641"/>
+		<rom name="xyj2_cn.igs036" size="16384" crc="bcce7641"/>
 		<rom name="blank_orleg2_china_card.pg2" size="264" crc="dc29556f"/>
 		<rom name="xyj2_v101cn.u7" size="8388608" crc="45805b53"/>
 		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
@@ -229728,7 +229781,7 @@
 		<description>Xiyou Shi E Zhuan 2 (V103, China)</description>
 		<year>2007</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
-		<rom name="xyj2_igs036_china.rom" size="16384" crc="bcce7641"/>
+		<rom name="xyj2_cn.igs036" size="16384" crc="bcce7641"/>
 		<rom name="blank_orleg2_china_card.pg2" size="264" crc="dc29556f"/>
 		<rom name="xyj2_v103cn.u7" size="8388608" crc="21c1fae8"/>
 		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>
@@ -229747,7 +229800,7 @@
 		<description>Xiyou Shi E Zhuan 2 (V104, China)</description>
 		<year>2007</year>
 		<manufacturer>IGS (Huatong license)</manufacturer>
-		<rom name="xyj2_igs036_china.rom" size="16384" crc="bcce7641"/>
+		<rom name="xyj2_cn.igs036" size="16384" crc="bcce7641"/>
 		<rom name="blank_orleg2_china_card.pg2" size="264" crc="dc29556f"/>
 		<rom name="xyj2_v104cn.u7" merge="ol2_v104fa.u7" size="8388608" crc="7c24a4f5"/>
 		<rom name="ig-a_text.u4" merge="ig-a_text.u4" size="2097152" crc="fa444c32"/>

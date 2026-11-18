@@ -6456,11 +6456,13 @@ DRV		BurnDrvDietgoea;
 DRV		BurnDrvDietgoj;
 DRV		BurnDrvDietgou;
 DRV		BurnDrvsnes_Dsvolleyball;
+DRV		BurnDrvDigdugat1;
 DRV		BurnDrvDigdugat;
 DRV		BurnDrvfds_digdug;
 DRV		BurnDrvMSX_digdug;
 DRV		BurnDrvnes_digdug;
 DRV		BurnDrvMSX_digduga;
+DRV		BurnDrvDigsid;
 DRV		BurnDrvDigdug1;
 DRV		BurnDrvDigdug;
 DRV		BurnDrvcv_digdugsgm;
@@ -13532,19 +13534,19 @@ DRV		BurnDrvKov2106;
 DRV		BurnDrvKov2;
 DRV		BurnDrvkov2nl_300hk;
 DRV		BurnDrvkov2nl_300jp;
-DRV		BurnDrvkov2nl_300;
 DRV		BurnDrvkov2nl_300tw;
 DRV		BurnDrvkov2nl_301hk;
 DRV		BurnDrvkov2nl_301jp;
-DRV		BurnDrvkov2nl_301;
 DRV		BurnDrvkov2nl_301tw;
 DRV		BurnDrvkov2nl_302hk;
 DRV		BurnDrvkov2nl_302jp;
-DRV		BurnDrvkov2nl;
 DRV		BurnDrvkov2nl_302tw;
 DRV		BurnDrvkov2nld_300;
+DRV		BurnDrvkov2nl_300;
 DRV		BurnDrvkov2nld_301;
+DRV		BurnDrvkov2nl_301;
 DRV		BurnDrvkov2nld;
+DRV		BurnDrvkov2nl;
 DRV		BurnDrvKov2pemp;
 DRV		BurnDrvKov2p200;
 DRV		BurnDrvKov2p202;
@@ -13554,12 +13556,12 @@ DRV		BurnDrvKov2p;
 DRV		BurnDrvKov2pshjz;
 DRV		BurnDrvkov2pshpd;
 DRV		BurnDrvkov3_100;
-DRV		BurnDrvkov3_101;
-DRV		BurnDrvkov3_102;
-DRV		BurnDrvkov3;
 DRV		BurnDrvkov3d_100;
+DRV		BurnDrvkov3_101;
 DRV		BurnDrvkov3d_101;
+DRV		BurnDrvkov3_102;
 DRV		BurnDrvkov3d_102;
+DRV		BurnDrvkov3;
 DRV		BurnDrvkov3d;
 DRV		BurnDrvkovplusq;
 DRV		BurnDrvkovplus20tx;
@@ -18200,15 +18202,12 @@ DRV		BurnDrvoldsplus203;
 DRV		BurnDrvoldsplus;
 DRV		BurnDrvoldsplusok;
 DRV		BurnDrvorleg2_101hk;
-DRV		BurnDrvorleg2_101jp;
 DRV		BurnDrvorleg2_101;
 DRV		BurnDrvorleg2_101tw;
 DRV		BurnDrvorleg2_103hk;
-DRV		BurnDrvorleg2_103jp;
 DRV		BurnDrvorleg2_103;
 DRV		BurnDrvorleg2_103tw;
 DRV		BurnDrvorleg2_104hk;
-DRV		BurnDrvorleg2_104jp;
 DRV		BurnDrvorleg2;
 DRV		BurnDrvorleg2_104tw;
 DRV		BurnDrvorleg2d_101;
@@ -21668,6 +21667,9 @@ DRV		BurnDrvnes_saintseiougdenkahenj;
 DRV		BurnDrvmd_sswords;
 DRV		BurnDrvmd_sswordj;
 DRV		BurnDrvmd_ssword;
+DRV		BurnDrvorleg2_101jp;
+DRV		BurnDrvorleg2_103jp;
+DRV		BurnDrvorleg2_104jp;
 DRV		BurnDrvnes_saiyuukiworldc;
 DRV		BurnDrvnes_saiyuukiworld;
 DRV		BurnDrvnes_saiyuwor2;
@@ -36965,11 +36967,13 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvDietgoj,			// Diet Go Go (Japan v1.1 1992.09.26)
 	&BurnDrvDietgou,			// Diet Go Go (USA v1.1 1992.09.26)
 	&BurnDrvsnes_Dsvolleyball,	// Dig & Spike Volleyball (USA)
+	&BurnDrvDigdugat1,			// Dig Dug (Atari, rev 1)
 	&BurnDrvDigdugat,			// Dig Dug (Atari, rev 2)
 	&BurnDrvfds_digdug,			// Dig Dug (Japan)
 	&BurnDrvMSX_digdug,			// Dig Dug (Japan)
 	&BurnDrvnes_digdug,			// Dig Dug (Japan)
 	&BurnDrvMSX_digduga,		// Dig Dug (Japan, Alt)
+	&BurnDrvDigsid,				// Dig Dug (manufactured by Sidam)
 	&BurnDrvDigdug1,			// Dig Dug (rev 1)
 	&BurnDrvDigdug,				// Dig Dug (rev 2)
 	&BurnDrvcv_digdugsgm,		// Dig Dug (SGM) (HB)
@@ -44041,19 +44045,19 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvKov2,				// Knights of Valour 2 / Sanguo Zhan Ji 2 / Sangoku Senki 2 (ver. 107, 102, 100HK)
 	&BurnDrvkov2nl_300hk,		// Knights of Valour 2 New Legend (V300, Hong Kong)
 	&BurnDrvkov2nl_300jp,		// Knights of Valour 2 New Legend (V300, Japan)
-	&BurnDrvkov2nl_300,			// Knights of Valour 2 New Legend (V300, Overseas)
 	&BurnDrvkov2nl_300tw,		// Knights of Valour 2 New Legend (V300, Taiwan)
 	&BurnDrvkov2nl_301hk,		// Knights of Valour 2 New Legend (V301, Hong Kong)
 	&BurnDrvkov2nl_301jp,		// Knights of Valour 2 New Legend (V301, Japan)
-	&BurnDrvkov2nl_301,			// Knights of Valour 2 New Legend (V301, Overseas)
 	&BurnDrvkov2nl_301tw,		// Knights of Valour 2 New Legend (V301, Taiwan)
 	&BurnDrvkov2nl_302hk,		// Knights of Valour 2 New Legend (V302, Hong Kong)
 	&BurnDrvkov2nl_302jp,		// Knights of Valour 2 New Legend (V302, Japan)
-	&BurnDrvkov2nl,				// Knights of Valour 2 New Legend (V302, Overseas)
 	&BurnDrvkov2nl_302tw,		// Knights of Valour 2 New Legend (V302, Taiwan)
-	&BurnDrvkov2nld_300,		// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qianjun (V300, Decrypted)
-	&BurnDrvkov2nld_301,		// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qianjun (V301, Decrypted)
-	&BurnDrvkov2nld,			// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qianjun (V302, Decrypted)
+	&BurnDrvkov2nld_300,		// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V300, Decrypted)
+	&BurnDrvkov2nl_300,			// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V300, Oversea)
+	&BurnDrvkov2nld_301,		// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V301, Decrypted)
+	&BurnDrvkov2nl_301,			// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V301, Oversea)
+	&BurnDrvkov2nld,			// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V302, Decrypted)
+	&BurnDrvkov2nl,				// Knights of Valour 2 New Legend / Sanguo Zhan Ji 2 Hengsao Qian Jun (V302, Oversea)
 	&BurnDrvKov2pemp,			// Knights of Valour 2 Plus - Extend Magic Plus (Hack)
 	&BurnDrvKov2p200,			// Knights of Valour 2 Plus - Nine Dragons / Sanguo Zhan Ji 2 Qunxiong Zhengba / Sanguo Zhan Ji 2 Feilong Zai Tian / Sangoku Senki Busyou Souha (ver. M200XX, 200, 100CN)
 	&BurnDrvKov2p202,			// Knights of Valour 2 Plus - Nine Dragons / Sanguo Zhan Ji 2 Qunxiong Zhengba / Sanguo Zhan Ji 2 Feilong Zai Tian / Sangoku Senki Busyou Souha (ver. M202XX, 200, 100CN)
@@ -44062,14 +44066,14 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvKov2p,				// Knights of Valour 2 Plus - Nine Dragons / Sanguo Zhan Ji 2 Qunxiong Zhengba / Sanguo Zhan Ji 2 Feilong Zai Tian / Sangoku Senki Busyou Souha (ver. M205XX, 200, 100CN)
 	&BurnDrvKov2pshjz,			// Knights of Valour 2 Plus - Shuang Han Jiu Zhou (Hack)
 	&BurnDrvkov2pshpd,			// Knights of Valour 2 Plus - Xie Feng Tian Chi (Hack)
-	&BurnDrvkov3_100,			// Knights of Valour 3 (V100, China)
-	&BurnDrvkov3_101,			// Knights of Valour 3 (V101, China)
-	&BurnDrvkov3_102,			// Knights of Valour 3 (V102, China)
-	&BurnDrvkov3,				// Knights of Valour 3 (V104, China)
-	&BurnDrvkov3d_100,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V100, China, Hong kong, Taiwan, Decrypted)
-	&BurnDrvkov3d_101,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V101, China, Hong kong, Taiwan, Decrypted)
-	&BurnDrvkov3d_102,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong kong, Taiwan, Decrypted)
-	&BurnDrvkov3d,				// Knights of Valour 3 / Sanguo Zhan Ji 3 (V104, China, Hong kong, Taiwan, Decrypted)
+	&BurnDrvkov3_100,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V100, China, Hong Kong, Taiwan)
+	&BurnDrvkov3d_100,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V100, China, Hong Kong, Taiwan, Decrypted)
+	&BurnDrvkov3_101,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V101, China, Hong Kong, Taiwan)
+	&BurnDrvkov3d_101,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V101, China, Hong Kong, Taiwan, Decrypted)
+	&BurnDrvkov3_102,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong Kong, Taiwan)
+	&BurnDrvkov3d_102,			// Knights of Valour 3 / Sanguo Zhan Ji 3 (V102, China, Hong Kong, Taiwan, Decrypted)
+	&BurnDrvkov3,				// Knights of Valour 3 / Sanguo Zhan Ji 3 (V104, China, Hong Kong, Taiwan)
+	&BurnDrvkov3d,				// Knights of Valour 3 / Sanguo Zhan Ji 3 (V104, China, Hong Kong, Taiwan, Decrypted)
 	&BurnDrvkovplusq,			// Knights of Valour Plus - New Biography of Heroes (V120)
 	&BurnDrvkovplus20tx,		// Knights of Valour Plus - Qun Xiong Luan Wu 2020
 	&BurnDrvKovplusbl,			// Knights of Valour Plus / San Guo Zhan Ji - Zeng Zong Plus/ Sangoku Senki Masamune Plus (bootleg, V117CN?) 
@@ -48709,20 +48713,17 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvoldsplus,			// Oriental Legend 2 (Korea) / Xiyou Shi E Zhuan Qunmo Luanwu (World, China, Japan, Hong Kong, Taiwan) (ver. 205) [Oriental Ex]
 	&BurnDrvoldsplusok,			// Oriental Legend 2 (One Key Edition, Hack)
 	&BurnDrvorleg2_101hk,		// Oriental Legend 2 (V101, Hong Kong)
-	&BurnDrvorleg2_101jp,		// Oriental Legend 2 (V101, Japan)
-	&BurnDrvorleg2_101,			// Oriental Legend 2 (V101, Overseas)
+	&BurnDrvorleg2_101,			// Oriental Legend 2 (V101, Oversea)
 	&BurnDrvorleg2_101tw,		// Oriental Legend 2 (V101, Taiwan)
 	&BurnDrvorleg2_103hk,		// Oriental Legend 2 (V103, Hong Kong)
-	&BurnDrvorleg2_103jp,		// Oriental Legend 2 (V103, Japan)
-	&BurnDrvorleg2_103,			// Oriental Legend 2 (V103, Overseas)
+	&BurnDrvorleg2_103,			// Oriental Legend 2 (V103, Oversea)
 	&BurnDrvorleg2_103tw,		// Oriental Legend 2 (V103, Taiwan)
 	&BurnDrvorleg2_104hk,		// Oriental Legend 2 (V104, Hong Kong)
-	&BurnDrvorleg2_104jp,		// Oriental Legend 2 (V104, Japan)
-	&BurnDrvorleg2,				// Oriental Legend 2 (V104, Overseas)
+	&BurnDrvorleg2,				// Oriental Legend 2 (V104, Oversea)
 	&BurnDrvorleg2_104tw,		// Oriental Legend 2 (V104, Taiwan)
-	&BurnDrvorleg2d_101,		// Oriental Legend 2 / Xi You Shi E Zhuan 2 (V101, Decrypted)
-	&BurnDrvorleg2d_103,		// Oriental Legend 2 / Xi You Shi E Zhuan 2 (V103, Decrypted)
-	&BurnDrvororleg2d,			// Oriental Legend 2 / Xi You Shi E Zhuan 2 (V104, Decrypted)
+	&BurnDrvorleg2d_101,		// Oriental Legend 2 / Xiyou Shi E Zhuan 2 (V101, Decrypted)
+	&BurnDrvorleg2d_103,		// Oriental Legend 2 / Xiyou Shi E Zhuan 2 (V103, Decrypted)
+	&BurnDrvororleg2d,			// Oriental Legend 2 / Xiyou Shi E Zhuan 2 (V104, Decrypted)
 	&BurnDrvoldsdsgl,			// Oriental Legend Special - Da Sheng Gui Lai (Hack)
 	&BurnDrvOlds100,			// Oriental Legend Special / Xiyou Shi E Zhuan Super (ver. 100, set 1)
 	&BurnDrvOlds100a,			// Oriental Legend Special / Xiyou Shi E Zhuan Super (ver. 100, set 2)
@@ -50128,7 +50129,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvPowerinb,			// Power Instinct (USA, bootleg set 2)
 	&BurnDrvPowerinsc,			// Power Instinct (USA, bootleg set 3) [no comment, NOT WORKING]
 	&BurnDrvPowerinspu,			// Power Instinct (USA, prototype)
-	&BurnDrvPwrinst2k,			// Power instinct 2 (Korea, Ver. 94/04/08)
+	&BurnDrvPwrinst2k,			// Power Instinct 2 (Korea, Ver. 94.04.08)
 	&BurnDrvPwrinst2,			// Power Instinct 2 (US, Ver. 94.04.08, set 1)
 	&BurnDrvPwrinst2a,			// Power Instinct 2 (US, Ver. 94.04.08, set 2)
 	&BurnDrvpce_pleag93,		// Power League '93 (Japan)
@@ -52177,6 +52178,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_sswords,			// Saint Sword (Hack, Spanish)
 	&BurnDrvmd_sswordj,			// Saint Sword (Japan)
 	&BurnDrvmd_ssword,			// Saint Sword (USA)
+	&BurnDrvorleg2_101jp,		// Saiyuu Shakuyakuden 2 (V101, Japan)
+	&BurnDrvorleg2_103jp,		// Saiyuu Shakuyakuden 2 (V103, Japan)
+	&BurnDrvorleg2_104jp,		// Saiyuu Shakuyakuden 2 (V104, Japan)
 	&BurnDrvnes_saiyuukiworldc,	// Saiyuuki World (Hack, Chinese v1.04)
 	&BurnDrvnes_saiyuukiworld,	// Saiyuuki World (Japan)
 	&BurnDrvnes_saiyuwor2,		// Saiyuuki World 2 - Tenjoukai no Majin (Japan)
@@ -57486,7 +57490,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvKof98rat,			// The King of Fighters '98 - The Slugfest / King of Fighters '98 - Dream Match Never Ends (Ratio, Hack)
 	&BurnDrvKof98ult,			// The King of Fighters '98 - The Slugfest / King of Fighters '98 - Dream Match Never Ends (Ultimate Match, Hack)
 	&BurnDrvKof98mix,			// The King of Fighters '98 - The Slugfest / King of Fighters '98 - Dream Match Never Ends (Unlimited, Hack)
-	&BurnDrvkof98umh,			// The King of Fighters '98: Ultimate Match HERO (China, V100)
+	&BurnDrvkof98umh,			// The King of Fighters '98: Ultimate Match HERO (China, V100, 09-08-23)
 	&BurnDrvkof98umhd,			// The King of Fighters '98: Ultimate Match HERO (V100, Decrypted)
 	&BurnDrvKof99ae,			// The King of Fighters '99 - Millennium Battle (Anniversary, Hack)
 	&BurnDrvKof99cb,			// The King of Fighters '99 - Millennium Battle (Combo, Hack)
@@ -67438,11 +67442,13 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "dietgoj", "dataeast/d_dietgogo.cpp"},
 	{ "dietgou", "dataeast/d_dietgogo.cpp"},
 	{ "snes_dsvolleyball", "snes/d_snes.cpp"},
+	{ "digdugat1", "pre90s/d_galaga.cpp"},
 	{ "digdugat", "pre90s/d_galaga.cpp"},
 	{ "fds_digdug", "nes/d_nes.cpp"},
 	{ "msx_digdug", "msx/d_msx.cpp"},
 	{ "nes_digdug", "nes/d_nes.cpp"},
 	{ "msx_digduga", "msx/d_msx.cpp"},
+	{ "digsid", "pre90s/d_galaga.cpp"},
 	{ "digdug1", "pre90s/d_galaga.cpp"},
 	{ "digdug", "pre90s/d_galaga.cpp"},
 	{ "cv_digdugsgm", "coleco/d_coleco.cpp"},
@@ -74476,19 +74482,19 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "kov2", "pgm/d_pgm.cpp"},
 	{ "kov2nl_300hk", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_300jp", "pgm2/d_pgm2.cpp"},
-	{ "kov2nl_300", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_300tw", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_301hk", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_301jp", "pgm2/d_pgm2.cpp"},
-	{ "kov2nl_301", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_301tw", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_302hk", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_302jp", "pgm2/d_pgm2.cpp"},
-	{ "kov2nl", "pgm2/d_pgm2.cpp"},
 	{ "kov2nl_302tw", "pgm2/d_pgm2.cpp"},
 	{ "kov2nld_300", "pgm2/d_pgm2.cpp"},
+	{ "kov2nl_300", "pgm2/d_pgm2.cpp"},
 	{ "kov2nld_301", "pgm2/d_pgm2.cpp"},
+	{ "kov2nl_301", "pgm2/d_pgm2.cpp"},
 	{ "kov2nld", "pgm2/d_pgm2.cpp"},
+	{ "kov2nl", "pgm2/d_pgm2.cpp"},
 	{ "kov2pemp", "pgm/d_pgm.cpp"},
 	{ "kov2p200", "pgm/d_pgm.cpp"},
 	{ "kov2p202", "pgm/d_pgm.cpp"},
@@ -74498,12 +74504,12 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "kov2pshjz", "pgm/d_pgm.cpp"},
 	{ "kov2pshpd", "pgm/d_pgm.cpp"},
 	{ "kov3_100", "pgm2/d_pgm2.cpp"},
-	{ "kov3_101", "pgm2/d_pgm2.cpp"},
-	{ "kov3_102", "pgm2/d_pgm2.cpp"},
-	{ "kov3", "pgm2/d_pgm2.cpp"},
 	{ "kov3d_100", "pgm2/d_pgm2.cpp"},
+	{ "kov3_101", "pgm2/d_pgm2.cpp"},
 	{ "kov3d_101", "pgm2/d_pgm2.cpp"},
+	{ "kov3_102", "pgm2/d_pgm2.cpp"},
 	{ "kov3d_102", "pgm2/d_pgm2.cpp"},
+	{ "kov3", "pgm2/d_pgm2.cpp"},
 	{ "kov3d", "pgm2/d_pgm2.cpp"},
 	{ "kovplusq", "pgm/d_pgm.cpp"},
 	{ "kovplus20tx", "pgm/d_pgm.cpp"},
@@ -79116,15 +79122,12 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "oldsplus", "pgm/d_pgm.cpp"},
 	{ "oldsplusok", "pgm/d_pgm.cpp"},
 	{ "orleg2_101hk", "pgm2/d_pgm2.cpp"},
-	{ "orleg2_101jp", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_101", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_101tw", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_103hk", "pgm2/d_pgm2.cpp"},
-	{ "orleg2_103jp", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_103", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_103tw", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_104hk", "pgm2/d_pgm2.cpp"},
-	{ "orleg2_104jp", "pgm2/d_pgm2.cpp"},
 	{ "orleg2", "pgm2/d_pgm2.cpp"},
 	{ "orleg2_104tw", "pgm2/d_pgm2.cpp"},
 	{ "orleg2d_101", "pgm2/d_pgm2.cpp"},
@@ -82560,6 +82563,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_sswords", "megadrive/d_megadrive.cpp"},
 	{ "md_sswordj", "megadrive/d_megadrive.cpp"},
 	{ "md_ssword", "megadrive/d_megadrive.cpp"},
+	{ "orleg2_101jp", "pgm2/d_pgm2.cpp"},
+	{ "orleg2_103jp", "pgm2/d_pgm2.cpp"},
+	{ "orleg2_104jp", "pgm2/d_pgm2.cpp"},
 	{ "nes_saiyuukiworldc", "nes/d_nes.cpp"},
 	{ "nes_saiyuukiworld", "nes/d_nes.cpp"},
 	{ "nes_saiyuwor2", "nes/d_nes.cpp"},
