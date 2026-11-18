@@ -7023,7 +7023,7 @@
 	<game name="horshoes" sourcefile="taito/d_taitol.cpp">
 		<description>American Horseshoes (US)</description>
 		<year>1990</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="c47-03.ic6" size="131072" crc="37e15b20"/>
 		<rom name="c47-02.ic5" size="131072" crc="35f96526"/>
 		<rom name="c47-01.ic11" size="131072" crc="031c73d8"/>
@@ -24575,7 +24575,7 @@
 	<game name="cachat" sourcefile="taito/d_taitol.cpp">
 		<description>Cachat (Japan)</description>
 		<year>1993</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="cac6" size="131072" crc="8105cf5f"/>
 		<rom name="cac9" size="131072" crc="bc462914"/>
 		<rom name="cac10" size="131072" crc="ecc64b31"/>
@@ -28649,7 +28649,7 @@
 	<game name="champwrj" cloneof="champwr" romof="champwr" sourcefile="taito/d_taitol.cpp">
 		<description>Champion Wrestler (Japan)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="c01-06.bin" size="131072" crc="90fa1409"/>
 		<rom name="c01-04.rom" merge="c01-04.rom" size="131072" crc="358bd076"/>
 		<rom name="c01-07.rom" merge="c01-07.rom" size="131072" crc="5117c98f"/>
@@ -28664,7 +28664,7 @@
 	<game name="champwru" cloneof="champwr" romof="champwr" sourcefile="taito/d_taitol.cpp">
 		<description>Champion Wrestler (US)</description>
 		<year>1989</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="c01-12.rom" size="131072" crc="09f345b3"/>
 		<rom name="c01-04.rom" merge="c01-04.rom" size="131072" crc="358bd076"/>
 		<rom name="c01-07.rom" merge="c01-07.rom" size="131072" crc="5117c98f"/>
@@ -28679,7 +28679,7 @@
 	<game name="champwr" sourcefile="taito/d_taitol.cpp">
 		<description>Champion Wrestler (World)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="c01-13.rom" size="131072" crc="7ef47525"/>
 		<rom name="c01-04.rom" size="131072" crc="358bd076"/>
 		<rom name="c01-07.rom" size="131072" crc="5117c98f"/>
@@ -29567,6 +29567,21 @@
 		<rom name="361a06.15d" merge="361a06.15d" size="1048576" crc="7e15f058"/>
 		<rom name="kt008.1d" size="262144" crc="47cf9fa1"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="checkmanf" cloneof="checkman" romof="checkman" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Hack</comment>
+		<description>Check Man (Hack, Flyer version)</description>
+		<year>2026</year>
+		<manufacturer>hack</manufacturer>
+		<rom name="cm_1.bin" size="4096" crc="0ef21fbd"/>
+		<rom name="cm_2.bin" size="4096" crc="edc58286"/>
+		<rom name="cm_3.bin" size="2048" crc="73e1c945"/>
+		<rom name="cm_4.bin" size="4096" crc="923cffa1"/>
+		<rom name="cm_6.bin" size="2048" crc="476a7cc3"/>
+		<rom name="cm_5.bin" size="2048" crc="b3df2b5f"/>
+		<rom name="checkman.clr" size="32" crc="ecbe1b17"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="checkmanj" cloneof="checkman" romof="checkman" sourcefile="galaxian/d_galaxian.cpp">
@@ -36249,9 +36264,9 @@
 	</game>
 	<game name="cubybop" sourcefile="taito/d_taitol.cpp">
 		<comment>Prototype</comment>
-		<description>Cuby Bop (location test)</description>
+		<description>Cuby Bop (Japan, location test)</description>
 		<year>199?</year>
-		<manufacturer>Hot-B Co., Ltd.</manufacturer>
+		<manufacturer>Hot-B Co.</manufacturer>
 		<rom name="cb06.6" size="262144" crc="66b89a85"/>
 		<rom name="cb09.9" size="262144" crc="5f831e59"/>
 		<rom name="cb10.10" size="262144" crc="430510fc"/>
@@ -51750,7 +51765,7 @@
 	<game name="evilston" sourcefile="taito/d_taitol.cpp">
 		<description>Evil Stone</description>
 		<year>1990</year>
-		<manufacturer>Spacy Industrial, Ltd.</manufacturer>
+		<manufacturer>Spacy Industrial</manufacturer>
 		<rom name="c67-03.ic2" size="131072" crc="53419982"/>
 		<rom name="c67-04.ic6" size="131072" crc="55d57e19"/>
 		<rom name="c67-05.ic22" size="131072" crc="94d3a642"/>
@@ -55904,7 +55919,7 @@
 	<game name="fhawkj" cloneof="fhawk" romof="fhawk" sourcefile="taito/d_taitol.cpp">
 		<description>Fighting Hawk (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b70-07.ic3" size="131072" crc="939114af"/>
 		<rom name="b70-03.ic2" merge="b70-03.ic2" size="524288" crc="42d5a9b8"/>
 		<rom name="b70-08.ic12" merge="b70-08.ic12" size="131072" crc="4d795f48"/>
@@ -55917,7 +55932,7 @@
 	<game name="fhawk" sourcefile="taito/d_taitol.cpp">
 		<description>Fighting Hawk (World)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b70-11.ic3" size="131072" crc="7d9f7583"/>
 		<rom name="b70-03.ic2" size="524288" crc="42d5a9b8"/>
 		<rom name="b70-08.ic12" size="131072" crc="4d795f48"/>
@@ -58883,7 +58898,7 @@
 	<game name="flipull" cloneof="plotting" romof="plotting" sourcefile="taito/d_taitol.cpp">
 		<description>Flipull (Japan)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b96-01.ic10" size="65536" crc="65993978"/>
 		<rom name="b96-07.ic9" merge="b96-07.ic9" size="65536" crc="0713a387"/>
 		<rom name="b96-08.ic8" merge="b96-08.ic8" size="65536" crc="55b8e294"/>
@@ -81667,8 +81682,11 @@
 		<rom name="3bg.1e" size="8192" crc="14f23cdd"/>
 		<rom name="jr-ic9g" size="512" crc="85577107"/>
 		<rom name="jr-ic9f" size="512" crc="085914d1"/>
+		<rom name="82s100.ic8c" size="245" status="nodump"/>
+		<rom name="82s100.ic8n" size="245" status="nodump"/>
 		<rom name="jr-pal16l8.6j" size="260" status="nodump"/>
 		<rom name="jr-pal16l8.6k" size="260" status="nodump"/>
+		<rom name="jr-pal.1a" size="260" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -81689,12 +81707,13 @@
 		<rom name="1bg.2d" merge="1bg.2d" size="8192" crc="9f880ef5"/>
 		<rom name="2bg.1f" merge="2bg.1f" size="8192" crc="afc04cd7"/>
 		<rom name="3bg.1e" merge="3bg.1e" size="8192" crc="14f23cdd"/>
-		<rom name="jr-ic9g" merge="jr-ic9g" size="512" crc="85577107"/>
-		<rom name="jr-ic9f" merge="jr-ic9f" size="512" crc="085914d1"/>
+		<rom name="jr.ic9g" merge="jr-ic9g" size="512" crc="85577107"/>
+		<rom name="jr.ic9f" merge="jr-ic9f" size="512" crc="085914d1"/>
+		<rom name="82s100.ic8c" size="245" crc="70ddfa6d"/>
+		<rom name="82s100.ic8n" size="245" crc="e00625ee"/>
 		<rom name="pal16l8.6j" size="260" crc="a88e52d6"/>
 		<rom name="pal16l8.6k" size="260" status="nodump"/>
-		<rom name="82s100.8c" size="245" crc="70ddfa6d"/>
-		<rom name="82s100.8n" size="245" crc="e00625ee"/>
+		<rom name="pal.1a" size="260" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -81715,8 +81734,13 @@
 		<rom name="1bg.2d" merge="1bg.2d" size="8192" crc="9f880ef5"/>
 		<rom name="2bg.1f" merge="2bg.1f" size="8192" crc="afc04cd7"/>
 		<rom name="3bg.1e" merge="3bg.1e" size="8192" crc="14f23cdd"/>
-		<rom name="jr-ic9g" merge="jr-ic9g" size="512" crc="85577107"/>
-		<rom name="jr-ic9f" merge="jr-ic9f" size="512" crc="085914d1"/>
+		<rom name="jr.ic9g" merge="jr-ic9g" size="512" crc="85577107"/>
+		<rom name="jr.ic9f" merge="jr-ic9f" size="512" crc="085914d1"/>
+		<rom name="82s100.ic8c" size="245" crc="70ddfa6d"/>
+		<rom name="82s100.ic8n" size="245" crc="e00625ee"/>
+		<rom name="pal.6j" size="260" status="nodump"/>
+		<rom name="pal.6k" size="260" status="nodump"/>
+		<rom name="pal.1a" size="260" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -86960,150 +86984,13 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="kinstp47" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
-		<comment>Prototype</comment>
-		<description>Killer Instinct (ROM proto ver. 4.7)</description>
-		<year>1994</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki-p47.u98" size="524288" crc="05e67bcb"/>
-		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
-		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
-		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
-		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
-		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
-		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
-		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
-		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
-		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst13" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct (ROM ver. 1.3)</description>
-		<year>1994</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki-l13.u98" size="524288" crc="65f7ea31"/>
-		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
-		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
-		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
-		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
-		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
-		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
-		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
-		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
-		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst14" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct (ROM ver. 1.4)</description>
-		<year>1994</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki-l14.u98" size="524288" crc="afedb75f"/>
-		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
-		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
-		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
-		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
-		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
-		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
-		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
-		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
-		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst15ai" cloneof="kinst" romof="kinst" sourcefile="midway/d_kinst.cpp">
-		<comment>Hack</comment>
-		<description>Killer Instinct (ROM ver. 1.5 AnyIDE)</description>
-		<year>1994</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki_l15di.u98" size="524288" crc="230f55fb"/>
-		<rom name="u10-l1" merge="u10-l1" size="524288" crc="b6cc155f"/>
-		<rom name="u11-l1" merge="u11-l1" size="524288" crc="0b5e05df"/>
-		<rom name="u12-l1" merge="u12-l1" size="524288" crc="d05ce6ad"/>
-		<rom name="u13-l1" merge="u13-l1" size="524288" crc="7d0954ea"/>
-		<rom name="u33-l1" merge="u33-l1" size="524288" crc="8bbe4f0c"/>
-		<rom name="u34-l1" merge="u34-l1" size="524288" crc="b2e73603"/>
-		<rom name="u35-l1" merge="u35-l1" size="524288" crc="0aaef4fc"/>
-		<rom name="u36-l1" merge="u36-l1" size="524288" crc="0577bb60"/>
-		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct (ROM ver. 1.5d)</description>
-		<year>1994</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki-l15d.u98" size="524288" crc="7b65ca3d"/>
-		<rom name="u10-l1" size="524288" crc="b6cc155f"/>
-		<rom name="u11-l1" size="524288" crc="0b5e05df"/>
-		<rom name="u12-l1" size="524288" crc="d05ce6ad"/>
-		<rom name="u13-l1" size="524288" crc="7d0954ea"/>
-		<rom name="u33-l1" size="524288" crc="8bbe4f0c"/>
-		<rom name="u34-l1" size="524288" crc="b2e73603"/>
-		<rom name="u35-l1" size="524288" crc="0aaef4fc"/>
-		<rom name="u36-l1" size="524288" crc="0577bb60"/>
-		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst210" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct II (ROM ver. 1.0)</description>
-		<year>1995</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki2-l10.u98" size="524288" crc="b17b4b3d"/>
-		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
-		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
-		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
-		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
-		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
-		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
-		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
-		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
-		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst211" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct II (ROM ver. 1.1)</description>
-		<year>1995</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki2-l11.u98" size="524288" crc="0cb8de1e"/>
-		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
-		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
-		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
-		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
-		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
-		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
-		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
-		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
-		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst213" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct II (ROM ver. 1.3)</description>
-		<year>1995</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki2-l13.u98" size="524288" crc="25ebde3b"/>
-		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
-		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
-		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
-		<rom name="ki2_l1.u13" merge="ki2_l1.u13" size="524288" crc="3fe6327b"/>
-		<rom name="ki2_l1.u33" merge="ki2_l1.u33" size="524288" crc="6f4dcdcf"/>
-		<rom name="ki2_l1.u34" merge="ki2_l1.u34" size="524288" crc="5db48206"/>
-		<rom name="ki2_l1.u35" merge="ki2_l1.u35" size="524288" crc="7245ce69"/>
-		<rom name="ki2_l1.u36" merge="ki2_l1.u36" size="524288" crc="8920acbb"/>
-		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="kinst214ai" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
-		<comment>Hack</comment>
-		<description>Killer Instinct II (ROM ver. 1.4 AnyIDE)</description>
-		<year>1995</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
-		<rom name="ki2_l14p.u98" size="524288" crc="d80c937a"/>
+	<game name="kinst2uk" cloneof="kinst2" romof="kinst2" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct 2 (upgrade kit)</description>
+		<year>1996</year>
+		<manufacturer>Rare / Nintendo (Midway license)</manufacturer>
+		<rom name="ki2-l14k.u98" size="524288" crc="9cbd00a8"/>
+		<rom name="ki2-l13k.u98" size="524288" crc="3b4f16fc"/>
+		<rom name="ki2_d14p.u98" size="524288" crc="d716d428"/>
 		<rom name="ki2_l1.u10" merge="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
 		<rom name="ki2_l1.u11" merge="ki2_l1.u11" size="524288" crc="f9e70024"/>
 		<rom name="ki2_l1.u12" merge="ki2_l1.u12" size="524288" crc="2994c199"/>
@@ -87117,10 +87004,14 @@
 		<driver status="good"/>
 	</game>
 	<game name="kinst2" sourcefile="midway/d_kinst.cpp">
-		<description>Killer Instinct II (ROM ver. 1.4)</description>
-		<year>1995</year>
-		<manufacturer>Rare/Nintendo</manufacturer>
+		<description>Killer Instinct 2</description>
+		<year>1996</year>
+		<manufacturer>Rare / Nintendo (Midway license)</manufacturer>
 		<rom name="ki2-l14.u98" size="524288" crc="27d0285e"/>
+		<rom name="ki2-l13.u98" size="524288" crc="25ebde3b"/>
+		<rom name="ki2-l11.u98" size="524288" crc="0cb8de1e"/>
+		<rom name="ki2-l10.u98" size="524288" crc="b17b4b3d"/>
+		<rom name="ki2_l14p.u98" size="524288" crc="d80c937a"/>
 		<rom name="ki2_l1.u10" size="524288" crc="fdf6ed51"/>
 		<rom name="ki2_l1.u11" size="524288" crc="f9e70024"/>
 		<rom name="ki2_l1.u12" size="524288" crc="2994c199"/>
@@ -87130,6 +87021,27 @@
 		<rom name="ki2_l1.u35" size="524288" crc="7245ce69"/>
 		<rom name="ki2_l1.u36" size="524288" crc="8920acbb"/>
 		<disk name="kinst2" sha1="e7c9291b4648eae0012ea0cc230731ed4987d1d5" />
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kinst" sourcefile="midway/d_kinst.cpp">
+		<description>Killer Instinct</description>
+		<year>1994</year>
+		<manufacturer>Rare / Nintendo (Midway license)</manufacturer>
+		<rom name="ki-l15d.u98" size="524288" crc="7b65ca3d"/>
+		<rom name="ki-l14.u98" size="524288" crc="afedb75f"/>
+		<rom name="ki-l13.u98" size="524288" crc="65f7ea31"/>
+		<rom name="ki-p47.u98" size="524288" crc="05e67bcb"/>
+		<rom name="ki_l15di.u98" size="524288" crc="230f55fb"/>
+		<rom name="u10-l1" size="524288" crc="b6cc155f"/>
+		<rom name="u11-l1" size="524288" crc="0b5e05df"/>
+		<rom name="u12-l1" size="524288" crc="d05ce6ad"/>
+		<rom name="u13-l1" size="524288" crc="7d0954ea"/>
+		<rom name="u33-l1" size="524288" crc="8bbe4f0c"/>
+		<rom name="u34-l1" size="524288" crc="b2e73603"/>
+		<rom name="u35-l1" size="524288" crc="0aaef4fc"/>
+		<rom name="u36-l1" size="524288" crc="0577bb60"/>
+		<disk name="kinst" sha1="81d833236e994528d1482979261401b198d1ca53" />
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -91196,7 +91108,7 @@
 	<game name="kurikintj" cloneof="kurikint" romof="kurikint" sourcefile="taito/d_taitol.cpp">
 		<description>Kuri Kinton (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b42-05.ic2" size="131072" crc="077222b8"/>
 		<rom name="b42-06.ic6" merge="b42-06.ic6" size="131072" crc="fa15fd65"/>
 		<rom name="b42-07.ic22" merge="b42-07.ic22" size="65536" crc="0f2719c0"/>
@@ -91210,7 +91122,7 @@
 	<game name="kurikintu" cloneof="kurikint" romof="kurikint" sourcefile="taito/d_taitol.cpp">
 		<description>Kuri Kinton (US)</description>
 		<year>1988</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="b42-08.ic2" size="131072" crc="7075122e"/>
 		<rom name="b42-06.ic6" merge="b42-06.ic6" size="131072" crc="fa15fd65"/>
 		<rom name="b42-07.ic22" merge="b42-07.ic22" size="65536" crc="0f2719c0"/>
@@ -91224,7 +91136,7 @@
 	<game name="kurikintw" cloneof="kurikint" romof="kurikint" sourcefile="taito/d_taitol.cpp">
 		<description>Kuri Kinton (US, World Games license)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation (World Games, Inc. license)</manufacturer>
+		<manufacturer>Taito (World Games license)</manufacturer>
 		<rom name="b42-10.ic2" size="131072" crc="87460109"/>
 		<rom name="b42-06.ic6" merge="b42-06.ic6" size="131072" crc="fa15fd65"/>
 		<rom name="b42-07.ic22" merge="b42-07.ic22" size="65536" crc="0f2719c0"/>
@@ -91238,7 +91150,7 @@
 	<game name="kurikint" sourcefile="taito/d_taitol.cpp">
 		<description>Kuri Kinton (World)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b42-09.ic2" size="131072" crc="e97c4394"/>
 		<rom name="b42-06.ic6" size="131072" crc="fa15fd65"/>
 		<rom name="b42-07.ic22" size="65536" crc="0f2719c0"/>
@@ -91253,7 +91165,7 @@
 		<comment>Prototype</comment>
 		<description>Kuri Kinton (World, prototype)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="kk_ic2.ic2" size="131072" crc="908603f2"/>
 		<rom name="kk_ic6.ic6" size="131072" crc="a4a957b1"/>
 		<rom name="b42-07.ic22" merge="b42-07.ic22" size="65536" crc="0f2719c0"/>
@@ -112206,6 +112118,11 @@
 		<rom name="bg3.1e" size="8192" crc="36980455"/>
 		<rom name="9g" size="512" crc="fc9a0f21"/>
 		<rom name="9f" size="512" crc="93106704"/>
+		<rom name="82s100.ic8c" size="245" status="nodump"/>
+		<rom name="82s100.ic8n" size="245" status="nodump"/>
+		<rom name="01_pal.ic6j" size="279" status="nodump"/>
+		<rom name="01_pal.ic6k" size="279" status="nodump"/>
+		<rom name="02_pal.1a" size="279" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -112228,6 +112145,38 @@
 		<rom name="bg3.1e" merge="bg3.1e" size="8192" crc="36980455"/>
 		<rom name="9g" merge="9g" size="512" crc="fc9a0f21"/>
 		<rom name="9f" merge="9f" size="512" crc="93106704"/>
+		<rom name="82s100.ic8c" size="245" status="nodump"/>
+		<rom name="82s100.ic8n" size="245" status="nodump"/>
+		<rom name="01_pal.ic6j" size="279" status="nodump"/>
+		<rom name="01_pal.ic6k" size="279" status="nodump"/>
+		<rom name="02_pal.1a" size="279" status="nodump"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="monymony3" cloneof="monymony" romof="monymony" sourcefile="pre90s/d_zaccaria.cpp">
+		<description>Money Money (set 3)</description>
+		<year>1983</year>
+		<manufacturer>Zaccaria</manufacturer>
+		<rom name="cpu1.1a" size="8192" crc="932006cd"/>
+		<rom name="a-00281_assa_m5.1b" merge="cpu2.1b" size="8192" crc="87372545"/>
+		<rom name="a-00281_assa_m5.1c" size="8192" crc="3c874c16"/>
+		<rom name="a-00281_assa_m5.1d" merge="cpu4.1d" size="8192" crc="5fdec451"/>
+		<rom name="a-00281_assa_m5.2a" merge="cpu5.2a" size="8192" crc="af830e3c"/>
+		<rom name="a-00281_assa_m5.2c" merge="cpu6.2c" size="8192" crc="31da62b1"/>
+		<rom name="a-00281_assa_m5.2g" merge="snd13.2g" size="8192" crc="78b01b98"/>
+		<rom name="a-00281_assa_m5.1i" merge="snd9.1i" size="8192" crc="94e3858b"/>
+		<rom name="a-00281_assa_m5.1h" merge="snd8.1h" size="8192" crc="aad76193"/>
+		<rom name="a-00281_assa_m5.1g" merge="snd7.1g" size="8192" crc="1e8ffe3e"/>
+		<rom name="a-00281_assa_m5.2d" merge="bg1.2d" size="8192" crc="82ab4d1a"/>
+		<rom name="a-00281_assa_m5.1f" merge="bg2.1f" size="8192" crc="40d4e4d1"/>
+		<rom name="a-00281_assa_m5.1e" merge="bg3.1e" size="8192" crc="36980455"/>
+		<rom name="82s123.ic9g" merge="9g" size="512" crc="fc9a0f21"/>
+		<rom name="82s123.ic9f" merge="9f" size="512" crc="93106704"/>
+		<rom name="82s100.ic8c" size="245" status="nodump"/>
+		<rom name="82s100.ic8n" size="245" status="nodump"/>
+		<rom name="01_pal16v8.ic6j" size="279" crc="38097d9b"/>
+		<rom name="01_pal16v8.ic6k" size="279" crc="b8f87879"/>
+		<rom name="a-00281_assa_m5_pal16l8.1a" size="260" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -127692,7 +127641,7 @@
 	<game name="palamedj" cloneof="palamed" romof="palamed" sourcefile="taito/d_taitol.cpp">
 		<description>Palamedes (Japan)</description>
 		<year>1990</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="c63-02.ic6" size="131072" crc="55a82bb2"/>
 		<rom name="c63-04.ic9" merge="chr-l_ic9.ic9" size="131072" crc="c7bbe460"/>
 		<rom name="c63-03.ic7" merge="chr-h_ic7.ic7" size="131072" crc="fcd86e44"/>
@@ -127702,7 +127651,7 @@
 	<game name="palamed" sourcefile="taito/d_taitol.cpp">
 		<description>Palamedes (US)</description>
 		<year>1990</year>
-		<manufacturer>Hot-B Co., Ltd.</manufacturer>
+		<manufacturer>Hot-B Co.</manufacturer>
 		<rom name="palamedes_prg_ic6.ic6" size="131072" crc="ee957b0e"/>
 		<rom name="chr-l_ic9.ic9" size="131072" crc="c7bbe460"/>
 		<rom name="chr-h_ic7.ic7" size="131072" crc="fcd86e44"/>
@@ -131531,7 +131480,7 @@
 	<game name="plgirls2" sourcefile="taito/d_taitol.cpp">
 		<description>Play Girls 2 (Europe)</description>
 		<year>1993</year>
-		<manufacturer>Hot-B Co., Ltd.</manufacturer>
+		<manufacturer>Hot-B Co.</manufacturer>
 		<rom name="pg2_1e.ic6" size="262144" crc="b279990b"/>
 		<rom name="cho-l.ic9" size="524288" crc="956384ec"/>
 		<rom name="cho-h.ic7" size="524288" crc="992f99b1"/>
@@ -131541,7 +131490,7 @@
 	<game name="plgirls2j" cloneof="plgirls2" romof="plgirls2" sourcefile="taito/d_taitol.cpp">
 		<description>Play Girls 2 (Japan)</description>
 		<year>1993</year>
-		<manufacturer>Hot-B Co., Ltd.</manufacturer>
+		<manufacturer>Hot-B Co.</manufacturer>
 		<rom name="pg2_1j.ic6" size="262144" crc="f924197a"/>
 		<rom name="cho-l.ic9" merge="cho-l.ic9" size="524288" crc="956384ec"/>
 		<rom name="cho-h.ic7" merge="cho-h.ic7" size="524288" crc="992f99b1"/>
@@ -131551,7 +131500,7 @@
 	<game name="plgirls" sourcefile="taito/d_taitol.cpp">
 		<description>Play Girls</description>
 		<year>1992</year>
-		<manufacturer>Hot-B Co., Ltd.</manufacturer>
+		<manufacturer>Hot-B Co.</manufacturer>
 		<rom name="pg03.ic6" size="262144" crc="6ca73092"/>
 		<rom name="pg02.ic9" size="262144" crc="3cf05ca9"/>
 		<rom name="pg01.ic7" size="262144" crc="79e41e74"/>
@@ -131837,7 +131786,7 @@
 	<game name="plottingu" cloneof="plotting" romof="plotting" sourcefile="taito/d_taitol.cpp">
 		<description>Plotting (US)</description>
 		<year>1989</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="b96-05.ic10" size="65536" crc="afb99d1f"/>
 		<rom name="b96-02.ic9" size="65536" crc="6e0bad2a"/>
 		<rom name="b96-03.ic8" size="65536" crc="fb5f3ca4"/>
@@ -131848,7 +131797,7 @@
 	<game name="plotting" sourcefile="taito/d_taitol.cpp">
 		<description>Plotting (World set 1)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="ic10" size="65536" crc="be240921"/>
 		<rom name="b96-07.ic9" size="65536" crc="0713a387"/>
 		<rom name="b96-08.ic8" size="65536" crc="55b8e294"/>
@@ -131859,7 +131808,7 @@
 	<game name="plottinga" cloneof="plotting" romof="plotting" sourcefile="taito/d_taitol.cpp">
 		<description>Plotting (World set 2, protected)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="plot01.ic10" size="65536" crc="5b30bc25"/>
 		<rom name="b96-02.ic9" size="65536" crc="6e0bad2a"/>
 		<rom name="b96-03.ic8" size="65536" crc="fb5f3ca4"/>
@@ -131870,7 +131819,7 @@
 	<game name="plottingb" cloneof="plotting" romof="plotting" sourcefile="taito/d_taitol.cpp">
 		<description>Plotting (World set 3, earliest version)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b96-06.ic10" size="65536" crc="f89a54b1"/>
 		<rom name="b96-02.ic9" size="65536" crc="6e0bad2a"/>
 		<rom name="b96-03.ic8" size="65536" crc="fb5f3ca4"/>
@@ -138694,36 +138643,36 @@
 	<game name="puzznicj" cloneof="puzznic" romof="puzznic" sourcefile="taito/d_taitol.cpp">
 		<description>Puzznic (Japan)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito / Animation 20</manufacturer>
 		<rom name="c20-04.ic11" size="131072" crc="a4150b6c"/>
 		<rom name="c20-03.ic10" size="131072" crc="4264056c"/>
 		<rom name="c20-02.ic9" size="131072" crc="3c115f8b"/>
 		<rom name="c20-01.ic4" merge="c20-01.ic4" size="2048" crc="085f68b4"/>
-		<rom name="c20-05.ic3" size="324" crc="f90e5594"/>
+		<rom name="c20-05.ic3" merge="c20-05.ic3" size="324" crc="f90e5594"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="puzznicu" cloneof="puzznic" romof="puzznic" sourcefile="taito/d_taitol.cpp">
 		<description>Puzznic (US)</description>
 		<year>1989</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="c20-10.ic11" size="131072" crc="3522d2e5"/>
 		<rom name="c20-03.ic10" size="131072" crc="4264056c"/>
 		<rom name="c20-02.ic9" size="131072" crc="3c115f8b"/>
 		<rom name="c20-01.ic4" merge="c20-01.ic4" size="2048" crc="085f68b4"/>
-		<rom name="mmipal20l8.ic3" size="2048" status="nodump"/>
+		<rom name="c20-05.ic3" merge="c20-05.ic3" size="324" crc="f90e5594"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="puzznic" sourcefile="taito/d_taitol.cpp">
 		<description>Puzznic (World)</description>
 		<year>1989</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="c20-09.ic11" size="131072" crc="156d6de1"/>
 		<rom name="c20-07.ic10" size="65536" crc="be12749a"/>
 		<rom name="c20-06.ic9" size="65536" crc="ac85a9c5"/>
 		<rom name="c20-01.ic4" size="2048" crc="085f68b4"/>
-		<rom name="mmipal20l8.ic3" size="2048" status="nodump"/>
+		<rom name="c20-05.ic3" size="324" crc="f90e5594"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -143619,7 +143568,7 @@
 	<game name="raimaisjo" cloneof="raimais" romof="raimais" sourcefile="taito/d_taitol.cpp">
 		<description>Raimais (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b36_08.ic7" size="131072" crc="f40b9178"/>
 		<rom name="b36_09.ic13" merge="b36_09.ic13" size="131072" crc="9c466e43"/>
 		<rom name="b36_07.ic2" merge="b36_07.ic2" size="65536" crc="4f3737e6"/>
@@ -143635,7 +143584,7 @@
 	<game name="raimaisj" cloneof="raimais" romof="raimais" sourcefile="taito/d_taitol.cpp">
 		<description>Raimais (Japan, rev 1)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b36_08-1.ic7" size="131072" crc="6cc8f79f"/>
 		<rom name="b36_09.ic13" merge="b36_09.ic13" size="131072" crc="9c466e43"/>
 		<rom name="b36_07.ic2" merge="b36_07.ic2" size="65536" crc="4f3737e6"/>
@@ -143651,7 +143600,7 @@
 	<game name="raimais" sourcefile="taito/d_taitol.cpp">
 		<description>Raimais (World, rev 1)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b36_11-1.ic7" size="131072" crc="f19fb0d5"/>
 		<rom name="b36_09.ic13" size="131072" crc="9c466e43"/>
 		<rom name="b36_07.ic2" size="65536" crc="4f3737e6"/>

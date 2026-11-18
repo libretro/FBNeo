@@ -4503,6 +4503,7 @@ DRV		BurnSpecCheman;
 DRV		BurnDrvnes_cheman;
 DRV		BurnDrvsg1k_cheman;
 DRV		BurnDrvMSX_cheatwives;
+DRV		BurnDrvCheckmanf;
 DRV		BurnDrvCheckmanj;
 DRV		BurnDrvCheckman;
 DRV		BurnDrvastro_checkers;
@@ -13281,18 +13282,11 @@ DRV		BurnDrvgba_kill3dpu;
 DRV		BurnSpecKillerbees;
 DRV		BurnDrvsnes_Killinste;
 DRV		BurnDrvcv_kinstinct;
-DRV		BurnDrvKinstp47;
-DRV		BurnDrvKinst13;
-DRV		BurnDrvKinst14;
-DRV		BurnDrvKinst15ai;
-DRV		BurnDrvKinst;
 DRV		BurnDrvsnes_Killinst;
 DRV		BurnDrvsnes_Killinstee;
-DRV		BurnDrvKinst210;
-DRV		BurnDrvKinst211;
-DRV		BurnDrvKinst213;
-DRV		BurnDrvKinst214ai;
+DRV		BurnDrvKinst2uk;
 DRV		BurnDrvKinst2;
+DRV		BurnDrvKinst;
 DRV		BurnDrvMSX_killstation;
 DRV		BurnDrvMSX_killstationa;
 DRV		BurnSpecKsudoku;
@@ -16445,6 +16439,7 @@ DRV		BurnDrvnes_moneygame2;
 DRV		BurnDrvnes_moneygame;
 DRV		BurnDrvMonymony;
 DRV		BurnDrvMonymony2;
+DRV		BurnDrvMonymony3;
 DRV		BurnSpecMoneymouse1;
 DRV		BurnSpecMoneymouse2;
 DRV		BurnDrvMiexchng;
@@ -35017,6 +35012,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_cheman,			// Che-Man (HB)
 	&BurnDrvsg1k_cheman,		// Che-Man (HB)
 	&BurnDrvMSX_cheatwives,		// Cheating Wives (HB)
+	&BurnDrvCheckmanf,			// Check Man (Hack, Flyer version)
 	&BurnDrvCheckmanj,			// Check Man (Japan)
 	&BurnDrvCheckman,			// Check Man
 	&BurnDrvastro_checkers,		// Checkers (Prototype)
@@ -36133,7 +36129,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_cubix,			// Cubix - Robots for Everyone - Clash 'N Bash (USA)
 	&BurnDrva26_cubomagi,		// Cubo Magico (USA)
 	&BurnSpecCubulus,			// Cubulus (48K) (HB)
-	&BurnDrvCubybop,			// Cuby Bop (location test)
+	&BurnDrvCubybop,			// Cuby Bop (Japan, location test)
 	&BurnSpecCueboy,			// Cue Boy (128K)
 	&BurnDrvCuebrckj,			// Cue Brick (Japan)
 	&BurnDrvCuebrick,			// Cue Brick (World, version D)
@@ -43795,18 +43791,11 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecKillerbees,		// Killer Bees (48K) (HB)
 	&BurnDrvsnes_Killinste,		// Killer Instinct (Euro)
 	&BurnDrvcv_kinstinct,		// Killer Instinct (HB, Demo)
-	&BurnDrvKinstp47,			// Killer Instinct (ROM proto ver. 4.7)
-	&BurnDrvKinst13,			// Killer Instinct (ROM ver. 1.3)
-	&BurnDrvKinst14,			// Killer Instinct (ROM ver. 1.4)
-	&BurnDrvKinst15ai,			// Killer Instinct (ROM ver. 1.5 AnyIDE)
-	&BurnDrvKinst,				// Killer Instinct (ROM ver. 1.5d)
 	&BurnDrvsnes_Killinst,		// Killer Instinct (USA, Rev. 1)
 	&BurnDrvsnes_Killinstee,	// Killer Instinct - Eyedol Edition (Hack)
-	&BurnDrvKinst210,			// Killer Instinct II (ROM ver. 1.0)
-	&BurnDrvKinst211,			// Killer Instinct II (ROM ver. 1.1)
-	&BurnDrvKinst213,			// Killer Instinct II (ROM ver. 1.3)
-	&BurnDrvKinst214ai,			// Killer Instinct II (ROM ver. 1.4 AnyIDE)
-	&BurnDrvKinst2,				// Killer Instinct II (ROM ver. 1.4)
+	&BurnDrvKinst2uk,			// Killer Instinct 2 (upgrade kit)
+	&BurnDrvKinst2,				// Killer Instinct 2
+	&BurnDrvKinst,				// Killer Instinct
 	&BurnDrvMSX_killstation,	// Killer Station (Japan)
 	&BurnDrvMSX_killstationa,	// Killer Station (Japan, Alt)
 	&BurnSpecKsudoku,			// Killer Sudoku (48K) (HB)
@@ -46959,6 +46948,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_moneygame,		// Money Game, The (Japan)
 	&BurnDrvMonymony,			// Money Money (set 1)
 	&BurnDrvMonymony2,			// Money Money (set 2)
+	&BurnDrvMonymony3,			// Money Money (set 3)
 	&BurnSpecMoneymouse1,		// Money Mouse in Full Barn House - Ep. 1 (48K) (HB)
 	&BurnSpecMoneymouse2,		// Money Mouse in Full Barn House - Ep. 2 (48K) (HB)
 	&BurnDrvMiexchng,			// Money Puzzle Exchanger / Money Idol Exchanger
@@ -65503,6 +65493,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_cheman", "nes/d_nes.cpp"},
 	{ "sg1k_cheman", "sg1000/d_sg1000.cpp"},
 	{ "msx_cheatwives", "msx/d_msx.cpp"},
+	{ "checkmanf", "galaxian/d_galaxian.cpp"},
 	{ "checkmanj", "galaxian/d_galaxian.cpp"},
 	{ "checkman", "galaxian/d_galaxian.cpp"},
 	{ "astro_checkers", "pre90s/d_astrocde.cpp"},
@@ -74237,18 +74228,11 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_killerbees", "spectrum/d_spectrum.cpp"},
 	{ "snes_killinste", "snes/d_snes.cpp"},
 	{ "cv_kinstinct", "coleco/d_coleco.cpp"},
-	{ "kinstp47", "midway/d_kinst.cpp"},
-	{ "kinst13", "midway/d_kinst.cpp"},
-	{ "kinst14", "midway/d_kinst.cpp"},
-	{ "kinst15ai", "midway/d_kinst.cpp"},
-	{ "kinst", "midway/d_kinst.cpp"},
 	{ "snes_killinst", "snes/d_snes.cpp"},
 	{ "snes_killinstee", "snes/d_snes.cpp"},
-	{ "kinst210", "midway/d_kinst.cpp"},
-	{ "kinst211", "midway/d_kinst.cpp"},
-	{ "kinst213", "midway/d_kinst.cpp"},
-	{ "kinst214ai", "midway/d_kinst.cpp"},
+	{ "kinst2uk", "midway/d_kinst.cpp"},
 	{ "kinst2", "midway/d_kinst.cpp"},
+	{ "kinst", "midway/d_kinst.cpp"},
 	{ "msx_killstation", "msx/d_msx.cpp"},
 	{ "msx_killstationa", "msx/d_msx.cpp"},
 	{ "spec_ksudoku", "spectrum/d_spectrum.cpp"},
@@ -77385,6 +77369,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_moneygame", "nes/d_nes.cpp"},
 	{ "monymony", "pre90s/d_zaccaria.cpp"},
 	{ "monymony2", "pre90s/d_zaccaria.cpp"},
+	{ "monymony3", "pre90s/d_zaccaria.cpp"},
 	{ "spec_moneymouse1", "spectrum/d_spectrum.cpp"},
 	{ "spec_moneymouse2", "spectrum/d_spectrum.cpp"},
 	{ "miexchng", "neogeo/d_neogeo.cpp"},
