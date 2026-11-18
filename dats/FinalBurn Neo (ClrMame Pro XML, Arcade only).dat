@@ -9555,6 +9555,79 @@
 		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="armorap" cloneof="armora" romof="armora" sampleof="armora" sourcefile="pre90s/d_cinemat.cpp">
+		<comment>Prototype</comment>
+		<description>Armor Attack (prototype)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="ar414le.t6" merge="ar414le.t6" size="4096" crc="d7e71f84"/>
+		<rom name="ar414lo.p6" merge="ar414lo.p6" size="4096" crc="df1c2370"/>
+		<rom name="armorp.u7" size="4096" crc="4a86bd8a"/>
+		<rom name="armorp.r7" size="4096" crc="d2dd4eae"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="loexp" />
+		<sample name="jeepfire" />
+		<sample name="hiexp" />
+		<sample name="tankfire" />
+		<sample name="tankeng" />
+		<sample name="beep" />
+		<sample name="chopper" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="armorar" cloneof="armora" romof="armora" sampleof="armora" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Armor Attack (Rock-Ola)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics (Rock-Ola license)</manufacturer>
+		<rom name="armorr.t7" size="2048" crc="256d1ed9"/>
+		<rom name="armorr.p7" size="2048" crc="bf75c158"/>
+		<rom name="armorr.u7" size="2048" crc="ba68331d"/>
+		<rom name="armorr.r7" size="2048" crc="fa14c0b3"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="loexp" />
+		<sample name="jeepfire" />
+		<sample name="hiexp" />
+		<sample name="tankfire" />
+		<sample name="tankeng" />
+		<sample name="beep" />
+		<sample name="chopper" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="armora" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Armor Attack</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="ar414le.t6" size="4096" crc="d7e71f84"/>
+		<rom name="ar414lo.p6" size="4096" crc="df1c2370"/>
+		<rom name="ar414ue.u6" size="4096" crc="b0276118"/>
+		<rom name="ar414uo.r6" size="4096" crc="229d779f"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="loexp" />
+		<sample name="jeepfire" />
+		<sample name="hiexp" />
+		<sample name="tankfire" />
+		<sample name="tankeng" />
+		<sample name="beep" />
+		<sample name="chopper" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="armorcar" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Armored Car (set 1)</description>
 		<year>1981</year>
@@ -13721,6 +13794,24 @@
 		<rom name="82s126.1m" merge="pm1-3.1m" size="256" crc="a9cc86bf"/>
 		<rom name="82s126.3m" merge="pm1-2.3m" size="256" crc="77245b66"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="barrier" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Barrier</description>
+		<year>1979</year>
+		<manufacturer>Cinematronics (Vectorbeam license)</manufacturer>
+		<rom name="barrier.t7" size="2048" crc="7c3d68c8"/>
+		<rom name="barrier.p7" size="2048" crc="aec142b5"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="playrdie" />
+		<sample name="playmove" />
+		<sample name="enemmove" />
+		<video type="vector" orientation="vertical" width="768" height="1024" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="baryon" sourcefile="pst90s/d_dreamwld.cpp">
@@ -21011,6 +21102,39 @@
 		<video type="raster" orientation="vertical" width="240" height="360" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="boxingb" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Boxing Bugs</description>
+		<year>1981</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="u1a" size="4096" crc="d3115b0f"/>
+		<rom name="u1b" size="4096" crc="3a44268d"/>
+		<rom name="u2a" size="4096" crc="c97a9cbb"/>
+		<rom name="u2b" size="4096" crc="98d34ff5"/>
+		<rom name="u3a" size="4096" crc="5bb3269b"/>
+		<rom name="u3b" size="4096" crc="85bf83ad"/>
+		<rom name="u4a" size="4096" crc="25b51799"/>
+		<rom name="u4b" size="4096" crc="7f41de6a"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="softexpl" />
+		<sample name="loudexpl" />
+		<sample name="chirp" />
+		<sample name="eggcrack" />
+		<sample name="bugpusha" />
+		<sample name="bugpushb" />
+		<sample name="bugdie" />
+		<sample name="beetle" />
+		<sample name="music" />
+		<sample name="cannon" />
+		<sample name="bounce" />
+		<sample name="bell" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="boxyboya" cloneof="boxyboy" romof="boxyboy" sourcefile="pre90s/d_namcos1.cpp">
 		<description>Boxy Boy (SB?)</description>
 		<year>1990</year>
@@ -22347,6 +22471,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="bubbletrj" cloneof="bubbletr" romof="bubbletr" sourcefile="pst90s/d_namcos2.cpp">
+		<comment>Requires artwork</comment>
 		<description>Bubble Trouble - Golly! Ghost! 2 (Japan, Rev C)</description>
 		<year>1992</year>
 		<manufacturer>Namco</manufacturer>
@@ -22369,9 +22494,10 @@
 		<rom name="bt1-voi1.3m" merge="bt1-voi1.3m" size="524288" crc="08b3a089"/>
 		<rom name="bubbletr.nv" merge="bubbletr.nv" size="8192" crc="75ace624"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="preliminary"/>
+		<driver status="good"/>
 	</game>
 	<game name="bubbletr" sourcefile="pst90s/d_namcos2.cpp">
+		<comment>Requires artwork</comment>
 		<description>Bubble Trouble - Golly! Ghost! 2 (World, Rev B)</description>
 		<year>1992</year>
 		<manufacturer>Namco</manufacturer>
@@ -22394,7 +22520,7 @@
 		<rom name="bt1-voi1.3m" size="524288" crc="08b3a089"/>
 		<rom name="bubbletr.nv" size="8192" crc="75ace624"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="preliminary"/>
+		<driver status="good"/>
 	</game>
 	<game name="bubblesp" cloneof="bubbles" romof="bubbles" sourcefile="pre90s/d_williams.cpp">
 		<comment>Prototype</comment>
@@ -40192,6 +40318,24 @@
 		<rom name="prom12.bpr" merge="prom12.bpr" size="32" crc="bc88cced"/>
 		<rom name="prom13.bpr" merge="prom13.bpr" size="32" crc="a1e17492"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="demon" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Demon</description>
+		<year>1982</year>
+		<manufacturer>Rock-Ola</manufacturer>
+		<rom name="demon.7t" size="4096" crc="866596c1"/>
+		<rom name="demon.7p" size="4096" crc="1109e2f1"/>
+		<rom name="demon.7u" size="4096" crc="d447a3c3"/>
+		<rom name="demon.7r" size="4096" crc="64b515f0"/>
+		<rom name="demon.snd" size="4096" crc="1e2cc262"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="demndrgn" sourcefile="pre90s/d_astrocde.cpp">
@@ -57992,6 +58136,41 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="fixfelix" sourcefile="pre90s/d_1942.cpp">
+		<comment>Homebrew</comment>
+		<description>Fix-It Felix Jr. (homebrew, 1942 hardware)</description>
+		<year>2026</year>
+		<manufacturer>homebrew</manufacturer>
+		<rom name="sra-03.m3" size="16384" crc="dd8674bc"/>
+		<rom name="sr-04.m4" size="16384" crc="5132aa07"/>
+		<rom name="sr-05.m5" size="16384" crc="577c67b7"/>
+		<rom name="sr-06.m6" size="8192" crc="821c6481"/>
+		<rom name="sr-07.m7" size="16384" crc="5df525e1"/>
+		<rom name="sr-01.c11" size="16384" crc="c5bc3c50"/>
+		<rom name="sr-02.f2" size="8192" crc="4ad5d2da"/>
+		<rom name="sr-08.a1" size="8192" crc="b680a87e"/>
+		<rom name="sr-09.a2" size="8192" crc="7012777b"/>
+		<rom name="sr-10.a3" size="8192" crc="6f66de6f"/>
+		<rom name="sr-11.a4" size="8192" crc="82a48938"/>
+		<rom name="sr-12.a5" size="8192" crc="47b9c9bc"/>
+		<rom name="sr-13.a6" size="8192" crc="334ffec6"/>
+		<rom name="sr-14.l1" size="16384" crc="f6eafcf0"/>
+		<rom name="sr-15.l2" size="16384" crc="da769a27"/>
+		<rom name="sr-16.n1" size="16384" crc="102856b3"/>
+		<rom name="sr-17.n2" size="16384" crc="e9944bee"/>
+		<rom name="sb-5.e8" size="256" crc="353aa3a5"/>
+		<rom name="sb-6.e9" size="256" crc="1eeca407"/>
+		<rom name="sb-7.e10" size="256" crc="2ea68c66"/>
+		<rom name="sb-0.f1" size="256" crc="a7221b0c"/>
+		<rom name="sb-4.d6" size="256" crc="16c50185"/>
+		<rom name="sb-8.k3" size="256" crc="17301db2"/>
+		<rom name="sb-2.d1" size="256" crc="8bb8b3df"/>
+		<rom name="sb-3.d2" size="256" crc="3b0c99af"/>
+		<rom name="sb-1.k6" size="256" crc="712ac508"/>
+		<rom name="sb-9.m11" size="256" crc="4921635c"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="fixeight" sourcefile="toaplan/d_fixeight.cpp">
 		<description>FixEight (Europe)</description>
 		<year>1992</year>
@@ -69474,6 +69653,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gollygho" sourcefile="pst90s/d_namcos2.cpp">
+		<comment>Requires artwork</comment>
 		<description>Golly! Ghost!</description>
 		<year>1990</year>
 		<manufacturer>Namco</manufacturer>
@@ -69496,7 +69676,7 @@
 		<rom name="gl1voi1.3m" size="524288" crc="0eca0efb"/>
 		<rom name="gollygho.nv" size="8192" crc="b7e67b9d"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
-		<driver status="preliminary"/>
+		<driver status="good"/>
 	</game>
 	<game name="imsorryj" cloneof="imsorry" romof="imsorry" sourcefile="sega/d_sys1.cpp">
 		<description>Gonbee no I'm Sorry (315-5110, Japan)</description>
@@ -138675,6 +138855,26 @@
 		<video type="raster" orientation="vertical" width="240" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="qb3" sourcefile="pre90s/d_cinemat.cpp">
+		<comment>Prototype, Imperfect graphics</comment>
+		<description>QB-3 (prototype)</description>
+		<year>1982</year>
+		<manufacturer>Rock-Ola</manufacturer>
+		<rom name="qb3_le_t7.bin" size="8192" crc="adaaee4c"/>
+		<rom name="qb3_lo_p7.bin" size="8192" crc="72f6199f"/>
+		<rom name="qb3_ue_u7.bin" size="8192" crc="050a996d"/>
+		<rom name="qb3_uo_r7.bin" size="8192" crc="33fa77a2"/>
+		<rom name="qb3_snd_u12.bin" size="4096" crc="f86663de"/>
+		<rom name="qb3_snd_u11.bin" size="4096" crc="32ed58fc"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="qix" sourcefile="taito/d_qix.cpp">
 		<description>Qix (Rev 2)</description>
 		<year>1981</year>
@@ -147245,6 +147445,36 @@
 		<sample name="chute" />
 		<sample name="whistle" />
 		<video type="raster" orientation="horizontal" width="248" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ripoff" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Rip Off</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="ripoff.t7" size="2048" crc="40c2c5b8"/>
+		<rom name="ripoff.p7" size="2048" crc="a9208afb"/>
+		<rom name="ripoff.u7" size="2048" crc="29c13701"/>
+		<rom name="ripoff.r7" size="2048" crc="150bd4c8"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="bonuslvl" />
+		<sample name="eattack" />
+		<sample name="shipfire" />
+		<sample name="efire" />
+		<sample name="explosn" />
+		<sample name="bg1" />
+		<sample name="bg2" />
+		<sample name="bg3" />
+		<sample name="bg4" />
+		<sample name="bg5" />
+		<sample name="bg6" />
+		<sample name="bg7" />
+		<sample name="bg8" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="riskchal" sourcefile="irem/d_m90.cpp">
@@ -160926,6 +161156,34 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="skyfire" cloneof="tailg" romof="tailg" sampleof="tailg" sourcefile="pre90s/d_cinemat.cpp">
+		<comment>Bootleg</comment>
+		<description>Sky Fire</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Microhard)</manufacturer>
+		<rom name="rom3-x1-2.3t" size="1024" crc="211182e2"/>
+		<rom name="x9-1.3t" size="1024" crc="99bd1c6b"/>
+		<rom name="rom4-y1-2.4t" size="1024" crc="e915fae5"/>
+		<rom name="y9-1.4t" size="1024" crc="e22adbd2"/>
+		<rom name="rom1-v1-2.1t" size="1024" crc="9850ba5e"/>
+		<rom name="v9-1.1t" size="1024" crc="51509bc6"/>
+		<rom name="rom2-w1-2.2t" size="1024" crc="85bd4353"/>
+		<rom name="w9-1.2t" size="1024" crc="b5f45d46"/>
+		<rom name="f14" size="256" crc="025996b1"/>
+		<rom name="e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="sexplode" />
+		<sample name="thrust1" />
+		<sample name="slaser" />
+		<sample name="shield" />
+		<sample name="bounce" />
+		<sample name="hypersp" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="skyfox" sourcefile="pre90s/d_skyfox.cpp">
 		<description>Sky Fox</description>
 		<year>1987</year>
@@ -162915,6 +163173,31 @@
 		<video type="raster" orientation="vertical" width="480" height="512" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="solarq" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Solar Quest (rev 10 8 81)</description>
+		<year>1981</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="sq-2_le.6t" size="4096" crc="1f3c5333"/>
+		<rom name="sq-2_lo.6p" size="4096" crc="d6c16bcc"/>
+		<rom name="sq-2_ue.6u" size="4096" crc="a5970e5c"/>
+		<rom name="sq-2_uo.6r" size="4096" crc="b763fff2"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="bigexpl" />
+		<sample name="smexpl" />
+		<sample name="lthrust" />
+		<sample name="slaser" />
+		<sample name="pickup" />
+		<sample name="nuke2" />
+		<sample name="nuke1" />
+		<sample name="music" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="solrwarr" cloneof="xsleena" romof="xsleena" sourcefile="pre90s/d_xain.cpp">
 		<description>Solar-Warrior (US)</description>
 		<year>1986</year>
@@ -164057,6 +164340,31 @@
 		<video type="raster" orientation="vertical" width="224" height="512" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="spaceftr" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Space Fortress (Zaccaria)</description>
+		<year>1981</year>
+		<manufacturer>Cinematronics (Zaccaria license)</manufacturer>
+		<rom name="fortrest7.7t" size="2048" crc="65d0a225"/>
+		<rom name="fortresp7.7p" size="2048" crc="d8f58d9a"/>
+		<rom name="fortresu7.7u" size="2048" crc="13b0287c"/>
+		<rom name="fortresr7.7r" size="2048" crc="a2c1ed52"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom6331-1j.e8" size="32" crc="8c85e786"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="spacfurya" cloneof="spacfury" romof="spacfury" sampleof="spacfury" sourcefile="sega/d_segag80v.cpp">
 		<description>Space Fury (revision A)</description>
 		<year>1981</year>
@@ -164960,6 +165268,35 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="spaceshp" cloneof="spacewar" romof="spacewar" sampleof="spacewar" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Space Ship</description>
+		<year>1978</year>
+		<manufacturer>Cinematronics (Sega license)</manufacturer>
+		<rom name="pr08.61" size="1024" crc="556c4ff4"/>
+		<rom name="pr07.63" size="1024" crc="ba7747d1"/>
+		<rom name="pr04.83" size="1024" crc="19966799"/>
+		<rom name="pr03.85" size="1024" crc="d6557503"/>
+		<rom name="pr10.62" size="1024" crc="3ee163f9"/>
+		<rom name="pr09.64" size="1024" crc="7946086c"/>
+		<rom name="pr06.84" size="1024" crc="f19c8eb0"/>
+		<rom name="pr05.86" size="1024" crc="3dbc6360"/>
+		<rom name="pr13.139" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="pr17.138" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="pr18.137" size="32" crc="98b7bd46"/>
+		<rom name="pr19.136" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="pr21.143" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="pr20.72" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="explode1" />
+		<sample name="fire1" />
+		<sample name="idle" />
+		<sample name="thrust1" />
+		<sample name="thrust2" />
+		<sample name="pop" />
+		<sample name="explode2" />
+		<sample name="fire2" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sstrangr2" cloneof="sstrangr" romof="sstrangr" sampleof="invaders" sourcefile="pre90s/d_sstrangr.cpp">
 		<description>Space Stranger 2</description>
 		<year>1979</year>
@@ -165046,6 +165383,29 @@
 		<rom name="10.bin" merge="c1.5h" size="2048" crc="11fd2887"/>
 		<rom name="c01s.6e" merge="c01s.6e" size="32" crc="4e3caeab"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spacewar" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Space Wars</description>
+		<year>1977</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="spacewar.1l" size="2048" crc="edf0fd53"/>
+		<rom name="spacewar.2r" size="2048" crc="4f21328b"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="explode1" />
+		<sample name="fire1" />
+		<sample name="idle" />
+		<sample name="thrust1" />
+		<sample name="thrust2" />
+		<sample name="pop" />
+		<sample name="explode2" />
+		<sample name="fire2" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="spacezap" sourcefile="pre90s/d_astrocde.cpp">
@@ -165595,6 +165955,25 @@
 		<rom name="spdcoin.5h" size="2048" crc="ab1fe81b"/>
 		<rom name="spdcoin.clr" size="32" crc="1a2ccc56"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="speedfrk" sourcefile="pre90s/d_cinemat.cpp">
+		<comment>Engine sound not emulated</comment>
+		<description>Speed Freak</description>
+		<year>1979</year>
+		<manufacturer>Vectorbeam</manufacturer>
+		<rom name="speedfrk.t7" size="2048" crc="3552c03f"/>
+		<rom name="speedfrk.p7" size="2048" crc="4b90cdec"/>
+		<rom name="speedfrk.u7" size="2048" crc="616c7cf9"/>
+		<rom name="speedfrk.r7" size="2048" crc="fbe90d63"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="offroad" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="speedspn" sourcefile="pst90s/d_speedspn.cpp">
@@ -167158,6 +167537,132 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="starcasc" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Star Castle (cocktail)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="ctsc926_ue_3265.t7" size="2048" crc="c140a1bb"/>
+		<rom name="ctsc926_le_deac.p7" size="2048" crc="8a074f6c"/>
+		<rom name="ctsc926_u0_48e7.u7" size="2048" crc="ed136f11"/>
+		<rom name="ctsc926_l0_f707.r7" size="2048" crc="1930b1fb"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starcase" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Star Castle (Mottoeis)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics (Mottoeis license)</manufacturer>
+		<rom name="starcast.t7" size="2048" crc="65d0a225"/>
+		<rom name="starcast.p7" size="2048" crc="d8f58d9a"/>
+		<rom name="starcast.u7" size="2048" crc="d4f35b82"/>
+		<rom name="mottoeis.r7" size="2048" crc="a2c1ed52"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starcas1" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Star Castle (older)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="starcast.t7" size="2048" crc="65d0a225"/>
+		<rom name="starcast.p7" size="2048" crc="d8f58d9a"/>
+		<rom name="starcast.u7" size="2048" crc="d4f35b82"/>
+		<rom name="starcast.r7" size="2048" crc="9fd3de54"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starcasp" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<comment>Prototype</comment>
+		<description>Star Castle (prototype)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="starcasp.t7" size="2048" crc="d2c551a2"/>
+		<rom name="starcasp.p7" size="2048" crc="baa4e422"/>
+		<rom name="starcasp.u7" size="2048" crc="26941991"/>
+		<rom name="starcasp.r7" size="2048" crc="5dd151e5"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Star Castle (version 3)</description>
+		<year>1980</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="starcas3.t7" size="2048" crc="b5838b5d"/>
+		<rom name="starcas3.p7" size="2048" crc="f6bc2f4d"/>
+		<rom name="starcas3.u7" size="2048" crc="188cd97c"/>
+		<rom name="starcas3.r7" size="2048" crc="c367b69d"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="starfigh" sourcefile="pre90s/d_suna8.cpp">
 		<description>Star Fighter (v1)</description>
 		<year>1990</year>
@@ -167630,6 +168135,27 @@
 		<video type="raster" orientation="horizontal" width="292" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="starhawk" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Starhawk</description>
+		<year>1979</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="u7" size="2048" crc="376e6c5c"/>
+		<rom name="r7" size="2048" crc="bb71144f"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="explode" />
+		<sample name="rlaser" />
+		<sample name="llaser" />
+		<sample name="k" />
+		<sample name="master" />
+		<sample name="kexit" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="stealsee" sourcefile="pst90s/d_eolith.cpp">
 		<description>Steal See</description>
 		<year>2000</year>
@@ -167805,6 +168331,32 @@
 		<rom name="sns_voi2.bin" size="524288" crc="562ec86b"/>
 		<rom name="sgunner2.nv" size="8192" crc="57a521c6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="stellcas" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
+		<comment>Bootleg</comment>
+		<description>Stellar Castle (Elettronolo)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Elettronolo)</manufacturer>
+		<rom name="starcast.t7" size="2048" crc="65d0a225"/>
+		<rom name="starcast.p7" size="2048" crc="d8f58d9a"/>
+		<rom name="elttron.u7" size="2048" crc="d5b44050"/>
+		<rom name="elttron.r7" size="2048" crc="6f1f261e"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="stera" cloneof="mooncrst" romof="mooncrst" sourcefile="galaxian/d_galaxian.cpp">
@@ -176259,12 +176811,12 @@
 		<description>Street Fighter Zero 2 Dash (Asia, PS2 Backport RC9)</description>
 		<year>2026</year>
 		<manufacturer>bootleg</manufacturer>
-		<rom name="sz2dsa.03a" size="524288" crc="fb6d1338"/>
-		<rom name="sz2dsa.04a" size="524288" crc="2d077581"/>
+		<rom name="sz2dsa.03" size="524288" crc="fb6d1338"/>
+		<rom name="sz2dsa.04" size="524288" crc="2d077581"/>
 		<rom name="sz2ds.05" size="524288" crc="b1c15635"/>
 		<rom name="szaa.06" merge="szaa.06" size="524288" crc="cfc0e7a8"/>
-		<rom name="sz2dsa.07a" size="524288" crc="74b0a2d0"/>
-		<rom name="sz2dsa.08a" size="524288" crc="531ceaf5"/>
+		<rom name="sz2dsa.07" size="524288" crc="74b0a2d0"/>
+		<rom name="sz2dsa.08" size="524288" crc="531ceaf5"/>
 		<rom name="sz2dsa.13m" size="4194304" crc="e35cbaae"/>
 		<rom name="sz2dsa.15m" size="4194304" crc="045e1960"/>
 		<rom name="sz2dsa.17m" size="4194304" crc="42e56efc"/>
@@ -178139,6 +178691,29 @@
 		<rom name="gfx1.bin" size="524288" crc="0bde5acf"/>
 		<rom name="gfx2.bin" size="524288" crc="24b74826"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="sundance" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Sundance</description>
+		<year>1979</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="sundance.t7" size="2048" crc="d5b9cb19"/>
+		<rom name="sundance.p7" size="2048" crc="445c4f20"/>
+		<rom name="sundance.u7" size="2048" crc="67887d48"/>
+		<rom name="sundance.r7" size="2048" crc="10b77ebd"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="bong" />
+		<sample name="whoosh" />
+		<sample name="explsion" />
+		<sample name="ping1" />
+		<sample name="ping2" />
+		<sample name="hatch" />
+		<video type="vector" orientation="vertical" width="768" height="1024" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="ssridersabd" cloneof="ssriders" romof="ssriders" sourcefile="konami/d_tmnt.cpp">
@@ -183068,15 +183643,15 @@
 		<rom name="sfxucj.06b" size="524288" crc="560d1a51"/>
 		<rom name="sfxucj.07a" size="524288" crc="4f9cb066"/>
 		<rom name="sfxuc.08" size="524288" crc="f7587a54"/>
-		<rom name="sfxuc.09" size="524288" crc="ecd3b4a1"/>
+		<rom name="sfxucj.09" size="524288" crc="ecd3b4a1"/>
 		<rom name="sfxucj.13m" size="2097152" crc="9a2b7423"/>
 		<rom name="sfxucj.15m" size="2097152" crc="1cfd6f84"/>
 		<rom name="sfxucj.17m" size="2097152" crc="07318764"/>
 		<rom name="sfxucj.19m" size="2097152" crc="79f38484"/>
-		<rom name="sfxuc.14m" size="1048576" crc="6a797908"/>
-		<rom name="sfxuc.16m" size="1048576" crc="add79bab"/>
-		<rom name="sfxuc.18m" size="1048576" crc="917471fe"/>
-		<rom name="sfxuc.20m" size="1048576" crc="55eb92b4"/>
+		<rom name="sfxucj.14m" size="1048576" crc="6a797908"/>
+		<rom name="sfxucj.16m" size="1048576" crc="add79bab"/>
+		<rom name="sfxucj.18m" size="1048576" crc="917471fe"/>
+		<rom name="sfxucj.20m" size="1048576" crc="55eb92b4"/>
 		<rom name="sfxuc.21m" size="1048576" crc="607d1bfd"/>
 		<rom name="sfxuc.23m" size="1048576" crc="84905f31"/>
 		<rom name="sfxuc.25m" size="1048576" crc="e88e200d"/>
@@ -186125,6 +186700,29 @@
 		<rom name="osb.ic127" merge="osb.ic127" size="131072" crc="d49ab2f5"/>
 		<rom name="ym2608_adpcm_rom.bin" merge="ym2608_adpcm_rom.bin" size="8192" crc="23c9e0d8"/>
 		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="tailg" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Tailgunner</description>
+		<year>1979</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="tgunner.t70" size="2048" crc="21ec9a04"/>
+		<rom name="tgunner.p70" size="2048" crc="8d7410b3"/>
+		<rom name="tgunner.t71" size="2048" crc="2c954ab6"/>
+		<rom name="tgunner.p71" size="2048" crc="8e2c8494"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="sexplode" />
+		<sample name="thrust1" />
+		<sample name="slaser" />
+		<sample name="shield" />
+		<sample name="bounce" />
+		<sample name="hypersp" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="hotgmck" sourcefile="psikyo/d_psikyo4.cpp">
@@ -221245,6 +221843,56 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="wotwc" cloneof="wotw" romof="wotw" sampleof="wotw" sourcefile="pre90s/d_cinemat.cpp">
+		<description>War of the Worlds (color)</description>
+		<year>1981</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="wow_le.t7" merge="wow_le.t7" size="4096" crc="b16440f9"/>
+		<rom name="wow_lo.p7" merge="wow_lo.p7" size="4096" crc="bfdf4a5a"/>
+		<rom name="wow_ue.u7" merge="wow_ue.u7" size="4096" crc="9b5cea48"/>
+		<rom name="wow_uo.r7" merge="wow_uo.r7" size="4096" crc="c9d3c866"/>
+		<rom name="prom.f14" merge="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" merge="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" merge="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" merge="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" merge="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" merge="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wotw" sourcefile="pre90s/d_cinemat.cpp">
+		<description>War of the Worlds</description>
+		<year>1981</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="wow_le.t7" size="4096" crc="b16440f9"/>
+		<rom name="wow_lo.p7" size="4096" crc="bfdf4a5a"/>
+		<rom name="wow_ue.u7" size="4096" crc="9b5cea48"/>
+		<rom name="wow_uo.r7" size="4096" crc="c9d3c866"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="cfire" />
+		<sample name="shield" />
+		<sample name="star" />
+		<sample name="thrust" />
+		<sample name="drone" />
+		<sample name="lexplode" />
+		<sample name="sexplode" />
+		<sample name="pfire" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="wardner" sourcefile="toaplan/d_wardner.cpp">
 		<description>Wardner (World)</description>
 		<year>1987</year>
@@ -221674,6 +222322,28 @@
 		<rom name="d9k1.9k" size="279" crc="6c35c805"/>
 		<rom name="d10f1.10f" size="279" crc="6619c494"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="warrior" sourcefile="pre90s/d_cinemat.cpp">
+		<description>Warrior</description>
+		<year>1979</year>
+		<manufacturer>Vectorbeam</manufacturer>
+		<rom name="warrior.t7" size="2048" crc="ac3646f9"/>
+		<rom name="warrior.p7" size="2048" crc="517d3021"/>
+		<rom name="warrior.u7" size="2048" crc="2e39340f"/>
+		<rom name="warrior.r7" size="2048" crc="8e91b502"/>
+		<rom name="prom.f14" size="256" crc="9edbf536"/>
+		<rom name="prom.e14" size="32" crc="29dbfb87"/>
+		<rom name="prom.d14" size="32" crc="9a05afbf"/>
+		<rom name="prom.c14" size="32" crc="07492cda"/>
+		<rom name="prom.j14" size="32" crc="a481ca71"/>
+		<rom name="prom.e8" size="32" crc="791ec9e1"/>
+		<sample name="bgmhum1" />
+		<sample name="bgmhum2" />
+		<sample name="killed" />
+		<sample name="fall" />
+		<sample name="appear" />
+		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="warzardr1" cloneof="redearth" romof="redearth" sourcefile="cps3/d_cps3.cpp">

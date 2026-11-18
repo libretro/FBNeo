@@ -151,6 +151,7 @@ TCHAR szAppRomdatasPath[MAX_PATH];
 TCHAR szAppPathDefPath[MAX_PATH];
 TCHAR szAppSnesMsu1Path[MAX_PATH];
 TCHAR szAppOstPath[MAX_PATH];
+TCHAR szAppArtworkPath[MAX_PATH];
 TCHAR szAppBurnVer[16];
 
 static char szRomsetPath[MAX_PATH]        = { 0 };
@@ -2166,6 +2167,9 @@ static bool retro_load_game_common()
 
 	// Initialize OST path
 	snprintf_nowarn (szAppOstPath, sizeof(szAppOstPath), "%s%cfbneo%cost%c", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C());
+
+	// Initialize artwork path
+	snprintf_nowarn (szAppArtworkPath, sizeof(szAppArtworkPath), "%s%cfbneo%cartwork%c", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C());
 
 	// Initialize Cheats path
 	snprintf_nowarn (szAppCheatsPath, sizeof(szAppCheatsPath), "%s%cfbneo%ccheats%c", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C());
