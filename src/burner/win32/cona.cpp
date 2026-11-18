@@ -421,10 +421,15 @@ int ConfigAppLoad()
 		VAR(nSelDlgWidth);
 		VAR(nSelDlgHeight);
 		VARI64(nLoadMenuShowX);
-		VARI64(nLoadMenuHwPreset[0]);
-		VARI64(nLoadMenuHwPreset[1]);
-		STR(szLoadMenuHwPresetName[0]);
-		STR(szLoadMenuHwPresetName[1]);
+		VARI64(nLoadMenuHwButton[0]);
+		VARI64(nLoadMenuHwButton[1]);
+		VARI64(nLoadMenuHwButton[2]);
+		VARI64(nLoadMenuHwButton[3]);
+		STR(szLoadMenuHwButtonName[0]);
+		STR(szLoadMenuHwButtonName[1]);
+		STR(szLoadMenuHwButtonName[2]);
+		STR(szLoadMenuHwButtonName[3]);
+		VAR(nLoadMenuHwActiveBtn);
 		VAR(nLoadMenuShowY);
 		VAR(nLoadMenuExpand);
 		VAR(nLoadMenuBoardTypeFilter);
@@ -462,6 +467,7 @@ int ConfigAppLoad()
 		STR(szAppCheatsPath);
 		STR(szAppHiscorePath);
 		STR(szAppSamplesPath);
+		STR(szAppArtworkPath);
 		STR(szAppHDDPath);
 		STR(szAppIpsPath);
 		STR(szAppRomdataPath);
@@ -496,6 +502,10 @@ int ConfigAppLoad()
 
 		VAR(EnableHiscores);
 		VAR(bBurnUseBlend);
+		VAR(bBurnArtworkEnable);
+		VAR(nBurnArtworkView);
+		VAR(nBurnArtworkMaxHeight);
+		VAR(nBurnArtworkScale);
 		VAR(BurnShiftEnabled);
 		VAR(bBurnGunDrawReticles);
 		VAR(bBurnGunPositionalMode);
@@ -903,10 +913,15 @@ int ConfigAppSave()
 
 	_ftprintf(h, _T("\n// Load game dialog options\n"));
 	VARI64(nLoadMenuShowX);
-	VARI64(nLoadMenuHwPreset[0]);
-	VARI64(nLoadMenuHwPreset[1]);
-	STR(szLoadMenuHwPresetName[0]);
-	STR(szLoadMenuHwPresetName[1]);
+	VARI64(nLoadMenuHwButton[0]);
+	VARI64(nLoadMenuHwButton[1]);
+	VARI64(nLoadMenuHwButton[2]);
+	VARI64(nLoadMenuHwButton[3]);
+	STR(szLoadMenuHwButtonName[0]);
+	STR(szLoadMenuHwButtonName[1]);
+	STR(szLoadMenuHwButtonName[2]);
+	STR(szLoadMenuHwButtonName[3]);
+	VAR(nLoadMenuHwActiveBtn);
 	VAR(nLoadMenuShowY);
 	VAR(nLoadMenuExpand);
 
@@ -955,6 +970,7 @@ int ConfigAppSave()
 	STR(szAppCheatsPath);
 	STR(szAppHiscorePath);
 	STR(szAppSamplesPath);
+	STR(szAppArtworkPath);
 	STR(szAppHDDPath);
 	STR(szAppIpsPath);
 	STR(szAppRomdataPath);
@@ -1020,6 +1036,14 @@ int ConfigAppSave()
 
 	_ftprintf(h, _T("\n// If non-zero, enable alpha blending support.\n"));
 	VAR(bBurnUseBlend);
+
+	_ftprintf(h, _T("\n// If non-zero, load MAME artwork packs (default.lay) from szAppArtworkPath.\n"));
+	VAR(bBurnArtworkEnable);
+	_ftprintf(h, _T("// Artwork view to use (0 = first view with a screen), and max. height of the composited image (lower it if slow).\n"));
+	VAR(nBurnArtworkView);
+	VAR(nBurnArtworkMaxHeight);
+	_ftprintf(h, _T("// Artwork render size: -1 = match the window / fullscreen size (sharpest), 1 = game screen at the game's own\n// resolution, 2-4 = game screen at 2x-4x, 0 = largest integer size that fits nBurnArtworkMaxHeight.\n"));
+	VAR(nBurnArtworkScale);
 
 	_ftprintf(h, _T("\n// If non-zero, enable gear shifter display support.\n"));
 	VAR(BurnShiftEnabled);
