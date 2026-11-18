@@ -332,15 +332,19 @@ static UINT64 MASKALL				= ((UINT64)MASKCAPMISC | MASKCAVE | MASKCPS | MASKCPS2 
 #define MASKCONSOLE				(MASKMEGADRIVE | MASKPCENGINE | MASKSMS | MASKGG | MASKSG1000 | MASKCOLECO | MASKMSX | MASKSPECTRUM | MASKNES | MASKFDS | MASKSNES | MASKGBA | MASKNGP | MASKCHANNELF | MASKASTROHOME | MASKATARI2600)
 
 UINT64 nLoadMenuShowX			= 0; // hardware etc
-UINT64 nLoadMenuHwPreset[2]		= { 0, 0 }; // hardware presets, same format as nLoadMenuShowX (set bit = hidden)
-TCHAR szLoadMenuHwPresetName[2][MAX_PATH] = { _T(""), _T("") }; // custom button text, empty = default "Preset n"
+// Hardware quick-select buttons: 0 = Arcade, 1 = Console, 2 = Preset 1, 3 = Preset 2
+// value is the same format as nLoadMenuShowX (set bit = hidden), or HWBTN_DEFAULT for the button's default selection
+#define HWBTN_DEFAULT			((UINT64)1 << 62)
+UINT64 nLoadMenuHwButton[4]		= { HWBTN_DEFAULT, HWBTN_DEFAULT, HWBTN_DEFAULT, HWBTN_DEFAULT };
+TCHAR szLoadMenuHwButtonName[4][MAX_PATH] = { _T(""), _T(""), _T(""), _T("") }; // custom button text, empty = default name
+INT32 nLoadMenuHwActiveBtn		= -1; // last pressed button (drawn blue) until the filters change, -1 = none
 int nLoadMenuShowY				= AVAILABLE; // selector options, default to show available
 int nLoadMenuBoardTypeFilter	= 0;
 int nLoadMenuGenreFilter		= 0;
 int nLoadMenuFavoritesFilter	= 0;
 int nLoadMenuFamilyFilter		= 0;
 
-static HWND hHwPresetToolTip	= NULL;	// "hold shift" tooltip for the Preset buttons
+static HWND hHwPresetToolTip	= NULL;	// "hold shift" tooltip for the quick-select buttons
 
 // expanded/collapsed state of filter nodes. default: expand main (0x01) & hardware (0x10)
 int nLoadMenuExpand             = 0x10 | 0x01;
@@ -2252,20 +2256,25 @@ static void SetHardwareFilter(UINT64 nHidden, bool bSegaGrpChecked = false)
 	RebuildEverything();
 }
 
-#define HWPRESET_NAME_MAXLEN	16	// max. characters for the Preset button text
+#define HWPRESET_NAME_MAXLEN	16	// max. characters for the button text
+#define HWBTN_COUNT				4
 
-static const INT32 nHwPresetBtnIDs[2] = { IDC_SEL_HW_PRESET1, IDC_SEL_HW_PRESET2 };
+static const INT32 nHwPresetBtnIDs[HWBTN_COUNT] = { IDC_SEL_HW_ARCADE, IDC_SEL_HW_CONSOLE, IDC_SEL_HW_PRESET1, IDC_SEL_HW_PRESET2 };
 
-// Returns the button text for a preset: the user's custom name, or the default "Preset n"
-static TCHAR* HwPresetGetName(INT32 nPreset)
+// Returns the button text: the user's custom name, or the default ("Arcade", "Console", "Preset n")
+static TCHAR* HwPresetGetName(INT32 nBtn)
 {
 	static TCHAR szName[MAX_PATH];
 
-	if (szLoadMenuHwPresetName[nPreset][0]) {
-		_tcsncpy(szName, szLoadMenuHwPresetName[nPreset], HWPRESET_NAME_MAXLEN);
+	if (szLoadMenuHwButtonName[nBtn][0]) {
+		_tcsncpy(szName, szLoadMenuHwButtonName[nBtn], HWPRESET_NAME_MAXLEN);
 		szName[HWPRESET_NAME_MAXLEN] = 0;
 	} else {
-		_sntprintf(szName, MAX_PATH, FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_DEFNAME, true), nPreset + 1);
+		switch (nBtn) {
+			case 0:  _sntprintf(szName, MAX_PATH, _T("%s"), FBALoadStringEx(hAppInst, IDS_SEL_HWBTN_ARCADE, true)); break;
+			case 1:  _sntprintf(szName, MAX_PATH, _T("%s"), FBALoadStringEx(hAppInst, IDS_SEL_HWBTN_CONSOLE, true)); break;
+			default: _sntprintf(szName, MAX_PATH, FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_DEFNAME, true), nBtn - 1); break;
+		}
 		szName[MAX_PATH - 1] = 0;
 	}
 
@@ -2274,31 +2283,150 @@ static TCHAR* HwPresetGetName(INT32 nPreset)
 
 static void HwPresetUpdateButtonText()
 {
-	for (INT32 i = 0; i < 2; i++) {
+	for (INT32 i = 0; i < HWBTN_COUNT; i++) {
 		SetDlgItemText(hSelDlg, nHwPresetBtnIDs[i], HwPresetGetName(i));
 	}
 }
 
-// Lock in the current Hardware filter selection as a preset (after OK/Cancel confirmation)
-static void HwPresetSave(INT32 nPreset)
+// The Hardware selection a button applies (set bit = hidden)
+static UINT64 HwPresetGetMask(INT32 nBtn)
 {
-	TCHAR szMsg[512];
-	TCHAR* pszName = HwPresetGetName(nPreset); // note: call before FBALoadStringEx(), it shares a static buffer w/GCC
-	_sntprintf(szMsg, 512, FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_CONFIRM, true), pszName);
-	szMsg[511] = 0;
+	if (nLoadMenuHwButton[nBtn] & HWBTN_DEFAULT) {
+		switch (nBtn) {
+			case 0:  return MASKALL & ~MASKARCADE;
+			case 1:  return MASKALL & ~MASKCONSOLE;
+			default: return 0;
+		}
+	}
 
-	if (MessageBox(hSelDlg, szMsg, FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_TITLE, true), MB_OKCANCEL | MB_ICONQUESTION | MB_DEFBUTTON2) == IDOK) {
-		nLoadMenuHwPreset[nPreset] = nLoadMenuShowX & MASKALL;
+	return nLoadMenuHwButton[nBtn] & MASKALL;
+}
+
+// Mark a button as the active one (blue), -1 = none
+static void HwPresetSetActive(INT32 nBtn)
+{
+	if (nBtn == nLoadMenuHwActiveBtn) return;
+
+	nLoadMenuHwActiveBtn = nBtn;
+
+	if (hSelDlg) {
+		for (INT32 i = 0; i < HWBTN_COUNT; i++) {
+			InvalidateRect(GetDlgItem(hSelDlg, nHwPresetBtnIDs[i]), NULL, TRUE);
+		}
 	}
 }
 
-static void HwPresetButton(INT32 nPreset)
+// Drop the blue state if the active button no longer matches the Hardware filter
+// (config edited, button re-set / reset to default, etc.)
+static void HwPresetValidateActive()
+{
+	if (nLoadMenuHwActiveBtn < 0 || nLoadMenuHwActiveBtn >= HWBTN_COUNT || HwPresetGetMask(nLoadMenuHwActiveBtn) != (nLoadMenuShowX & MASKALL)) {
+		HwPresetSetActive(-1);
+	}
+}
+
+// NM_CUSTOMDRAW for the active (blue) button. returns true if we handled the drawing
+static bool HwPresetCustomDraw(LPNMCUSTOMDRAW pnmcd)
+{
+	INT32 nBtn = -1;
+	for (INT32 i = 0; i < HWBTN_COUNT; i++) {
+		if ((INT32)pnmcd->hdr.idFrom == nHwPresetBtnIDs[i]) nBtn = i;
+	}
+
+	if (nBtn < 0 || nBtn != nLoadMenuHwActiveBtn) return false; // not ours / not active: normal themed drawing
+
+	if (pnmcd->dwDrawStage != CDDS_PREPAINT) return false; // (CDDS_PREERASE: default, we paint over all of it anyway)
+
+	HDC hDC = pnmcd->hdc;
+	RECT rect = pnmcd->rc;
+
+	COLORREF nFill = RGB(0xcc, 0xe4, 0xf7);							// light blue
+	if (pnmcd->uItemState & CDIS_HOT)      nFill = RGB(0xb3, 0xd7, 0xf3);	// a bit darker on hover
+	if (pnmcd->uItemState & CDIS_SELECTED) nFill = RGB(0x99, 0xc9, 0xef);	// darker yet while held down
+
+	HBRUSH hBrush = CreateSolidBrush(nFill);
+	HPEN hPen = CreatePen(PS_SOLID, 1, RGB(0x00, 0x78, 0xd7));		// blue border
+	HGDIOBJ hOldBrush = SelectObject(hDC, hBrush);
+	HGDIOBJ hOldPen = SelectObject(hDC, hPen);
+
+	Rectangle(hDC, rect.left, rect.top, rect.right, rect.bottom);
+
+	SelectObject(hDC, hOldPen);
+	SelectObject(hDC, hOldBrush);
+	DeleteObject(hPen);
+	DeleteObject(hBrush);
+
+	// caption
+	TCHAR szText[MAX_PATH];
+	GetWindowText(pnmcd->hdr.hwndFrom, szText, MAX_PATH);
+
+	HGDIOBJ hOldFont = SelectObject(hDC, (HFONT)SendMessage(pnmcd->hdr.hwndFrom, WM_GETFONT, 0, 0));
+	SetBkMode(hDC, TRANSPARENT);
+	SetTextColor(hDC, GetSysColor(COLOR_BTNTEXT));
+	RECT rcText = rect;
+	if (pnmcd->uItemState & CDIS_SELECTED) OffsetRect(&rcText, 1, 1);
+	DrawText(hDC, szText, -1, &rcText, DT_CENTER | DT_VCENTER | DT_SINGLELINE | DT_END_ELLIPSIS);
+	SelectObject(hDC, hOldFont);
+
+	if ((pnmcd->uItemState & CDIS_FOCUS) && !(SendMessage(pnmcd->hdr.hwndFrom, WM_QUERYUISTATE, 0, 0) & UISF_HIDEFOCUS)) {
+		RECT rcFocus = rect;
+		InflateRect(&rcFocus, -3, -3);
+		DrawFocusRect(hDC, &rcFocus);
+	}
+
+	SetWindowLongPtr(hSelDlg, DWLP_MSGRESULT, CDRF_SKIPDEFAULT);
+	return true;
+}
+
+// OK / Cancel confirmation, nMsgID is a format string taking the button name (%s)
+static bool HwPresetConfirm(INT32 nBtn, UINT nMsgID)
+{
+	TCHAR szMsg[512];
+	TCHAR* pszName = HwPresetGetName(nBtn); // note: call before FBALoadStringEx(), it shares a static buffer w/GCC
+	_sntprintf(szMsg, 512, FBALoadStringEx(hAppInst, nMsgID, true), pszName);
+	szMsg[511] = 0;
+
+	return (MessageBox(hSelDlg, szMsg, FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_TITLE, true), MB_OKCANCEL | MB_ICONQUESTION | MB_DEFBUTTON2) == IDOK);
+}
+
+// Lock in the current Hardware filter selection for a button (after confirmation)
+static void HwPresetSave(INT32 nBtn)
+{
+	if (HwPresetConfirm(nBtn, IDS_SEL_HWPRESET_CONFIRM)) {
+		nLoadMenuHwButton[nBtn] = nLoadMenuShowX & MASKALL;
+		HwPresetValidateActive();
+	}
+}
+
+// Back to the default name & selection (after confirmation)
+static void HwPresetReset(INT32 nBtn)
+{
+	if (HwPresetConfirm(nBtn, IDS_SEL_HWPRESET_RESETCONFIRM)) {
+		nLoadMenuHwButton[nBtn] = HWBTN_DEFAULT;
+		szLoadMenuHwButtonName[nBtn][0] = 0;
+		HwPresetUpdateButtonText();
+		HwPresetValidateActive();
+	}
+}
+
+static void HwPresetButton(INT32 nBtn)
 {
 	if (GetKeyState(VK_SHIFT) & 0x8000) {
-		HwPresetSave(nPreset);	// Shift + click
-	} else {
-		SetHardwareFilter(nLoadMenuHwPreset[nPreset]);
+		HwPresetSave(nBtn);	// Shift + click
+		return;
 	}
+
+	if (nLoadMenuHwButton[nBtn] & HWBTN_DEFAULT) {
+		switch (nBtn) {
+			case 0:  SetHardwareFilter(MASKALL & ~MASKARCADE, true);  break;	// show only arcade hardware
+			case 1:  SetHardwareFilter(MASKALL & ~MASKCONSOLE, true); break;	// show only console / computer hardware
+			default: SetHardwareFilter(0); break;								// show all hardware
+		}
+	} else {
+		SetHardwareFilter(nLoadMenuHwButton[nBtn]);
+	}
+
+	HwPresetSetActive(nBtn);
 }
 
 // Rename dialog -----------------------------------
@@ -2329,7 +2457,7 @@ static INT_PTR CALLBACK HwPresetNameProc(HWND hDlg, UINT Msg, WPARAM wParam, LPA
 					INT32 nLen = _tcslen(p);
 					while (nLen > 0 && p[nLen - 1] == _T(' ')) p[--nLen] = 0;
 
-					_tcscpy(szLoadMenuHwPresetName[nHwPresetRenaming], p);
+					_tcscpy(szLoadMenuHwButtonName[nHwPresetRenaming], p);
 					EndDialog(hDlg, 1);
 					return TRUE;
 				}
@@ -2347,25 +2475,25 @@ static INT_PTR CALLBACK HwPresetNameProc(HWND hDlg, UINT Msg, WPARAM wParam, LPA
 	return FALSE;
 }
 
-static void HwPresetRename(INT32 nPreset)
+static void HwPresetRename(INT32 nBtn)
 {
-	nHwPresetRenaming = nPreset;
+	nHwPresetRenaming = nBtn;
 
 	if (FBADialogBox(hAppInst, MAKEINTRESOURCE(IDD_SEL_PRESETNAME), hSelDlg, (DLGPROC)HwPresetNameProc) == 1) {
 		HwPresetUpdateButtonText();
 	}
 }
 
-// Right-click menu on the Preset buttons
-static void HwPresetContextMenu(INT32 nPreset, LPARAM lParam)
+// Right-click menu on the quick-select buttons
+static void HwPresetContextMenu(INT32 nBtn, LPARAM lParam)
 {
-	enum { HWMENU_SET = 1, HWMENU_RENAME };
+	enum { HWMENU_SET = 1, HWMENU_RENAME, HWMENU_RESET };
 
 	POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
 
 	if (lParam == -1) { // opened from the keyboard (menu key / shift+F10): show under the button
 		RECT rect;
-		GetWindowRect(GetDlgItem(hSelDlg, nHwPresetBtnIDs[nPreset]), &rect);
+		GetWindowRect(GetDlgItem(hSelDlg, nHwPresetBtnIDs[nBtn]), &rect);
 		pt.x = rect.left;
 		pt.y = rect.bottom;
 	}
@@ -2375,13 +2503,16 @@ static void HwPresetContextMenu(INT32 nPreset, LPARAM lParam)
 
 	AppendMenu(hMenu, MF_STRING, HWMENU_SET,    FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_MENU_SET, true));
 	AppendMenu(hMenu, MF_STRING, HWMENU_RENAME, FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_MENU_RENAME, true));
+	AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
+	AppendMenu(hMenu, MF_STRING, HWMENU_RESET,  FBALoadStringEx(hAppInst, IDS_SEL_HWPRESET_MENU_RESET, true));
 
 	INT32 nCmd = TrackPopupMenu(hMenu, TPM_LEFTALIGN | TPM_RIGHTBUTTON | TPM_RETURNCMD | TPM_NONOTIFY, pt.x, pt.y, 0, hSelDlg, NULL);
 	DestroyMenu(hMenu);
 
 	switch (nCmd) {
-		case HWMENU_SET:    HwPresetSave(nPreset);   break;
-		case HWMENU_RENAME: HwPresetRename(nPreset); break;
+		case HWMENU_SET:    HwPresetSave(nBtn);   break;
+		case HWMENU_RENAME: HwPresetRename(nBtn); break;
+		case HWMENU_RESET:  HwPresetReset(nBtn);  break;
 	}
 }
 
@@ -2392,8 +2523,7 @@ static void HwPresetToolTipInit()
 
 	SendMessage(hHwPresetToolTip, TTM_SETMAXTIPWIDTH, 0, 300); // allow word-wrap of longer tip
 
-
-	for (INT32 i = 0; i < 2; i++) {
+	for (INT32 i = 0; i < HWBTN_COUNT; i++) {
 		TOOLINFO toolinfo;
 		memset(&toolinfo, 0, sizeof(TOOLINFO));
 
@@ -2521,6 +2651,7 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 		CreateFilters();
 		HwPresetToolTipInit();
 		HwPresetUpdateButtonText();
+		HwPresetValidateActive();
 
 		EnableWindow(GetDlgItem(hDlg, IDC_SEL_APPLYIPS), FALSE);
 		EnableWindow(GetDlgItem(hDlg, IDC_SEL_IPSMANAGER), FALSE);
@@ -2938,6 +3069,8 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 		if (hItemChanged == hFilterCard)			_ToggleGameListing(nLoadMenuGenreFilter, GBF_CARD);
 		if (hItemChanged == hFilterBoard)			_ToggleGameListing(nLoadMenuGenreFilter, GBF_BOARD);
 
+		HwPresetSetActive(-1); // filters changed: quick-select buttons are no longer "active"
+
 		RebuildEverything();
 	}
 
@@ -3020,16 +3153,16 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 					bDoIpsPatch = !bDoIpsPatch;
 					break;
 				case IDC_SEL_HW_ARCADE:
-					SetHardwareFilter(MASKALL & ~MASKARCADE, true);	// show only arcade hardware
-					break;
-				case IDC_SEL_HW_CONSOLE:
-					SetHardwareFilter(MASKALL & ~MASKCONSOLE, true);	// show only console / computer hardware
-					break;
-				case IDC_SEL_HW_PRESET1:
 					HwPresetButton(0);
 					break;
-				case IDC_SEL_HW_PRESET2:
+				case IDC_SEL_HW_CONSOLE:
 					HwPresetButton(1);
+					break;
+				case IDC_SEL_HW_PRESET1:
+					HwPresetButton(2);
+					break;
+				case IDC_SEL_HW_PRESET2:
+					HwPresetButton(3);
 					break;
 			}
 		}
@@ -3089,7 +3222,7 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 	}
 
 	if (Msg == WM_CONTEXTMENU) {
-		for (INT32 i = 0; i < 2; i++) {
+		for (INT32 i = 0; i < HWBTN_COUNT; i++) {
 			if ((HWND)wParam == GetDlgItem(hDlg, nHwPresetBtnIDs[i])) {
 				HwPresetContextMenu(i, lParam);
 				return TRUE;
@@ -3293,6 +3426,10 @@ static INT_PTR CALLBACK DialogProc(HWND hDlg, UINT Msg, WPARAM wParam, LPARAM lP
 			// disable double-click node-expand
 			SetWindowLongPtr(hSelDlg, DWLP_MSGRESULT, 1);
 
+			return 1;
+		}
+
+		if (pNmHdr->code == NM_CUSTOMDRAW && HwPresetCustomDraw((LPNMCUSTOMDRAW)lParam)) {
 			return 1;
 		}
 
