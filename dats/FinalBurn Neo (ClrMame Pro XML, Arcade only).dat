@@ -7413,30 +7413,6 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="kovassg" cloneof="kovshp" romof="kovshp" sourcefile="pgm/d_pgm.cpp">
-		<comment>Bootleg, Imperfect Protection Emulation</comment>
-		<description>Ao Shi San Guo (bootleg of Knights of Valour Super Heroes Plus, V202CN)</description>
-		<year>2008</year>
-		<manufacturer>bootleg</manufacturer>
-		<rom name="assg_v202cn.rom" size="4194304" crc="3b7b627f"/>
-		<rom name="t0600.rom" merge="pgm_t0600.u2" size="8388608" crc="4acc1ad6"/>
-		<rom name="a0600.rom" merge="pgm_a0600.u3" size="8388608" crc="d8167834"/>
-		<rom name="a0601.rom" merge="pgm_a0601.u4" size="8388608" crc="ff7a4373"/>
-		<rom name="a0602.rom" merge="pgm_a0602.u6" size="8388608" crc="e7a32959"/>
-		<rom name="a0603as.rom" size="8388608" crc="7057b37e"/>
-		<rom name="b0600.rom" merge="pgm_b0600.u9" size="8388608" crc="7d3cd059"/>
-		<rom name="b0601as.rom" size="8388608" crc="3784fb49"/>
-		<rom name="m0600.rom" merge="pgm_m0600.u5" size="4194304" crc="3ada4fd6"/>
-		<rom name="kovsh_v100_china.asic" merge="kovsh_v100_china.asic" size="16384" crc="0f09a5c1"/>
-		<rom name="pgm_t01s.rom" merge="pgm_t01s.rom" size="2097152" crc="1a7123a0"/>
-		<rom name="pgm_m01s.rom" merge="pgm_m01s.rom" size="2097152" crc="45ae7159"/>
-		<rom name="pgm_p01s.u20" merge="pgm_p01s.u20" size="131072" crc="e42b166e"/>
-		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
-		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
-		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
-		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="kovassge" cloneof="kovshp" romof="kovshp" sourcefile="pgm/d_pgm.cpp">
 		<comment>Bootleg, Imperfect Protection Emulation</comment>
 		<description>Ao Shi San Guo (bootleg of Knights of Valour Super Heroes Plus, V202CN, encrypted)</description>
@@ -7458,6 +7434,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -7482,6 +7459,32 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
+		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kovshxas" cloneof="kovshp" romof="kovshp" sourcefile="pgm/d_pgm.cpp">
+		<comment>Bootleg, Imperfect Protection Emulation</comment>
+		<description>Ao Shi San Guo (bootleg of Knights of Valour Super Heroes Plus, V202CN, Oct 6 2008 09:59:26)</description>
+		<year>2008</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="assg_v202cn.rom" size="4194304" crc="3b7b627f"/>
+		<rom name="t0600.rom" merge="pgm_t0600.u2" size="8388608" crc="4acc1ad6"/>
+		<rom name="a0600.rom" merge="pgm_a0600.u3" size="8388608" crc="d8167834"/>
+		<rom name="a0601.rom" merge="pgm_a0601.u4" size="8388608" crc="ff7a4373"/>
+		<rom name="a0602.rom" merge="pgm_a0602.u6" size="8388608" crc="e7a32959"/>
+		<rom name="a0603as.rom" size="8388608" crc="7057b37e"/>
+		<rom name="b0600.rom" merge="pgm_b0600.u9" size="8388608" crc="7d3cd059"/>
+		<rom name="b0601as.rom" size="8388608" crc="3784fb49"/>
+		<rom name="m0600.rom" merge="pgm_m0600.u5" size="4194304" crc="3ada4fd6"/>
+		<rom name="kovsh_v100_china.asic" merge="kovsh_v100_china.asic" size="16384" crc="0f09a5c1"/>
+		<rom name="pgm_t01s.rom" merge="pgm_t01s.rom" size="2097152" crc="1a7123a0"/>
+		<rom name="pgm_m01s.rom" merge="pgm_m01s.rom" size="2097152" crc="45ae7159"/>
+		<rom name="pgm_p01s.u20" merge="pgm_p01s.u20" size="131072" crc="e42b166e"/>
+		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
+		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
+		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -10605,6 +10608,7 @@
 		<rom name="at1dat0.13s" merge="at1dat0.13s" size="131072" crc="844890f4"/>
 		<rom name="at1dat1.13p" merge="at1dat1.13p" size="131072" crc="21715313"/>
 		<rom name="atvoi1.bin" merge="atvoi1.bin" size="524288" crc="d36a649e"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -10641,6 +10645,7 @@
 		<rom name="at1dat0.13s" size="131072" crc="844890f4"/>
 		<rom name="at1dat1.13p" size="131072" crc="21715313"/>
 		<rom name="atvoi1.bin" size="524288" crc="d36a649e"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -10677,6 +10682,7 @@
 		<rom name="at1dat0.13s" merge="at1dat0.13s" size="131072" crc="844890f4"/>
 		<rom name="at1dat1.13p" merge="at1dat1.13p" size="131072" crc="21715313"/>
 		<rom name="atvoi1.bin" merge="atvoi1.bin" size="524288" crc="d36a649e"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -13094,6 +13100,25 @@
 		<video type="raster" orientation="horizontal" width="336" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bagmanmc" cloneof="bagman" romof="bagman" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Bootleg, Bad Colours</comment>
+		<description>Bagman (bootleg on Moon Cresta hardware, set 1)</description>
+		<year>1982</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="b1.bin" size="4096" crc="b74c75ee"/>
+		<rom name="b2.bin" size="4096" crc="a7d99916"/>
+		<rom name="b3.bin" size="4096" crc="c78f5360"/>
+		<rom name="b4.bin" size="4096" crc="eebd3bd1"/>
+		<rom name="b5.bin" size="4096" crc="0fe24b8c"/>
+		<rom name="b6.bin" size="4096" crc="f50390e7"/>
+		<rom name="g1-l.bin" size="2048" crc="2ae6b5ab"/>
+		<rom name="g2-u.bin" size="4096" crc="a2790089"/>
+		<rom name="g2-l.bin" size="2048" crc="98b37397"/>
+		<rom name="g1-u.bin" size="4096" crc="b63cfae4"/>
+		<rom name="bagmanmc.clr" size="32" crc="6a0c7d87"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="bagmanm2" cloneof="bagman" romof="bagman" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Bootleg, Bad Colours</comment>
 		<description>Bagman (bootleg on Moon Cresta hardware, set 2)</description>
@@ -13106,7 +13131,27 @@
 		<rom name="bagmanm2.7" size="8192" crc="777e48c4"/>
 		<rom name="bagmanmc.clr" size="32" crc="6a0c7d87"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
-		<driver status="preliminary"/>
+		<driver status="good"/>
+	</game>
+	<game name="bagmanm3" cloneof="bagman" romof="bagman" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Bootleg, Bad Colours</comment>
+		<description>Bagman (bootleg on Moon Cresta hardware, set 3)</description>
+		<year>1982</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="1-2-tms2564.bin" size="8192" crc="90e5ae76"/>
+		<rom name="3-4-tms2564.bin" size="8192" crc="f68fc60d"/>
+		<rom name="5a.bin" size="2048" crc="99992ffb"/>
+		<rom name="5b.bin" size="2048" crc="838c1462"/>
+		<rom name="5c.bin" size="2048" crc="df4139fe"/>
+		<rom name="5d.bin" size="2048" crc="d07a1fcb"/>
+		<rom name="bottom-tms2532.bin" size="4096" crc="c26409b5"/>
+		<rom name="top-tms2532.bin" size="4096" crc="a2790089"/>
+		<rom name="c3-bottom-tms2532.bin" size="4096" crc="4fdd460f"/>
+		<rom name="c3-top-tms2532.bin" size="4096" crc="b63cfae4"/>
+		<rom name="82s123.bin" size="32" crc="9fe412ff"/>
+		<rom name="82s123-74157.bin" size="32" crc="66bb08a3"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
 	</game>
 	<game name="bagmans3" cloneof="bagman" romof="bagman" sourcefile="pre90s/d_bagman.cpp">
 		<description>Bagman (Stern Electronics, revision A3)</description>
@@ -23482,7 +23527,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="bullsdrtg" sourcefile="galaxian/d_galaxian.cpp">
+	<game name="bullsdrtg" cloneof="bullsdrt" romof="bullsdrt" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Bad Colours</comment>
 		<description>Bulls Eye Darts (Galaxian conversion)</description>
 		<year>1985</year>
@@ -23493,6 +23538,19 @@
 		<rom name="cpu.bin" size="16384" crc="db34f130"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
+	</game>
+	<game name="bullsdrt" sourcefile="d_parent.cpp">
+		<comment>Parent set for working drivers</comment>
+		<description>Bulls Eye Darts</description>
+		<year>1985</year>
+		<manufacturer>Shinkai Inc. (Magic Electronics Inc. license)</manufacturer>
+		<rom name="27128.bin" size="16384" crc="2729f585"/>
+		<rom name="2764_b.bin" size="8192" crc="49a19aba"/>
+		<rom name="2764_a.bin" size="8192" crc="361ff09d"/>
+		<rom name="82s147.bin" size="512" crc="d841b7e0"/>
+		<rom name="82s153.bin" size="235" crc="ff7e0ced"/>
+		<video type="raster" orientation="horizontal" width="240" height="256" aspectx="3" aspecty="4"/>
+		<driver status="preliminary"/>
 	</game>
 	<game name="bumba" cloneof="headon" romof="headon" sourcefile="pre90s/d_vicdual.cpp">
 		<comment>Bootleg, No sound</comment>
@@ -24201,6 +24259,7 @@
 		<rom name="bu1_dat0.13s" size="131072" crc="e0a9d92f"/>
 		<rom name="bu1_dat1.13p" size="131072" crc="5fe54b73"/>
 		<rom name="bu_voi-1.bin" size="524288" crc="99d8a239"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -24236,6 +24295,7 @@
 		<rom name="bu1_dat0.13s" merge="bu1_dat0.13s" size="131072" crc="e0a9d92f"/>
 		<rom name="bu1_dat1.13p" merge="bu1_dat1.13p" size="131072" crc="5fe54b73"/>
 		<rom name="bu_voi-1.bin" merge="bu_voi-1.bin" size="524288" crc="99d8a239"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -26843,7 +26903,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captavena" cloneof="captaven" romof="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (Asia Rev 1.0)</description>
+		<description>Captain America and The Avengers (Asia Version 1.0)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hn_00.e1" size="131072" crc="12dd0c71"/>
@@ -26874,7 +26934,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (Asia Rev 1.4)</description>
+		<description>Captain America and The Avengers (Asia Version 1.4)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hn_00-4.1e" size="131072" crc="147fb094"/>
@@ -26905,7 +26965,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captavenj" cloneof="captaven" romof="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (Japan Rev 0.2)</description>
+		<description>Captain America and The Avengers (Japan Version 0.2)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hj_00-2.1e" size="131072" crc="10b1faaf"/>
@@ -26936,7 +26996,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captavene" cloneof="captaven" romof="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (UK Rev 1.4)</description>
+		<description>Captain America and The Avengers (UK Version 1.4)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hg_00-4.1e" size="131072" crc="7008d43c"/>
@@ -26968,7 +27028,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captavenua" cloneof="captaven" romof="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (US Rev 1.4)</description>
+		<description>Captain America and The Avengers (US Version 1.4)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hh_00-4.2e" size="131072" crc="0e1acc05"/>
@@ -26999,7 +27059,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captavenuu" cloneof="captaven" romof="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (US Rev 1.6)</description>
+		<description>Captain America and The Avengers (US Version 1.6)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hh-00.1e" size="131072" crc="c34da654"/>
@@ -27030,7 +27090,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="captavenu" cloneof="captaven" romof="captaven" sourcefile="dataeast/d_deco32.cpp">
-		<description>Captain America and The Avengers (US Rev 1.9)</description>
+		<description>Captain America and The Avengers (US Version 1.9)</description>
 		<year>1991</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="hh_00-19.1e" size="131072" crc="08b870e0"/>
@@ -29214,6 +29274,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -30994,6 +31055,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -31015,6 +31077,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -31036,6 +31099,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -31053,6 +31117,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -31070,6 +31135,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -31092,6 +31158,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -33043,6 +33110,20 @@
 		<sample name="congah" />
 		<sample name="rim" />
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="conquest" sourcefile="pre90s/d_williams.cpp">
+		<comment>Prototype, Incomplete game</comment>
+		<description>Conquest (prototype)</description>
+		<year>1982</year>
+		<manufacturer>Williams / Vid Kidz</manufacturer>
+		<rom name="conquest_b.bin" size="4096" crc="9aab5516"/>
+		<rom name="conquest_b.bin" size="4096" crc="9aab5516"/>
+		<rom name="conquest_a.bin" size="16384" crc="a384f4a2"/>
+		<rom name="video_sound_rom_1.ic12" size="2048" crc="fefd5b48"/>
+		<rom name="decoder.2" size="512" crc="8dd98da5"/>
+		<rom name="decoder.3" size="512" crc="c3f45f70"/>
+		<video type="raster" orientation="vertical" width="240" height="292" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="contcircj" cloneof="contcirc" romof="contcirc" sourcefile="taito/d_taitoz.cpp">
@@ -40303,6 +40384,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -40326,6 +40408,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -40349,6 +40432,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -41762,6 +41846,7 @@
 		<rom name="df1_dat1.13p" size="262144" crc="1a31e46b"/>
 		<rom name="df1_voi1.bin" size="524288" crc="15053904"/>
 		<rom name="nvram" size="8192" crc="4b9f7b06"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42376,6 +42461,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42397,6 +42483,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42418,6 +42505,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42439,6 +42527,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42460,6 +42549,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42481,6 +42571,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42630,6 +42721,7 @@
 		<rom name="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42721,6 +42813,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42742,6 +42835,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42763,6 +42857,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42784,6 +42879,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42805,6 +42901,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42826,6 +42923,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42847,6 +42945,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42868,6 +42967,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42889,6 +42989,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42910,6 +43011,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42931,6 +43033,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -42952,6 +43055,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -46928,8 +47032,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="dragngunj" cloneof="dragngun" romof="dragngun" sourcefile="dataeast/d_deco32.cpp">
-		<description>Dragon Gun (Japan)</description>
-		<year>1993</year>
+		<description>Dragon Gun (Japan, Master Version 0.00, 1992-11-24)</description>
+		<year>1992</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="ka-02.a9" size="262144" crc="402a03f9"/>
 		<rom name="ka-06.c9" size="262144" crc="26822853"/>
@@ -46971,12 +47075,13 @@
 		<rom name="mar-06.n17" merge="mar-06.n17" size="524288" crc="3e006c6e"/>
 		<rom name="mar-08.n21" merge="mar-08.n21" size="524288" crc="b9281dfd"/>
 		<rom name="mar-07.n19" merge="mar-07.n19" size="524288" crc="40287d62"/>
+		<rom name="dvi_decrypt.bin" merge="dvi_decrypt.bin" size="1024" crc="2d049a30"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="dragngun" sourcefile="dataeast/d_deco32.cpp">
-		<description>Dragon Gun (US)</description>
-		<year>1993</year>
+		<description>Dragon Gun (US, LTEST-02 Version 0.00, 1992-12-08)</description>
+		<year>1992</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="kb02.a9" size="262144" crc="4fb9cfea"/>
 		<rom name="kb06.c9" size="262144" crc="2395efec"/>
@@ -47018,6 +47123,7 @@
 		<rom name="mar-06.n17" size="524288" crc="3e006c6e"/>
 		<rom name="mar-08.n21" size="524288" crc="b9281dfd"/>
 		<rom name="mar-07.n19" size="524288" crc="40287d62"/>
+		<rom name="dvi_decrypt.bin" size="1024" crc="2d049a30"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47084,6 +47190,7 @@
 		<rom name="pal16l8a.4g" merge="pal16l8a.4g" size="260" crc="660e1655"/>
 		<rom name="pal16l8a.5f" merge="pal16l8a.5f" size="260" crc="18f43c22"/>
 		<rom name="pal12l10.8d" merge="pal12l10.8d" size="64" crc="e2379249"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -47114,6 +47221,7 @@
 		<rom name="pal16l8a.4g" size="260" crc="660e1655"/>
 		<rom name="pal16l8a.5f" size="260" crc="18f43c22"/>
 		<rom name="pal12l10.8d" size="64" crc="e2379249"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -47144,6 +47252,7 @@
 		<rom name="pal16l8a.4g" merge="pal16l8a.4g" size="260" crc="660e1655"/>
 		<rom name="pal16l8a.5f" merge="pal16l8a.5f" size="260" crc="18f43c22"/>
 		<rom name="pal12l10.8d" merge="pal12l10.8d" size="64" crc="e2379249"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -47339,6 +47448,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47360,6 +47470,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47381,6 +47492,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47402,6 +47514,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47419,6 +47532,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47436,6 +47550,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -49114,6 +49229,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -51797,6 +51913,7 @@
 		<rom name="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -55532,6 +55649,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -55763,7 +55881,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistjb" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (Japan ver 41-04, DE-0380-1 PCB)</description>
+		<description>Fighter's History (Japan Version 41-04, DE-0380-1 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="kw00-2.1f" size="524288" crc="f4749806"/>
@@ -55784,7 +55902,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistja" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (Japan ver 41-05, DE-0380-2 PCB)</description>
+		<description>Fighter's History (Japan Version 41-05, DE-0380-2 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="kw00-3.1f" size="524288" crc="ade9581a"/>
@@ -55805,7 +55923,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistj" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (Japan ver 41-07, DE-0395-1 PCB)</description>
+		<description>Fighter's History (Japan Version 41-07, DE-0395-1 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="lb00.1f" size="524288" crc="321099ad"/>
@@ -55826,7 +55944,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistuc" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (US ver 42-03, DE-0380-2 PCB)</description>
+		<description>Fighter's History (US Version 42-03, DE-0380-2 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="kz00-1.1f" size="524288" crc="3a3dd15c"/>
@@ -55847,7 +55965,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistub" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (US ver 42-05, DE-0395-1 PCB)</description>
+		<description>Fighter's History (US Version 42-05, DE-0395-1 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="le00.1f" size="524288" crc="a5c410eb"/>
@@ -55868,7 +55986,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistua" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (US ver 42-06, DE-0395-1 PCB)</description>
+		<description>Fighter's History (US Version 42-06, DE-0395-1 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="le00-1.1f" size="524288" crc="fccacafb"/>
@@ -55889,7 +56007,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistu" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (US ver 42-09, DE-0396-0 PCB)</description>
+		<description>Fighter's History (US Version 42-09, DE-0396-0 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="lj00-3.1f" size="524288" crc="17543d60"/>
@@ -55910,7 +56028,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthistb" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (World ver 43-05, DE-0380-2 PCB)</description>
+		<description>Fighter's History (World Version 43-05, DE-0380-2 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="kx00-2.1f" size="524288" crc="a7c36bbd"/>
@@ -55931,7 +56049,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthista" cloneof="fghthist" romof="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (World ver 43-07, DE-0380-2 PCB)</description>
+		<description>Fighter's History (World Version 43-07, DE-0380-2 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="kx00-3.1f" size="524288" crc="fe5eaba1"/>
@@ -55952,7 +56070,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fghthist" sourcefile="dataeast/d_deco32.cpp">
-		<description>Fighter's History (World ver 43-09, DE-0395-1 PCB)</description>
+		<description>Fighter's History (World Version 43-09, DE-0395-1 PCB)</description>
 		<year>1993</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="lc00-1.1f" size="524288" crc="61a76a16"/>
@@ -57383,6 +57501,7 @@
 		<rom name="fl1-3.5b" merge="fl1-3.5b" size="256" crc="d179d99a"/>
 		<rom name="fl1-v1" merge="fl1-v1" size="131072" crc="86b21996"/>
 		<rom name="fl1-v2" merge="fl1-v2" size="131072" crc="6a164647"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57413,6 +57532,7 @@
 		<rom name="fl1-3.5b" merge="fl1-3.5b" size="256" crc="d179d99a"/>
 		<rom name="fl1-v1" merge="fl1-v1" size="131072" crc="86b21996"/>
 		<rom name="fl1-v2" merge="fl1-v2" size="131072" crc="6a164647"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57443,6 +57563,7 @@
 		<rom name="fl1-3.5b" merge="fl1-3.5b" size="256" crc="d179d99a"/>
 		<rom name="fl1-v1" merge="fl1-v1" size="131072" crc="86b21996"/>
 		<rom name="fl1-v2" merge="fl1-v2" size="131072" crc="6a164647"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57473,6 +57594,7 @@
 		<rom name="fl1-3.5b" merge="fl1-3.5b" size="256" crc="d179d99a"/>
 		<rom name="fl1-v1" merge="fl1-v1" size="131072" crc="86b21996"/>
 		<rom name="fl1-v2" merge="fl1-v2" size="131072" crc="6a164647"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57503,6 +57625,7 @@
 		<rom name="fl1-3.5b" size="256" crc="d179d99a"/>
 		<rom name="fl1-v1" size="131072" crc="86b21996"/>
 		<rom name="fl1-v2" size="131072" crc="6a164647"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57541,6 +57664,7 @@
 		<rom name="fls_voi-1.3m" merge="fls_voi-1.3m" size="524288" crc="590be52f"/>
 		<rom name="fls_voi-2.3l" merge="fls_voi-2.3l" size="524288" crc="204b3c27"/>
 		<rom name="finalap2.nv" merge="finalap2.nv" size="8192" crc="c7ae5d0a"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57579,6 +57703,7 @@
 		<rom name="fls_voi-1.3m" merge="fls_voi-1.3m" size="524288" crc="590be52f"/>
 		<rom name="fls_voi-2.3l" merge="fls_voi-2.3l" size="524288" crc="204b3c27"/>
 		<rom name="finalap2.nv" merge="finalap2.nv" size="8192" crc="c7ae5d0a"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57617,6 +57742,7 @@
 		<rom name="fls_voi-1.3m" size="524288" crc="590be52f"/>
 		<rom name="fls_voi-2.3l" size="524288" crc="204b3c27"/>
 		<rom name="finalap2.nv" size="8192" crc="c7ae5d0a"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -57993,6 +58119,7 @@
 		<rom name="fh1_dt2.13r" size="131072" crc="12453ba4"/>
 		<rom name="fh1_dt3.13n" size="131072" crc="50bab9da"/>
 		<rom name="fh1_vo1.bin" size="524288" crc="07560fc7"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -60225,6 +60352,7 @@
 		<rom name="fx_dat3.13n" merge="fx_dat3.13n" size="262144" crc="605725f7"/>
 		<rom name="fx1_1.5b" merge="fx1_1.5b" size="256" crc="85ffd753"/>
 		<rom name="fx_voi-1.3m" merge="fx_voi-1.3m" size="524288" crc="6173364f"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -60271,6 +60399,7 @@
 		<rom name="fx_dat3.13n" merge="fx_dat3.13n" size="262144" crc="605725f7"/>
 		<rom name="fx1_1.5b" merge="fx1_1.5b" size="256" crc="85ffd753"/>
 		<rom name="fx_voi-1.3m" merge="fx_voi-1.3m" size="524288" crc="6173364f"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -60317,6 +60446,7 @@
 		<rom name="fx_dat3.13n" size="262144" crc="605725f7"/>
 		<rom name="fx1_1.5b" size="256" crc="85ffd753"/>
 		<rom name="fx_voi-1.3m" size="524288" crc="6173364f"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -60673,6 +60803,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -75086,81 +75217,6 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="hardyard10" cloneof="hardyard" romof="hardyard" sourcefile="pst90s/d_itech32.cpp">
-		<description>Hard Yardage (v1.00)</description>
-		<year>1993</year>
-		<manufacturer>Strata / Incredible Technologies</manufacturer>
-		<rom name="fb00_v1.0_u83.u83" size="262144" crc="f839393c"/>
-		<rom name="fb01_v1.0_u88.u88" size="262144" crc="ca444702"/>
-		<rom name="fb_snd_v1.0_u17.u17" size="131072" crc="6c6db5b8"/>
-		<rom name="footbal_0.grom0.itfb0" merge="footbal_0.grom0.itfb0" size="1048576" crc="0b7781af"/>
-		<rom name="footbal_1.grom5.itfb1" merge="footbal_1.grom5.itfb1" size="1048576" crc="178d0f9b"/>
-		<rom name="footbal_2.grom10.itfb2" merge="footbal_2.grom10.itfb2" size="1048576" crc="0a17231e"/>
-		<rom name="footbal_3.grom15.itfb3" merge="footbal_3.grom15.itfb3" size="1048576" crc="104456af"/>
-		<rom name="footbal_4.grom1.itfb4" merge="footbal_4.grom1.itfb4" size="1048576" crc="2cb6f454"/>
-		<rom name="footbal_5.grom6.itfb5" merge="footbal_5.grom6.itfb5" size="1048576" crc="9b19b873"/>
-		<rom name="footbal_6.grom11.itfb6" merge="footbal_6.grom11.itfb6" size="1048576" crc="58694394"/>
-		<rom name="footbal_7.grom16.itfb7" merge="footbal_7.grom16.itfb7" size="1048576" crc="9b7a2d1a"/>
-		<rom name="itfb-8.grom2.itfb8" merge="itfb-8.grom2.itfb8" size="131072" crc="a1656bf8"/>
-		<rom name="itfb-9.grom7.itfb9" merge="itfb-9.grom7.itfb9" size="131072" crc="2afa9e10"/>
-		<rom name="itfb-10.grom12.itfb10" merge="itfb-10.grom12.itfb10" size="131072" crc="d5d15b38"/>
-		<rom name="itfb-11.grom17.itfb11" merge="itfb-11.grom17.itfb11" size="131072" crc="cd4f0df0"/>
-		<rom name="ensoniq.2m" merge="ensoniq.2m" size="2097152" crc="9fdc4825"/>
-		<rom name="fb_srom00.srom0" merge="fb_srom00.srom0" size="524288" crc="b0a76ad2"/>
-		<rom name="fb_srom01.srom1" merge="fb_srom01.srom1" size="524288" crc="9fbf6a02"/>
-		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="hardyard11" cloneof="hardyard" romof="hardyard" sourcefile="pst90s/d_itech32.cpp">
-		<description>Hard Yardage (v1.10)</description>
-		<year>1993</year>
-		<manufacturer>Strata / Incredible Technologies</manufacturer>
-		<rom name="fb00_v1.10_u83.u83" size="262144" crc="603f8a03"/>
-		<rom name="fb01_v1.10_u88.u88" size="262144" crc="7b11db88"/>
-		<rom name="fb_snd_v1.1_u17.u17" merge="fb_snd_v1.1_u17.u17" size="131072" crc="d221b121"/>
-		<rom name="footbal_0.grom0.itfb0" merge="footbal_0.grom0.itfb0" size="1048576" crc="0b7781af"/>
-		<rom name="footbal_1.grom5.itfb1" merge="footbal_1.grom5.itfb1" size="1048576" crc="178d0f9b"/>
-		<rom name="footbal_2.grom10.itfb2" merge="footbal_2.grom10.itfb2" size="1048576" crc="0a17231e"/>
-		<rom name="footbal_3.grom15.itfb3" merge="footbal_3.grom15.itfb3" size="1048576" crc="104456af"/>
-		<rom name="footbal_4.grom1.itfb4" merge="footbal_4.grom1.itfb4" size="1048576" crc="2cb6f454"/>
-		<rom name="footbal_5.grom6.itfb5" merge="footbal_5.grom6.itfb5" size="1048576" crc="9b19b873"/>
-		<rom name="footbal_6.grom11.itfb6" merge="footbal_6.grom11.itfb6" size="1048576" crc="58694394"/>
-		<rom name="footbal_7.grom16.itfb7" merge="footbal_7.grom16.itfb7" size="1048576" crc="9b7a2d1a"/>
-		<rom name="itfb-8.grom2.itfb8" merge="itfb-8.grom2.itfb8" size="131072" crc="a1656bf8"/>
-		<rom name="itfb-9.grom7.itfb9" merge="itfb-9.grom7.itfb9" size="131072" crc="2afa9e10"/>
-		<rom name="itfb-10.grom12.itfb10" merge="itfb-10.grom12.itfb10" size="131072" crc="d5d15b38"/>
-		<rom name="itfb-11.grom17.itfb11" merge="itfb-11.grom17.itfb11" size="131072" crc="cd4f0df0"/>
-		<rom name="ensoniq.2m" merge="ensoniq.2m" size="2097152" crc="9fdc4825"/>
-		<rom name="fb_srom00.srom0" merge="fb_srom00.srom0" size="524288" crc="b0a76ad2"/>
-		<rom name="fb_srom01.srom1" merge="fb_srom01.srom1" size="524288" crc="9fbf6a02"/>
-		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="hardyard" sourcefile="pst90s/d_itech32.cpp">
-		<description>Hard Yardage (v1.20)</description>
-		<year>1993</year>
-		<manufacturer>Strata / Incredible Technologies</manufacturer>
-		<rom name="fb00_v1.20_u83.u83" size="262144" crc="c7497692"/>
-		<rom name="fb01_v1.20_u88.u88" size="262144" crc="3320c79a"/>
-		<rom name="fb_snd_v1.1_u17.u17" size="131072" crc="d221b121"/>
-		<rom name="footbal_0.grom0.itfb0" size="1048576" crc="0b7781af"/>
-		<rom name="footbal_1.grom5.itfb1" size="1048576" crc="178d0f9b"/>
-		<rom name="footbal_2.grom10.itfb2" size="1048576" crc="0a17231e"/>
-		<rom name="footbal_3.grom15.itfb3" size="1048576" crc="104456af"/>
-		<rom name="footbal_4.grom1.itfb4" size="1048576" crc="2cb6f454"/>
-		<rom name="footbal_5.grom6.itfb5" size="1048576" crc="9b19b873"/>
-		<rom name="footbal_6.grom11.itfb6" size="1048576" crc="58694394"/>
-		<rom name="footbal_7.grom16.itfb7" size="1048576" crc="9b7a2d1a"/>
-		<rom name="itfb-8.grom2.itfb8" size="131072" crc="a1656bf8"/>
-		<rom name="itfb-9.grom7.itfb9" size="131072" crc="2afa9e10"/>
-		<rom name="itfb-10.grom12.itfb10" size="131072" crc="d5d15b38"/>
-		<rom name="itfb-11.grom17.itfb11" size="131072" crc="cd4f0df0"/>
-		<rom name="ensoniq.2m" size="2097152" crc="9fdc4825"/>
-		<rom name="fb_srom00.srom0" size="524288" crc="b0a76ad2"/>
-		<rom name="fb_srom01.srom1" size="524288" crc="9fbf6a02"/>
-		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="harem" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Harem</description>
 		<year>1983</year>
@@ -78934,6 +78990,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -78957,6 +79014,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -78980,6 +79038,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -79002,6 +79061,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -86648,7 +86708,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="ket1" cloneof="ket" romof="ket" sourcefile="pgm/d_pgm.cpp">
-		<description>Ketsui: Kizuna Jigoku Tachi (2003/01/01. Master Ver.) (alt rom fill)</description>
+		<description>Ketsui: Kizuna Jigoku Tachi (2003/01/01. Master Ver.) (alt ROM fill)</description>
 		<year>2002</year>
 		<manufacturer>Cave (AMI license)</manufacturer>
 		<rom name="ketsui_v100_alt_fill.u38" size="2097152" crc="e140f8a4"/>
@@ -86698,6 +86758,7 @@
 		<rom name="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="vertical" width="224" height="448" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -88889,12 +88950,14 @@
 		<rom name="pgm_b0600.u5" merge="pgm_b0600.u5" size="8388608" crc="7d3cd059"/>
 		<rom name="pgm_b0601.u7" merge="pgm_b0601.u7" size="4194304" crc="a0bb1c2f"/>
 		<rom name="pgm_m0600.u3" merge="pgm_m0600.u3" size="4194304" crc="3ada4fd6"/>
+		<rom name="kov_igs027a.bin" size="16384" status="nodump"/>
 		<rom name="pgm_t01s.rom" merge="pgm_t01s.rom" size="2097152" crc="1a7123a0"/>
 		<rom name="pgm_m01s.rom" merge="pgm_m01s.rom" size="2097152" crc="45ae7159"/>
 		<rom name="pgm_p01s.u20" merge="pgm_p01s.u20" size="131072" crc="e42b166e"/>
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -88922,6 +88985,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -88945,6 +89009,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -88968,6 +89033,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -88995,6 +89061,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89043,6 +89110,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89068,6 +89136,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89093,6 +89162,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89118,6 +89188,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89143,6 +89214,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89168,6 +89240,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89193,6 +89266,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89218,6 +89292,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89520,6 +89595,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89545,6 +89621,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89570,6 +89647,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89595,6 +89673,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89620,6 +89699,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89645,6 +89725,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89699,6 +89780,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89863,6 +89945,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89887,6 +89970,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89908,12 +89992,14 @@
 		<rom name="pgm_b0600.u5" merge="pgm_b0600.u5" size="8388608" crc="7d3cd059"/>
 		<rom name="pgm_b0601.u7" merge="pgm_b0601.u7" size="4194304" crc="a0bb1c2f"/>
 		<rom name="pgm_m0600.u3" merge="pgm_m0600.u3" size="4194304" crc="3ada4fd6"/>
+		<rom name="kov_igs027a.bin" size="16384" status="nodump"/>
 		<rom name="pgm_t01s.rom" merge="pgm_t01s.rom" size="2097152" crc="1a7123a0"/>
 		<rom name="pgm_m01s.rom" merge="pgm_m01s.rom" size="2097152" crc="45ae7159"/>
 		<rom name="pgm_p01s.u20" merge="pgm_p01s.u20" size="131072" crc="e42b166e"/>
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89938,6 +90024,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -89966,6 +90053,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90035,6 +90123,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90060,6 +90149,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90085,6 +90175,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90110,6 +90201,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90135,6 +90227,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90159,6 +90252,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90183,6 +90277,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90207,6 +90302,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90228,6 +90324,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90254,6 +90351,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90279,6 +90377,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90303,6 +90402,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90327,6 +90427,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90352,6 +90453,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90377,6 +90479,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90403,6 +90506,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90429,6 +90533,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -90455,6 +90560,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -91845,6 +91951,7 @@
 		<rom name="ky1_d2.13r" size="131072" crc="eb6d19c8"/>
 		<rom name="ky1_d3.13n" size="131072" crc="95674701"/>
 		<rom name="ky1_v1.bin" size="524288" crc="5ff81aec"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -91877,6 +91984,7 @@
 		<rom name="ky1_d2.13r" merge="ky1_d2.13r" size="131072" crc="eb6d19c8"/>
 		<rom name="ky1_d3.13n" merge="ky1_d3.13n" size="131072" crc="95674701"/>
 		<rom name="ky1_v1.bin" merge="ky1_v1.bin" size="524288" crc="5ff81aec"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -96098,6 +96206,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -96123,6 +96232,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -96148,6 +96258,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -96173,6 +96284,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -96199,6 +96311,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100263,6 +100376,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100290,6 +100404,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100316,6 +100431,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100342,6 +100458,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100368,6 +100485,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100394,6 +100512,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100425,6 +100544,7 @@
 		<rom name="mv1-dat0.13s" size="131072" crc="e15f412e"/>
 		<rom name="mv1-dat1.13p" size="131072" crc="73e1545a"/>
 		<rom name="mv1-voi1.bin" size="524288" crc="de5cac09"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -100459,6 +100579,7 @@
 		<rom name="mv2_dat2.13r" size="131072" crc="f5c6408c"/>
 		<rom name="mv2_dat3.13n" size="131072" crc="6df76955"/>
 		<rom name="mv1-voi1.bin" merge="mv1-voi1.bin" size="524288" crc="de5cac09"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -111641,6 +111762,7 @@
 		<rom name="mn1_dat1.13p" size="131072" crc="d2a918fb"/>
 		<rom name="mn_voi1.bin" size="524288" crc="2ca3573c"/>
 		<rom name="mn_voi2.bin" size="524288" crc="466c3b47"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -111678,6 +111800,7 @@
 		<rom name="mn1_dat1.13p" merge="mn1_dat1.13p" size="131072" crc="d2a918fb"/>
 		<rom name="mn_voi1.bin" merge="mn_voi1.bin" size="524288" crc="2ca3573c"/>
 		<rom name="mn_voi2.bin" merge="mn_voi2.bin" size="524288" crc="466c3b47"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -114017,6 +114140,22 @@
 		<video type="raster" orientation="horizontal" width="400" height="254" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mkla3bl" cloneof="mk" romof="mk" sourcefile="midway/d_yunit.cpp">
+		<comment>Bootleg</comment>
+		<description>Mortal Kombat (Victor bootleg of rev 3.0 08/31/92)</description>
+		<year>1992</year>
+		<manufacturer>bootleg (Victor)</manufacturer>
+		<rom name="m1-a003" merge="sl1_mortal_kombat_u3_sound_rom.u3" size="262144" crc="c615844c"/>
+		<rom name="m1-a001" merge="sl1_mortal_kombat_u12_sound_rom.u12" size="262144" crc="258bd7f9"/>
+		<rom name="m1-a002" merge="sl1_mortal_kombat_u13_sound_rom.u13" size="262144" crc="7b7ec3b6"/>
+		<rom name="ax422-m1-5" size="524288" crc="2ce843c5"/>
+		<rom name="ax422-m1-4" size="524288" crc="49a46e10"/>
+		<rom name="pw3412-m1-a" size="2097152" crc="87776f14"/>
+		<rom name="pw3412-m1-b" size="2097152" crc="30724e04"/>
+		<rom name="pw3412-m1-c" size="2097152" crc="96612f94"/>
+		<video type="raster" orientation="horizontal" width="400" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mkyawdim" cloneof="mk" romof="mk" sourcefile="midway/d_yunit.cpp">
 		<comment>Bootleg</comment>
 		<description>Mortal Kombat (Yawdim bootleg, set 1)</description>
@@ -114127,6 +114266,12 @@
 		<rom name="29.bin" size="524288" crc="2a6c10a0"/>
 		<rom name="28.bin" size="524288" crc="23308979"/>
 		<rom name="27.bin" size="524288" crc="cafc47bb"/>
+		<rom name="16as15hb1.u143" size="279" crc="90454160"/>
+		<rom name="16as15hb1.u18" size="279" crc="99d3af1c"/>
+		<rom name="gal20v8a-25lp.1" size="343" crc="23366379"/>
+		<rom name="gal20v8a-25lp.2" size="343" crc="23366379"/>
+		<rom name="gal20v8a-25lp.3" size="343" crc="25f7e58d"/>
+		<rom name="gal20v8a-25lp.4" size="343" crc="25f7e58d"/>
 		<video type="raster" orientation="horizontal" width="400" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -117322,7 +117467,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="mysticmp" cloneof="mysticm" romof="mysticm" sourcefile="pre90s/d_williams.cpp">
-		<comment>Bad Colors</comment>
+		<comment>Prototype, Bad Colors</comment>
 		<description>Mystic Marathon (prototype)</description>
 		<year>1983</year>
 		<manufacturer>Williams</manufacturer>
@@ -121516,6 +121661,81 @@
 		<video type="raster" orientation="vertical" width="208" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="hardyard10" cloneof="hardyard" romof="hardyard" sourcefile="pst90s/d_itech32.cpp">
+		<description>NFL Hard Yardage (v1.00)</description>
+		<year>1993</year>
+		<manufacturer>Strata / Incredible Technologies</manufacturer>
+		<rom name="fb00_v1.0_u83.u83" size="262144" crc="f839393c"/>
+		<rom name="fb01_v1.0_u88.u88" size="262144" crc="ca444702"/>
+		<rom name="fb_snd_v1.0_u17.u17" size="131072" crc="6c6db5b8"/>
+		<rom name="footbal_0.grom0.itfb0" merge="footbal_0.grom0.itfb0" size="1048576" crc="0b7781af"/>
+		<rom name="footbal_1.grom5.itfb1" merge="footbal_1.grom5.itfb1" size="1048576" crc="178d0f9b"/>
+		<rom name="footbal_2.grom10.itfb2" merge="footbal_2.grom10.itfb2" size="1048576" crc="0a17231e"/>
+		<rom name="footbal_3.grom15.itfb3" merge="footbal_3.grom15.itfb3" size="1048576" crc="104456af"/>
+		<rom name="footbal_4.grom1.itfb4" merge="footbal_4.grom1.itfb4" size="1048576" crc="2cb6f454"/>
+		<rom name="footbal_5.grom6.itfb5" merge="footbal_5.grom6.itfb5" size="1048576" crc="9b19b873"/>
+		<rom name="footbal_6.grom11.itfb6" merge="footbal_6.grom11.itfb6" size="1048576" crc="58694394"/>
+		<rom name="footbal_7.grom16.itfb7" merge="footbal_7.grom16.itfb7" size="1048576" crc="9b7a2d1a"/>
+		<rom name="itfb-8.grom2.itfb8" merge="itfb-8.grom2.itfb8" size="131072" crc="a1656bf8"/>
+		<rom name="itfb-9.grom7.itfb9" merge="itfb-9.grom7.itfb9" size="131072" crc="2afa9e10"/>
+		<rom name="itfb-10.grom12.itfb10" merge="itfb-10.grom12.itfb10" size="131072" crc="d5d15b38"/>
+		<rom name="itfb-11.grom17.itfb11" merge="itfb-11.grom17.itfb11" size="131072" crc="cd4f0df0"/>
+		<rom name="ensoniq.2m" merge="ensoniq.2m" size="2097152" crc="9fdc4825"/>
+		<rom name="fb_srom00.srom0" merge="fb_srom00.srom0" size="524288" crc="b0a76ad2"/>
+		<rom name="fb_srom01.srom1" merge="fb_srom01.srom1" size="524288" crc="9fbf6a02"/>
+		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hardyard11" cloneof="hardyard" romof="hardyard" sourcefile="pst90s/d_itech32.cpp">
+		<description>NFL Hard Yardage (v1.10)</description>
+		<year>1993</year>
+		<manufacturer>Strata / Incredible Technologies</manufacturer>
+		<rom name="fb00_v1.10_u83.u83" size="262144" crc="603f8a03"/>
+		<rom name="fb01_v1.10_u88.u88" size="262144" crc="7b11db88"/>
+		<rom name="fb_snd_v1.1_u17.u17" merge="fb_snd_v1.1_u17.u17" size="131072" crc="d221b121"/>
+		<rom name="footbal_0.grom0.itfb0" merge="footbal_0.grom0.itfb0" size="1048576" crc="0b7781af"/>
+		<rom name="footbal_1.grom5.itfb1" merge="footbal_1.grom5.itfb1" size="1048576" crc="178d0f9b"/>
+		<rom name="footbal_2.grom10.itfb2" merge="footbal_2.grom10.itfb2" size="1048576" crc="0a17231e"/>
+		<rom name="footbal_3.grom15.itfb3" merge="footbal_3.grom15.itfb3" size="1048576" crc="104456af"/>
+		<rom name="footbal_4.grom1.itfb4" merge="footbal_4.grom1.itfb4" size="1048576" crc="2cb6f454"/>
+		<rom name="footbal_5.grom6.itfb5" merge="footbal_5.grom6.itfb5" size="1048576" crc="9b19b873"/>
+		<rom name="footbal_6.grom11.itfb6" merge="footbal_6.grom11.itfb6" size="1048576" crc="58694394"/>
+		<rom name="footbal_7.grom16.itfb7" merge="footbal_7.grom16.itfb7" size="1048576" crc="9b7a2d1a"/>
+		<rom name="itfb-8.grom2.itfb8" merge="itfb-8.grom2.itfb8" size="131072" crc="a1656bf8"/>
+		<rom name="itfb-9.grom7.itfb9" merge="itfb-9.grom7.itfb9" size="131072" crc="2afa9e10"/>
+		<rom name="itfb-10.grom12.itfb10" merge="itfb-10.grom12.itfb10" size="131072" crc="d5d15b38"/>
+		<rom name="itfb-11.grom17.itfb11" merge="itfb-11.grom17.itfb11" size="131072" crc="cd4f0df0"/>
+		<rom name="ensoniq.2m" merge="ensoniq.2m" size="2097152" crc="9fdc4825"/>
+		<rom name="fb_srom00.srom0" merge="fb_srom00.srom0" size="524288" crc="b0a76ad2"/>
+		<rom name="fb_srom01.srom1" merge="fb_srom01.srom1" size="524288" crc="9fbf6a02"/>
+		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="hardyard" sourcefile="pst90s/d_itech32.cpp">
+		<description>NFL Hard Yardage (v1.20)</description>
+		<year>1993</year>
+		<manufacturer>Strata / Incredible Technologies</manufacturer>
+		<rom name="fb00_v1.20_u83.u83" size="262144" crc="c7497692"/>
+		<rom name="fb01_v1.20_u88.u88" size="262144" crc="3320c79a"/>
+		<rom name="fb_snd_v1.1_u17.u17" size="131072" crc="d221b121"/>
+		<rom name="footbal_0.grom0.itfb0" size="1048576" crc="0b7781af"/>
+		<rom name="footbal_1.grom5.itfb1" size="1048576" crc="178d0f9b"/>
+		<rom name="footbal_2.grom10.itfb2" size="1048576" crc="0a17231e"/>
+		<rom name="footbal_3.grom15.itfb3" size="1048576" crc="104456af"/>
+		<rom name="footbal_4.grom1.itfb4" size="1048576" crc="2cb6f454"/>
+		<rom name="footbal_5.grom6.itfb5" size="1048576" crc="9b19b873"/>
+		<rom name="footbal_6.grom11.itfb6" size="1048576" crc="58694394"/>
+		<rom name="footbal_7.grom16.itfb7" size="1048576" crc="9b7a2d1a"/>
+		<rom name="itfb-8.grom2.itfb8" size="131072" crc="a1656bf8"/>
+		<rom name="itfb-9.grom7.itfb9" size="131072" crc="2afa9e10"/>
+		<rom name="itfb-10.grom12.itfb10" size="131072" crc="d5d15b38"/>
+		<rom name="itfb-11.grom17.itfb11" size="131072" crc="cd4f0df0"/>
+		<rom name="ensoniq.2m" size="2097152" crc="9fdc4825"/>
+		<rom name="fb_srom00.srom0" size="524288" crc="b0a76ad2"/>
+		<rom name="fb_srom01.srom1" size="524288" crc="9fbf6a02"/>
+		<video type="raster" orientation="horizontal" width="384" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ngem2k" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
 		<description>NGEM2K (HB, beta 2006-01-18)</description>
@@ -121849,7 +122069,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="nslasherj" cloneof="nslasher" romof="nslasher" sourcefile="dataeast/d_deco32.cpp">
-		<description>Night Slashers (Japan Rev 1.2, DE-0397-0 PCB)</description>
+		<description>Night Slashers (Japan Ver. 1.2, DE-0397-0 PCB)</description>
 		<year>1994</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="lx-00.1f" size="524288" crc="6ed5fb88"/>
@@ -121875,7 +122095,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="nslasher" sourcefile="dataeast/d_deco32.cpp">
-		<description>Night Slashers (Korea Rev 1.3, DE-0397-0 PCB)</description>
+		<description>Night Slashers (Korea Ver. 1.3, DE-0397-0 PCB)</description>
 		<year>1994</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="mainprg.1f" size="524288" crc="507acbae"/>
@@ -121900,34 +122120,8 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="nslashers" cloneof="nslasher" romof="nslasher" sourcefile="dataeast/d_deco32.cpp">
-		<description>Night Slashers (Over Sea Rev 1.2, DE-0397-0 PCB)</description>
-		<year>1994</year>
-		<manufacturer>Data East Corporation</manufacturer>
-		<rom name="ly-00.1f" size="524288" crc="fa0646f9"/>
-		<rom name="ly-01.2f" size="524288" crc="ae508149"/>
-		<rom name="sndprg.17l" merge="sndprg.17l" size="65536" crc="18939e92"/>
-		<rom name="mbh-00.8c" merge="mbh-00.8c" size="2097152" crc="a877f8a3"/>
-		<rom name="mbh-01.9c" merge="mbh-01.9c" size="2097152" crc="1853dafc"/>
-		<rom name="mbh-02.14c" merge="mbh-02.14c" size="2097152" crc="b2f158a1"/>
-		<rom name="mbh-04.16c" merge="mbh-04.16c" size="2097152" crc="eecfe06d"/>
-		<rom name="mbh-03.15c" merge="mbh-03.15c" size="524288" crc="787787e3"/>
-		<rom name="mbh-05.17c" merge="mbh-05.17c" size="524288" crc="1d2b7c17"/>
-		<rom name="mbh-06.18c" merge="mbh-06.18c" size="1048576" crc="038c2127"/>
-		<rom name="mbh-07.19c" merge="mbh-07.19c" size="262144" crc="bbd22323"/>
-		<rom name="mbh-08.16e" merge="mbh-08.16e" size="524288" crc="cdd7f8cb"/>
-		<rom name="mbh-09.18e" merge="mbh-09.18e" size="524288" crc="33fa2121"/>
-		<rom name="mbh-10.14l" merge="mbh-10.14l" size="524288" crc="c4d6b116"/>
-		<rom name="mbh-11.16l" merge="mbh-11.16l" size="524288" crc="0ec40b6b"/>
-		<rom name="ln-00.j7" merge="ln-00.j7" size="512" crc="5e83eaf3"/>
-		<rom name="vm-00.3d" size="279" status="nodump"/>
-		<rom name="vm-01.4d" size="279" status="nodump"/>
-		<rom name="vm-02.8j" merge="vm-02.8j" size="279" crc="53692426"/>
-		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="nslasheru" cloneof="nslasher" romof="nslasher" sourcefile="dataeast/d_deco32.cpp">
-		<description>Night Slashers (US Rev 1.2, DE-0395-1 PCB)</description>
+		<description>Night Slashers (US Ver. 1.2, DE-0395-1 PCB)</description>
 		<year>1994</year>
 		<manufacturer>Data East Corporation</manufacturer>
 		<rom name="00.f1" size="524288" crc="944f3329"/>
@@ -121948,6 +122142,32 @@
 		<rom name="ln-00.j7" merge="ln-00.j7" size="512" crc="5e83eaf3"/>
 		<rom name="ve-00.3d" size="279" crc="384d316c"/>
 		<rom name="ve-01a.4d" size="279" crc="109613c8"/>
+		<rom name="vm-02.8j" merge="vm-02.8j" size="279" crc="53692426"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="nslashers" cloneof="nslasher" romof="nslasher" sourcefile="dataeast/d_deco32.cpp">
+		<description>Night Slashers (World Ver. 1.2, DE-0397-0 PCB)</description>
+		<year>1994</year>
+		<manufacturer>Data East Corporation</manufacturer>
+		<rom name="ly-00.1f" size="524288" crc="fa0646f9"/>
+		<rom name="ly-01.2f" size="524288" crc="ae508149"/>
+		<rom name="sndprg.17l" merge="sndprg.17l" size="65536" crc="18939e92"/>
+		<rom name="mbh-00.8c" merge="mbh-00.8c" size="2097152" crc="a877f8a3"/>
+		<rom name="mbh-01.9c" merge="mbh-01.9c" size="2097152" crc="1853dafc"/>
+		<rom name="mbh-02.14c" merge="mbh-02.14c" size="2097152" crc="b2f158a1"/>
+		<rom name="mbh-04.16c" merge="mbh-04.16c" size="2097152" crc="eecfe06d"/>
+		<rom name="mbh-03.15c" merge="mbh-03.15c" size="524288" crc="787787e3"/>
+		<rom name="mbh-05.17c" merge="mbh-05.17c" size="524288" crc="1d2b7c17"/>
+		<rom name="mbh-06.18c" merge="mbh-06.18c" size="1048576" crc="038c2127"/>
+		<rom name="mbh-07.19c" merge="mbh-07.19c" size="262144" crc="bbd22323"/>
+		<rom name="mbh-08.16e" merge="mbh-08.16e" size="524288" crc="cdd7f8cb"/>
+		<rom name="mbh-09.18e" merge="mbh-09.18e" size="524288" crc="33fa2121"/>
+		<rom name="mbh-10.14l" merge="mbh-10.14l" size="524288" crc="c4d6b116"/>
+		<rom name="mbh-11.16l" merge="mbh-11.16l" size="524288" crc="0ec40b6b"/>
+		<rom name="ln-00.j7" merge="ln-00.j7" size="512" crc="5e83eaf3"/>
+		<rom name="vm-00.3d" size="279" status="nodump"/>
+		<rom name="vm-01.4d" size="279" status="nodump"/>
 		<rom name="vm-02.8j" merge="vm-02.8j" size="279" crc="53692426"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -124540,7 +124760,7 @@
 		<rom name="rom7.bin" size="2048" crc="19e1ac79"/>
 		<rom name="rom9.bin" size="2048" crc="b8ac5966"/>
 		<rom name="rom6.bin" merge="defend.11" size="2048" crc="9deaf6d9"/>
-		<rom name="rom8.bin" merge="defend.7" size="2048" crc="339e092e"/>
+		<rom name="rom8.bin" size="2048" crc="4af2142f"/>
 		<rom name="rom5.bin" size="2048" crc="871f75a0"/>
 		<rom name="rom4.bin" merge="defend.6" size="2048" crc="65f4efd1"/>
 		<rom name="rom12.bin" size="2048" crc="f122d9c9"/>
@@ -125061,6 +125281,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125089,6 +125310,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125117,6 +125339,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125145,6 +125368,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125173,6 +125397,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125198,6 +125423,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125223,6 +125449,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125248,6 +125475,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125273,6 +125501,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125298,6 +125527,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125322,6 +125552,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125346,6 +125577,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125370,6 +125602,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125616,6 +125849,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125650,6 +125884,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125680,6 +125915,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125714,6 +125950,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -125744,6 +125981,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -126945,6 +127183,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130069,7 +130308,7 @@
 		<rom name="16-2.97" merge="16-2.97" size="512" crc="7f95d4b2"/>
 		<rom name="16-6.59" merge="16-6.59" size="256" crc="ec4faf5b"/>
 		<rom name="tvg12-16.2" size="4096" crc="3abc6ba8"/>
-		<rom name="sun-8212.ic3" size="2048" status="nodump"/>
+		<rom name="sun-8212.ic3" merge="sun-8212.ic3" size="2048" crc="8869611e"/>
 		<video type="raster" orientation="horizontal" width="240" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130172,6 +130411,7 @@
 		<rom name="ps1_dat0.13s" merge="ps2_dat0.13s" size="131072" crc="ee4194b0"/>
 		<rom name="ps1_dat1.13p" merge="ps2_dat1.13p" size="131072" crc="5b22d714"/>
 		<rom name="ps_voi-1.voice1" merge="ps_voi-1.voice1" size="524288" crc="f67376ed"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -130212,6 +130452,7 @@
 		<rom name="ps2_dat0.13s" size="131072" crc="ee4194b0"/>
 		<rom name="ps2_dat1.13p" size="131072" crc="5b22d714"/>
 		<rom name="ps_voi-1.voice1" size="524288" crc="f67376ed"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -130690,6 +130931,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130715,6 +130957,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130737,6 +130980,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130759,6 +131003,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130781,6 +131026,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -130803,6 +131049,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -138840,6 +139087,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -138861,6 +139109,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -139011,6 +139260,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -139032,6 +139282,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -139397,7 +139648,7 @@
 	</game>
 	<game name="kovqhsgs" cloneof="kovsh" romof="kovsh" sourcefile="pgm/d_pgm.cpp">
 		<comment>Bootleg</comment>
-		<description>Quan Huang San Guo Te Bie Ban (bootleg of Knights of Valour Super Heroes, V303CN, set 1)</description>
+		<description>Quan Huang San Guo Te Bie Ban (bootleg of Knights of Valour Super Heroes, V303CN, Nov 21 2008 19:03:49, set 1)</description>
 		<year>2008</year>
 		<manufacturer>bootleg (WDF)</manufacturer>
 		<rom name="qhsg_c51.rom" size="4194304" crc="e5cbac85"/>
@@ -139414,12 +139665,13 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="kovqhsgsa" cloneof="kovsh" romof="kovsh" sourcefile="pgm/d_pgm.cpp">
 		<comment>Bootleg</comment>
-		<description>Quan Huang San Guo Te Bie Ban (bootleg of Knights of Valour Super Heroes, V303CN, set 2)</description>
+		<description>Quan Huang San Guo Te Bie Ban (bootleg of Knights of Valour Super Heroes, V303CN, Nov 21 2008 19:03:49, set 2)</description>
 		<year>2008</year>
 		<manufacturer>bootleg (WDF)</manufacturer>
 		<rom name="qhsga_c51.rom" size="4194304" crc="4c5ea070"/>
@@ -139436,12 +139688,13 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="kovqhsgsd" cloneof="kovsh" romof="kovsh" sourcefile="pgm/d_pgm.cpp">
 		<comment>Bootleg</comment>
-		<description>Quan Huang San Guo Te Bie Ban (bootleg of Knights of Valour Super Heroes, V303CN, unencrypted)</description>
+		<description>Quan Huang San Guo Te Bie Ban (bootleg of Knights of Valour Super Heroes, V303CN, Nov 21 2008 19:03:49, unencrypted)</description>
 		<year>2008</year>
 		<manufacturer>bootleg (WDF)</manufacturer>
 		<rom name="de_qhsg_c51.rom" size="4194304" crc="e020fbd0"/>
@@ -139456,6 +139709,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -140498,6 +140752,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -147851,6 +148106,8 @@
 		<rom name="9024.2c" size="512" crc="bcb88396"/>
 		<rom name="9023.1c" size="512" crc="9f86ed5b"/>
 		<rom name="9035.14d" size="512" crc="c9979802"/>
+		<rom name="82s131.4d" size="512" status="nodump"/>
+		<rom name="82s131.5d" size="512" status="nodump"/>
 		<sample name="splash" />
 		<sample name="scream" />
 		<sample name="chute" />
@@ -149457,6 +149714,8 @@
 		<rom name="4012.2c" size="512" crc="47b3e39c"/>
 		<rom name="4013.1c" size="512" crc="b2991e7e"/>
 		<rom name="6000.14d" size="32" crc="a402ac06"/>
+		<rom name="5000.4d" size="512" crc="e69d8fc6"/>
+		<rom name="5001.5d" size="512" crc="5022c4ea"/>
 		<sample name="hit" />
 		<sample name="roll" />
 		<sample name="balldrop" />
@@ -150683,6 +150942,7 @@
 		<rom name="plhs18p8a.4g" size="329" crc="1932dd5e"/>
 		<rom name="plhs18p8a.5f" size="329" crc="ab2fd9c2"/>
 		<rom name="pal16l8.9d" size="260" status="nodump"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -150711,6 +150971,7 @@
 		<rom name="rts1_data2.13r" size="131072" crc="8e850a2a"/>
 		<rom name="rts_voi1.3m" size="524288" crc="e42027cd"/>
 		<rom name="rts_voi2.3l" size="524288" crc="0c4c2b66"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -151679,6 +151940,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -151706,6 +151968,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154171,6 +154434,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154195,6 +154459,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154219,6 +154484,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154242,6 +154508,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154265,6 +154532,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154291,6 +154559,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154317,6 +154586,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154432,6 +154702,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154810,6 +155081,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154857,6 +155129,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154881,6 +155154,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -154906,6 +155180,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -159175,6 +159450,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -159201,6 +159477,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -185881,6 +186158,7 @@
 		<rom name="sss1dat0.13s" size="262144" crc="db3e6aec"/>
 		<rom name="sss1dat1.13p" size="262144" crc="463b5ba8"/>
 		<rom name="ss_voi1.bin" size="524288" crc="503e51b7"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -185911,6 +186189,7 @@
 		<rom name="ssg1dat2.13r" size="262144" crc="754128aa"/>
 		<rom name="ssg1dat3.13n" size="262144" crc="cb3fed01"/>
 		<rom name="ss_voi1.bin" merge="ss_voi1.bin" size="524288" crc="503e51b7"/>
+		<rom name="lh5762.6n" merge="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -185939,6 +186218,7 @@
 		<rom name="sst1dat0.13s" size="524288" crc="b99c9656"/>
 		<rom name="sst1dat1.13p" size="524288" crc="60cf6281"/>
 		<rom name="ss_voi1.bin" size="524288" crc="503e51b7"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -186022,6 +186302,7 @@
 		<rom name="ss1_dat0.13s" size="262144" crc="6a360f91"/>
 		<rom name="ss1_dat1.13p" size="262144" crc="ab1e487d"/>
 		<rom name="ss_voi1.bin" size="524288" crc="503e51b7"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -186193,7 +186474,7 @@
 		<video type="raster" orientation="vertical" width="240" height="384" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="superbikg" sourcefile="galaxian/d_galaxian.cpp">
+	<game name="superbikg" cloneof="superbik" romof="superbik" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Superbike (Galaxian hardware)</description>
 		<year>1983</year>
 		<manufacturer>Century Electronics</manufacturer>
@@ -186210,6 +186491,27 @@
 		<rom name="mmi6309-mb.bin" size="256" crc="b6b9ff46"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
+	</game>
+	<game name="superbik" sourcefile="d_parent.cpp">
+		<comment>Parent set for working drivers</comment>
+		<description>Superbike</description>
+		<year>1983</year>
+		<manufacturer>Century Electronics</manufacturer>
+		<rom name="sb-gp1.bin" size="4096" crc="f0209700"/>
+		<rom name="sb-gp2.bin" size="4096" crc="1956d687"/>
+		<rom name="sb-gp3.bin" size="4096" crc="ceb27b75"/>
+		<rom name="sb-gp4.bin" size="4096" crc="430b70b3"/>
+		<rom name="sb-gp5.bin" size="4096" crc="013615a3"/>
+		<rom name="sb-sdp1.bin" size="2048" crc="e977c090"/>
+		<rom name="sb-sp1.bin" size="2048" crc="0aeb9ccd"/>
+		<rom name="sb-cp1.bin" size="2048" crc="03ba7760"/>
+		<rom name="sb-cp2.bin" size="2048" crc="04de69f2"/>
+		<rom name="sb-cp3.bin" size="2048" crc="bb7d0b9a"/>
+		<rom name="5b.bin" size="2048" crc="f055a624"/>
+		<rom name="82s185.10h" size="2048" crc="c205bca6"/>
+		<rom name="82s123.10k" size="32" crc="b5221cec"/>
+		<video type="raster" orientation="horizontal" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="preliminary"/>
 	</game>
 	<game name="1942h" cloneof="1942" romof="1942" sourcefile="pre90s/d_1942.cpp">
 		<comment>Hack</comment>
@@ -192963,6 +193265,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -192988,6 +193291,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193013,6 +193317,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193038,6 +193343,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193483,6 +193789,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193509,6 +193816,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193535,6 +193843,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193563,6 +193872,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193591,6 +193901,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193619,6 +193930,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193644,6 +193956,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -193667,6 +193980,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -212229,8 +212543,6 @@
 		<rom name="9001.2c" size="512" crc="0ddc4b45"/>
 		<rom name="9000.1c" size="512" crc="0ddc4b45"/>
 		<rom name="9012.14d" size="512" crc="2fde3930"/>
-		<rom name="dm74s570-d4.4d" size="512" crc="aad8da33"/>
-		<rom name="dm74s570-d5.5d" size="512" crc="ed2493fa"/>
 		<sample name="pop" />
 		<sample name="miss" />
 		<sample name="bounce" />
@@ -214612,7 +214924,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="tshoot" sourcefile="pre90s/d_williams.cpp">
-		<description>Turkey Shoot</description>
+		<comment>Prototype</comment>
+		<description>Turkey Shoot (prototype)</description>
 		<year>1984</year>
 		<manufacturer>Williams</manufacturer>
 		<rom name="rom18.ic55" size="4096" crc="effc33f1"/>
@@ -217435,6 +217748,7 @@
 		<rom name="wd1voi1.bin" size="262144" crc="f1ace193"/>
 		<rom name="wd1voi2.bin" size="131072" crc="e95c5cf3"/>
 		<rom name="valkyrie.nv" size="8192" crc="d5ce4069"/>
+		<rom name="lh5762.6n" size="8192" crc="90db1bf6"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -224396,28 +224710,41 @@
 		<driver status="good"/>
 	</game>
 	<game name="wink" sourcefile="pre90s/d_wink.cpp">
-		<description>Wink (set 1)</description>
-		<year>1985</year>
-		<manufacturer>Midcoin</manufacturer>
-		<rom name="midcoin-wink00.rom" size="16384" crc="044f82d6"/>
-		<rom name="midcoin-wink01.rom" size="16384" crc="acb0a392"/>
-		<rom name="midcoin-wink05.rom" size="8192" crc="c6c9d9cf"/>
-		<rom name="midcoin-wink02.rom" size="8192" crc="d1cd9d06"/>
-		<rom name="midcoin-wink03.rom" size="8192" crc="2346f50c"/>
-		<rom name="midcoin-wink04.rom" size="8192" crc="06dd229b"/>
-		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="winka" cloneof="wink" romof="wink" sourcefile="pre90s/d_wink.cpp">
-		<description>Wink (set 2)</description>
+		<description>Wink (newer)</description>
 		<year>1985</year>
 		<manufacturer>Midcoin</manufacturer>
 		<rom name="wink0.bin" size="16384" crc="554d86e5"/>
 		<rom name="wink1.bin" size="16384" crc="9d8ad539"/>
-		<rom name="wink5.bin" merge="midcoin-wink05.rom" size="8192" crc="c6c9d9cf"/>
-		<rom name="wink2.bin" merge="midcoin-wink02.rom" size="8192" crc="d1cd9d06"/>
-		<rom name="wink3.bin" merge="midcoin-wink03.rom" size="8192" crc="2346f50c"/>
-		<rom name="wink4.bin" merge="midcoin-wink04.rom" size="8192" crc="06dd229b"/>
+		<rom name="wink5.bin" size="8192" crc="c6c9d9cf"/>
+		<rom name="wink2.bin" size="8192" crc="d1cd9d06"/>
+		<rom name="wink3.bin" size="8192" crc="2346f50c"/>
+		<rom name="wink4.bin" size="8192" crc="06dd229b"/>
+		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="winko" cloneof="wink" romof="wink" sourcefile="pre90s/d_wink.cpp">
+		<description>Wink (older)</description>
+		<year>1985</year>
+		<manufacturer>Midcoin</manufacturer>
+		<rom name="midcoin_0.j12.2h" size="16384" crc="044f82d6"/>
+		<rom name="midcoin_1.j15.2g" size="16384" crc="93fd9bd7"/>
+		<rom name="midcoin_5.j46.11h" merge="wink5.bin" size="8192" crc="c6c9d9cf"/>
+		<rom name="midcoin_2.j28.7e" merge="wink2.bin" size="8192" crc="d1cd9d06"/>
+		<rom name="midcoin_3.j30.9e" merge="wink3.bin" size="8192" crc="2346f50c"/>
+		<rom name="midcoin_4.j32.10e" merge="wink4.bin" size="8192" crc="06dd229b"/>
+		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="winkob" cloneof="wink" romof="wink" sourcefile="pre90s/d_wink.cpp">
+		<description>Wink (older, bugfixed)</description>
+		<year>1985</year>
+		<manufacturer>Midcoin</manufacturer>
+		<rom name="midcoin-wink00.rom" size="16384" crc="044f82d6"/>
+		<rom name="midcoin-wink01.rom" size="16384" crc="acb0a392"/>
+		<rom name="midcoin-wink05.rom" merge="wink5.bin" size="8192" crc="c6c9d9cf"/>
+		<rom name="midcoin-wink02.rom" merge="wink2.bin" size="8192" crc="d1cd9d06"/>
+		<rom name="midcoin-wink03.rom" merge="wink3.bin" size="8192" crc="2346f50c"/>
+		<rom name="midcoin-wink04.rom" merge="wink4.bin" size="8192" crc="06dd229b"/>
 		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -226244,7 +226571,7 @@
 		<video type="raster" orientation="horizontal" width="384" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="wcbowldx" cloneof="wcbowl" romof="wcbowl" sourcefile="pst90s/d_itech32.cpp">
+	<game name="wcbowldx200" cloneof="wcbowl" romof="wcbowl" sourcefile="pst90s/d_itech32.cpp">
 		<description>World Class Bowling Deluxe (v2.00)</description>
 		<year>1999</year>
 		<manufacturer>Incredible Technologies</manufacturer>
@@ -226252,6 +226579,34 @@
 		<rom name="wcbd_prom1_2.00.prom1" size="131072" crc="526eded0"/>
 		<rom name="wcbd_prom2_2.00.prom2" size="131072" crc="cb263173"/>
 		<rom name="wcbd_prom3_2.00.prom3" size="131072" crc="43ecad0b"/>
+		<rom name="wcbsnd_u88_4.01.u88" merge="wcbsnd_u88_4.01.u88" size="131072" crc="e97a6d28"/>
+		<rom name="wcbd_grom0_0_s.grm0_0" merge="wcb_grom0_0_s.grm0_0" size="524288" crc="6fcb4246"/>
+		<rom name="wcbd_grom0_1_s.grm0_1" merge="wcb_grom0_1_s.grm0_1" size="524288" crc="2ae31f45"/>
+		<rom name="wcbd_grom0_2_s.grm0_2" merge="wcb_grom0_2_s.grm0_2" size="524288" crc="bccc0f35"/>
+		<rom name="wcbd_grom0_3_s.grm0_3" merge="wcb_grom0_3_s.grm0_3" size="524288" crc="ab1da462"/>
+		<rom name="wcbd_grom1_0_s.grm1_0" merge="wcb_grom1_0_s.grm1_0" size="524288" crc="bdfafd1f"/>
+		<rom name="wcbd_grom1_1_s.grm1_1" merge="wcb_grom1_1_s.grm1_1" size="524288" crc="7d6baa2e"/>
+		<rom name="wcbd_grom1_2_s.grm1_2" merge="wcb_grom1_2_s.grm1_2" size="524288" crc="7513d3de"/>
+		<rom name="wcbd_grom1_3_s.grm1_3" merge="wcb_grom1_3_s.grm1_3" size="524288" crc="e46877e6"/>
+		<rom name="wcbd_grom2_0_s.grm2_0" size="262144" crc="3b4c5a5c"/>
+		<rom name="wcbd_grom2_1_s.grm2_1" size="262144" crc="ed0b9b26"/>
+		<rom name="wcbd_grom2_2_s.grm2_2" size="262144" crc="4b9e345e"/>
+		<rom name="wcbd_grom2_3_s.grm2_3" size="262144" crc="4e13ee7a"/>
+		<rom name="wcb_srom0_s.srom0" merge="wcb_srom0_s.srom0" size="524288" crc="d42dd283"/>
+		<rom name="wcb_srom1_s.srom1" merge="wcb_srom1_s.srom1" size="524288" crc="7a69ab54"/>
+		<rom name="wcb_srom2_s.srom2" merge="wcb_srom2_s.srom2" size="524288" crc="346530a2"/>
+		<rom name="wcb_srom3_s.srom3" merge="wcb_srom3_s.srom3" size="262144" crc="1dfe3a31"/>
+		<video type="raster" orientation="horizontal" width="384" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wcbowldx" cloneof="wcbowl" romof="wcbowl" sourcefile="pst90s/d_itech32.cpp">
+		<description>World Class Bowling Deluxe (v2.01)</description>
+		<year>1999</year>
+		<manufacturer>Incredible Technologies</manufacturer>
+		<rom name="wcbd_prom0_v2.01.prom0" size="131072" crc="36f8a66c"/>
+		<rom name="wcbd_prom1_v2.01.prom1" size="131072" crc="307f31cf"/>
+		<rom name="wcbd_prom2_v2.01.prom2" size="131072" crc="ac076838"/>
+		<rom name="wcbd_prom3_v2.01.prom3" size="131072" crc="6e76e159"/>
 		<rom name="wcbsnd_u88_4.01.u88" merge="wcbsnd_u88_4.01.u88" size="131072" crc="e97a6d28"/>
 		<rom name="wcbd_grom0_0_s.grm0_0" merge="wcb_grom0_0_s.grm0_0" size="524288" crc="6fcb4246"/>
 		<rom name="wcbd_grom0_1_s.grm0_1" merge="wcb_grom0_1_s.grm0_1" size="524288" crc="2ae31f45"/>
@@ -230589,6 +230944,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -230619,6 +230975,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -230651,6 +231008,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -231139,6 +231497,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -231164,7 +231523,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="yiear2" cloneof="yiear" romof="yiear" sourcefile="konami/d_yiear.cpp">
+	<game name="yiearg" cloneof="yiear" romof="yiear" sourcefile="konami/d_yiear.cpp">
 		<description>Yie Ar Kung-Fu (version G)</description>
 		<year>1985</year>
 		<manufacturer>Konami</manufacturer>
@@ -231181,12 +231540,29 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="yiear" sourcefile="konami/d_yiear.cpp">
+	<game name="yieari" cloneof="yiear" romof="yiear" sourcefile="konami/d_yiear.cpp">
 		<description>Yie Ar Kung-Fu (version I)</description>
 		<year>1985</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="407_i08.10d" size="16384" crc="e2d7458b"/>
 		<rom name="407_i07.8d" size="16384" crc="7db7442e"/>
+		<rom name="407_c01.6h" merge="407_c01.6h" size="8192" crc="b68fd91d"/>
+		<rom name="407_c02.7h" merge="407_c02.7h" size="8192" crc="d9b167c6"/>
+		<rom name="407_d05.16h" merge="407_d05.16h" size="16384" crc="45109b29"/>
+		<rom name="407_d06.17h" merge="407_d06.17h" size="16384" crc="1d650790"/>
+		<rom name="407_d03.14h" merge="407_d03.14h" size="16384" crc="e6aa945b"/>
+		<rom name="407_d04.15h" merge="407_d04.15h" size="16384" crc="cc187c22"/>
+		<rom name="407c10.1g" merge="407c10.1g" size="32" crc="c283d71f"/>
+		<rom name="407_c09.8b" merge="407_c09.8b" size="8192" crc="f75a1539"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="yiear" sourcefile="konami/d_yiear.cpp">
+		<description>Yie Ar Kung-Fu (version J)</description>
+		<year>1985</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="407_j08.10d" size="16384" crc="3d5a76a5"/>
+		<rom name="407_j07.8d" size="16384" crc="5ce74284"/>
 		<rom name="407_c01.6h" size="8192" crc="b68fd91d"/>
 		<rom name="407_c02.7h" size="8192" crc="d9b167c6"/>
 		<rom name="407_d05.16h" size="16384" crc="45109b29"/>
@@ -232948,6 +233324,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -232965,6 +233342,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -232987,6 +233365,7 @@
 		<rom name="pgm_p02s.u20" merge="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" merge="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" merge="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" merge="pal.u7" size="279" crc="bfa23d78"/>
 		<video type="raster" orientation="horizontal" width="448" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -233848,6 +234227,7 @@
 		<rom name="pgm_p02s.u20" size="131072" crc="78c15fa2"/>
 		<rom name="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" size="131072" crc="517cf7a2"/>
+		<rom name="pal.u7" size="279" crc="bfa23d78"/>
 	</game>
 	<game isbios="yes" name="skns" sourcefile="pst90s/d_suprnova.cpp">
 		<comment>BIOS only</comment>
