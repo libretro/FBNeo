@@ -2462,7 +2462,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="4in1" sourcefile="galaxian/d_galaxian.cpp">
+	<game name="4funin1" sourcefile="galaxian/d_galaxian.cpp">
 		<description>4 Fun in 1</description>
 		<year>1981</year>
 		<manufacturer>Armenia / Food and Fun</manufacturer>
@@ -4328,6 +4328,26 @@
 		<rom name="5f.cpu" size="2048" crc="5b9d4686"/>
 		<rom name="5h.cpu" size="2048" crc="58c29927"/>
 		<rom name="82s123.6e" size="32" crc="9b87f90d"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="superbona" cloneof="superbon" romof="superbon" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Bad Colours</comment>
+		<description>Agent Super Bond (Super Cobra conversion, not encrypted)</description>
+		<year>1984</year>
+		<manufacturer>Video Village</manufacturer>
+		<rom name="2c" size="4096" crc="5a8f69b5"/>
+		<rom name="2e" size="4096" crc="5a126243"/>
+		<rom name="2f" merge="2f.cpu" size="4096" crc="bb66c2d5"/>
+		<rom name="2h" merge="2h.cpu" size="4096" crc="74f4f04d"/>
+		<rom name="2j" merge="2j.cpu" size="4096" crc="78effb08"/>
+		<rom name="2l" merge="2l.cpu" size="4096" crc="e9dcecbd"/>
+		<rom name="2m" merge="2m.cpu" size="4096" crc="3ed0337e"/>
+		<rom name="5c" merge="5c" size="2048" crc="b899be2a"/>
+		<rom name="5d" size="2048" crc="f2ebd14c"/>
+		<rom name="5f" size="2048" crc="d26f3fdc"/>
+		<rom name="5h" size="2048" crc="08e093ee"/>
+		<rom name="82s123.6e" merge="82s123.6e" size="32" crc="9b87f90d"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -8785,24 +8805,6 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="arkanoidjbla" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
-		<comment>Bootleg</comment>
-		<description>Arkanoid (bootleg with MCU, alt)</description>
-		<year>1986</year>
-		<manufacturer>bootleg</manufacturer>
-		<rom name="1.3f.ic81" size="32768" crc="9ff93dc2"/>
-		<rom name="2.4f.ic82" size="32768" crc="bbc33ceb"/>
-		<rom name="a75-06.ic14" merge="a75-06__bootleg_68705.ic14" size="2048" crc="515d77b6"/>
-		<rom name="3.1c.ic33" merge="a75__03.ic64" size="32768" crc="038b74ba"/>
-		<rom name="4.3c.ic34" merge="a75__04.ic63" size="32768" crc="71fae199"/>
-		<rom name="5.4c.ic35" merge="a75__05.ic62" size="32768" crc="c76374e2"/>
-		<rom name="a75-07.bpr" merge="a75-07.ic24" size="512" crc="0af8b289"/>
-		<rom name="a75-08.bpr" merge="a75-08.ic23" size="512" crc="abb002fb"/>
-		<rom name="a75-09.bpr" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
-		<rom name="68705p3.6i" size="2048" crc="389a8cfb"/>
-		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
-		<driver status="good"/>
-	</game>
 	<game name="ark1ball" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<comment>Bootleg</comment>
 		<description>Arkanoid (bootleg with MCU, harder)</description>
@@ -8814,9 +8816,9 @@
 		<rom name="a-3.3a" merge="a75__03.ic64" size="32768" crc="038b74ba"/>
 		<rom name="a-4.3d" merge="a75__04.ic63" size="32768" crc="71fae199"/>
 		<rom name="a-5.3f" merge="a75__05.ic62" size="32768" crc="c76374e2"/>
-		<rom name="n82s131n.6l" merge="a75-07.ic24" size="512" crc="0af8b289"/>
-		<rom name="n82s131n.6m" merge="a75-08.ic23" size="512" crc="abb002fb"/>
-		<rom name="n82s131n.6n" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
+		<rom name="a75-07.bpr" merge="a75-07.ic24" size="512" crc="0af8b289"/>
+		<rom name="a75-08.bpr" merge="a75-08.ic23" size="512" crc="abb002fb"/>
+		<rom name="a75-09.bpr" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -8860,15 +8862,15 @@
 		<description>Arkanoid (bootleg with MCU, set 2)</description>
 		<year>1986</year>
 		<manufacturer>bootleg (Beta)</manufacturer>
-		<rom name="1.ic81.3f" size="32768" crc="9ff93dc2"/>
-		<rom name="2.ic82.5f" size="32768" crc="bbc33ceb"/>
+		<rom name="1.ic81" size="32768" crc="9ff93dc2"/>
+		<rom name="2.ic82" size="32768" crc="bbc33ceb"/>
 		<rom name="a75-06__bootleg_68705.ic14" merge="a75-06__bootleg_68705.ic14" size="2048" crc="515d77b6"/>
-		<rom name="3.ic33.1c" merge="a75__03.ic64" size="32768" crc="038b74ba"/>
-		<rom name="4.ic34.3c" merge="a75__04.ic63" size="32768" crc="71fae199"/>
-		<rom name="5.ic35.5c" merge="a75__05.ic62" size="32768" crc="c76374e2"/>
-		<rom name="m1-7621-5.ic73.11e" merge="a75-07.ic24" size="512" crc="0af8b289"/>
-		<rom name="m1-7621-5.ic74.12e" merge="a75-08.ic23" size="512" crc="abb002fb"/>
-		<rom name="m1-7621-5.ic75.13e" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
+		<rom name="3.ic33" merge="a75__03.ic64" size="32768" crc="038b74ba"/>
+		<rom name="4.ic34" merge="a75__04.ic63" size="32768" crc="71fae199"/>
+		<rom name="5.ic35" merge="a75__05.ic62" size="32768" crc="c76374e2"/>
+		<rom name="a75-07.bpr" merge="a75-07.ic24" size="512" crc="0af8b289"/>
+		<rom name="a75-08.bpr" merge="a75-08.ic23" size="512" crc="abb002fb"/>
+		<rom name="a75-09.bpr" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -8907,7 +8909,7 @@
 	<game name="arkanoidja" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<description>Arkanoid (Japan, newer w/level select)</description>
 		<year>1986</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="a75__21.ic17" size="32768" crc="bf0455fc"/>
 		<rom name="a75__22.ic16" size="32768" crc="3a2688d3"/>
 		<rom name="a75__23.ic14" size="2048" crc="35938431"/>
@@ -8923,7 +8925,7 @@
 	<game name="arkanoidj" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<description>Arkanoid (Japan, newer)</description>
 		<year>1986</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="a75__24.ic17" size="32768" crc="3f2b27e9"/>
 		<rom name="a75__25.ic16" size="32768" crc="c13b2038"/>
 		<rom name="a75__26.ic14" size="2048" crc="1c4d212b"/>
@@ -8939,7 +8941,7 @@
 	<game name="arkanoidjb" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<description>Arkanoid (Japan, older)</description>
 		<year>1986</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="a75__01-1.ic17" merge="a75__01-1.ic17" size="32768" crc="5bcda3b0"/>
 		<rom name="a75__02.ic16" size="32768" crc="bbc33ceb"/>
 		<rom name="a75__06.ic14" merge="a75__06.ic14" size="2048" crc="0be83647"/>
@@ -8953,9 +8955,9 @@
 		<driver status="good"/>
 	</game>
 	<game name="arkanoidpe" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
-		<description>Arkanoid (Phoenix Electronics Co. license)</description>
+		<description>Arkanoid (Phoenix Electronics license)</description>
 		<year>1986</year>
-		<manufacturer>Taito Corporation (Phoenix Electronics Co. license)</manufacturer>
+		<manufacturer>Taito (Phoenix Electronics license)</manufacturer>
 		<rom name="21.ic17" size="32768" crc="746de487"/>
 		<rom name="22.ic16" size="32768" crc="bf784501"/>
 		<rom name="a75__15.ic14" size="2048" crc="d45327a9"/>
@@ -8989,21 +8991,21 @@
 		<description>Arkanoid (Tayto bootleg, harder)</description>
 		<year>1986</year>
 		<manufacturer>bootleg (Tayto)</manufacturer>
-		<rom name="4.ic81.3f" size="32768" crc="6e0a2b6f"/>
-		<rom name="5.ic82.5f" size="32768" crc="5a97dd56"/>
-		<rom name="1.ic33.1c" merge="a75__03.ic64" size="32768" crc="038b74ba"/>
-		<rom name="2.ic34.3c" merge="a75__04.ic63" size="32768" crc="71fae199"/>
-		<rom name="3.ic35.5c" merge="a75__05.ic62" size="32768" crc="c76374e2"/>
-		<rom name="m1-7621-5.ic73.11e" merge="a75-07.ic24" size="512" crc="0af8b289"/>
-		<rom name="m1-7621-5.ic74.12e" merge="a75-08.ic23" size="512" crc="abb002fb"/>
-		<rom name="m1-7621-5.ic75.13e" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
+		<rom name="ic81.3f" size="32768" crc="6e0a2b6f"/>
+		<rom name="ic82.5f" size="32768" crc="5a97dd56"/>
+		<rom name="1-ic33.2c" merge="a75__03.ic64" size="32768" crc="038b74ba"/>
+		<rom name="2-ic34.3c" merge="a75__04.ic63" size="32768" crc="71fae199"/>
+		<rom name="3-ic35.5c" merge="a75__05.ic62" size="32768" crc="c76374e2"/>
+		<rom name="ic73.11e" merge="a75-07.ic24" size="512" crc="0af8b289"/>
+		<rom name="ic74.12e" merge="a75-08.ic23" size="512" crc="abb002fb"/>
+		<rom name="ic75.13e" merge="a75-09.ic22" size="512" crc="a7c6c277"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="arkanoidu" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<description>Arkanoid (US, newer)</description>
 		<year>1986</year>
-		<manufacturer>Taito America Corporation (Romstar license)</manufacturer>
+		<manufacturer>Taito America (Romstar license)</manufacturer>
 		<rom name="a75__19.ic17" size="32768" crc="d3ad37d7"/>
 		<rom name="a75__18.ic16" size="32768" crc="cdc08301"/>
 		<rom name="a75__20.ic14" size="2048" crc="3994ee92"/>
@@ -9019,7 +9021,7 @@
 	<game name="arkanoiduo" cloneof="arkanoid" romof="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<description>Arkanoid (US, older)</description>
 		<year>1986</year>
-		<manufacturer>Taito America Corporation (Romstar license)</manufacturer>
+		<manufacturer>Taito America (Romstar license)</manufacturer>
 		<rom name="a75__01-1.ic17" merge="a75__01-1.ic17" size="32768" crc="5bcda3b0"/>
 		<rom name="a75__10.ic16" size="32768" crc="a1769e15"/>
 		<rom name="a75__06.ic14" merge="a75__06.ic14" size="2048" crc="0be83647"/>
@@ -9036,7 +9038,7 @@
 	<game name="arkanoid" sourcefile="taito/d_arkanoid.cpp">
 		<description>Arkanoid (World, older)</description>
 		<year>1986</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="a75__01-1.ic17" size="32768" crc="5bcda3b0"/>
 		<rom name="a75__11.ic16" size="32768" crc="eafd7191"/>
 		<rom name="a75__06.ic14" size="2048" crc="0be83647"/>
@@ -19642,6 +19644,25 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="bmxstunts" sourcefile="galaxian/d_galaxian.cpp">
+		<description>BMX Stunts</description>
+		<year>1985</year>
+		<manufacturer>Jetsoft</manufacturer>
+		<rom name="bmxh.1h" size="4096" crc="b6d28b39"/>
+		<rom name="bmxl.1l" size="4096" crc="d221f0aa"/>
+		<rom name="bmx6331.6l" size="32" crc="ce3e9306"/>
+		<rom name="b-mx.1" size="2048" crc="cf3061f1"/>
+		<rom name="b-mx.2" size="2048" crc="f145e09d"/>
+		<rom name="b-mx.3" size="2048" crc="ea415c49"/>
+		<rom name="b-mx.4" size="2048" crc="62bdd971"/>
+		<rom name="b-mx.5" size="2048" crc="9fa3d4e3"/>
+		<rom name="b-mx.6" size="2048" crc="ba9b1a69"/>
+		<rom name="b-mx.7" size="2048" crc="fa34441a"/>
+		<rom name="b-mx.8" size="2048" crc="8bc26d4d"/>
+		<rom name="6331" size="32" crc="13a9bc62"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="bwcasino" sourcefile="pre90s/d_pacman.cpp">
 		<description>Boardwalk Casino</description>
 		<year>1983</year>
@@ -21787,6 +21808,23 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="brixian" sourcefile="taito/d_arkanoid.cpp">
+		<description>Brixian</description>
+		<year>1993</year>
+		<manufacturer>Cheil Computer System</manufacturer>
+		<rom name="b1.bin" size="32768" crc="3d167d09"/>
+		<rom name="e7.bin" size="8192" crc="9e3707ab"/>
+		<rom name="68705p5" size="2048" status="nodump"/>
+		<rom name="protdata.bin" size="512" crc="a4131c0b"/>
+		<rom name="b4.bin" size="32768" crc="34a7a693"/>
+		<rom name="c4.bin" size="32768" crc="d422eda5"/>
+		<rom name="e4.bin" size="32768" crc="9b2e79d6"/>
+		<rom name="n82s131n.6l" size="512" crc="0fa51a5b"/>
+		<rom name="n82s131n.6p" size="512" crc="d833ad33"/>
+		<rom name="n82s131n.6m" size="512" crc="05297649"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bronx" cloneof="cyclshtg" romof="cyclshtg" sourcefile="taito/d_nycaptor.cpp">
 		<comment>Bootleg, GFX/layer priority issues</comment>
 		<description>Bronx (bootleg of Cycle Shooting)</description>
@@ -23442,6 +23480,18 @@
 		<rom name="epr-6070.93" size="16384" crc="34f080df"/>
 		<rom name="pr-5317.106" size="256" crc="648350b8"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bullsdrtg" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Bad Colours</comment>
+		<description>Bulls Eye Darts (Galaxian conversion)</description>
+		<year>1985</year>
+		<manufacturer>Senko Industries</manufacturer>
+		<rom name="vid_j1.bin" size="16384" crc="c2ad5c84"/>
+		<rom name="vid_p.bin" size="16384" crc="535be505"/>
+		<rom name="prom.bin" size="32" crc="16b19bfa"/>
+		<rom name="cpu.bin" size="16384" crc="db34f130"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="bumba" cloneof="headon" romof="headon" sourcefile="pre90s/d_vicdual.cpp">
@@ -31907,7 +31957,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="cobracomjb" cloneof="cobracom" romof="cobracom" sourcefile="dataeast/d_dec8.cpp">
+	<game name="cobracomjbl" cloneof="cobracom" romof="cobracom" sourcefile="dataeast/d_dec8.cpp">
 		<comment>Bootleg</comment>
 		<description>Cobra-Command (Japan, bootleg)</description>
 		<year>1988</year>
@@ -31934,28 +31984,6 @@
 		<rom name="am27s21pc.2" size="256" crc="af46d1ee"/>
 		<rom name="am27s21pc.3" size="256" crc="1e4189e8"/>
 		<rom name="pal16l8a-2cn.bin" size="260" crc="3ef8cf68"/>
-		<video type="raster" orientation="horizontal" width="256" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="cobracomja" cloneof="cobracom" romof="cobracom" sourcefile="dataeast/d_dec8.cpp">
-		<description>Cobra-Command (Japan?, set 2)</description>
-		<year>1988</year>
-		<manufacturer>Data East Corporation</manufacturer>
-		<rom name="el-11.rom" size="32768" crc="c6a102e3"/>
-		<rom name="el-12.rom" size="65536" crc="72b2dab4"/>
-		<rom name="el-13.rom" merge="el13.9j" size="65536" crc="04505acb"/>
-		<rom name="el-10.rom" size="32768" crc="62ca5e89"/>
-		<rom name="el-14.rom" merge="el14.14j" size="32768" crc="47246177"/>
-		<rom name="eh-00.rom" size="65536" crc="d96b6797"/>
-		<rom name="eh-01.rom" size="65536" crc="3fef9c02"/>
-		<rom name="eh-02.rom" size="65536" crc="bfae6c34"/>
-		<rom name="eh-03.rom" size="65536" crc="d56790f8"/>
-		<rom name="el-08.rom" merge="el08.7d" size="65536" crc="cb0dcf4c"/>
-		<rom name="el-09.rom" merge="el09.9d" size="65536" crc="1fae5be7"/>
-		<rom name="el-05.rom" merge="el05.15a" size="65536" crc="1c4f6033"/>
-		<rom name="el-06.rom" merge="el06.16a" size="65536" crc="d24ba794"/>
-		<rom name="el-04.rom" merge="el04.13a" size="65536" crc="d80a49ce"/>
-		<rom name="el-07.rom" merge="el07.18a" size="65536" crc="6d771fc3"/>
 		<video type="raster" orientation="horizontal" width="256" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -47951,6 +47979,36 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="drivfrcsgb" cloneof="drivfrcp" romof="drivfrcp" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Driving Force (Galaxian conversion, Seatongrove UK)</description>
+		<year>1985</year>
+		<manufacturer>Shinkai Inc. (Seatongrove UK, Ltd. license)</manufacturer>
+		<rom name="dfgj2.bin" size="4096" crc="8e19f1e7"/>
+		<rom name="dfgj1.bin" size="4096" crc="86b60ca8"/>
+		<rom name="dfgl2.bin" size="4096" crc="ea5e9959"/>
+		<rom name="dfgl1.bin" size="4096" crc="b7ed195c"/>
+		<rom name="top.clr" size="32" crc="3110ddae"/>
+		<rom name="bot.clr" size="32" crc="0f0782af"/>
+		<rom name="df2.7h" size="4096" crc="f8272d64"/>
+		<rom name="df3.7k" size="4096" crc="bd06af8b"/>
+		<rom name="df4.7m" size="4096" crc="753c2b39"/>
+		<rom name="df1.7f" size="4096" crc="7a784097"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="drivfrcsg" cloneof="drivfrcp" romof="drivfrcp" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Driving Force (Galaxian conversion, Seatongrove UK, E-0010)</description>
+		<year>1985</year>
+		<manufacturer>Shinkai Inc. (Seatongrove UK, Ltd. license)</manufacturer>
+		<rom name="1j-2764a.bin" size="8192" crc="156e20bd"/>
+		<rom name="1l-2764a.bin" size="8192" crc="88d0f70b"/>
+		<rom name="82s123-1.bin" size="32" crc="3110ddae"/>
+		<rom name="82s123-2.bin" size="32" crc="0f0782af"/>
+		<rom name="6n-2-2764a.bin" size="8192" crc="85242241"/>
+		<rom name="6m-1-2764a.bin" size="8192" crc="42d99594"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="drivfrcp" sourcefile="pre90s/d_pac2650.cpp">
 		<description>Driving Force (Pac-Man conversion)</description>
 		<year>1984</year>
@@ -49643,9 +49701,9 @@
 	<game name="dleaguej" cloneof="dleague" romof="dleague" sourcefile="taito/d_taitoh.cpp">
 		<description>Dynamite League (Japan)</description>
 		<year>1990</year>
-		<manufacturer>Taito Corporation</manufacturer>
-		<rom name="c02-19a.33" size="131072" crc="7e904e45"/>
-		<rom name="c02-21a.36" size="131072" crc="18c8a32b"/>
+		<manufacturer>Taito</manufacturer>
+		<rom name="c02-19+.33" size="131072" crc="7e904e45"/>
+		<rom name="c02-21+.36" size="131072" crc="18c8a32b"/>
 		<rom name="c02-20.34" merge="c02-20.34" size="65536" crc="cdf593f3"/>
 		<rom name="c02-22.37" size="65536" crc="f50db2d7"/>
 		<rom name="c02-23.40" merge="c02-23.40" size="65536" crc="5632ee49"/>
@@ -49669,7 +49727,7 @@
 	<game name="dleague" sourcefile="taito/d_taitoh.cpp">
 		<description>Dynamite League (US)</description>
 		<year>1990</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="c02-xx.33" size="131072" crc="eda870a7"/>
 		<rom name="c02-xx.36" size="131072" crc="f52114af"/>
 		<rom name="c02-20.34" size="65536" crc="cdf593f3"/>
@@ -60701,6 +60759,22 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="froggers4" cloneof="frogger" romof="frogger" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Frogger (Sega, set 4)</description>
+		<year>1981</year>
+		<manufacturer>Konami (Sega license)</manufacturer>
+		<rom name="epr-1413.ic5" size="4096" crc="21c58b17"/>
+		<rom name="epr-1414.ic6" size="4096" crc="3087bb4b"/>
+		<rom name="epr-1415.ic7" size="4096" crc="a5352425"/>
+		<rom name="epr-608.ic32" merge="frogger.608" size="2048" crc="e8ab0256"/>
+		<rom name="epr-609.ic33" merge="frogger.609" size="2048" crc="7380a48f"/>
+		<rom name="epr-610.ic34" merge="frogger.610" size="2048" crc="31d7eb27"/>
+		<rom name="epr-1397.ic101" merge="frogger.607" size="2048" crc="05f7d883"/>
+		<rom name="epr-1396.ic102" size="2048" crc="658745f8"/>
+		<rom name="pr-91.6l" merge="pr-91.6l" size="32" crc="413703bf"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="froggert" cloneof="frogger" romof="frogger" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Frogger (Turtles hardware)</description>
 		<year>1981</year>
@@ -67946,23 +68020,23 @@
 	<game name="gogold" cloneof="recordbr" romof="recordbr" sourcefile="taito/d_taitoh.cpp">
 		<description>Go For The Gold (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
-		<rom name="b56-17.bin" merge="b56-17.bin" size="131072" crc="3e0a9c35"/>
-		<rom name="b56-16.bin" merge="b56-16.bin" size="131072" crc="b447f12c"/>
-		<rom name="b56-15.bin" merge="b56-15.bin" size="131072" crc="b346e282"/>
-		<rom name="b56-14.bin" size="131072" crc="b6c195b9"/>
-		<rom name="b56-19.bin" merge="b56-19.bin" size="65536" crc="c68085ee"/>
-		<rom name="b56-04.bin" merge="b56-04.bin" size="131072" crc="f7afdff0"/>
-		<rom name="b56-08.bin" merge="b56-08.bin" size="131072" crc="c9f0d38a"/>
-		<rom name="b56-03.bin" merge="b56-03.bin" size="131072" crc="4045fd44"/>
-		<rom name="b56-07.bin" merge="b56-07.bin" size="131072" crc="0c76e4c8"/>
-		<rom name="b56-02.bin" merge="b56-02.bin" size="131072" crc="68c604ec"/>
-		<rom name="b56-06.bin" merge="b56-06.bin" size="131072" crc="5fbcd302"/>
-		<rom name="b56-01.bin" merge="b56-01.bin" size="131072" crc="766b7260"/>
-		<rom name="b56-05.bin" merge="b56-05.bin" size="131072" crc="ed390378"/>
-		<rom name="b56-10.bin" merge="b56-10.bin" size="524288" crc="de1bce59"/>
-		<rom name="b56-09.bin" merge="b56-09.bin" size="524288" crc="7fd9ee68"/>
-		<rom name="b56-18.bin" merge="b56-18.bin" size="8192" crc="c88f0bbe"/>
+		<manufacturer>Taito</manufacturer>
+		<rom name="b56-17.ic36" merge="b56-17.ic36" size="131072" crc="3e0a9c35"/>
+		<rom name="b56-16.ic18" merge="b56-16.ic18" size="131072" crc="b447f12c"/>
+		<rom name="b56-15.ic35" merge="b56-15.ic35" size="131072" crc="b346e282"/>
+		<rom name="b56-14.ic17" size="131072" crc="b6c195b9"/>
+		<rom name="b56-19.ic56" merge="b56-19.ic56" size="65536" crc="c68085ee"/>
+		<rom name="b56-04.ic51" merge="b56-04.ic51" size="131072" crc="f7afdff0"/>
+		<rom name="b56-08.ic65" merge="b56-08.ic65" size="131072" crc="c9f0d38a"/>
+		<rom name="b56-03.ic50" merge="b56-03.ic50" size="131072" crc="4045fd44"/>
+		<rom name="b56-07.ic64" merge="b56-07.ic64" size="131072" crc="0c76e4c8"/>
+		<rom name="b56-02.ic49" merge="b56-02.ic49" size="131072" crc="68c604ec"/>
+		<rom name="b56-06.ic63" merge="b56-06.ic63" size="131072" crc="5fbcd302"/>
+		<rom name="b56-01.ic48" merge="b56-01.ic48" size="131072" crc="766b7260"/>
+		<rom name="b56-05.ic62" merge="b56-05.ic62" size="131072" crc="ed390378"/>
+		<rom name="b56-10.ic41" merge="b56-10.ic41" size="524288" crc="de1bce59"/>
+		<rom name="b56-09.ic42" merge="b56-09.ic42" size="524288" crc="7fd9ee68"/>
+		<rom name="b56-18.ic39" merge="b56-18.ic39" size="8192" crc="c88f0bbe"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -76543,7 +76617,7 @@
 	</game>
 	<game name="hexa" sourcefile="taito/d_arkanoid.cpp">
 		<description>Hexa</description>
-		<year>199?</year>
+		<year>1990</year>
 		<manufacturer>D.R. Korea</manufacturer>
 		<rom name="hexa.20" size="32768" crc="98b00586"/>
 		<rom name="hexa.21" size="32768" crc="3d5d006c"/>
@@ -86193,7 +86267,7 @@
 		<video type="raster" orientation="horizontal" width="256" height="248" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="karnova" cloneof="karnov" romof="karnov" sourcefile="dataeast/d_karnov.cpp">
+	<game name="karnov5u" cloneof="karnov" romof="karnov" sourcefile="dataeast/d_karnov.cpp">
 		<description>Karnov (US, rev 5)</description>
 		<year>1987</year>
 		<manufacturer>Data East USA</manufacturer>
@@ -86250,6 +86324,36 @@
 		<rom name="dn-21.k8" size="1024" crc="aab0bb93"/>
 		<rom name="dn-20.l6" size="1024" crc="02f78ffb"/>
 		<rom name="dn-5.k14" size="4096" crc="d056de4e"/>
+		<video type="raster" orientation="horizontal" width="256" height="248" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="karnov5e" cloneof="karnov" romof="karnov" sourcefile="dataeast/d_karnov.cpp">
+		<description>Karnov (World, rev 5)</description>
+		<year>1987</year>
+		<manufacturer>Data East Corporation</manufacturer>
+		<rom name="dn08-5e.j15" size="65536" crc="db92c264"/>
+		<rom name="dn11-5e.j20" size="65536" crc="882f0d67"/>
+		<rom name="dn07-.j14" merge="dn07-.j14" size="65536" crc="fc14291b"/>
+		<rom name="dn10-.j18" merge="dn10-.j18" size="65536" crc="a4a34e37"/>
+		<rom name="dn06-5.j13" merge="dn06-5.j13" size="65536" crc="29d64e42"/>
+		<rom name="dn09-5.j17" merge="dn09-5.j17" size="65536" crc="072d7c49"/>
+		<rom name="dn05-5.f3" merge="dn05-5.f3" size="32768" crc="fa1a31a8"/>
+		<rom name="dn00-.c5" merge="dn00-.c5" size="32768" crc="0ed77c6d"/>
+		<rom name="dn04-.d18" merge="dn04-.d18" size="65536" crc="a9121653"/>
+		<rom name="dn01-.c15" merge="dn01-.c15" size="65536" crc="18697c9e"/>
+		<rom name="dn03-.d15" merge="dn03-.d15" size="65536" crc="90d9dd9c"/>
+		<rom name="dn02-.c18" merge="dn02-.c18" size="65536" crc="1e04d7b9"/>
+		<rom name="dn12-.f8" merge="dn12-.f8" size="65536" crc="9806772c"/>
+		<rom name="dn14-5.f11" merge="dn14-5.f11" size="32768" crc="ac9e6732"/>
+		<rom name="dn13-.f9" merge="dn13-.f9" size="65536" crc="a03308f9"/>
+		<rom name="dn15-5.f12" merge="dn15-5.f12" size="32768" crc="8933fcb8"/>
+		<rom name="dn16-.f13" merge="dn16-.f13" size="65536" crc="55e63a11"/>
+		<rom name="dn17-5.f15" merge="dn17-5.f15" size="32768" crc="b70ae950"/>
+		<rom name="dn18-.f16" merge="dn18-.f16" size="65536" crc="2ad53213"/>
+		<rom name="dn19-5.f18" merge="dn19-5.f18" size="32768" crc="8fd4fa40"/>
+		<rom name="dn-21.k8" merge="dn-21.k8" size="1024" crc="aab0bb93"/>
+		<rom name="dn-20.l6" merge="dn-20.l6" size="1024" crc="02f78ffb"/>
+		<rom name="dn-5e.k14" size="4096" crc="d2b12afe"/>
 		<video type="raster" orientation="horizontal" width="256" height="248" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -113210,6 +113314,26 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="mooncrsts" cloneof="mooncrst" romof="mooncrst" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Moon Cresta (SNK)</description>
+		<year>1980</year>
+		<manufacturer>Nichibutsu (SNK license)</manufacturer>
+		<rom name="mcs1.bin" size="2048" crc="322859e6"/>
+		<rom name="mcs2.bin" size="2048" crc="463de381"/>
+		<rom name="mcs3.bin" size="2048" crc="29a2b0ab"/>
+		<rom name="mcs4.bin" size="2048" crc="4c6a5a6d"/>
+		<rom name="mcs5.bin" size="2048" crc="06d378a6"/>
+		<rom name="mcs6.bin" size="2048" crc="6e84a927"/>
+		<rom name="mcs7.bin" size="2048" crc="b45af1e8"/>
+		<rom name="mcs8.bin" size="2048" crc="699197dd"/>
+		<rom name="mcs_b.bin" size="2048" crc="bf14074e"/>
+		<rom name="mcs_d.bin" merge="mcs_d" size="2048" crc="13932a15"/>
+		<rom name="mcs_a.bin" size="2048" crc="2705a395"/>
+		<rom name="mcs_c.bin" merge="mcs_c" size="2048" crc="24cfd145"/>
+		<rom name="mmi6331.6l" merge="mmi6331.6l" size="32" crc="6a0c7d87"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="mpatrolw" cloneof="mpatrol" romof="mpatrol" sourcefile="irem/d_m52.cpp">
 		<description>Moon Patrol (Williams)</description>
 		<year>1982</year>
@@ -121105,7 +121229,7 @@
 	<game name="newsin7" sourcefile="galaxian/d_galaxian.cpp">
 		<description>New Sinbad 7 (set 1)</description>
 		<year>1983</year>
-		<manufacturer>ATW USA, Inc.</manufacturer>
+		<manufacturer>ATW USA</manufacturer>
 		<rom name="newsin.1" size="4096" crc="e6c23fe0"/>
 		<rom name="newsin.2" size="4096" crc="3d477b5f"/>
 		<rom name="newsin.3" size="4096" crc="7dfa9af0"/>
@@ -121118,6 +121242,25 @@
 		<rom name="newsin.8" size="4096" crc="0c5b895a"/>
 		<rom name="newsin.7" size="4096" crc="6bc5d64f"/>
 		<rom name="newsin.6" size="32" crc="5cf2cd8d"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="newsin7a" cloneof="newsin7" romof="newsin7" sourcefile="galaxian/d_galaxian.cpp">
+		<description>New Sinbad 7 (set 2)</description>
+		<year>1982</year>
+		<manufacturer>ATW USA</manufacturer>
+		<rom name="epr2732-1.u26" size="4096" crc="67bd4b05"/>
+		<rom name="epr2732-2.u56" size="4096" crc="93ac59de"/>
+		<rom name="epr2732-3.u69" size="4096" crc="6a778d95"/>
+		<rom name="epr2732-4.u98" size="4096" crc="7f351640"/>
+		<rom name="epr2732-5.u114" merge="newsin.5" size="4096" crc="06275d59"/>
+		<rom name="epr2716.u39" merge="newsin.13" size="2048" crc="d88489a2"/>
+		<rom name="epr2716.u51" merge="newsin.12" size="2048" crc="b154a7af"/>
+		<rom name="epr2716.u78" merge="newsin.11" size="2048" crc="7ade709b"/>
+		<rom name="epr2732-8.db" merge="newsin.9" size="4096" crc="6b87adff"/>
+		<rom name="epr2732-6.u133" merge="newsin.8" size="4096" crc="0c5b895a"/>
+		<rom name="epr2732-7.db" merge="newsin.7" size="4096" crc="6bc5d64f"/>
+		<rom name="prom.u59" size="32" crc="16cb5f4e"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -145678,23 +145821,23 @@
 	<game name="recordbr" sourcefile="taito/d_taitoh.cpp">
 		<description>Recordbreaker (World)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
-		<rom name="b56-17.bin" size="131072" crc="3e0a9c35"/>
-		<rom name="b56-16.bin" size="131072" crc="b447f12c"/>
-		<rom name="b56-15.bin" size="131072" crc="b346e282"/>
-		<rom name="b56-21.bin" size="131072" crc="e5f63790"/>
-		<rom name="b56-19.bin" size="65536" crc="c68085ee"/>
-		<rom name="b56-04.bin" size="131072" crc="f7afdff0"/>
-		<rom name="b56-08.bin" size="131072" crc="c9f0d38a"/>
-		<rom name="b56-03.bin" size="131072" crc="4045fd44"/>
-		<rom name="b56-07.bin" size="131072" crc="0c76e4c8"/>
-		<rom name="b56-02.bin" size="131072" crc="68c604ec"/>
-		<rom name="b56-06.bin" size="131072" crc="5fbcd302"/>
-		<rom name="b56-01.bin" size="131072" crc="766b7260"/>
-		<rom name="b56-05.bin" size="131072" crc="ed390378"/>
-		<rom name="b56-10.bin" size="524288" crc="de1bce59"/>
-		<rom name="b56-09.bin" size="524288" crc="7fd9ee68"/>
-		<rom name="b56-18.bin" size="8192" crc="c88f0bbe"/>
+		<manufacturer>Taito</manufacturer>
+		<rom name="b56-17.ic36" size="131072" crc="3e0a9c35"/>
+		<rom name="b56-16.ic18" size="131072" crc="b447f12c"/>
+		<rom name="b56-15.ic35" size="131072" crc="b346e282"/>
+		<rom name="b56-21.ic17" size="131072" crc="e5f63790"/>
+		<rom name="b56-19.ic56" size="65536" crc="c68085ee"/>
+		<rom name="b56-04.ic51" size="131072" crc="f7afdff0"/>
+		<rom name="b56-08.ic65" size="131072" crc="c9f0d38a"/>
+		<rom name="b56-03.ic50" size="131072" crc="4045fd44"/>
+		<rom name="b56-07.ic64" size="131072" crc="0c76e4c8"/>
+		<rom name="b56-02.ic49" size="131072" crc="68c604ec"/>
+		<rom name="b56-06.ic63" size="131072" crc="5fbcd302"/>
+		<rom name="b56-01.ic48" size="131072" crc="766b7260"/>
+		<rom name="b56-05.ic62" size="131072" crc="ed390378"/>
+		<rom name="b56-10.ic41" size="524288" crc="de1bce59"/>
+		<rom name="b56-09.ic42" size="524288" crc="7fd9ee68"/>
+		<rom name="b56-18.ic39" size="8192" crc="c88f0bbe"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -149772,6 +149915,24 @@
 		<rom name="sound20" size="4194304" crc="89c1b088"/>
 		<rom name="sound21" size="4194304" crc="13db74bd"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="rocktcnvy" cloneof="warofbug" romof="warofbug" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Imperfect graphics</comment>
+		<description>Rocket Convoy</description>
+		<year>1981</year>
+		<manufacturer>Radar</manufacturer>
+		<rom name="center_1.bin" size="4096" crc="fbefae0a"/>
+		<rom name="center_2.bin" size="4096" crc="311a47cb"/>
+		<rom name="center_3.bin" size="4096" crc="822749cb"/>
+		<rom name="center_4.bin" size="4096" crc="f9dda0ed"/>
+		<rom name="center_5.bin" size="4096" crc="c986ff34"/>
+		<rom name="center_c1.9a" size="2048" crc="a59a9f3f"/>
+		<rom name="center_c2.7a" size="2048" crc="9b75b40a"/>
+		<rom name="mmi6331.7f" size="32" crc="25c79518"/>
+		<rom name="tbp28l22n.1" size="256" crc="25e282fb"/>
+		<rom name="tbp28l22n.2" size="256" crc="c4923f41"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="rockman2j" cloneof="megaman2" romof="megaman2" sourcefile="capcom/d_cps2.cpp">
@@ -156341,6 +156502,27 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="scrambles2" cloneof="scramble" romof="scramble" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Scramble (Stern Electronics, set 2)</description>
+		<year>1981</year>
+		<manufacturer>Konami (Stern Electronics license)</manufacturer>
+		<rom name="2d" size="2048" crc="defae436"/>
+		<rom name="2e" size="2048" crc="136bf894"/>
+		<rom name="2f" size="2048" crc="539ff711"/>
+		<rom name="2h" merge="s4.2h" size="2048" crc="b59360eb"/>
+		<rom name="2j" size="2048" crc="d5aefbd5"/>
+		<rom name="2l" size="2048" crc="d6f0dfc9"/>
+		<rom name="2m" size="2048" crc="d69e0980"/>
+		<rom name="2p" size="2048" crc="4fc94e8c"/>
+		<rom name="ot1.5c" merge="ot1.5c" size="2048" crc="bcd297f0"/>
+		<rom name="ot2.5d" merge="ot2.5d" size="2048" crc="de7912da"/>
+		<rom name="ot3.5e" merge="ot3.5e" size="2048" crc="ba2fa933"/>
+		<rom name="5f" size="2048" crc="5f30311a"/>
+		<rom name="5h" size="2048" crc="516e029e"/>
+		<rom name="c01s.6e" merge="c01s.6e" size="32" crc="4e3caeab"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="sspiritj" cloneof="sspirits" romof="sspirits" sourcefile="sega/d_sys24.cpp">
 		<description>Scramble Spirits (Japan, Floppy DS3-5000-02-REV-A Based)</description>
 		<year>1988</year>
@@ -158454,7 +158636,7 @@
 		<comment>Incomplete Sound</comment>
 		<description>SF-X</description>
 		<year>1983</year>
-		<manufacturer>Nihon Game (Nichibutsu license)</manufacturer>
+		<manufacturer>Nihon Game (Tokyo Nichibutsu license)</manufacturer>
 		<rom name="sfx_b-0.1j" size="8192" crc="e5bc6952"/>
 		<rom name="1.1c" size="4096" crc="1b3c48e7"/>
 		<rom name="22.1d" size="4096" crc="ed44950d"/>
@@ -164234,6 +164416,60 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="sbhoei" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Space Battle (Hoei, set 1)</description>
+		<year>1980</year>
+		<manufacturer>Hoei</manufacturer>
+		<rom name="4764.4k" size="8192" crc="d88f86cc"/>
+		<rom name="a.1k" size="2048" crc="a72175a4"/>
+		<rom name="b.2k" size="2048" crc="133259bd"/>
+		<rom name="c.3k" size="2048" crc="d35b1434"/>
+		<rom name="d.5k" size="2048" crc="ff2cbd5a"/>
+		<rom name="e.1j" size="2048" crc="6fa0993f"/>
+		<rom name="f.2j" size="2048" crc="a90ac60a"/>
+		<rom name="g.3j" size="2048" crc="b7caf17f"/>
+		<rom name="h.5j" size="2048" crc="1f8841d2"/>
+		<rom name="i.1h" size="2048" crc="b24a7a88"/>
+		<rom name="b.15j" size="2048" crc="df47d042"/>
+		<rom name="d.14j" size="2048" crc="5f08bd01"/>
+		<rom name="f.13j" size="2048" crc="ac234ff4"/>
+		<rom name="a.15k" size="2048" crc="8e05141f"/>
+		<rom name="c.14k" size="2048" crc="c15ac36f"/>
+		<rom name="e.13k" size="2048" crc="a7bb7c92"/>
+		<rom name="colrom.bin" size="32" crc="6a0c7d87"/>
+		<rom name="sound_h.ic3" size="2048" crc="21968996"/>
+		<rom name="sound_h.ic1" size="4096" crc="74383aac"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sbhoeia" cloneof="sbhoei" romof="sbhoei" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Space Battle (Hoei, set 2)</description>
+		<year>1980</year>
+		<manufacturer>Hoei</manufacturer>
+		<rom name="4764.4k" merge="4764.4k" size="8192" crc="d88f86cc"/>
+		<rom name="s2-a.1k" size="2048" crc="b07fa2dd"/>
+		<rom name="s2-b.2k" size="2048" crc="42ce5b91"/>
+		<rom name="s2-c.3k" size="2048" crc="08fd6af2"/>
+		<rom name="s2-d.5k" size="2048" crc="62ea78ef"/>
+		<rom name="s2-e.1j" size="2048" crc="7553955a"/>
+		<rom name="s2-f.2j" size="2048" crc="54d7ef11"/>
+		<rom name="s2-g.3j" size="2048" crc="9609943b"/>
+		<rom name="s2-h.5j" size="2048" crc="bf237239"/>
+		<rom name="i.1h" merge="i.1h" size="2048" crc="b24a7a88"/>
+		<rom name="b.15j" merge="b.15j" size="2048" crc="df47d042"/>
+		<rom name="d.14j" merge="d.14j" size="2048" crc="5f08bd01"/>
+		<rom name="f.13j" merge="f.13j" size="2048" crc="ac234ff4"/>
+		<rom name="a.15k" merge="a.15k" size="2048" crc="8e05141f"/>
+		<rom name="c.14k" merge="c.14k" size="2048" crc="c15ac36f"/>
+		<rom name="e.13k" merge="e.13k" size="2048" crc="a7bb7c92"/>
+		<rom name="colrom.bin" merge="colrom.bin" size="32" crc="6a0c7d87"/>
+		<rom name="sound_h.ic3" merge="sound_h.ic3" size="2048" crc="21968996"/>
+		<rom name="sound_h.ic1" merge="sound_h.ic1" size="4096" crc="74383aac"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="sbsgomo" cloneof="bioship" romof="bioship" sourcefile="pst90s/d_nmk16.cpp">
 		<description>Space Battle Ship Gomorrah</description>
 		<year>1990</year>
@@ -165702,6 +165938,22 @@
 		<rom name="tssb-1" size="2048" crc="9b9267c3"/>
 		<rom name="tssb-3" size="2048" crc="5ca5e233"/>
 		<rom name="l06_prom.bin" merge="mmi6331.6l" size="32" crc="6a0c7d87"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spactrai" cloneof="warofbug" romof="warofbug" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Imperfect graphics</comment>
+		<description>Space Train</description>
+		<year>1981</year>
+		<manufacturer>Celv</manufacturer>
+		<rom name="1cen.bin" size="4096" crc="fabc7fd8"/>
+		<rom name="2cen.bin" size="4096" crc="44ddacfa"/>
+		<rom name="3cen.bin" size="4096" crc="822749cb"/>
+		<rom name="4cen.bin" size="4096" crc="f9dda0ed"/>
+		<rom name="5cen.bin" size="4096" crc="b8c76675"/>
+		<rom name="6cen.bin" size="2048" crc="a59a9f3f"/>
+		<rom name="7cen.bin" size="2048" crc="9b75b40a"/>
+		<rom name="stk.bin" size="32" crc="6a0c7d87"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -185941,6 +186193,24 @@
 		<video type="raster" orientation="vertical" width="240" height="384" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="superbikg" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Superbike (Galaxian hardware)</description>
+		<year>1983</year>
+		<manufacturer>Century Electronics</manufacturer>
+		<rom name="m0hj-2716.bin" size="2048" crc="b1d76b59"/>
+		<rom name="m0kl-2716.bin" size="2048" crc="ea5f9f88"/>
+		<rom name="mmi6331.6l" size="32" crc="c5f12bc3"/>
+		<rom name="moto1-2516.bin" size="2048" crc="2903f8c8"/>
+		<rom name="moto2-2516.bin" size="2048" crc="057c1473"/>
+		<rom name="moto3-2516.bin" size="2048" crc="6c8f82fa"/>
+		<rom name="moto4-2516.bin" size="2048" crc="ba38fe2c"/>
+		<rom name="moto5-2532.bin" size="4096" crc="ac1180a3"/>
+		<rom name="moto6-2532.bin" size="4096" crc="f5b7627a"/>
+		<rom name="mmi6331-db.bin" size="32" crc="39376e52"/>
+		<rom name="mmi6309-mb.bin" size="256" crc="b6b9ff46"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="1942h" cloneof="1942" romof="1942" sourcefile="pre90s/d_1942.cpp">
 		<comment>Hack</comment>
 		<description>Supercharger 1942</description>
@@ -186632,7 +186902,7 @@
 	<game name="syvalion" sourcefile="taito/d_taitoh.cpp">
 		<description>Syvalion (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="b51-20.bin" size="131072" crc="440b6418"/>
 		<rom name="b51-22.bin" size="131072" crc="e6c61079"/>
 		<rom name="b51-19.bin" size="131072" crc="2abd762c"/>
@@ -186662,7 +186932,7 @@
 	<game name="syvalionu" cloneof="syvalion" romof="syvalion" sourcefile="taito/d_taitoh.cpp">
 		<description>Syvalion (US, PS2 Taito Legends 2)</description>
 		<year>1988</year>
-		<manufacturer>Taito America Corporation</manufacturer>
+		<manufacturer>Taito America</manufacturer>
 		<rom name="eng-20.bin" size="131072" crc="6c1db526"/>
 		<rom name="eng-22.bin" size="131072" crc="d386b5dd"/>
 		<rom name="eng-19.bin" size="131072" crc="57fa3905"/>
@@ -186693,7 +186963,7 @@
 		<comment>Prototype</comment>
 		<description>Syvalion (World, prototype)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="prg-1e.ic28" size="131072" crc="c778005b"/>
 		<rom name="prg-0e.ic31" size="131072" crc="5a484040"/>
 		<rom name="prg-3e.ic27" size="131072" crc="0babb15b"/>
@@ -186731,7 +187001,7 @@
 	<game name="syvalionw" cloneof="syvalion" romof="syvalion" sourcefile="taito/d_taitoh.cpp">
 		<description>Syvalion (World, PS2 Taito Legends 2)</description>
 		<year>1988</year>
-		<manufacturer>Taito Corporation Japan</manufacturer>
+		<manufacturer>Taito</manufacturer>
 		<rom name="eng-20.bin" size="131072" crc="6c1db526"/>
 		<rom name="eng-22.bin" size="131072" crc="d386b5dd"/>
 		<rom name="eng-19.bin" size="131072" crc="57fa3905"/>
@@ -191002,9 +191272,9 @@
 		<rom name="c26-06.ic63" size="131072" crc="deae0394"/>
 		<rom name="c26-01.ic48" size="131072" crc="7efc7311"/>
 		<rom name="c26-05.ic62" size="131072" crc="12718d97"/>
-		<rom name="b56-10.bin" size="524288" crc="de1bce59"/>
-		<rom name="b56-09.bin" size="524288" crc="7fd9ee68"/>
-		<rom name="b56-18.bin" size="8192" crc="c88f0bbe"/>
+		<rom name="b56-10.ic41" size="524288" crc="de1bce59"/>
+		<rom name="b56-09.ic42" size="524288" crc="7fd9ee68"/>
+		<rom name="b56-18.ic39" size="8192" crc="c88f0bbe"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -206120,6 +206390,35 @@
 		<video type="raster" orientation="horizontal" width="256" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="ghostb3a" cloneof="ghostb" romof="ghostb" sourcefile="dataeast/d_dec8.cpp">
+		<description>The Real Ghostbusters (US 3 Players, revision 2)</description>
+		<year>1987</year>
+		<manufacturer>Data East USA</manufacturer>
+		<rom name="dz01-2.1d" size="32768" crc="1b16890e"/>
+		<rom name="dz02-.3d" merge="dz02.3d" size="65536" crc="8e117541"/>
+		<rom name="dz03-.4d" merge="dz03.4d" size="65536" crc="5606a8f4"/>
+		<rom name="dz04-.6d" size="65536" crc="490b4525"/>
+		<rom name="dz05-.7d" size="65536" crc="b4971d33"/>
+		<rom name="dz06.5f" merge="dz06.5f" size="32768" crc="798f56df"/>
+		<rom name="dz00.16b" merge="dz00.16b" size="32768" crc="992b4f31"/>
+		<rom name="dz15.14f" merge="dz15.14f" size="65536" crc="a01a5fd9"/>
+		<rom name="dz16.15f" merge="dz16.15f" size="65536" crc="5a9a344a"/>
+		<rom name="dz12.9f" merge="dz12.9f" size="65536" crc="817fae99"/>
+		<rom name="dz14.12f" merge="dz14.12f" size="65536" crc="0abbf76d"/>
+		<rom name="dz11.8f" merge="dz11.8f" size="65536" crc="a5e19c24"/>
+		<rom name="dz13.1f" merge="dz13.1f" size="65536" crc="3e7c0405"/>
+		<rom name="dz17.17f" merge="dz17.17f" size="65536" crc="40361b8b"/>
+		<rom name="dz18.18f" merge="dz18.18f" size="65536" crc="8d219489"/>
+		<rom name="dz07.12f" merge="dz07.12f" size="65536" crc="e7455167"/>
+		<rom name="dz08.14f" merge="dz08.14f" size="65536" crc="32f9ddfe"/>
+		<rom name="dz09.15f" merge="dz09.15f" size="65536" crc="bb6efc02"/>
+		<rom name="dz10.17f" merge="dz10.17f" size="65536" crc="6ef9963b"/>
+		<rom name="dz19a.10d" merge="dz19a.10d" size="1024" crc="47e1f83b"/>
+		<rom name="dz20a.11d" merge="dz20a.11d" size="1024" crc="d8fe2d99"/>
+		<rom name="dz-1.1b" merge="dz-1.1b" size="4096" crc="9f5f3cb5"/>
+		<video type="raster" orientation="horizontal" width="256" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ghostb3" cloneof="ghostb" romof="ghostb" sourcefile="dataeast/d_dec8.cpp">
 		<description>The Real Ghostbusters (US 3 Players, revision 3B?)</description>
 		<year>1987</year>
@@ -211578,7 +211877,7 @@
 	<game name="arkatour2" cloneof="arkatour" romof="arkatour" sourcefile="taito/d_arkanoid.cpp">
 		<description>Tournament Arkanoid (US, newer)</description>
 		<year>1987</year>
-		<manufacturer>Taito America Corporation (Romstar license)</manufacturer>
+		<manufacturer>Taito America (Romstar license)</manufacturer>
 		<rom name="a75__36.ic17" size="32768" crc="f3b1923e"/>
 		<rom name="a75__37.ic16" size="32768" crc="7c74987b"/>
 		<rom name="a75__38.ic14" size="2048" status="nodump"/>
@@ -211594,7 +211893,7 @@
 	<game name="arkatour" sourcefile="taito/d_arkanoid.cpp">
 		<description>Tournament Arkanoid (US, older)</description>
 		<year>1987</year>
-		<manufacturer>Taito America Corporation (Romstar license)</manufacturer>
+		<manufacturer>Taito America (Romstar license)</manufacturer>
 		<rom name="a75__27.ic17" size="32768" crc="e3b8faf5"/>
 		<rom name="a75__28.ic16" size="32768" crc="326aca4d"/>
 		<rom name="a75__32.ic14" size="2048" crc="8c20d15c"/>
@@ -212475,7 +212774,7 @@
 	</game>
 	<game name="tdpgala" cloneof="tdpgal" romof="tdpgal" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Triple Draw Poker (Video Village)</description>
-		<year>1983</year>
+		<year>1984</year>
 		<manufacturer>Video Village</manufacturer>
 		<rom name="g8" merge="1.bin" size="2048" crc="7be819fe"/>
 		<rom name="f8" size="2048" crc="d6641a10"/>
@@ -219381,6 +219680,21 @@
 		<rom name="hustler.10d" size="2048" crc="6ef96cfb"/>
 		<rom name="hustler.5f" merge="hustler.5f" size="2048" crc="0bdfad0e"/>
 		<rom name="hustler.5h" merge="hustler.5h" size="2048" crc="8e062177"/>
+		<rom name="hustler.clr" merge="hustler.clr" size="32" crc="aa1f7f5e"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="hustlerd" cloneof="hustler" romof="hustler" sourcefile="galaxian/d_galaxian.cpp">
+		<description>Video Hustler (Dynamo Games)</description>
+		<year>1981</year>
+		<manufacturer>Konami (Dynamo Games license)</manufacturer>
+		<rom name="vh1.ic5" size="4096" crc="7cb6a940"/>
+		<rom name="vh2.ic6" size="4096" crc="4ca45239"/>
+		<rom name="vh3.ic7" size="4096" crc="4c752453"/>
+		<rom name="ho1.ic32" merge="hustler.6" size="2048" crc="7a946544"/>
+		<rom name="ho2.ic33" merge="hustler.7" size="2048" crc="3db57351"/>
+		<rom name="hc2" merge="hustler.5f" size="2048" crc="0bdfad0e"/>
+		<rom name="hc1" merge="hustler.5h" size="2048" crc="8e062177"/>
 		<rom name="hustler.clr" merge="hustler.clr" size="32" crc="aa1f7f5e"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
