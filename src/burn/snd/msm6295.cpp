@@ -157,6 +157,11 @@ void MSM6295Scan(INT32 , INT32 *)
 	{
 		ScanVar(&MSM6295[nChip], STRUCT_SIZE_HELPER(struct MSM6295Struct, nSampleInfo), "MSM6295 Chip");
 		SCAN_VAR(nMSM6295Status[nChip]);
+
+		// the resampler fraction decides when a sample ends (status bit read by the sound CPU)
+		SCAN_VAR(MSM6295[nChip].nFractionalPosition);
+		SCAN_VAR(nPreviousSample[nChip]);
+		SCAN_VAR(nCurrentSample[nChip]);
 	}
 }
 

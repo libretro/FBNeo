@@ -376,6 +376,19 @@ void BurnYM2151Scan(INT32 nAction, INT32 *pnMin)
 
 	BurnYM2151Scan_int(nAction); // Scan the YM2151's internal registers
 
+	// needed for deterministic state loads (rollback, runahead)
+	SCAN_VAR(nYM2151Position);
+	SCAN_VAR(nFractionalPosition);
+	if (pBuffer) {
+		char szCarry[] = "YM2151 carry";
+		for (INT32 c = 0; c < 4; c++) {
+			// past the carried samples: rendered again next frame
+			INT32 used = 4 + nYM2151Position;
+			if (used < 64) memset(pBuffer + c * 4096 + (used < 0 ? 0 : used), 0, (64 - (used < 0 ? 0 : used)) * sizeof(INT16));
+			ScanVar(pBuffer + c * 4096, 64 * sizeof(INT16), szCarry);
+		}
+	}
+
 	if (YM2151BurnTimer)
 		BurnTimerScan(nAction, pnMin);
 }
