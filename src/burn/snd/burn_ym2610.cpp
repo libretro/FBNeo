@@ -504,5 +504,17 @@ void BurnYM2610Scan(INT32 nAction, INT32* pnMin)
 	if (nAction & ACB_DRIVER_DATA) {
 		SCAN_VAR(nYM2610Position);
 		SCAN_VAR(nAY8910Position);
+
+		// needed for deterministic state loads (rollback, runahead)
+		SCAN_VAR(nFractionalPosition);
+		if (pBuffer) {
+			char szCarry[] = "YM2610 carry";
+			for (INT32 c = 0; c < 5; c++) {
+				// past the carried samples: rendered again next frame
+				INT32 used = 4 + (c < 2 ? nYM2610Position : nAY8910Position);
+				if (used < 64) memset(pBuffer + c * 4096 + (used < 0 ? 0 : used), 0, (64 - (used < 0 ? 0 : used)) * sizeof(INT16));
+				ScanVar(pBuffer + c * 4096, 64 * sizeof(INT16), szCarry);
+			}
+		}
 	}
 }

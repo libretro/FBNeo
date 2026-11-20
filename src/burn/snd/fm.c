@@ -3918,6 +3918,14 @@ static void YM2610_postload(void)
 	for(num=0;num<YM2610NumChips;num++)
 	{
 		YM2610 *F2610 = &(FM2610[num]);
+		/* the register writes below recompute these, the saved values are restored after */
+		UINT32 keep_tl[6][4], keep_vol_out[6][4], keep_start[6], keep_end[6];
+		INT32 keep_IL[6], keep_vol_mul[6], keep_vol_shift[6], keep_adpcm_out[6];
+		for (r = 0; r < 6; r++) {
+			int k; for (k = 0; k < 4; k++) { keep_tl[r][k] = F2610->CH[r].SLOT[k].tl; keep_vol_out[r][k] = F2610->CH[r].SLOT[k].vol_out; }
+			keep_start[r] = F2610->adpcm[r].start; keep_end[r] = F2610->adpcm[r].end;
+			keep_IL[r] = F2610->adpcm[r].IL; keep_vol_mul[r] = F2610->adpcm[r].vol_mul; keep_vol_shift[r] = F2610->adpcm[r].vol_shift; keep_adpcm_out[r] = F2610->adpcm[r].adpcm_out;
+		}
 		/* SSG registers */
 		for(r=0;r<16;r++)
 		{
@@ -3955,6 +3963,11 @@ static void YM2610_postload(void)
 		}
 		/* Delta-T ADPCM unit */
 		YM_DELTAT_postload(&F2610->deltaT , &F2610->REGS[0x010] );
+		for (r = 0; r < 6; r++) {
+			int k; for (k = 0; k < 4; k++) { F2610->CH[r].SLOT[k].tl = keep_tl[r][k]; F2610->CH[r].SLOT[k].vol_out = keep_vol_out[r][k]; }
+			F2610->adpcm[r].start = keep_start[r]; F2610->adpcm[r].end = keep_end[r];
+			F2610->adpcm[r].IL = keep_IL[r]; F2610->adpcm[r].vol_mul = keep_vol_mul[r]; F2610->adpcm[r].vol_shift = keep_vol_shift[r]; F2610->adpcm[r].adpcm_out = keep_adpcm_out[r];
+		}
 	}
 
 	FM_IS_POSTLOADING = 0;
@@ -3982,6 +3995,11 @@ static void YM2610_save_state(void)
 		state_save_register_UINT8 (statename, num, "addr_A1" , &F2610->addr_A1, 1);
 
 		state_save_register_UINT8 (statename, num, "arrivedFlag", &F2610->adpcm_arrivedEndAddress , 1);
+		state_save_register_UINT32(statename, num, "eg_cnt"   , &F2610->OPN.eg_cnt   , 1);
+		state_save_register_UINT32(statename, num, "eg_timer" , &F2610->OPN.eg_timer , 1);
+		state_save_register_UINT32(statename, num, "lfo_cnt"  , &F2610->OPN.lfo_cnt  , 1);
+		state_save_register_UINT32(statename, num, "LFO_AM"   , &LFO_AM , 1);
+		state_save_register_INT32 (statename, num, "LFO_PM"   , &LFO_PM , 1);
 		/* rythm(ADPCMA) */
 		FMsave_state_adpcma(statename,num,F2610->adpcm);
 		/* Delta-T ADPCM unit */
