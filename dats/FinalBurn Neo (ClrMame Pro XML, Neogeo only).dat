@@ -9568,11 +9568,11 @@
 	</game>
 	<game name="lasthopepb" cloneof="lasthope" romof="lasthope" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack, Bootleg</comment>
-		<description>Last Hope - Pink Bullets (bootleg AES to MVS conversion, no coin support) (Hack)</description>
+		<description>Last Hope - Pink Bullets v1.30 (bootleg AES to MVS conversion, no coin support) (Hack)</description>
 		<year>2026</year>
 		<manufacturer>LoW</manufacturer>
-		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="b81dd2e0"/>
-		<rom name="ngdt-300-s1pb.bin" size="131072" crc="f0719dbb"/>
+		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="25c1867d"/>
+		<rom name="ngdt-300-s1pb.bin" size="131072" crc="36c54e06"/>
 		<rom name="ngdt-300-c1pb.bin" size="4194304" crc="bc2d2a8b"/>
 		<rom name="ngdt-300-c2pb.bin" size="4194304" crc="1673318d"/>
 		<rom name="ngdt-300-c3pb.bin" size="4194304" crc="bf0e4af1"/>

@@ -2226,6 +2226,29 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="280zzzap" sourcefile="pre90s/d_invaders.cpp">
+		<description>280-ZZZAP (set 1)</description>
+		<year>1976</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="zzzaph" size="1024" crc="1fa86e1c"/>
+		<rom name="zzzapg" size="1024" crc="9639bc6b"/>
+		<rom name="zzzapf" size="1024" crc="adc6ede1"/>
+		<rom name="zzzape" size="1024" crc="472493d6"/>
+		<rom name="zzzapd" size="1024" crc="4c240ee1"/>
+		<rom name="zzzapc" size="1024" crc="6e85aeaf"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="280zzzapa" cloneof="280zzzap" romof="280zzzap" sourcefile="pre90s/d_invaders.cpp">
+		<description>280-ZZZAP (set 2)</description>
+		<year>1976</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="h" size="2048" crc="cb56e0f8"/>
+		<rom name="g" size="2048" crc="f30dd025"/>
+		<rom name="f" size="2048" crc="8d51ec2d"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="3countb" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<description>3 Count Bout / Fire Suplex (NGM-043 ~ NGH-043)</description>
 		<year>1993</year>
@@ -5581,6 +5604,28 @@
 		<video type="raster" orientation="vertical" width="128" height="128" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="alieninvp2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Alien Invasion Part II</description>
+		<year>19??</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="1h.bin" size="2048" crc="c46df7f4"/>
+		<rom name="1g.bin" size="2048" crc="4b1112d6"/>
+		<rom name="1f.bin" size="2048" crc="adca18a5"/>
+		<rom name="1e.bin" size="2048" crc="0449cb52"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="alieninv" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Alien Invasion</description>
+		<year>19??</year>
+		<manufacturer>bootleg (Margamatics)</manufacturer>
+		<rom name="alieninv.h" size="2048" crc="6ad601c3"/>
+		<rom name="alieninv.g" size="2048" crc="c6bb6fb3"/>
+		<rom name="alieninv.f" size="2048" crc="1d2ff324"/>
+		<rom name="alieninv.e" size="2048" crc="2f2e6791"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="alienres" sourcefile="pre90s/d_pacman.cpp">
 		<comment>monstersgoboom.itch.io</comment>
 		<description>Alien Rescue (Homebrew, Test Build July 2019)</description>
@@ -6956,6 +7001,15 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="maze" sourcefile="pre90s/d_invaders.cpp">
+		<description>Amazing Maze</description>
+		<year>1976</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="maze.h" size="2048" crc="f2860cff"/>
+		<rom name="maze.g" size="2048" crc="65fad839"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="ambushh" cloneof="ambush" romof="ambush" sourcefile="pre90s/d_ambush.cpp">
@@ -11348,6 +11402,34 @@
 		<video type="raster" orientation="horizontal" width="256" height="192" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="laser" cloneof="spcewarl" romof="spcewarl" sourcefile="pre90s/d_invaders.cpp">
+		<description>Astro Laser (bootleg of Space Laser)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Leisure Time Electronics)</manufacturer>
+		<rom name="1.u36" size="2048" crc="b44e2c41"/>
+		<rom name="2.u35" size="2048" crc="9876f331"/>
+		<rom name="3.u34" size="2048" crc="ed79000b"/>
+		<rom name="4.u33" size="2048" crc="10a160a1"/>
+		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="astropal" sourcefile="pre90s/d_invaders.cpp">
+		<description>Astropal</description>
+		<year>1980?</year>
+		<manufacturer>Sidam?</manufacturer>
+		<rom name="2708.0a" size="1024" crc="e6883322"/>
+		<rom name="2708.1a" size="1024" crc="4401df1d"/>
+		<rom name="2708.2a" size="1024" crc="5bac1ee4"/>
+		<rom name="2708.3a" size="1024" crc="a870afad"/>
+		<rom name="2708.4a" size="1024" crc="8bd2d985"/>
+		<rom name="2708.5a" size="1024" crc="5e97a86b"/>
+		<rom name="2708.6a" size="1024" crc="22c354d0"/>
+		<rom name="2708.7a" size="1024" crc="aeca51c1"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="asukaja" cloneof="asuka" romof="asuka" sourcefile="taito/d_asuka.cpp">
 		<description>Asuka &amp; Asuka (Japan)</description>
 		<year>1988</year>
@@ -12016,6 +12098,34 @@
 		<rom name="001-14.g1" merge="decoder.2" size="512" crc="8dd98da5"/>
 		<video type="raster" orientation="horizontal" width="292" height="240" aspectx="4" aspecty="3"/>
 		<driver status="preliminary"/>
+	</game>
+	<game name="attackfc" sourcefile="pre90s/d_invaders.cpp">
+		<description>Attack Force (encrypted)</description>
+		<year>1979?</year>
+		<manufacturer>Electronic Games Systems</manufacturer>
+		<rom name="30a.bin" size="1024" crc="c12e3386"/>
+		<rom name="36a.bin" size="1024" crc="6738dcb9"/>
+		<rom name="31a.bin" size="1024" crc="787a4658"/>
+		<rom name="37a.bin" size="1024" crc="ad6bfbbe"/>
+		<rom name="32a.bin" size="1024" crc="cbe0a711"/>
+		<rom name="33a.bin" size="1024" crc="53147393"/>
+		<rom name="39a.bin" size="1024" crc="f538cf08"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="attackfcu" cloneof="attackfc" romof="attackfc" sourcefile="pre90s/d_invaders.cpp">
+		<description>Attack Force (unencrypted)</description>
+		<year>1979?</year>
+		<manufacturer>bootleg?</manufacturer>
+		<rom name="egs0.bin" size="1024" crc="653bbb40"/>
+		<rom name="egs1.bin" size="1024" crc="56024445"/>
+		<rom name="egs2.bin" size="1024" crc="0a5fbe34"/>
+		<rom name="egs3.bin" size="1024" crc="50f7cd22"/>
+		<rom name="egs4.bin" size="1024" crc="f59bac9e"/>
+		<rom name="egs6.bin" size="1024" crc="a9eb4699"/>
+		<rom name="egs7.bin" size="1024" crc="7e705388"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
 	</game>
 	<game name="au" sourcefile="pre90s/d_cclimber.cpp">
 		<comment>Prototype</comment>
@@ -13439,6 +13549,21 @@
 		<rom name="82s126.1m" size="256" crc="a9cc86bf"/>
 		<rom name="82s126.3m" size="256" crc="77245b66"/>
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="ballbomb" sourcefile="pre90s/d_invaders.cpp">
+		<description>Balloon Bomber</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="tn01" size="2048" crc="551585b5"/>
+		<rom name="tn02" size="2048" crc="7e1f734f"/>
+		<rom name="tn03" size="2048" crc="d93e20bc"/>
+		<rom name="tn04" size="2048" crc="d0689a22"/>
+		<rom name="tn05-1" size="2048" crc="5d5e94f1"/>
+		<rom name="tn06" size="1024" crc="7ec554c4"/>
+		<rom name="tn07" size="1024" crc="deb0ac82"/>
+		<rom name="mb7052.2c" size="256" status="nodump"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="ballbros" sourcefile="taito/d_taitox.cpp">
@@ -19581,6 +19706,42 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="blueshrk" sourcefile="pre90s/d_invaders.cpp">
+		<description>Blue Shark (Midway)</description>
+		<year>1978</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="blueshrk.h" size="2048" crc="4ff94187"/>
+		<rom name="blueshrk.g" size="2048" crc="e49368fd"/>
+		<rom name="blueshrk.f" size="2048" crc="86cca79d"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="blueshrkmr" cloneof="blueshrk" romof="blueshrk" sourcefile="pre90s/d_invaders.cpp">
+		<description>Blue Shark (Model Racing bootleg, set 1)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Model Racing)</manufacturer>
+		<rom name="mr14.1s" size="1024" crc="ea2ba987"/>
+		<rom name="mr15.1r" size="1024" crc="049337a4"/>
+		<rom name="mr16.1n" size="1024" crc="3f9793ca"/>
+		<rom name="mr17.1m" size="1024" crc="0a73e0eb"/>
+		<rom name="mr18.1l" size="1024" crc="a18bb930"/>
+		<rom name="mr19.1j" size="1024" crc="23c63d02"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="blueshrkmr2" cloneof="blueshrk" romof="blueshrk" sourcefile="pre90s/d_invaders.cpp">
+		<description>Blue Shark (Model Racing bootleg, set 2)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Model Racing)</manufacturer>
+		<rom name="mr14.1s" size="1024" crc="ea2ba987"/>
+		<rom name="mr15.1r" size="1024" crc="049337a4"/>
+		<rom name="mr16.1n" size="1024" crc="8776920f"/>
+		<rom name="mr17.1m" size="1024" crc="0a73e0eb"/>
+		<rom name="mr18.1l" size="1024" crc="a18bb930"/>
+		<rom name="mr19.1j" size="1024" crc="23c63d02"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bjourneyh" cloneof="bjourney" romof="bjourney" sourcefile="neogeo/d_neogeo.cpp">
 		<description>Blue's Journey / Raguy (ALH-001)</description>
 		<year>1990</year>
@@ -20557,6 +20718,17 @@
 		<video type="raster" orientation="vertical" width="236" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="boothill" sourcefile="pre90s/d_invaders.cpp">
+		<description>Boot Hill</description>
+		<year>1977</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="romh.cpu" size="2048" crc="1615d077"/>
+		<rom name="romg.cpu" size="2048" crc="65a90420"/>
+		<rom name="romf.cpu" size="2048" crc="3fdafd79"/>
+		<rom name="rome.cpu" size="2048" crc="374529f4"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="brdrlinb" cloneof="brdrline" romof="brdrline" sampleof="tranqgun" sourcefile="pre90s/d_vicdual.cpp">
 		<comment>Bootleg</comment>
 		<description>Borderline (Karateco bootleg)</description>
@@ -21221,6 +21393,18 @@
 		<rom name="bowl-o-rama_rev_1.0_u30.u30" size="32768" crc="f3168834"/>
 		<rom name="bowl-o-rama_rev_1.0_ux7.ux7" size="262144" crc="8727432a"/>
 		<video type="raster" orientation="vertical" width="240" height="360" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="bowler" sourcefile="pre90s/d_invaders.cpp">
+		<description>Bowling Alley</description>
+		<year>1978</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="h.cpu" size="2048" crc="74c29b93"/>
+		<rom name="g.cpu" size="2048" crc="ca26d8b4"/>
+		<rom name="f.cpu" size="2048" crc="ba8a0bfa"/>
+		<rom name="e.cpu" size="2048" crc="4da65a40"/>
+		<rom name="d.cpu" size="2048" crc="e7dbc9d9"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="bowmen" sourcefile="irem/d_vigilant.cpp">
@@ -26407,6 +26591,17 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cane" sourcefile="pre90s/d_invaders.cpp">
+		<description>Cane (prototype)</description>
+		<year>1979?</year>
+		<manufacturer>Model Racing</manufacturer>
+		<rom name="mrcane.71" size="2048" crc="47de691e"/>
+		<rom name="mrcane.70" size="2048" crc="3f3ee3b9"/>
+		<rom name="mrcane.69" size="2048" crc="d1fd883f"/>
+		<rom name="mrcane.62" size="2048" crc="0d37cc00"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cannonb" cloneof="cannonbp" romof="cannonbp" sourcefile="pre90s/d_cclimber.cpp">
 		<comment>Bootleg</comment>
 		<description>Cannon Ball (bootleg on Crazy Kong hardware) (set 1, buggy)</description>
@@ -29811,6 +30006,33 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="checkmat" sourcefile="pre90s/d_invaders.cpp">
+		<description>Checkmate (set 1)</description>
+		<year>1977</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="checkmat.h" size="1024" crc="3481a6d1"/>
+		<rom name="checkmat.g" size="1024" crc="df5fa551"/>
+		<rom name="checkmat.f" size="1024" crc="25586406"/>
+		<rom name="checkmat.e" size="1024" crc="59330d84"/>
+		<rom name="checkmat.d" size="1024" status="nodump"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="checkmata" cloneof="checkmat" romof="checkmat" sourcefile="pre90s/d_invaders.cpp">
+		<description>Checkmate (set 2)</description>
+		<year>1977</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="1.h" size="512" crc="15c90cde"/>
+		<rom name="2.g" size="512" crc="af52a8d0"/>
+		<rom name="3.f" size="512" crc="a4650524"/>
+		<rom name="4.e" size="512" crc="d02488c9"/>
+		<rom name="5.d" size="512" crc="a0477f03"/>
+		<rom name="6.c" size="512" crc="1ae4e225"/>
+		<rom name="7.b" size="512" crc="1eb04641"/>
+		<rom name="8.a" size="512" crc="b5ce1a2a"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cheekyms" sourcefile="pre90s/d_cheekyms.cpp">
 		<description>Cheeky Mouse</description>
 		<year>1980</year>
@@ -31642,6 +31864,19 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="claybust" sourcefile="pre90s/d_invaders.cpp">
+		<description>Claybuster</description>
+		<year>1978</year>
+		<manufacturer>Model Racing</manufacturer>
+		<rom name="0.a1" size="1024" crc="90810582"/>
+		<rom name="1.a2" size="1024" crc="5ce6fb0e"/>
+		<rom name="2.a4" size="1024" crc="d4c1d523"/>
+		<rom name="3.a5" size="1024" crc="1ca00825"/>
+		<rom name="4.a6" size="1024" crc="09a21120"/>
+		<rom name="5.a8" size="1024" crc="92cd4da8"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cleopatr" sourcefile="taito/d_taitof3.cpp">
 		<description>Cleopatra Fortune (Ver 2.1J 1996/09/05)</description>
 		<year>1996</year>
@@ -31819,6 +32054,34 @@
 		<rom name="82s129.p3" size="256" crc="615d784d"/>
 		<rom name="63s141.m8" size="256" crc="6d7479ec"/>
 		<video type="raster" orientation="horizontal" width="256" height="232" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="clowns1" cloneof="clowns" romof="clowns" sampleof="clowns" sourcefile="pre90s/d_invaders.cpp">
+		<description>Clowns (rev. 1)</description>
+		<year>1978</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="clownsv1.h" size="1024" crc="5560c951"/>
+		<rom name="clownsv1.g" size="1024" crc="6a571d66"/>
+		<rom name="clownsv1.f" size="1024" crc="a2d56cea"/>
+		<rom name="clownsv1.e" size="1024" crc="bbd606f6"/>
+		<rom name="clownsv1.d" size="1024" crc="37b6ff0e"/>
+		<rom name="clownsv1.c" size="1024" crc="12968e52"/>
+		<sample name="miss" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="clowns" sourcefile="pre90s/d_invaders.cpp">
+		<description>Clowns (rev. 2)</description>
+		<year>1978</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="h2.cpu" size="1024" crc="ff4432eb"/>
+		<rom name="g2.cpu" size="1024" crc="676c934b"/>
+		<rom name="f2.cpu" size="1024" crc="00757962"/>
+		<rom name="e2.cpu" size="1024" crc="9e506a36"/>
+		<rom name="d2.cpu" size="1024" crc="d61b5b47"/>
+		<rom name="c2.cpu" size="1024" crc="154d129a"/>
+		<sample name="miss" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="cgraplop" romof="decocass" sourcefile="dataeast/d_decocass.cpp">
@@ -33673,6 +33936,21 @@
 		<video type="raster" orientation="horizontal" width="240" height="196" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cosmicbat" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Cosmic Battle (Recreativos Franco bootleg of Space Invaders)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Recreativos Franco)</manufacturer>
+		<rom name="1.5m" size="1024" crc="6019a1aa"/>
+		<rom name="2.5n" size="1024" crc="c12eab91"/>
+		<rom name="3.5p" size="1024" crc="2a8d9cd5"/>
+		<rom name="4.5r" size="1024" crc="4c77ce80"/>
+		<rom name="5.5s" size="1024" crc="b2527c77"/>
+		<rom name="6.5t" size="1024" crc="a883ff01"/>
+		<rom name="7.5u" size="1024" crc="46e02fcf"/>
+		<rom name="8.5v" size="1024" crc="ff88f38e"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="cosmccop" sourcefile="irem/d_m72.cpp">
 		<description>Cosmic Cop (World)</description>
 		<year>1991</year>
@@ -33696,6 +33974,40 @@
 		<rom name="cc_d-7b-.ic45" size="279" crc="75ff4517"/>
 		<rom name="ken_b-3a-.ic9" size="279" crc="ad1a7942"/>
 		<video type="raster" orientation="horizontal" width="384" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmicin" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Cosmic Invaders (bootleg of Space Invaders)</description>
+		<year>1978</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="cn7472n-7921.bin" merge="9316b-0869_m739h.h1" size="2048" crc="734f5ad8"/>
+		<rom name="cn7471n-7918.bin" merge="9316b-0856_m739g.g1" size="2048" crc="6bfaca4a"/>
+		<rom name="cn7470n-7918.bin" merge="9316b-0855_m739f.f1" size="2048" crc="0ccead96"/>
+		<rom name="cn7469n-7921.bin" size="2048" crc="5733048c"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmicmo" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Cosmic Monsters (version II)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Universal)</manufacturer>
+		<rom name="ii-1.h1" size="1024" crc="d6e4e5da"/>
+		<rom name="ii-2.h2" size="1024" crc="8f7988e6"/>
+		<rom name="ii-3.h3" size="1024" crc="2d2e9dc8"/>
+		<rom name="ii-4.h4" size="1024" crc="26cae456"/>
+		<rom name="ii-5.h5" size="1024" crc="b13f228e"/>
+		<rom name="ii-6.h6" size="1024" crc="4ae1b9c4"/>
+		<rom name="ii-7.h7" size="1024" crc="6a13b15b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmicm2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Cosmic Monsters 2</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Universal)</manufacturer>
+		<rom name="3907.bin" size="4096" crc="bbffede6"/>
+		<rom name="3906.bin" size="4096" crc="b841f894"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="cgangpzlj" cloneof="cgangpzl" romof="cgangpzl" sourcefile="pst90s/d_namcona1.cpp">
@@ -33854,6 +34166,22 @@
 		<rom name="mb7114e.2d" size="256" crc="75466109"/>
 		<rom name="mb7114e.7f" size="256" crc="06538736"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmo" sourcefile="pre90s/d_invaders.cpp">
+		<description>Cosmo</description>
+		<year>1979</year>
+		<manufacturer>TDS &amp; MINTS</manufacturer>
+		<rom name="1.36" size="2048" crc="445c9a98"/>
+		<rom name="2.35" size="2048" crc="df3eb731"/>
+		<rom name="3.34" size="2048" crc="772c813f"/>
+		<rom name="4.33" size="2048" crc="279f66e6"/>
+		<rom name="5.32" size="2048" crc="cefb18df"/>
+		<rom name="6.31" size="2048" crc="b037f6c4"/>
+		<rom name="7.42" size="2048" crc="c3831ea2"/>
+		<rom name="n-1.7d" size="2048" crc="bd8576f1"/>
+		<rom name="n-2.6e" size="2048" crc="48f1ade5"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="cottong" cloneof="locomotn" romof="locomotn" sourcefile="pre90s/d_rallyx.cpp">
@@ -34399,6 +34727,19 @@
 		<sample name="bip" />
 		<sample name="motor" />
 		<video type="raster" orientation="horizontal" width="248" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="crashrd" cloneof="schaser" romof="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Crash Road (bootleg of Space Chaser)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Centromatic)</manufacturer>
+		<rom name="2716-5m.bin" size="2048" crc="53749427"/>
+		<rom name="2716-5n.bin" size="2048" crc="e391d768"/>
+		<rom name="2716-5p.bin" size="2048" crc="fededc5d"/>
+		<rom name="2716-5r.bin" size="2048" crc="30830779"/>
+		<rom name="2716-5s.bin" size="2048" crc="6a974917"/>
+		<rom name="rt06.ic2" merge="rt06.ic2" size="1024" crc="950cf973"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="qcrayon2" sourcefile="taito/d_taitof2.cpp">
@@ -39621,6 +39962,19 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="darthvdr" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Darth Vader (bootleg of Space Invaders)</description>
+		<year>1978</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="rom0" size="1024" crc="b15785b6"/>
+		<rom name="rom1" size="1024" crc="95947743"/>
+		<rom name="rom2" size="1024" crc="19b1731f"/>
+		<rom name="rom3" size="1024" crc="ca1b5e3c"/>
+		<rom name="rom4" size="1024" crc="eede5f41"/>
+		<rom name="rom5" size="1024" crc="cc52a4bb"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="darwin" sourcefile="dataeast/d_brkthru.cpp">
 		<description>Darwin 4078 (Japan)</description>
 		<year>1986</year>
@@ -41005,6 +41359,17 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="desertgu" sourcefile="pre90s/d_invaders.cpp">
+		<description>Desert Gun</description>
+		<year>1977</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="9316.1h" size="2048" crc="c0030d7c"/>
+		<rom name="9316.1g" size="2048" crc="1ddde10b"/>
+		<rom name="9316.1f" size="2048" crc="808e46f1"/>
+		<rom name="desertgu.e" size="2048" crc="ac64dc62"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="desertwr" sourcefile="pst90s/d_ms32.cpp">
 		<description>Desert War / Wangan Sensou (ver 1.0)</description>
 		<year>1995</year>
@@ -41031,6 +41396,30 @@
 		<rom name="mb94038-13.23" size="2097152" crc="b0cac8f2"/>
 		<rom name="91022-01.ic83" size="1" status="nodump"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="desterth" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Destination Earth (bootleg of Lunar Rescue)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="36_h.bin" size="2048" crc="f86923e5"/>
+		<rom name="35_g.bin" size="2048" crc="797f440d"/>
+		<rom name="34_f.bin" size="2048" crc="993d0846"/>
+		<rom name="33_e.bin" size="2048" crc="8d155fc5"/>
+		<rom name="32_d.bin" size="2048" crc="3f531b6f"/>
+		<rom name="31_c.bin" size="2048" crc="ab019c30"/>
+		<rom name="42_b.bin" size="2048" crc="ed9dbac6"/>
+		<rom name="7643-1.cpu" merge="7643-1.cpu" size="1024" crc="8b2e38de"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="detatwin" cloneof="blswhstl" romof="blswhstl" sourcefile="konami/d_tmnt.cpp">
@@ -43115,6 +43504,17 @@
 		<rom name="mmi6331.2a" size="32" crc="69a35aa5"/>
 		<rom name="mmi6331.2b" size="32" crc="596ae457"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="dogpatch" sourcefile="pre90s/d_invaders.cpp">
+		<description>Dog Patch</description>
+		<year>1977</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="dogpatch.h" size="2048" crc="74ebdf4d"/>
+		<rom name="dogpatch.g" size="2048" crc="ac246f70"/>
+		<rom name="dogpatch.f" size="2048" crc="a975b011"/>
+		<rom name="dogpatch.e" size="2048" crc="c12b1f60"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="dogosoke" cloneof="victroad" romof="victroad" sourcefile="pre90s/d_snk.cpp">
@@ -46461,6 +46861,17 @@
 		<rom name="690a04.bin" size="131072" crc="1bfeb763"/>
 		<rom name="pal10l8-007553.bin" size="44" crc="0ae5a161"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dplay" sourcefile="pre90s/d_invaders.cpp">
+		<description>Double Play</description>
+		<year>1977</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="dplay619.h" size="2048" crc="6680669b"/>
+		<rom name="dplay619.g" size="2048" crc="0eec7e01"/>
+		<rom name="dplay619.f" size="2048" crc="3af4b719"/>
+		<rom name="dplay619.e" size="2048" crc="65cab4fc"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="dblpointd" cloneof="dblpoint" romof="dblpoint" sourcefile="pst90s/d_gumbo.cpp">
@@ -51744,6 +52155,28 @@
 		<video type="raster" orientation="vertical" width="208" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="escmars" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Escape from Mars (bootleg of Lunar Rescue)</description>
+		<year>1980</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="2516_em.m5" size="2048" crc="6580f1c3"/>
+		<rom name="2716_em.n5" merge="lrescue.2" size="2048" crc="49e79706"/>
+		<rom name="2516_em.p5" merge="lrescue.3" size="2048" crc="1ac969be"/>
+		<rom name="2516_em.r5" size="2048" crc="c1bd5949"/>
+		<rom name="2716_em.s5" size="2048" crc="1ec21a31"/>
+		<rom name="2716_em.t5" merge="lrescue.6" size="2048" crc="bfb0f65d"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="eprom" sourcefile="atari/d_eprom.cpp">
 		<description>Escape from the Planet of the Robot Monsters (set 1)</description>
 		<year>1989</year>
@@ -53036,6 +53469,18 @@
 		<rom name="m761c" size="4096" crc="bff6c97e"/>
 		<rom name="m761d" size="4096" crc="5173781a"/>
 		<video type="raster" orientation="horizontal" width="352" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="einning" sourcefile="pre90s/d_invaders.cpp">
+		<description>Extra Inning / Ball Park II</description>
+		<year>1978</year>
+		<manufacturer>Midway / Taito</manufacturer>
+		<rom name="ei.h" size="2048" crc="eff9c7af"/>
+		<rom name="ei.g" size="2048" crc="5d1e66cb"/>
+		<rom name="ei.f" size="2048" crc="ed96785d"/>
+		<rom name="ei.e" size="2048" crc="ad096a5d"/>
+		<rom name="ei.b" size="2048" crc="56b407d4"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="extdwnhl" sourcefile="pst90s/d_seta.cpp">
@@ -61911,6 +62356,20 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="galactic" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galactica - Batalha Espacial</description>
+		<year>1980?</year>
+		<manufacturer>Taito do Brasil</manufacturer>
+		<rom name="1" size="2048" crc="b5098f1e"/>
+		<rom name="2" size="2048" crc="f97410ee"/>
+		<rom name="3" size="2048" crc="c1175feb"/>
+		<rom name="4" size="2048" crc="b4451d7c"/>
+		<rom name="5" size="2048" crc="74c9da61"/>
+		<rom name="6" size="2048" crc="5e7c6c44"/>
+		<rom name="7" size="2048" crc="02619e18"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="galactica2" cloneof="moonal2" romof="moonal2" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Bootleg</comment>
 		<description>Galactica-2 (bootleg of Moon Alien Part 2)</description>
@@ -63359,6 +63818,98 @@
 		<rom name="gg46.bin" size="65536" crc="5f1bf8ad"/>
 		<rom name="gg30.bin" size="65536" crc="ded7cacf"/>
 		<video type="raster" orientation="vertical" width="256" height="352" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="galmonst" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galaxy Monsters (Laguna S.A. Spanish bootleg of Space Invaders)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Laguna S.A.)</manufacturer>
+		<rom name="h.5m" size="1024" crc="8a0395e9"/>
+		<rom name="g.5n" size="1024" crc="6183ed16"/>
+		<rom name="f.5p" size="1024" crc="b6047fdd"/>
+		<rom name="c.5t" size="1024" crc="e88e8c96"/>
+		<rom name="b.5u" size="1024" crc="34678b80"/>
+		<rom name="a.5v" size="1024" crc="05a6806b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="grescue" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galaxy Rescue</description>
+		<year>1979</year>
+		<manufacturer>Taito (Universal license?)</manufacturer>
+		<rom name="lrescue.1" merge="lrescue.1" size="2048" crc="2bbc4778"/>
+		<rom name="lrescue.2" merge="lrescue.2" size="2048" crc="49e79706"/>
+		<rom name="lrescue.3" merge="lrescue.3" size="2048" crc="1ac969be"/>
+		<rom name="grescue.4" size="2048" crc="ca412991"/>
+		<rom name="grescue.5" size="2048" crc="a419a4d6"/>
+		<rom name="lrescue.6" merge="lrescue.6" size="2048" crc="bfb0f65d"/>
+		<rom name="7643-1.cpu" merge="7643-1.cpu" size="1024" crc="8b2e38de"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="galxwarst2" cloneof="galxwars" romof="galxwars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galaxy Wars (Taito)</description>
+		<year>1979</year>
+		<manufacturer>Universal (Taito Corporation license)</manufacturer>
+		<rom name="gv01.bin" size="1024" crc="0eeb9952"/>
+		<rom name="gv02.bin" size="1024" crc="d385c224"/>
+		<rom name="gv03.bin" size="1024" crc="bb9201af"/>
+		<rom name="gv04.bin" size="1024" crc="9a2a5b68"/>
+		<rom name="gv05.bin" size="1024" crc="43ac3f02"/>
+		<rom name="gv06.bin" size="1024" crc="3243af69"/>
+		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="galxwarst" cloneof="galxwars" romof="galxwars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galaxy Wars (Taito?)</description>
+		<year>1979</year>
+		<manufacturer>Universal (Taito license?)</manufacturer>
+		<rom name="galxwars.0" size="1024" crc="608bfe7f"/>
+		<rom name="galxwars.1" size="1024" crc="a810b258"/>
+		<rom name="galxwars.2" size="1024" crc="74f31781"/>
+		<rom name="galxwars.3" size="1024" crc="c88f886c"/>
+		<rom name="galxwars.4" size="1024" crc="ae4fe8fb"/>
+		<rom name="galxwars.5" size="1024" crc="37708a35"/>
+		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="galxwars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galaxy Wars (Universal set 1)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="univgw3.0" size="1024" crc="937796f4"/>
+		<rom name="univgw4.1" size="1024" crc="4b86e7a6"/>
+		<rom name="univgw5.2" size="1024" crc="47a187cd"/>
+		<rom name="univgw6.3" size="1024" crc="7b7d22ff"/>
+		<rom name="univgw1.4" size="1024" crc="0871156e"/>
+		<rom name="univgw2.5" size="1024" crc="6036d7bf"/>
+		<rom name="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="galxwars2" cloneof="galxwars" romof="galxwars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Galaxy Wars (Universal set 2)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="3192.h6" size="4096" crc="bde6860b"/>
+		<rom name="3193.h7" size="4096" crc="a17cd507"/>
+		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="galwars2" cloneof="defender" romof="defender" sourcefile="pre90s/d_williams.cpp">
@@ -72557,6 +73108,19 @@
 		<video type="raster" orientation="vertical" width="224" height="400" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="gmissile" sourcefile="pre90s/d_invaders.cpp">
+		<description>Guided Missile</description>
+		<year>1977</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="gm_623.h" size="2048" crc="a3ebb792"/>
+		<rom name="gm_623.g" size="2048" crc="a5e740bb"/>
+		<rom name="gm_623.f" size="2048" crc="da381025"/>
+		<rom name="gm_623.e" size="2048" crc="f350146b"/>
+		<sample name="1" />
+		<sample name="2" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gulfstrmm" cloneof="gulfstrm" romof="gulfstrm" sourcefile="pst90s/d_dooyong.cpp">
 		<description>Gulf Storm (Japan, Media Shoji license)</description>
 		<year>1991</year>
@@ -72862,6 +73426,21 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="gunchamp" sourcefile="pre90s/d_invaders.cpp">
+		<description>Gun Champ</description>
+		<year>1980</year>
+		<manufacturer>Model Racing</manufacturer>
+		<rom name="251.a1" size="1024" crc="f27a8c1e"/>
+		<rom name="252.a2" size="1024" crc="d53b8f91"/>
+		<rom name="253.a4" size="1024" crc="9ef35c6c"/>
+		<rom name="254.a5" size="1024" crc="ba5b562d"/>
+		<rom name="255.a6" size="1024" crc="00ea8293"/>
+		<rom name="256.a8" size="1024" crc="e271150c"/>
+		<rom name="257.a9" size="1024" crc="0da5d9ad"/>
+		<rom name="258.a10" size="1024" crc="471d4052"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="gundl94" sourcefile="pst90s/d_dooyong.cpp">
 		<description>Gun Dealer '94</description>
 		<year>1994</year>
@@ -72878,6 +73457,32 @@
 		<rom name="gd94_006.j7" size="131072" crc="1d9536fe"/>
 		<rom name="gd94_010.l7" size="131072" crc="4b74857f"/>
 		<video type="raster" orientation="horizontal" width="384" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="gunfight" sourcefile="pre90s/d_invaders.cpp">
+		<description>Gun Fight (set 1)</description>
+		<year>1975</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="7609h.bin" size="1024" crc="0b117d73"/>
+		<rom name="7609g.bin" size="1024" crc="57bc3159"/>
+		<rom name="7609f.bin" size="1024" crc="8049a6bd"/>
+		<rom name="7609e.bin" size="1024" crc="773264e2"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="gunfighto" cloneof="gunfight" romof="gunfight" sourcefile="pre90s/d_invaders.cpp">
+		<description>Gun Fight (set 2)</description>
+		<year>1975</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="gf-h.h" size="512" crc="9d29cc7a"/>
+		<rom name="gf-g.g" size="512" crc="5816911b"/>
+		<rom name="gf-f.f" size="512" crc="58f6ee8d"/>
+		<rom name="gf-e.e" size="512" crc="59078036"/>
+		<rom name="gf-d.d" size="512" crc="2b64e17f"/>
+		<rom name="gf-c.c" size="512" crc="e0bbf98c"/>
+		<rom name="gf-b.b" size="512" crc="91114108"/>
+		<rom name="gf-a.a" size="512" crc="3fbf9a91"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="gunforc2" sourcefile="irem/d_m92.cpp">
@@ -81127,6 +81732,40 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="indianbtbr" cloneof="indianbt" romof="indianbt" sourcefile="pre90s/d_invaders.cpp">
+		<description>Indian Battle (Brazil)</description>
+		<year>1983</year>
+		<manufacturer>Taito do Brasil</manufacturer>
+		<rom name="1.36" size="2048" crc="5cf6316b"/>
+		<rom name="2.35" size="2048" crc="882c7421"/>
+		<rom name="3.34" merge="3.34" size="2048" crc="5c51675d"/>
+		<rom name="4.33" merge="4.33" size="2048" crc="70ebec95"/>
+		<rom name="5.32" size="2048" crc="aa12dbae"/>
+		<rom name="6.31" size="2048" crc="d9cb1691"/>
+		<rom name="7.42" merge="7.42" size="2048" crc="7060ba0b"/>
+		<rom name="8.41" size="2048" crc="e96699d6"/>
+		<rom name="mb7054.1" merge="mb7054.1" size="1024" crc="4acf4db3"/>
+		<rom name="mb7054.2" merge="mb7054.2" size="1024" crc="62cb3419"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="indianbt" sourcefile="pre90s/d_invaders.cpp">
+		<description>Indian Battle</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="1.36" size="2048" crc="ddc2b25d"/>
+		<rom name="2.35" size="2048" crc="6499b062"/>
+		<rom name="3.34" size="2048" crc="5c51675d"/>
+		<rom name="4.33" size="2048" crc="70ebec95"/>
+		<rom name="5.32" size="2048" crc="7b4022f4"/>
+		<rom name="6.31" size="2048" crc="89bd6f73"/>
+		<rom name="7.42" size="2048" crc="7060ba0b"/>
+		<rom name="8.41" size="2048" crc="eaccfc0a"/>
+		<rom name="mb7054.1" size="1024" crc="4acf4db3"/>
+		<rom name="mb7054.2" size="1024" crc="62cb3419"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="indytempc" cloneof="indytemp" romof="indytemp" sourcefile="atari/d_atarisy1.cpp">
 		<description>Indiana Jones and the Temple of Doom (cocktail)</description>
 		<year>1985</year>
@@ -81712,6 +82351,142 @@
 		<rom name="ic8.8" merge="ic8.8" size="4096" crc="04d067d3"/>
 		<rom name="ic3.prm" merge="ic3.prm" size="32" crc="927ff40a"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="intruder" cloneof="spcewarl" romof="spcewarl" sourcefile="pre90s/d_invaders.cpp">
+		<description>Intruder</description>
+		<year>1980</year>
+		<manufacturer>Konami (Game Plan license)</manufacturer>
+		<rom name="la01-1.36" size="2048" crc="bedc0078"/>
+		<rom name="la02-1.35" merge="spcewarl.2" size="2048" crc="43bc65c5"/>
+		<rom name="la03-1.34" size="2048" crc="278ef9cf"/>
+		<rom name="la04-1.33" size="2048" crc="5116b234"/>
+		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invrvngedu" cloneof="invrvnge" romof="invrvnge" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invader's Revenge (Dutchford, single PCB)</description>
+		<year>1980?</year>
+		<manufacturer>Zenitone-Microsec Ltd. (Dutchford license)</manufacturer>
+		<rom name="ir.5m" size="2048" crc="b145cb71"/>
+		<rom name="ir.5n" size="2048" crc="660e8af3"/>
+		<rom name="ir.5p" size="2048" crc="6ec5a9ad"/>
+		<rom name="ir.5r" size="2048" crc="74516811"/>
+		<rom name="ir.1t" merge="snd.2c" size="2048" crc="135f3b16"/>
+		<rom name="ir.1u" merge="snd.1c" size="2048" crc="152fc85e"/>
+		<rom name="ir.3r" size="2048" crc="57da51a9"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invrvngegw" cloneof="invrvnge" romof="invrvnge" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invader's Revenge (Game World, single PCB)</description>
+		<year>1980?</year>
+		<manufacturer>Zenitone-Microsec Ltd. (Game World license)</manufacturer>
+		<rom name="ir.5m" size="2048" crc="4fe35d1f"/>
+		<rom name="ir.5n" size="2048" crc="92d0442c"/>
+		<rom name="ir.5p" size="2048" crc="18d2372d"/>
+		<rom name="ir.5r" size="2048" crc="657ddf27"/>
+		<rom name="ir.1t" size="2048" crc="64e9e81e"/>
+		<rom name="ir.1u" merge="snd.1c" size="2048" crc="152fc85e"/>
+		<rom name="ir.3r" size="2048" crc="6ce639bf"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invrvnge" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invader's Revenge (set 1)</description>
+		<year>1980?</year>
+		<manufacturer>Zenitone-Microsec Ltd.</manufacturer>
+		<rom name="h.ic36" size="2048" crc="0e229b9f"/>
+		<rom name="g.ic35" size="2048" crc="26b38aa4"/>
+		<rom name="f.ic34" size="2048" crc="b3b2749e"/>
+		<rom name="e.ic33" size="2048" crc="d8e75102"/>
+		<rom name="snd.2c" size="2048" crc="135f3b16"/>
+		<rom name="snd.1c" size="2048" crc="152fc85e"/>
+		<rom name="colour.bin" size="2048" crc="7de74988"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invrvngea" cloneof="invrvnge" romof="invrvnge" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invader's Revenge (set 2)</description>
+		<year>1980?</year>
+		<manufacturer>Zenitone-Microsec Ltd.</manufacturer>
+		<rom name="h.ic36" size="2048" crc="0914b279"/>
+		<rom name="g.ic35" size="2048" crc="84d9497c"/>
+		<rom name="f.ic34" size="2048" crc="78d34d97"/>
+		<rom name="e.ic33" size="2048" crc="30c71887"/>
+		<rom name="snd.2c" merge="snd.2c" size="2048" crc="135f3b16"/>
+		<rom name="snd.1c" merge="snd.1c" size="2048" crc="152fc85e"/>
+		<rom name="colour.bin" merge="colour.bin" size="2048" crc="7de74988"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invrvngeb" cloneof="invrvnge" romof="invrvnge" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invader's Revenge (set 3)</description>
+		<year>1980?</year>
+		<manufacturer>Zenitone-Microsec Ltd.</manufacturer>
+		<rom name="invrvnge.h" size="2048" crc="aca41bbb"/>
+		<rom name="invrvnge.g" size="2048" crc="cfe89dad"/>
+		<rom name="invrvnge.f" size="2048" crc="e350de2c"/>
+		<rom name="invrvnge.e" size="2048" crc="1ec8dfc8"/>
+		<rom name="snd.2c" merge="snd.2c" size="2048" crc="135f3b16"/>
+		<rom name="snd.1c" merge="snd.1c" size="2048" crc="152fc85e"/>
+		<rom name="colour.bin" merge="colour.bin" size="2048" crc="7de74988"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invasionrz" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invasion (bootleg set 1, R Z SRL Bologna)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (R Z SRL Bologna)</manufacturer>
+		<rom name="rz0.0k" size="1024" crc="7a9b4485"/>
+		<rom name="rz1.1k" size="1024" crc="7c86620d"/>
+		<rom name="rz2.2k" size="1024" crc="ccaf38f6"/>
+		<rom name="rz5.5k" size="1024" crc="8ec9eae2"/>
+		<rom name="rz6.6k" size="1024" crc="ec0edb4a"/>
+		<rom name="rz7.7k" size="1024" crc="e4ab9012"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invasionrza" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invasion (bootleg set 2, R Z SRL Bologna)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (R Z SRL Bologna)</manufacturer>
+		<rom name="rz0-0.9k" size="1024" crc="3044806f"/>
+		<rom name="rz1-1.8k" size="1024" crc="7c86620d"/>
+		<rom name="rz2-2.7k" size="1024" crc="c808e941"/>
+		<rom name="rz5-5.4k" size="1024" crc="8ec9eae2"/>
+		<rom name="rz6-6.3k" size="1024" crc="c48df3ca"/>
+		<rom name="rz6-6.3ka" size="1024" crc="aa51b2c3"/>
+		<rom name="rz7-7.2k" size="1024" crc="27dbea48"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="preliminary"/>
+	</game>
+	<game name="invasionb" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invasion (Italian bootleg)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="invasionb_0.bin" size="1024" crc="7a9b4485"/>
+		<rom name="invasionb_1.bin" size="1024" crc="7c86620d"/>
+		<rom name="invasionb_2.bin" size="1024" crc="ccaf38f6"/>
+		<rom name="invasionb_5.bin" size="1024" crc="8ec9eae2"/>
+		<rom name="invasionb_6.bin" size="1024" crc="ec0edb4a"/>
+		<rom name="invasionb_7.bin" size="1024" crc="6aac1281"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invasion" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Invasion (Sidam)</description>
+		<year>19??</year>
+		<manufacturer>bootleg (Sidam)</manufacturer>
+		<rom name="10136-0.0k" size="1024" crc="7a9b4485"/>
+		<rom name="10136-1.1k" size="1024" crc="7c86620d"/>
+		<rom name="10136-2.2k" size="1024" crc="ccaf38f6"/>
+		<rom name="10136-5.5k" size="1024" crc="8ec9eae2"/>
+		<rom name="10136-6.6k" size="1024" crc="ff0b0690"/>
+		<rom name="10136-7.7k" size="1024" crc="75d7acaf"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="invds" sourcefile="pre90s/d_vicdual.cpp">
@@ -82584,6 +83359,24 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="jspecter" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Jatre Specter (set 1)</description>
+		<year>1979</year>
+		<manufacturer>Taito / Jatre</manufacturer>
+		<rom name="3305.u6" size="4096" crc="ab211a4f"/>
+		<rom name="3306.u7" size="4096" crc="0df142a7"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="jspecter2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Jatre Specter (set 2)</description>
+		<year>1979</year>
+		<manufacturer>Taito / Jatre</manufacturer>
+		<rom name="unksi.b2" size="4096" crc="0584b6c4"/>
+		<rom name="unksi.a2" size="4096" crc="58095955"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="grdnstrmk" cloneof="grdnstrm" romof="grdnstrm" sourcefile="pst90s/d_nmk16.cpp">
@@ -92220,6 +93013,17 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="lagunar" sourcefile="pre90s/d_invaders.cpp">
+		<description>Laguna Racer</description>
+		<year>1977</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="lagunar.h" size="2048" crc="0cd5a280"/>
+		<rom name="lagunar.g" size="2048" crc="824cd6f5"/>
+		<rom name="lagunar.f" size="2048" crc="62692ca7"/>
+		<rom name="lagunar.e" size="2048" crc="20e098ed"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="landbrkb" cloneof="landbrk" romof="landbrk" sourcefile="pst90s/d_eolith.cpp">
 		<description>Land Breaker (World) / Miss Tang Ja Ru Gi (Korea) (pcb ver 1.0) (AT89c52 protected)</description>
 		<year>1999</year>
@@ -92937,11 +93741,11 @@
 	</game>
 	<game name="lasthopepb" cloneof="lasthope" romof="lasthope" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack, Bootleg</comment>
-		<description>Last Hope - Pink Bullets (bootleg AES to MVS conversion, no coin support) (Hack)</description>
+		<description>Last Hope - Pink Bullets v1.30 (bootleg AES to MVS conversion, no coin support) (Hack)</description>
 		<year>2026</year>
 		<manufacturer>LoW</manufacturer>
-		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="b81dd2e0"/>
-		<rom name="ngdt-300-s1pb.bin" size="131072" crc="f0719dbb"/>
+		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="25c1867d"/>
+		<rom name="ngdt-300-s1pb.bin" size="131072" crc="36c54e06"/>
 		<rom name="ngdt-300-c1pb.bin" size="4194304" crc="bc2d2a8b"/>
 		<rom name="ngdt-300-c2pb.bin" size="4194304" crc="1673318d"/>
 		<rom name="ngdt-300-c3pb.bin" size="4194304" crc="bf0e4af1"/>
@@ -96566,6 +97370,114 @@
 		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="lrescueabl" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Lunar Rescue (Artic bootleg)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Artic)</manufacturer>
+		<rom name="2708_1.1" size="1024" crc="e3796dec"/>
+		<rom name="2708_2.2" size="1024" crc="8067c036"/>
+		<rom name="2708_3.3" size="1024" crc="90179fee"/>
+		<rom name="2708_4.4" size="1024" crc="1d197d87"/>
+		<rom name="2708_5.5" size="1024" crc="4326d338"/>
+		<rom name="2708_6.6" size="1024" crc="3b272372"/>
+		<rom name="2708_7.7" size="1024" crc="06fc1ecc"/>
+		<rom name="2708_8.8" size="1024" crc="b3a3f24e"/>
+		<rom name="2708_9.9" size="1024" crc="3398798f"/>
+		<rom name="2708_10.10" size="1024" crc="37c5bfc6"/>
+		<rom name="2708_11.11" size="1024" crc="1b7a5644"/>
+		<rom name="2708_12.12" size="1024" crc="c342b907"/>
+		<rom name="cv01-7643.2c" size="1024" crc="aac24f34"/>
+		<rom name="cv02-7643.1c" size="1024" crc="2bdf83a0"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="lrescuem" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Lunar Rescue (Model Racing bootleg, set 1)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Model Racing)</manufacturer>
+		<rom name="48.ic36" size="1024" crc="bad5ba48"/>
+		<rom name="49.ic35" size="1024" crc="a6dc23d6"/>
+		<rom name="50.ic34" size="1024" crc="90179fee"/>
+		<rom name="51.ic33" size="1024" crc="1d197d87"/>
+		<rom name="52.ic32" size="1024" crc="4326d338"/>
+		<rom name="53.ic31" size="1024" crc="3b272372"/>
+		<rom name="54.ic42" size="1024" crc="a877c5b6"/>
+		<rom name="55.ic41" size="1024" crc="c9a93407"/>
+		<rom name="56.ic40" size="1024" crc="3398798f"/>
+		<rom name="57.ic39" size="1024" crc="37c5bfc6"/>
+		<rom name="58.ic38" size="1024" crc="1b7a5644"/>
+		<rom name="59.ic37" size="1024" crc="c342b907"/>
+		<rom name="cv01-7643.2c" size="1024" crc="aac24f34"/>
+		<rom name="cv02-7643.1c" size="1024" crc="2bdf83a0"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="lrescuem2" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Lunar Rescue (Model Racing bootleg, set 2)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Model Racing)</manufacturer>
+		<rom name="0.bin" size="2048" crc="27d37ad6"/>
+		<rom name="1.bin" size="2048" crc="d8ed56f0"/>
+		<rom name="2.bin" size="2048" crc="3aed9788"/>
+		<rom name="3.bin" size="2048" crc="fa121b92"/>
+		<rom name="4.bin" size="2048" crc="535b4a78"/>
+		<rom name="5.bin" size="2048" crc="0613a977"/>
+		<rom name="6.bin" size="2048" crc="8fe51cc0"/>
+		<rom name="cv01-7643.2c" size="1024" crc="aac24f34"/>
+		<rom name="cv02-7643.1c" size="1024" crc="2bdf83a0"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Lunar Rescue</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="lrescue.1" size="2048" crc="2bbc4778"/>
+		<rom name="lrescue.2" size="2048" crc="49e79706"/>
+		<rom name="lrescue.3" size="2048" crc="1ac969be"/>
+		<rom name="lrescue.4" size="2048" crc="782fee3c"/>
+		<rom name="lrescue.5" size="2048" crc="58fde8bc"/>
+		<rom name="lrescue.6" size="2048" crc="bfb0f65d"/>
+		<rom name="7643-1.cpu" size="1024" crc="8b2e38de"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="luplup10" cloneof="suplup" romof="suplup" sourcefile="pst90s/d_vamphalf.cpp">
 		<description>Lup Lup Puzzle / Zhuan Zhuan Puzzle (version 1.05 / 981214)</description>
 		<year>1999</year>
@@ -96608,6 +97520,62 @@
 		<rom name="vrom1.bin" merge="vrom1.bin" size="262144" crc="34a56987"/>
 		<rom name="gal22v10b.gal1" size="741" status="nodump"/>
 		<video type="raster" orientation="horizontal" width="320" height="236" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="lupin3" sourcefile="pre90s/d_invaders.cpp">
+		<description>Lupin III (set 1)</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="lp01.36" size="2048" crc="fd506ee8"/>
+		<rom name="lp02.35" size="2048" crc="ec4225f8"/>
+		<rom name="lp03.34" size="2048" crc="9307d377"/>
+		<rom name="lp04.33" size="2048" crc="e41e8b2b"/>
+		<rom name="lp05.32" size="2048" crc="f5c2faf4"/>
+		<rom name="lp06.31" size="2048" crc="66289ab2"/>
+		<rom name="lp08.1" size="1024" crc="33dbd03a"/>
+		<rom name="lp09.2" size="1024" crc="9eaee652"/>
+		<sample name="cap" />
+		<sample name="bark" />
+		<sample name="walk1" />
+		<sample name="walk2" />
+		<sample name="warp" />
+		<sample name="extend" />
+		<sample name="kick" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="lupin3a" cloneof="lupin3" romof="lupin3" sampleof="lupin3" sourcefile="pre90s/d_invaders.cpp">
+		<description>Lupin III (set 2)</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="lp12.bin" size="2048" crc="68a7f47a"/>
+		<rom name="lp13.bin" size="2048" crc="cae9a17b"/>
+		<rom name="lp14.bin" size="2048" crc="3553b9e4"/>
+		<rom name="lp15.bin" size="2048" crc="acbeef64"/>
+		<rom name="lp16.bin" size="2048" crc="19fcdc54"/>
+		<rom name="lp17.bin" merge="lp06.31" size="2048" crc="66289ab2"/>
+		<rom name="lp18.bin" size="2048" crc="2f07b4ba"/>
+		<sample name="cap" />
+		<sample name="bark" />
+		<sample name="walk1" />
+		<sample name="walk2" />
+		<sample name="warp" />
+		<sample name="extend" />
+		<sample name="kick" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="m4" sourcefile="pre90s/d_invaders.cpp">
+		<description>M-4</description>
+		<year>1977</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="m4.h" size="2048" crc="9ee2a0b5"/>
+		<rom name="m4.g" size="2048" crc="0e84b9cb"/>
+		<rom name="m4.f" size="2048" crc="9ded9956"/>
+		<rom name="m4.e" size="2048" crc="b6983238"/>
+		<sample name="1" />
+		<sample name="2" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="mia2" cloneof="mia" romof="mia" sourcefile="konami/d_tmnt.cpp">
@@ -113075,6 +114043,44 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="moonbase" cloneof="invadpt2" romof="invadpt2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Moon Base Zeta (set 1)</description>
+		<year>1979</year>
+		<manufacturer>Taito / Nichibutsu</manufacturer>
+		<rom name="ze3-1.a4" size="1024" crc="82dbf2c7"/>
+		<rom name="ze3-2.c4" size="1024" crc="c867f5b4"/>
+		<rom name="ze3-3.e4" size="1024" crc="cb23ccc1"/>
+		<rom name="ze3-4.f4" size="1024" crc="9a11abe2"/>
+		<rom name="ze3-5.h4" size="1024" crc="2b105ed3"/>
+		<rom name="ze3-6.l4" size="1024" crc="cb3d6dcb"/>
+		<rom name="ze3-7.a5" size="1024" crc="774b52c9"/>
+		<rom name="ze3-8.c5" size="1024" crc="e88ea83b"/>
+		<rom name="ze3-9.e5" size="1024" crc="2dd5adfa"/>
+		<rom name="ze3-10.f5" size="1024" crc="1e7c22a4"/>
+		<rom name="cv02.h7" size="1024" crc="2bdf83a0"/>
+		<rom name="cv01.g7" size="1024" crc="aac24f34"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="moonbasea" cloneof="invadpt2" romof="invadpt2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Moon Base Zeta (set 2)</description>
+		<year>1979</year>
+		<manufacturer>Taito / Nichibutsu</manufacturer>
+		<rom name="ze3-1.a4" size="1024" crc="82dbf2c7"/>
+		<rom name="ze3-2.c4" size="1024" crc="c867f5b4"/>
+		<rom name="ze3-3.e4" size="1024" crc="cb23ccc1"/>
+		<rom name="ze3-4_alt.f4" size="1024" crc="86a00411"/>
+		<rom name="ze3-5.h4" size="1024" crc="2b105ed3"/>
+		<rom name="ze3-6.l4" size="1024" crc="cb3d6dcb"/>
+		<rom name="ze3-7.a5" size="1024" crc="774b52c9"/>
+		<rom name="ze3-8.c5" size="1024" crc="e88ea83b"/>
+		<rom name="ze3-9.e5" size="1024" crc="2dd5adfa"/>
+		<rom name="ze3-10.f5" size="1024" crc="1e7c22a4"/>
+		<rom name="cv02.h7" size="1024" crc="2bdf83a0"/>
+		<rom name="cv01.g7" size="1024" crc="aac24f34"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="mooncrs4" cloneof="mooncrst" romof="mooncrst" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Bootleg</comment>
 		<description>Moon Crest (bootleg of Moon Cresta)</description>
@@ -113457,6 +114463,54 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="mlander" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Moon Lander (bootleg of Lunar Rescue, set 1)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Leisure Time Electronics)</manufacturer>
+		<rom name="ml1.u36" size="2048" crc="69df529a"/>
+		<rom name="ml2.u35" size="2048" crc="3b503337"/>
+		<rom name="ml3.u34" size="2048" crc="64e53458"/>
+		<rom name="ml4.u33" size="2048" crc="c9a74571"/>
+		<rom name="ml5.u32" size="2048" crc="88291fa2"/>
+		<rom name="ml6.u31" merge="lrescue.6" size="2048" crc="bfb0f65d"/>
+		<rom name="01.bin" size="1024" crc="aac24f34"/>
+		<rom name="02.bin" size="1024" crc="2bdf83a0"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="mlandera" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Moon Lander (bootleg of Lunar Rescue, set 2)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Leisure Time Electronics)</manufacturer>
+		<rom name="ml-1_u36.u36" merge="lrescue.1" size="2048" crc="2bbc4778"/>
+		<rom name="ml-2_u35.u35" size="2048" crc="752fb664"/>
+		<rom name="ml-3_u34.u34" size="2048" crc="64e53458"/>
+		<rom name="ml-4_u33.u33" size="2048" crc="c9a74571"/>
+		<rom name="ml-5_u32_rev_d.u32" size="2048" crc="db5e57cd"/>
+		<rom name="ml-6_u31.u31" merge="lrescue.6" size="2048" crc="bfb0f65d"/>
+		<rom name="cv01.bin" size="1024" crc="aac24f34"/>
+		<rom name="cv02.bin" size="1024" crc="2bdf83a0"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="mpatrolw" cloneof="mpatrol" romof="mpatrol" sourcefile="irem/d_m52.cpp">
 		<description>Moon Patrol (Williams)</description>
 		<year>1982</year>
@@ -113548,6 +114602,25 @@
 		<rom name="mqc" size="2048" crc="a6db5b0d"/>
 		<rom name="vid_e6.bin" size="32" crc="0b878b54"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="mraker" sourcefile="pre90s/d_invaders.cpp">
+		<description>Moon Raker</description>
+		<year>1980</year>
+		<manufacturer>Nichibutsu</manufacturer>
+		<rom name="mr_1.a4" size="1024" crc="0ba47dea"/>
+		<rom name="mr_2.c4" size="1024" crc="fead8849"/>
+		<rom name="mr_3.e4" size="1024" crc="7d65358f"/>
+		<rom name="mr_4.f4" size="1024" crc="22cc55ad"/>
+		<rom name="mr_5.h4" size="1024" crc="e8048768"/>
+		<rom name="mr_6.l4" size="1024" crc="1e717545"/>
+		<rom name="mr_7.a5" size="1024" crc="2f19de73"/>
+		<rom name="mr_8.c5" size="1024" crc="fddaf8d0"/>
+		<rom name="mr_9.e5" size="2048" crc="1ca1be22"/>
+		<rom name="mr_10.f5" size="2048" crc="1901c0d4"/>
+		<rom name="mr_11.h5" size="2048" crc="cb8e34ae"/>
+		<rom name="star" size="1024" crc="c87a42dd"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="mranger" cloneof="mpatrol" romof="mpatrol" sourcefile="irem/d_m52.cpp">
@@ -125108,6 +126181,16 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="orbite" sourcefile="pre90s/d_invaders.cpp">
+		<description>Orbite (prototype)</description>
+		<year>1979?</year>
+		<manufacturer>Model Racing</manufacturer>
+		<rom name="mrxx.71" size="2048" crc="78cf0c8a"/>
+		<rom name="mrxx.70" size="2048" crc="2914a5c4"/>
+		<rom name="mrxx.69" size="2048" crc="c3e464f5"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="orbitron" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Orbitron</description>
 		<year>1982</year>
@@ -126917,7 +128000,26 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="ozmawars" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="ozmawarsmr" cloneof="ozmawars" romof="ozmawars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Ozma Wars (Model Racing bootleg)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Model Racing)</manufacturer>
+		<rom name="73.1s" size="1024" crc="9300830e"/>
+		<rom name="74.1pr" size="1024" crc="957fc661"/>
+		<rom name="75.1n" size="1024" crc="cf8f4d6c"/>
+		<rom name="76.1m" size="1024" crc="f51544a5"/>
+		<rom name="77.1l" size="1024" crc="4a653fe6"/>
+		<rom name="78.1kj" size="1024" crc="fb3db187"/>
+		<rom name="79.1h" size="1024" crc="ed2d7c34"/>
+		<rom name="80.1g" size="1024" crc="85728971"/>
+		<rom name="81.1ef" size="1024" crc="df0cc633"/>
+		<rom name="82.1d" size="1024" crc="31b7692e"/>
+		<rom name="83.1c" size="1024" crc="50257351"/>
+		<rom name="84.1b" size="1024" crc="293303c9"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="ozmawars" sourcefile="pre90s/d_invaders.cpp">
 		<description>Ozma Wars (set 1)</description>
 		<year>1979</year>
 		<manufacturer>SNK</manufacturer>
@@ -126929,19 +128031,25 @@
 		<rom name="mw06" size="2048" crc="99ca2eae"/>
 		<rom name="01.1" size="1024" crc="aac24f34"/>
 		<rom name="02.2" size="1024" crc="2bdf83a0"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
+		<sample name="ow0" />
+		<sample name="ow1" />
+		<sample name="ow2" />
+		<sample name="ow3" />
+		<sample name="ow4" />
+		<sample name="ow5" />
+		<sample name="ow6" />
+		<sample name="ow7" />
+		<sample name="ow8" />
+		<sample name="ow9" />
+		<sample name="ow10" />
+		<sample name="ow11" />
+		<sample name="ow12" />
+		<sample name="ow13" />
+		<sample name="ow14" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="ozmawars2" cloneof="ozmawars" romof="ozmawars" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="ozmawars2" cloneof="ozmawars" romof="ozmawars" sampleof="ozmawars" sourcefile="pre90s/d_invaders.cpp">
 		<description>Ozma Wars (set 2)</description>
 		<year>1979</year>
 		<manufacturer>SNK</manufacturer>
@@ -126959,19 +128067,25 @@
 		<rom name="oz12" size="1024" crc="8b969f61"/>
 		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
 		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
+		<sample name="ow0" />
+		<sample name="ow1" />
+		<sample name="ow2" />
+		<sample name="ow3" />
+		<sample name="ow4" />
+		<sample name="ow5" />
+		<sample name="ow6" />
+		<sample name="ow7" />
+		<sample name="ow8" />
+		<sample name="ow9" />
+		<sample name="ow10" />
+		<sample name="ow11" />
+		<sample name="ow12" />
+		<sample name="ow13" />
+		<sample name="ow14" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="ozmawars3" cloneof="ozmawars" romof="ozmawars" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="ozmawars3" cloneof="ozmawars" romof="ozmawars" sampleof="ozmawars" sourcefile="pre90s/d_invaders.cpp">
 		<description>Ozma Wars (set 3)</description>
 		<year>1979</year>
 		<manufacturer>SNK</manufacturer>
@@ -126989,15 +128103,21 @@
 		<rom name="u37" size="1024" crc="8b969f61"/>
 		<rom name="82s137.u1" merge="01.1" size="1024" crc="aac24f34"/>
 		<rom name="82s137.u2" merge="02.2" size="1024" crc="2bdf83a0"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
+		<sample name="ow0" />
+		<sample name="ow1" />
+		<sample name="ow2" />
+		<sample name="ow3" />
+		<sample name="ow4" />
+		<sample name="ow5" />
+		<sample name="ow6" />
+		<sample name="ow7" />
+		<sample name="ow8" />
+		<sample name="ow9" />
+		<sample name="ow10" />
+		<sample name="ow11" />
+		<sample name="ow12" />
+		<sample name="ow13" />
+		<sample name="ow14" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -130353,6 +131473,20 @@
 		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="phantom2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Phantom II</description>
+		<year>1979</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="phantom2.h" size="2048" crc="0e3c2439"/>
+		<rom name="phantom2.g" size="2048" crc="e8df3e52"/>
+		<rom name="phantom2.f" size="2048" crc="30e83c6d"/>
+		<rom name="phantom2.e" size="2048" crc="8c641cac"/>
+		<rom name="p2clouds.f2" size="2048" crc="dcdd2927"/>
+		<sample name="1" />
+		<sample name="2" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="phantoma" cloneof="spectar" romof="spectar" sampleof="targ" sourcefile="pre90s/d_exidy.cpp">
 		<comment>Bootleg</comment>
 		<description>Phantomas (bootleg of Spectar)</description>
@@ -133145,6 +134279,84 @@
 		<rom name="xmqq-12c.bin" size="131072" crc="71ac69ad"/>
 		<rom name="xmqq-13c.bin" size="131072" crc="71e29699"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="polarisbr" cloneof="polaris" romof="polaris" sourcefile="pre90s/d_invaders.cpp">
+		<description>Polaris (Brazil)</description>
+		<year>1981</year>
+		<manufacturer>Taito do Brasil</manufacturer>
+		<rom name="1" size="2048" crc="17015f52"/>
+		<rom name="2" merge="ps02-9.ic70" size="2048" crc="9a5c8cb2"/>
+		<rom name="3" size="2048" crc="60118368"/>
+		<rom name="4" size="2048" crc="65694948"/>
+		<rom name="5" size="2048" crc="6cb21b31"/>
+		<rom name="6" merge="ps06-10.ic60" size="2048" crc="3df77bac"/>
+		<rom name="7" size="2048" crc="0d811b92"/>
+		<rom name="ps08.1b" merge="ps08.1b" size="1024" crc="164aa05d"/>
+		<rom name="ps07.2c" merge="ps07.2c" size="256" crc="2953253b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="polarisb" cloneof="polaris" romof="polaris" sourcefile="pre90s/d_invaders.cpp">
+		<description>Polaris (first revision)</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="ps01.ic71" size="2048" crc="c04ce5a9"/>
+		<rom name="ps02-9.ic70" merge="ps02-9.ic70" size="2048" crc="9a5c8cb2"/>
+		<rom name="ps03.ic69" size="2048" crc="8680d7ea"/>
+		<rom name="ps04.ic62" size="2048" crc="65694948"/>
+		<rom name="ps05.ic61" merge="ps05.ic61" size="2048" crc="772e31f3"/>
+		<rom name="ps06-10.ic60" merge="ps06-10.ic60" size="2048" crc="3df77bac"/>
+		<rom name="ps08.1b" merge="ps08.1b" size="1024" crc="164aa05d"/>
+		<rom name="ps07.2c" merge="ps07.2c" size="256" crc="2953253b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="polaris" sourcefile="pre90s/d_invaders.cpp">
+		<description>Polaris (latest version)</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="ps01-1.ic71" size="2048" crc="7d41007c"/>
+		<rom name="ps02-9.ic70" size="2048" crc="9a5c8cb2"/>
+		<rom name="ps03-1.ic69" size="2048" crc="21f32415"/>
+		<rom name="ps04-18.ic62" size="2048" crc="d717aef3"/>
+		<rom name="ps05.ic61" size="2048" crc="772e31f3"/>
+		<rom name="ps06-10.ic60" size="2048" crc="3df77bac"/>
+		<rom name="ps26.ic60a" size="2048" crc="9d5c3d50"/>
+		<rom name="ps08.1b" size="1024" crc="164aa05d"/>
+		<rom name="ps07.2c" size="256" crc="2953253b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="polariso" cloneof="polaris" romof="polaris" sourcefile="pre90s/d_invaders.cpp">
+		<description>Polaris (original version)</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="ps01.ic71" size="2048" crc="c04ce5a9"/>
+		<rom name="ps02.ic70" size="2048" crc="18648e4f"/>
+		<rom name="ps03.ic69" size="2048" crc="8680d7ea"/>
+		<rom name="ps04.ic62" size="2048" crc="65694948"/>
+		<rom name="ps05.ic61" merge="ps05.ic61" size="2048" crc="772e31f3"/>
+		<rom name="ps06.ic60" size="2048" crc="f577cb72"/>
+		<rom name="ps08.1b" merge="ps08.1b" size="1024" crc="164aa05d"/>
+		<rom name="ps07.2c" merge="ps07.2c" size="256" crc="2953253b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="polarisa" cloneof="polaris" romof="polaris" sourcefile="pre90s/d_invaders.cpp">
+		<description>Polaris (second revision)</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="ps01-1.ic71" merge="ps01-1.ic71" size="2048" crc="7d41007c"/>
+		<rom name="ps02-9.ic70" merge="ps02-9.ic70" size="2048" crc="9a5c8cb2"/>
+		<rom name="ps03-1.ic69" merge="ps03-1.ic69" size="2048" crc="21f32415"/>
+		<rom name="ps04.ic62" size="2048" crc="65694948"/>
+		<rom name="ps05.ic61" merge="ps05.ic61" size="2048" crc="772e31f3"/>
+		<rom name="ps06-10.ic60" merge="ps06-10.ic60" size="2048" crc="3df77bac"/>
+		<rom name="ps26.ic60a" merge="ps26.ic60a" size="2048" crc="9d5c3d50"/>
+		<rom name="ps08.1b" merge="ps08.1b" size="1024" crc="164aa05d"/>
+		<rom name="ps07.2c" merge="ps07.2c" size="256" crc="2953253b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="poleposa1n" cloneof="polepos" romof="polepos" sourcefile="pre90s/d_polepos.cpp">
@@ -146828,6 +148040,29 @@
 		<video type="raster" orientation="vertical" width="224" height="288" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="resclunar" cloneof="lrescue" romof="lrescue" sampleof="lrescue" sourcefile="pre90s/d_invaders.cpp">
+		<description>Rescate Lunar (Spanish bootleg of Lunar Rescue)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Niemer S.A.)</manufacturer>
+		<rom name="1-2716.h1" size="2048" crc="6234e240"/>
+		<rom name="2-2516.g1" size="2048" crc="67ab3599"/>
+		<rom name="3-2716.f1" size="2048" crc="337b6266"/>
+		<rom name="4-2716.e1" size="2048" crc="dd90ad9a"/>
+		<rom name="5-2716.d1" size="2048" crc="741212d4"/>
+		<rom name="6-8516.c1" size="2048" crc="c8994fc7"/>
+		<rom name="7-2516.b1" size="2048" crc="1adff5d7"/>
+		<sample name="alienexplosion" />
+		<sample name="rescueshipexplosion" />
+		<sample name="beamgun" />
+		<sample name="thrust" />
+		<sample name="bonus2" />
+		<sample name="bonus3" />
+		<sample name="shootingstar" />
+		<sample name="stepl" />
+		<sample name="steph" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="rescue" sourcefile="galaxian/d_galaxian.cpp">
 		<description>Rescue</description>
 		<year>1982</year>
@@ -148911,6 +150146,17 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="roadrunm" cloneof="desertgu" romof="desertgu" sourcefile="pre90s/d_invaders.cpp">
+		<description>Road Runner (Midway)</description>
+		<year>1977</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="9316.1h" merge="9316.1h" size="2048" crc="c0030d7c"/>
+		<rom name="9316.1g" merge="9316.1g" size="2048" crc="1ddde10b"/>
+		<rom name="9316.1f" merge="9316.1f" size="2048" crc="808e46f1"/>
+		<rom name="9316.1e" size="2048" crc="06f01571"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="roadrunn1" cloneof="roadrunn" romof="roadrunn" sourcefile="atari/d_atarisy1.cpp">
 		<description>Road Runner (rev 1)</description>
 		<year>1985</year>
@@ -150698,6 +151944,25 @@
 		<rom name="999h04.f23" size="262144" crc="c1a35355"/>
 		<rom name="999h09.c5" size="524288" crc="c5188783"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="rollingc" sourcefile="pre90s/d_invaders.cpp">
+		<description>Rolling Crash / Moon Base</description>
+		<year>1979</year>
+		<manufacturer>Nichibutsu</manufacturer>
+		<rom name="rc01.a4" size="1024" crc="66fa50bf"/>
+		<rom name="rc02.c4" size="1024" crc="61c06ae4"/>
+		<rom name="rc03.e4" size="1024" crc="77e39fa0"/>
+		<rom name="rc04.f4" size="1024" crc="3fdfd0f3"/>
+		<rom name="rc05.h4" size="1024" crc="c26a8f5b"/>
+		<rom name="rc06.l4" size="1024" crc="0b98dbe5"/>
+		<rom name="rc07.a5" size="1024" crc="6242145c"/>
+		<rom name="rc08.c5" size="1024" crc="d23c2ef1"/>
+		<rom name="rc09.e4" size="2048" crc="2e2c5b95"/>
+		<rom name="rc10.f4" size="2048" crc="ef94c502"/>
+		<rom name="rc11.h4" size="2048" crc="a3164b18"/>
+		<rom name="rc12.l4" size="2048" crc="2052f6d9"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="rolcrusha" cloneof="rolcrush" romof="rolcrush" sourcefile="pst90s/d_dreamwld.cpp">
@@ -157415,6 +158680,56 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="seawolf" sourcefile="pre90s/d_invaders.cpp">
+		<description>Sea Wolf (set 1)</description>
+		<year>1976</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="sw0041.h" size="1024" crc="8f597323"/>
+		<rom name="sw0042.g" size="1024" crc="db980974"/>
+		<rom name="sw0043.f" size="1024" crc="e6ffa008"/>
+		<rom name="sw0044.e" size="1024" crc="c3557d6a"/>
+		<sample name="shiphit" />
+		<sample name="torpedo" />
+		<sample name="dive" />
+		<sample name="sonar" />
+		<sample name="minehit" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="seawolfo" cloneof="seawolf" romof="seawolf" sampleof="seawolf" sourcefile="pre90s/d_invaders.cpp">
+		<description>Sea Wolf (set 2)</description>
+		<year>1976</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="1.h1" size="512" crc="941b8f2b"/>
+		<rom name="2.g1" size="512" crc="c047ef88"/>
+		<rom name="3.f1" size="512" crc="9624b1ab"/>
+		<rom name="4.e1" size="512" crc="553ff531"/>
+		<rom name="5.d1" size="512" crc="e8e07d03"/>
+		<rom name="6.c1" size="512" crc="e2ffe499"/>
+		<rom name="7.b1" size="512" crc="d40a52b5"/>
+		<rom name="8.a1" size="512" crc="da61df76"/>
+		<sample name="shiphit" />
+		<sample name="torpedo" />
+		<sample name="dive" />
+		<sample name="sonar" />
+		<sample name="minehit" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="seawolfa" cloneof="seawolf" romof="seawolf" sampleof="seawolf" sourcefile="pre90s/d_invaders.cpp">
+		<description>Sea Wolf (set 3)</description>
+		<year>1976</year>
+		<manufacturer>Dave Nutting Associates / Midway</manufacturer>
+		<rom name="9316b-2863_9316b-h-sw.h1" size="2048" crc="e542c042"/>
+		<rom name="9316b-2801_9316b-g-sw.g1" size="2048" crc="4c41a1d1"/>
+		<sample name="shiphit" />
+		<sample name="torpedo" />
+		<sample name="dive" />
+		<sample name="sonar" />
+		<sample name="minehit" />
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="seawolft" cloneof="sauro" romof="sauro" sourcefile="pre90s/d_sauro.cpp">
 		<description>Sea Wolf (Tecfri)</description>
 		<year>1987</year>
@@ -160677,6 +161992,17 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="shuffle" sourcefile="pre90s/d_invaders.cpp">
+		<description>Shuffleboard</description>
+		<year>1978</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="shuffle.h" size="2048" crc="0d422a18"/>
+		<rom name="shuffle.g" size="2048" crc="7db7fcf9"/>
+		<rom name="shuffle.f" size="2048" crc="cd04d848"/>
+		<rom name="shuffle.e" size="2048" crc="2c118357"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="shufshot135" cloneof="shufshot" romof="shufshot" sourcefile="pst90s/d_itech32.cpp">
 		<description>Shuffleshot (v1.35)</description>
 		<year>1997</year>
@@ -160825,6 +162151,20 @@
 		<rom name="shf_srom0.srom0" size="524288" crc="9a3cb6c9"/>
 		<rom name="shf_srom1.srom1" size="524288" crc="8c89948a"/>
 		<video type="raster" orientation="horizontal" width="384" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shuttlei" sourcefile="pre90s/d_invaders.cpp">
+		<description>Shuttle Invader</description>
+		<year>1979</year>
+		<manufacturer>Omori Electric Co., Ltd.</manufacturer>
+		<rom name="1.13c" size="1024" crc="b6d4f0cd"/>
+		<rom name="2.11c" size="1024" crc="168d6138"/>
+		<rom name="3.13d" size="1024" crc="804bd7fb"/>
+		<rom name="4.11d" size="1024" crc="8205b369"/>
+		<rom name="5.13e" size="1024" crc="b50df820"/>
+		<rom name="8.11f" size="1024" crc="4978552b"/>
+		<rom name="82s129.2b" size="256" crc="f108d00d"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="shuuz2" cloneof="shuuz" romof="shuuz" sourcefile="atari/d_shuuz.cpp">
@@ -162211,6 +163551,21 @@
 		<rom name="5sl.6c" size="8192" crc="29afa134"/>
 		<rom name="18s030.1a" size="32" crc="e645bacb"/>
 		<video type="raster" orientation="vertical" width="224" height="236" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="skylove" sourcefile="pre90s/d_invaders.cpp">
+		<description>Sky Love</description>
+		<year>1979</year>
+		<manufacturer>Omori Electric Co., Ltd.</manufacturer>
+		<rom name="01" size="1024" crc="391ad7d0"/>
+		<rom name="02" size="1024" crc="365ba070"/>
+		<rom name="03" size="1024" crc="47364dad"/>
+		<rom name="04" size="1024" crc="9d76f33d"/>
+		<rom name="05" size="1024" crc="09084954"/>
+		<rom name="06" size="1024" crc="6d494e82"/>
+		<rom name="07" size="1024" crc="1a9aa4b8"/>
+		<rom name="08" size="1024" crc="ecaacacc"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="skyraidr" cloneof="uniwars" romof="uniwars" sourcefile="galaxian/d_galaxian.cpp">
@@ -163950,6 +165305,19 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="solfight" cloneof="ozmawars" romof="ozmawars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Solar Fight (bootleg of Ozma Wars)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="solfight.m" size="2048" crc="a4f2814e"/>
+		<rom name="solfight.n" size="2048" crc="5657ec07"/>
+		<rom name="solfight.p" size="2048" crc="ef9ce96d"/>
+		<rom name="solfight.r" size="2048" crc="4f1ef540"/>
+		<rom name="mw05" merge="mw05" size="2048" crc="3bc7d4c7"/>
+		<rom name="solfight.t" size="2048" crc="3b6fb206"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="solarfox" romof="midssio" sourcefile="pre90s/d_mcr.cpp">
 		<description>Solar Fox (upright)</description>
 		<year>1981</year>
@@ -164651,6 +166019,48 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="spaceatt" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Attack (bootleg of Space Invaders)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Video Games GmbH)</manufacturer>
+		<rom name="h" size="1024" crc="d0c32d72"/>
+		<rom name="sv02.bin" size="1024" crc="0e159534"/>
+		<rom name="f" size="1024" crc="483e651e"/>
+		<rom name="c" size="1024" crc="1293b826"/>
+		<rom name="b" size="1024" crc="6fc782aa"/>
+		<rom name="a" size="1024" crc="211ac4a3"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spaceatt2k" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Attack (bootleg of Space Invaders, 2k roms)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Video Games GmbH)</manufacturer>
+		<rom name="h1.bin" merge="9316b-0869_m739h.h1" size="2048" crc="734f5ad8"/>
+		<rom name="g1.bin" merge="9316b-0856_m739g.g1" size="2048" crc="6bfaca4a"/>
+		<rom name="f1.bin" merge="9316b-0855_m739f.f1" size="2048" crc="0ccead96"/>
+		<rom name="e1.bin" size="2048" crc="19971ca7"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spaceattbp" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Attack (bootleg of Space Invaders, bproms)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Video Games GmbH)</manufacturer>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spaceat2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Attack II (bootleg of Super Invaders)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Video Games UK)</manufacturer>
+		<rom name="spaceatt.h" size="2048" crc="a31d0756"/>
+		<rom name="spaceatt.g" size="2048" crc="f41241f7"/>
+		<rom name="spaceatt.f" size="2048" crc="4c060223"/>
+		<rom name="spaceatt.e" size="2048" crc="7cf6f604"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="spacbatt" cloneof="uniwars" romof="uniwars" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Bootleg</comment>
 		<description>Space Battle (bootleg set 1)</description>
@@ -164747,6 +166157,19 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="spcebttl" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Battle (Space Invaders bootleg)</description>
+		<year>1978</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="1" size="1024" crc="86bb8cb6"/>
+		<rom name="2" size="1024" crc="febe6d1a"/>
+		<rom name="3" size="1024" crc="e11ef4ae"/>
+		<rom name="4" size="1024" crc="1293b826"/>
+		<rom name="5" size="1024" crc="3c89b4d5"/>
+		<rom name="6" size="1024" crc="e154f4e5"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="sbsgomo" cloneof="bioship" romof="bioship" sourcefile="pst90s/d_nmk16.cpp">
 		<description>Space Battle Ship Gomorrah</description>
 		<year>1990</year>
@@ -164834,6 +166257,115 @@
 		<rom name="sound.u32" merge="sound.u32" size="4194304" crc="85cbff69"/>
 		<rom name="eeprom-sbomber.bin" merge="eeprom-sbomber.bin" size="256" crc="7ac38846"/>
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="schasercv" cloneof="schaser" romof="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Chaser (CV version - set 1)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="1" size="1024" crc="bec2b16b"/>
+		<rom name="2" size="1024" crc="9d25e608"/>
+		<rom name="3" size="1024" crc="113d0635"/>
+		<rom name="4" size="1024" crc="f3a43c8d"/>
+		<rom name="5" size="1024" crc="47c84f23"/>
+		<rom name="6" size="1024" crc="02ff2199"/>
+		<rom name="7" size="1024" crc="87d06b88"/>
+		<rom name="8" size="1024" crc="6dfaad08"/>
+		<rom name="9" size="1024" crc="3d1a2ae3"/>
+		<rom name="10" size="1024" crc="037edb99"/>
+		<rom name="cv01" size="1024" crc="037e16ac"/>
+		<rom name="cv02" size="1024" crc="8263da38"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="schaserm" cloneof="schaser" romof="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Chaser (Model Racing bootleg)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Model Racing)</manufacturer>
+		<rom name="mr26.71" size="2048" crc="4e547879"/>
+		<rom name="rt08.70" size="2048" crc="825fc8ac"/>
+		<rom name="rt09.69" size="2048" crc="de9d3f85"/>
+		<rom name="mr27.62" size="2048" crc="069ec108"/>
+		<rom name="rt11.61" size="2048" crc="17a7ef7a"/>
+		<rom name="rt06.ic2" merge="rt06.ic2" size="1024" crc="950cf973"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Chaser (set 1)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="rt13.bin" size="1024" crc="0dfbde68"/>
+		<rom name="rt14.bin" size="1024" crc="5a508a25"/>
+		<rom name="rt15.bin" size="1024" crc="2ac43a93"/>
+		<rom name="rt16.bin" size="1024" crc="f5583afc"/>
+		<rom name="rt17.bin" size="1024" crc="51cf1155"/>
+		<rom name="rt18.bin" size="1024" crc="3f0fc73a"/>
+		<rom name="rt19.bin" size="1024" crc="b66ea369"/>
+		<rom name="rt20.bin" size="1024" crc="e3a7466a"/>
+		<rom name="rt21.bin" size="1024" crc="b368ac98"/>
+		<rom name="rt22.bin" size="1024" crc="6e060dfb"/>
+		<rom name="rt06.ic2" size="1024" crc="950cf973"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="schasera" cloneof="schaser" romof="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Chaser (set 2)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="rt13.bin" size="2048" crc="7b0bfeed"/>
+		<rom name="rt15.bin" size="2048" crc="825fc8ac"/>
+		<rom name="rt17.bin" size="2048" crc="de9d3f85"/>
+		<rom name="rt19.bin" size="2048" crc="c0adab87"/>
+		<rom name="rt21.bin" size="2048" crc="a3b31070"/>
+		<rom name="rt06.ic2" merge="rt06.ic2" size="1024" crc="950cf973"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="schaserb" cloneof="schaser" romof="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Chaser (set 3)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="rt33.bin" size="2048" crc="eec6b032"/>
+		<rom name="rt34.bin" size="2048" crc="13a73701"/>
+		<rom name="rt35.bin" size="2048" crc="de9d3f85"/>
+		<rom name="rt36.bin" size="2048" crc="521ec25e"/>
+		<rom name="rt37.bin" size="2048" crc="44f65f19"/>
+		<rom name="rt06.ic2" merge="rt06.ic2" size="1024" crc="950cf973"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="schaserc" cloneof="schaser" romof="schaser" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Chaser (set 4)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="45.ic30" size="1024" crc="ca90619c"/>
+		<rom name="46.ic36" size="1024" crc="6a016895"/>
+		<rom name="rt15.bin" merge="rt15.bin" size="1024" crc="2ac43a93"/>
+		<rom name="rt16.bin" merge="rt16.bin" size="1024" crc="f5583afc"/>
+		<rom name="rt17.bin" merge="rt17.bin" size="1024" crc="51cf1155"/>
+		<rom name="rt18.bin" merge="rt18.bin" size="1024" crc="3f0fc73a"/>
+		<rom name="rt19.bin" merge="rt19.bin" size="1024" crc="b66ea369"/>
+		<rom name="47.ic39" size="1024" crc="d476e182"/>
+		<rom name="rt21.bin" merge="rt21.bin" size="1024" crc="b368ac98"/>
+		<rom name="rt22.bin" merge="rt22.bin" size="1024" crc="6e060dfb"/>
+		<rom name="rt06.ic2" merge="rt06.ic2" size="1024" crc="950cf973"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spacecom" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Combat (bootleg of Space Invaders)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="1f.ic67" size="1024" crc="703f2cbe"/>
+		<rom name="2g.ic82" size="1024" crc="7269b719"/>
+		<rom name="3f.ic68" size="1024" crc="6badac4f"/>
+		<rom name="4g.ic83" size="1024" crc="75b59ea7"/>
+		<rom name="5f.ic69" size="1024" crc="84b61117"/>
+		<rom name="6g.ic84" size="1024" crc="de383625"/>
+		<rom name="7f.ic70" size="1024" crc="5a23dbc8"/>
+		<rom name="8g.ic85" size="1024" crc="a5a467e3"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="spacecr" sourcefile="taito/d_taitosj.cpp">
@@ -165048,6 +166580,21 @@
 		<rom name="uw11" merge="k01_2.bin" size="2048" crc="dcc2b33b"/>
 		<rom name="mmi6331" size="32" crc="6a0c7d87"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spcenctr" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Encounters</description>
+		<year>1980</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="9316b-4m33_m645h-09s0.h1" size="2048" crc="7458b2db"/>
+		<rom name="9316b-4m32_m645g-09s0.g1" size="2048" crc="1b873788"/>
+		<rom name="9316b-4m31_m645f-09s0.f1" size="2048" crc="d4319c91"/>
+		<rom name="9316b-4m30_m645e-09s0.e1" size="2048" crc="9b9a1a45"/>
+		<rom name="9316b-4m29_m645d-09s0.d1" size="2048" crc="294d52ce"/>
+		<rom name="9316b-4m28_m645c-09s0.c1" size="2048" crc="ce44c923"/>
+		<rom name="9316b-4m27_m645b-09s0.b1" size="2048" crc="098070ab"/>
+		<rom name="9316b-4m26_m645a-09s0.a1" size="2048" crc="7f1d1f44"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="spacefbb" cloneof="spacefb" romof="spacefb" sampleof="spacefb" sourcefile="pre90s/d_spacefb.cpp">
@@ -165576,7 +167123,90 @@
 		<video type="raster" orientation="vertical" width="224" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="sisv1" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="sicv" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders (CV Version, larger roms)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="cv17.36" size="2048" crc="3dfbe9e6"/>
+		<rom name="cv18.35" size="2048" crc="bc3c82bf"/>
+		<rom name="cv19.34" size="2048" crc="d202b41c"/>
+		<rom name="cv20.33" size="2048" crc="c74ee7b6"/>
+		<rom name="cv01.1" size="1024" crc="037e16ac"/>
+		<rom name="cv02.2" size="1024" crc="8263da38"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sicv1" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders (CV Version, smaller roms)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="cv11.s1" size="1024" crc="309d4582"/>
+		<rom name="cv12.r1" size="1024" crc="70153e09"/>
+		<rom name="cv13.np1" size="1024" crc="2ca24fee"/>
+		<rom name="cv14.jk1" size="1024" crc="556d9a97"/>
+		<rom name="cv15.i1" size="1024" crc="ac520cf5"/>
+		<rom name="cv16.g1" size="1024" crc="285cfb59"/>
+		<rom name="cv01.1" size="1024" crc="037e16ac"/>
+		<rom name="cv02.2" size="1024" crc="8263da38"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invadersem" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders (Electromar, Spanish)</description>
+		<year>19??</year>
+		<manufacturer>Electromar</manufacturer>
+		<rom name="h.bin" size="1024" crc="7fc672a5"/>
+		<rom name="g.bin" size="1024" crc="ad518883"/>
+		<rom name="f.bin" size="1024" crc="f4a6c480"/>
+		<rom name="c.bin" size="1024" crc="8f62c513"/>
+		<rom name="b.bin" size="1024" crc="2808e5c0"/>
+		<rom name="a.bin" size="1024" crc="04c9b084"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invaderl" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders (Logitec)</description>
+		<year>1978</year>
+		<manufacturer>Taito / Logitec</manufacturer>
+		<rom name="c01" size="1024" crc="499f253a"/>
+		<rom name="c02" size="1024" crc="2d0b2e1f"/>
+		<rom name="c03" size="1024" crc="03033dc2"/>
+		<rom name="c07" size="1024" crc="5a7bbf1f"/>
+		<rom name="c04" size="1024" crc="455b1fa7"/>
+		<rom name="c05" size="1024" crc="40cbef75"/>
+		<rom name="sv06.bin" size="1024" crc="2c68e0b4"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invadrmr" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders (Model Racing)</description>
+		<year>1978</year>
+		<manufacturer>Taito / Model Racing</manufacturer>
+		<rom name="11.1t" size="1024" crc="389d44b6"/>
+		<rom name="sv02.1p" size="1024" crc="0e159534"/>
+		<rom name="20.1n" size="1024" crc="805b04f0"/>
+		<rom name="sv04.1j" size="1024" crc="1293b826"/>
+		<rom name="13.1h" size="1024" crc="76b4a6ea"/>
+		<rom name="sv06.1g" size="1024" crc="2c68e0b4"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invadernc" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders (Nas Corp bootleg)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Nas Corp)</manufacturer>
+		<rom name="1.ic65" size="1024" crc="499f253a"/>
+		<rom name="2.ic66" size="1024" crc="4b7f232e"/>
+		<rom name="3.ic67" size="1024" crc="5c6bdd47"/>
+		<rom name="7.ic57" size="1024" crc="5a7bbf1f"/>
+		<rom name="4.ic70" size="1024" crc="455b1fa7"/>
+		<rom name="5.ic71" size="1024" crc="b9ea71a0"/>
+		<rom name="6.ic72" size="1024" crc="2c68e0b4"/>
+		<rom name="82s137_1.ic17" size="1024" crc="1eb2bc60"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sisv1" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
 		<description>Space Invaders (SV Version rev 1)</description>
 		<year>1978</year>
 		<manufacturer>Taito</manufacturer>
@@ -165586,20 +167216,10 @@
 		<rom name="sv04.31" size="1024" crc="1293b826"/>
 		<rom name="sv05.42" size="1024" status="nodump"/>
 		<rom name="sv06.41" size="1024" crc="2c68e0b4"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="preliminary"/>
 	</game>
-	<game name="sisv2" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="sisv2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
 		<description>Space Invaders (SV Version rev 2)</description>
 		<year>1978</year>
 		<manufacturer>Taito</manufacturer>
@@ -165609,20 +167229,10 @@
 		<rom name="sv04.31" size="1024" crc="1293b826"/>
 		<rom name="sv09.42" size="1024" crc="cd80b13f"/>
 		<rom name="sv06.41" size="1024" crc="2c68e0b4"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="sisv3" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="sisv3" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
 		<description>Space Invaders (SV Version rev 3)</description>
 		<year>1978</year>
 		<manufacturer>Taito</manufacturer>
@@ -165632,20 +167242,10 @@
 		<rom name="sv04.31" size="1024" crc="1293b826"/>
 		<rom name="sv09.42" size="1024" crc="cd80b13f"/>
 		<rom name="sv06.41" size="1024" crc="2c68e0b4"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="sisv" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="sisv" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
 		<description>Space Invaders (SV Version rev 4)</description>
 		<year>1978</year>
 		<manufacturer>Taito</manufacturer>
@@ -165655,20 +167255,10 @@
 		<rom name="sv04.31" size="1024" crc="1293b826"/>
 		<rom name="sv13.42" size="1024" crc="a9011634"/>
 		<rom name="sv14.41" size="1024" crc="58730370"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="sitv1" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="sitv1" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
 		<description>Space Invaders (TV Version rev 1)</description>
 		<year>1978</year>
 		<manufacturer>Taito</manufacturer>
@@ -165676,20 +167266,10 @@
 		<rom name="tv02.rp1" size="2048" crc="3c759a90"/>
 		<rom name="tv03.n1" size="2048" crc="0ad3657f"/>
 		<rom name="tv04.m1" size="2048" crc="cd2c67f6"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="sitv" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
+	<game name="sitv" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
 		<description>Space Invaders (TV Version rev 2)</description>
 		<year>1978</year>
 		<manufacturer>Taito</manufacturer>
@@ -165697,16 +167277,6 @@
 		<rom name="tv02.rp1" size="2048" crc="3c759a90"/>
 		<rom name="tv03.n1" size="2048" crc="0ad3657f"/>
 		<rom name="tv04.m1" size="2048" crc="cd2c67f6"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -165718,16 +167288,18 @@
 		<rom name="9316b-0856_m739g.g1" size="2048" crc="6bfaca4a"/>
 		<rom name="9316b-0855_m739f.f1" size="2048" crc="0ccead96"/>
 		<rom name="9316b-0854_m739e.e1" size="2048" crc="14e538b0"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invaddlx" cloneof="invadpt2" romof="invadpt2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders Deluxe</description>
+		<year>1980</year>
+		<manufacturer>Taito (Midway license)</manufacturer>
+		<rom name="invdelux.h" size="2048" crc="e690818f"/>
+		<rom name="invdelux.g" size="2048" crc="4268c12d"/>
+		<rom name="invdelux.f" size="2048" crc="f4aa1880"/>
+		<rom name="invdelux.e" size="2048" crc="408849c1"/>
+		<rom name="invdelux.d" size="2048" crc="e8d5afcd"/>
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -165819,6 +167391,88 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="invad2ct" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders II (Midway, cocktail)</description>
+		<year>1980</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="invad2ct.h" size="2048" crc="51d02a71"/>
+		<rom name="invad2ct.g" size="2048" crc="533ac770"/>
+		<rom name="invad2ct.f" size="2048" crc="d1799f39"/>
+		<rom name="invad2ct.e" size="2048" crc="291c1418"/>
+		<rom name="invad2ct.b" size="2048" crc="8d9a07c4"/>
+		<rom name="invad2ct.a" size="2048" crc="efdabb03"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invader4" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders Part Four (bootleg of Space Attack II)</description>
+		<year>1980</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="spin4.a" size="2048" crc="bb386dfe"/>
+		<rom name="spin4.b" size="2048" crc="63afa11d"/>
+		<rom name="spin4.c" size="2048" crc="22b0317c"/>
+		<rom name="spin4.d" size="2048" crc="9102fd68"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invadpt2br" cloneof="invadpt2" romof="invadpt2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders Part II (Brazil)</description>
+		<year>1979</year>
+		<manufacturer>Taito do Brasil</manufacturer>
+		<rom name="pv01" merge="pv01" size="2048" crc="7288a511"/>
+		<rom name="br_pv02" size="2048" crc="420c7c35"/>
+		<rom name="br_pv03" size="2048" crc="dffd04b9"/>
+		<rom name="br_pv04" size="2048" crc="b0626aff"/>
+		<rom name="br_pv05" size="2048" crc="84c70bb8"/>
+		<rom name="pv06.1" merge="pv06.1" size="1024" crc="a732810b"/>
+		<rom name="pv07.2" merge="pv07.2" size="1024" crc="2c5b91cb"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invadpt2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders Part II (Taito, bigger ROMs)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="pv01" size="2048" crc="7288a511"/>
+		<rom name="pv02" size="2048" crc="097dd8d5"/>
+		<rom name="pv03" size="2048" crc="1766337e"/>
+		<rom name="pv04" size="2048" crc="8f0e62e0"/>
+		<rom name="pv05" size="2048" crc="19b505e9"/>
+		<rom name="pv06.1" size="1024" crc="a732810b"/>
+		<rom name="pv07.2" size="1024" crc="2c5b91cb"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invadpt2a" cloneof="invadpt2" romof="invadpt2" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders Part II (Taito, smaller ROMs)</description>
+		<year>1979</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="uv01.36" size="1024" crc="82dbf2c7"/>
+		<rom name="uv02.35" size="1024" crc="c867f5b4"/>
+		<rom name="uv03.34" size="1024" crc="cb23ccc1"/>
+		<rom name="uv04.33" size="1024" crc="9a11abe2"/>
+		<rom name="uv05.32" size="1024" crc="787821dd"/>
+		<rom name="uv06.31" size="1024" crc="f5e8114f"/>
+		<rom name="uv07.42" size="1024" crc="07839f04"/>
+		<rom name="uv08.41" size="1024" crc="a7e1c6ef"/>
+		<rom name="uv09.40" size="1024" crc="261a39ae"/>
+		<rom name="uv10.39" size="1024" crc="b2cbcc8b"/>
+		<rom name="pv06" merge="pv06.1" size="1024" crc="a732810b"/>
+		<rom name="pv07" merge="pv07.2" size="1024" crc="2c5b91cb"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="tst_invd" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Invaders Test ROM</description>
+		<year>19??</year>
+		<manufacturer>&lt;unknown&gt;</manufacturer>
+		<rom name="test.h" size="2048" crc="f86a2eea"/>
+		<rom name="invaders.g" merge="9316b-0856_m739g.g1" size="2048" crc="6bfaca4a"/>
+		<rom name="invaders.f" merge="9316b-0855_m739f.f1" size="2048" crc="0ccead96"/>
+		<rom name="invaders.e" merge="9316b-0854_m739e.e1" size="2048" crc="14e538b0"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sinvasnb" cloneof="commando" romof="commando" sourcefile="pre90s/d_commando.cpp">
 		<comment>Bootleg</comment>
 		<description>Space Invasion (bootleg)</description>
@@ -165878,6 +167532,42 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="spcking2ir" cloneof="invad2ct" romof="invad2ct" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space King Part II (Space Invaders II bootleg)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Irecsa)</manufacturer>
+		<rom name="gm2_1-2_tms2516.h" size="2048" crc="a5cad5b7"/>
+		<rom name="gm2_3-4_tms2516.g" size="2048" crc="c7b5f8ae"/>
+		<rom name="gm2_5-6_tms2516.f" size="2048" crc="a5084884"/>
+		<rom name="gm2_7-8_tms2516.e" size="2048" crc="3ff5d28f"/>
+		<rom name="gm2_9-10_tms2516.d" size="2048" crc="98db0e7d"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spceking" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space King</description>
+		<year>1978</year>
+		<manufacturer>Taito / Leijac</manufacturer>
+		<rom name="invaders.h" merge="9316b-0869_m739h.h1" size="2048" crc="734f5ad8"/>
+		<rom name="spcekng2" size="2048" crc="96dcdd42"/>
+		<rom name="spcekng3" size="2048" crc="95fc96ad"/>
+		<rom name="spcekng4" size="2048" crc="54170ada"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spclaser" cloneof="spcewarl" romof="spcewarl" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Laser</description>
+		<year>1980</year>
+		<manufacturer>Konami (Taito license)</manufacturer>
+		<rom name="la01" size="2048" crc="bedc0078"/>
+		<rom name="la02" merge="spcewarl.2" size="2048" crc="43bc65c5"/>
+		<rom name="la03" size="2048" crc="1083e9cc"/>
+		<rom name="la04" size="2048" crc="5116b234"/>
+		<rom name="01.1" merge="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" merge="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="smiconk" sourcefile="pre90s/d_miconkit.cpp">
 		<description>Space Micon Kit</description>
 		<year>1978</year>
@@ -165888,6 +167578,21 @@
 		<rom name="4.1d" size="1024" crc="a5897e6e"/>
 		<rom name="5.1e" size="1024" crc="98db7810"/>
 		<video type="raster" orientation="vertical" width="208" height="240" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spacmiss" cloneof="galactic" romof="galactic" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Missile - Space Fighting Game</description>
+		<year>1980?</year>
+		<manufacturer>bootleg?</manufacturer>
+		<rom name="1" size="2048" crc="e212dc88"/>
+		<rom name="2" merge="2" size="2048" crc="f97410ee"/>
+		<rom name="3" merge="3" size="2048" crc="c1175feb"/>
+		<rom name="4" merge="4" size="2048" crc="b4451d7c"/>
+		<rom name="5" merge="5" size="2048" crc="74c9da61"/>
+		<rom name="6" merge="6" size="2048" crc="5e7c6c44"/>
+		<rom name="7" merge="7" size="2048" crc="02619e18"/>
+		<rom name="8" size="2048" crc="942e5261"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="spcmission" cloneof="scramble" romof="scramble" sourcefile="galaxian/d_galaxian.cpp">
@@ -166005,6 +167710,25 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="spaceph" cloneof="ozmawars" romof="ozmawars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Phantoms (bootleg of Ozma Wars)</description>
+		<year>1979</year>
+		<manufacturer>bootleg? (Zilec Games)</manufacturer>
+		<rom name="sv01.bin" size="1024" crc="de84771d"/>
+		<rom name="sv02.bin" size="1024" crc="957fc661"/>
+		<rom name="sv03.bin" size="1024" crc="dbda38b9"/>
+		<rom name="sv04.bin" size="1024" crc="f51544a5"/>
+		<rom name="sv05.bin" size="1024" crc="98d02683"/>
+		<rom name="sv06.bin" size="1024" crc="4ec390fd"/>
+		<rom name="sv07.bin" size="1024" crc="170862fd"/>
+		<rom name="sv08.bin" size="1024" crc="511b12cf"/>
+		<rom name="sv09.bin" size="1024" crc="af1cd1af"/>
+		<rom name="sv10.bin" size="1024" crc="31b7692e"/>
+		<rom name="sv11.bin" size="1024" crc="50257351"/>
+		<rom name="sv12.bin" size="1024" crc="a2a3366a"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="spaceplt" cloneof="timeplt" romof="timeplt" sourcefile="konami/d_timeplt.cpp">
 		<comment>Bootleg</comment>
 		<description>Space Pilot (set 1)</description>
@@ -166086,6 +167810,19 @@
 		<rom name="srpr10-2.l3" size="32" crc="88b67e70"/>
 		<rom name="srpr10-3.c1" size="32" crc="27fa3a50"/>
 		<video type="raster" orientation="vertical" width="192" height="240" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spacerng" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Ranger</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Leisure Time Electronics)</manufacturer>
+		<rom name="sr1.u36" size="2048" crc="b984f52d"/>
+		<rom name="sr2.u35" size="2048" crc="4b4f07e6"/>
+		<rom name="sr3.u34" size="2048" crc="edc28ba9"/>
+		<rom name="sr4.u33" size="2048" crc="a95f559f"/>
+		<rom name="cv01.1" size="1024" crc="037e16ac"/>
+		<rom name="cv02.2" size="1024" crc="8263da38"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="spcrocks" cloneof="asteroid" romof="asteroid" sourcefile="pre90s/d_asteroids.cpp">
@@ -166256,6 +167993,80 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="spacwalk" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Walk</description>
+		<year>1978</year>
+		<manufacturer>Midway</manufacturer>
+		<rom name="sw.h" size="1024" crc="1b07fc1f"/>
+		<rom name="sw.g" size="1024" crc="52220910"/>
+		<rom name="sw.f" size="1024" crc="787d4ef6"/>
+		<rom name="sw.e" size="1024" crc="d62d324b"/>
+		<rom name="sw.d" size="1024" crc="17dcc591"/>
+		<rom name="sw.c" size="1024" crc="61aef726"/>
+		<rom name="sw.b" size="1024" crc="c59d45d0"/>
+		<rom name="sw.a" size="1024" crc="d563da07"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="spcewarl" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space War (Leijac Corporation)</description>
+		<year>1979</year>
+		<manufacturer>Konami (Leijac Corporation license)</manufacturer>
+		<rom name="spcewarl.1" size="2048" crc="1fcd34d2"/>
+		<rom name="spcewarl.2" size="2048" crc="43bc65c5"/>
+		<rom name="spcewarl.3" size="2048" crc="7820df3a"/>
+		<rom name="spcewarl.4" size="2048" crc="adc05b8d"/>
+		<rom name="01.1" size="1024" crc="aac24f34"/>
+		<rom name="02.2" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spcewarla" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space War (Leisure and Allied)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Leisure and Allied)</manufacturer>
+		<rom name="ps1.bin" size="1024" crc="222f6913"/>
+		<rom name="ps2.bin" size="1024" crc="48dc791c"/>
+		<rom name="ps3.bin" size="1024" crc="58ddc18c"/>
+		<rom name="ps4.bin" size="1024" crc="1da5e383"/>
+		<rom name="ps5.bin" size="1024" crc="3b6d9f23"/>
+		<rom name="ps6.bin" size="1024" crc="50be9b7a"/>
+		<rom name="ps7.bin" size="1024" crc="7b8efd7c"/>
+		<rom name="ps8.bin" size="1024" crc="64fdc3e1"/>
+		<rom name="ps9.bin" size="1024" crc="b2f29601"/>
+		<rom name="cv01_1.bin" size="1024" crc="aac24f34"/>
+		<rom name="cv02_2.bin" size="1024" crc="2bdf83a0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spcewars" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space War (Sanritsu)</description>
+		<year>1978</year>
+		<manufacturer>Taito / Sanritsu</manufacturer>
+		<rom name="sanritsu.1" size="1024" crc="ca331679"/>
+		<rom name="sanritsu.2" size="1024" crc="48dc791c"/>
+		<rom name="sanritsu.3" size="1024" crc="c34842cb"/>
+		<rom name="sanritsu.4" size="1024" crc="a7fdfd0e"/>
+		<rom name="sanritsu.5" size="1024" crc="77475431"/>
+		<rom name="sanritsu.6" size="1024" crc="392ef82c"/>
+		<rom name="sanritsu.7" size="1024" crc="b3a93df8"/>
+		<rom name="sanritsu.8" size="1024" crc="64fdc3e1"/>
+		<rom name="sanritsu.9" size="1024" crc="b2f29601"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="spacewr3" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space War Part 3</description>
+		<year>1978</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="ic36.bin" size="2048" crc="9e30f88a"/>
+		<rom name="ic35.bin" size="2048" crc="40c2d55b"/>
+		<rom name="ic34.bin" size="2048" crc="b435f021"/>
+		<rom name="ic33.bin" size="2048" crc="cbdc6fe8"/>
+		<rom name="ic32.bin" size="2048" crc="1e5a753c"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="spacewar" sourcefile="pre90s/d_cinemat.cpp">
 		<description>Space Wars</description>
 		<year>1977</year>
@@ -166277,6 +168088,18 @@
 		<sample name="explode2" />
 		<sample name="fire2" />
 		<video type="vector" orientation="horizontal" width="1024" height="768" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="swipeout" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Space Wipeout</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Beyer and Brown)</manufacturer>
+		<rom name="sw1.bin" size="2048" crc="576b5897"/>
+		<rom name="sw2.bin" size="2048" crc="40c2d55b"/>
+		<rom name="sw3.bin" size="2048" crc="65e8ce64"/>
+		<rom name="sw4.bin" size="2048" crc="ddf1fb9c"/>
+		<rom name="sw5.bin" size="2048" crc="1e5a753c"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="spacezap" sourcefile="pre90s/d_astrocde.cpp">
@@ -168903,6 +170726,34 @@
 		<video type="raster" orientation="vertical" width="224" height="512" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="starw" cloneof="galxwars" romof="galxwars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Star Wars (bootleg of Galaxy Wars, set 1)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="roma" size="1024" crc="60e8993c"/>
+		<rom name="romb" size="1024" crc="b8060773"/>
+		<rom name="romc" size="1024" crc="307ce6b8"/>
+		<rom name="romd" size="1024" crc="2b0d0a88"/>
+		<rom name="rome" size="1024" crc="5b1c3ad0"/>
+		<rom name="romf" size="1024" crc="c8e42d3d"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="starw1" cloneof="galxwars" romof="galxwars" sourcefile="pre90s/d_invaders.cpp">
+		<description>Star Wars (bootleg of Galaxy Wars, set 2)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Yamashita)</manufacturer>
+		<rom name="gc.75" size="1024" crc="ad10c128"/>
+		<rom name="gc.77" size="1024" crc="ab77c474"/>
+		<rom name="gc.76" size="1024" crc="3638aed4"/>
+		<rom name="gc.80" size="1024" crc="4c67957b"/>
+		<rom name="gc.81" size="1024" crc="246621ef"/>
+		<rom name="gc.82" size="1024" crc="19bd32ee"/>
+		<rom name="cv01" size="1024" crc="8d892ef3"/>
+		<rom name="cv02" size="1024" crc="b44ddde8"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="starwars" sourcefile="pre90s/d_starwars.cpp">
 		<description>Star Wars (set 1)</description>
 		<year>1983</year>
@@ -169202,6 +171053,23 @@
 		<rom name="sns_voi2.bin" size="524288" crc="562ec86b"/>
 		<rom name="sgunner2.nv" size="8192" crc="57a521c6"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="steelwkr" sourcefile="pre90s/d_invaders.cpp">
+		<description>Steel Worker</description>
+		<year>1980</year>
+		<manufacturer>Taito</manufacturer>
+		<rom name="1.36" size="1024" crc="5d78873a"/>
+		<rom name="2.35" size="1024" crc="99cd70c6"/>
+		<rom name="3.34" size="1024" crc="18103b67"/>
+		<rom name="4.33" size="1024" crc="c413ae82"/>
+		<rom name="5.32" size="1024" crc="ca7b07b5"/>
+		<rom name="6.31" size="1024" crc="f8181fa0"/>
+		<rom name="7.42" size="1024" crc="a35f113e"/>
+		<rom name="8.41" size="1024" crc="af208370"/>
+		<rom name="la05.1" size="1024" crc="98f31392"/>
+		<rom name="la06.2" size="1024" crc="98f31392"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="stellcas" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
@@ -181393,6 +183261,54 @@
 		<video type="raster" orientation="horizontal" width="400" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="searthinc" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Earth Invasion (Centromatic, Spanish)</description>
+		<year>19??</year>
+		<manufacturer>bootleg (Centromatic)</manufacturer>
+		<rom name="imbader1.bin" size="2048" crc="c46df7f4"/>
+		<rom name="imbader2.bin" size="2048" crc="7b6cddc3"/>
+		<rom name="imbader3.bin" size="2048" crc="76429ed7"/>
+		<rom name="imbader4.bin" size="2048" crc="7e519b8e"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="searthin" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Earth Invasion (set 1)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Competitive Video)</manufacturer>
+		<rom name="earthinv.h" size="2048" crc="58a750c8"/>
+		<rom name="earthinv.g" size="2048" crc="b91742f1"/>
+		<rom name="earthinv.f" size="2048" crc="4acbbc60"/>
+		<rom name="earthinv.e" size="2048" crc="df397b12"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="searthina" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Earth Invasion (set 2)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Competitive Video)</manufacturer>
+		<rom name="unkh.h1" size="1024" crc="272b9bf3"/>
+		<rom name="unkg.g1" size="1024" crc="61bb6101"/>
+		<rom name="unkf.f1" size="1024" crc="2a8d9cd5"/>
+		<rom name="unke.e1" size="1024" crc="1938d349"/>
+		<rom name="unkd.d1" size="1024" crc="9bc2ab88"/>
+		<rom name="unkc.c1" size="1024" crc="d4e2dada"/>
+		<rom name="unkb.b1" size="1024" crc="ab645a9c"/>
+		<rom name="unka.a1" size="1024" crc="4b65bd7c"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="searthie" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Earth Invasion (set 3)</description>
+		<year>1980</year>
+		<manufacturer>bootleg (Electrocoin)</manufacturer>
+		<rom name="searthie.h" size="2048" crc="92b08b91"/>
+		<rom name="searthie.g" size="2048" crc="23e24bcc"/>
+		<rom name="searthie.f" size="2048" crc="8700286a"/>
+		<rom name="searthie.e" size="2048" crc="baf949b0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="sformula" cloneof="tail2nos" romof="tail2nos" sourcefile="pre90s/d_tail2nose.cpp">
 		<description>Super Formula (Japan, set 1)</description>
 		<year>1989</year>
@@ -181963,6 +183879,75 @@
 		<rom name="la1_super_high_impact_game_rom_u108.u108" size="262144" crc="d39685a3"/>
 		<rom name="la1_super_high_impact_game_rom_u109.u109" size="262144" crc="36e0b2b2"/>
 		<video type="raster" orientation="horizontal" width="396" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="superinv" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Invaders (bootleg set 1)</description>
+		<year>1978</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="00" size="1024" crc="7a9b4485"/>
+		<rom name="01" size="1024" crc="7c86620d"/>
+		<rom name="02" size="1024" crc="ccaf38f6"/>
+		<rom name="03" size="1024" crc="8ec9eae2"/>
+		<rom name="04" size="1024" crc="68719b30"/>
+		<rom name="05" size="1024" crc="8abe2466"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sinvemag" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Invaders (Emag bootleg set 1)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Emag)</manufacturer>
+		<rom name="sv01.36" size="1024" crc="86bb8cb6"/>
+		<rom name="emag_si.b" size="1024" crc="febe6d1a"/>
+		<rom name="emag_si.c" size="1024" crc="aafb24f7"/>
+		<rom name="emag_si.d" size="1024" crc="68c4b9da"/>
+		<rom name="emag_si.e" size="1024" crc="c4e80586"/>
+		<rom name="emag_si.f" size="1024" crc="077f5ef2"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sinvemag2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Invaders (Emag bootleg set 2)</description>
+		<year>1978</year>
+		<manufacturer>bootleg (Emag)</manufacturer>
+		<rom name="sie.a" size="1024" crc="86bb8cb6"/>
+		<rom name="sie.b" size="1024" crc="febe6d1a"/>
+		<rom name="sie.c" size="1024" crc="ad6529f0"/>
+		<rom name="sie.d" size="1024" crc="68c4b9da"/>
+		<rom name="sie.e" size="1024" crc="636a6b7d"/>
+		<rom name="sie.f" size="1024" crc="52062faa"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sinvzen" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Invaders (Zenitone-Microsec)</description>
+		<year>1980?</year>
+		<manufacturer>Taito / Zenitone-Microsec</manufacturer>
+		<rom name="1.bin" size="1024" crc="9b0da779"/>
+		<rom name="2.bin" size="1024" crc="9858ccab"/>
+		<rom name="3.bin" size="1024" crc="a1cc38b5"/>
+		<rom name="4.bin" size="1024" crc="1f2db7a8"/>
+		<rom name="5.bin" size="1024" crc="9b505fcd"/>
+		<rom name="6.bin" size="1024" crc="de0ca0ae"/>
+		<rom name="7.bin" size="1024" crc="25a296f6"/>
+		<rom name="8.bin" size="1024" crc="f4bc4a98"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="supinvsion" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Super Invasion (Electromar, Spanish)</description>
+		<year>1979</year>
+		<manufacturer>bootleg (Electromar / Irecsa)</manufacturer>
+		<rom name="h-am4708.bin" size="1024" crc="281570f0"/>
+		<rom name="g-am4708.bin" size="1024" crc="c0b6cd79"/>
+		<rom name="f-am4708.bin" size="1024" crc="2a8d9cd5"/>
+		<rom name="e-am4708.bin" size="1024" crc="03e9ef33"/>
+		<rom name="d-am4708.bin" size="1024" crc="b2527c77"/>
+		<rom name="c-am4708.bin" size="1024" crc="a883ff01"/>
+		<rom name="b-am4708.bin" size="1024" crc="46e02fcf"/>
+		<rom name="a-am4708.bin" size="1024" crc="bf4d3267"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="suprleag" sourcefile="sega/d_sys16b.cpp">
@@ -184505,31 +186490,31 @@
 	</game>
 	<game name="ssf2xucj" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, Japan RC14)</description>
+		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, Japan RC15)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sfxucj.03d" size="524288" crc="8df6d8ac"/>
-		<rom name="sfxucj.04a" size="524288" crc="d6c28b66"/>
+		<rom name="sfxucj.03d" size="524288" crc="a2797f83"/>
+		<rom name="sfxucj.04a" size="524288" crc="7cf6194b"/>
 		<rom name="sfxuc.05" size="524288" crc="477b0a5e"/>
-		<rom name="sfxucj.06b" size="524288" crc="560d1a51"/>
-		<rom name="sfxucj.07a" size="524288" crc="4f9cb066"/>
+		<rom name="sfxucj.06b" size="524288" crc="eb206bc6"/>
+		<rom name="sfxucj.07a" size="524288" crc="a9301465"/>
 		<rom name="sfxuc.08" size="524288" crc="f7587a54"/>
-		<rom name="sfxucj.09" size="524288" crc="ecd3b4a1"/>
-		<rom name="sfxucj.13m" size="2097152" crc="9a2b7423"/>
-		<rom name="sfxucj.15m" size="2097152" crc="1cfd6f84"/>
-		<rom name="sfxucj.17m" size="2097152" crc="07318764"/>
-		<rom name="sfxucj.19m" size="2097152" crc="79f38484"/>
-		<rom name="sfxucj.14m" size="1048576" crc="6a797908"/>
-		<rom name="sfxucj.16m" size="1048576" crc="add79bab"/>
-		<rom name="sfxucj.18m" size="1048576" crc="917471fe"/>
-		<rom name="sfxucj.20m" size="1048576" crc="55eb92b4"/>
+		<rom name="sfxucj.09" size="524288" crc="e06f41f4"/>
+		<rom name="sfxucj.13m" size="2097152" crc="5ee3c4c7"/>
+		<rom name="sfxucj.15m" size="2097152" crc="802dbbda"/>
+		<rom name="sfxucj.17m" size="2097152" crc="5798916f"/>
+		<rom name="sfxucj.19m" size="2097152" crc="5ff4994b"/>
+		<rom name="sfxucj.14m" size="1048576" crc="cbe4cb9f"/>
+		<rom name="sfxucj.16m" size="1048576" crc="39655598"/>
+		<rom name="sfxucj.18m" size="1048576" crc="30e9c369"/>
+		<rom name="sfxucj.20m" size="1048576" crc="c1595c87"/>
 		<rom name="sfxuc.21m" size="1048576" crc="607d1bfd"/>
 		<rom name="sfxuc.23m" size="1048576" crc="84905f31"/>
 		<rom name="sfxuc.25m" size="1048576" crc="e88e200d"/>
 		<rom name="sfxuc.27m" size="1048576" crc="a2807877"/>
-		<rom name="sfxucj.01" size="131072" crc="6276ce06"/>
-		<rom name="sfxuc.02" size="131072" crc="aa590f89"/>
-		<rom name="sfx.11m" merge="sfx.11m" size="2097152" crc="9bdbd476"/>
+		<rom name="sfxucj.01" size="131072" crc="2e6944e0"/>
+		<rom name="sfxuc.02" size="131072" crc="0328f08c"/>
+		<rom name="sfxuc.11m" size="2097152" crc="e33ef750"/>
 		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
@@ -184537,31 +186522,31 @@
 	</game>
 	<game name="ssf2tuc" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Hack</comment>
-		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, USA RC14)</description>
+		<description>Super Street Fighter II EX: The Ultimate Championship (Hack, USA RC15)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sfxuc.03d" size="524288" crc="2cd2325d"/>
-		<rom name="sfxuc.04a" size="524288" crc="ffa5a0e8"/>
+		<rom name="sfxuc.03d" size="524288" crc="d54cc193"/>
+		<rom name="sfxuc.04a" size="524288" crc="559132c5"/>
 		<rom name="sfxuc.05" size="524288" crc="477b0a5e"/>
-		<rom name="sfxuc.06b" size="524288" crc="49aec983"/>
-		<rom name="sfxuc.07a" size="524288" crc="710e743f"/>
+		<rom name="sfxuc.06b" size="524288" crc="f483b814"/>
+		<rom name="sfxuc.07a" size="524288" crc="c29228d0"/>
 		<rom name="sfxuc.08" size="524288" crc="f7587a54"/>
-		<rom name="sfxuc.09" size="524288" crc="a04de5f2"/>
+		<rom name="sfxuc.09" size="524288" crc="acf110a7"/>
 		<rom name="sfxuc.13m" size="2097152" crc="e4add659"/>
 		<rom name="sfxuc.15m" size="2097152" crc="5a46784c"/>
 		<rom name="sfxuc.17m" size="2097152" crc="17f46d66"/>
 		<rom name="sfxuc.19m" size="2097152" crc="78b9e35d"/>
-		<rom name="sfxuc.14m" size="1048576" crc="88a0d1b3"/>
-		<rom name="sfxuc.16m" size="1048576" crc="4f0e3310"/>
-		<rom name="sfxuc.18m" size="1048576" crc="73add945"/>
-		<rom name="sfxuc.20m" size="1048576" crc="b7323a0f"/>
+		<rom name="sfxuc.14m" size="1048576" crc="293d6324"/>
+		<rom name="sfxuc.16m" size="1048576" crc="dbbcfd23"/>
+		<rom name="sfxuc.18m" size="1048576" crc="d2306bd2"/>
+		<rom name="sfxuc.20m" size="1048576" crc="2380f43c"/>
 		<rom name="sfxuc.21m" size="1048576" crc="607d1bfd"/>
 		<rom name="sfxuc.23m" size="1048576" crc="84905f31"/>
 		<rom name="sfxuc.25m" size="1048576" crc="e88e200d"/>
 		<rom name="sfxuc.27m" size="1048576" crc="a2807877"/>
-		<rom name="sfxuc.01" size="131072" crc="1a64b20e"/>
-		<rom name="sfxuc.02" size="131072" crc="aa590f89"/>
-		<rom name="sfx.11m" merge="sfx.11m" size="2097152" crc="9bdbd476"/>
+		<rom name="sfxuc.01" size="131072" crc="567b38e8"/>
+		<rom name="sfxuc.02" size="131072" crc="0328f08c"/>
+		<rom name="sfxuc.11m" size="2097152" crc="e33ef750"/>
 		<rom name="sfx.12m" merge="sfx.12m" size="2097152" crc="a05e3aab"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
@@ -209871,28 +211856,6 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="tinyvaders" cloneof="invaders" romof="invaders" sampleof="invaders" sourcefile="pre90s/d_invaders.cpp">
-		<comment>Hack</comment>
-		<description>Tiny Vaders (Hack)</description>
-		<year>2026</year>
-		<manufacturer>zeroco</manufacturer>
-		<rom name="tv9316b-0869_m739h.h1" size="2048" crc="bf3121f7"/>
-		<rom name="tv9316b-0856_m739g.g1" size="2048" crc="ac58c700"/>
-		<rom name="tv9316b-0855_m739f.f1" size="2048" crc="4d5cbcf8"/>
-		<rom name="tv9316b-0854_m739e.e1" size="2048" crc="387e15f9"/>
-		<sample name="1" />
-		<sample name="2" />
-		<sample name="3" />
-		<sample name="4" />
-		<sample name="5" />
-		<sample name="6" />
-		<sample name="7" />
-		<sample name="8" />
-		<sample name="9" />
-		<sample name="18" />
-		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
-		<driver status="good"/>
-	</game>
 	<game name="tiptop" cloneof="congo" romof="congo" sampleof="congo" sourcefile="sega/d_zaxxon.cpp">
 		<description>Tip Top (3 board stack)</description>
 		<year>1983</year>
@@ -211584,6 +213547,16 @@
 		<rom name="dsp-3_p5-.m4" merge="dsp-3_p5-.m4" size="32" crc="e52089a0"/>
 		<rom name="cassmcu.1c" merge="cassmcu.1c" size="1024" crc="a6df18fd"/>
 		<video type="raster" orientation="vertical" width="240" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="tornbase" sourcefile="pre90s/d_invaders.cpp">
+		<description>Tornado Baseball / Ball Park</description>
+		<year>1976</year>
+		<manufacturer>Dave Nutting Associates / Midway / Taito</manufacturer>
+		<rom name="tb.h" size="2048" crc="653f4797"/>
+		<rom name="tb.g" size="2048" crc="b63dcdb3"/>
+		<rom name="tb.f" size="2048" crc="215e070c"/>
+		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="toryumondx" cloneof="toryumon" romof="toryumon" sourcefile="sega/d_sys16b.cpp">
@@ -216400,6 +218373,32 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="preliminary"/>
 	</game>
+	<game name="invasiona" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>UFO Robot Attack (bootleg of Invasion, newer set)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="invasiona_0.bin" size="1024" crc="c2fe6197"/>
+		<rom name="invasiona_1.bin" size="1024" crc="7c86620d"/>
+		<rom name="invasiona_2.bin" size="1024" crc="ccaf38f6"/>
+		<rom name="invasiona_3.bin" size="1024" crc="8ec9eae2"/>
+		<rom name="invasiona_4.bin" size="1024" crc="24b39879"/>
+		<rom name="invasiona_5.bin" size="1024" crc="59134ff8"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="invasiona2" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>UFO Robot Attack (bootleg of Invasion, older set)</description>
+		<year>1979</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="0.0.bin" size="1024" crc="7a9b4485"/>
+		<rom name="1.1.bin" size="1024" crc="7c86620d"/>
+		<rom name="2.2.bin" size="1024" crc="b949185e"/>
+		<rom name="3.5.bin" size="1024" crc="8ec9eae2"/>
+		<rom name="4.6.bin" size="1024" crc="ec0edb4a"/>
+		<rom name="5.7.bin" size="1024" crc="c3466380"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="ufosensi" sourcefile="sega/d_sys1.cpp">
 		<description>Ufo Senshi Yohko Chan (MC-8123, 317-0064)</description>
 		<year>1988</year>
@@ -216766,27 +218765,40 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="ultrainv" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
+		<description>Ultra Invaders</description>
+		<year>1980</year>
+		<manufacturer>Taito / Konami</manufacturer>
+		<rom name="in-01.bin" size="1024" crc="db9de599"/>
+		<rom name="in-02.bin" size="1024" crc="febe6d1a"/>
+		<rom name="in-03.bin" size="1024" crc="3d5c9820"/>
+		<rom name="in-04.bin" size="1024" crc="1293b826"/>
+		<rom name="in-05.bin" size="1024" crc="e315a8c4"/>
+		<rom name="in-06.bin" size="1024" crc="d958478c"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="usf2j" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Ultra Street Fighter II: The Final Challengers (Japan, Backport RC7)</description>
+		<description>Ultra Street Fighter II: The Final Challengers (Japan, Backport RC8)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="usfxj.03d" size="524288" crc="dfd45884"/>
+		<rom name="usfxj.03d" size="524288" crc="fb6d9378"/>
 		<rom name="usfxj.04a" size="524288" crc="f2e86661"/>
 		<rom name="sfxj.05" size="524288" crc="f4ff18f5"/>
 		<rom name="sfxj.06b" size="524288" crc="413477c2"/>
-		<rom name="usfx.07a" size="524288" crc="32c849b4"/>
+		<rom name="usfxj.07a" size="524288" crc="32c849b4"/>
 		<rom name="usfx.08" size="524288" crc="5859ada7"/>
-		<rom name="usfx.09" size="524288" crc="22342d8f"/>
-		<rom name="usfxj.10" size="524288" crc="58849a10"/>
+		<rom name="usfx.09" size="524288" crc="e218c32a"/>
+		<rom name="usfxj.10" size="524288" crc="c200cd1d"/>
 		<rom name="usfxj.13m" size="2097152" crc="503aaf69"/>
 		<rom name="usfxj.15m" size="2097152" crc="18411df5"/>
 		<rom name="usfxj.17m" size="2097152" crc="172e5175"/>
 		<rom name="usfxj.19m" size="2097152" crc="477368e9"/>
-		<rom name="usfx.14m" size="1048576" crc="f7a04936"/>
-		<rom name="usfx.16m" size="1048576" crc="38ad2876"/>
-		<rom name="usfx.18m" size="1048576" crc="12d01362"/>
-		<rom name="usfx.20m" size="1048576" crc="d03072e4"/>
+		<rom name="usfx.14m" size="1048576" crc="778ea0b2"/>
+		<rom name="usfx.16m" size="1048576" crc="564337e3"/>
+		<rom name="usfx.18m" size="1048576" crc="92fefae6"/>
+		<rom name="usfx.20m" size="1048576" crc="bede6d71"/>
 		<rom name="usfxj.21m" size="1048576" crc="8de97b2d"/>
 		<rom name="usfxj.23m" size="1048576" crc="a2362ec2"/>
 		<rom name="usfxj.25m" size="1048576" crc="2915872f"/>
@@ -216795,37 +218807,37 @@
 		<rom name="usfxj.24m" size="4194304" crc="93d6b145"/>
 		<rom name="usfxj.26m" size="4194304" crc="eb984064"/>
 		<rom name="usfxj.28m" size="4194304" crc="439cf35d"/>
-		<rom name="usfxj.01" size="131072" crc="bbb94908"/>
-		<rom name="usfxj.02" size="131072" crc="0f1d2747"/>
-		<rom name="usfxj.11m" size="2097152" crc="8504ed02"/>
-		<rom name="usfxj.12m" size="2097152" crc="cde333ac"/>
+		<rom name="usfxj.01" size="131072" crc="52786071"/>
+		<rom name="usfxj.02" size="131072" crc="cee8762f"/>
+		<rom name="usfxj.11m" size="2097152" crc="61c13a0b"/>
+		<rom name="usfxj.12m" size="2097152" crc="8c1b4475"/>
 		<rom name="usfxj.q3" size="2097152" crc="51e4ab24"/>
-		<rom name="usfxj.q4" size="2097152" crc="3ffaecc6"/>
+		<rom name="usfxj.q4" size="2097152" crc="28bd8ba5"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="usf2u" cloneof="ssf2t" romof="ssf2t" sourcefile="capcom/d_cps2.cpp">
 		<comment>Bootleg</comment>
-		<description>Ultra Street Fighter II: The Final Challengers (USA, Backport RC7)</description>
+		<description>Ultra Street Fighter II: The Final Challengers (USA, Backport RC8)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="usfx.03d" size="524288" crc="f9db2d24"/>
+		<rom name="usfx.03d" size="524288" crc="2ca9acaf"/>
 		<rom name="usfx.04a" size="524288" crc="8d459084"/>
 		<rom name="sfxj.05" size="524288" crc="f4ff18f5"/>
 		<rom name="sfxj.06b" size="524288" crc="413477c2"/>
 		<rom name="usfx.07a" size="524288" crc="a2d9c979"/>
 		<rom name="usfx.08" size="524288" crc="5859ada7"/>
-		<rom name="usfx.09" size="524288" crc="22342d8f"/>
-		<rom name="usfx.10" size="524288" crc="05bd1a78"/>
+		<rom name="usfx.09" size="524288" crc="e218c32a"/>
+		<rom name="usfx.10" size="524288" crc="aebbc847"/>
 		<rom name="usfx.13m" size="2097152" crc="ea74bdf7"/>
 		<rom name="usfx.15m" size="2097152" crc="c22ade63"/>
 		<rom name="usfx.17m" size="2097152" crc="5742ad7c"/>
 		<rom name="usfx.19m" size="2097152" crc="603e12ff"/>
-		<rom name="usfx.14m" size="1048576" crc="f7a04936"/>
-		<rom name="usfx.16m" size="1048576" crc="38ad2876"/>
-		<rom name="usfx.18m" size="1048576" crc="12d01362"/>
-		<rom name="usfx.20m" size="1048576" crc="d03072e4"/>
+		<rom name="usfx.14m" size="1048576" crc="778ea0b2"/>
+		<rom name="usfx.16m" size="1048576" crc="564337e3"/>
+		<rom name="usfx.18m" size="1048576" crc="92fefae6"/>
+		<rom name="usfx.20m" size="1048576" crc="bede6d71"/>
 		<rom name="usfx.21m" size="1048576" crc="fcb707d2"/>
 		<rom name="usfx.23m" size="1048576" crc="aed5bc4c"/>
 		<rom name="usfx.25m" size="1048576" crc="a1e1529a"/>
@@ -216834,12 +218846,12 @@
 		<rom name="usfx.24m" size="4194304" crc="8a284e49"/>
 		<rom name="usfx.26m" size="4194304" crc="f838f250"/>
 		<rom name="usfx.28m" size="4194304" crc="64e3f674"/>
-		<rom name="usfx.01" size="131072" crc="dceded4b"/>
-		<rom name="usfx.02" size="131072" crc="59329df7"/>
-		<rom name="usfx.11m" size="2097152" crc="86e1cde2"/>
-		<rom name="usfx.12m" size="2097152" crc="e8b3ebbc"/>
-		<rom name="usfx.q3" size="2097152" crc="78576176"/>
-		<rom name="usfx.q4" size="2097152" crc="16b5b6a2"/>
+		<rom name="usfx.01" size="131072" crc="01a00f5c"/>
+		<rom name="usfx.02" size="131072" crc="5a093b64"/>
+		<rom name="usfx.11m" size="2097152" crc="b8f86e23"/>
+		<rom name="usfx.12m" size="2097152" crc="e31f7fe5"/>
+		<rom name="usfx.q3" size="2097152" crc="57d70c16"/>
+		<rom name="usfx.q4" size="2097152" crc="f9804a9d"/>
 		<rom name="ssf2xj.key" size="20" crc="160d1424"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -221663,6 +223675,19 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vortex" sourcefile="pre90s/d_invaders.cpp">
+		<description>Vortex</description>
+		<year>1980</year>
+		<manufacturer>Zilec Electronics</manufacturer>
+		<rom name="1.t36" size="2048" crc="577417a6"/>
+		<rom name="2.t35" size="2048" crc="126d0049"/>
+		<rom name="3.t34" size="2048" crc="4a2510b3"/>
+		<rom name="4.t33" size="2048" crc="da0274fe"/>
+		<rom name="5.t32" size="2048" crc="a3de49d6"/>
+		<rom name="6.t31" size="2048" crc="271085d0"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="vs10yardj" cloneof="10yard" romof="10yard" sourcefile="irem/d_m58.cpp">
@@ -229761,6 +231786,62 @@
 		<video type="raster" orientation="horizontal" width="512" height="224" aspectx="16" aspecty="9"/>
 		<driver status="good"/>
 	</game>
+	<game name="xmvsfexj" cloneof="xmvsf" romof="xmvsf" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>X-Men Vs. Street Fighter EX (Hack, Japan RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="xvsexj.03m" size="524288" crc="2e1de732"/>
+		<rom name="xvsexj.04m" size="524288" crc="1841d050"/>
+		<rom name="xvsexj.05a" size="524288" crc="b955087d"/>
+		<rom name="xvs.06a" merge="xvs.06a" size="524288" crc="e8e2c75c"/>
+		<rom name="xvsexj.07" size="524288" crc="ea60b417"/>
+		<rom name="xvs.08" merge="xvs.08" size="524288" crc="81929675"/>
+		<rom name="xvsex.09" size="524288" crc="0940b4c6"/>
+		<rom name="xvsex.13m" size="4194304" crc="cf87c0be"/>
+		<rom name="xvsex.15m" size="4194304" crc="3a12cda0"/>
+		<rom name="xvsex.17m" size="4194304" crc="763cc53a"/>
+		<rom name="xvsex.19m" size="4194304" crc="e3c599b0"/>
+		<rom name="xvs.14m" merge="xvs.14m" size="4194304" crc="bcac2e41"/>
+		<rom name="xvs.16m" merge="xvs.16m" size="4194304" crc="ea04a272"/>
+		<rom name="xvs.18m" merge="xvs.18m" size="4194304" crc="b0def86a"/>
+		<rom name="xvs.20m" merge="xvs.20m" size="4194304" crc="4b40ff9f"/>
+		<rom name="xvsex.01" size="131072" crc="b28fa987"/>
+		<rom name="xvs.02" merge="xvs.02" size="131072" crc="101bdee9"/>
+		<rom name="xvs.11m" merge="xvs.11m" size="2097152" crc="9cadcdbc"/>
+		<rom name="xvs.12m" merge="xvs.12m" size="2097152" crc="7b11e460"/>
+		<rom name="xmvsfj.key" size="20" crc="87576cda"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="xmvsfex" cloneof="xmvsf" romof="xmvsf" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>X-Men Vs. Street Fighter EX (Hack, USA RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="xvsex.03m" size="524288" crc="1c84f758"/>
+		<rom name="xvsex.04m" size="524288" crc="29ba42f3"/>
+		<rom name="xvsex.05a" size="524288" crc="1f529c46"/>
+		<rom name="xvsex.06a" size="524288" crc="d092a016"/>
+		<rom name="xvsex.07" size="524288" crc="3c5a5031"/>
+		<rom name="xvs.08" merge="xvs.08" size="524288" crc="81929675"/>
+		<rom name="xvsex.09" size="524288" crc="0940b4c6"/>
+		<rom name="xvsex.13m" size="4194304" crc="cf87c0be"/>
+		<rom name="xvsex.15m" size="4194304" crc="3a12cda0"/>
+		<rom name="xvsex.17m" size="4194304" crc="763cc53a"/>
+		<rom name="xvsex.19m" size="4194304" crc="e3c599b0"/>
+		<rom name="xvs.14m" merge="xvs.14m" size="4194304" crc="bcac2e41"/>
+		<rom name="xvs.16m" merge="xvs.16m" size="4194304" crc="ea04a272"/>
+		<rom name="xvs.18m" merge="xvs.18m" size="4194304" crc="b0def86a"/>
+		<rom name="xvs.20m" merge="xvs.20m" size="4194304" crc="4b40ff9f"/>
+		<rom name="xvsex.01" size="131072" crc="b28fa987"/>
+		<rom name="xvs.02" merge="xvs.02" size="131072" crc="101bdee9"/>
+		<rom name="xvs.11m" merge="xvs.11m" size="2097152" crc="9cadcdbc"/>
+		<rom name="xvs.12m" merge="xvs.12m" size="2097152" crc="7b11e460"/>
+		<rom name="xmvsfj.key" size="20" crc="87576cda"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="xmcotaar2" cloneof="xmcota" romof="xmcota" sourcefile="capcom/d_cps2.cpp">
 		<description>X-Men: Children of the Atom (Asia 941217)</description>
 		<year>1994</year>
@@ -231626,6 +233707,34 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="yosakdon" sourcefile="pre90s/d_invaders.cpp">
+		<description>Yosaku to Donbei (set 1)</description>
+		<year>1979</year>
+		<manufacturer>Wing</manufacturer>
+		<rom name="yd1.bin" size="1024" crc="607899c9"/>
+		<rom name="yd2.bin" size="1024" crc="78336df4"/>
+		<rom name="yd3.bin" size="1024" crc="c5af6d52"/>
+		<rom name="yd4.bin" size="1024" crc="dca8064f"/>
+		<rom name="yd5.bin" size="1024" crc="38804ff1"/>
+		<rom name="yd6.bin" size="1024" crc="988d2362"/>
+		<rom name="yd7.bin" size="1024" crc="2744e68b"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="yosakdona" cloneof="yosakdon" romof="yosakdon" sourcefile="pre90s/d_invaders.cpp">
+		<description>Yosaku to Donbei (set 2)</description>
+		<year>1979</year>
+		<manufacturer>Wing</manufacturer>
+		<rom name="yosaku1" size="1024" crc="d132f4f0"/>
+		<rom name="yd2.bin" merge="yd2.bin" size="1024" crc="78336df4"/>
+		<rom name="yosaku3" size="1024" crc="b1a0b3eb"/>
+		<rom name="yosaku4" size="1024" crc="c06c225e"/>
+		<rom name="yosaku5" size="1024" crc="ae422a43"/>
+		<rom name="yosaku6" size="1024" crc="26b24a12"/>
+		<rom name="yosaku7" size="1024" crc="878d5a18"/>
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="youjyudn" sourcefile="irem/d_m62.cpp">
