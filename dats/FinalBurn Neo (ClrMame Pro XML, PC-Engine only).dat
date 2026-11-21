@@ -399,18 +399,6 @@
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="scdsys" sourcefile="pce/d_pce.cpp">
-		<comment>System - media selected seperately</comment>
-		<description>CD System Card</description>
-		<year>1991</year>
-		<manufacturer>NEC - Hudson Soft</manufacturer>
-		<rom name="Super CD-Rom System Card (Japan, v3.0)(1991).pce" size="262144" crc="6d9a73ef"/>
-		<rom name="Super CD-Rom System Card (Japan, v3.0, font hack)(2026).pce" size="262144" crc="16a9fda2"/>
-		<rom name="TurboGrafx CD System Card (USA, v3.0)(1992).pce" size="262144" crc="2b5b75fe"/>
-		<rom name="Games Express CD Card (Japan)(1993).pce" size="32768" crc="51a12d90"/>
-		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="champwrs" sourcefile="pce/d_pce.cpp">
 		<description>Champion Wrestler (Japan)</description>
 		<year>1990</year>
@@ -3060,5 +3048,15 @@
 		<rom name="Zipang (Japan)(1990)(Pack-In-Video).pce" size="262144" crc="67aab7a1"/>
 		<video type="raster" orientation="horizontal" width="1024" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
+	</game>
+	<game isbios="yes" name="scdsys" sourcefile="pce/d_pce.cpp">
+		<comment>System - media selected seperately</comment>
+		<description>CD System Card</description>
+		<year>1991</year>
+		<manufacturer>NEC - Hudson Soft</manufacturer>
+		<rom name="Super CD-Rom System Card (Japan, v3.0)(1991).pce" size="262144" crc="6d9a73ef"/>
+		<rom name="Super CD-Rom System Card (Japan, v3.0, font hack)(2026).pce" size="262144" crc="16a9fda2"/>
+		<rom name="TurboGrafx CD System Card (USA, v3.0)(1992).pce" size="262144" crc="2b5b75fe"/>
+		<rom name="Games Express CD Card (Japan)(1993).pce" size="32768" crc="51a12d90"/>
 	</game>
 </datafile>
