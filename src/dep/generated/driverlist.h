@@ -24205,6 +24205,7 @@ DRV		BurnDrvsms_stalactites;
 DRV		BurnSpecStalingrad;
 DRV		BurnDrva26_stampede;
 DRV		BurnDrvnes_stanley;
+DRV		BurnDrvStaratk;
 DRV		BurnDrvMSX_staravng;
 DRV		BurnDrvastro_starbttl;
 DRV		BurnSpecStarblade;
@@ -30260,6 +30261,7 @@ DRV		BurnSpecYopparaies;
 #if defined FBNEO_DEBUG
 DRV		BurnDrvYorijori;		// no comment [NOT WORKING]
 #endif
+DRV		BurnDrvYosaku;
 DRV		BurnDrvYosakdon;
 DRV		BurnDrvYosakdona;
 DRV		BurnDrvnes_yoshi;
@@ -43411,7 +43413,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_jgtogolf,		// JGTO Kounin Golf Master - Japan Golf Tour Game (Japan)
 	&BurnDrvgba_jgtoglfm,		// JGTO Kounin Golf Master Mobile - Japan Golf Tour Game (Japan)
 	&BurnDrvsg1k_champkent,		// Jiandao (Taiwan)
-	&BurnDrvSamesamecn,			// Jiao! Jiao! Jiao! (China, 2P set)
+	&BurnDrvSamesamecn,			// Jiao! Jiao! Jiao! (China)
 	&BurnDrvCultures,			// Jibun wo Migaku Culture School Mahjong Hen
 	&BurnDrvnes_jigokgokmarc,	// Jigoku Gokuraku Maru (Hack, Chinese)
 	&BurnDrvnes_jigokgokmar,	// Jigoku Gokuraku Maru (Japan)
@@ -45921,10 +45923,10 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMariobla,			// Mario Bros. (bootleg on Ambush Hardware, set 2)
 	&BurnDrvnes_mariobrosmc0,	// Mario Bros. (Euro, MC-0 Classic Series)
 	&BurnDrvMarioja,			// Mario Bros. (Japan, older)
-	&BurnDrvMarioj,				// Mario Bros. (Japan, Revision C)
-	&BurnDrvMario,				// Mario Bros. (US, Revision E)
-	&BurnDrvMariof,				// Mario Bros. (US, Revision F)
-	&BurnDrvMariog,				// Mario Bros. (US, Revision G)
+	&BurnDrvMarioj,				// Mario Bros. (Japan, revision C)
+	&BurnDrvMario,				// Mario Bros. (US, revision E)
+	&BurnDrvMariof,				// Mario Bros. (US, revision F)
+	&BurnDrvMariog,				// Mario Bros. (US, revision G)
 	&BurnDrvnes_mariobros,		// Mario Bros. (World)
 	&BurnDrva26_mario,			// Mario Bros.
 	&BurnDrvcv_mariob,			// Mario Brothers (HB)
@@ -54911,6 +54913,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecStalingrad,		// Stalingrad (48K)
 	&BurnDrva26_stampede,		// Stampede (USA)
 	&BurnDrvnes_stanley,		// Stanley: The Search for Dr. Livingston (USA)
+	&BurnDrvStaratk,			// Star Attack
 	&BurnDrvMSX_staravng,		// Star Avenger (Euro)
 	&BurnDrvastro_starbttl,		// Star Battle (USA)
 	&BurnSpecStarblade,			// Star Blade (48K)
@@ -55293,7 +55296,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSfa3u,			// Street Fighter Alpha 3 (USA 980904)
 	&BurnDrvgba_sfa3u,			// Street Fighter Alpha 3 (USA)
 	&BurnDrvCpsSfa3re,			// Street Fighter Alpha 3 Restoration (Hack, USA RC6)
-	&BurnDrvCpsSfa3up,			// Street Fighter Alpha 3 Upper (Hack, USA RC2)
+	&BurnDrvCpsSfa3up,			// Street Fighter Alpha 3 Upper (Hack, USA RC3)
 	&BurnDrvCpsSfa3ce,			// Street Fighter Alpha 3: Challenger's Edition
 	&BurnDrvCpsSfa3xl,			// Street Fighter Alpha 3: Xiang Long Edition (Hack by pipi899, Ver.2009-05-10)
 	&BurnDrvCpsSfaex,			// Street Fighter Alpha EX: Warriors' Dreams (Hack, USA RC4)
@@ -55573,7 +55576,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSfz3mix13,		// Street Fighter Zero 3 Mix v0.13
 	&BurnDrvCpsSfz3mix,			// Street Fighter Zero 3 Mix v0.32
 	&BurnDrvCpsSfz3rej,			// Street Fighter Zero 3 Restoration (Hack, Japan RC6)
-	&BurnDrvCpsSfz3up,			// Street Fighter Zero 3 Upper (Hack, Japan RC2)
+	&BurnDrvCpsSfz3up,			// Street Fighter Zero 3 Upper (Hack, Japan RC3)
 	&BurnDrvgba_sfa3j,			// Street Fighter Zero 3 Upper (Japan)
 	&BurnDrvCpsSfz3te,			// Street Fighter Zero 3: Training Edition v1.2 (Japan 980629)
 	&BurnDrvCpsSfzexa,			// Street Fighter Zero EX (Hack, Asia RC4)
@@ -60966,6 +60969,7 @@ static struct BurnDriver* pDriver[] = {
 #if defined FBNEO_DEBUG
 	&BurnDrvYorijori,			// Yori Jori Kuk Kuk [no comment, NOT WORKING]
 #endif
+	&BurnDrvYosaku,				// Yosaku (HB)
 	&BurnDrvYosakdon,			// Yosaku to Donbei (set 1)
 	&BurnDrvYosakdona,			// Yosaku to Donbei (set 2)
 	&BurnDrvnes_yoshi,			// Yoshi (USA)
@@ -85479,6 +85483,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_stalingrad", "spectrum/d_spectrum.cpp"},
 	{ "a26_stampede", "atari/d_atari2600.cpp"},
 	{ "nes_stanley", "nes/d_nes.cpp"},
+	{ "staratk", "galaxian/d_galaxian.cpp"},
 	{ "msx_staravng", "msx/d_msx.cpp"},
 	{ "astro_starbttl", "pre90s/d_astrocde.cpp"},
 	{ "spec_starblade", "spectrum/d_spectrum.cpp"},
@@ -91478,6 +91483,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_yopparaijp", "spectrum/d_spectrum.cpp"},
 	{ "spec_yopparaies", "spectrum/d_spectrum.cpp"},
 	{ "yorijori", "pst90s/d_vamphalf.cpp"},
+	{ "yosaku", "pre90s/d_invaders.cpp"},
 	{ "yosakdon", "pre90s/d_invaders.cpp"},
 	{ "yosakdona", "pre90s/d_invaders.cpp"},
 	{ "nes_yoshi", "nes/d_nes.cpp"},

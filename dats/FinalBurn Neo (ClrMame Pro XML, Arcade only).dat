@@ -19053,13 +19053,13 @@
 		<description>Blocken (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Visco / KID</manufacturer>
-		<rom name="ic31j.bin" size="131072" crc="ec8de2a3"/>
-		<rom name="ic32j.bin" size="131072" crc="79b96240"/>
-		<rom name="ic34.bin" size="65536" crc="23e446ff"/>
-		<rom name="ic98j.bin" size="524288" crc="35dda273"/>
-		<rom name="ic99j.bin" size="524288" crc="ce43762b"/>
-		<rom name="ic100j.bin" size="524288" crc="a34786fd"/>
-		<rom name="ic53.bin" size="524288" crc="86108c56"/>
+		<rom name="ic31j.ic31" size="131072" crc="ec8de2a3"/>
+		<rom name="ic32j.ic32" size="131072" crc="79b96240"/>
+		<rom name="ic34.ic34" size="65536" crc="23e446ff"/>
+		<rom name="ic98j.ic98" size="524288" crc="35dda273"/>
+		<rom name="ic99j.ic99" size="524288" crc="ce43762b"/>
+		<rom name="ic100j.ic100" size="524288" crc="a34786fd"/>
+		<rom name="ic53.ic53" size="524288" crc="86108c56"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -23065,8 +23065,8 @@
 		<description>Buck Rogers: Planet of Zoom (not encrypted, set 1)</description>
 		<year>1982</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="cpu-ic3.bin" size="16384" crc="7f1910af"/>
-		<rom name="cpu-ic4.bin" size="16384" crc="5ecd393b"/>
+		<rom name="epr-5257.cpu-ic3" size="16384" crc="7f1910af"/>
+		<rom name="epr-5258.cpu-ic4" size="16384" crc="5ecd393b"/>
 		<rom name="epr-5200.cpu-ic66" merge="epr-5200.cpu-ic66" size="4096" crc="0d58b154"/>
 		<rom name="epr-5216.prom-ic100" merge="epr-5216.prom-ic100" size="8192" crc="8155bd73"/>
 		<rom name="epr-5213.prom-ic84" merge="epr-5213.prom-ic84" size="8192" crc="fd78dda4"/>
@@ -26794,20 +26794,20 @@
 		<description>Capcom Baseball (Japan)</description>
 		<year>1989</year>
 		<manufacturer>Capcom</manufacturer>
-		<rom name="cbj10.11j" size="32768" crc="bbff0acc"/>
-		<rom name="cbj07.16f" size="131072" crc="8111d13f"/>
-		<rom name="cbj06.14f" size="131072" crc="9aaa0e37"/>
-		<rom name="cbj05.13f" size="131072" crc="d0089f37"/>
-		<rom name="cbj13.16m" size="65536" crc="2359fa0a"/>
-		<rom name="cbj02.1f" size="131072" crc="d6740535"/>
-		<rom name="cbj03.2f" size="131072" crc="88098dcd"/>
-		<rom name="cbj08.1j" size="131072" crc="5f3344bf"/>
-		<rom name="cbj09.2j" size="131072" crc="aafffdae"/>
-		<rom name="cbj11.1m" size="131072" crc="bdc1507d"/>
-		<rom name="cbj12.2m" size="131072" crc="973f3efe"/>
-		<rom name="cbj14.1n" size="131072" crc="765dabaa"/>
-		<rom name="cbj15.2n" size="131072" crc="74756de5"/>
-		<rom name="cbj01.1e" size="131072" crc="1d8968bd"/>
+		<rom name="cbj_10.11j" size="32768" crc="bbff0acc"/>
+		<rom name="cbj_07.16f" size="131072" crc="8111d13f"/>
+		<rom name="cbj_06.14f" size="131072" crc="9aaa0e37"/>
+		<rom name="cbj_05.13f" size="131072" crc="d0089f37"/>
+		<rom name="cbj_13.16m" size="65536" crc="2359fa0a"/>
+		<rom name="cbj_02.1f" size="131072" crc="d6740535"/>
+		<rom name="cbj_03.2f" size="131072" crc="88098dcd"/>
+		<rom name="cbj_08.1j" size="131072" crc="5f3344bf"/>
+		<rom name="cbj_09.2j" size="131072" crc="aafffdae"/>
+		<rom name="cbj_11.1m" size="131072" crc="bdc1507d"/>
+		<rom name="cbj_12.2m" size="131072" crc="973f3efe"/>
+		<rom name="cbj_14.1n" size="131072" crc="765dabaa"/>
+		<rom name="cbj_15.2n" size="131072" crc="74756de5"/>
+		<rom name="cbj_01.1e" size="131072" crc="1d8968bd"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -68315,7 +68315,7 @@
 	<game name="gladiatr" sourcefile="taito/d_gladiatr.cpp">
 		<description>Gladiator (US)</description>
 		<year>1986</year>
-		<manufacturer>Allumer / Taito America Corporation</manufacturer>
+		<manufacturer>Allumer / Taito America</manufacturer>
 		<rom name="qb0_5" size="16384" crc="25b19efb"/>
 		<rom name="qb0_4" size="8192" crc="347ec794"/>
 		<rom name="qb0_1" size="16384" crc="040c9839"/>
@@ -69364,7 +69364,7 @@
 		<comment>Prototype</comment>
 		<description>Golden Castle (prototype?)</description>
 		<year>1986</year>
-		<manufacturer>Allumer / Taito Corporation</manufacturer>
+		<manufacturer>Allumer / Taito</manufacturer>
 		<rom name="gc0_5" merge="qb0_5" size="16384" crc="25b19efb"/>
 		<rom name="gc0_4" merge="qb0_4" size="8192" crc="347ec794"/>
 		<rom name="gc0_1" merge="qb0_1" size="16384" crc="040c9839"/>
@@ -72102,9 +72102,10 @@
 		<driver status="good"/>
 	</game>
 	<game name="greatgur" cloneof="gladiatr" romof="gladiatr" sourcefile="taito/d_gladiatr.cpp">
+		<comment>Bootleg</comment>
 		<description>Great Gurianos (bootleg?)</description>
 		<year>1986</year>
-		<manufacturer>Allumer / Taito Corporation</manufacturer>
+		<manufacturer>Allumer / Taito</manufacturer>
 		<rom name="qb0_5" merge="qb0_5" size="16384" crc="25b19efb"/>
 		<rom name="qb0_4" merge="qb0_4" size="8192" crc="347ec794"/>
 		<rom name="qb0_1" merge="qb0_1" size="16384" crc="040c9839"/>
@@ -72125,9 +72126,9 @@
 		<rom name="qc1_11.bin" size="32768" crc="b2aabbf5"/>
 		<rom name="q3.2b" merge="q3.2b" size="32" crc="6a7c3c60"/>
 		<rom name="q4.5s" merge="q4.5s" size="32" crc="e325808e"/>
-		<rom name="aq_002.9b" merge="aq_002.9b" size="1024" crc="b30d225f"/>
-		<rom name="aq_003.xx" merge="aq_003.xx" size="1024" crc="1d02cd5f"/>
-		<rom name="aq_006.3a" merge="aq_006.3a" size="1024" crc="3c5ca4c6"/>
+		<rom name="gladcctl.1" merge="aq_002.9b" size="1024" crc="b30d225f"/>
+		<rom name="gladccpu.2" merge="aq_003.xx" size="1024" crc="1d02cd5f"/>
+		<rom name="gladucpu.17" merge="aq_006.3a" size="1024" crc="3c5ca4c6"/>
 		<rom name="aq_007.6c" merge="aq_007.6c" size="2048" crc="f19af04d"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -83406,7 +83407,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="samesamecn" cloneof="fireshrk" romof="fireshrk" sourcefile="toaplan/d_toaplan1.cpp">
-		<description>Jiao! Jiao! Jiao! (China, 2P set)</description>
+		<description>Jiao! Jiao! Jiao! (China)</description>
 		<year>1990</year>
 		<manufacturer>Toaplan (Hong Kong Honest Trading license)</manufacturer>
 		<rom name="o17-09-h2.8j" size="32768" crc="fc8c2420"/>
@@ -100905,7 +100906,8 @@
 		<rom name="tma1-v-7t_c.7t" size="4096" crc="5cbb92a5"/>
 		<rom name="tma1-v-7u_c.7u" size="4096" crc="badb0191"/>
 		<rom name="tma1-c-4p.4p" size="512" crc="8187d286"/>
-		<rom name="tma1-c-5p.5p" merge="tma1-c-5b.5b" size="32" crc="58d86098"/>
+		<rom name="tma1-c-5b.5b" merge="tma1-c-5b.5b" size="32" crc="58d86098"/>
+		<rom name="m58715-051p.5l" size="2048" status="nodump"/>
 		<sample name="ice" />
 		<sample name="coin" />
 		<sample name="skid" />
@@ -100915,7 +100917,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="marioj" cloneof="mario" romof="mario" sampleof="mario" sourcefile="pre90s/d_mario.cpp">
-		<description>Mario Bros. (Japan, Revision C)</description>
+		<description>Mario Bros. (Japan, revision C)</description>
 		<year>1983</year>
 		<manufacturer>Nintendo</manufacturer>
 		<rom name="tma1-c-a1.7f" size="8192" crc="b64b6330"/>
@@ -100933,6 +100935,7 @@
 		<rom name="tma1-v-a.7u" size="4096" crc="13afb9ed"/>
 		<rom name="tma1-c-4p.4p" merge="tma1-c-4p.4p" size="512" crc="afc9bd41"/>
 		<rom name="tma1-c-5b.5b" merge="tma1-c-5b.5b" size="32" crc="58d86098"/>
+		<rom name="m58715-051p.5l" size="2048" status="nodump"/>
 		<sample name="ice" />
 		<sample name="coin" />
 		<sample name="skid" />
@@ -100942,7 +100945,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="mario" sourcefile="pre90s/d_mario.cpp">
-		<description>Mario Bros. (US, Revision E)</description>
+		<description>Mario Bros. (US, revision E)</description>
 		<year>1983</year>
 		<manufacturer>Nintendo of America</manufacturer>
 		<rom name="tma1-c-7f_e-1.7f" size="8192" crc="c0c6e014"/>
@@ -100960,6 +100963,7 @@
 		<rom name="tma1-v.7u.7u" size="4096" crc="d2dbeb75"/>
 		<rom name="tma1-c-4p.4p" size="512" crc="afc9bd41"/>
 		<rom name="tma1-c-5b.5b" size="32" crc="58d86098"/>
+		<rom name="m58715-051p.5l" size="2048" status="nodump"/>
 		<sample name="ice" />
 		<sample name="coin" />
 		<sample name="skid" />
@@ -100969,7 +100973,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="mariof" cloneof="mario" romof="mario" sampleof="mario" sourcefile="pre90s/d_mario.cpp">
-		<description>Mario Bros. (US, Revision F)</description>
+		<description>Mario Bros. (US, revision F)</description>
 		<year>1983</year>
 		<manufacturer>Nintendo of America</manufacturer>
 		<rom name="tma1-c-7f_f.7f" merge="tma1-c-7f_e-1.7f" size="8192" crc="c0c6e014"/>
@@ -100987,6 +100991,7 @@
 		<rom name="tma1-v-7u.7u" size="4096" crc="7baf5309"/>
 		<rom name="tma1-c-4p_1.4p" size="512" crc="8187d286"/>
 		<rom name="tma1-c-5b.5b" merge="tma1-c-5b.5b" size="32" crc="58d86098"/>
+		<rom name="m58715-051p.5l" size="2048" status="nodump"/>
 		<sample name="ice" />
 		<sample name="coin" />
 		<sample name="skid" />
@@ -100996,7 +101001,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="mariog" cloneof="mario" romof="mario" sampleof="mario" sourcefile="pre90s/d_mario.cpp">
-		<description>Mario Bros. (US, Revision G)</description>
+		<description>Mario Bros. (US, revision G)</description>
 		<year>1983</year>
 		<manufacturer>Nintendo of America</manufacturer>
 		<rom name="tma1-c-7f_g.7f" merge="tma1-c-7f_e-1.7f" size="8192" crc="c0c6e014"/>
@@ -101014,6 +101019,7 @@
 		<rom name="tma1-v-7u.7u" size="4096" crc="7baf5309"/>
 		<rom name="tma1-c-4p.4p" merge="tma1-c-4p.4p" size="512" crc="afc9bd41"/>
 		<rom name="tma1-c-5b.5b" merge="tma1-c-5b.5b" size="32" crc="58d86098"/>
+		<rom name="m58715-051p.5l" size="2048" status="nodump"/>
 		<sample name="ice" />
 		<sample name="coin" />
 		<sample name="skid" />
@@ -127128,7 +127134,7 @@
 	<game name="ogonsiro" cloneof="gladiatr" romof="gladiatr" sourcefile="taito/d_gladiatr.cpp">
 		<description>Ougon no Shiro (Japan)</description>
 		<year>1986</year>
-		<manufacturer>Allumer / Taito Corporation</manufacturer>
+		<manufacturer>Allumer / Taito</manufacturer>
 		<rom name="qb0_5" merge="qb0_5" size="16384" crc="25b19efb"/>
 		<rom name="qb0_4" merge="qb0_4" size="8192" crc="347ec794"/>
 		<rom name="qb0_1" merge="qb0_1" size="16384" crc="040c9839"/>
@@ -127860,7 +127866,7 @@
 		<year>1990</year>
 		<manufacturer>Toaplan</manufacturer>
 		<rom name="tp_018_08.6f" size="131072" crc="127a38d7"/>
-		<rom name="tp_018_07.6f" size="131072" crc="9704db16"/>
+		<rom name="tp_018_07.6h" size="131072" crc="9704db16"/>
 		<rom name="tp_018_09.3j" size="32768" crc="73d8e235"/>
 		<rom name="tp-018_rom5.19h" size="524288" crc="c64ec7b6"/>
 		<rom name="tp-018_rom6.22h" size="524288" crc="64b6c5ac"/>
@@ -145605,7 +145611,7 @@
 	<game name="rallybik" sourcefile="toaplan/d_toaplan1.cpp">
 		<description>Rally Bike (Europe, US) / Dash Yarou (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Toaplan / Taito Corporation</manufacturer>
+		<manufacturer>Toaplan / Taito</manufacturer>
 		<rom name="b45-02.rom" size="32768" crc="383386d7"/>
 		<rom name="b45-01.rom" size="32768" crc="7602f6a7"/>
 		<rom name="b45-04.rom" size="131072" crc="e9b005b1"/>
@@ -166047,6 +166053,18 @@
 		<description>Space Attack (bootleg of Space Invaders, bproms)</description>
 		<year>1978</year>
 		<manufacturer>bootleg (Video Games GmbH)</manufacturer>
+		<rom name="06e.bin" size="1024" crc="68301d05"/>
+		<rom name="12l.bin" size="1024" crc="c5a5228f"/>
+		<rom name="05de.bin" size="1024" crc="42032c14"/>
+		<rom name="11hl.bin" size="1024" crc="d5d3811a"/>
+		<rom name="04d.bin" size="1024" crc="5f5e540c"/>
+		<rom name="10h.bin" size="1024" crc="9d5ef6f1"/>
+		<rom name="03b.bin" size="1024" crc="89e13008"/>
+		<rom name="09g.bin" size="1024" crc="c16f5503"/>
+		<rom name="02ab.bin" size="1024" crc="ffa166c2"/>
+		<rom name="08f.bin" size="1024" crc="b5fa1a2b"/>
+		<rom name="01a.bin" size="1024" crc="44f8e99c"/>
+		<rom name="07ef.bin" size="1024" crc="9560880d"/>
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -170231,6 +170249,28 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="staratk" sourcefile="galaxian/d_galaxian.cpp">
+		<comment>Imperfect graphics and sound</comment>
+		<description>Star Attack</description>
+		<year>1981</year>
+		<manufacturer>Hiraoka New York</manufacturer>
+		<rom name="sa1.2c" size="4096" crc="14c44344"/>
+		<rom name="sa2.2e" size="4096" crc="4ce8f186"/>
+		<rom name="sa3.2f" size="4096" crc="bd956295"/>
+		<rom name="sa4.2h" size="4096" crc="d8f11ac1"/>
+		<rom name="sa_s1.5c" size="2048" crc="be037cf6"/>
+		<rom name="sa_s2.5d" size="2048" crc="40b994dd"/>
+		<rom name="sa_s3.5e" size="2048" crc="0a5e2327"/>
+		<rom name="sa5.5f" size="4096" crc="b690153b"/>
+		<rom name="sa8.6f" size="4096" crc="563825bd"/>
+		<rom name="sa7.6d" size="4096" crc="3fb29add"/>
+		<rom name="sa6.5g" size="4096" crc="4ea68501"/>
+		<rom name="sa9.6g" size="4096" crc="fdef1479"/>
+		<rom name="sa10.6j" size="4096" crc="efcc97d4"/>
+		<rom name="prom" size="32" crc="4e3caeab"/>
+		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="starcasc" cloneof="starcas" romof="starcas" sampleof="starcas" sourcefile="pre90s/d_cinemat.cpp">
 		<description>Star Castle (cocktail)</description>
 		<year>1980</year>
@@ -170749,8 +170789,8 @@
 		<rom name="gc.80" size="1024" crc="4c67957b"/>
 		<rom name="gc.81" size="1024" crc="246621ef"/>
 		<rom name="gc.82" size="1024" crc="19bd32ee"/>
-		<rom name="cv01" size="1024" crc="8d892ef3"/>
-		<rom name="cv02" size="1024" crc="b44ddde8"/>
+		<rom name="cv01" size="2048" crc="8d892ef3"/>
+		<rom name="cv02" size="2048" crc="b44ddde8"/>
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
@@ -172569,40 +172609,40 @@
 	</game>
 	<game name="sfa3up" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter Alpha 3 Upper (Hack, USA RC2)</description>
+		<description>Street Fighter Alpha 3 Upper (Hack, USA RC3)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sz3upu.03c" size="524288" crc="8f8aa0d5"/>
-		<rom name="sz3upu.04c" size="524288" crc="19e53f85"/>
+		<rom name="sz3upu.03c" size="524288" crc="89c29894"/>
+		<rom name="sz3upu.04c" size="524288" crc="ed71f59c"/>
 		<rom name="sz3up.05c" size="524288" crc="e88579d0"/>
 		<rom name="sz3up.06c" size="524288" crc="5d665555"/>
 		<rom name="sz3up.07c" size="524288" crc="1c11e502"/>
 		<rom name="sz3upu.08c" size="524288" crc="fcdd63d4"/>
-		<rom name="sz3upu.09c" size="524288" crc="9a5d01c3"/>
-		<rom name="sz3upu.10b" size="524288" crc="9efc3305"/>
-		<rom name="sz3upu.prg" size="4194304" crc="ff4f593c"/>
-		<rom name="sz3upu.13m" size="4194304" crc="65efed02"/>
-		<rom name="sz3upu.15m" size="4194304" crc="3f96ee07"/>
-		<rom name="sz3upu.17m" size="4194304" crc="05f60113"/>
+		<rom name="sz3upu.09c" size="524288" crc="a24a635c"/>
+		<rom name="sz3upu.10b" size="524288" crc="d84061aa"/>
+		<rom name="sz3upu.prg" size="4194304" crc="4d8a117d"/>
+		<rom name="sz3upu.13m" size="4194304" crc="f29eeda5"/>
+		<rom name="sz3upu.15m" size="4194304" crc="b76718e3"/>
+		<rom name="sz3upu.17m" size="4194304" crc="fc86e7c5"/>
 		<rom name="sz3upu.19m" size="4194304" crc="6b7eccee"/>
 		<rom name="sz3upu.14m" size="4194304" crc="8598055a"/>
 		<rom name="sz3upu.16m" size="4194304" crc="579b0116"/>
 		<rom name="sz3upu.18m" size="4194304" crc="688028bc"/>
 		<rom name="sz3upu.20m" size="4194304" crc="e56e5e97"/>
-		<rom name="sz3upu.21m" size="4194304" crc="e3efa926"/>
-		<rom name="sz3upu.23m" size="4194304" crc="f3f163fd"/>
-		<rom name="sz3upu.25m" size="4194304" crc="ac7ea2e1"/>
-		<rom name="sz3upu.27m" size="4194304" crc="a41555a7"/>
+		<rom name="sz3upu.21m" size="4194304" crc="759e6f66"/>
+		<rom name="sz3upu.23m" size="4194304" crc="f6d8855e"/>
+		<rom name="sz3upu.25m" size="4194304" crc="0b07fa22"/>
+		<rom name="sz3upu.27m" size="4194304" crc="4c4b512c"/>
 		<rom name="sz3upu.22m" size="4194304" crc="f975df46"/>
 		<rom name="sz3upu.24m" size="4194304" crc="2574fc48"/>
 		<rom name="sz3upu.26m" size="4194304" crc="af231ea1"/>
 		<rom name="sz3upu.28m" size="4194304" crc="9adfd997"/>
-		<rom name="sz3up.01" size="131072" crc="66064fde"/>
+		<rom name="sz3up.01" size="131072" crc="0fa3c428"/>
 		<rom name="sz3up.02" size="131072" crc="92270c80"/>
-		<rom name="sz3up.z80" size="262144" crc="08785e94"/>
+		<rom name="sz3up.z80" size="262144" crc="56e83605"/>
 		<rom name="sz3.11m" merge="sz3.11m" size="4194304" crc="1c89eed1"/>
 		<rom name="sz3.12m" merge="sz3.12m" size="4194304" crc="f392b13a"/>
-		<rom name="sz3up.q3" size="25165824" crc="3338dcbc"/>
+		<rom name="sz3up.q3" size="25165824" crc="1edf0a3e"/>
 		<rom name="sfz3j.key" size="20" crc="d30cca8d"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -179967,40 +180007,40 @@
 	</game>
 	<game name="sfz3up" cloneof="sfa3" romof="sfa3" sourcefile="capcom/d_cps2_custom.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter Zero 3 Upper (Hack, Japan RC2)</description>
+		<description>Street Fighter Zero 3 Upper (Hack, Japan RC3)</description>
 		<year>2026</year>
 		<manufacturer>Strygo</manufacturer>
-		<rom name="sz3upj.03c" size="524288" crc="5bc13308"/>
-		<rom name="sz3upj.04c" size="524288" crc="46288371"/>
+		<rom name="sz3upj.03c" size="524288" crc="4c118703"/>
+		<rom name="sz3upj.04c" size="524288" crc="9dc27607"/>
 		<rom name="sz3up.05c" size="524288" crc="e88579d0"/>
 		<rom name="sz3up.06c" size="524288" crc="5d665555"/>
 		<rom name="sz3up.07c" size="524288" crc="1c11e502"/>
 		<rom name="sz3upj.08c" size="524288" crc="afac9595"/>
-		<rom name="sz3upj.09c" size="524288" crc="30695356"/>
-		<rom name="sz3upj.10b" size="524288" crc="0dc01b37"/>
-		<rom name="sz3upj.prg" size="4194304" crc="f7bfe2fd"/>
-		<rom name="sz3upj.13m" size="4194304" crc="5b7a6965"/>
-		<rom name="sz3upj.15m" size="4194304" crc="c13fa288"/>
-		<rom name="sz3upj.17m" size="4194304" crc="72c30783"/>
+		<rom name="sz3upj.09c" size="524288" crc="087e31c9"/>
+		<rom name="sz3upj.10b" size="524288" crc="e31a9996"/>
+		<rom name="sz3upj.prg" size="4194304" crc="799d0d12"/>
+		<rom name="sz3upj.13m" size="4194304" crc="cc0b69c2"/>
+		<rom name="sz3upj.15m" size="4194304" crc="49ce546c"/>
+		<rom name="sz3upj.17m" size="4194304" crc="8bb3e155"/>
 		<rom name="sz3upj.19m" size="4194304" crc="9361f582"/>
 		<rom name="sz3upj.14m" size="4194304" crc="49bb1d15"/>
 		<rom name="sz3upj.16m" size="4194304" crc="fb120e2d"/>
 		<rom name="sz3upj.18m" size="4194304" crc="8a98076a"/>
 		<rom name="sz3upj.20m" size="4194304" crc="c0522ff7"/>
-		<rom name="sz3upj.21m" size="4194304" crc="a1508200"/>
-		<rom name="sz3upj.23m" size="4194304" crc="3adbd97a"/>
-		<rom name="sz3upj.25m" size="4194304" crc="0aec5da2"/>
-		<rom name="sz3upj.27m" size="4194304" crc="d9b10802"/>
+		<rom name="sz3upj.21m" size="4194304" crc="37214440"/>
+		<rom name="sz3upj.23m" size="4194304" crc="3ff23fd9"/>
+		<rom name="sz3upj.25m" size="4194304" crc="ad950561"/>
+		<rom name="sz3upj.27m" size="4194304" crc="31ef0c89"/>
 		<rom name="sz3upj.22m" size="4194304" crc="f55d1427"/>
 		<rom name="sz3upj.24m" size="4194304" crc="99bab603"/>
 		<rom name="sz3upj.26m" size="4194304" crc="aec99853"/>
 		<rom name="sz3upj.28m" size="4194304" crc="8fe87501"/>
-		<rom name="sz3up.01" size="131072" crc="66064fde"/>
+		<rom name="sz3up.01" size="131072" crc="0fa3c428"/>
 		<rom name="sz3up.02" size="131072" crc="92270c80"/>
-		<rom name="sz3up.z80" size="262144" crc="08785e94"/>
+		<rom name="sz3up.z80" size="262144" crc="56e83605"/>
 		<rom name="sz3.11m" merge="sz3.11m" size="4194304" crc="1c89eed1"/>
 		<rom name="sz3.12m" merge="sz3.12m" size="4194304" crc="f392b13a"/>
-		<rom name="sz3up.q3" size="25165824" crc="3338dcbc"/>
+		<rom name="sz3up.q3" size="25165824" crc="1edf0a3e"/>
 		<rom name="sfz3j.key" size="20" crc="d30cca8d"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -215833,7 +215873,7 @@
 	<game name="truxton" sourcefile="toaplan/d_toaplan1.cpp">
 		<description>Truxton (Europe, US) / Tatsujin (Japan)</description>
 		<year>1988</year>
-		<manufacturer>Toaplan / Taito Corporation</manufacturer>
+		<manufacturer>Toaplan / Taito</manufacturer>
 		<rom name="b65_11.7k" size="131072" crc="1a62379a"/>
 		<rom name="b65_10.7l" size="131072" crc="aff5195d"/>
 		<rom name="b65_09.2f" size="16384" crc="1bdd4ddc"/>
@@ -224806,8 +224846,8 @@
 		<description>Wally wo Sagase! (rev A, Japan, 3 players) (FD1094 317-0198A)</description>
 		<year>1992</year>
 		<manufacturer>Sega</manufacturer>
-		<rom name="epr-14730a.a4" size="262144" crc="d897bcc6"/>
-		<rom name="epr-14731a.a6" size="262144" crc="64328385"/>
+		<rom name="epr-14736a.a4" size="262144" crc="d897bcc6"/>
+		<rom name="epr-14737a.a6" size="262144" crc="64328385"/>
 		<rom name="mpr-14719.c1" merge="mpr-14719.c1" size="262144" crc="8b58c743"/>
 		<rom name="mpr-14720.c2" merge="mpr-14720.c2" size="262144" crc="f96d19f4"/>
 		<rom name="mpr-14721.c3" merge="mpr-14721.c3" size="262144" crc="c4ced91d"/>
@@ -233707,6 +233747,28 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="yosaku" sourcefile="pre90s/d_invaders.cpp">
+		<comment>Homebrew</comment>
+		<description>Yosaku (HB)</description>
+		<year>1980</year>
+		<manufacturer>SNK</manufacturer>
+		<rom name="ylp12.bin" size="2048" crc="37fecee4"/>
+		<rom name="ylp13.bin" size="2048" crc="ceb6c3b4"/>
+		<rom name="ylp14.bin" size="2048" crc="c433a113"/>
+		<rom name="ylp15.bin" size="2048" crc="6cac14c1"/>
+		<rom name="ylp16.bin" size="2048" crc="3f55d17f"/>
+		<rom name="ylp17.bin" size="2048" crc="3f55d17f"/>
+		<rom name="ylp18.bin" size="2048" crc="3f55d17f"/>
+		<sample name="cap" />
+		<sample name="bark" />
+		<sample name="walk1" />
+		<sample name="walk2" />
+		<sample name="warp" />
+		<sample name="extend" />
+		<sample name="kick" />
+		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="yosakdon" sourcefile="pre90s/d_invaders.cpp">
