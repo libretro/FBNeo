@@ -2237,8 +2237,8 @@ static bool retro_load_game_common()
 			goto end;
 		}
 
-		// If the game is a bios, let's stop here
-		if ((BurnDrvGetFlags() & BDF_BOARDROM)) {
+		// If the game is a bios, let's stop here (cd systems can be flagged as bios, they are launched with a disc)
+		if ((BurnDrvGetFlags() & BDF_BOARDROM) && CDEmuImage[0] == '\0') {
 			SetUguiError(RETRO_ERROR_MESSAGES_02);
 			HandleMessage(RETRO_LOG_ERROR, "[FBNeo] Bioses aren't meant to be launched this way\n");
 			goto end;
