@@ -2238,19 +2238,17 @@ static bool retro_load_game_common()
 		}
 
 		// If the game is a bios, let's stop here (cd systems can be flagged as bios, they are launched with a disc)
-		if ((BurnDrvGetFlags() & BDF_BOARDROM) && CDEmuImage[0] == '\0') {
+		if ((BurnDrvGetFlags() & BDF_BOARDROM)
+#if defined(BUILD_NEOGEO) || defined(BUILD_PCE) || defined(BUILD_MEGADRIVE)
+		 && CDEmuImage[0] == '\0'
+#endif
+		) {
 			SetUguiError(RETRO_ERROR_MESSAGES_02);
 			HandleMessage(RETRO_LOG_ERROR, "[FBNeo] Bioses aren't meant to be launched this way\n");
 			goto end;
 		}
 
 #ifdef BUILD_NEOGEO
-		if ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_SNK_NEOCD && CDEmuImage[0] == '\0') {
-			SetUguiError(RETRO_ERROR_MESSAGES_03);
-			HandleMessage(RETRO_LOG_ERROR, "[FBNeo] You need a disc image to launch neogeo CD\n");
-			goto end;
-		}
-
 		bIsNeogeoCartGame = ((BurnDrvGetHardwareCode() & HARDWARE_PUBLIC_MASK) == HARDWARE_SNK_NEOGEO);
 #endif
 
