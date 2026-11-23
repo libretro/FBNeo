@@ -63339,21 +63339,6 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="tst_galx" cloneof="galaxian" romof="galaxian" sourcefile="galaxian/d_galaxian.cpp">
-		<description>Galaxian Test ROM</description>
-		<year>19??</year>
-		<manufacturer>&lt;unknown&gt;</manufacturer>
-		<rom name="test.u" size="2048" crc="0614cd7f"/>
-		<rom name="galmidw.v" merge="galmidw.v" size="2048" crc="9c999a40"/>
-		<rom name="galmidw.w" merge="galmidw.w" size="2048" crc="b5894925"/>
-		<rom name="galmidw.y" merge="galmidw.y" size="2048" crc="6b3ca10b"/>
-		<rom name="7l" merge="7l" size="2048" crc="1b933207"/>
-		<rom name="1h.bin" merge="1h.bin" size="2048" crc="39fb43a4"/>
-		<rom name="1k.bin" merge="1k.bin" size="2048" crc="7e3f56a2"/>
-		<rom name="6l.bpr" merge="6l.bpr" size="32" crc="c3ac9467"/>
-		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
-		<driver status="good"/>
-	</game>
 	<game name="galturbo" cloneof="galaxian" romof="galaxian" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Hack</comment>
 		<description>Galaxian Turbo (hack of 'Super Galaxians')</description>
@@ -166656,7 +166641,7 @@
 		<rom name="9316b-4m28_m645c-09s0.c1" size="2048" crc="ce44c923"/>
 		<rom name="9316b-4m27_m645b-09s0.b1" size="2048" crc="098070ab"/>
 		<rom name="9316b-4m26_m645a-09s0.a1" size="2048" crc="7f1d1f44"/>
-		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
+		<video type="raster" orientation="horizontal" width="252" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="spacefbb" cloneof="spacefb" romof="spacefb" sampleof="spacefb" sourcefile="pre90s/d_spacefb.cpp">
@@ -167522,17 +167507,6 @@
 		<rom name="pv06" merge="pv06.1" size="1024" crc="a732810b"/>
 		<rom name="pv07" merge="pv07.2" size="1024" crc="2c5b91cb"/>
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
-		<driver status="good"/>
-	</game>
-	<game name="tst_invd" cloneof="invaders" romof="invaders" sourcefile="pre90s/d_invaders.cpp">
-		<description>Space Invaders Test ROM</description>
-		<year>19??</year>
-		<manufacturer>&lt;unknown&gt;</manufacturer>
-		<rom name="test.h" size="2048" crc="f86a2eea"/>
-		<rom name="invaders.g" merge="9316b-0856_m739g.g1" size="2048" crc="6bfaca4a"/>
-		<rom name="invaders.f" merge="9316b-0855_m739f.f1" size="2048" crc="0ccead96"/>
-		<rom name="invaders.e" merge="9316b-0854_m739e.e1" size="2048" crc="14e538b0"/>
-		<video type="raster" orientation="horizontal" width="260" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="sinvasnb" cloneof="commando" romof="commando" sourcefile="pre90s/d_commando.cpp">
@@ -172965,24 +172939,24 @@
 	</game>
 	<game name="sf2mix" cloneof="sf2ce" romof="sf2ce" sourcefile="capcom/d_cps1.cpp">
 		<comment>Hack</comment>
-		<description>Street Fighter II Mix (v1.7)</description>
+		<description>Street Fighter II Mix (v1.8)</description>
 		<year>2025-26</year>
 		<manufacturer>hack</manufacturer>
-		<rom name="smxe_23b.8f" size="524288" crc="60d0d40d"/>
-		<rom name="smx_22b.7f" size="524288" crc="f7bd54e7"/>
-		<rom name="smx_21a.6f" size="524288" crc="b580c709"/>
-		<rom name="smx-1m.3a" size="524288" crc="a8f70643"/>
-		<rom name="smx-3m.5a" size="524288" crc="f73f1913"/>
-		<rom name="smx-2m.4a" size="524288" crc="a80234b4"/>
-		<rom name="smx-4m.6a" size="524288" crc="4d910b53"/>
-		<rom name="smx-5m.7a" size="524288" crc="26a56c2c"/>
-		<rom name="smx-7m.9a" size="524288" crc="3a2c2e5f"/>
-		<rom name="smx-6m.8a" size="524288" crc="f71b978c"/>
-		<rom name="smx-8m.10a" size="524288" crc="8fe56540"/>
-		<rom name="smx-10m.3c" size="524288" crc="f352721f"/>
-		<rom name="smx-12m.5c" size="524288" crc="810c6499"/>
-		<rom name="smx-11m.4c" size="524288" crc="75d7c15c"/>
-		<rom name="smx-13m.6c" size="524288" crc="642c40e7"/>
+		<rom name="smxe_23b.8f" size="524288" crc="215d7dea"/>
+		<rom name="smx_22b.7f" size="524288" crc="3e7d323b"/>
+		<rom name="smx_21a.6f" size="524288" crc="c6e902cc"/>
+		<rom name="smx-1m.3a" size="524288" crc="924b2a5a"/>
+		<rom name="smx-3m.5a" size="524288" crc="d5e4bfb1"/>
+		<rom name="smx-2m.4a" size="524288" crc="020d4a6d"/>
+		<rom name="smx-4m.6a" size="524288" crc="67285c2f"/>
+		<rom name="smx-5m.7a" size="524288" crc="26ab12f9"/>
+		<rom name="smx-7m.9a" size="524288" crc="cb7e2920"/>
+		<rom name="smx-6m.8a" size="524288" crc="150d6df2"/>
+		<rom name="smx-8m.10a" size="524288" crc="74f6aea8"/>
+		<rom name="smx-10m.3c" size="524288" crc="7c7b5e88"/>
+		<rom name="smx-12m.5c" size="524288" crc="293929c8"/>
+		<rom name="smx-11m.4c" size="524288" crc="c59ba878"/>
+		<rom name="smx-13m.6c" size="524288" crc="eb8bfce9"/>
 		<rom name="smx_09.11a" size="65536" crc="a379fdc5"/>
 		<rom name="smx_18.11c" size="131072" crc="6aa5d7fa"/>
 		<rom name="smx_19.12c" size="131072" crc="f92f5a4f"/>
@@ -233847,10 +233821,10 @@
 		<description>Yosaku (HB)</description>
 		<year>1980</year>
 		<manufacturer>SNK</manufacturer>
-		<rom name="ylp12.bin" size="2048" crc="37fecee4"/>
-		<rom name="ylp13.bin" size="2048" crc="ceb6c3b4"/>
-		<rom name="ylp14.bin" size="2048" crc="c433a113"/>
-		<rom name="ylp15.bin" size="2048" crc="6cac14c1"/>
+		<rom name="ylp12.bin" size="2048" crc="19bc1db4"/>
+		<rom name="ylp13.bin" size="2048" crc="1fb43a59"/>
+		<rom name="ylp14.bin" size="2048" crc="c418d5a3"/>
+		<rom name="ylp15.bin" size="2048" crc="b76d9e6f"/>
 		<rom name="ylp16.bin" size="2048" crc="3f55d17f"/>
 		<rom name="ylp17.bin" size="2048" crc="3f55d17f"/>
 		<rom name="ylp18.bin" size="2048" crc="3f55d17f"/>
