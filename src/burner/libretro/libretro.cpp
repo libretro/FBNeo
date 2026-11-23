@@ -87,6 +87,7 @@ static bool bRotationDone            = false;
 static int16_t *pAudBuffer           = NULL;
 static char text_missing_files[2048] = "";
 static bool bCDEmuStarted            = false;
+static bool bBurnDrvInitCalled       = false;
 static bool bRomdataStarting         = false;
 
 // Frameskipping v2 Support
@@ -2131,6 +2132,7 @@ static bool retro_load_game_common()
 {
 	const char *dir = NULL;
 	bCDEmuStarted = false;
+	bBurnDrvInitCalled = false;
 	// If save directory is defined use it, ...
 	if (environ_cb(RETRO_ENVIRONMENT_GET_SAVE_DIRECTORY, &dir) && dir) {
 		memcpy(g_save_dir, dir, sizeof(g_save_dir));
@@ -2406,6 +2408,7 @@ static bool retro_load_game_common()
 		bSpeedLimit60hz = false;
 
 		// Initialize game driver
+		bBurnDrvInitCalled = true;
 		if(BurnDrvInit() == 0)
 			HandleMessage(RETRO_LOG_INFO, "[FBNeo] Initialized driver for %s\n", g_driver_name);
 		else
@@ -2492,7 +2495,9 @@ static bool retro_load_game_common()
 
 end:
 	if (nBurnDrvActive != ~0U) {
-		BurnDrvExit();
+		// drivers expect BurnDrvExit() to follow BurnDrvInit(), even a failed one
+		if (bBurnDrvInitCalled)
+			BurnDrvExit();
 		nBurnDrvActive = ~0U;
 	}
 #if defined(BUILD_NEOGEO) || defined(BUILD_PCE)
