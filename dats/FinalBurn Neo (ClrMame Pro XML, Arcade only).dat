@@ -37403,6 +37403,35 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="cybotsre" cloneof="cybots" romof="cybots" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Cyberbots: Fullmetal Madness (Hack, English Restoration RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="cybre.03" size="524288" crc="f3e24a5f"/>
+		<rom name="cybre.04" size="524288" crc="58ffcf73"/>
+		<rom name="cyb.05" merge="cyb.05" size="524288" crc="ec40408e"/>
+		<rom name="cyb.06" merge="cyb.06" size="524288" crc="1ad0bed2"/>
+		<rom name="cyb.07" merge="cyb.07" size="524288" crc="6245a39a"/>
+		<rom name="cyb.08" merge="cyb.08" size="524288" crc="4b48e223"/>
+		<rom name="cyb.09" merge="cyb.09" size="524288" crc="e15238f6"/>
+		<rom name="cybre.10" size="524288" crc="463c24d7"/>
+		<rom name="cybre.13m" size="4194304" crc="c0e53c31"/>
+		<rom name="cybre.15m" size="4194304" crc="28437e3f"/>
+		<rom name="cybre.17m" size="4194304" crc="b1c5db8c"/>
+		<rom name="cybre.19m" size="4194304" crc="afcac21f"/>
+		<rom name="cybre.14m" size="4194304" crc="d34cf2ae"/>
+		<rom name="cybre.16m" size="4194304" crc="edb473b0"/>
+		<rom name="cybre.18m" size="4194304" crc="f8680b78"/>
+		<rom name="cybre.20m" size="4194304" crc="548f798f"/>
+		<rom name="cyb.01" merge="cyb.01" size="131072" crc="9c0fb079"/>
+		<rom name="cyb.02" merge="cyb.02" size="131072" crc="51cb0c4e"/>
+		<rom name="cyb.11m" merge="cyb.11m" size="2097152" crc="362ccab2"/>
+		<rom name="cyb.12m" merge="cyb.12m" size="2097152" crc="7066e9cc"/>
+		<rom name="cybotsj.key" size="20" crc="d4d560b7"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="cybotsj" cloneof="cybots" romof="cybots" sourcefile="capcom/d_cps2.cpp">
 		<description>Cyberbots: Fullmetal Madness (Japan 950420)</description>
 		<year>1995</year>
@@ -93951,10 +93980,10 @@
 	</game>
 	<game name="lasthopepb" cloneof="lasthope" romof="lasthope" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack, Bootleg</comment>
-		<description>Last Hope - Pink Bullets v1.30 (bootleg AES to MVS conversion, no coin support) (Hack)</description>
+		<description>Last Hope - Pink Bullets v1.40 (bootleg AES to MVS conversion, no coin support) (Hack)</description>
 		<year>2026</year>
 		<manufacturer>LoW</manufacturer>
-		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="25c1867d"/>
+		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="918bb988"/>
 		<rom name="ngdt-300-s1pb.bin" size="131072" crc="36c54e06"/>
 		<rom name="ngdt-300-c1pb.bin" size="4194304" crc="bc2d2a8b"/>
 		<rom name="ngdt-300-c2pb.bin" size="4194304" crc="1673318d"/>
@@ -101904,6 +101933,35 @@
 		<rom name="msh.11m" size="2097152" crc="37ac6d30"/>
 		<rom name="msh.12m" size="2097152" crc="de092570"/>
 		<rom name="msh.key" size="20" crc="b494368e"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshrest" cloneof="msh" romof="msh" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Marvel Super Heroes (Hack, English Restoration RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="mshre.03g" size="524288" crc="edd4f25b"/>
+		<rom name="mshre.04g" size="524288" crc="60ca0735"/>
+		<rom name="mshre.05a" size="524288" crc="95049589"/>
+		<rom name="mshre.06b" size="524288" crc="fc757e48"/>
+		<rom name="msh.07a" merge="msh.07a" size="524288" crc="c45f8e27"/>
+		<rom name="mshre.08a" size="524288" crc="0b5682d2"/>
+		<rom name="msh.09a" merge="msh.09a" size="524288" crc="82ec27af"/>
+		<rom name="mshre.10b" size="524288" crc="f41feed9"/>
+		<rom name="mshre.13m" size="4194304" crc="3b0239bb"/>
+		<rom name="mshre.15m" size="4194304" crc="36a317d3"/>
+		<rom name="mshre.17m" size="4194304" crc="796d8360"/>
+		<rom name="mshre.19m" size="4194304" crc="ae6ae182"/>
+		<rom name="msh.14m" merge="msh.14m" size="4194304" crc="4197973e"/>
+		<rom name="msh.16m" merge="msh.16m" size="4194304" crc="438da4a0"/>
+		<rom name="msh.18m" merge="msh.18m" size="4194304" crc="4db92d94"/>
+		<rom name="msh.20m" merge="msh.20m" size="4194304" crc="a2b0c6c0"/>
+		<rom name="msh.01" merge="msh.01" size="131072" crc="c976e6f9"/>
+		<rom name="msh.02" merge="msh.02" size="131072" crc="ce67d0d9"/>
+		<rom name="msh.11m" merge="msh.11m" size="2097152" crc="37ac6d30"/>
+		<rom name="msh.12m" merge="msh.12m" size="2097152" crc="de092570"/>
+		<rom name="mshj.key" size="20" crc="888761ac"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -122048,20 +122106,20 @@
 	</game>
 	<game name="turfmastplus" cloneof="turfmast" romof="turfmast" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Neo Turf Masters / Big Tournament Golf (Hack, Plus v1.0)</description>
+		<description>Neo Turf Masters / Big Tournament Golf (Hack, Plus v2.0)</description>
 		<year>2026</year>
 		<manufacturer>hack (TheEnemy)</manufacturer>
-		<rom name="200-p1p.p1" size="2097152" crc="9f9d50a5"/>
-		<rom name="200-s1p.s1" size="131072" crc="edd8a8e6"/>
-		<rom name="200-c1p.c1" size="4194304" crc="fd0220e1"/>
-		<rom name="200-c2p.c2" size="4194304" crc="fee05bf6"/>
-		<rom name="200-c3p.c3" size="4194304" crc="10fc8214"/>
-		<rom name="200-c4p.c4" size="4194304" crc="0f83f209"/>
-		<rom name="200-m1p.m1" size="131072" crc="7d4d4616"/>
+		<rom name="200-p1pl.p1" size="2097152" crc="b41f72c1"/>
+		<rom name="200-s1pl.s1" size="131072" crc="df08a9ae"/>
+		<rom name="200-c1pl.c1" size="4194304" crc="bace1b78"/>
+		<rom name="200-c2pl.c2" size="4194304" crc="b007fea9"/>
+		<rom name="200-c3pl.c3" size="4194304" crc="10fc8214"/>
+		<rom name="200-c4pl.c4" size="4194304" crc="0f83f209"/>
+		<rom name="200-m1pl.m1" size="131072" crc="3547983f"/>
 		<rom name="200-v1.v1" merge="200-v1.v1" size="2097152" crc="00fd48d2"/>
 		<rom name="200-v2.v2" merge="200-v2.v2" size="2097152" crc="082acb31"/>
 		<rom name="200-v3.v3" merge="200-v3.v3" size="2097152" crc="7abca053"/>
-		<rom name="200-v4p.v4" size="2097152" crc="dba55b91"/>
+		<rom name="200-v4pl.v4" size="2097152" crc="176d83aa"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
@@ -202329,6 +202387,17 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="kof2002um" romof="systemy2" sourcefile="sega/d_y2.cpp">
+		<description>The King of Fighters - Fuchou Zhi Lu (Chinese/English)</description>
+		<year>2009</year>
+		<manufacturer>SNK Playmore / New Channel</manufacturer>
+		<rom name="s29gl01gp11fcr2.u103" size="134217728" crc="722cbad1"/>
+		<rom name="system_y2_m25p40.u801" merge="system_y2_m25p40.u801" size="524288" crc="2b19f490"/>
+		<disk name="nand_u101" sha1="86344541e71aa1e8a0423b97c7b3b826bdbdfbba" />
+		<disk name="nand_u102" sha1="9316ae2e729b93cb5db48b23fe812e5b3c1d6980" />
+		<video type="raster" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="kof10th" cloneof="kof2002" romof="kof2002" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Bootleg</comment>
 		<description>The King of Fighters 10th Anniversary (bootleg of The King of Fighters 2002)</description>
@@ -205053,6 +205122,17 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kof2002umj" cloneof="kof2002um" romof="kof2002um" sourcefile="sega/d_y2.cpp">
+		<description>The King of Fighters 2002 - Unlimited Match (Japanese/English)</description>
+		<year>2009</year>
+		<manufacturer>SNK Playmore</manufacturer>
+		<rom name="s29gl01gp11fcr2.u103" size="134217728" crc="916c9d68"/>
+		<rom name="system_y2_m25p40.u801" merge="system_y2_m25p40.u801" size="524288" crc="2b19f490"/>
+		<disk name="nand_u101" sha1="5fd38fe816b22ec0e4459f1fc076c148a3f11652" />
+		<disk name="nand_u102" sha1="52b6093b658baf1dd81f883a2c52b6aac688f703" />
+		<video type="raster" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="kf2k2mp" cloneof="kof2002" romof="kof2002" sourcefile="neogeo/d_neogeo.cpp">
@@ -212678,7 +212758,7 @@
 		<driver status="preliminary"/>
 	</game>
 	<game name="tomcatsw" cloneof="tomcat" romof="tomcat" sourcefile="pre90s/d_starwars.cpp">
-		<comment>Prototype, No sound!</comment>
+		<comment>Prototype, No sound! Select Copter, Jet doesn't respond to the controls</comment>
 		<description>TomCat (Star Wars hardware, prototype)</description>
 		<year>1983</year>
 		<manufacturer>Atari</manufacturer>
@@ -236655,6 +236735,13 @@
 		<rom name="sknsa1.u10" size="524288" crc="745e5212"/>
 		<rom name="sknsu1.u10" size="524288" crc="384d21ec"/>
 		<rom name="sknsk1.u10" size="524288" crc="ff1c9f79"/>
+	</game>
+	<game isbios="yes" name="systemy2" sourcefile="sega/d_y2.cpp">
+		<comment>BIOS only</comment>
+		<description>System Board Y2 (BIOS)</description>
+		<year>2009</year>
+		<manufacturer>SI Electronics</manufacturer>
+		<rom name="system_y2_m25p40.u801" size="524288" crc="2b19f490"/>
 	</game>
 	<game isbios="yes" name="ym2608" sourcefile="pre90s/d_wc90.cpp">
 		<comment>Internal ROM only</comment>

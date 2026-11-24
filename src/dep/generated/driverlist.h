@@ -5761,6 +5761,7 @@ DRV		BurnSpecCyberbig;
 DRV		BurnDrvMSX_cyberbig;
 DRV		BurnDrvCpsCybotsam;
 DRV		BurnDrvCpsCybots;
+DRV		BurnDrvCpsCybotsre;
 DRV		BurnDrvCpsCybotsj;
 DRV		BurnDrvCpsCybotsjd;
 DRV		BurnDrvCpsCybotsud;
@@ -11660,6 +11661,9 @@ DRV		BurnDrvChwy;
 DRV		BurnSpechighenco;
 DRV		BurnDrvMSX_highwayen;
 DRV		BurnDrvnes_highwaystar;
+#if defined FBNEO_DEBUG
+DRV		BurnDrvHigurashi;		// Mahjong controls missing [NOT WORKING]
+#endif
 DRV		BurnDrvnes_hikarnosenphoulgaonjlea;
 DRV		BurnDrvfds_hikarshij;
 DRV		BurnDrvfds_hikarshi;
@@ -15338,6 +15342,7 @@ DRV		BurnDrvCpsMshbh;
 DRV		BurnDrvCpsMshbr1;
 DRV		BurnDrvCpsMshb;
 DRV		BurnDrvCpsMsh;
+DRV		BurnDrvCpsMshrest;
 DRV		BurnDrvCpsMshtag;
 DRV		BurnDrvCpsMshh;
 DRV		BurnDrvCpsMshjr1;
@@ -26278,6 +26283,7 @@ DRV		BurnSpecSyrionen;
 DRV		BurnSpecSyrionit;
 DRV		BurnSpecSyriones;
 DRV		BurnDrvgba_syscrusher;
+DRV		BurnDrvSystemy2;
 DRV		BurnDrvSsozumo;
 DRV		BurnDrvsnes_Syvalioneu;
 DRV		BurnDrvsnes_Syvalionjp;
@@ -27225,6 +27231,7 @@ DRV		BurnDrvKof99pls;
 DRV		BurnDrvKof99p;
 DRV		BurnDrvKof99rp;
 DRV		BurnDrvKof99sr;
+DRV		BurnDrvKof2002um;
 DRV		BurnDrvKof10th;
 DRV		BurnDrvKf10thuo;
 DRV		BurnDrvKf10thup;
@@ -27269,6 +27276,7 @@ DRV		BurnDrvKf2k2p17;
 DRV		BurnDrvKof2k2br;
 DRV		BurnDrvKof2k2ru;
 DRV		BurnDrvKof2k2ly;
+DRV		BurnDrvKof2002umj;
 DRV		BurnDrvKf2k2mp;
 DRV		BurnDrvKf2k2mpl;
 DRV		BurnDrvKf2k2mp2;
@@ -36513,6 +36521,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_cyberbig,		// Cyberbig (Euro, Spanish)
 	&BurnDrvCpsCybotsam,		// Cyberbots: Fullmetal Madness (Access Mod, Hack)
 	&BurnDrvCpsCybots,			// Cyberbots: Fullmetal Madness (Europe 950424)
+	&BurnDrvCpsCybotsre,		// Cyberbots: Fullmetal Madness (Hack, English Restoration RC1)
 	&BurnDrvCpsCybotsj,			// Cyberbots: Fullmetal Madness (Japan 950420)
 	&BurnDrvCpsCybotsjd,		// Cyberbots: Fullmetal Madness (Japan 950424) (decrypted bootleg)
 	&BurnDrvCpsCybotsud,		// Cyberbots: Fullmetal Madness (USA 950424 Phoenix Edition) (bootleg)
@@ -42412,6 +42421,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpechighenco,			// Highway Encounter (48K)
 	&BurnDrvMSX_highwayen,		// Highway Encounter (Euro, Spanish)
 	&BurnDrvnes_highwaystar,	// Highway Star (Japan)
+#if defined FBNEO_DEBUG
+	&BurnDrvHigurashi,			// Higurashi no Naku Koro ni Jong (Japan) [Mahjong controls missing, NOT WORKING]
+#endif
 	&BurnDrvnes_hikarnosenphoulgaonjlea,// Hikari no Senshi Photon: The Ultimate Game on Planet Earth (Japan)
 	&BurnDrvfds_hikarshij,		// Hikari Shinwa: Palutena no Kagami (Japan)
 	&BurnDrvfds_hikarshi,		// Hikari Shinwa: Palutena's Mirror (Hack, English) 
@@ -44857,7 +44869,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvLastfortk,			// Last Fortress - Toride (Korea)
 	&BurnDrvLastfortg,			// Last Fortress - Toride: Mah-jong (Germany)
 	&BurnDrvLasthope,			// Last Hope (bootleg AES to MVS conversion, no coin support)
-	&BurnDrvLasthopepb,			// Last Hope - Pink Bullets v1.30 (bootleg AES to MVS conversion, no coin support) (Hack)
+	&BurnDrvLasthopepb,			// Last Hope - Pink Bullets v1.40 (bootleg AES to MVS conversion, no coin support) (Hack)
 	&BurnDrvLhcdb,				// Last Hope CD Beta (Neo CD conversion)
 	&BurnDrvLastkma,			// Last KM (ver 1.0.0227, checksum 747a7443, prototype)
 	&BurnDrvLastkm,				// Last KM (ver 1.0.0275, checksum 13bff751, prototype)
@@ -46090,6 +46102,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsMshbr1,			// Marvel Super Heroes (Brazil 951024)
 	&BurnDrvCpsMshb,			// Marvel Super Heroes (Brazil 951117)
 	&BurnDrvCpsMsh,				// Marvel Super Heroes (Europe 951024)
+	&BurnDrvCpsMshrest,			// Marvel Super Heroes (Hack, English Restoration RC1)
 	&BurnDrvCpsMshtag,			// Marvel Super Heroes (Hack, Tag v1.2)
 	&BurnDrvCpsMshh,			// Marvel Super Heroes (Hispanic 951117)
 	&BurnDrvCpsMshjr1,			// Marvel Super Heroes (Japan 951024)
@@ -48339,7 +48352,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvSyscheck,			// Neo System Check (ver 1.0b)
 	&BurnDrvNeothndr,			// Neo Thunder (HB)
 	&BurnDrvngpc_neoturfm,		// Neo Turf Masters - Pocket Sport Series (World)
-	&BurnDrvTurfmastplus,		// Neo Turf Masters / Big Tournament Golf (Hack, Plus v1.0)
+	&BurnDrvTurfmastplus,		// Neo Turf Masters / Big Tournament Golf (Hack, Plus v2.0)
 	&BurnDrvTurfmastsc,			// Neo Turf Masters / Big Tournament Golf: Scotland Course (Hack, v1.10)
 	&BurnDrvTurfmast,			// Neo Turf Masters / Big Tournament Golf
 	&BurnDrvngpc_neoyahtzee,	// Neo Yahtzee (HB, v38)
@@ -57030,6 +57043,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecSyrionit,			// Syrion: The Time of the Dragon (Italian) (48K-128K) (HB)
 	&BurnSpecSyriones,			// Syrion: The Time of the Dragon (Spanish) (48K-128K) (HB)
 	&BurnDrvgba_syscrusher,		// Sys*Crusher (HB)
+	&BurnDrvSystemy2,			// System Board Y2 (BIOS) [BIOS only, NOT WORKING]
 	&BurnDrvSsozumo,			// Syusse Oozumou (Japan)
 	&BurnDrvsnes_Syvalioneu,	// Syvalion (Euro)
 	&BurnDrvsnes_Syvalionjp,	// Syvalion (Japan)
@@ -57977,6 +57991,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvKof99p,				// The King of Fighters '99 - Millennium Battle (prototype)
 	&BurnDrvKof99rp,			// The King of Fighters '99 - Millennium Battle (Remix Pro v2.01 Final, Hack)
 	&BurnDrvKof99sr,			// The King of Fighters '99 - Millennium Battle (Summer Revolution, Hack)
+	&BurnDrvKof2002um,			// The King of Fighters - Fuchou Zhi Lu (Chinese/English)
 	&BurnDrvKof10th,			// The King of Fighters 10th Anniversary (bootleg of The King of Fighters 2002)
 	&BurnDrvKf10thuo,			// The King of Fighters 10th Anniversary (Optimized 2020, Hack)
 	&BurnDrvKf10thup,			// The King of Fighters 10th Anniversary (Optimized 2023, Hack)
@@ -58021,6 +58036,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvKof2k2br,			// The King of Fighters 2002 (Portuguese edition v2.0, Hack)
 	&BurnDrvKof2k2ru,			// The King of Fighters 2002 (Remix Ultra 3.5, Hack)
 	&BurnDrvKof2k2ly,			// The King of Fighters 2002 (Remix, Hack)
+	&BurnDrvKof2002umj,			// The King of Fighters 2002 - Unlimited Match (Japanese/English)
 	&BurnDrvKf2k2mp,			// The King of Fighters 2002 Magic Plus (bootleg, set 1)
 	&BurnDrvKf2k2mpl,			// The King of Fighters 2002 Magic Plus (bootleg, set 2)
 	&BurnDrvKf2k2mp2,			// The King of Fighters 2002 Magic Plus II (bootleg)
@@ -67233,6 +67249,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "msx_cyberbig", "msx/d_msx.cpp"},
 	{ "cybotsam", "capcom/d_cps2.cpp"},
 	{ "cybots", "capcom/d_cps2.cpp"},
+	{ "cybotsre", "capcom/d_cps2.cpp"},
 	{ "cybotsj", "capcom/d_cps2.cpp"},
 	{ "cybotsjd", "capcom/d_cps2.cpp"},
 	{ "cybotsud", "capcom/d_cps2.cpp"},
@@ -73110,6 +73127,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_highenco", "spectrum/d_spectrum.cpp"},
 	{ "msx_highwayen", "msx/d_msx.cpp"},
 	{ "nes_highwaystar", "nes/d_nes.cpp"},
+	{ "higurashi", "sega/d_y2.cpp"},
 	{ "nes_hikarnosenphoulgaonjlea", "nes/d_nes.cpp"},
 	{ "fds_hikarshij", "nes/d_nes.cpp"},
 	{ "fds_hikarshi", "nes/d_nes.cpp"},
@@ -76758,6 +76776,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "mshbr1", "capcom/d_cps2.cpp"},
 	{ "mshb", "capcom/d_cps2.cpp"},
 	{ "msh", "capcom/d_cps2.cpp"},
+	{ "mshrest", "capcom/d_cps2.cpp"},
 	{ "mshtag", "capcom/d_cps2.cpp"},
 	{ "mshh", "capcom/d_cps2.cpp"},
 	{ "mshjr1", "capcom/d_cps2.cpp"},
@@ -87618,6 +87637,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_syrionit", "spectrum/d_spectrum.cpp"},
 	{ "spec_syriones", "spectrum/d_spectrum.cpp"},
 	{ "gba_syscrusher", "gba/d_gba.cpp"},
+	{ "systemy2", "sega/d_y2.cpp"},
 	{ "ssozumo", "pre90s/d_ssozumo.cpp"},
 	{ "snes_syvalioneu", "snes/d_snes.cpp"},
 	{ "snes_syvalionjp", "snes/d_snes.cpp"},
@@ -88563,6 +88583,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "kof99p", "neogeo/d_neogeo.cpp"},
 	{ "kof99rp", "neogeo/d_neogeo.cpp"},
 	{ "kof99sr", "neogeo/d_neogeo.cpp"},
+	{ "kof2002um", "sega/d_y2.cpp"},
 	{ "kof10th", "neogeo/d_neogeo.cpp"},
 	{ "kf10thuo", "neogeo/d_neogeo.cpp"},
 	{ "kf10thup", "neogeo/d_neogeo.cpp"},
@@ -88607,6 +88628,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "kof2k2br", "neogeo/d_neogeo.cpp"},
 	{ "kof2k2ru", "neogeo/d_neogeo.cpp"},
 	{ "kof2k2ly", "neogeo/d_neogeo.cpp"},
+	{ "kof2002umj", "sega/d_y2.cpp"},
 	{ "kf2k2mp", "neogeo/d_neogeo.cpp"},
 	{ "kf2k2mpl", "neogeo/d_neogeo.cpp"},
 	{ "kf2k2mp2", "neogeo/d_neogeo.cpp"},

@@ -9568,10 +9568,10 @@
 	</game>
 	<game name="lasthopepb" cloneof="lasthope" romof="lasthope" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack, Bootleg</comment>
-		<description>Last Hope - Pink Bullets v1.30 (bootleg AES to MVS conversion, no coin support) (Hack)</description>
+		<description>Last Hope - Pink Bullets v1.40 (bootleg AES to MVS conversion, no coin support) (Hack)</description>
 		<year>2026</year>
 		<manufacturer>LoW</manufacturer>
-		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="25c1867d"/>
+		<rom name="ngdt-300-p1pb.bin" size="1048576" crc="918bb988"/>
 		<rom name="ngdt-300-s1pb.bin" size="131072" crc="36c54e06"/>
 		<rom name="ngdt-300-c1pb.bin" size="4194304" crc="bc2d2a8b"/>
 		<rom name="ngdt-300-c2pb.bin" size="4194304" crc="1673318d"/>
@@ -18618,20 +18618,20 @@
 	</game>
 	<game name="turfmastplus" cloneof="turfmast" romof="turfmast" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
-		<description>Neo Turf Masters / Big Tournament Golf (Hack, Plus v1.0)</description>
+		<description>Neo Turf Masters / Big Tournament Golf (Hack, Plus v2.0)</description>
 		<year>2026</year>
 		<manufacturer>hack (TheEnemy)</manufacturer>
-		<rom name="200-p1p.p1" size="2097152" crc="9f9d50a5"/>
-		<rom name="200-s1p.s1" size="131072" crc="edd8a8e6"/>
-		<rom name="200-c1p.c1" size="4194304" crc="fd0220e1"/>
-		<rom name="200-c2p.c2" size="4194304" crc="fee05bf6"/>
-		<rom name="200-c3p.c3" size="4194304" crc="10fc8214"/>
-		<rom name="200-c4p.c4" size="4194304" crc="0f83f209"/>
-		<rom name="200-m1p.m1" size="131072" crc="7d4d4616"/>
+		<rom name="200-p1pl.p1" size="2097152" crc="b41f72c1"/>
+		<rom name="200-s1pl.s1" size="131072" crc="df08a9ae"/>
+		<rom name="200-c1pl.c1" size="4194304" crc="bace1b78"/>
+		<rom name="200-c2pl.c2" size="4194304" crc="b007fea9"/>
+		<rom name="200-c3pl.c3" size="4194304" crc="10fc8214"/>
+		<rom name="200-c4pl.c4" size="4194304" crc="0f83f209"/>
+		<rom name="200-m1pl.m1" size="131072" crc="3547983f"/>
 		<rom name="200-v1.v1" merge="200-v1.v1" size="2097152" crc="00fd48d2"/>
 		<rom name="200-v2.v2" merge="200-v2.v2" size="2097152" crc="082acb31"/>
 		<rom name="200-v3.v3" merge="200-v3.v3" size="2097152" crc="7abca053"/>
-		<rom name="200-v4p.v4" size="2097152" crc="dba55b91"/>
+		<rom name="200-v4pl.v4" size="2097152" crc="176d83aa"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
