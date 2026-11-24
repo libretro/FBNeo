@@ -13490,7 +13490,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="balcube" sourcefile="pst90s/d_metro.cpp">
-		<description>Bal Cube</description>
+		<description>Bal Cube (Japan)</description>
 		<year>1996</year>
 		<manufacturer>Metro</manufacturer>
 		<rom name="bal-cube_06.6" size="262144" crc="c400f84d"/>
@@ -17952,8 +17952,35 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="blktiger" sourcefile="pre90s/d_blktiger.cpp">
+		<description>Black Tiger (US)</description>
+		<year>1987</year>
+		<manufacturer>Capcom</manufacturer>
+		<rom name="bdu-01a.5e" size="32768" crc="a8f98f22"/>
+		<rom name="bdu-02a.6e" size="65536" crc="7bef96e8"/>
+		<rom name="bdu-03a.8e" size="65536" crc="4089e157"/>
+		<rom name="bd-04.9e" size="65536" crc="ed6af6ec"/>
+		<rom name="bd-05.10e" size="65536" crc="ae59b72e"/>
+		<rom name="bd-06.1l" size="32768" crc="2cf54274"/>
+		<rom name="bd-15.2n" size="32768" crc="70175d78"/>
+		<rom name="bd-12.5b" size="65536" crc="c4524993"/>
+		<rom name="bd-11.4b" size="65536" crc="7932c86f"/>
+		<rom name="bd-14.9b" size="65536" crc="dc49593a"/>
+		<rom name="bd-13.8b" size="65536" crc="7ed7a122"/>
+		<rom name="bd-08.5a" size="65536" crc="e2f17438"/>
+		<rom name="bd-07.4a" size="65536" crc="5fccbd27"/>
+		<rom name="bd-10.9a" size="65536" crc="fc33ccc6"/>
+		<rom name="bd-09.8a" size="65536" crc="f449de01"/>
+		<rom name="bd01.8j" size="256" crc="29b459e5"/>
+		<rom name="bd02.9j" size="256" crc="8b741e66"/>
+		<rom name="bd03.11k" size="256" crc="27201c75"/>
+		<rom name="bd04.11l" size="256" crc="e5490b68"/>
+		<rom name="bd.6k" size="4096" crc="ac7d14f1"/>
+		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="blktigera" cloneof="blktiger" romof="blktiger" sourcefile="pre90s/d_blktiger.cpp">
-		<description>Black Tiger (older)</description>
+		<description>Black Tiger (US, older)</description>
 		<year>1987</year>
 		<manufacturer>Capcom</manufacturer>
 		<rom name="bdu-01.5e" size="32768" crc="47b13922"/>
@@ -18003,33 +18030,6 @@
 		<rom name="bd02.9j" merge="bd02.9j" size="256" crc="8b741e66"/>
 		<rom name="bd03.11k" merge="bd03.11k" size="256" crc="27201c75"/>
 		<rom name="bd04.11l" merge="bd04.11l" size="256" crc="e5490b68"/>
-		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="blktiger" sourcefile="pre90s/d_blktiger.cpp">
-		<description>Black Tiger</description>
-		<year>1987</year>
-		<manufacturer>Capcom</manufacturer>
-		<rom name="bdu-01a.5e" size="32768" crc="a8f98f22"/>
-		<rom name="bdu-02a.6e" size="65536" crc="7bef96e8"/>
-		<rom name="bdu-03a.8e" size="65536" crc="4089e157"/>
-		<rom name="bd-04.9e" size="65536" crc="ed6af6ec"/>
-		<rom name="bd-05.10e" size="65536" crc="ae59b72e"/>
-		<rom name="bd-06.1l" size="32768" crc="2cf54274"/>
-		<rom name="bd-15.2n" size="32768" crc="70175d78"/>
-		<rom name="bd-12.5b" size="65536" crc="c4524993"/>
-		<rom name="bd-11.4b" size="65536" crc="7932c86f"/>
-		<rom name="bd-14.9b" size="65536" crc="dc49593a"/>
-		<rom name="bd-13.8b" size="65536" crc="7ed7a122"/>
-		<rom name="bd-08.5a" size="65536" crc="e2f17438"/>
-		<rom name="bd-07.4a" size="65536" crc="5fccbd27"/>
-		<rom name="bd-10.9a" size="65536" crc="fc33ccc6"/>
-		<rom name="bd-09.8a" size="65536" crc="f449de01"/>
-		<rom name="bd01.8j" size="256" crc="29b459e5"/>
-		<rom name="bd02.9j" size="256" crc="8b741e66"/>
-		<rom name="bd03.11k" size="256" crc="27201c75"/>
-		<rom name="bd04.11l" size="256" crc="e5490b68"/>
-		<rom name="bd.6k" size="4096" crc="ac7d14f1"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -18720,7 +18720,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="blzntrnd" sourcefile="pst90s/d_metro.cpp">
-		<description>Blazing Tornado</description>
+		<description>Blazing Tornado (Export)</description>
 		<year>1994</year>
 		<manufacturer>Human Amusement</manufacturer>
 		<rom name="1k.bin" size="524288" crc="b007893b"/>
@@ -37824,8 +37824,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="ddayjlc" sourcefile="pre90s/d_ddayjlc.cpp">
-		<comment>buggy game due to unemulated protection MCU</comment>
-		<description>D-Day (Jaleco set 1)</description>
+		<comment>Protection device (M54828P) is simulated</comment>
+		<description>D-Day (Jaleco, set 1)</description>
 		<year>1984</year>
 		<manufacturer>Jaleco</manufacturer>
 		<rom name="1" size="8192" crc="dbfb8772"/>
@@ -37856,8 +37856,8 @@
 		<driver status="good"/>
 	</game>
 	<game name="ddayjlca" cloneof="ddayjlc" romof="ddayjlc" sourcefile="pre90s/d_ddayjlc.cpp">
-		<comment>buggy game due to unemulated protection MCU</comment>
-		<description>D-Day (Jaleco set 2)</description>
+		<comment>Protection device (M54828P) is simulated</comment>
+		<description>D-Day (Jaleco, set 2)</description>
 		<year>1984</year>
 		<manufacturer>Jaleco</manufacturer>
 		<rom name="1a" size="8192" crc="d8e4f3d4"/>
@@ -38812,23 +38812,8 @@
 		<video type="raster" orientation="vertical" width="224" height="384" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
-	<game name="daitorida" cloneof="daitorid" romof="daitorid" sourcefile="pst90s/d_metro.cpp">
-		<description>Daitoride (YMF278B version)</description>
-		<year>1996</year>
-		<manufacturer>Metro</manufacturer>
-		<rom name="dt_ja-6.6" size="262144" crc="c753954e"/>
-		<rom name="dt_ja-5.5" size="262144" crc="c4340290"/>
-		<rom name="dt_ja-2.2" size="524288" crc="6a262249"/>
-		<rom name="dt_ja-4.4" size="524288" crc="cdcef57a"/>
-		<rom name="dt_ja-1.1" size="524288" crc="a6ccb1d2"/>
-		<rom name="dt_ja-3.3" size="524288" crc="32353e04"/>
-		<rom name="yrw801-m" size="2097152" crc="2a9d8d43"/>
-		<rom name="dt_ja-7.7" size="524288" crc="7a2d3222"/>
-		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="daitorid" sourcefile="pst90s/d_metro.cpp">
-		<description>Daitoride</description>
+		<description>Daitoride (Japan)</description>
 		<year>1995</year>
 		<manufacturer>Metro</manufacturer>
 		<rom name="dt-ja-5.19e" size="131072" crc="441efd77"/>
@@ -38839,6 +38824,21 @@
 		<rom name="dt-ja-1.12h" size="524288" crc="2a220bf2"/>
 		<rom name="dt-ja-3.16h" size="524288" crc="fd1f58e0"/>
 		<rom name="dt-ja-7.3f" size="262144" crc="0d888cde"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="daitorida" cloneof="daitorid" romof="daitorid" sourcefile="pst90s/d_metro.cpp">
+		<description>Daitoride (Japan, YMF278B version)</description>
+		<year>1996</year>
+		<manufacturer>Metro</manufacturer>
+		<rom name="dt_ja-6.6" size="262144" crc="c753954e"/>
+		<rom name="dt_ja-5.5" size="262144" crc="c4340290"/>
+		<rom name="dt_ja-2.2" size="524288" crc="6a262249"/>
+		<rom name="dt_ja-4.4" size="524288" crc="cdcef57a"/>
+		<rom name="dt_ja-1.1" size="524288" crc="a6ccb1d2"/>
+		<rom name="dt_ja-3.3" size="524288" crc="32353e04"/>
+		<rom name="yrw801-m" size="2097152" crc="2a9d8d43"/>
+		<rom name="dt_ja-7.7" size="524288" crc="7a2d3222"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -41589,6 +41589,21 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dharmak" cloneof="dharma" romof="dharma" sourcefile="pst90s/d_metro.cpp">
+		<description>Dharma Dojang - Mangchi Man (Korea)</description>
+		<year>1994</year>
+		<manufacturer>Metro</manufacturer>
+		<rom name="5.bin" size="131072" crc="7dec1f77"/>
+		<rom name="6.bin" size="131072" crc="a194edbe"/>
+		<rom name="8.bin" size="131072" crc="d0e0a8e2"/>
+		<rom name="2.bin" size="524288" crc="3cc0bb6c"/>
+		<rom name="4.bin" size="524288" crc="2cdcdf91"/>
+		<rom name="1.bin" size="524288" crc="312ee2ec"/>
+		<rom name="3.bin" size="524288" crc="b81aede8"/>
+		<rom name="7.bin" size="262144" crc="8af698d7"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dharmag" cloneof="dharma" romof="dharma" sourcefile="pst90s/d_metro.cpp">
 		<description>Dharma Doujou (Germany)</description>
 		<year>1994</year>
@@ -41616,21 +41631,6 @@
 		<rom name="dd_jb-1" size="524288" crc="e6ca9bf6"/>
 		<rom name="dd_jb-3" size="524288" crc="6ecbe193"/>
 		<rom name="dd_ja-7" merge="dd__wa-7.u3" size="262144" crc="7ce817eb"/>
-		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dharmak" cloneof="dharma" romof="dharma" sourcefile="pst90s/d_metro.cpp">
-		<description>Dharma Doujou (Korea)</description>
-		<year>1994</year>
-		<manufacturer>Metro</manufacturer>
-		<rom name="5.bin" size="131072" crc="7dec1f77"/>
-		<rom name="6.bin" size="131072" crc="a194edbe"/>
-		<rom name="8.bin" size="131072" crc="d0e0a8e2"/>
-		<rom name="2.bin" size="524288" crc="3cc0bb6c"/>
-		<rom name="4.bin" size="524288" crc="2cdcdf91"/>
-		<rom name="1.bin" size="524288" crc="312ee2ec"/>
-		<rom name="3.bin" size="524288" crc="b81aede8"/>
-		<rom name="7.bin" size="262144" crc="8af698d7"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -88546,7 +88546,7 @@
 	<game name="kingofbj" cloneof="kingofb" romof="kingofb" sourcefile="pre90s/d_kingofbox.cpp">
 		<description>King of Boxer (Japan)</description>
 		<year>1985</year>
-		<manufacturer>Woodplace Inc.</manufacturer>
+		<manufacturer>Wood Place</manufacturer>
 		<rom name="22.d9" merge="22.d9" size="16384" crc="6220bfa2"/>
 		<rom name="23.e9" merge="23.e9" size="16384" crc="5782fdd8"/>
 		<rom name="21.b9" merge="21.b9" size="16384" crc="3fb39489"/>
@@ -88578,7 +88578,7 @@
 	<game name="kingofb" sourcefile="pre90s/d_kingofbox.cpp">
 		<description>King of Boxer (World)</description>
 		<year>1985</year>
-		<manufacturer>Woodplace Inc.</manufacturer>
+		<manufacturer>Wood Place</manufacturer>
 		<rom name="22.d9" size="16384" crc="6220bfa2"/>
 		<rom name="23.e9" size="16384" crc="5782fdd8"/>
 		<rom name="21.b9" size="16384" crc="3fb39489"/>
@@ -93825,21 +93825,6 @@
 		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="lastfortg" cloneof="lastfort" romof="lastfort" sourcefile="pst90s/d_metro.cpp">
-		<description>Last Fortress - Toride (Germany)</description>
-		<year>1994</year>
-		<manufacturer>Metro</manufacturer>
-		<rom name="tr_ma02.8g" size="131072" crc="e6f40918"/>
-		<rom name="tr_ma03.10g" size="131072" crc="b00fb126"/>
-		<rom name="tr_ma01.1i" merge="tr_jb12" size="131072" crc="8a8f5fef"/>
-		<rom name="tr_ma04.15f" size="524288" crc="5feafc6f"/>
-		<rom name="tr_ma07.17d" size="524288" crc="7519d569"/>
-		<rom name="tr_ma05.17f" size="524288" crc="5d917ba5"/>
-		<rom name="tr_ma06.15d" size="524288" crc="d366c04e"/>
-		<rom name="tr_ma08.1d" merge="tr_jb11" size="131072" crc="83786a09"/>
-		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="lastfort" sourcefile="pst90s/d_metro.cpp">
 		<description>Last Fortress - Toride (Japan, VG420 PCB)</description>
 		<year>1994</year>
@@ -93877,7 +93862,7 @@
 	<game name="lastfortk" cloneof="lastfort" romof="lastfort" sourcefile="pst90s/d_metro.cpp">
 		<description>Last Fortress - Toride (Korea)</description>
 		<year>1994</year>
-		<manufacturer>Metro</manufacturer>
+		<manufacturer>Metro (Grand Computer license)</manufacturer>
 		<rom name="7f-9" size="131072" crc="d2894c1f"/>
 		<rom name="8f-10" size="131072" crc="9696ea39"/>
 		<rom name="tr_jb12" merge="tr_jb12" size="131072" crc="8a8f5fef"/>
@@ -93890,6 +93875,21 @@
 		<rom name="12i-5" size="262144" crc="ce69c805"/>
 		<rom name="14i-7" size="262144" crc="0cb38317"/>
 		<rom name="tr_jb11" merge="tr_jb11" size="131072" crc="83786a09"/>
+		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="lastfortg" cloneof="lastfort" romof="lastfort" sourcefile="pst90s/d_metro.cpp">
+		<description>Last Fortress - Toride: Mah-jong (Germany)</description>
+		<year>1994</year>
+		<manufacturer>Metro</manufacturer>
+		<rom name="tr_ma02.8g" size="131072" crc="e6f40918"/>
+		<rom name="tr_ma03.10g" size="131072" crc="b00fb126"/>
+		<rom name="tr_ma01.1i" merge="tr_jb12" size="131072" crc="8a8f5fef"/>
+		<rom name="tr_ma04.15f" size="524288" crc="5feafc6f"/>
+		<rom name="tr_ma07.17d" size="524288" crc="7519d569"/>
+		<rom name="tr_ma05.17f" size="524288" crc="5d917ba5"/>
+		<rom name="tr_ma06.15d" size="524288" crc="d366c04e"/>
+		<rom name="tr_ma08.1d" merge="tr_jb11" size="131072" crc="83786a09"/>
 		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -134374,6 +134374,21 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="poitto" sourcefile="pst90s/d_metro.cpp">
+		<description>Poitto! (Japan, revision D)</description>
+		<year>1993</year>
+		<manufacturer>Metro / Able Corp.</manufacturer>
+		<rom name="pt-jd05.20e" size="131072" crc="6b1be034"/>
+		<rom name="pt-jd06.20c" size="131072" crc="3092d9d4"/>
+		<rom name="pt-jc08.3i" size="131072" crc="f32d386a"/>
+		<rom name="pt-2.15i" size="524288" crc="05d15d01"/>
+		<rom name="pt-4.19i" size="524288" crc="8a39edb5"/>
+		<rom name="pt-1.13i" size="524288" crc="ea6e2289"/>
+		<rom name="pt-3.17i" size="524288" crc="522917c1"/>
+		<rom name="pt-jc07.3g" size="262144" crc="5ae28b8d"/>
+		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="poittoc" cloneof="poitto" romof="poitto" sourcefile="pst90s/d_metro.cpp">
 		<description>Poitto! (revision C)</description>
 		<year>1993</year>
@@ -134388,21 +134403,6 @@
 		<rom name="pt-jc07.3g" merge="pt-jc07.3g" size="262144" crc="5ae28b8d"/>
 		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
 		<driver status="preliminary"/>
-	</game>
-	<game name="poitto" sourcefile="pst90s/d_metro.cpp">
-		<description>Poitto! (revision D)</description>
-		<year>1993</year>
-		<manufacturer>Metro / Able Corp.</manufacturer>
-		<rom name="pt-jd05.20e" size="131072" crc="6b1be034"/>
-		<rom name="pt-jd06.20c" size="131072" crc="3092d9d4"/>
-		<rom name="pt-jc08.3i" size="131072" crc="f32d386a"/>
-		<rom name="pt-2.15i" size="524288" crc="05d15d01"/>
-		<rom name="pt-4.19i" size="524288" crc="8a39edb5"/>
-		<rom name="pt-1.13i" size="524288" crc="ea6e2289"/>
-		<rom name="pt-3.17i" size="524288" crc="522917c1"/>
-		<rom name="pt-jc07.3g" size="262144" crc="5ae28b8d"/>
-		<video type="raster" orientation="horizontal" width="360" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
 	</game>
 	<game name="pokrdice" sourcefile="pst90s/d_itech8.cpp">
 		<description>Poker Dice (v1.7)</description>
@@ -137032,6 +137032,44 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="prmrsocr" sourcefile="konami/d_tmnt.cpp">
+		<description>Premier Soccer (ver EAB)</description>
+		<year>1993</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="101eab08.1h" size="262144" crc="47208de6"/>
+		<rom name="101eab07.4h" size="262144" crc="5f408eca"/>
+		<rom name="101c05.5e" size="131072" crc="02c3679f"/>
+		<rom name="101a12.12l" size="262144" crc="33530d7f"/>
+		<rom name="101a11.12k" size="262144" crc="7f773271"/>
+		<rom name="101a09.3l" size="2097152" crc="b6a1b424"/>
+		<rom name="101a10.8l" size="2097152" crc="bbd58adc"/>
+		<rom name="101a03.18f" size="524288" crc="59a1a91c"/>
+		<rom name="101a01.18d" size="131072" crc="716f910f"/>
+		<rom name="101a02.16d" size="131072" crc="222869c7"/>
+		<rom name="101a06.1d" size="2097152" crc="4f48e043"/>
+		<rom name="prmrsocr_eab.nv" size="128" crc="daf60801"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="prmrsocrj" cloneof="prmrsocr" romof="prmrsocr" sourcefile="konami/d_tmnt.cpp">
+		<description>Premier Soccer (ver JAB)</description>
+		<year>1993</year>
+		<manufacturer>Konami</manufacturer>
+		<rom name="101jab08.1h" size="262144" crc="c22b528c"/>
+		<rom name="101jab07.4h" size="262144" crc="06e7acaf"/>
+		<rom name="101c05.5e" merge="101c05.5e" size="131072" crc="02c3679f"/>
+		<rom name="101a12.12l" merge="101a12.12l" size="262144" crc="33530d7f"/>
+		<rom name="101a11.12k" merge="101a11.12k" size="262144" crc="7f773271"/>
+		<rom name="101a09.3l" merge="101a09.3l" size="2097152" crc="b6a1b424"/>
+		<rom name="101a10.8l" merge="101a10.8l" size="2097152" crc="bbd58adc"/>
+		<rom name="101a03.18f" merge="101a03.18f" size="524288" crc="59a1a91c"/>
+		<rom name="101a01.18d" merge="101a01.18d" size="131072" crc="716f910f"/>
+		<rom name="101a02.16d" merge="101a02.16d" size="131072" crc="222869c7"/>
+		<rom name="101a06.1d" merge="101a06.1d" size="2097152" crc="4f48e043"/>
+		<rom name="prmrsocr_jab.nv" size="128" crc="5a88f95a"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="sailmndf" cloneof="sailormn" romof="sailormn" sourcefile="cave/d_sailormn.cpp">
 		<comment>Hack</comment>
 		<description>Pretty Soldier Sailor Moon (Apex Infinity, Hack)</description>
@@ -139294,7 +139332,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="pururun" sourcefile="pst90s/d_metro.cpp">
-		<description>Pururun (set 1)</description>
+		<description>Pururun (Japan, set 1)</description>
 		<year>1995</year>
 		<manufacturer>Metro / Banpresto</manufacturer>
 		<rom name="pu_ja-5.20e" size="131072" crc="c15ae3db"/>
@@ -139309,7 +139347,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="pururuna" cloneof="pururun" romof="pururun" sourcefile="pst90s/d_metro.cpp">
-		<description>Pururun (set 2)</description>
+		<description>Pururun (Japan, set 2)</description>
 		<year>1995</year>
 		<manufacturer>Metro / Banpresto</manufacturer>
 		<rom name="pu9-19-5.20e" size="131072" crc="5a466a1b"/>
@@ -140697,7 +140735,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="puzzlia" cloneof="puzzli" romof="puzzli" sourcefile="pst90s/d_metro.cpp">
-		<description>Puzzli (revision A)</description>
+		<description>Puzzli (Japan, revision A)</description>
 		<year>1995</year>
 		<manufacturer>Metro / Banpresto</manufacturer>
 		<rom name="pz-ja-5.20e" size="131072" crc="4e162574"/>
@@ -140712,7 +140750,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="puzzli" sourcefile="pst90s/d_metro.cpp">
-		<description>Puzzli (revision B)</description>
+		<description>Puzzli (Japan, revision B)</description>
 		<year>1995</year>
 		<manufacturer>Metro / Banpresto</manufacturer>
 		<rom name="pz_jb5.20e" size="131072" crc="33bbbd28"/>
@@ -149198,9 +149236,9 @@
 		<driver status="good"/>
 	</game>
 	<game name="ringking" cloneof="kingofb" romof="kingofb" sourcefile="pre90s/d_kingofbox.cpp">
-		<description>Ring King (US set 1)</description>
+		<description>Ring King (US, set 1)</description>
 		<year>1985</year>
-		<manufacturer>Woodplace Inc. (Data East USA license)</manufacturer>
+		<manufacturer>Wood Place (Data East USA license)</manufacturer>
 		<rom name="cx13.9f" size="32768" crc="93e38c02"/>
 		<rom name="cx14.11f" size="16384" crc="a435acb0"/>
 		<rom name="cx07.10c" size="16384" crc="9f074746"/>
@@ -149222,9 +149260,9 @@
 		<driver status="good"/>
 	</game>
 	<game name="ringking2" cloneof="kingofb" romof="kingofb" sourcefile="pre90s/d_kingofbox.cpp">
-		<description>Ring King (US set 2)</description>
+		<description>Ring King (US, set 2)</description>
 		<year>1985</year>
-		<manufacturer>Woodplace Inc. (Data East USA license)</manufacturer>
+		<manufacturer>Wood Place (Data East USA license)</manufacturer>
 		<rom name="rkngm1.bin" size="32768" crc="086921ea"/>
 		<rom name="rkngm2.bin" size="16384" crc="c0b636a4"/>
 		<rom name="rkngtram.bin" size="16384" crc="d9dc1a0a"/>
@@ -149246,9 +149284,9 @@
 		<driver status="good"/>
 	</game>
 	<game name="ringking3" cloneof="kingofb" romof="kingofb" sourcefile="pre90s/d_kingofbox.cpp">
-		<description>Ring King (US set 3)</description>
+		<description>Ring King (US, set 3)</description>
 		<year>1985</year>
-		<manufacturer>Woodplace Inc. (Data East USA license)</manufacturer>
+		<manufacturer>Wood Place (Data East USA license)</manufacturer>
 		<rom name="14.d9" size="16384" crc="63627b8b"/>
 		<rom name="15.e9" size="16384" crc="e7557489"/>
 		<rom name="16.f9" size="16384" crc="a3b3bb16"/>
@@ -149276,9 +149314,9 @@
 		<driver status="good"/>
 	</game>
 	<game name="ringkingw" cloneof="kingofb" romof="kingofb" sourcefile="pre90s/d_kingofbox.cpp">
-		<description>Ring King (US, Woodplace Inc.)</description>
+		<description>Ring King (US, Wood Place)</description>
 		<year>1985</year>
-		<manufacturer>Woodplace Inc.</manufacturer>
+		<manufacturer>Wood Place</manufacturer>
 		<rom name="15.d9" size="16384" crc="8263f517"/>
 		<rom name="16.e9" size="16384" crc="daadd700"/>
 		<rom name="14.b9" size="16384" crc="76a73c95"/>
@@ -191620,7 +191658,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmht22pe" cloneof="tmnt2" romof="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Hero Turtles - Turtles in Time (2 Players ver EBA)</description>
+		<description>Teenage Mutant Hero Turtles: Turtles in Time (2 Players ver EBA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063eba02.8e" size="131072" crc="99409094"/>
@@ -191640,7 +191678,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmht24pe" cloneof="tmnt2" romof="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Hero Turtles - Turtles in Time (4 Players ver EAA)</description>
+		<description>Teenage Mutant Hero Turtles: Turtles in Time (4 Players ver EAA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063eaa02.8e" size="131072" crc="665a68de"/>
@@ -191983,7 +192021,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmnt22pu" cloneof="tmnt2" romof="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Ninja Turtles - Turtles in Time (2 Players ver UDA)</description>
+		<description>Teenage Mutant Ninja Turtles: Turtles in Time (2 Players ver UDA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063uda02.8e" size="131072" crc="aadffe3a"/>
@@ -192003,7 +192041,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmnt2a" cloneof="tmnt2" romof="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Ninja Turtles - Turtles in Time (4 Players ver ADA)</description>
+		<description>Teenage Mutant Ninja Turtles: Turtles in Time (4 Players ver ADA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063ada02.8e" size="131072" crc="4f11b587"/>
@@ -192023,7 +192061,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmnt2o" cloneof="tmnt2" romof="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Ninja Turtles - Turtles in Time (4 Players ver OAA)</description>
+		<description>Teenage Mutant Ninja Turtles: Turtles in Time (4 Players ver OAA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063oaa02.8e" size="131072" crc="07067dbf"/>
@@ -192043,7 +192081,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Ninja Turtles - Turtles in Time (4 Players ver UAA)</description>
+		<description>Teenage Mutant Ninja Turtles: Turtles in Time (4 Players ver UAA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063uaa02.8e" size="131072" crc="58d5c93d"/>
@@ -192063,7 +192101,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="tmnt24pu" cloneof="tmnt2" romof="tmnt2" sourcefile="konami/d_tmnt.cpp">
-		<description>Teenage Mutant Ninja Turtles - Turtles in Time (4 Players ver UEA)</description>
+		<description>Teenage Mutant Ninja Turtles: Turtles in Time (4 Players ver UEA)</description>
 		<year>1991</year>
 		<manufacturer>Konami</manufacturer>
 		<rom name="063uea02.8e" size="131072" crc="5eebc67f"/>
@@ -213638,6 +213676,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="toride2gg" cloneof="toride2g" romof="toride2g" sourcefile="pst90s/d_metro.cpp">
+		<description>Toride II (German)</description>
+		<year>1994</year>
+		<manufacturer>Metro</manufacturer>
+		<rom name="trii_ge_5.20e" size="262144" crc="5e0815a8"/>
+		<rom name="trii_ge_6.20c" size="262144" crc="55eba67d"/>
+		<rom name="tr2_jb-8.3i" size="131072" crc="0168f46f"/>
+		<rom name="trii_gb_2.14i" size="524288" crc="5949e65f"/>
+		<rom name="trii_gb_4.18i" size="524288" crc="adc84c7b"/>
+		<rom name="trii_gb_1.12i" size="524288" crc="bcf30944"/>
+		<rom name="trii_gb_3.16i" size="524288" crc="138e68d0"/>
+		<rom name="tr2_ja_7.3g" size="131072" crc="6ee32315"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="toride2ji" cloneof="toride2g" romof="toride2g" sourcefile="pst90s/d_metro.cpp">
 		<comment>No sound</comment>
 		<description>Toride II (Japan, revision I)</description>
@@ -213670,23 +213723,8 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="toride2gg" cloneof="toride2g" romof="toride2g" sourcefile="pst90s/d_metro.cpp">
-		<description>Toride II Adauchi Gaiden (German)</description>
-		<year>1994</year>
-		<manufacturer>Metro</manufacturer>
-		<rom name="trii_ge_5.20e" size="262144" crc="5e0815a8"/>
-		<rom name="trii_ge_6.20c" size="262144" crc="55eba67d"/>
-		<rom name="tr2_jb-8.3i" size="131072" crc="0168f46f"/>
-		<rom name="trii_gb_2.14i" size="524288" crc="5949e65f"/>
-		<rom name="trii_gb_4.18i" size="524288" crc="adc84c7b"/>
-		<rom name="trii_gb_1.12i" size="524288" crc="bcf30944"/>
-		<rom name="trii_gb_3.16i" size="524288" crc="138e68d0"/>
-		<rom name="tr2_ja_7.3g" size="131072" crc="6ee32315"/>
-		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="toride2g" sourcefile="pst90s/d_metro.cpp">
-		<description>Toride II Adauchi Gaiden</description>
+		<description>Toride II Adauchi Gaiden (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Metro</manufacturer>
 		<rom name="tr2aja-5.20e" size="262144" crc="b96a52f6"/>
