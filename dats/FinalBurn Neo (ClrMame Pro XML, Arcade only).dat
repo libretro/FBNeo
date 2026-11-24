@@ -15474,9 +15474,27 @@
 		<video type="raster" orientation="horizontal" width="292" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="btoads" sourcefile="pst90s/d_btoads.cpp">
+		<description>Battletoads</description>
+		<year>1994</year>
+		<manufacturer>Rare / Electronic Arts</manufacturer>
+		<rom name="bt.u102" size="32768" crc="a90b911a"/>
+		<rom name="btc0-p0.u120" size="4194304" crc="0dfd1e35"/>
+		<rom name="btc0-p1.u121" size="4194304" crc="df7487e1"/>
+		<rom name="btc0-s.u109" size="2097152" crc="d9612ddb"/>
+		<rom name="bsmt2000.bin" size="8192" crc="c2a265af"/>
+		<rom name="u10.bin" size="343" crc="b1144178"/>
+		<rom name="u11.bin" size="343" crc="7c6beb96"/>
+		<rom name="u57.bin" size="343" crc="be355a56"/>
+		<rom name="u58.bin" size="343" crc="41ed339c"/>
+		<rom name="u90.bin" size="343" crc="a0d0c3f1"/>
+		<rom name="u144.bin" size="343" crc="8597017f"/>
+		<video type="raster" orientation="horizontal" width="512" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bzonec" cloneof="bzone" romof="bzone" sourcefile="pre90s/d_bzone.cpp">
 		<comment>GFX/Sound Issues</comment>
-		<description>Battle Zone (cocktail)</description>
+		<description>Battlezone (cocktail)</description>
 		<year>1980</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="bz1g4800" size="2048" crc="e228dd64"/>
@@ -15501,7 +15519,7 @@
 	</game>
 	<game name="bzonea" cloneof="bzone" romof="bzone" sourcefile="pre90s/d_bzone.cpp">
 		<comment>GFX/Sound Issues</comment>
-		<description>Battle Zone (rev 1)</description>
+		<description>Battlezone (rev 1)</description>
 		<year>1980</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="036414-01.e1" size="2048" crc="efbc3fa0"/>
@@ -15525,7 +15543,7 @@
 	</game>
 	<game name="bzone" sourcefile="pre90s/d_bzone.cpp">
 		<comment>GFX/Sound Issues</comment>
-		<description>Battle Zone (rev 2)</description>
+		<description>Battlezone (rev 2)</description>
 		<year>1980</year>
 		<manufacturer>Atari</manufacturer>
 		<rom name="036414-02.e1" size="2048" crc="13de36d5"/>
@@ -15545,24 +15563,6 @@
 		<rom name="036179-01.h1" size="256" crc="823b61ae"/>
 		<rom name="036180-01.f1" size="256" crc="276eadd5"/>
 		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="btoads" sourcefile="pst90s/d_btoads.cpp">
-		<description>Battletoads</description>
-		<year>1994</year>
-		<manufacturer>Rare / Electronic Arts</manufacturer>
-		<rom name="bt.u102" size="32768" crc="a90b911a"/>
-		<rom name="btc0-p0.u120" size="4194304" crc="0dfd1e35"/>
-		<rom name="btc0-p1.u121" size="4194304" crc="df7487e1"/>
-		<rom name="btc0-s.u109" size="2097152" crc="d9612ddb"/>
-		<rom name="bsmt2000.bin" size="8192" crc="c2a265af"/>
-		<rom name="u10.bin" size="343" crc="b1144178"/>
-		<rom name="u11.bin" size="343" crc="7c6beb96"/>
-		<rom name="u57.bin" size="343" crc="be355a56"/>
-		<rom name="u58.bin" size="343" crc="41ed339c"/>
-		<rom name="u90.bin" size="343" crc="a0d0c3f1"/>
-		<rom name="u144.bin" size="343" crc="8597017f"/>
-		<video type="raster" orientation="horizontal" width="512" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="bayroute1" cloneof="bayroute" romof="bayroute" sourcefile="sega/d_sys16b.cpp">
@@ -40962,7 +40962,7 @@
 	</game>
 	<game name="demndrgn" sourcefile="pre90s/d_astrocde.cpp">
 		<comment>Prototype, No Sound</comment>
-		<description>Demons &amp; Dragons (Prototype)</description>
+		<description>Demons &amp; Dragons (prototype)</description>
 		<year>1982</year>
 		<manufacturer>Dave Nutting Associates / Bally Midway</manufacturer>
 		<rom name="dd-x1.bin" size="8192" crc="9aeaf79e"/>
@@ -54299,7 +54299,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="fncywld" sourcefile="pst90s/d_tumbleb.cpp">
-		<description>Fancy World - Earth of Crisis</description>
+		<description>Fancy World - Earth of Crisis (set 1)</description>
 		<year>1996</year>
 		<manufacturer>Unico</manufacturer>
 		<rom name="01_fw02.bin" size="524288" crc="ecb978c1"/>
@@ -54313,6 +54313,24 @@
 		<rom name="03_fw04.bin" size="262144" crc="6ad38c14"/>
 		<rom name="04_fw05.bin" size="262144" crc="b8d079a6"/>
 		<rom name="00_fw01.bin" size="262144" crc="b395fe01"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="fncywlda" cloneof="fncywld" romof="fncywld" sourcefile="pst90s/d_tumbleb.cpp">
+		<description>Fancy World - Earth of Crisis (set 2)</description>
+		<year>1996</year>
+		<manufacturer>Unico</manufacturer>
+		<rom name="01_fw02.bin" size="524288" crc="9ef06289"/>
+		<rom name="02_fw03.bin" size="524288" crc="1b43ad6c"/>
+		<rom name="08_fw09.bin" merge="08_fw09.bin" size="262144" crc="a4a00de9"/>
+		<rom name="07_fw08.bin" merge="07_fw08.bin" size="262144" crc="b48cd1d4"/>
+		<rom name="10_fw11.bin" merge="10_fw11.bin" size="262144" crc="f21bab48"/>
+		<rom name="09_fw10.bin" merge="09_fw10.bin" size="262144" crc="6aea8e0f"/>
+		<rom name="05_fw06.bin" merge="05_fw06.bin" size="262144" crc="e141ecdc"/>
+		<rom name="06_fw07.bin" merge="06_fw07.bin" size="262144" crc="0058a812"/>
+		<rom name="03_fw04.bin" merge="03_fw04.bin" size="262144" crc="6ad38c14"/>
+		<rom name="04_fw05.bin" merge="04_fw05.bin" size="262144" crc="b8d079a6"/>
+		<rom name="00_fw01.bin" merge="00_fw01.bin" size="262144" crc="b395fe01"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -69446,7 +69464,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gpgolfa" cloneof="gpgolf" romof="gpgolf" sourcefile="pst90s/d_itech8.cpp">
-		<description>Golden Par Golf (Joystick, V1.0)</description>
+		<description>Golden Par Golf (Joystick, v1.0)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="gpar.bin.u5" size="65536" crc="bcb030b0"/>
@@ -69459,7 +69477,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gpgolf" sourcefile="pst90s/d_itech8.cpp">
-		<description>Golden Par Golf (Joystick, V1.1)</description>
+		<description>Golden Par Golf (Joystick, v1.1)</description>
 		<year>1992</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="gpg_v1.1.u5" size="65536" crc="631e77e0"/>
@@ -70529,7 +70547,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gtg2j" cloneof="gtg2" romof="gtg2" sourcefile="pst90s/d_itech8.cpp">
-		<description>Golden Tee Golf II (Joystick, V1.0)</description>
+		<description>Golden Tee Golf II (Joystick, v1.0)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="gtg2.bim_1.0.u5" size="65536" crc="9c95ceaa"/>
@@ -70546,7 +70564,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gtg2t" cloneof="gtg2" romof="gtg2" sourcefile="pst90s/d_itech8.cpp">
-		<description>Golden Tee Golf II (Trackball, V1.1)</description>
+		<description>Golden Tee Golf II (Trackball, v1.1)</description>
 		<year>1989</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="gtgii_tb_v1.1.u5" size="65536" crc="c7b3a9f3"/>
@@ -70563,7 +70581,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="gtg2" sourcefile="pst90s/d_itech8.cpp">
-		<description>Golden Tee Golf II (Trackball, V2.2)</description>
+		<description>Golden Tee Golf II (Trackball, v2.2)</description>
 		<year>1992</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="gtg2_v2_2.u5" size="65536" crc="4a61580f"/>
@@ -76467,6 +76485,24 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="hedpanico" cloneof="hedpanic" romof="hedpanic" sourcefile="pst90s/d_esd16.cpp">
+		<comment>Story line &amp; game instructions in English</comment>
+		<description>Head Panic (ver. 0615, 15/06/1999)</description>
+		<year>1999</year>
+		<manufacturer>ESD</manufacturer>
+		<rom name="esd2.rom" size="262144" crc="70b08424"/>
+		<rom name="esd1.rom" size="262144" crc="4e0682c5"/>
+		<rom name="esd3.su06" merge="esd3.su06" size="262144" crc="a88d4424"/>
+		<rom name="sm1.ju01" size="2097152" crc="8083813f"/>
+		<rom name="sm2.ju02" size="2097152" crc="7a9610e4"/>
+		<rom name="esd5.rom" size="524288" crc="82c5727f"/>
+		<rom name="sm3.fu35" size="2097152" crc="94dd4cfc"/>
+		<rom name="sm4.fu34" size="2097152" crc="6da0fb9e"/>
+		<rom name="esd4.rom" size="131072" crc="d7ca6806"/>
+		<rom name="hedpanic.nv" merge="hedpanic.nv" size="128" crc="e91f4038"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="hedpanica" cloneof="hedpanic" romof="hedpanic" sourcefile="pst90s/d_esd16.cpp">
 		<comment>Story line &amp; game instructions in English</comment>
 		<description>Head Panic (ver. 0702, 02/07/1999)</description>
@@ -79543,7 +79579,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="hstennis10" cloneof="hstennis" romof="hstennis" sourcefile="pst90s/d_itech8.cpp">
-		<description>Hot Shots Tennis (V1.0)</description>
+		<description>Hot Shots Tennis (v1.0)</description>
 		<year>1990</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="ten.bim_v1.0_u5.u5" size="65536" crc="d108a6e0"/>
@@ -79559,7 +79595,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="hstennis" sourcefile="pst90s/d_itech8.cpp">
-		<description>Hot Shots Tennis (V1.1)</description>
+		<description>Hot Shots Tennis (v1.1)</description>
 		<year>1990</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="ten.bim_v1.1_u5.u5" size="65536" crc="faffab5c"/>
@@ -85681,21 +85717,21 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="jumppop" sourcefile="pst90s/d_tumbleb.cpp">
+	<game name="jumppop" sourcefile="pst90s/d_esd16.cpp">
 		<description>Jumping Pop (set 1)</description>
 		<year>2001</year>
 		<manufacturer>ESD</manufacturer>
 		<rom name="68k_prg.bin" size="524288" crc="123536b9"/>
 		<rom name="z80_prg.bin" size="262144" crc="a88d4424"/>
-		<rom name="bg0.bin" size="1048576" crc="35a1363d"/>
-		<rom name="bg1.bin" size="1048576" crc="5b37f943"/>
 		<rom name="sp0.bin" size="1048576" crc="7c5d0633"/>
 		<rom name="sp1.bin" size="1048576" crc="7eae782e"/>
+		<rom name="bg1.bin" size="1048576" crc="5b37f943"/>
+		<rom name="bg0.bin" size="1048576" crc="35a1363d"/>
 		<rom name="samples.bin" size="262144" crc="066f30a7"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="jumppope" cloneof="jumppop" romof="jumppop" sourcefile="pst90s/d_tumbleb.cpp">
+	<game name="jumppope" cloneof="jumppop" romof="jumppop" sourcefile="pst90s/d_esd16.cpp">
 		<description>Jumping Pop (set 2)</description>
 		<year>2001</year>
 		<manufacturer>Emag Soft</manufacturer>
@@ -117769,6 +117805,18 @@
 		<rom name="esd9.fu28" size="524288" crc="6652c04a"/>
 		<rom name="esd10.fu31" size="524288" crc="d815974b"/>
 		<rom name="esd4.su10" size="131072" crc="6e741fcd"/>
+		<rom name="mx29f1610ml.fu27_fu32" size="2097152" status="nodump"/>
+		<rom name="mx29f1610ml.fu28_fu31" size="2097152" status="nodump"/>
+		<rom name="palce22v10h-25pc-4.cu04" size="733" status="nodump"/>
+		<rom name="palce22v10h-25pc-4.cu05" size="733" status="nodump"/>
+		<rom name="palce22v10h-25pc-4.du05" size="733" status="nodump"/>
+		<rom name="palce22v10h-25pc-4.fu01" size="733" status="nodump"/>
+		<rom name="palce16v8h-25.du03" size="279" status="nodump"/>
+		<rom name="palce16v8h-25.ru27" size="279" status="nodump"/>
+		<rom name="palce16v8h-25.fu01" size="279" status="nodump"/>
+		<rom name="palce16v8h-25.su07" size="279" status="nodump"/>
+		<rom name="a40mx04-f-pl84.bu01" size="512" status="nodump"/>
+		<rom name="a40mx04-f-pl84.du16" size="512" status="nodump"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -120907,7 +120955,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="neckneck" sourcefile="pst90s/d_itech8.cpp">
-		<description>Neck-n-Neck (v1.2)</description>
+		<description>Neck-N-Neck (v1.2)</description>
 		<year>1992</year>
 		<manufacturer>Bundra Games / Incredible Technologies</manufacturer>
 		<rom name="nn_prg12.u5" size="65536" crc="8e51734a"/>
@@ -134357,7 +134405,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="pokrdice" sourcefile="pst90s/d_itech8.cpp">
-		<description>Poker Dice (V1.7)</description>
+		<description>Poker Dice (v1.7)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="pd-v1.7_u5.u5" size="65536" crc="5e24be82"/>
@@ -149015,7 +149063,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="rimrockn12" cloneof="rimrockn" romof="rimrockn" sourcefile="pst90s/d_itech8.cpp">
-		<description>Rim Rockin' Basketball (V1.2)</description>
+		<description>Rim Rockin' Basketball (v1.2)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="rrb.bim_1.2_u5.u5" size="131072" crc="661761a6"/>
@@ -149030,7 +149078,7 @@
 	</game>
 	<game name="rimrockn12b" cloneof="rimrockn" romof="rimrockn" sourcefile="pst90s/d_itech8.cpp">
 		<comment>Bootleg</comment>
-		<description>Rim Rockin' Basketball (V1.2, bootleg)</description>
+		<description>Rim Rockin' Basketball (v1.2, bootleg)</description>
 		<year>1991</year>
 		<manufacturer>bootleg</manufacturer>
 		<rom name="rbba-1.u5" size="131072" crc="f99561a8"/>
@@ -149051,7 +149099,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="rimrockn15" cloneof="rimrockn" romof="rimrockn" sourcefile="pst90s/d_itech8.cpp">
-		<description>Rim Rockin' Basketball (V1.5)</description>
+		<description>Rim Rockin' Basketball (v1.5)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="rrb.bim_1.5_u5.u5" size="131072" crc="d6c25bdf"/>
@@ -149065,7 +149113,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="rimrockn16" cloneof="rimrockn" romof="rimrockn" sourcefile="pst90s/d_itech8.cpp">
-		<description>Rim Rockin' Basketball (V1.6)</description>
+		<description>Rim Rockin' Basketball (v1.6)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="rrb.bim_1.6_u5.u5" size="131072" crc="999cd502"/>
@@ -149079,7 +149127,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="rimrockn20" cloneof="rimrockn" romof="rimrockn" sourcefile="pst90s/d_itech8.cpp">
-		<description>Rim Rockin' Basketball (V2.0)</description>
+		<description>Rim Rockin' Basketball (v2.0)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="rrb.bim_2.0_u5.u5" size="131072" crc="7e9d5545"/>
@@ -149093,7 +149141,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="rimrockn" sourcefile="pst90s/d_itech8.cpp">
-		<description>Rim Rockin' Basketball (V2.2)</description>
+		<description>Rim Rockin' Basketball (v2.2)</description>
 		<year>1991</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="rrb.bim_2.2_u5.u5" size="131072" crc="97777683"/>
@@ -170836,6 +170884,66 @@
 		<video type="raster" orientation="vertical" width="224" height="512" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="starwars" sourcefile="pre90s/d_starwars.cpp">
+		<description>Star Wars (Atari, set 1)</description>
+		<year>1983</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="136021-105.1l" size="4096" crc="538e7d2f"/>
+		<rom name="136021.214.1f" size="16384" crc="04f1876e"/>
+		<rom name="136021.102.1hj" size="8192" crc="f725e344"/>
+		<rom name="136021.203.1jk" size="8192" crc="f6da0a00"/>
+		<rom name="136021.104.1kl" size="8192" crc="7e406703"/>
+		<rom name="136021.206.1m" size="8192" crc="c7e51237"/>
+		<rom name="136021-107.1jk" size="8192" crc="dbf3aea2"/>
+		<rom name="136021-208.1h" size="8192" crc="e38070a8"/>
+		<rom name="136021-110.7h" size="1024" crc="810e040e"/>
+		<rom name="136021-111.7j" size="1024" crc="ae69881c"/>
+		<rom name="136021-112.7k" size="1024" crc="ecf22628"/>
+		<rom name="136021-113.7l" size="1024" crc="83febfde"/>
+		<rom name="136021-109.4b" size="256" crc="82fc3eb2"/>
+		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starwars1" cloneof="starwars" romof="starwars" sourcefile="pre90s/d_starwars.cpp">
+		<description>Star Wars (Atari, set 2)</description>
+		<year>1983</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="136021-105.1l" merge="136021-105.1l" size="4096" crc="538e7d2f"/>
+		<rom name="136021.114.1f" size="16384" crc="e75ff867"/>
+		<rom name="136021.102.1hj" merge="136021.102.1hj" size="8192" crc="f725e344"/>
+		<rom name="136021.203.1jk" merge="136021.203.1jk" size="8192" crc="f6da0a00"/>
+		<rom name="136021.104.1kl" merge="136021.104.1kl" size="8192" crc="7e406703"/>
+		<rom name="136021.206.1m" merge="136021.206.1m" size="8192" crc="c7e51237"/>
+		<rom name="136021-107.1jk" merge="136021-107.1jk" size="8192" crc="dbf3aea2"/>
+		<rom name="136021-208.1h" merge="136021-208.1h" size="8192" crc="e38070a8"/>
+		<rom name="136021-110.7h" merge="136021-110.7h" size="1024" crc="810e040e"/>
+		<rom name="136021-111.7j" merge="136021-111.7j" size="1024" crc="ae69881c"/>
+		<rom name="136021-112.7k" merge="136021-112.7k" size="1024" crc="ecf22628"/>
+		<rom name="136021-113.7l" merge="136021-113.7l" size="1024" crc="83febfde"/>
+		<rom name="136021-109.4b" merge="136021-109.4b" size="256" crc="82fc3eb2"/>
+		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="starwarso" cloneof="starwars" romof="starwars" sourcefile="pre90s/d_starwars.cpp">
+		<description>Star Wars (Atari, set 3)</description>
+		<year>1983</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="136021-105.1l" merge="136021-105.1l" size="4096" crc="538e7d2f"/>
+		<rom name="136021-114.1f" size="16384" crc="e75ff867"/>
+		<rom name="136021-102.1hj" merge="136021.102.1hj" size="8192" crc="f725e344"/>
+		<rom name="136021-103.1jk" size="8192" crc="3fde9ccb"/>
+		<rom name="136021-104.1kl" merge="136021.104.1kl" size="8192" crc="7e406703"/>
+		<rom name="136021-206.1m" merge="136021.206.1m" size="8192" crc="c7e51237"/>
+		<rom name="136021-107.1jk" merge="136021-107.1jk" size="8192" crc="dbf3aea2"/>
+		<rom name="136021-208.1h" merge="136021-208.1h" size="8192" crc="e38070a8"/>
+		<rom name="136021-110.7h" merge="136021-110.7h" size="1024" crc="810e040e"/>
+		<rom name="136021-111.7j" merge="136021-111.7j" size="1024" crc="ae69881c"/>
+		<rom name="136021-112.7k" merge="136021-112.7k" size="1024" crc="ecf22628"/>
+		<rom name="136021-113.7l" merge="136021-113.7l" size="1024" crc="83febfde"/>
+		<rom name="136021-109.4b" merge="136021-109.4b" size="256" crc="82fc3eb2"/>
+		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="starw" cloneof="galxwars" romof="galxwars" sourcefile="pre90s/d_invaders.cpp">
 		<description>Star Wars (bootleg of Galaxy Wars, set 1)</description>
 		<year>1979</year>
@@ -170862,66 +170970,6 @@
 		<rom name="cv01" size="2048" crc="8d892ef3"/>
 		<rom name="cv02" size="2048" crc="b44ddde8"/>
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
-		<driver status="good"/>
-	</game>
-	<game name="starwars" sourcefile="pre90s/d_starwars.cpp">
-		<description>Star Wars (set 1)</description>
-		<year>1983</year>
-		<manufacturer>Atari</manufacturer>
-		<rom name="136021-105.1l" size="4096" crc="538e7d2f"/>
-		<rom name="136021.214.1f" size="16384" crc="04f1876e"/>
-		<rom name="136021.102.1hj" size="8192" crc="f725e344"/>
-		<rom name="136021.203.1jk" size="8192" crc="f6da0a00"/>
-		<rom name="136021.104.1kl" size="8192" crc="7e406703"/>
-		<rom name="136021.206.1m" size="8192" crc="c7e51237"/>
-		<rom name="136021-107.1jk" size="8192" crc="dbf3aea2"/>
-		<rom name="136021-208.1h" size="8192" crc="e38070a8"/>
-		<rom name="136021-110.7h" size="1024" crc="810e040e"/>
-		<rom name="136021-111.7j" size="1024" crc="ae69881c"/>
-		<rom name="136021-112.7k" size="1024" crc="ecf22628"/>
-		<rom name="136021-113.7l" size="1024" crc="83febfde"/>
-		<rom name="136021-109.4b" size="256" crc="82fc3eb2"/>
-		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="starwars1" cloneof="starwars" romof="starwars" sourcefile="pre90s/d_starwars.cpp">
-		<description>Star Wars (set 2)</description>
-		<year>1983</year>
-		<manufacturer>Atari</manufacturer>
-		<rom name="136021-105.1l" merge="136021-105.1l" size="4096" crc="538e7d2f"/>
-		<rom name="136021.114.1f" size="16384" crc="e75ff867"/>
-		<rom name="136021.102.1hj" merge="136021.102.1hj" size="8192" crc="f725e344"/>
-		<rom name="136021.203.1jk" merge="136021.203.1jk" size="8192" crc="f6da0a00"/>
-		<rom name="136021.104.1kl" merge="136021.104.1kl" size="8192" crc="7e406703"/>
-		<rom name="136021.206.1m" merge="136021.206.1m" size="8192" crc="c7e51237"/>
-		<rom name="136021-107.1jk" merge="136021-107.1jk" size="8192" crc="dbf3aea2"/>
-		<rom name="136021-208.1h" merge="136021-208.1h" size="8192" crc="e38070a8"/>
-		<rom name="136021-110.7h" merge="136021-110.7h" size="1024" crc="810e040e"/>
-		<rom name="136021-111.7j" merge="136021-111.7j" size="1024" crc="ae69881c"/>
-		<rom name="136021-112.7k" merge="136021-112.7k" size="1024" crc="ecf22628"/>
-		<rom name="136021-113.7l" merge="136021-113.7l" size="1024" crc="83febfde"/>
-		<rom name="136021-109.4b" merge="136021-109.4b" size="256" crc="82fc3eb2"/>
-		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="starwarso" cloneof="starwars" romof="starwars" sourcefile="pre90s/d_starwars.cpp">
-		<description>Star Wars (set 3)</description>
-		<year>1983</year>
-		<manufacturer>Atari</manufacturer>
-		<rom name="136021-105.1l" merge="136021-105.1l" size="4096" crc="538e7d2f"/>
-		<rom name="136021-114.1f" size="16384" crc="e75ff867"/>
-		<rom name="136021-102.1hj" merge="136021.102.1hj" size="8192" crc="f725e344"/>
-		<rom name="136021-103.1jk" size="8192" crc="3fde9ccb"/>
-		<rom name="136021-104.1kl" merge="136021.104.1kl" size="8192" crc="7e406703"/>
-		<rom name="136021-206.1m" merge="136021.206.1m" size="8192" crc="c7e51237"/>
-		<rom name="136021-107.1jk" merge="136021-107.1jk" size="8192" crc="dbf3aea2"/>
-		<rom name="136021-208.1h" merge="136021-208.1h" size="8192" crc="e38070a8"/>
-		<rom name="136021-110.7h" merge="136021-110.7h" size="1024" crc="810e040e"/>
-		<rom name="136021-111.7j" merge="136021-111.7j" size="1024" crc="ae69881c"/>
-		<rom name="136021-112.7k" merge="136021-112.7k" size="1024" crc="ecf22628"/>
-		<rom name="136021-113.7l" merge="136021-113.7l" size="1024" crc="83febfde"/>
-		<rom name="136021-109.4b" merge="136021-109.4b" size="256" crc="82fc3eb2"/>
-		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="starfgmc" cloneof="mooncrst" romof="mooncrst" sourcefile="galaxian/d_galaxian.cpp">
@@ -171456,7 +171504,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stratab1" cloneof="stratab" romof="stratab" sourcefile="pst90s/d_itech8.cpp">
-		<description>Strata Bowling (V1)</description>
+		<description>Strata Bowling (v1)</description>
 		<year>1990</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="sb_prog_v1_u5.u5" size="32768" crc="46d51604"/>
@@ -171469,7 +171517,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="stratab" sourcefile="pst90s/d_itech8.cpp">
-		<description>Strata Bowling (V3)</description>
+		<description>Strata Bowling (v3)</description>
 		<year>1990</year>
 		<manufacturer>Strata / Incredible Technologies</manufacturer>
 		<rom name="sb_prog_v3_u5.u5" size="32768" crc="a5ae728f"/>
@@ -212578,6 +212626,35 @@
 		<rom name="6.bin" size="524288" crc="83ae90ba"/>
 		<rom name="1.bin" size="262144" crc="02b042e3"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="tomcat" sourcefile="d_parent.cpp">
+		<comment>Prototype, Parent set for working drivers</comment>
+		<description>TomCat (prototype)</description>
+		<year>1985</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="rom1k.bin" size="32768" crc="5535a1ff"/>
+		<rom name="rom2k.bin" size="32768" crc="021a01d2"/>
+		<rom name="136021-105.1l" size="256" crc="82fc3eb2"/>
+		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
+		<driver status="preliminary"/>
+	</game>
+	<game name="tomcatsw" cloneof="tomcat" romof="tomcat" sourcefile="pre90s/d_starwars.cpp">
+		<comment>Prototype, No sound!</comment>
+		<description>TomCat (Star Wars hardware, prototype)</description>
+		<year>1983</year>
+		<manufacturer>Atari</manufacturer>
+		<rom name="tcavg3.1l" size="4096" crc="27188aa9"/>
+		<rom name="tc6.1f" size="8192" crc="56e284ff"/>
+		<rom name="tc8.1hj" size="8192" crc="7b7575e3"/>
+		<rom name="tca.1jk" size="8192" crc="a1020331"/>
+		<rom name="tce.1m" size="8192" crc="4a3de8a3"/>
+		<rom name="136021-110.7h" size="1024" crc="810e040e"/>
+		<rom name="136021-111.7j" size="1024" crc="ae69881c"/>
+		<rom name="136021-112.7k" size="1024" crc="ecf22628"/>
+		<rom name="136021-113.7l" size="1024" crc="83febfde"/>
+		<rom name="136021-109.4b" merge="136021-105.1l" size="256" crc="82fc3eb2"/>
+		<video type="vector" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="toobin2e" cloneof="toobin" romof="toobin" sourcefile="atari/d_toobin.cpp">
