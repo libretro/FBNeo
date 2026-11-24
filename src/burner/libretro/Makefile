@@ -316,6 +316,20 @@ else ifeq ($(platform), libnx)
 	INCLUDE_7Z_SUPPORT = 1
 	ENDIANNESS_DEFINES := -DLSB_FIRST
 
+# Nintendo Switch 2 (libounce)
+else ifeq ($(platform), libounce)
+	include $(DEVKITPRO)/libounce/switch2_rules
+	TARGET_ELF := $(TARGET_NAME)_libretro_$(platform).elf
+	TARGET := $(TARGET_NAME)_libretro_$(platform).nro
+	fpic := -fPIC
+	SHARED := -shared -Wl,-soname,$(TARGET) -Wl,--version-script=$(VERSION_SCRIPT)
+	ENDIANNESS_DEFINES := -DLSB_FIRST
+	DEFINES := -DSWITCH=1 -D__SWITCH__ -D__SWITCH2__ -DHAVE_LIBNX -U__linux__ -U__linux
+	CFLAGS := $(SWITCH2_SHARED_ARCH) $(DEFINES) -I$(LIBNX)/include -ffunction-sections -fdata-sections
+	CXXFLAGS := $(CFLAGS) -fno-rtti
+	LDFLAGS := -specs=$(SWITCH2_SHARED_SPECS) $(SWITCH2_SHARED_ARCH) $(SWITCH2_SHARED_LIBPATHS) -Wl,-Bsymbolic -Wl,--allow-multiple-definition
+	LIBS := -lm
+
 # Funkey S
 else ifeq ($(platform), funkey)
 	TARGET := $(TARGET_NAME)_libretro.so
@@ -742,6 +756,19 @@ endif
 %.o: %.S
 	$(CC) $(CFLAGS) $(INCFLAGS) -c $< -o $@
 
+ifeq ($(platform), libounce)
+$(TARGET_ELF): $(OBJS)
+ifeq ($(SPLIT_UP_LINK), 1)
+	$(file >$@.in,$(OBJS))
+	$(LD) $(LINKOUT)$@ $(SHARED) @$@.in $(LDFLAGS) $(LIBS)
+	@rm $@.in
+else
+	$(LD) $(LINKOUT)$@ $(SHARED) $^ $(LDFLAGS) $(LIBS)
+endif
+
+$(TARGET): $(TARGET_ELF)
+	$(DEVKITPRO)/tools/bin/elf2nro $< $@
+else
 $(TARGET): $(OBJS)
 ifeq ($(STATIC_LINKING), 1)
 ifeq ($(SPLIT_UP_LINK), 1)
@@ -758,6 +785,7 @@ else
 	$(LD) $(LINKOUT)$@ $(SHARED) $^ $(LDFLAGS) $(LIBS)
 endif
 endif
+endif
 
 -include $(DEPS)
 
@@ -771,7 +799,7 @@ else
 endif
 
 clean: clean-objs
-	rm -f $(TARGET)
+	rm -f $(TARGET) $(TARGET_ELF)
 	rm -f $(M68KMAKE_EXE)
 	rm -f $(PGM_SPRITE_CREATE_EXE)
 	rm -f $(CTVMAKE_EXE)
