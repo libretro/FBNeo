@@ -6444,6 +6444,169 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="aafbb" cloneof="aafb" romof="aafb" sourcefile="pre90s/d_leland.cpp">
+		<description>All American Football (Leland, rev B)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="24014-01.u58t" size="65536" crc="5db4a3d0"/>
+		<rom name="24015-01.u59t" size="65536" crc="f384f716"/>
+		<rom name="02-24000-02.u3" size="8192" crc="52df0354"/>
+		<rom name="02-24001-02.u2t" size="65536" crc="9b20697d"/>
+		<rom name="02-24002-02.u3t" merge="02-24002-02.u3t" size="65536" crc="bbb92184"/>
+		<rom name="02-15603-01.u4t" merge="02-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="02-15604-01.u5t" merge="02-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="02-15605-01.u6t" merge="02-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="02-15606-01.u7t" merge="02-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="02-24002-02.u8t" size="65536" crc="3d9747c9"/>
+		<rom name="02-24019-01.u25" merge="02-24019-01.u25" size="65536" crc="9e344768"/>
+		<rom name="02-24016-01.u13" merge="02-24016-01.u13" size="65536" crc="6997025f"/>
+		<rom name="02-24020-01.u26" merge="02-24020-01.u26" size="65536" crc="0788f2a5"/>
+		<rom name="02-24017-01.u14" merge="02-24017-01.u14" size="65536" crc="a48bd721"/>
+		<rom name="02-24021-01.u27" merge="02-24021-01.u27" size="65536" crc="94081899"/>
+		<rom name="02-24018-01.u15" merge="02-24018-01.u15" size="65536" crc="76eb6077"/>
+		<rom name="02-24011-02.u93" size="32768" crc="71f4425b"/>
+		<rom name="02-24012-02.u94" size="32768" crc="b2499547"/>
+		<rom name="02-24013-02.u95" size="32768" crc="0a604e0d"/>
+		<rom name="02-24007-01.u70" size="16384" crc="40e46aa4"/>
+		<rom name="02-24010-01.u92" size="16384" crc="78705f42"/>
+		<rom name="02-24006-01.u69" size="16384" crc="6a576aa9"/>
+		<rom name="02-24009-02.u91" size="16384" crc="b857a1ad"/>
+		<rom name="02-24005-02.u68" size="16384" crc="8ea75319"/>
+		<rom name="02-24008-01.u90" size="16384" crc="4538bc58"/>
+		<rom name="02-24004-02.u67" size="16384" crc="cd7a3338"/>
+		<rom name="eeprom-aafb.bin" merge="eeprom-aafb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="preliminary"/>
+	</game>
+	<game name="aafbc" cloneof="aafb" romof="aafb" sourcefile="pre90s/d_leland.cpp">
+		<description>All American Football (Leland, rev C)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="02-24014-02.u58t" size="65536" crc="25cc4ccc"/>
+		<rom name="02-24015-02.u59t" size="65536" crc="bfa1b56f"/>
+		<rom name="02-24000-02.u3" size="8192" crc="52df0354"/>
+		<rom name="02-24001-02.u2t" size="65536" crc="9b20697d"/>
+		<rom name="02-24002-02.u3t" merge="02-24002-02.u3t" size="65536" crc="bbb92184"/>
+		<rom name="02-15603-01.u4t" merge="02-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="02-15604-01.u5t" merge="02-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="02-15605-01.u6t" merge="02-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="02-15606-01.u7t" merge="02-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="02-24002-02.u8t" size="65536" crc="3d9747c9"/>
+		<rom name="02-24019-01.u25" merge="02-24019-01.u25" size="65536" crc="9e344768"/>
+		<rom name="02-24016-01.u13" merge="02-24016-01.u13" size="65536" crc="6997025f"/>
+		<rom name="02-24020-01.u26" merge="02-24020-01.u26" size="65536" crc="0788f2a5"/>
+		<rom name="02-24017-01.u14" merge="02-24017-01.u14" size="65536" crc="a48bd721"/>
+		<rom name="02-24021-01.u27" merge="02-24021-01.u27" size="65536" crc="94081899"/>
+		<rom name="02-24018-01.u15" merge="02-24018-01.u15" size="65536" crc="76eb6077"/>
+		<rom name="02-24011-02.u93" size="32768" crc="71f4425b"/>
+		<rom name="02-24012-02.u94" size="32768" crc="b2499547"/>
+		<rom name="02-24013-02.u95" size="32768" crc="0a604e0d"/>
+		<rom name="02-24007-01.u70" size="16384" crc="40e46aa4"/>
+		<rom name="02-24010-01.u92" size="16384" crc="78705f42"/>
+		<rom name="02-24006-01.u69" size="16384" crc="6a576aa9"/>
+		<rom name="02-24009-02.u91" size="16384" crc="b857a1ad"/>
+		<rom name="02-24005-02.u68" size="16384" crc="8ea75319"/>
+		<rom name="02-24008-01.u90" size="16384" crc="4538bc58"/>
+		<rom name="02-24004-02.u67" size="16384" crc="cd7a3338"/>
+		<rom name="eeprom-aafb.bin" merge="eeprom-aafb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="aafbd2p" cloneof="aafb" romof="aafb" sourcefile="pre90s/d_leland.cpp">
+		<description>All American Football (Leland, rev D, 2 players)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="02-26014-01.u58t" size="65536" crc="79fd14cd"/>
+		<rom name="02-26015-01.u59t" size="65536" crc="3b0382f0"/>
+		<rom name="02-26000-01.u3" size="8192" crc="98c06c63"/>
+		<rom name="02-26001-01.u2t" merge="02-26001-01.u2t" size="65536" crc="f118b9b4"/>
+		<rom name="02-24002-02.u3t" merge="02-24002-02.u3t" size="65536" crc="bbb92184"/>
+		<rom name="02-15603-01.u4t" merge="02-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="02-15604-01.u5t" merge="02-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="02-15605-01.u6t" merge="02-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="02-15606-01.u7t" merge="02-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="02-24002-02.u8t" size="65536" crc="3d9747c9"/>
+		<rom name="02-24019-01.u25" merge="02-24019-01.u25" size="65536" crc="9e344768"/>
+		<rom name="02-24016-01.u13" merge="02-24016-01.u13" size="65536" crc="6997025f"/>
+		<rom name="02-24020-01.u26" merge="02-24020-01.u26" size="65536" crc="0788f2a5"/>
+		<rom name="02-24017-01.u14" merge="02-24017-01.u14" size="65536" crc="a48bd721"/>
+		<rom name="02-24021-01.u27" merge="02-24021-01.u27" size="65536" crc="94081899"/>
+		<rom name="02-24018-01.u15" merge="02-24018-01.u15" size="65536" crc="76eb6077"/>
+		<rom name="02-24011-02.u93" size="32768" crc="71f4425b"/>
+		<rom name="02-24012-02.u94" size="32768" crc="b2499547"/>
+		<rom name="02-24013-02.u95" size="32768" crc="0a604e0d"/>
+		<rom name="02-24007-01.u70" size="16384" crc="40e46aa4"/>
+		<rom name="02-24010-01.u92" size="16384" crc="78705f42"/>
+		<rom name="02-24006-01.u69" size="16384" crc="6a576aa9"/>
+		<rom name="02-24009-02.u91" size="16384" crc="b857a1ad"/>
+		<rom name="02-24005-02.u68" size="16384" crc="8ea75319"/>
+		<rom name="02-24008-01.u90" size="16384" crc="4538bc58"/>
+		<rom name="02-24004-02.u67" size="16384" crc="cd7a3338"/>
+		<rom name="eeprom-aafb.bin" merge="eeprom-aafb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="aafb" sourcefile="pre90s/d_leland.cpp">
+		<description>All American Football (Leland, rev E)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-28011.u58t" size="65536" crc="fa75a4a0"/>
+		<rom name="03-28012.u59t" size="65536" crc="ab6a606f"/>
+		<rom name="03-28000.u3" size="8192" crc="cb531986"/>
+		<rom name="02-26001-01.u2t" size="65536" crc="f118b9b4"/>
+		<rom name="02-24002-02.u3t" size="65536" crc="bbb92184"/>
+		<rom name="02-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="02-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="02-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="02-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="03-28002.u8" size="65536" crc="c3e09811"/>
+		<rom name="02-24019-01.u25" size="65536" crc="9e344768"/>
+		<rom name="02-24016-01.u13" size="65536" crc="6997025f"/>
+		<rom name="02-24020-01.u26" size="65536" crc="0788f2a5"/>
+		<rom name="02-24017-01.u14" size="65536" crc="a48bd721"/>
+		<rom name="02-24021-01.u27" size="65536" crc="94081899"/>
+		<rom name="02-24018-01.u15" size="65536" crc="76eb6077"/>
+		<rom name="03-28008.u93" size="16384" crc="68f8addc"/>
+		<rom name="03-28009.u94" size="16384" crc="669791ac"/>
+		<rom name="03-28010.u95" size="16384" crc="bd62aa8a"/>
+		<rom name="03-28005.u70" size="16384" crc="5ca6f4e2"/>
+		<rom name="03-28007.u92" size="16384" crc="1d9e33c2"/>
+		<rom name="03-28004.u69" size="16384" crc="d4b8a471"/>
+		<rom name="03-28006.u90" size="16384" crc="e68c8b6e"/>
+		<rom name="03-28003.u67" size="16384" crc="c92f6357"/>
+		<rom name="eeprom-aafb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="alleymas" cloneof="upyoural" romof="upyoural" sourcefile="pre90s/d_leland.cpp">
+		<description>Alley Master</description>
+		<year>1985</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="02-13509-00.u101" size="8192" crc="4273e260"/>
+		<rom name="02-13510-00.u102" size="16384" crc="eb6575aa"/>
+		<rom name="02-13511-00.u103" size="16384" crc="cc9d778c"/>
+		<rom name="02-13512-00.u104" size="16384" crc="8edb129b"/>
+		<rom name="02-13513-00.u105" size="16384" crc="a342dc8e"/>
+		<rom name="02-13514-00.u106" size="16384" crc="b396c254"/>
+		<rom name="02-13515-00.u107" size="16384" crc="3ca13e8c"/>
+		<rom name="02-13516-00.u003" merge="03-14150-01_uya_chk-3c1d.u3" size="8192" crc="3fee63ae"/>
+		<rom name="02-13517-00.u004" merge="03-14151-01_uya_chk-05a7.u4" size="16384" crc="d302b5d1"/>
+		<rom name="02-13518-00.u005" merge="03-14152-01_uya_chk-c686.u5" size="16384" crc="79bdb24d"/>
+		<rom name="02-13519-00.u006" merge="03-14153-01_uya_chk-9254.u6" size="16384" crc="f0b15d68"/>
+		<rom name="02-13520-00.u007" merge="03-14154-01_uya_chk-2d51.u7" size="16384" crc="6974036c"/>
+		<rom name="02-13521-00.u008" merge="03-14155-01_uya_chk-42b6.u8" size="16384" crc="a4357b5a"/>
+		<rom name="02-13522-00.u009" merge="03-14156-01_uya_chk-43e3.u9" size="16384" crc="6d74274e"/>
+		<rom name="02-13501-00.u093" size="8192" crc="54456e6f"/>
+		<rom name="02-13502-00.u094" size="8192" crc="edc240da"/>
+		<rom name="02-13503-00.u095" size="8192" crc="19793ed0"/>
+		<rom name="02-13504-00.u092" merge="03-14164-01_uya_chk-e1d0.u92" size="8192" crc="a020eab5"/>
+		<rom name="02-13505-00.u069" merge="03-14159-01_uya_chk-ca48.u69" size="8192" crc="79abb979"/>
+		<rom name="02-13506-00.u068" merge="03-14158-01_uya_chk-18c8.u68" size="8192" crc="0c583385"/>
+		<rom name="02-13507-00.u090" merge="03-14162-01_uya_chk-10e0.u90" size="8192" crc="0e1769e3"/>
+		<rom name="eeprom-alleymas.bin" merge="eeprom-upyoural.bin" size="128" crc="8c622ba1"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="aligators" cloneof="aligator" romof="aligator" sourcefile="pst90s/d_gaelco2.cpp">
 		<description>Alligator Hunt (Spain, protected, checksum 2B34128B)</description>
 		<year>1994</year>
@@ -11612,6 +11775,43 @@
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="asylum" sourcefile="pre90s/d_leland.cpp">
+		<comment>Prototype</comment>
+		<description>Asylum (prototype)</description>
+		<year>1991</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="asy-m0.64" size="131072" crc="f5ca36fd"/>
+		<rom name="asy-m1.65" size="131072" crc="14d91d09"/>
+		<rom name="asy-m2.66" size="131072" crc="a34a6ef9"/>
+		<rom name="asy-m3.67" size="131072" crc="9db4c2b1"/>
+		<rom name="asy-sp0.151" size="131072" crc="5ad5e3b0"/>
+		<rom name="asy-sp2.152" size="262144" crc="6d2997ec"/>
+		<rom name="asy-sp4.153" size="262144" crc="7c61973c"/>
+		<rom name="asy-sp6.154" size="262144" crc="f0a4f9d3"/>
+		<rom name="asy-sp8.155" size="262144" crc="2ad0640e"/>
+		<rom name="asy-spa.156" size="262144" crc="9d584fb4"/>
+		<rom name="asy-spc.157" size="262144" crc="8485e48c"/>
+		<rom name="asy-spe.158" size="131072" crc="49d19520"/>
+		<rom name="asy-65.3" size="131072" crc="709bdc78"/>
+		<rom name="asy-65.6" size="131072" crc="d019fb2e"/>
+		<rom name="asy-65.4" size="131072" crc="1882c3b2"/>
+		<rom name="asy-65.5" size="131072" crc="5814b307"/>
+		<rom name="asy-chr0.145" size="262144" crc="4dbcae49"/>
+		<rom name="asy-chr1.146" size="262144" crc="34e7762d"/>
+		<rom name="asy-chr2.147" size="262144" crc="f9b0d375"/>
+		<rom name="asy-chr3.148" size="262144" crc="5efcae94"/>
+		<rom name="asy-chr4.149" size="262144" crc="dbc2b155"/>
+		<rom name="asy-chr5.150" size="262144" crc="9675e44f"/>
+		<rom name="asy-m4.68" size="131072" crc="77c8de62"/>
+		<rom name="asy-m5.69" size="131072" crc="bfc50d6c"/>
+		<rom name="asy-65.8" size="131072" crc="624ad02f"/>
+		<rom name="asy-65.9" size="131072" crc="c92ff376"/>
+		<rom name="asy-65.10" size="131072" crc="744dbf25"/>
+		<rom name="asy-65.11" size="131072" crc="4b185d22"/>
+		<rom name="eeprom-asylum.bin" size="256" crc="9a9a361b"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="ataqandr" cloneof="mooncrst" romof="mooncrst" sourcefile="galaxian/d_galaxian.cpp">
 		<comment>Bootleg</comment>
 		<description>Ataque Androide - Moon Cresta (FAR S.A. Spanish bootleg)</description>
@@ -11652,6 +11852,94 @@
 		<rom name="u11.l2" merge="k01_2.bin" size="2048" crc="dcc2b33b"/>
 		<rom name="uniwars.clr" merge="uniwars.clr" size="32" crc="25c79518"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="ataxxe" cloneof="ataxx" romof="ataxx" sourcefile="pre90s/d_leland.cpp">
+		<description>Ataxx (Europe)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="euro_ataxx_u38_3079.u38" size="131072" crc="16aef3b7"/>
+		<rom name="e-302-31012-01.u111" merge="e-302-31012-01.u111" size="131072" crc="9a3297cc"/>
+		<rom name="e-302-31013-01.u112" merge="e-302-31013-01.u112" size="131072" crc="7e7c3e2f"/>
+		<rom name="e-302-31014-01.u113" merge="e-302-31014-01.u113" size="131072" crc="8cf3e101"/>
+		<rom name="302-38003-01.u15" size="131072" crc="db266d3f"/>
+		<rom name="302-38001-01.u1" size="131072" crc="d6db2724"/>
+		<rom name="302-38004-01.u16" size="131072" crc="2b127f56"/>
+		<rom name="302-38002-01.u2" size="131072" crc="1b63b882"/>
+		<rom name="e-302-31006-01.u98" merge="e-302-31006-01.u98" size="131072" crc="59d0f2ae"/>
+		<rom name="e-302-31007-01.u99" merge="e-302-31007-01.u99" size="131072" crc="6ab7db25"/>
+		<rom name="e-302-31008-01.u100" merge="e-302-31008-01.u100" size="131072" crc="2352849e"/>
+		<rom name="e-302-31009-01.u101" merge="e-302-31009-01.u101" size="131072" crc="4c31e02b"/>
+		<rom name="e-302-31010-01.u102" merge="e-302-31010-01.u102" size="131072" crc="a951228c"/>
+		<rom name="e-302-31011-01.u103" merge="e-302-31011-01.u103" size="131072" crc="ed326164"/>
+		<rom name="eeprom-ataxxe.bin" size="256" crc="8df1dee1"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ataxxj" cloneof="ataxx" romof="ataxx" sourcefile="pre90s/d_leland.cpp">
+		<description>Ataxx (Japan)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation (Capcom license)</manufacturer>
+		<rom name="ataxxj.u38" size="131072" crc="513fa7d4"/>
+		<rom name="e-302-31012-01.u111" merge="e-302-31012-01.u111" size="131072" crc="9a3297cc"/>
+		<rom name="e-302-31013-01.u112" merge="e-302-31013-01.u112" size="131072" crc="7e7c3e2f"/>
+		<rom name="e-302-31014-01.u113" merge="e-302-31014-01.u113" size="131072" crc="8cf3e101"/>
+		<rom name="302-38003-01.u15" size="131072" crc="db266d3f"/>
+		<rom name="302-38001-01.u1" size="131072" crc="d6db2724"/>
+		<rom name="302-38004-01.u16" size="131072" crc="2b127f56"/>
+		<rom name="302-38002-01.u2" size="131072" crc="1b63b882"/>
+		<rom name="e-302-31006-01.u98" merge="e-302-31006-01.u98" size="131072" crc="59d0f2ae"/>
+		<rom name="e-302-31007-01.u99" merge="e-302-31007-01.u99" size="131072" crc="6ab7db25"/>
+		<rom name="e-302-31008-01.u100" merge="e-302-31008-01.u100" size="131072" crc="2352849e"/>
+		<rom name="e-302-31009-01.u101" merge="e-302-31009-01.u101" size="131072" crc="4c31e02b"/>
+		<rom name="e-302-31010-01.u102" merge="e-302-31010-01.u102" size="131072" crc="a951228c"/>
+		<rom name="e-302-31011-01.u103" merge="e-302-31011-01.u103" size="131072" crc="ed326164"/>
+		<rom name="eeprom-ataxxj.bin" size="256" crc="8df1dee1"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ataxxa" cloneof="ataxx" romof="ataxx" sourcefile="pre90s/d_leland.cpp">
+		<description>Ataxx (rev 4)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="e-302-31005-04.u38" size="131072" crc="e1cf6236"/>
+		<rom name="e-302-31012-01.u111" merge="e-302-31012-01.u111" size="131072" crc="9a3297cc"/>
+		<rom name="e-302-31013-01.u112" merge="e-302-31013-01.u112" size="131072" crc="7e7c3e2f"/>
+		<rom name="e-302-31014-01.u113" merge="e-302-31014-01.u113" size="131072" crc="8cf3e101"/>
+		<rom name="e-302-31003-01.u15" merge="e-302-31003-01.u15" size="131072" crc="8bb3233b"/>
+		<rom name="e-302-31001-01.u1" merge="e-302-31001-01.u1" size="131072" crc="728d75f2"/>
+		<rom name="e-302-31004-01.u16" merge="e-302-31004-01.u16" size="131072" crc="f2bdff48"/>
+		<rom name="e-302-31002-01.u2" merge="e-302-31002-01.u2" size="131072" crc="ca06a394"/>
+		<rom name="e-302-31006-01.u98" merge="e-302-31006-01.u98" size="131072" crc="59d0f2ae"/>
+		<rom name="e-302-31007-01.u99" merge="e-302-31007-01.u99" size="131072" crc="6ab7db25"/>
+		<rom name="e-302-31008-01.u100" merge="e-302-31008-01.u100" size="131072" crc="2352849e"/>
+		<rom name="e-302-31009-01.u101" merge="e-302-31009-01.u101" size="131072" crc="4c31e02b"/>
+		<rom name="e-302-31010-01.u102" merge="e-302-31010-01.u102" size="131072" crc="a951228c"/>
+		<rom name="e-302-31011-01.u103" merge="e-302-31011-01.u103" size="131072" crc="ed326164"/>
+		<rom name="eeprom-ataxx.bin" merge="eeprom-ataxx.bin" size="256" crc="989cdb8c"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="ataxx" sourcefile="pre90s/d_leland.cpp">
+		<description>Ataxx (rev 5)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="e-302-31005-05.u38" size="131072" crc="3378937d"/>
+		<rom name="e-302-31012-01.u111" size="131072" crc="9a3297cc"/>
+		<rom name="e-302-31013-01.u112" size="131072" crc="7e7c3e2f"/>
+		<rom name="e-302-31014-01.u113" size="131072" crc="8cf3e101"/>
+		<rom name="e-302-31003-01.u15" size="131072" crc="8bb3233b"/>
+		<rom name="e-302-31001-01.u1" size="131072" crc="728d75f2"/>
+		<rom name="e-302-31004-01.u16" size="131072" crc="f2bdff48"/>
+		<rom name="e-302-31002-01.u2" size="131072" crc="ca06a394"/>
+		<rom name="e-302-31006-01.u98" size="131072" crc="59d0f2ae"/>
+		<rom name="e-302-31007-01.u99" size="131072" crc="6ab7db25"/>
+		<rom name="e-302-31008-01.u100" size="131072" crc="2352849e"/>
+		<rom name="e-302-31009-01.u101" size="131072" crc="4c31e02b"/>
+		<rom name="e-302-31010-01.u102" size="131072" crc="a951228c"/>
+		<rom name="e-302-31011-01.u103" size="131072" crc="ed326164"/>
+		<rom name="eeprom-ataxx.bin" size="256" crc="989cdb8c"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="athenab" cloneof="athena" romof="athena" sourcefile="pre90s/d_snk.cpp">
@@ -14250,6 +14538,38 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="basebal2" sourcefile="pre90s/d_leland.cpp">
+		<description>Baseball: The Season II</description>
+		<year>1987</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="03-14115-00.u101" size="8192" crc="05231fee"/>
+		<rom name="03-14116-00.u102" size="16384" crc="e1482ea3"/>
+		<rom name="03-14117-01.u103" size="16384" crc="677181dd"/>
+		<rom name="03-14118-01.u104" size="16384" crc="5f570264"/>
+		<rom name="03-14119-01.u105" size="16384" crc="90822145"/>
+		<rom name="03-14120-00.u106" size="16384" crc="4d2b7217"/>
+		<rom name="03-14121-01.u107" size="16384" crc="b987b97c"/>
+		<rom name="03-14122-01.u2t" size="8192" crc="a89882d8"/>
+		<rom name="03-14123-01.u3t" size="8192" crc="f9c51e5a"/>
+		<rom name="03-14100-01.u3" size="8192" crc="1dffbdaf"/>
+		<rom name="03-14101-01.u4" size="16384" crc="c585529c"/>
+		<rom name="03-14102-01.u5" size="16384" crc="ace3f918"/>
+		<rom name="03-14103-01.u6" size="16384" crc="cd41cf7a"/>
+		<rom name="03-14104-01.u7" size="16384" crc="9b169e78"/>
+		<rom name="03-14105-01.u8" size="16384" crc="ec596b43"/>
+		<rom name="03-14106-01.u9" size="16384" crc="b9656baa"/>
+		<rom name="03-14112-00.u93" size="16384" crc="8ccb1404"/>
+		<rom name="03-14113-00.u94" size="16384" crc="9941a55b"/>
+		<rom name="03-14114-00.u95" size="16384" crc="b68baf47"/>
+		<rom name="03-14111-01.u92" size="16384" crc="2508a9ad"/>
+		<rom name="03-14109-00.u69" size="16384" crc="b123a28e"/>
+		<rom name="03-14108-01.u68" size="16384" crc="a1a51383"/>
+		<rom name="03-14110-01.u90" size="16384" crc="ef01d997"/>
+		<rom name="03-14107-00.u67" size="16384" crc="976334e6"/>
+		<rom name="eeprom-basebal2.bin" size="128" crc="c9c45105"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="basketbal" cloneof="archrivl" romof="archrivl" sourcefile="pre90s/d_mcr68.cpp">
@@ -22079,6 +22399,42 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="brutforc" sourcefile="pre90s/d_leland.cpp">
+		<description>Brute Force</description>
+		<year>1991</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="u64" size="131072" crc="008ae3b8"/>
+		<rom name="u65" size="131072" crc="6036e3fa"/>
+		<rom name="u66" size="131072" crc="7ebf0795"/>
+		<rom name="u67" size="131072" crc="e3cbf8b4"/>
+		<rom name="u151" size="131072" crc="bd3b677b"/>
+		<rom name="u152" size="131072" crc="5f4434e7"/>
+		<rom name="u153" size="131072" crc="20f7df53"/>
+		<rom name="u154" size="131072" crc="69ce2329"/>
+		<rom name="u155" size="131072" crc="33d92e25"/>
+		<rom name="u156" size="131072" crc="de7eca8b"/>
+		<rom name="u157" size="131072" crc="e42b3dba"/>
+		<rom name="u158" size="131072" crc="a0aa3220"/>
+		<rom name="u3" size="131072" crc="9984906c"/>
+		<rom name="u6" size="131072" crc="c9c5a413"/>
+		<rom name="u4" size="131072" crc="ca8ab3a6"/>
+		<rom name="u5" size="131072" crc="cbdb914b"/>
+		<rom name="u145" size="262144" crc="c3d20d24"/>
+		<rom name="u146" size="262144" crc="43e9dd87"/>
+		<rom name="u147" size="262144" crc="fb855ce8"/>
+		<rom name="u148" size="262144" crc="e4b54eae"/>
+		<rom name="u149" size="262144" crc="cf48401c"/>
+		<rom name="u150" size="262144" crc="ca9e1e33"/>
+		<rom name="u68" size="131072" crc="77c8de62"/>
+		<rom name="u69" size="131072" crc="113aa6d5"/>
+		<rom name="u8" size="131072" crc="1e0ead72"/>
+		<rom name="u9" size="131072" crc="3195b305"/>
+		<rom name="u10" size="131072" crc="1dc5f375"/>
+		<rom name="u11" size="131072" crc="5ed4877f"/>
+		<rom name="eeprom-brutforc.bin" size="256" crc="508809af"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bubl2000a" cloneof="bubl2000" romof="bubl2000" sourcefile="pst90s/d_nmk16.cpp">
 		<description>Bubble 2000 V1.2</description>
 		<year>1998</year>
@@ -28876,6 +29232,39 @@
 		<video type="raster" orientation="vertical" width="240" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="cerberus" sourcefile="pre90s/d_leland.cpp">
+		<description>Cerberus</description>
+		<year>1985</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="3-23u101" size="8192" crc="d78210df"/>
+		<rom name="3-23u102" size="8192" crc="eed121ef"/>
+		<rom name="3-23u103" size="8192" crc="45b82bf7"/>
+		<rom name="3-23u104" size="8192" crc="e133d6bf"/>
+		<rom name="3-23u105" size="8192" crc="a12c2c79"/>
+		<rom name="3-23u106" size="8192" crc="d64110d2"/>
+		<rom name="3-23u107" size="8192" crc="24e41c34"/>
+		<rom name="3-23u3" size="8192" crc="b0579138"/>
+		<rom name="3-23u4" size="8192" crc="ba0dc990"/>
+		<rom name="3-23u5" size="8192" crc="f8d6cc5d"/>
+		<rom name="3-23u6" size="8192" crc="42cdd393"/>
+		<rom name="3-23u7" size="8192" crc="c020148a"/>
+		<rom name="3-23u8" size="8192" crc="dbabdbde"/>
+		<rom name="3-23u9" size="8192" crc="eb992385"/>
+		<rom name="3-23u93" size="8192" crc="14a1a4b0"/>
+		<rom name="3-23u94" size="8192" crc="207a1709"/>
+		<rom name="3-23u95" size="8192" crc="e9c86267"/>
+		<rom name="3-23u70" size="8192" crc="96499983"/>
+		<rom name="3-23_u92" size="8192" crc="497bb717"/>
+		<rom name="3-23u69" size="8192" crc="ebd14d9e"/>
+		<rom name="3-23u91" size="8192" crc="b592d2e5"/>
+		<rom name="3-23u68" size="8192" crc="cfa7b8bf"/>
+		<rom name="3-23u90" size="8192" crc="b7566f8a"/>
+		<rom name="3-23u67" size="8192" crc="02b079a8"/>
+		<rom name="3-23u89" size="8192" crc="7e5e82bb"/>
+		<rom name="eeprom-cerberus.bin" size="128" crc="a9594f08"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="chaknpop" sourcefile="taito/d_chaknpop.cpp">
 		<description>Chack'n Pop</description>
 		<year>1983</year>
@@ -33915,6 +34304,166 @@
 		<rom name="copprome.2e" merge="copprome.2e" size="256" crc="214392fa"/>
 		<rom name="13b" size="256" status="nodump"/>
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmica2a" cloneof="cosmica" romof="cosmica" sampleof="cosmica" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Cosmic Alien (early version II?)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="a-1.e2" size="1024" crc="8a401b22"/>
+		<rom name="b-2.d3" size="1024" crc="c8bf86b1"/>
+		<rom name="c-3.e3" size="1024" crc="699c849e"/>
+		<rom name="d-4.d4" size="1024" crc="168e38da"/>
+		<rom name="e-5.e4" size="1024" crc="80cc1fb8"/>
+		<rom name="f-6.d5" size="1024" crc="0dc464f7"/>
+		<rom name="g-7.e5" size="1024" crc="d5381c54"/>
+		<rom name="h-8.d6" size="1024" crc="2175fe6f"/>
+		<rom name="i-9.e6" size="1024" crc="3bb57720"/>
+		<rom name="j-0.d7" size="1024" crc="4ff70f45"/>
+		<rom name="l-8.n2" merge="ii-7.n2" size="2048" crc="aa6c6079"/>
+		<rom name="k-7.n1" merge="ii-6.n1" size="2048" crc="431e866c"/>
+		<rom name="u7910.d9" merge="u7910.d9" size="32" crc="dfb60f19"/>
+		<rom name="9-9.e2" merge="9.e2" size="1024" crc="ea4ee931"/>
+		<rom name="8-8.k3" merge="8.k3" size="1024" crc="acbd4e98"/>
+		<sample name="backgr" />
+		<sample name="extend" />
+		<sample name="divea" />
+		<sample name="diveb1" />
+		<sample name="diveb2" />
+		<sample name="diveb3" />
+		<sample name="diveb4" />
+		<sample name="diveb5" />
+		<sample name="diveb6" />
+		<sample name="fire" />
+		<sample name="loudexp" />
+		<sample name="smallexp" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmica1" cloneof="cosmica" romof="cosmica" sampleof="cosmica" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Cosmic Alien (first version)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="1.e3" size="2048" crc="2e44f50e"/>
+		<rom name="2.e4" size="2048" crc="9e5c5281"/>
+		<rom name="3.e5" size="2048" crc="9e1309db"/>
+		<rom name="4.e6" size="2048" crc="ba4a9295"/>
+		<rom name="5.e7" size="2048" crc="2106c82a"/>
+		<rom name="7.n2" size="2048" crc="ee3e86fc"/>
+		<rom name="6.n1" size="2048" crc="81c86ca0"/>
+		<rom name="u7910.d9" merge="u7910.d9" size="32" crc="dfb60f19"/>
+		<rom name="9.e2" merge="9.e2" size="1024" crc="ea4ee931"/>
+		<rom name="8.k3" merge="8.k3" size="1024" crc="acbd4e98"/>
+		<sample name="backgr" />
+		<sample name="extend" />
+		<sample name="divea" />
+		<sample name="diveb1" />
+		<sample name="diveb2" />
+		<sample name="diveb3" />
+		<sample name="diveb4" />
+		<sample name="diveb5" />
+		<sample name="diveb6" />
+		<sample name="fire" />
+		<sample name="loudexp" />
+		<sample name="smallexp" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmica" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Cosmic Alien (version II, set 1)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="ii-1.e3" size="2048" crc="535ee0c5"/>
+		<rom name="ii-2.e4" size="2048" crc="ed3cf8f7"/>
+		<rom name="ii-3.e5" size="2048" crc="6a111e5e"/>
+		<rom name="ii-4.e6" size="2048" crc="c9b5ca2a"/>
+		<rom name="ii-5.e7" size="2048" crc="43666d68"/>
+		<rom name="ii-7.n2" size="2048" crc="aa6c6079"/>
+		<rom name="ii-6.n1" size="2048" crc="431e866c"/>
+		<rom name="u7910.d9" size="32" crc="dfb60f19"/>
+		<rom name="9.e2" size="1024" crc="ea4ee931"/>
+		<rom name="8.k3" size="1024" crc="acbd4e98"/>
+		<sample name="backgr" />
+		<sample name="extend" />
+		<sample name="divea" />
+		<sample name="diveb1" />
+		<sample name="diveb2" />
+		<sample name="diveb3" />
+		<sample name="diveb4" />
+		<sample name="diveb5" />
+		<sample name="diveb6" />
+		<sample name="fire" />
+		<sample name="loudexp" />
+		<sample name="smallexp" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmica22" cloneof="cosmica" romof="cosmica" sampleof="cosmica" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Cosmic Alien (version II, set 2)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="1.e3" merge="ii-1.e3" size="2048" crc="535ee0c5"/>
+		<rom name="2-ii-2.e4" size="2048" crc="6c9907e8"/>
+		<rom name="3-ii-3.e5" size="2048" crc="c7205278"/>
+		<rom name="4-ii-4.e6" size="2048" crc="c7765ecd"/>
+		<rom name="5-ii-5.e7" size="2048" crc="5f60242f"/>
+		<rom name="7.n2" merge="ii-7.n2" size="2048" crc="aa6c6079"/>
+		<rom name="6.n1" merge="ii-6.n1" size="2048" crc="431e866c"/>
+		<rom name="u7910.d9" merge="u7910.d9" size="32" crc="dfb60f19"/>
+		<rom name="9-9.e2" merge="9.e2" size="1024" crc="ea4ee931"/>
+		<rom name="8-8.ic10" merge="8.k3" size="1024" crc="acbd4e98"/>
+		<sample name="backgr" />
+		<sample name="extend" />
+		<sample name="divea" />
+		<sample name="diveb1" />
+		<sample name="diveb2" />
+		<sample name="diveb3" />
+		<sample name="diveb4" />
+		<sample name="diveb5" />
+		<sample name="diveb6" />
+		<sample name="fire" />
+		<sample name="loudexp" />
+		<sample name="smallexp" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="cosmica23" cloneof="cosmica" romof="cosmica" sampleof="cosmica" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>Imperfect sound</comment>
+		<description>Cosmic Alien (version II, set 3)</description>
+		<year>1979</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="1-al2019-2516.e3" size="2048" crc="2303333f"/>
+		<rom name="2-al202a-2516.e4" size="2048" crc="20710582"/>
+		<rom name="3-al2019-2516.e5" size="2048" crc="b25d24b4"/>
+		<rom name="4-2516.e6" size="2048" crc="51834cd9"/>
+		<rom name="5-al2019-2516.e7" size="2048" crc="e2b6680f"/>
+		<rom name="7-2716.n2" merge="ii-7.n2" size="2048" crc="aa6c6079"/>
+		<rom name="6-2516.n1" merge="ii-6.n1" size="2048" crc="431e866c"/>
+		<rom name="mmi-6331.d9" merge="u7910.d9" size="32" crc="dfb60f19"/>
+		<rom name="9-4708-2708.e2" merge="9.e2" size="1024" crc="ea4ee931"/>
+		<rom name="8-2708.k3" merge="8.k3" size="1024" crc="acbd4e98"/>
+		<sample name="backgr" />
+		<sample name="extend" />
+		<sample name="divea" />
+		<sample name="diveb1" />
+		<sample name="diveb2" />
+		<sample name="diveb3" />
+		<sample name="diveb4" />
+		<sample name="diveb5" />
+		<sample name="diveb6" />
+		<sample name="fire" />
+		<sample name="loudexp" />
+		<sample name="smallexp" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="cavenger" sourcefile="pre90s/d_ladybug.cpp">
@@ -38995,6 +39544,60 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dangerz0" cloneof="dangerz" romof="dangerz" sourcefile="pre90s/d_leland.cpp">
+		<description>Danger Zone (rev 0)</description>
+		<year>1986</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="03-13823-00.u012" size="65536" crc="ffc030b2"/>
+		<rom name="03-13824-00.u013" merge="03-13824-00.u013" size="65536" crc="381026c6"/>
+		<rom name="02-13816-00.u003" merge="02-13816-00.u003" size="16384" crc="71863c5b"/>
+		<rom name="02-13817-00.u004" merge="02-13817-00.u004" size="16384" crc="924bead3"/>
+		<rom name="02-13818-00.u005" merge="02-13818-00.u005" size="16384" crc="403bdfea"/>
+		<rom name="02-13819-00.u006" merge="02-13819-00.u006" size="16384" crc="1fee5f10"/>
+		<rom name="02-13820-00.u007" merge="02-13820-00.u007" size="16384" crc="42657a1e"/>
+		<rom name="02-13821-00.u008" merge="02-13821-00.u008" size="16384" crc="92f3e006"/>
+		<rom name="02-13801-00.u093" merge="02-13801-00.u093" size="16384" crc="f9ff55ec"/>
+		<rom name="02-13802-00.u094" merge="02-13802-00.u094" size="16384" crc="d4adbcbb"/>
+		<rom name="02-13803-00.u095" merge="02-13803-00.u095" size="16384" crc="9178ed76"/>
+		<rom name="02-13809-00.u070" merge="02-13809-00.u070" size="16384" crc="e44eb9f5"/>
+		<rom name="02-13804-00.u092" merge="02-13804-00.u092" size="16384" crc="6c23f1a5"/>
+		<rom name="02-13805-00.u069" merge="02-13805-00.u069" size="16384" crc="e9c9f38b"/>
+		<rom name="02-13808-00.u091" merge="02-13808-00.u091" size="16384" crc="035534ad"/>
+		<rom name="02-13806-00.u068" merge="02-13806-00.u068" size="16384" crc="2dbd64d2"/>
+		<rom name="02-13808-00.u090" merge="02-13808-00.u090" size="16384" crc="d5b4985d"/>
+		<rom name="02-13822-00.u067" merge="02-13822-00.u067" size="16384" crc="00ff3033"/>
+		<rom name="02-13810-00.u089" merge="02-13810-00.u089" size="16384" crc="4f645973"/>
+		<rom name="eeprom-dangerz.bin" merge="eeprom-dangerz.bin" size="128" crc="db2c632b"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dangerz" sourcefile="pre90s/d_leland.cpp">
+		<description>Danger Zone (rev 2)</description>
+		<year>1986</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="03-13823-02.u012t" size="65536" crc="31604634"/>
+		<rom name="03-13824-00.u013" size="65536" crc="381026c6"/>
+		<rom name="02-13816-00.u003" size="16384" crc="71863c5b"/>
+		<rom name="02-13817-00.u004" size="16384" crc="924bead3"/>
+		<rom name="02-13818-00.u005" size="16384" crc="403bdfea"/>
+		<rom name="02-13819-00.u006" size="16384" crc="1fee5f10"/>
+		<rom name="02-13820-00.u007" size="16384" crc="42657a1e"/>
+		<rom name="02-13821-00.u008" size="16384" crc="92f3e006"/>
+		<rom name="02-13801-00.u093" size="16384" crc="f9ff55ec"/>
+		<rom name="02-13802-00.u094" size="16384" crc="d4adbcbb"/>
+		<rom name="02-13803-00.u095" size="16384" crc="9178ed76"/>
+		<rom name="02-13809-00.u070" size="16384" crc="e44eb9f5"/>
+		<rom name="02-13804-00.u092" size="16384" crc="6c23f1a5"/>
+		<rom name="02-13805-00.u069" size="16384" crc="e9c9f38b"/>
+		<rom name="02-13808-00.u091" size="16384" crc="035534ad"/>
+		<rom name="02-13806-00.u068" size="16384" crc="2dbd64d2"/>
+		<rom name="02-13808-00.u090" size="16384" crc="d5b4985d"/>
+		<rom name="02-13822-00.u067" size="16384" crc="00ff3033"/>
+		<rom name="02-13810-00.u089" size="16384" crc="4f645973"/>
+		<rom name="eeprom-dangerz.bin" size="128" crc="db2c632b"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="ddungeon" sourcefile="pre90s/d_ddragon.cpp">
 		<description>Dangerous Dungeons (set 1)</description>
 		<year>1992</year>
@@ -39074,6 +39677,40 @@
 		<rom name="cv01-u19.bin" merge="cv01-u19.bin" size="4194304" crc="5f5514da"/>
 		<rom name="eeprom-dfeveron.bin" size="128" crc="c3174959"/>
 		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="indyheat" sourcefile="pre90s/d_leland.cpp">
+		<description>Danny Sullivan's Indy Heat (rev 1)</description>
+		<year>1991</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="e-302-33019-01.u64" size="131072" crc="2b97a347"/>
+		<rom name="e-302-33020-01.u65" size="131072" crc="71301d74"/>
+		<rom name="e-302-33017-01.u66" size="131072" crc="c9612072"/>
+		<rom name="e-302-33018-01.u67" size="131072" crc="4c4b25e0"/>
+		<rom name="e-302-33007-01.u151" size="131072" crc="2622dfa4"/>
+		<rom name="e-302-33008-01.u152" size="262144" crc="ad40e4e2"/>
+		<rom name="e-302-33009-01.u153" size="262144" crc="1e3803f7"/>
+		<rom name="e-302-33010-01.u154" size="131072" crc="76d3c235"/>
+		<rom name="e-302-33011-01.u155" size="131072" crc="d5d866b3"/>
+		<rom name="e-302-33012-01.u156" size="131072" crc="7fe71842"/>
+		<rom name="e-302-33013-01.u157" size="131072" crc="a6462adc"/>
+		<rom name="e-302-33014-01.u158" size="131072" crc="d6ef27a3"/>
+		<rom name="e-302-33021-01.u3" size="131072" crc="97413818"/>
+		<rom name="e-302-33024-01.u6" size="131072" crc="15a89962"/>
+		<rom name="e-302-33022-01.u4" size="131072" crc="fa7bfa04"/>
+		<rom name="e-302-33023-01.u5" size="131072" crc="198285d4"/>
+		<rom name="e-302-33001-01.u145" size="131072" crc="612d4bf8"/>
+		<rom name="e-302-33002-01.u146" size="131072" crc="77a725f6"/>
+		<rom name="e-302-33003-01.u147" size="131072" crc="d6aac372"/>
+		<rom name="e-302-33004-01.u148" size="131072" crc="5d19723e"/>
+		<rom name="e-302-33005-01.u149" size="131072" crc="29056791"/>
+		<rom name="e-302-33006-01.u150" size="131072" crc="cb73dd6a"/>
+		<rom name="e-302-33015-01.u68" size="131072" crc="9e88efb3"/>
+		<rom name="e-302-33016-01.u69" size="131072" crc="aa39fcb3"/>
+		<rom name="e-302-33025-01.u8" size="131072" crc="9f16e5b6"/>
+		<rom name="e-302-33026-01.u9" size="131072" crc="0dc8f488"/>
+		<rom name="eeprom-indyheat.bin" size="256" crc="896f7257"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="dariuso" cloneof="darius" romof="darius" sourcefile="taito/d_taitomisc.cpp">
@@ -41616,6 +42253,46 @@
 		<rom name="687_i01.5a" size="131072" crc="d4992dfb"/>
 		<rom name="687_i02.7c" size="131072" crc="e5947501"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="devzone2" cloneof="devzone" romof="devzone" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>no sfx</comment>
+		<description>Devil Zone (easier)</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="p10_1.e3" size="2048" crc="38bd45a4"/>
+		<rom name="my4_2.e4" size="2048" crc="e1637800"/>
+		<rom name="ms6_3.e5" size="2048" crc="c1952e2f"/>
+		<rom name="mx6_5.e7" size="2048" crc="c5394215"/>
+		<rom name="my1_4.e6" size="2048" crc="5d965d93"/>
+		<rom name="mz7_6.e8" size="2048" crc="8504e8c9"/>
+		<rom name="my8_8.n2" size="2048" crc="18abce02"/>
+		<rom name="mx3_7.n1" size="2048" crc="c089c9e3"/>
+		<rom name="ms.d9" merge="m13.d9" size="32" crc="36e2aa2a"/>
+		<rom name="dz9.e2" merge="db9.e2" size="1024" crc="693855b6"/>
+		<rom name="ic12.sub" merge="dv9.ic12" size="2048" crc="f61c1c45"/>
+		<rom name="ic1.sub" merge="22.ic1" size="32" crc="df974878"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="devzone" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>no sfx</comment>
+		<description>Devil Zone</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="dv1.e3" size="2048" crc="c70faf00"/>
+		<rom name="dv2.e4" size="2048" crc="eacfed61"/>
+		<rom name="dv3.e5" size="2048" crc="7973317e"/>
+		<rom name="dv5.e7" size="2048" crc="b71a3989"/>
+		<rom name="dv4.e6" size="2048" crc="a58c5b8c"/>
+		<rom name="dv6.e8" size="2048" crc="3930fb67"/>
+		<rom name="dv8.n2" size="2048" crc="da1cbec1"/>
+		<rom name="dv7.n1" size="2048" crc="e7562fcf"/>
+		<rom name="m13.d9" size="32" crc="36e2aa2a"/>
+		<rom name="db9.e2" size="1024" crc="693855b6"/>
+		<rom name="dv9.ic12" size="2048" crc="f61c1c45"/>
+		<rom name="22.ic1" size="32" crc="df974878"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="dharmak" cloneof="dharma" romof="dharma" sourcefile="pst90s/d_metro.cpp">
@@ -82879,6 +83556,134 @@
 		<video type="raster" orientation="horizontal" width="240" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="offroad3" cloneof="offroad" romof="offroad" sourcefile="pre90s/d_leland.cpp">
+		<description>Ironman Ivan Stewart's Super Off-Road (rev 3)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-22121-03.u58t" size="65536" crc="8e3d0da1"/>
+		<rom name="03-22122-02.u59t" size="65536" crc="37b8a0bd"/>
+		<rom name="03-22120-01.u57t" merge="03-22120-01.u57t" size="65536" crc="e9f0f175"/>
+		<rom name="03-22119-01.u56t" size="65536" crc="e7d144a8"/>
+		<rom name="03-22100-01.u3" size="8192" crc="7c959be9"/>
+		<rom name="03-22108-01.u4t" size="65536" crc="7219f9ed"/>
+		<rom name="03-22109-01.u5t" size="65536" crc="3d670117"/>
+		<rom name="03-22110-01.u6t" size="65536" crc="22b4dc64"/>
+		<rom name="03-22111-01.u7t" merge="03-22111-01.u7t" size="65536" crc="f79157a1"/>
+		<rom name="03-22112-01.u8t" merge="03-22112-01.u8t" size="65536" crc="3eef38d3"/>
+		<rom name="03-22116-02.u25t" size="65536" crc="1d906569"/>
+		<rom name="03-22113-02.u13t" size="65536" crc="de8a047b"/>
+		<rom name="03-22117-02.u26t" size="65536" crc="45f18abd"/>
+		<rom name="03-22114-02.u14t" size="65536" crc="a0257c5a"/>
+		<rom name="03-22118-02.u27t" size="65536" crc="fa62ad6f"/>
+		<rom name="03-22115-02.u15t" size="65536" crc="448648ae"/>
+		<rom name="03-22105-01.u93" size="32768" crc="e8af0080"/>
+		<rom name="03-22106-01.u94" size="32768" crc="858f27b3"/>
+		<rom name="03-22107-01.u95" size="32768" crc="48059b20"/>
+		<rom name="03-22104-01.u92" merge="03-22104-01.u92" size="16384" crc="03e0497d"/>
+		<rom name="03-22102-01.u69" merge="03-22102-01.u69" size="16384" crc="c3f2e443"/>
+		<rom name="03-22103-01.u90" size="16384" crc="0ad8c061"/>
+		<rom name="03-22101-01.u67" size="16384" crc="19b46990"/>
+		<rom name="eeprom-offroad.bin" merge="eeprom-offroad.bin" size="128" crc="57955248"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="offroad" sourcefile="pre90s/d_leland.cpp">
+		<description>Ironman Ivan Stewart's Super Off-Road (rev 4)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-22121-04.u58t" size="65536" crc="c5790988"/>
+		<rom name="03-22122-03.u59t" size="65536" crc="ae862fdc"/>
+		<rom name="03-22120-01.u57t" size="65536" crc="e9f0f175"/>
+		<rom name="03-22119-02.u56t" size="65536" crc="38642f22"/>
+		<rom name="03-22100-02.u3" size="8192" crc="08c96a4b"/>
+		<rom name="03-22108-02.u4t" size="65536" crc="0d72780a"/>
+		<rom name="03-22109-02.u5t" size="65536" crc="5429ce2c"/>
+		<rom name="03-22110-02.u6t" size="65536" crc="f97bad5c"/>
+		<rom name="03-22111-01.u7t" size="65536" crc="f79157a1"/>
+		<rom name="03-22112-01.u8t" size="65536" crc="3eef38d3"/>
+		<rom name="03-22116-03.u25t" size="65536" crc="95bb31d3"/>
+		<rom name="03-22113-03.u13t" size="65536" crc="71b28df6"/>
+		<rom name="03-22117-03.u26t" size="65536" crc="703d81ce"/>
+		<rom name="03-22114-03.u14t" size="65536" crc="f8b31bf8"/>
+		<rom name="03-22118-03.u27t" size="65536" crc="806ccf8b"/>
+		<rom name="03-22115-03.u15t" size="65536" crc="c8439a7a"/>
+		<rom name="03-22105-02.u93" size="32768" crc="4426e367"/>
+		<rom name="03-22106-02.u94" size="32768" crc="687dc1fc"/>
+		<rom name="03-22107-02.u95" size="32768" crc="cee6ee5f"/>
+		<rom name="03-22104-01.u92" size="16384" crc="03e0497d"/>
+		<rom name="03-22102-01.u69" size="16384" crc="c3f2e443"/>
+		<rom name="03-22103-02.u90" size="16384" crc="2266757a"/>
+		<rom name="03-22101-02.u67" size="16384" crc="ecab0527"/>
+		<rom name="eeprom-offroad.bin" size="128" crc="57955248"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="offroadt2p" cloneof="offroadt" romof="offroadt" sourcefile="pre90s/d_leland.cpp">
+		<description>Ironman Ivan Stewart's Super Off-Road Track-Pak (rev 4, 2 players)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-27000-04.u58t" size="65536" crc="8a785b66"/>
+		<rom name="03-27001-03.u59t" size="65536" crc="ff553895"/>
+		<rom name="03-22120-01.u57t" merge="03-22120-01.u57t" size="65536" crc="e9f0f175"/>
+		<rom name="03-25015-01.u56t" merge="03-25015-01.u56t" size="65536" crc="2c1a22b3"/>
+		<rom name="03-25000-01.u3" merge="03-25000-01.u3" size="8192" crc="95abb9f1"/>
+		<rom name="03-25001-01.u2t" merge="03-25001-01.u2t" size="65536" crc="c46c1627"/>
+		<rom name="03-25002-01.u3t" merge="03-25002-01.u3t" size="65536" crc="2276546f"/>
+		<rom name="03-25003-01.u4t" merge="03-25003-01.u4t" size="65536" crc="aa4b5975"/>
+		<rom name="03-25004-01.u5t" merge="03-25004-01.u5t" size="65536" crc="69100b06"/>
+		<rom name="03-25005-01.u6t" merge="03-25005-01.u6t" size="65536" crc="b75015b8"/>
+		<rom name="03-25006-01.u7t" merge="03-25006-01.u7t" size="65536" crc="a5af5b4f"/>
+		<rom name="03-25007-01.u8t" merge="03-25007-01.u8t" size="65536" crc="0f735078"/>
+		<rom name="03-25021-01.u25t" merge="03-25021-01.u25t" size="65536" crc="f952f800"/>
+		<rom name="03-25018-01.u13t" merge="03-25018-01.u13t" size="65536" crc="7beec9fc"/>
+		<rom name="03-25022-01.u26t" merge="03-25022-01.u26t" size="65536" crc="6227ea94"/>
+		<rom name="03-25019-01.u14t" merge="03-25019-01.u14t" size="65536" crc="0a44331d"/>
+		<rom name="03-25023-01.u27t" merge="03-25023-01.u27t" size="65536" crc="b80c5f99"/>
+		<rom name="03-25020-01.u15t" merge="03-25020-01.u15t" size="65536" crc="2a1a1c3c"/>
+		<rom name="03-25012-01.u93" merge="03-25012-01.u93" size="32768" crc="f0c1d8b0"/>
+		<rom name="03-25013-01.u94" merge="03-25013-01.u94" size="32768" crc="7460d8c0"/>
+		<rom name="03-25014-01.u95" merge="03-25014-01.u95" size="32768" crc="081ee7a8"/>
+		<rom name="03-25011-01.u92" merge="03-25011-01.u92" size="16384" crc="f9988e28"/>
+		<rom name="03-25009-01.u69" merge="03-25009-01.u69" size="16384" crc="fe5f8d8f"/>
+		<rom name="03-25010-01.u90" merge="03-25010-01.u90" size="16384" crc="bda2ecb1"/>
+		<rom name="03-25008-01.u67" merge="03-25008-01.u67" size="16384" crc="38c9bf29"/>
+		<rom name="eeprom-offroad.bin" merge="eeprom-offroad.bin" size="128" crc="57955248"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="offroadt" sourcefile="pre90s/d_leland.cpp">
+		<description>Ironman Ivan Stewart's Super Off-Road Track-Pak (rev 4?)</description>
+		<year>1989</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-25016-0x.u58t" size="65536" crc="adbc6211"/>
+		<rom name="03-25017-0x.u59t" size="65536" crc="296dd3b6"/>
+		<rom name="03-22120-01.u57t" size="65536" crc="e9f0f175"/>
+		<rom name="03-25015-01.u56t" size="65536" crc="2c1a22b3"/>
+		<rom name="03-25000-01.u3" size="8192" crc="95abb9f1"/>
+		<rom name="03-25001-01.u2t" size="65536" crc="c46c1627"/>
+		<rom name="03-25002-01.u3t" size="65536" crc="2276546f"/>
+		<rom name="03-25003-01.u4t" size="65536" crc="aa4b5975"/>
+		<rom name="03-25004-01.u5t" size="65536" crc="69100b06"/>
+		<rom name="03-25005-01.u6t" size="65536" crc="b75015b8"/>
+		<rom name="03-25006-01.u7t" size="65536" crc="a5af5b4f"/>
+		<rom name="03-25007-01.u8t" size="65536" crc="0f735078"/>
+		<rom name="03-25021-01.u25t" size="65536" crc="f952f800"/>
+		<rom name="03-25018-01.u13t" size="65536" crc="7beec9fc"/>
+		<rom name="03-25022-01.u26t" size="65536" crc="6227ea94"/>
+		<rom name="03-25019-01.u14t" size="65536" crc="0a44331d"/>
+		<rom name="03-25023-01.u27t" size="65536" crc="b80c5f99"/>
+		<rom name="03-25020-01.u15t" size="65536" crc="2a1a1c3c"/>
+		<rom name="03-25012-01.u93" size="32768" crc="f0c1d8b0"/>
+		<rom name="03-25013-01.u94" size="32768" crc="7460d8c0"/>
+		<rom name="03-25014-01.u95" size="32768" crc="081ee7a8"/>
+		<rom name="03-25011-01.u92" size="16384" crc="f9988e28"/>
+		<rom name="03-25009-01.u69" size="16384" crc="fe5f8d8f"/>
+		<rom name="03-25010-01.u90" size="16384" crc="bda2ecb1"/>
+		<rom name="03-25008-01.u67" size="16384" crc="38c9bf29"/>
+		<rom name="eeprom-offroad.bin" size="128" crc="57955248"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="itaten" sourcefile="pre90s/d_dacholer.cpp">
 		<description>Itazura Tenshi (Japan)</description>
 		<year>1984</year>
@@ -83889,6 +84694,105 @@
 		<rom name="mbn04" size="262144" crc="dcbd4771"/>
 		<rom name="mbn03" size="2097152" crc="70b71a2a"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="teamqb1" cloneof="teamqb" romof="teamqb" sourcefile="pre90s/d_leland.cpp">
+		<description>John Elway's Team Quarterback (rev 1)</description>
+		<year>1988</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15618-02.u58t" size="65536" crc="d175a252"/>
+		<rom name="03-15619-01.u59t" size="65536" crc="6e48c7c5"/>
+		<rom name="03-15600-01.u3" merge="03-15600-01.u3" size="8192" crc="46615844"/>
+		<rom name="03-15601-01.u2t" merge="03-15601-01.u2t" size="65536" crc="8e523c58"/>
+		<rom name="03-15602-01.u3t" merge="03-15602-01.u3t" size="65536" crc="545b27a1"/>
+		<rom name="03-15603-01.u4t" merge="03-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="03-15604-01.u5t" merge="03-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="03-15605-01.u6t" merge="03-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="03-15606-01.u7t" merge="03-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="03-15607-01.u8t" merge="03-15607-01.u8t" size="65536" crc="57cb6d2d"/>
+		<rom name="03-15623-01.u25t" merge="03-15623-01.u25t" size="65536" crc="710bdc76"/>
+		<rom name="03-15620-01.u13t" merge="03-15620-01.u13t" size="65536" crc="7e5cb8ad"/>
+		<rom name="03-15624-01.u26t" merge="03-15624-01.u26t" size="65536" crc="dd090d33"/>
+		<rom name="03-15621-01.u14t" merge="03-15621-01.u14t" size="65536" crc="f68c68c9"/>
+		<rom name="03-15625-01.u27t" merge="03-15625-01.u27t" size="65536" crc="ac442523"/>
+		<rom name="03-15622-01.u15t" merge="03-15622-01.u15t" size="65536" crc="9e84509a"/>
+		<rom name="03-15615-01.u93" merge="03-15615-01.u93" size="16384" crc="a7ea6a87"/>
+		<rom name="03-15616-01.u94" merge="03-15616-01.u94" size="16384" crc="4a9b3900"/>
+		<rom name="03-15617-01.u95" merge="03-15617-01.u95" size="16384" crc="2cd95edb"/>
+		<rom name="03-15611-01.u70" merge="03-15611-01.u70" size="16384" crc="bf2695fb"/>
+		<rom name="03-15614-01.u92" merge="03-15614-01.u92" size="16384" crc="c93fd870"/>
+		<rom name="03-15610-01.u69" merge="03-15610-01.u69" size="16384" crc="3e5b786f"/>
+		<rom name="03-15609-01.u68" merge="03-15609-01.u68" size="16384" crc="0319aec7"/>
+		<rom name="03-15613-01.u90" merge="03-15613-01.u90" size="16384" crc="4805802e"/>
+		<rom name="03-15608-01.u67" merge="03-15608-01.u67" size="16384" crc="78f0fd2b"/>
+		<rom name="eeprom-teamqb.bin" merge="eeprom-teamqb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="teamqb2" cloneof="teamqb" romof="teamqb" sourcefile="pre90s/d_leland.cpp">
+		<description>John Elway's Team Quarterback (rev 2)</description>
+		<year>1988</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15618-03.u58t" merge="03-15618-03.u58t" size="65536" crc="b32568dc"/>
+		<rom name="03-15619-02.u59t" size="65536" crc="6d533714"/>
+		<rom name="03-15600-01.u3" merge="03-15600-01.u3" size="8192" crc="46615844"/>
+		<rom name="03-15601-01.u2t" merge="03-15601-01.u2t" size="65536" crc="8e523c58"/>
+		<rom name="03-15602-01.u3t" merge="03-15602-01.u3t" size="65536" crc="545b27a1"/>
+		<rom name="03-15603-01.u4t" merge="03-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="03-15604-01.u5t" merge="03-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="03-15605-01.u6t" merge="03-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="03-15606-01.u7t" merge="03-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="03-15607-01.u8t" merge="03-15607-01.u8t" size="65536" crc="57cb6d2d"/>
+		<rom name="03-15623-01.u25t" merge="03-15623-01.u25t" size="65536" crc="710bdc76"/>
+		<rom name="03-15620-01.u13t" merge="03-15620-01.u13t" size="65536" crc="7e5cb8ad"/>
+		<rom name="03-15624-01.u26t" merge="03-15624-01.u26t" size="65536" crc="dd090d33"/>
+		<rom name="03-15621-01.u14t" merge="03-15621-01.u14t" size="65536" crc="f68c68c9"/>
+		<rom name="03-15625-01.u27t" merge="03-15625-01.u27t" size="65536" crc="ac442523"/>
+		<rom name="03-15622-01.u15t" merge="03-15622-01.u15t" size="65536" crc="9e84509a"/>
+		<rom name="03-15615-01.u93" merge="03-15615-01.u93" size="16384" crc="a7ea6a87"/>
+		<rom name="03-15616-01.u94" merge="03-15616-01.u94" size="16384" crc="4a9b3900"/>
+		<rom name="03-15617-01.u95" merge="03-15617-01.u95" size="16384" crc="2cd95edb"/>
+		<rom name="03-15611-01.u70" merge="03-15611-01.u70" size="16384" crc="bf2695fb"/>
+		<rom name="03-15614-01.u92" merge="03-15614-01.u92" size="16384" crc="c93fd870"/>
+		<rom name="03-15610-01.u69" merge="03-15610-01.u69" size="16384" crc="3e5b786f"/>
+		<rom name="03-15609-01.u68" merge="03-15609-01.u68" size="16384" crc="0319aec7"/>
+		<rom name="03-15613-01.u90" merge="03-15613-01.u90" size="16384" crc="4805802e"/>
+		<rom name="03-15608-01.u67" merge="03-15608-01.u67" size="16384" crc="78f0fd2b"/>
+		<rom name="eeprom-teamqb.bin" merge="eeprom-teamqb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="teamqb" sourcefile="pre90s/d_leland.cpp">
+		<description>John Elway's Team Quarterback (rev 3)</description>
+		<year>1988</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15618-03.u58t" size="65536" crc="b32568dc"/>
+		<rom name="03-15619-03.u59t" size="65536" crc="40b3319f"/>
+		<rom name="03-15600-01.u3" size="8192" crc="46615844"/>
+		<rom name="03-15601-01.u2t" size="65536" crc="8e523c58"/>
+		<rom name="03-15602-01.u3t" size="65536" crc="545b27a1"/>
+		<rom name="03-15603-01.u4t" size="65536" crc="cdc9c09d"/>
+		<rom name="03-15604-01.u5t" size="65536" crc="3c03e92e"/>
+		<rom name="03-15605-01.u6t" size="65536" crc="cdf7d19c"/>
+		<rom name="03-15606-01.u7t" size="65536" crc="8eeb007c"/>
+		<rom name="03-15607-01.u8t" size="65536" crc="57cb6d2d"/>
+		<rom name="03-15623-01.u25t" size="65536" crc="710bdc76"/>
+		<rom name="03-15620-01.u13t" size="65536" crc="7e5cb8ad"/>
+		<rom name="03-15624-01.u26t" size="65536" crc="dd090d33"/>
+		<rom name="03-15621-01.u14t" size="65536" crc="f68c68c9"/>
+		<rom name="03-15625-01.u27t" size="65536" crc="ac442523"/>
+		<rom name="03-15622-01.u15t" size="65536" crc="9e84509a"/>
+		<rom name="03-15615-01.u93" size="16384" crc="a7ea6a87"/>
+		<rom name="03-15616-01.u94" size="16384" crc="4a9b3900"/>
+		<rom name="03-15617-01.u95" size="16384" crc="2cd95edb"/>
+		<rom name="03-15611-01.u70" size="16384" crc="bf2695fb"/>
+		<rom name="03-15614-01.u92" size="16384" crc="c93fd870"/>
+		<rom name="03-15610-01.u69" size="16384" crc="3e5b786f"/>
+		<rom name="03-15609-01.u68" size="16384" crc="0319aec7"/>
+		<rom name="03-15613-01.u90" size="16384" crc="4805802e"/>
+		<rom name="03-15608-01.u67" size="16384" crc="78f0fd2b"/>
+		<rom name="eeprom-teamqb.bin" size="128" crc="119fb1e7"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="joinem" sourcefile="pre90s/d_jack.cpp">
@@ -99010,6 +99914,42 @@
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="magspot" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>no sfx</comment>
+		<description>Magical Spot</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="ms1.bin" size="2048" crc="59e9019d"/>
+		<rom name="ms2.bin" size="2048" crc="98b913b1"/>
+		<rom name="ms3.bin" size="2048" crc="ea58c124"/>
+		<rom name="ms5.bin" size="2048" crc="4302a658"/>
+		<rom name="ms4.bin" size="2048" crc="088582ab"/>
+		<rom name="ms6.bin" size="2048" crc="e6bf492c"/>
+		<rom name="ms8.bin" size="2048" crc="9e1d63a2"/>
+		<rom name="ms7.bin" size="2048" crc="1ab338d3"/>
+		<rom name="ms.d9" size="32" crc="36e2aa2a"/>
+		<rom name="ms.e2" size="1024" crc="89f23ebd"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="magspot2" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>no sfx</comment>
+		<description>Magical Spot II</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="ms.e3" size="2048" crc="c0085ade"/>
+		<rom name="ms.e4" size="2048" crc="d534a68b"/>
+		<rom name="ms.e5" size="2048" crc="25513b2a"/>
+		<rom name="ms.e7" size="2048" crc="8836bbc4"/>
+		<rom name="ms.e6" size="2048" crc="6a08ab94"/>
+		<rom name="ms.e8" size="2048" crc="77c6d109"/>
+		<rom name="ms.n2" size="2048" crc="9e1d63a2"/>
+		<rom name="ms.n1" size="2048" crc="1ab338d3"/>
+		<rom name="ms.d9" size="32" crc="36e2aa2a"/>
+		<rom name="ms.e2" size="1024" crc="89f23ebd"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="magicbal" sourcefile="pst90s/d_tumbleb.cpp">
 		<description>Magicball Fighting (Korea)</description>
 		<year>1994</year>
@@ -103677,6 +104617,33 @@
 		<rom name="rom6a.bin" size="2048" crc="8e4e981f"/>
 		<rom name="rom8-sos.bin" size="2048" crc="6a9b383f"/>
 		<video type="raster" orientation="horizontal" width="292" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mayhem" sourcefile="pre90s/d_leland.cpp">
+		<description>Mayhem 2002</description>
+		<year>1985</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="13208.101" size="16384" crc="04306973"/>
+		<rom name="13215.102" size="16384" crc="06e689ae"/>
+		<rom name="13216.103" size="16384" crc="6452a82c"/>
+		<rom name="13217.104" size="16384" crc="62f6036e"/>
+		<rom name="13218.105" size="16384" crc="162f5eb1"/>
+		<rom name="13219.106" size="16384" crc="c0a74d6f"/>
+		<rom name="13207.3" size="16384" crc="be1df6aa"/>
+		<rom name="13209.4" size="16384" crc="39fcd7c6"/>
+		<rom name="13210.5" size="16384" crc="630ed136"/>
+		<rom name="13211.6" size="16384" crc="28b4aecd"/>
+		<rom name="13212.7" size="16384" crc="1d6b39ab"/>
+		<rom name="13213.8" size="16384" crc="f3b2ea05"/>
+		<rom name="13214.9" size="16384" crc="96f3e8d9"/>
+		<rom name="13204.93" size="16384" crc="de183518"/>
+		<rom name="13205.94" size="16384" crc="c61f63ac"/>
+		<rom name="13206.95" size="16384" crc="8e7bd2fd"/>
+		<rom name="13203.92" size="16384" crc="121ed5bf"/>
+		<rom name="13201.69" size="16384" crc="90283e29"/>
+		<rom name="13202.89" size="16384" crc="c5eaa4e3"/>
+		<rom name="eeprom-mayhem.bin" size="128" crc="52bc0453"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="mazebl" cloneof="trog" romof="trog" sourcefile="midway/d_yunit.cpp">
@@ -122104,63 +123071,6 @@
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="turfmastplus" cloneof="turfmast" romof="turfmast" sourcefile="neogeo/d_neogeo.cpp">
-		<comment>Hack</comment>
-		<description>Neo Turf Masters / Big Tournament Golf (Hack, Plus v2.0)</description>
-		<year>2026</year>
-		<manufacturer>hack (TheEnemy)</manufacturer>
-		<rom name="200-p1pl.p1" size="2097152" crc="b41f72c1"/>
-		<rom name="200-s1pl.s1" size="131072" crc="df08a9ae"/>
-		<rom name="200-c1pl.c1" size="4194304" crc="bace1b78"/>
-		<rom name="200-c2pl.c2" size="4194304" crc="b007fea9"/>
-		<rom name="200-c3pl.c3" size="4194304" crc="10fc8214"/>
-		<rom name="200-c4pl.c4" size="4194304" crc="0f83f209"/>
-		<rom name="200-m1pl.m1" size="131072" crc="3547983f"/>
-		<rom name="200-v1.v1" merge="200-v1.v1" size="2097152" crc="00fd48d2"/>
-		<rom name="200-v2.v2" merge="200-v2.v2" size="2097152" crc="082acb31"/>
-		<rom name="200-v3.v3" merge="200-v3.v3" size="2097152" crc="7abca053"/>
-		<rom name="200-v4pl.v4" size="2097152" crc="176d83aa"/>
-		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
-		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
-		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
-		<rom name="sp-u2.sp1" merge="sp-u2.sp1" size="131072" crc="e72943de"/>
-		<rom name="sp1-u2" merge="sp1-u2" size="131072" crc="62f021f4"/>
-		<rom name="sp-e.sp1" merge="sp-e.sp1" size="131072" crc="2723a5b5"/>
-		<rom name="sp1-u4.bin" merge="sp1-u4.bin" size="131072" crc="1179a30f"/>
-		<rom name="sp1-u3.bin" merge="sp1-u3.bin" size="131072" crc="2025b7a2"/>
-		<rom name="vs-bios.rom" merge="vs-bios.rom" size="131072" crc="f0e8f27d"/>
-		<rom name="sp-j2.sp1" merge="sp-j2.sp1" size="131072" crc="acede59c"/>
-		<rom name="sp1.jipan.1024" merge="sp1.jipan.1024" size="131072" crc="9fb0abe4"/>
-		<rom name="sp-45.sp1" merge="sp-45.sp1" size="524288" crc="03cc9f6a"/>
-		<rom name="sp-j3.sp1" merge="sp-j3.sp1" size="524288" crc="486cb450"/>
-		<rom name="japan-j3.bin" merge="japan-j3.bin" size="131072" crc="dff6d41f"/>
-		<rom name="sp1-j3.bin" merge="sp1-j3.bin" size="131072" crc="fbc6d469"/>
-		<rom name="neo-po.bin" merge="neo-po.bin" size="131072" crc="16d0c132"/>
-		<rom name="neo-epo.bin" merge="neo-epo.bin" size="131072" crc="d27a71f1"/>
-		<rom name="neodebug.bin" merge="neodebug.bin" size="131072" crc="698ebb7d"/>
-		<rom name="sp-1v1_3db8c.bin" merge="sp-1v1_3db8c.bin" size="131072" crc="162f0ebe"/>
-		<rom name="uni-bios_4_0.rom" merge="uni-bios_4_0.rom" size="131072" crc="a7aab458"/>
-		<rom name="uni-bios_3_3.rom" merge="uni-bios_3_3.rom" size="131072" crc="24858466"/>
-		<rom name="uni-bios_3_2.rom" merge="uni-bios_3_2.rom" size="131072" crc="a4e8b9b3"/>
-		<rom name="uni-bios_3_1.rom" merge="uni-bios_3_1.rom" size="131072" crc="0c58093f"/>
-		<rom name="uni-bios_3_0.rom" merge="uni-bios_3_0.rom" size="131072" crc="a97c89a9"/>
-		<rom name="uni-bios_2_3.rom" merge="uni-bios_2_3.rom" size="131072" crc="27664eb5"/>
-		<rom name="uni-bios_2_3o.rom" merge="uni-bios_2_3o.rom" size="131072" crc="601720ae"/>
-		<rom name="uni-bios_2_2.rom" merge="uni-bios_2_2.rom" size="131072" crc="2d50996a"/>
-		<rom name="uni-bios_2_1.rom" merge="uni-bios_2_1.rom" size="131072" crc="8dabf76b"/>
-		<rom name="uni-bios_2_0.rom" merge="uni-bios_2_0.rom" size="131072" crc="0c12c2ad"/>
-		<rom name="uni-bios_1_3.rom" merge="uni-bios_1_3.rom" size="131072" crc="b24b44a0"/>
-		<rom name="uni-bios_1_2.rom" merge="uni-bios_1_2.rom" size="131072" crc="4fa698e9"/>
-		<rom name="uni-bios_1_2o.rom" merge="uni-bios_1_2o.rom" size="131072" crc="e19d3ce9"/>
-		<rom name="uni-bios_1_1.rom" merge="uni-bios_1_1.rom" size="131072" crc="5dda0d84"/>
-		<rom name="uni-bios_1_0.rom" merge="uni-bios_1_0.rom" size="131072" crc="0ce453a0"/>
-		<rom name="neopen.sp1" merge="neopen.sp1" size="131072" crc="cb915e76"/>
-		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
-		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
-		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
-		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="turfmastsc" cloneof="turfmast" romof="turfmast" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Hack</comment>
 		<description>Neo Turf Masters / Big Tournament Golf: Scotland Course (Hack, v1.10)</description>
@@ -122229,6 +123139,63 @@
 		<rom name="200-v2.v2" size="2097152" crc="082acb31"/>
 		<rom name="200-v3.v3" size="2097152" crc="7abca053"/>
 		<rom name="200-v4.v4" size="2097152" crc="6c7b4902"/>
+		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
+		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
+		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
+		<rom name="sp-u2.sp1" merge="sp-u2.sp1" size="131072" crc="e72943de"/>
+		<rom name="sp1-u2" merge="sp1-u2" size="131072" crc="62f021f4"/>
+		<rom name="sp-e.sp1" merge="sp-e.sp1" size="131072" crc="2723a5b5"/>
+		<rom name="sp1-u4.bin" merge="sp1-u4.bin" size="131072" crc="1179a30f"/>
+		<rom name="sp1-u3.bin" merge="sp1-u3.bin" size="131072" crc="2025b7a2"/>
+		<rom name="vs-bios.rom" merge="vs-bios.rom" size="131072" crc="f0e8f27d"/>
+		<rom name="sp-j2.sp1" merge="sp-j2.sp1" size="131072" crc="acede59c"/>
+		<rom name="sp1.jipan.1024" merge="sp1.jipan.1024" size="131072" crc="9fb0abe4"/>
+		<rom name="sp-45.sp1" merge="sp-45.sp1" size="524288" crc="03cc9f6a"/>
+		<rom name="sp-j3.sp1" merge="sp-j3.sp1" size="524288" crc="486cb450"/>
+		<rom name="japan-j3.bin" merge="japan-j3.bin" size="131072" crc="dff6d41f"/>
+		<rom name="sp1-j3.bin" merge="sp1-j3.bin" size="131072" crc="fbc6d469"/>
+		<rom name="neo-po.bin" merge="neo-po.bin" size="131072" crc="16d0c132"/>
+		<rom name="neo-epo.bin" merge="neo-epo.bin" size="131072" crc="d27a71f1"/>
+		<rom name="neodebug.bin" merge="neodebug.bin" size="131072" crc="698ebb7d"/>
+		<rom name="sp-1v1_3db8c.bin" merge="sp-1v1_3db8c.bin" size="131072" crc="162f0ebe"/>
+		<rom name="uni-bios_4_0.rom" merge="uni-bios_4_0.rom" size="131072" crc="a7aab458"/>
+		<rom name="uni-bios_3_3.rom" merge="uni-bios_3_3.rom" size="131072" crc="24858466"/>
+		<rom name="uni-bios_3_2.rom" merge="uni-bios_3_2.rom" size="131072" crc="a4e8b9b3"/>
+		<rom name="uni-bios_3_1.rom" merge="uni-bios_3_1.rom" size="131072" crc="0c58093f"/>
+		<rom name="uni-bios_3_0.rom" merge="uni-bios_3_0.rom" size="131072" crc="a97c89a9"/>
+		<rom name="uni-bios_2_3.rom" merge="uni-bios_2_3.rom" size="131072" crc="27664eb5"/>
+		<rom name="uni-bios_2_3o.rom" merge="uni-bios_2_3o.rom" size="131072" crc="601720ae"/>
+		<rom name="uni-bios_2_2.rom" merge="uni-bios_2_2.rom" size="131072" crc="2d50996a"/>
+		<rom name="uni-bios_2_1.rom" merge="uni-bios_2_1.rom" size="131072" crc="8dabf76b"/>
+		<rom name="uni-bios_2_0.rom" merge="uni-bios_2_0.rom" size="131072" crc="0c12c2ad"/>
+		<rom name="uni-bios_1_3.rom" merge="uni-bios_1_3.rom" size="131072" crc="b24b44a0"/>
+		<rom name="uni-bios_1_2.rom" merge="uni-bios_1_2.rom" size="131072" crc="4fa698e9"/>
+		<rom name="uni-bios_1_2o.rom" merge="uni-bios_1_2o.rom" size="131072" crc="e19d3ce9"/>
+		<rom name="uni-bios_1_1.rom" merge="uni-bios_1_1.rom" size="131072" crc="5dda0d84"/>
+		<rom name="uni-bios_1_0.rom" merge="uni-bios_1_0.rom" size="131072" crc="0ce453a0"/>
+		<rom name="neopen.sp1" merge="neopen.sp1" size="131072" crc="cb915e76"/>
+		<rom name="sm1.sm1" merge="sm1.sm1" size="131072" crc="94416d67"/>
+		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
+		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
+		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="turfmastplus" cloneof="turfmast" romof="turfmast" sourcefile="neogeo/d_neogeo.cpp">
+		<comment>Hack</comment>
+		<description>Neo Turf Masters Plus / Big Tournament Golf Plus (Hack, v2.0)</description>
+		<year>2026</year>
+		<manufacturer>hack (TheEnemy)</manufacturer>
+		<rom name="200-p1pl.p1" size="2097152" crc="b41f72c1"/>
+		<rom name="200-s1pl.s1" size="131072" crc="df08a9ae"/>
+		<rom name="200-c1pl.c1" size="4194304" crc="bace1b78"/>
+		<rom name="200-c2pl.c2" size="4194304" crc="b007fea9"/>
+		<rom name="200-c3pl.c3" size="4194304" crc="10fc8214"/>
+		<rom name="200-c4pl.c4" size="4194304" crc="0f83f209"/>
+		<rom name="200-m1pl.m1" size="131072" crc="3547983f"/>
+		<rom name="200-v1.v1" merge="200-v1.v1" size="2097152" crc="00fd48d2"/>
+		<rom name="200-v2.v2" merge="200-v2.v2" size="2097152" crc="082acb31"/>
+		<rom name="200-v3.v3" merge="200-v3.v3" size="2097152" crc="7abca053"/>
+		<rom name="200-v4pl.v4" size="2097152" crc="176d83aa"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
 		<rom name="sp-s.sp1" merge="sp-s.sp1" size="131072" crc="c7f2fa45"/>
@@ -125196,6 +126163,26 @@
 		<rom name="mav11.r19" merge="mav11.r19" size="524288" crc="ef513908"/>
 		<rom name="jn-00.17l" merge="jn-00.17l" size="1024" crc="6ac77b84"/>
 		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="nomnlndg" cloneof="nomnlnd" romof="nomnlnd" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>no sfx</comment>
+		<description>No Man's Land (Gottlieb)</description>
+		<year>1980</year>
+		<manufacturer>Universal (Gottlieb license)</manufacturer>
+		<rom name="nml1.e3" size="2048" crc="e212ed91"/>
+		<rom name="nml2.e4" size="2048" crc="f66ef3d8"/>
+		<rom name="nml3.e5" size="2048" crc="d422fc8a"/>
+		<rom name="nml5.e7" size="2048" crc="d58952ac"/>
+		<rom name="nml4.e6" size="2048" crc="994c9afb"/>
+		<rom name="nml6.e8" size="2048" crc="01ed2d8c"/>
+		<rom name="nml8.n2" merge="nml8.n2" size="2048" crc="739009b4"/>
+		<rom name="nml7.n1" merge="nml7.n1" size="2048" crc="d08ed22f"/>
+		<rom name="nml.d9" merge="nml.d9" size="32" crc="65e911f9"/>
+		<rom name="nl9.e2" merge="nl9.e2" size="1024" crc="9e05f14e"/>
+		<rom name="nl10.ic4" merge="nl10.ic4" size="1024" crc="5b13f64e"/>
+		<rom name="nl11.ic7" merge="nl11.ic7" size="1024" crc="e717b241"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="nob" sourcefile="sega/d_sys1.cpp">
@@ -132651,6 +133638,114 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="pigouta" cloneof="pigout" romof="pigout" sourcefile="pre90s/d_leland.cpp">
+		<description>Pig Out: Dine Like a Swine! (rev 1)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-29020-01.u58t" size="65536" crc="6c815982"/>
+		<rom name="03-29021-01.u59t" size="65536" crc="9de7a763"/>
+		<rom name="03-29019-01.u57t" merge="03-29019-01.u57t" size="65536" crc="c22be0ff"/>
+		<rom name="03-29000-01.u3" merge="03-29000-01.u3" size="8192" crc="af213cb7"/>
+		<rom name="03-29001-01.u2t" merge="03-29001-01.u2t" size="65536" crc="b23164c6"/>
+		<rom name="03-29002-01.u3t" merge="03-29002-01.u3t" size="65536" crc="d93f105f"/>
+		<rom name="03-29003-01.u4t" merge="03-29003-01.u4t" size="65536" crc="b7c47bfe"/>
+		<rom name="03-29004-01.u5t" merge="03-29004-01.u5t" size="65536" crc="d9b9dfbf"/>
+		<rom name="03-29005-01.u6t" merge="03-29005-01.u6t" size="65536" crc="728c7c1a"/>
+		<rom name="03-29006-01.u7t" merge="03-29006-01.u7t" size="65536" crc="393bd990"/>
+		<rom name="03-29007-01.u8t" merge="03-29007-01.u8t" size="65536" crc="cb9ffaad"/>
+		<rom name="03-29025-01.u25t" merge="03-29025-01.u25t" size="65536" crc="92cd2617"/>
+		<rom name="03-29022-01.u13t" merge="03-29022-01.u13t" size="65536" crc="9448c389"/>
+		<rom name="03-29026-01.u26t" merge="03-29026-01.u26t" size="65536" crc="ab57de8f"/>
+		<rom name="03-29023-01.u14t" merge="03-29023-01.u14t" size="65536" crc="30678e93"/>
+		<rom name="03-29027-01.u27t" merge="03-29027-01.u27t" size="65536" crc="37a8156e"/>
+		<rom name="03-29024-01.u15t" merge="03-29024-01.u15t" size="65536" crc="1c60d58b"/>
+		<rom name="03-29016-01.u93" merge="03-29016-01.u93" size="32768" crc="f102a04d"/>
+		<rom name="03-29017-01.u94" merge="03-29017-01.u94" size="32768" crc="ec63c015"/>
+		<rom name="03-29018-01.u95" merge="03-29018-01.u95" size="32768" crc="ba6e797e"/>
+		<rom name="03-29011-01.u70" merge="03-29011-01.u70" size="16384" crc="7db4eaa1"/>
+		<rom name="03-29015-01.u92" merge="03-29015-01.u92" size="16384" crc="20fa57bb"/>
+		<rom name="03-29010-01.u69" merge="03-29010-01.u69" size="16384" crc="a16886f3"/>
+		<rom name="03-29014-01.u91" merge="03-29014-01.u91" size="16384" crc="482a3581"/>
+		<rom name="03-29009-01.u68" merge="03-29009-01.u68" size="16384" crc="7b62a3ed"/>
+		<rom name="03-29013-01.u90" merge="03-29013-01.u90" size="16384" crc="9615d710"/>
+		<rom name="03-29008-01.u67" merge="03-29008-01.u67" size="16384" crc="af85ce79"/>
+		<rom name="03-29012-01.u89" merge="03-29012-01.u89" size="16384" crc="6c874a05"/>
+		<rom name="eeprom-pigout.bin" merge="eeprom-pigout.bin" size="128" crc="9646fa72"/>
+		<rom name="35-01.u44" size="260" status="nodump"/>
+		<rom name="36-01.u43" size="260" status="nodump"/>
+		<rom name="37-01.u42" size="260" status="nodump"/>
+		<rom name="38-01.u9" size="204" status="nodump"/>
+		<rom name="39-01.u55" size="329" status="nodump"/>
+		<rom name="40-01.u68" size="329" status="nodump"/>
+		<rom name="41-02.u54" size="260" status="nodump"/>
+		<rom name="01-01.u96" size="260" status="nodump"/>
+		<rom name="02-29.u85" size="260" status="nodump"/>
+		<rom name="03-01.u16" size="260" status="nodump"/>
+		<rom name="04-01.u17" size="260" status="nodump"/>
+		<rom name="05-01.u21" size="204" status="nodump"/>
+		<rom name="06-01.u19" size="204" status="nodump"/>
+		<rom name="07-01.u43" size="260" status="nodump"/>
+		<rom name="08-01.u42" size="260" status="nodump"/>
+		<rom name="09-01.u40" size="260" status="nodump"/>
+		<rom name="10-01.u26" size="260" status="nodump"/>
+		<rom name="11-01.u27" size="260" status="nodump"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="pigout" sourcefile="pre90s/d_leland.cpp">
+		<description>Pig Out: Dine Like a Swine! (rev 2?)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-29020-0x.u58t" size="65536" crc="8fe4b683"/>
+		<rom name="03-29021-0x.u59t" size="65536" crc="ab907762"/>
+		<rom name="03-29019-01.u57t" size="65536" crc="c22be0ff"/>
+		<rom name="03-29000-01.u3" size="8192" crc="af213cb7"/>
+		<rom name="03-29001-01.u2t" size="65536" crc="b23164c6"/>
+		<rom name="03-29002-01.u3t" size="65536" crc="d93f105f"/>
+		<rom name="03-29003-01.u4t" size="65536" crc="b7c47bfe"/>
+		<rom name="03-29004-01.u5t" size="65536" crc="d9b9dfbf"/>
+		<rom name="03-29005-01.u6t" size="65536" crc="728c7c1a"/>
+		<rom name="03-29006-01.u7t" size="65536" crc="393bd990"/>
+		<rom name="03-29007-01.u8t" size="65536" crc="cb9ffaad"/>
+		<rom name="03-29025-01.u25t" size="65536" crc="92cd2617"/>
+		<rom name="03-29022-01.u13t" size="65536" crc="9448c389"/>
+		<rom name="03-29026-01.u26t" size="65536" crc="ab57de8f"/>
+		<rom name="03-29023-01.u14t" size="65536" crc="30678e93"/>
+		<rom name="03-29027-01.u27t" size="65536" crc="37a8156e"/>
+		<rom name="03-29024-01.u15t" size="65536" crc="1c60d58b"/>
+		<rom name="03-29016-01.u93" size="32768" crc="f102a04d"/>
+		<rom name="03-29017-01.u94" size="32768" crc="ec63c015"/>
+		<rom name="03-29018-01.u95" size="32768" crc="ba6e797e"/>
+		<rom name="03-29011-01.u70" size="16384" crc="7db4eaa1"/>
+		<rom name="03-29015-01.u92" size="16384" crc="20fa57bb"/>
+		<rom name="03-29010-01.u69" size="16384" crc="a16886f3"/>
+		<rom name="03-29014-01.u91" size="16384" crc="482a3581"/>
+		<rom name="03-29009-01.u68" size="16384" crc="7b62a3ed"/>
+		<rom name="03-29013-01.u90" size="16384" crc="9615d710"/>
+		<rom name="03-29008-01.u67" size="16384" crc="af85ce79"/>
+		<rom name="03-29012-01.u89" size="16384" crc="6c874a05"/>
+		<rom name="eeprom-pigout.bin" size="128" crc="9646fa72"/>
+		<rom name="35-01.u44" size="260" status="nodump"/>
+		<rom name="36-01.u43" size="260" status="nodump"/>
+		<rom name="37-01.u42" size="260" status="nodump"/>
+		<rom name="38-01.u9" size="204" status="nodump"/>
+		<rom name="39-01.u55" size="329" status="nodump"/>
+		<rom name="40-01.u68" size="329" status="nodump"/>
+		<rom name="41-02.u54" size="260" status="nodump"/>
+		<rom name="01-01.u96" size="260" status="nodump"/>
+		<rom name="02-29.u85" size="260" status="nodump"/>
+		<rom name="03-01.u16" size="260" status="nodump"/>
+		<rom name="04-01.u17" size="260" status="nodump"/>
+		<rom name="05-01.u21" size="204" status="nodump"/>
+		<rom name="06-01.u19" size="204" status="nodump"/>
+		<rom name="07-01.u43" size="260" status="nodump"/>
+		<rom name="08-01.u42" size="260" status="nodump"/>
+		<rom name="09-01.u40" size="260" status="nodump"/>
+		<rom name="10-01.u26" size="260" status="nodump"/>
+		<rom name="11-01.u27" size="260" status="nodump"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="pigskinb" cloneof="pigskin" romof="pigskin" sourcefile="pre90s/d_mcr68.cpp">
 		<description>Pigskin 621AD (rev 1.1 6/05/90)</description>
 		<year>1990</year>
@@ -136621,6 +137716,30 @@
 		<rom name="peel18cv8p-15.u7" merge="peel18cv8p-15.u7" size="341" crc="e02b2d2b"/>
 		<rom name="peel18cv8p-15.u21" merge="peel18cv8p-15.u21" size="341" crc="7ca78400"/>
 		<rom name="peel18cv8p-15.u25" merge="peel18cv8p-15.u25" size="341" crc="61b414df"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="powrplay" sourcefile="pre90s/d_leland.cpp">
+		<description>Power Play</description>
+		<year>1985</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="13306.101" size="8192" crc="981fc215"/>
+		<rom name="13307.102" size="16384" crc="38a6ddfe"/>
+		<rom name="13308.103" size="16384" crc="7fa2ab9e"/>
+		<rom name="13309.104" size="16384" crc="bd9e6fa8"/>
+		<rom name="13310.105" size="16384" crc="b6df3a5a"/>
+		<rom name="13311.106" size="16384" crc="5e17fe84"/>
+		<rom name="13305.003" size="8192" crc="df8fbeed"/>
+		<rom name="13313.004" size="16384" crc="081eb88f"/>
+		<rom name="13314.005" size="16384" crc="b8e61f8c"/>
+		<rom name="13315.006" size="16384" crc="776d3c40"/>
+		<rom name="13316.007" size="16384" crc="9b3ec2a1"/>
+		<rom name="13317.008" size="16384" crc="a081a031"/>
+		<rom name="13302.093" size="8192" crc="9beaa403"/>
+		<rom name="13303.094" size="8192" crc="2bf711d0"/>
+		<rom name="13304.095" size="8192" crc="06b8675b"/>
+		<rom name="13301.070" size="8192" crc="aa6d3b9d"/>
+		<rom name="eeprom-powrplay.bin" size="128" crc="0a999b1e"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -141348,6 +142467,102 @@
 		<rom name="136002-125.6h" size="256" crc="5903af03"/>
 		<rom name="cf2038n.1b" size="235" crc="b372fa4f"/>
 		<video type="vector" orientation="vertical" width="480" height="640" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="quarterbc" cloneof="quarterb" romof="quarterb" sourcefile="pre90s/d_leland.cpp">
+		<description>Quarterback (rev 1, cocktail)</description>
+		<year>1987</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15506-01.u49t" size="65536" crc="d750c5ed"/>
+		<rom name="03-15505-01.u48t" size="65536" crc="e17b8a92"/>
+		<rom name="03-15200-01.u3" merge="03-15200-01.u3" size="16384" crc="83297861"/>
+		<rom name="03-15201-01.u4" merge="03-15201-01.u4" size="16384" crc="af8dbdab"/>
+		<rom name="03-15202-01.u5" merge="03-15202-01.u5" size="16384" crc="3eeecb3d"/>
+		<rom name="03-15203-01.u6" merge="03-15203-01.u6" size="16384" crc="b9c5b663"/>
+		<rom name="03-15204-01.u7" merge="03-15204-01.u7" size="16384" crc="c68821b7"/>
+		<rom name="03-15205-01.u8" merge="03-15205-01.u8" size="16384" crc="2be843a9"/>
+		<rom name="03-15206-01.u9" merge="03-15206-01.u9" size="16384" crc="6bf8d4ab"/>
+		<rom name="03-15222-02.u45t" merge="03-15222-02.u45t" size="65536" crc="710bdc76"/>
+		<rom name="03-15225-02.u62t" merge="03-15225-02.u62t" size="65536" crc="041cecde"/>
+		<rom name="03-15221-02.u44t" merge="03-15221-02.u44t" size="65536" crc="e0459ddb"/>
+		<rom name="03-15224-02.u61t" merge="03-15224-02.u61t" size="65536" crc="9027c579"/>
+		<rom name="03-15220-02.u43t" merge="03-15220-02.u43t" size="65536" crc="48a8a018"/>
+		<rom name="03-15223-02.u60t" merge="03-15223-02.u60t" size="65536" crc="6a299766"/>
+		<rom name="03-15502-01.u93" size="16384" crc="5c2abd20"/>
+		<rom name="03-15503-01.u94" size="16384" crc="544a192c"/>
+		<rom name="03-15504-01.u95" size="16384" crc="c8bb7ab4"/>
+		<rom name="03-15500-01.u70" size="16384" crc="1cf82a44"/>
+		<rom name="03-15501-01.u92" size="16384" crc="281be799"/>
+		<rom name="03-15209-01.u69" merge="03-15209-01.u69" size="16384" crc="0f5d74a4"/>
+		<rom name="03-15208-01.u68" merge="03-15208-01.u68" size="16384" crc="0319aec7"/>
+		<rom name="03-15212-01.u90" merge="03-15212-01.u90" size="16384" crc="38b298d6"/>
+		<rom name="03-15207-01.u67" merge="03-15207-01.u67" size="16384" crc="5ff86aad"/>
+		<rom name="eeprom-quarterb.bin" merge="eeprom-quarterb.bin" size="128" crc="99d8c2ef"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="quarterba" cloneof="quarterb" romof="quarterb" sourcefile="pre90s/d_leland.cpp">
+		<description>Quarterback (rev 2)</description>
+		<year>1987</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15219-02.u49t" size="65536" crc="7fbe1e5a"/>
+		<rom name="03-15218-02.u48t" size="65536" crc="6fbd4b27"/>
+		<rom name="03-15200-01.u3" merge="03-15200-01.u3" size="16384" crc="83297861"/>
+		<rom name="03-15201-01.u4" merge="03-15201-01.u4" size="16384" crc="af8dbdab"/>
+		<rom name="03-15202-01.u5" merge="03-15202-01.u5" size="16384" crc="3eeecb3d"/>
+		<rom name="03-15203-01.u6" merge="03-15203-01.u6" size="16384" crc="b9c5b663"/>
+		<rom name="03-15204-01.u7" merge="03-15204-01.u7" size="16384" crc="c68821b7"/>
+		<rom name="03-15205-01.u8" merge="03-15205-01.u8" size="16384" crc="2be843a9"/>
+		<rom name="03-15206-01.u9" merge="03-15206-01.u9" size="16384" crc="6bf8d4ab"/>
+		<rom name="03-15222-01.u45t" size="65536" crc="722d1a19"/>
+		<rom name="03-15225-01.u62t" size="65536" crc="f8c20496"/>
+		<rom name="03-15221-01.u44t" size="65536" crc="bc6abaaf"/>
+		<rom name="03-15224-01.u61t" size="65536" crc="7ce3c3b7"/>
+		<rom name="03-15220-01.u43t" size="65536" crc="ccb6c8d7"/>
+		<rom name="03-15223-01.u60t" size="65536" crc="c0ee425d"/>
+		<rom name="03-15215-01.u93" merge="03-15215-01.u93" size="16384" crc="4fb678d7"/>
+		<rom name="03-15216-01.u94" merge="03-15216-01.u94" size="16384" crc="7b57a44c"/>
+		<rom name="03-15217-01.u95" merge="03-15217-01.u95" size="16384" crc="29bc33fd"/>
+		<rom name="03-15210-01.u70" merge="03-15210-01.u70" size="16384" crc="a5aea20e"/>
+		<rom name="03-15214-01.u92" merge="03-15214-01.u92" size="16384" crc="36f261ca"/>
+		<rom name="03-15209-01.u69" merge="03-15209-01.u69" size="16384" crc="0f5d74a4"/>
+		<rom name="03-15208-01.u68" merge="03-15208-01.u68" size="16384" crc="0319aec7"/>
+		<rom name="03-15212-01.u90" merge="03-15212-01.u90" size="16384" crc="38b298d6"/>
+		<rom name="03-15207-01.u67" merge="03-15207-01.u67" size="16384" crc="5ff86aad"/>
+		<rom name="eeprom-quarterb.bin" merge="eeprom-quarterb.bin" size="128" crc="99d8c2ef"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="quarterb" sourcefile="pre90s/d_leland.cpp">
+		<description>Quarterback (rev 5)</description>
+		<year>1987</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15219-05.u49t" size="65536" crc="ff653e4f"/>
+		<rom name="03-15218-05.u48t" size="65536" crc="34b83d81"/>
+		<rom name="03-15200-01.u3" size="16384" crc="83297861"/>
+		<rom name="03-15201-01.u4" size="16384" crc="af8dbdab"/>
+		<rom name="03-15202-01.u5" size="16384" crc="3eeecb3d"/>
+		<rom name="03-15203-01.u6" size="16384" crc="b9c5b663"/>
+		<rom name="03-15204-01.u7" size="16384" crc="c68821b7"/>
+		<rom name="03-15205-01.u8" size="16384" crc="2be843a9"/>
+		<rom name="03-15206-01.u9" size="16384" crc="6bf8d4ab"/>
+		<rom name="03-15222-02.u45t" size="65536" crc="710bdc76"/>
+		<rom name="03-15225-02.u62t" size="65536" crc="041cecde"/>
+		<rom name="03-15221-02.u44t" size="65536" crc="e0459ddb"/>
+		<rom name="03-15224-02.u61t" size="65536" crc="9027c579"/>
+		<rom name="03-15220-02.u43t" size="65536" crc="48a8a018"/>
+		<rom name="03-15223-02.u60t" size="65536" crc="6a299766"/>
+		<rom name="03-15215-01.u93" size="16384" crc="4fb678d7"/>
+		<rom name="03-15216-01.u94" size="16384" crc="7b57a44c"/>
+		<rom name="03-15217-01.u95" size="16384" crc="29bc33fd"/>
+		<rom name="03-15210-01.u70" size="16384" crc="a5aea20e"/>
+		<rom name="03-15214-01.u92" size="16384" crc="36f261ca"/>
+		<rom name="03-15209-01.u69" size="16384" crc="0f5d74a4"/>
+		<rom name="03-15208-01.u68" size="16384" crc="0319aec7"/>
+		<rom name="03-15212-01.u90" size="16384" crc="38b298d6"/>
+		<rom name="03-15207-01.u67" size="16384" crc="5ff86aad"/>
+		<rom name="eeprom-quarterb.bin" size="128" crc="99d8c2ef"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="quarteta" cloneof="quartet" romof="quartet" sourcefile="sega/d_sys16a.cpp">
@@ -148103,6 +149318,37 @@
 		<rom name="green.8h" size="256" crc="7da063d0"/>
 		<rom name="blue.7h" size="256" crc="85c05c18"/>
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="redlin2p" sourcefile="pre90s/d_leland.cpp">
+		<description>Redline Racer (2 players)</description>
+		<year>1987</year>
+		<manufacturer>Cinematronics (Tradewest license)</manufacturer>
+		<rom name="02-13932-01.u23t" size="65536" crc="ecdf0fbe"/>
+		<rom name="02-13931-01.u22t" size="65536" crc="16d01978"/>
+		<rom name="02-13907-01.u3" size="16384" crc="b760d63e"/>
+		<rom name="02-13908-01.u4" size="16384" crc="a30739d3"/>
+		<rom name="02-13909-01.u5" size="16384" crc="aaf16ad7"/>
+		<rom name="02-13910-01.u6" size="16384" crc="d03469eb"/>
+		<rom name="02-13911-01.u7" size="16384" crc="8ee1f547"/>
+		<rom name="02-13912-01.u8" size="16384" crc="e5b57eac"/>
+		<rom name="02-13913-01.u9" size="16384" crc="02886071"/>
+		<rom name="u17t" size="65536" crc="8d26f221"/>
+		<rom name="u28t" size="65536" crc="7aa21b2c"/>
+		<rom name="02-13930-01.u93" size="16384" crc="0721f42e"/>
+		<rom name="02-13929-01.u94" size="16384" crc="1522e7b2"/>
+		<rom name="02-13928-01.u95" size="16384" crc="c321b5d1"/>
+		<rom name="02-13920-01.u70" size="16384" crc="f343d34a"/>
+		<rom name="02-13921-01.u92" size="16384" crc="c9ba8d41"/>
+		<rom name="02-13922-01.u69" size="16384" crc="276cfba0"/>
+		<rom name="02-13923-01.u91" size="16384" crc="4a88ea34"/>
+		<rom name="02-13924-01.u68" size="16384" crc="3995cb7e"/>
+		<rom name="02-13926-01.u67" size="16384" crc="daa30add"/>
+		<rom name="02-13927-01.u89" size="16384" crc="30e60fb5"/>
+		<rom name="pal16l8-2601.25t" size="260" status="nodump"/>
+		<rom name="pl20x10-0501.u21" size="204" crc="09ef7a46"/>
+		<rom name="eeprom-redlin2p.bin" size="128" crc="e632970c"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="reguluso" cloneof="regulus" romof="regulus" sourcefile="sega/d_sys1.cpp">
@@ -160389,6 +161635,26 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="nomnlnd" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>no sfx</comment>
+		<description>Sengoku no Jieitai</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="1.bin" size="2048" crc="ba117ba6"/>
+		<rom name="2.bin" size="2048" crc="e5ed654f"/>
+		<rom name="3.bin" size="2048" crc="7fc42724"/>
+		<rom name="5.bin" size="2048" crc="9cc2f1d9"/>
+		<rom name="4.bin" size="2048" crc="0e8cd46a"/>
+		<rom name="6.bin" size="2048" crc="ba472ba5"/>
+		<rom name="nml8.n2" size="2048" crc="739009b4"/>
+		<rom name="nml7.n1" size="2048" crc="d08ed22f"/>
+		<rom name="nml.d9" size="32" crc="65e911f9"/>
+		<rom name="nl9.e2" size="1024" crc="9e05f14e"/>
+		<rom name="nl10.ic4" size="1024" crc="5b13f64e"/>
+		<rom name="nl11.ic7" size="1024" crc="e717b241"/>
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="mercsc" cloneof="mercs" romof="mercs" sourcefile="capcom/d_cps1.cpp">
 		<comment>Hack</comment>
 		<description>Senjo no Ookami II (hack, Chinese Translation)</description>
@@ -162235,6 +163501,43 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="304" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shougi2" sourcefile="pre90s/d_shougi.cpp">
+		<description>Shougi Part II</description>
+		<year>1982</year>
+		<manufacturer>Alpha Denshi Co. (Tehkan license)</manufacturer>
+		<rom name="1-2.3a" size="4096" crc="16d75306"/>
+		<rom name="3-2.3c" size="4096" crc="35b6d98b"/>
+		<rom name="2-2.3b" size="4096" crc="b38affed"/>
+		<rom name="4-2.3d" size="4096" crc="1abdb6bf"/>
+		<rom name="5-2.3e" size="4096" crc="0ba89dd4"/>
+		<rom name="8-2.3j" size="4096" crc="0ae0c8c1"/>
+		<rom name="6-2.3f" size="4096" crc="d98abcae"/>
+		<rom name="9-2.3k" size="4096" crc="4e0e6c90"/>
+		<rom name="7-2.3h" size="4096" crc="5f37ebc6"/>
+		<rom name="10-2.3l" size="4096" crc="a26385fd"/>
+		<rom name="alpha-8201_44801a75_2f25.bin" size="8192" crc="b77931ac"/>
+		<rom name="pr.2l" size="32" crc="cd3559ff"/>
+		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="shougi" sourcefile="pre90s/d_shougi.cpp">
+		<description>Shougi</description>
+		<year>1982</year>
+		<manufacturer>Alpha Denshi Co. (Tehkan license)</manufacturer>
+		<rom name="1.3a" size="4096" crc="b601303f"/>
+		<rom name="3.3c" size="4096" crc="2b8c7314"/>
+		<rom name="2.3b" size="4096" crc="09cb831f"/>
+		<rom name="4.3d" size="4096" crc="ad1a642a"/>
+		<rom name="5.3e" size="4096" crc="ff1f07d0"/>
+		<rom name="8.3j" size="4096" crc="6230c4c1"/>
+		<rom name="6.3f" size="4096" crc="d5a91b16"/>
+		<rom name="9.3k" size="4096" crc="dbbfa66e"/>
+		<rom name="7.3h" size="4096" crc="7ea8ec4a"/>
+		<rom name="alpha-8201_44801a75_2f25.bin" size="8192" crc="b77931ac"/>
+		<rom name="pr.2l" size="32" crc="cd3559ff"/>
+		<video type="raster" orientation="horizontal" width="256" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="showdown4" cloneof="showdown" romof="showdown" sourcefile="pre90s/d_exidy440.cpp">
@@ -167940,6 +169243,224 @@
 		<sample name="damaged" />
 		<sample name="erocket" />
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panicbl" cloneof="panic" romof="panic" sampleof="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<comment>Bootleg</comment>
+		<description>Space Panic (bootleg)</description>
+		<year>1980</year>
+		<manufacturer>bootleg</manufacturer>
+		<rom name="1.2d" size="2048" crc="e1efa292"/>
+		<rom name="2.3d" size="2048" crc="a5885fb1"/>
+		<rom name="3.4d" size="2048" crc="ab402d38"/>
+		<rom name="4.5d" size="2048" crc="27c69de1"/>
+		<rom name="5.5d" size="2048" crc="9b409a21"/>
+		<rom name="6.6d" size="2048" crc="add15e92"/>
+		<rom name="7.7d" size="2048" crc="786c8d41"/>
+		<rom name="11.7m" merge="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="12.5m" merge="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="10.8m" merge="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="9.9m" merge="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="mmi6330.5l" merge="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="8.2l" merge="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panicger" cloneof="panic" romof="panic" sampleof="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<description>Space Panic (German)</description>
+		<year>1980</year>
+		<manufacturer>Universal (ADP Automaten license)</manufacturer>
+		<rom name="spacepan.001" size="2048" crc="a6d9515a"/>
+		<rom name="spacepan.002" size="2048" crc="cfc22663"/>
+		<rom name="spacepan.003" size="2048" crc="e1f36893"/>
+		<rom name="spacepan.004" size="2048" crc="01be297c"/>
+		<rom name="spacepan.005" size="2048" crc="e0d54805"/>
+		<rom name="spacepan.006" size="2048" crc="aae1458e"/>
+		<rom name="spacepan.007" size="2048" crc="14e46e70"/>
+		<rom name="spcpanic.11" merge="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="spcpanic.12" merge="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="spcpanic.10" merge="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="spcpanic.9" merge="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="82s123.sp" merge="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="spcpanic.8" merge="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panich" cloneof="panic" romof="panic" sampleof="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<description>Space Panic (harder)</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="sph1" size="2048" crc="f6e9c6ef"/>
+		<rom name="sph2" size="2048" crc="58dbc49b"/>
+		<rom name="sph3" size="2048" crc="c4f275ad"/>
+		<rom name="sph4" size="2048" crc="6e7785de"/>
+		<rom name="sph5" size="2048" crc="1916c9b8"/>
+		<rom name="sph6" size="2048" crc="54b92314"/>
+		<rom name="sph7" size="2048" crc="8600b881"/>
+		<rom name="spcpanic.11" merge="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="spcpanic.12" merge="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="spcpanic.10" merge="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="spcpanic.9" merge="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="82s123.sp" merge="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="spcpanic.8" merge="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panic2" cloneof="panic" romof="panic" sampleof="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<description>Space Panic (set 2)</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="spcpanic.1" size="2048" crc="405ae6f9"/>
+		<rom name="spcpanic.2" size="2048" crc="b6a286c5"/>
+		<rom name="spcpanic.3" size="2048" crc="85ae8b2e"/>
+		<rom name="spcpanic.4" size="2048" crc="b6d4f52f"/>
+		<rom name="spcpanic.5" merge="spcpanic.5" size="2048" crc="5b80f277"/>
+		<rom name="spcpanic.6" merge="spcpanic.6" size="2048" crc="b73babf0"/>
+		<rom name="spcpanic.7" size="2048" crc="fc27f4e5"/>
+		<rom name="spcpanic.11" merge="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="spcpanic.12" merge="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="spcpanic.10" merge="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="spcpanic.9" merge="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="82s123.sp" merge="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="spcpanic.8" merge="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panic3" cloneof="panic" romof="panic" sampleof="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<description>Space Panic (set 3)</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="panica.1" size="2048" crc="289720ce"/>
+		<rom name="spcpanic.2" size="2048" crc="b6a286c5"/>
+		<rom name="spcpanic.3" size="2048" crc="85ae8b2e"/>
+		<rom name="spcpanic.4" size="2048" crc="b6d4f52f"/>
+		<rom name="spcpanic.5" merge="spcpanic.5" size="2048" crc="5b80f277"/>
+		<rom name="spcpanic.6" merge="spcpanic.6" size="2048" crc="b73babf0"/>
+		<rom name="panica.7" size="2048" crc="3641cb7f"/>
+		<rom name="spcpanic.11" merge="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="spcpanic.12" merge="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="spcpanic.10" merge="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="spcpanic.9" merge="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="82s123.sp" merge="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="spcpanic.8" merge="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panic4" cloneof="panic" romof="panic" sampleof="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<description>Space Panic (set 4)</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="sp_m.1" size="2048" crc="3208f7da"/>
+		<rom name="sp_m.2" size="2048" crc="9161e86d"/>
+		<rom name="sp_m.3" size="2048" crc="85ae8b2e"/>
+		<rom name="sp_m.4" size="2048" crc="d9b38bd4"/>
+		<rom name="sp_m.5" size="2048" crc="01f25330"/>
+		<rom name="sp_m.6" size="2048" crc="56716d33"/>
+		<rom name="sp_m.7" size="2048" crc="ec2107cc"/>
+		<rom name="sp_m.11" merge="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="sp_m.12" merge="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="sp_m.10" merge="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="sp_m.9" merge="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="74s288.bin" merge="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="sp_m.8" merge="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="panic" sourcefile="pre90s/d_cosmic.cpp">
+		<description>Space Panic (version E)</description>
+		<year>1980</year>
+		<manufacturer>Universal</manufacturer>
+		<rom name="spe1" size="2048" crc="70ac0888"/>
+		<rom name="spe2" size="2048" crc="2b910c48"/>
+		<rom name="spe3" size="2048" crc="03810148"/>
+		<rom name="spe4" size="2048" crc="119bbbfd"/>
+		<rom name="spcpanic.5" size="2048" crc="5b80f277"/>
+		<rom name="spcpanic.6" size="2048" crc="b73babf0"/>
+		<rom name="spe7" size="2048" crc="2894106e"/>
+		<rom name="spcpanic.11" size="2048" crc="acea9df4"/>
+		<rom name="spcpanic.12" size="2048" crc="e83423d0"/>
+		<rom name="spcpanic.10" size="2048" crc="c9631c2d"/>
+		<rom name="spcpanic.9" size="2048" crc="eec78b4c"/>
+		<rom name="82s123.sp" size="32" crc="35d43d2f"/>
+		<rom name="spcpanic.8" size="2048" crc="7da0b321"/>
+		<sample name="walk" />
+		<sample name="upordown" />
+		<sample name="trapped" />
+		<sample name="falling" />
+		<sample name="escaping" />
+		<sample name="ekilled" />
+		<sample name="death" />
+		<sample name="elaugh" />
+		<sample name="extral" />
+		<sample name="oxygen" />
+		<sample name="coin" />
+		<video type="raster" orientation="vertical" width="192" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
 	<game name="spaceph" cloneof="ozmawars" romof="ozmawars" sourcefile="pre90s/d_invaders.cpp">
@@ -181267,6 +182788,39 @@
 		<video type="raster" orientation="vertical" width="240" height="384" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="strkzone" sourcefile="pre90s/d_leland.cpp">
+		<description>Strike Zone Baseball</description>
+		<year>1988</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="strkzone.u101" size="16384" crc="8d83a611"/>
+		<rom name="strkzone.u102" size="16384" crc="3859e67d"/>
+		<rom name="strkzone.u103" size="16384" crc="cdd83bfb"/>
+		<rom name="strkzone.u104" size="16384" crc="be280212"/>
+		<rom name="strkzone.u105" size="16384" crc="afb63390"/>
+		<rom name="strkzone.u106" size="16384" crc="e853b9f6"/>
+		<rom name="strkzone.u107" size="16384" crc="1b4b6c2d"/>
+		<rom name="03-15313-01.u2t" size="8192" crc="8e0af06f"/>
+		<rom name="03-15314-01.u3t" size="8192" crc="909d35f3"/>
+		<rom name="03-15027-01.u4t" size="16384" crc="9b1e72e9"/>
+		<rom name="strkzone.u3" size="8192" crc="40258fbe"/>
+		<rom name="strkzone.u4" size="16384" crc="df7f2604"/>
+		<rom name="strkzone.u5" size="16384" crc="37885206"/>
+		<rom name="strkzone.u6" size="16384" crc="6892dc4f"/>
+		<rom name="strkzone.u7" size="16384" crc="6ac8f87c"/>
+		<rom name="strkzone.u8" size="16384" crc="4b6d3725"/>
+		<rom name="strkzone.u9" size="16384" crc="ab3aac49"/>
+		<rom name="strkzone.u93" size="16384" crc="8ccb1404"/>
+		<rom name="strkzone.u94" size="16384" crc="9941a55b"/>
+		<rom name="strkzone.u95" size="16384" crc="b68baf47"/>
+		<rom name="strkzone.u92" size="16384" crc="2508a9ad"/>
+		<rom name="03-15009-01.u69" size="16384" crc="b123a28e"/>
+		<rom name="03-15008-01.u68" size="16384" crc="a1a51383"/>
+		<rom name="strkzone.u90" size="16384" crc="ef01d997"/>
+		<rom name="03-15007-01.u67" size="16384" crc="976334e6"/>
+		<rom name="eeprom-strkzone.bin" size="128" crc="0c2fe514"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="s1945a" cloneof="s1945" romof="s1945" sourcefile="psikyo/d_psikyo.cpp">
 		<description>Strikers 1945 (Japan / World)</description>
 		<year>1995</year>
@@ -182211,6 +183765,39 @@
 		<rom name="promat_1m-7.j21" size="131072" crc="734df92a"/>
 		<rom name="promat_2m-1.d1" merge="wiggie.d1" size="262144" crc="27fbe12a"/>
 		<video type="raster" orientation="vertical" width="240" height="384" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="dblplay" sourcefile="pre90s/d_leland.cpp">
+		<description>Super Baseball Double Play Home Run Derby</description>
+		<year>1987</year>
+		<manufacturer>Leland Corporation / Tradewest</manufacturer>
+		<rom name="15018-01.u101" size="8192" crc="17b6af29"/>
+		<rom name="15019-01.u102" size="16384" crc="9fc8205e"/>
+		<rom name="15020-01.u103" size="16384" crc="4edcc091"/>
+		<rom name="15021-01.u104" size="16384" crc="a0eba1c7"/>
+		<rom name="15022-01.u105" size="16384" crc="7bbfe0b7"/>
+		<rom name="15023-01.u106" size="16384" crc="bbedae34"/>
+		<rom name="15024-01.u107" size="16384" crc="02afcf52"/>
+		<rom name="15025-01.u2t" size="8192" crc="1c959895"/>
+		<rom name="15026-01.u3t" size="8192" crc="ed5196d6"/>
+		<rom name="15027-01.u4t" size="16384" crc="9b1e72e9"/>
+		<rom name="15000-01.u03" size="8192" crc="208a920a"/>
+		<rom name="15001-01.u04" size="16384" crc="751c40d6"/>
+		<rom name="14402-01.u05" size="16384" crc="5ffaec36"/>
+		<rom name="14403-01.u06" size="16384" crc="48d6d9d3"/>
+		<rom name="15004-01.u07" size="16384" crc="6a7acebc"/>
+		<rom name="15005-01.u08" size="16384" crc="69d487c9"/>
+		<rom name="15006-01.u09" size="16384" crc="ab3aac49"/>
+		<rom name="15015-01.u93" size="16384" crc="8ccb1404"/>
+		<rom name="15016-01.u94" size="16384" crc="9941a55b"/>
+		<rom name="15017-01.u95" size="16384" crc="b68baf47"/>
+		<rom name="15014-01.u92" size="16384" crc="2508a9ad"/>
+		<rom name="15009-01.u69" size="16384" crc="b123a28e"/>
+		<rom name="15008-01.u68" size="16384" crc="a1a51383"/>
+		<rom name="15012-01.u90" size="16384" crc="ef01d997"/>
+		<rom name="15007-01.u67" size="16384" crc="976334e6"/>
+		<rom name="eeprom-dblplay.bin" size="128" crc="50fe6185"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="sbaskete" cloneof="sbasketb" romof="sbasketb" sourcefile="konami/d_sbasketb.cpp">
@@ -205130,8 +206717,8 @@
 		<manufacturer>SNK Playmore</manufacturer>
 		<rom name="s29gl01gp11fcr2.u103" size="134217728" crc="916c9d68"/>
 		<rom name="system_y2_m25p40.u801" merge="system_y2_m25p40.u801" size="524288" crc="2b19f490"/>
-		<disk name="nand_u101" sha1="5fd38fe816b22ec0e4459f1fc076c148a3f11652" />
-		<disk name="nand_u102" sha1="52b6093b658baf1dd81f883a2c52b6aac688f703" />
+		<disk name="nandj_u101" sha1="5fd38fe816b22ec0e4459f1fc076c148a3f11652" />
+		<disk name="nandj_u102" sha1="52b6093b658baf1dd81f883a2c52b6aac688f703" />
 		<video type="raster" orientation="horizontal" width="640" height="480" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -219655,6 +221242,37 @@
 		<video type="raster" orientation="horizontal" width="256" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="upyoural" sourcefile="pre90s/d_leland.cpp">
+		<description>Up Your Alley</description>
+		<year>1987</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="03-14168-01_uya_chk-ec46.u101" size="8192" crc="82bf3b7a"/>
+		<rom name="03-14169-01_uya_chk-06e9.u102" size="16384" crc="e1681268"/>
+		<rom name="03-14170-01_uya_chk-abf4.u103" size="16384" crc="0d36aa78"/>
+		<rom name="03-14171-01_uya_chk-9e1d.u104" size="16384" crc="a4473886"/>
+		<rom name="03-14172-01_uya_chk-ec21.u105" size="16384" crc="4cad86a4"/>
+		<rom name="03-14173-01_uya_chk-dc8a.u106" size="16384" crc="26f4848e"/>
+		<rom name="03-14174-01_uya_chk-96f3.u107" size="16384" crc="fd087cc7"/>
+		<rom name="03-14150-01_uya_chk-3c1d.u3" size="8192" crc="3fee63ae"/>
+		<rom name="03-14151-01_uya_chk-05a7.u4" size="16384" crc="d302b5d1"/>
+		<rom name="03-14152-01_uya_chk-c686.u5" size="16384" crc="79bdb24d"/>
+		<rom name="03-14153-01_uya_chk-9254.u6" size="16384" crc="f0b15d68"/>
+		<rom name="03-14154-01_uya_chk-2d51.u7" size="16384" crc="6974036c"/>
+		<rom name="03-14155-01_uya_chk-42b6.u8" size="16384" crc="a4357b5a"/>
+		<rom name="03-14156-01_uya_chk-43e3.u9" size="16384" crc="6d74274e"/>
+		<rom name="03-14165-01_uya_chk-72ca.u93" size="16384" crc="e8addd70"/>
+		<rom name="03-14166-01_uya_chk-9f27.u94" size="16384" crc="3fd3be09"/>
+		<rom name="03-14167-01_uya_chk-0151.u95" size="16384" crc="37088dd1"/>
+		<rom name="03-14164-01_uya_chk-e1d0.u92" size="8192" crc="a020eab5"/>
+		<rom name="03-14159-01_uya_chk-ca48.u69" size="8192" crc="79abb979"/>
+		<rom name="03-14158-01_uya_chk-18c8.u68" size="8192" crc="0c583385"/>
+		<rom name="03-14162-01_uya_chk-10e0.u90" size="8192" crc="0e1769e3"/>
+		<rom name="03-14157-01_uya_chk-1727.u67" size="16384" crc="d30a385d"/>
+		<rom name="03-14161-01_uya_chk-010f.u89" size="16384" crc="5c17401e"/>
+		<rom name="eeprom-upyoural.bin" size="128" crc="8c622ba1"/>
+		<video type="raster" orientation="vertical" width="240" height="320" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
 	<game name="upndown" sourcefile="sega/d_sys1.cpp">
 		<description>Up'n Down (315-5030)</description>
 		<year>1983</year>
@@ -223439,6 +225057,37 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="viper" sourcefile="pre90s/d_leland.cpp">
+		<description>Viper (rev 3)</description>
+		<year>1988</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="03-15617-03.u49t" size="65536" crc="7e4688a6"/>
+		<rom name="03-15616-03.u48t" size="65536" crc="3fe2f0bf"/>
+		<rom name="03-15600-02.u3" size="8192" crc="0f57f68a"/>
+		<rom name="03-15612-02.u2t" size="65536" crc="4043d4ee"/>
+		<rom name="03-15613-02.u3t" size="65536" crc="213bc02b"/>
+		<rom name="03-15614-02.u4t" size="65536" crc="ce0b95b4"/>
+		<rom name="03-15620-02.u45t" size="65536" crc="7380ece1"/>
+		<rom name="03-15623-02.u62t" size="65536" crc="2921d8f9"/>
+		<rom name="03-15619-02.u44t" size="65536" crc="c8507cc2"/>
+		<rom name="03-15622-02.u61t" size="65536" crc="32dfda37"/>
+		<rom name="03-15618-02.u43t" size="65536" crc="5562e0c3"/>
+		<rom name="03-15621-02.u60t" size="65536" crc="cb468f2b"/>
+		<rom name="03-15609-01.u93" size="16384" crc="08ad92e9"/>
+		<rom name="03-15610-01.u94" size="16384" crc="d4e56dfb"/>
+		<rom name="03-15611-01.u95" size="16384" crc="3a2c46fb"/>
+		<rom name="03-15604-01.u70" size="16384" crc="7e3b0cce"/>
+		<rom name="03-15608-01.u92" size="16384" crc="a9bde0ef"/>
+		<rom name="03-15603-01.u69" size="16384" crc="aecc9516"/>
+		<rom name="03-15607-01.u91" size="16384" crc="14f06f88"/>
+		<rom name="03-15602-01.u68" size="16384" crc="4ef613ad"/>
+		<rom name="03-15606-01.u90" size="16384" crc="3c2e8e76"/>
+		<rom name="03-15601-01.u67" size="16384" crc="dc7006cd"/>
+		<rom name="03-15605-01.u89" size="16384" crc="4aa9c788"/>
+		<rom name="eeprom-viper.bin" size="128" crc="1c1e7a49"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="viprp1ot" cloneof="viprp1" romof="viprp1" sourcefile="pst90s/d_seibuspi.cpp">
@@ -230232,6 +231881,128 @@
 		<rom name="sfix.sfix" merge="sfix.sfix" size="131072" crc="c2ea0cfd"/>
 		<rom name="000-lo.lo" merge="000-lo.lo" size="131072" crc="5a86cff2"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wseries0" cloneof="wseries" romof="wseries" sourcefile="pre90s/d_leland.cpp">
+		<description>World Series: The Season (rev 0)</description>
+		<year>1985</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="02-13409-00.101" size="8192" crc="a0820663"/>
+		<rom name="02-13410-00.102" size="16384" crc="b2d71d2d"/>
+		<rom name="02-13411-00.103" size="16384" crc="50c29473"/>
+		<rom name="02-13412-00.104" size="16384" crc="2e9294e9"/>
+		<rom name="02-13413-00.105" size="16384" crc="2d785d3b"/>
+		<rom name="02-13414-00.106" size="16384" crc="e6684f39"/>
+		<rom name="02-13415-00.107" size="16384" crc="4c4db073"/>
+		<rom name="02-13416-00.u3" merge="02-13416-00.u3" size="8192" crc="37c960cf"/>
+		<rom name="02-13417-00.u4" merge="02-13417-00.u4" size="16384" crc="97f044b5"/>
+		<rom name="02-13418-00.u5" merge="02-13418-00.u5" size="16384" crc="0931cfc0"/>
+		<rom name="02-13419-00.u6" merge="02-13419-00.u6" size="16384" crc="a7962b5a"/>
+		<rom name="02-13420-00.u7" merge="02-13420-00.u7" size="16384" crc="3c275262"/>
+		<rom name="02-13421-00.u8" merge="02-13421-00.u8" size="16384" crc="86f57c80"/>
+		<rom name="02-13422-00.u9" merge="02-13422-00.u9" size="16384" crc="222e8405"/>
+		<rom name="02-13401-00.u93" merge="02-13401-00.u93" size="16384" crc="4ea3e641"/>
+		<rom name="02-13402-00.u94" merge="02-13402-00.u94" size="16384" crc="71a8a56c"/>
+		<rom name="02-13403-00.u95" merge="02-13403-00.u95" size="16384" crc="8077ae25"/>
+		<rom name="02-13404-00.u92" merge="02-13404-00.u92" size="16384" crc="22da40aa"/>
+		<rom name="02-13405-00.u69" merge="02-13405-00.u69" size="16384" crc="6f65b313"/>
+		<rom name="02-13406-00.u68" merge="02-13406-00.u68" size="8192" crc="bb568693"/>
+		<rom name="02-13407-00.u90" merge="02-13407-00.u90" size="16384" crc="e46ca57f"/>
+		<rom name="02-13408-00.u67" merge="02-13408-00.u67" size="16384" crc="be637305"/>
+		<rom name="eeprom-wseries.bin" merge="eeprom-wseries.bin" size="128" crc="c9c45105"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wseries" sourcefile="pre90s/d_leland.cpp">
+		<description>World Series: The Season (rev 1)</description>
+		<year>1985</year>
+		<manufacturer>Cinematronics</manufacturer>
+		<rom name="02-13409-01.101" size="8192" crc="b5eccf5c"/>
+		<rom name="02-13410-01.102" size="16384" crc="dd1ec091"/>
+		<rom name="02-13411-01.103" size="16384" crc="ec867a0e"/>
+		<rom name="02-13412-01.104" size="16384" crc="2977956d"/>
+		<rom name="02-13413-01.105" size="16384" crc="569468a6"/>
+		<rom name="02-13414-01.106" size="16384" crc="b178632d"/>
+		<rom name="02-13415-01.107" size="16384" crc="20b92eff"/>
+		<rom name="02-13416-00.u3" size="8192" crc="37c960cf"/>
+		<rom name="02-13417-00.u4" size="16384" crc="97f044b5"/>
+		<rom name="02-13418-00.u5" size="16384" crc="0931cfc0"/>
+		<rom name="02-13419-00.u6" size="16384" crc="a7962b5a"/>
+		<rom name="02-13420-00.u7" size="16384" crc="3c275262"/>
+		<rom name="02-13421-00.u8" size="16384" crc="86f57c80"/>
+		<rom name="02-13422-00.u9" size="16384" crc="222e8405"/>
+		<rom name="02-13401-00.u93" size="16384" crc="4ea3e641"/>
+		<rom name="02-13402-00.u94" size="16384" crc="71a8a56c"/>
+		<rom name="02-13403-00.u95" size="16384" crc="8077ae25"/>
+		<rom name="02-13404-00.u92" size="16384" crc="22da40aa"/>
+		<rom name="02-13405-00.u69" size="16384" crc="6f65b313"/>
+		<rom name="02-13406-00.u68" size="8192" crc="bb568693"/>
+		<rom name="02-13407-00.u90" size="16384" crc="e46ca57f"/>
+		<rom name="02-13408-00.u67" size="16384" crc="be637305"/>
+		<rom name="eeprom-wseries.bin" size="128" crc="c9c45105"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wsf3" cloneof="wsf" romof="wsf" sourcefile="pre90s/d_leland.cpp">
+		<description>World Soccer Finals (rev 3)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="e-302-30022-03.u64" size="131072" crc="2e7faa96"/>
+		<rom name="e-302-30023-03.u65" size="131072" crc="7146328f"/>
+		<rom name="e-302-30001-01.u151" merge="e-302-30001-01.u151" size="131072" crc="31c63af5"/>
+		<rom name="e-302-30002-01.u152" merge="e-302-30002-01.u152" size="131072" crc="a53e88a6"/>
+		<rom name="e-302-30003-01.u153" merge="e-302-30003-01.u153" size="131072" crc="12afad1d"/>
+		<rom name="e-302-30004-01.u154" merge="e-302-30004-01.u154" size="131072" crc="b8b3d59c"/>
+		<rom name="e-302-30005-01.u155" merge="e-302-30005-01.u155" size="131072" crc="505724b9"/>
+		<rom name="e-302-30006-01.u156" merge="e-302-30006-01.u156" size="131072" crc="c86b5c4d"/>
+		<rom name="e-302-30007-01.u157" merge="e-302-30007-01.u157" size="131072" crc="451321ae"/>
+		<rom name="e-302-30008-01.u158" merge="e-302-30008-01.u158" size="131072" crc="4d23836f"/>
+		<rom name="e-302-30017-01.u3" size="131072" crc="39ec13c1"/>
+		<rom name="e-302-30020-01.u6" size="131072" crc="532c02bf"/>
+		<rom name="e-302-30018-01.u4" size="131072" crc="1ec16735"/>
+		<rom name="e-302-30019-01.u5" size="131072" crc="2881f73b"/>
+		<rom name="e-302-30011-02.u145" size="65536" crc="6153569b"/>
+		<rom name="e-302-30012-02.u146" size="65536" crc="52d65e21"/>
+		<rom name="e-302-30013-02.u147" size="65536" crc="b3afda12"/>
+		<rom name="e-302-30014-01.u148" size="65536" crc="624e6c64"/>
+		<rom name="e-302-30015-01.u149" size="65536" crc="5d9064f2"/>
+		<rom name="e-302-30016-01.u150" size="65536" crc="d76389cd"/>
+		<rom name="e-302-30009-01.u68" merge="e-302-30009-01.u68" size="65536" crc="f2fbfc15"/>
+		<rom name="e-302-30010-01.u69" merge="e-302-30010-01.u69" size="65536" crc="b4ed2d3b"/>
+		<rom name="e-302-30021-01.u8" size="131072" crc="bb91dc10"/>
+		<rom name="eeprom-wsf.bin" merge="eeprom-wsf.bin" size="256" crc="5bd0633d"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wsf" sourcefile="pre90s/d_leland.cpp">
+		<description>World Soccer Finals (rev 4)</description>
+		<year>1990</year>
+		<manufacturer>Leland Corporation</manufacturer>
+		<rom name="e-302-30022-04.u64" size="131072" crc="533cc90f"/>
+		<rom name="e-302-30023-04.u65" size="131072" crc="763c6c1b"/>
+		<rom name="e-302-30001-01.u151" size="131072" crc="31c63af5"/>
+		<rom name="e-302-30002-01.u152" size="131072" crc="a53e88a6"/>
+		<rom name="e-302-30003-01.u153" size="131072" crc="12afad1d"/>
+		<rom name="e-302-30004-01.u154" size="131072" crc="b8b3d59c"/>
+		<rom name="e-302-30005-01.u155" size="131072" crc="505724b9"/>
+		<rom name="e-302-30006-01.u156" size="131072" crc="c86b5c4d"/>
+		<rom name="e-302-30007-01.u157" size="131072" crc="451321ae"/>
+		<rom name="e-302-30008-01.u158" size="131072" crc="4d23836f"/>
+		<rom name="e-302-30017-02.u3" size="131072" crc="b1d578e1"/>
+		<rom name="e-302-30020-02.u6" size="131072" crc="919a62ee"/>
+		<rom name="e-302-30018-02.u4" size="131072" crc="d24947ee"/>
+		<rom name="e-302-30019-02.u5" size="131072" crc="d846f292"/>
+		<rom name="e-302-30011-03.u145" size="65536" crc="6d1c1f19"/>
+		<rom name="e-302-30012-03.u146" size="65536" crc="6b69bc9e"/>
+		<rom name="e-302-30013-03.u147" size="65536" crc="e1b1e36f"/>
+		<rom name="e-302-30014-02.u148" size="65536" crc="4a5e7d2b"/>
+		<rom name="e-302-30015-02.u149" size="65536" crc="b30c4ff3"/>
+		<rom name="e-302-30016-02.u150" size="65536" crc="3bc8efac"/>
+		<rom name="e-302-30009-01.u68" size="65536" crc="f2fbfc15"/>
+		<rom name="e-302-30010-01.u69" size="65536" crc="b4ed2d3b"/>
+		<rom name="e-302-30021-02.u8" size="131072" crc="a8f97be4"/>
+		<rom name="eeprom-wsf.bin" size="256" crc="5bd0633d"/>
+		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="worldwar" sourcefile="pre90s/d_snk.cpp">

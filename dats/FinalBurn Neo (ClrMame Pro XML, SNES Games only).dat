@@ -5283,39 +5283,6 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dragonblse" cloneof="dragonbls" romof="dragonbls" sourcefile="snes/d_snes.cpp">
-		<description>Dragon - The Bruce Lee Story (Euro)</description>
-		<year>1994</year>
-		<manufacturer>Virgin Int.</manufacturer>
-		<rom name="Dragon - The Bruce Lee Story (E)(1994)(Virgin).sfc" size="2097152" crc="038212ea"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragonbls" sourcefile="snes/d_snes.cpp">
-		<description>Dragon - The Bruce Lee Story (USA)</description>
-		<year>1994</year>
-		<manufacturer>Acclaim Ent. - Virgin Int.</manufacturer>
-		<rom name="Dragon - The Bruce Lee Story (U)(1994)(Acclaim Ent. - Virgin).sfc" size="2097152" crc="407c5c24"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzrpgtp" cloneof="dragballzrpgte" romof="dragballzrpgte" sourcefile="snes/d_snes.cpp">
-		<comment>Hack</comment>
-		<description>Dragon Ball Z - A Lenda de Goku - Embate (Hack, Portuguese)</description>
-		<year>2024</year>
-		<manufacturer>Nathan</manufacturer>
-		<rom name="Dragon Ball Z - A Lenda de Goku - Embate PT-BR (2024)(Nathan).sfc" size="2097152" crc="6e20d7eb"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzrpgj" cloneof="dragballzrpgte" romof="dragballzrpgte" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - Chou Gokuuden - Totsugeki Hen (Japan)</description>
-		<year>1995</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Chou Gokuuden - Totsugeki Hen (J)(1995)(Bandai).sfc" size="2097152" crc="d531289b"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="dragballzfb" sourcefile="snes/d_snes.cpp">
 		<description>Dragon Ball Z - Final Bout (USA) (Unl)</description>
 		<year>1998</year>
@@ -5324,87 +5291,20 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dragballzhdef" cloneof="dragballzhdte" romof="dragballzhdte" sourcefile="snes/d_snes.cpp">
-		<comment>SA-1 enhancement CPU</comment>
-		<description>Dragon Ball Z - Hyper Dimension (Euro, French)</description>
-		<year>1996</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Hyper Dimension (E, France)(1996)(Bandai).sfc" size="3145728" crc="a6dc166b"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzhdte" sourcefile="snes/d_snes.cpp">
-		<comment>Hack, SA-1 enhancement CPU</comment>
-		<description>Dragon Ball Z - Hyper Dimension (Hack, English)</description>
-		<year>2010</year>
-		<manufacturer>Twilight Translations</manufacturer>
-		<rom name="Dragon Ball Z - Hyper Dimension T-Eng (2010)(Twilight Translations).sfc" size="3145728" crc="971c9513"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzhdj" cloneof="dragballzhdte" romof="dragballzhdte" sourcefile="snes/d_snes.cpp">
-		<comment>SA-1 enhancement CPU</comment>
-		<description>Dragon Ball Z - Hyper Dimension (Japan)</description>
-		<year>1996</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Hyper Dimension (J)(1996)(Bandai).sfc" size="3145728" crc="f4ab1557"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballz2ef" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - La Legende Saien (Euro, French)</description>
-		<year>1993</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - La Legende Saien (E, France)(1993)(Bandai).sfc" size="2097152" crc="8f24f886"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzef" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - Super Butouden (Euro, French)</description>
-		<year>1993</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Super Butouden (E, France)(1993)(Bandai).sfc" size="2097152" crc="ea7abad1"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzj" cloneof="dragballzef" romof="dragballzef" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - Super Butouden (Japan)</description>
-		<year>1993</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Super Butouden (J)(1993)(Bandai).sfc" size="2097152" crc="8c7780bd"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballz2j" cloneof="dragballz2ef" romof="dragballz2ef" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - Super Butouden 2 (Japan, Rev. 1)</description>
-		<year>1993</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Super Butouden 2 (J, Rev 1)(1993)(Bandai).sfc" size="2097152" crc="081fde86"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballz3j" cloneof="dragballz3ef" romof="dragballz3ef" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - Super Butouden 3 (Japan)</description>
-		<year>1994</year>
-		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Super Butouden 3 (J)(1994)(Bandai).sfc" size="2097152" crc="cbfde2d0"/>
-		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
-	<game name="dragballzrpgte" sourcefile="snes/d_snes.cpp">
+	<game name="dragballzrpgtp" cloneof="dragballzrpgte" romof="dragballzrpgte" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Dragon Ball Z - Super Gokuden - Totsugeki Hen (Hack, English v0.98)</description>
-		<year>2016</year>
-		<manufacturer>Kakkoii Translations</manufacturer>
-		<rom name="Dragon Ball Z - Chou Gokuuden - Totsugeki Hen T-Eng v0.98 (2016)(Kakkoii Translations).sfc" size="2097152" crc="3561ff9d"/>
+		<description>Dragon Ball Z: A Lenda de Goku - Embate (Hack, Portuguese)</description>
+		<year>2024</year>
+		<manufacturer>Nathan</manufacturer>
+		<rom name="Dragon Ball Z - A Lenda de Goku - Embate PT-BR (2024)(Nathan).sfc" size="2097152" crc="6e20d7eb"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="dragballz3ef" sourcefile="snes/d_snes.cpp">
-		<description>Dragon Ball Z - Ultime Menace (Euro, French)</description>
-		<year>1994</year>
+	<game name="dragballzrpgj" cloneof="dragballzrpgte" romof="dragballzrpgte" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: Chou Gokuuden - Totsugeki Hen (Japan)</description>
+		<year>1995</year>
 		<manufacturer>Bandai</manufacturer>
-		<rom name="Dragon Ball Z - Ultime Menace (E, France)(1994)(Bandai).sfc" size="2097152" crc="593eefe0"/>
+		<rom name="Dragon Ball Z - Chou Gokuuden - Totsugeki Hen (J)(1995)(Bandai).sfc" size="2097152" crc="d531289b"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5414,6 +5314,99 @@
 		<year>2024</year>
 		<manufacturer>Vila Oculta do Romhacking</manufacturer>
 		<rom name="Dragon Ball Z - Hiper Dimensao PT-BR (2024)(Vila Oculta do Romhacking).sfc" size="3670016" crc="d319b002"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballzhdef" cloneof="dragballzhdte" romof="dragballzhdte" sourcefile="snes/d_snes.cpp">
+		<comment>SA-1 enhancement CPU</comment>
+		<description>Dragon Ball Z: Hyper Dimension (Euro, French)</description>
+		<year>1996</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Hyper Dimension (E, France)(1996)(Bandai).sfc" size="3145728" crc="a6dc166b"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballzhdte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, SA-1 enhancement CPU</comment>
+		<description>Dragon Ball Z: Hyper Dimension (Hack, English)</description>
+		<year>2010</year>
+		<manufacturer>Twilight Translations</manufacturer>
+		<rom name="Dragon Ball Z - Hyper Dimension T-Eng (2010)(Twilight Translations).sfc" size="3145728" crc="971c9513"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballzhdj" cloneof="dragballzhdte" romof="dragballzhdte" sourcefile="snes/d_snes.cpp">
+		<comment>SA-1 enhancement CPU</comment>
+		<description>Dragon Ball Z: Hyper Dimension (Japan)</description>
+		<year>1996</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Hyper Dimension (J)(1996)(Bandai).sfc" size="3145728" crc="f4ab1557"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballz2ef" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: La Legende Saien (Euro, French)</description>
+		<year>1993</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - La Legende Saien (E, France)(1993)(Bandai).sfc" size="2097152" crc="8f24f886"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballzef" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: Super Butouden (Euro, French)</description>
+		<year>1993</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden (E, France)(1993)(Bandai).sfc" size="2097152" crc="ea7abad1"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballzj" cloneof="dragballzef" romof="dragballzef" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: Super Butouden (Japan)</description>
+		<year>1993</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden (J)(1993)(Bandai).sfc" size="2097152" crc="8c7780bd"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballz2j" cloneof="dragballz2ef" romof="dragballz2ef" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: Super Butouden 2 (Japan, Rev. 1)</description>
+		<year>1993</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden 2 (J, Rev 1)(1993)(Bandai).sfc" size="2097152" crc="081fde86"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballz3j" cloneof="dragballz3ef" romof="dragballz3ef" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: Super Butouden 3 (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden 3 (J)(1994)(Bandai).sfc" size="2097152" crc="cbfde2d0"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballz3story" cloneof="dragballz3ef" romof="dragballz3ef" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, Dual Language: English/Japanese</comment>
+		<description>Dragon Ball Z: Super Butouden 3 - Story Mode (Hack, v1.1)</description>
+		<year>2026</year>
+		<manufacturer>Midtown Games</manufacturer>
+		<rom name="Dragon Ball Z - Super Butouden 3 - Story Mode v1.1 (2026)(Midtown Games).sfc" size="4194304" crc="9f29d899"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballzrpgte" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Dragon Ball Z: Super Gokuden - Totsugeki Hen (Hack, English v0.98)</description>
+		<year>2016</year>
+		<manufacturer>Kakkoii Translations</manufacturer>
+		<rom name="Dragon Ball Z - Chou Gokuuden - Totsugeki Hen T-Eng v0.98 (2016)(Kakkoii Translations).sfc" size="2097152" crc="3561ff9d"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragballz3ef" sourcefile="snes/d_snes.cpp">
+		<description>Dragon Ball Z: Ultime Menace (Euro, French)</description>
+		<year>1994</year>
+		<manufacturer>Bandai</manufacturer>
+		<rom name="Dragon Ball Z - Ultime Menace (E, France)(1994)(Bandai).sfc" size="2097152" crc="593eefe0"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5553,6 +5546,22 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dragonblse" cloneof="dragonbls" romof="dragonbls" sourcefile="snes/d_snes.cpp">
+		<description>Dragon: The Bruce Lee Story (Euro)</description>
+		<year>1994</year>
+		<manufacturer>Virgin Interactive</manufacturer>
+		<rom name="Dragon - The Bruce Lee Story (E)(1994)(Virgin).sfc" size="2097152" crc="038212ea"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="dragonbls" sourcefile="snes/d_snes.cpp">
+		<description>Dragon: The Bruce Lee Story (USA)</description>
+		<year>1994</year>
+		<manufacturer>Acclaim Ent. - Virgin Int.</manufacturer>
+		<rom name="Dragon - The Bruce Lee Story (U)(1994)(Acclaim Ent. - Virgin).sfc" size="2097152" crc="407c5c24"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="drakkhene" cloneof="drakkhen" romof="drakkhen" sourcefile="snes/d_snes.cpp">
 		<description>Drakkhen (Euro)</description>
 		<year>1991</year>
@@ -5579,7 +5588,7 @@
 	</game>
 	<game name="dreamazete" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Dream Maze - Kigurumi Daibouken (Hack, English v1.0b)</description>
+		<description>Dream Maze: The Kigurumi Adventure (Hack, English v1.0b)</description>
 		<year>2004</year>
 		<manufacturer>KingMike's Translations</manufacturer>
 		<rom name="Dream Maze - Kigurumi Daibouken T-Eng v1.0b (2004)(KingMike's Translations).sfc" size="1048576" crc="c5fcafa0"/>
@@ -11589,6 +11598,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="megaman7uw" cloneof="megaman7" romof="megaman7" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mega Man VII: Ultimate Warriors (Hack, v2.4)</description>
+		<year>2026</year>
+		<manufacturer>Shadow501</manufacturer>
+		<rom name="Mega Man VII - Ultimate Warriors v2.4 (2026)(Shadow501).sfc" size="4194304" crc="1cf4f48e"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="megamanxe" cloneof="megamanx" romof="megamanx" sourcefile="snes/d_snes.cpp">
 		<description>Mega Man X (Euro)</description>
 		<year>1993</year>
@@ -12018,6 +12036,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mmprgre" cloneof="mmpr" romof="mmpr" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mighty Morphin Power Rangers - Green Ranger Edition (Hack, v1.8)</description>
+		<year>2026</year>
+		<manufacturer>matchaman</manufacturer>
+		<rom name="Mighty Morphin Power Rangers - Green Ranger Edition v1.8 (2026)(matchaman).sfc" size="4194304" crc="6a78f4bc"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mmprfe" sourcefile="snes/d_snes.cpp">
 		<description>Mighty Morphin Power Rangers - The Fighting Edition (USA)</description>
 		<year>1995</year>
@@ -12239,6 +12266,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="mkae" cloneof="mk" romof="mk" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mortal Kombat Arcade Edition (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>lord-amd</manufacturer>
+		<rom name="Mortal Kombat Arcade Edition v1.2 (2026)(lord-amd).sfc" size="4194304" crc="8a939c7b"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mkiie" cloneof="mkii" romof="mkii" sourcefile="snes/d_snes.cpp">
 		<description>Mortal Kombat II (Euro, Rev. 1)</description>
 		<year>1994</year>
@@ -12260,6 +12296,15 @@
 		<year>1994</year>
 		<manufacturer>Acclaim Entertainment</manufacturer>
 		<rom name="Mortal Kombat II (U, Rev 1)(1994)(Acclaim Entertainment).sfc" size="3145728" crc="70bb5513"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mkiisae" cloneof="mkii" romof="mkii" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Mortal Kombat II - Super Arcade Edition (Hack)</description>
+		<year>2026</year>
+		<manufacturer>B-Zero TV</manufacturer>
+		<rom name="Mortal Kombat II - Super Arcade Edition (2026)(B-Zero TV).sfc" size="4194304" crc="2faab208"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13314,6 +13359,15 @@
 		<year>1992</year>
 		<manufacturer>Mindscape</manufacturer>
 		<rom name="Outlander (U)(1992)(Mindscape).sfc" size="1048576" crc="a978b36f"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="outlandersa1" cloneof="outlander" romof="outlander" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, SA-1 enhancement CPU</comment>
+		<description>Outlander - SA-1 improvement (Hack)</description>
+		<year>2026</year>
+		<manufacturer>Satellite of Love</manufacturer>
+		<rom name="Outlander - SA-1 improvement (2026)(Satellite of Love).sfc" size="4194304" crc="6f701fee"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -17827,6 +17881,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="supercastlevania4co" cloneof="supercastlevania4" romof="supercastlevania4" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, SA-1 enhancement CPU</comment>
+		<description>Super Castlevania IV Co-Op (Hack, v1.01)</description>
+		<year>2026</year>
+		<manufacturer>MateriaShrine</manufacturer>
+		<rom name="Super Castlevania IV Co-Op - SA-1 v1.01 (2026)(MateriaShrine).sfc" size="3145728" crc="3ccc0afc"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="supercastlevania4uh" cloneof="supercastlevania4" romof="supercastlevania4" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
 		<description>Super Castlevania IV Uncensored (Hack, v2.1)</description>
@@ -20830,6 +20893,15 @@
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="topgearfe" cloneof="topgear" romof="topgear" sourcefile="snes/d_snes.cpp">
+		<comment>Hack, SA-1 enhancement CPU</comment>
+		<description>Top Gear - Fullscreen Edition (Hack, v1.2)</description>
+		<year>2026</year>
+		<manufacturer>Psicopompo</manufacturer>
+		<rom name="Top Gear - Fullscreen Edition - SA-1 v1.2 (2026)(Psicopompo).sfc" size="1048576" crc="cdf8fc04"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="topgear2e" cloneof="topgear2" romof="topgear2" sourcefile="snes/d_snes.cpp">
 		<description>Top Gear 2 (Euro)</description>
 		<year>1993</year>
@@ -21256,10 +21328,19 @@
 	</game>
 	<game name="umk3bzero" cloneof="umk3" romof="umk3" sourcefile="snes/d_snes.cpp">
 		<comment>Hack</comment>
-		<description>Ultimate Mortal Kombat 3 BZero Edition (Hack, v1.1)</description>
+		<description>Ultimate Mortal Kombat 3 - BZero Edition (Hack, v1.1)</description>
 		<year>2025</year>
 		<manufacturer>B-Zero TV</manufacturer>
-		<rom name="Ultimate Mortal Kombat 3 BZero Edition v1.1 (2025)(B-Zero TV).sfc" size="8388608" crc="4ae4d7ad"/>
+		<rom name="Ultimate Mortal Kombat 3 - BZero Edition v1.1 (2025)(B-Zero TV).sfc" size="8388608" crc="4ae4d7ad"/>
+		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="umk3ee" cloneof="umk3" romof="umk3" sourcefile="snes/d_snes.cpp">
+		<comment>Hack</comment>
+		<description>Ultimate Mortal Kombat 3 - Extended Edition (Hack, Beta103)</description>
+		<year>2026</year>
+		<manufacturer>VrepliroidV</manufacturer>
+		<rom name="UMK3 - Extended Edition Beta103 (2026)(VrepliroidV).sfc" size="8388608" crc="06dcd1c2"/>
 		<video type="raster" orientation="horizontal" width="512" height="448" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -22495,7 +22576,7 @@
 		<driver status="good"/>
 	</game>
 	<game name="dreamazej" cloneof="dreamazete" romof="dreamazete" sourcefile="snes/d_snes.cpp">
-		<description>Yume Meikyuu - Kigurumi Daibouken (Japan)</description>
+		<description>Yume Meikyuu: Kigurumi Daibouken (Japan)</description>
 		<year>1994</year>
 		<manufacturer>Hect</manufacturer>
 		<rom name="Yume Meikyuu - Kigurumi Daibouken (J)(1994)(Hect).sfc" size="1048576" crc="4b17a200"/>
