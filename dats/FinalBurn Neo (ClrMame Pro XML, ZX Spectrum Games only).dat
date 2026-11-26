@@ -8807,6 +8807,17 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="dawntbots" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Homebrew</comment>
+		<description>Dawn of the Terrorbots (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>7 Tower Soft Games</manufacturer>
+		<rom name="Dawn of the Terrorbots 128K (2026)(7 Tower Soft Games).tap" size="87287" crc="aec24e84"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dayinthelife" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Day in the Life, A (48K)</description>
 		<year>1985</year>
@@ -8847,10 +8858,10 @@
 	</game>
 	<game name="dfboy" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Dead Flesh Boy (128K) (HB)</description>
+		<description>Dead Flesh Boy (48K-128K) (HB)</description>
 		<year>2015</year>
-		<manufacturer>VANB</manufacturer>
-		<rom name="Dead Flesh Boy 128K (2015)(VANB).tap" size="40669" crc="3375d2c9"/>
+		<manufacturer>Vanbsoftware</manufacturer>
+		<rom name="Dead Flesh Boy 48K-128K (2015)(Vanbsoftware).tzx" size="40723" crc="b1be1b9f"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -12976,6 +12987,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="futbolday" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Futbolin Day (Spanish) (128K) (HB)</description>
+		<year>2026</year>
+		<manufacturer>Bad Bits</manufacturer>
+		<rom name="Futbolin Day ES 128K (2026)(Bad Bits).tap" size="88876" crc="585dc675"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="futbikesim" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Future Bike Simulator (48K-128K)</description>
 		<year>1990</year>
@@ -14121,10 +14142,10 @@
 	</game>
 	<game name="giana128de" cloneof="giana128uk" romof="giana128uk" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Great Giana Sisters, The - German loading screen (128K) (HB)</description>
+		<description>Great Giana Sisters, The - German loading screen (128K) (HB, v1.0.4)</description>
 		<year>2026</year>
 		<manufacturer>Kirby2000</manufacturer>
-		<rom name="Great Giana Sisters, The - German loading screen 128K (2026)(Kirby2000).tzx" size="130975" crc="11173793"/>
+		<rom name="Great Giana Sisters, The - German loading screen v1.0.4 128K (2026)(Kirby2000).tzx" size="130975" crc="9431ddcd"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -14132,10 +14153,10 @@
 	</game>
 	<game name="giana128uk" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew</comment>
-		<description>Great Giana Sisters, The - UK loading screen (128K) (HB)</description>
+		<description>Great Giana Sisters, The - UK loading screen (128K) (HB, v1.0.4)</description>
 		<year>2026</year>
 		<manufacturer>Kirby2000</manufacturer>
-		<rom name="Great Giana Sisters, The - UK loading screen 128K (2026)(Kirby2000).tzx" size="130975" crc="f1c05bcc"/>
+		<rom name="Great Giana Sisters, The - UK loading screen v1.0.4 128K (2026)(Kirby2000).tzx" size="130975" crc="74e6b192"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
@@ -14716,6 +14737,15 @@
 		<rom name="Haoken ES 128K (2023)(Hicks).tap" size="50024" crc="d30c2af6"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="happiest" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Happiest Days of Your Life, The (48K)</description>
+		<year>1986</year>
+		<manufacturer>Firebird Software</manufacturer>
+		<rom name="Happiest Days of Your Life, The 48K (1986)(Firebird Software).tzx" size="48672" crc="c9872e93"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -19294,6 +19324,16 @@
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="macadam" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<comment>Redifine keys to set inputs controller</comment>
+		<description>Macadam Bumper (48K)</description>
+		<year>1985</year>
+		<manufacturer>PSS - ERE Informatique</manufacturer>
+		<rom name="Macadam Bumper 48K (1985)(PSS - ERE Informatique).tzx" size="44763" crc="17669102"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="mach3" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<description>Mach 3 (Spanish) (48K)</description>
 		<year>1989</year>
@@ -19318,6 +19358,15 @@
 		<year>1988</year>
 		<manufacturer>Topo Soft</manufacturer>
 		<rom name="Mad Mix Game ES 48K (1988)(Topo Soft).tzx" size="51403" crc="6d8ca935"/>
+		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="madnurse" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
+		<description>Mad Nurse (48K)</description>
+		<year>1987</year>
+		<manufacturer>Firebird Software</manufacturer>
+		<rom name="Mad Nurse 48K (1987)(Firebird Software).tzx" size="53473" crc="a4e7a240"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -19457,7 +19506,7 @@
 		<description>Magic Carpet (16K)</description>
 		<year>1985</year>
 		<manufacturer>Mastertronic</manufacturer>
-		<rom name="Magic Carpet 16K (1985)(Mastertronic).z80" size="11221" crc="05e22cf1"/>
+		<rom name="Magic Carpet 16K (1985)(Mastertronic).tzx" size="14799" crc="6a9af9f0"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -22389,9 +22438,9 @@
 	<game name="neighbours" romof="spectrum" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Set '3 SINCLAIR' to use controller</comment>
 		<description>Neighbours (48K)</description>
-		<year>1992</year>
+		<year>1991</year>
 		<manufacturer>Impulze</manufacturer>
-		<rom name="Neighbours 48K (1992)(Impulze).tap" size="52388" crc="1a852016"/>
+		<rom name="Neighbours 48K (1991)(Impulze).tzx" size="52449" crc="39560993"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
@@ -22516,6 +22565,16 @@
 		<manufacturer>EJVG</manufacturer>
 		<rom name="Nevermore ES v5 48K (2020)(EJVG).tzx" size="46093" crc="83024407"/>
 		<rom name="spectrum.rom" merge="spectrum.rom" size="16384" crc="ddee531f"/>
+		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="nywarriors" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
+		<description>New York Warriors (48K-128K)</description>
+		<year>1990</year>
+		<manufacturer>Virgin Games</manufacturer>
+		<rom name="New York Warriors 48K-128K (1990)(Virgin Games).tap" size="109836" crc="42b52a20"/>
+		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
+		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -30901,10 +30960,10 @@
 	</game>
 	<game name="splash" romof="spec128" sourcefile="spectrum/d_spectrum.cpp">
 		<comment>Homebrew, Press 'K' to use controller</comment>
-		<description>Splash (English/Spanish) (48K-128K) (HB, v2.2)</description>
+		<description>Splash (English/Spanish) (48K-128K) (HB, v2.3)</description>
 		<year>2026</year>
 		<manufacturer>Roberto Valverde</manufacturer>
-		<rom name="Splash v2.2 48K-128K (2026)(Roberto Valverde).tap" size="42867" crc="d264940f"/>
+		<rom name="Splash v2.3 48K-128K (2026)(Roberto Valverde).tap" size="43458" crc="a747c07b"/>
 		<rom name="zx128_0.rom" merge="zx128_0.rom" size="16384" crc="e76799d2"/>
 		<rom name="zx128_1.rom" merge="zx128_1.rom" size="16384" crc="b96a36be"/>
 		<video type="raster" orientation="horizontal" width="288" height="224" aspectx="4" aspecty="3"/>

@@ -36585,7 +36585,7 @@
 		<rom name="054-s1.s1" merge="054-s1.s1" size="131072" crc="22e02ddd"/>
 		<rom name="054-c1.c1" merge="054-c1.c1" size="4194304" crc="8221b712"/>
 		<rom name="054-c2.c2" merge="054-c2.c2" size="4194304" crc="d6c6183d"/>
-		<rom name="054-m1rcm.m1" size="131072" crc="67815eda"/>
+		<rom name="054-m1rcm.m1" size="131072" crc="2a491bab"/>
 		<rom name="054-v1rcm.v1" size="2097152" crc="45d86fa5"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>
@@ -103072,6 +103072,64 @@
 		<rom name="msh.11m" merge="msh.11m" size="2097152" crc="37ac6d30"/>
 		<rom name="msh.12m" merge="msh.12m" size="2097152" crc="de092570"/>
 		<rom name="mshu.key" size="20" crc="745c1bee"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshexj" cloneof="msh" romof="msh" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Marvel Super Heroes EX (Hack, Japan RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="mshexj.03g" size="524288" crc="f5bd99aa"/>
+		<rom name="mshexj.04g" size="524288" crc="b0442438"/>
+		<rom name="mshexj.05a" size="524288" crc="8dbbb6aa"/>
+		<rom name="mshexj.06b" size="524288" crc="eb4b1fc7"/>
+		<rom name="msh.07a" merge="msh.07a" size="524288" crc="c45f8e27"/>
+		<rom name="mshexj.08a" size="524288" crc="25621e31"/>
+		<rom name="msh.09a" merge="msh.09a" size="524288" crc="82ec27af"/>
+		<rom name="mshexj.10b" size="524288" crc="7016bea5"/>
+		<rom name="mshexj.13m" size="4194304" crc="9ff36d73"/>
+		<rom name="mshexj.15m" size="4194304" crc="ef7aef7e"/>
+		<rom name="mshexj.17m" size="4194304" crc="b48f7b69"/>
+		<rom name="mshexj.19m" size="4194304" crc="22d65cf2"/>
+		<rom name="msh.14m" merge="msh.14m" size="4194304" crc="4197973e"/>
+		<rom name="msh.16m" merge="msh.16m" size="4194304" crc="438da4a0"/>
+		<rom name="msh.18m" merge="msh.18m" size="4194304" crc="4db92d94"/>
+		<rom name="msh.20m" merge="msh.20m" size="4194304" crc="a2b0c6c0"/>
+		<rom name="mshex.01" size="131072" crc="04f35a43"/>
+		<rom name="msh.02" merge="msh.02" size="131072" crc="ce67d0d9"/>
+		<rom name="msh.11m" merge="msh.11m" size="2097152" crc="37ac6d30"/>
+		<rom name="msh.12m" merge="msh.12m" size="2097152" crc="de092570"/>
+		<rom name="mshj.key" size="20" crc="888761ac"/>
+		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mshex" cloneof="msh" romof="msh" sourcefile="capcom/d_cps2.cpp">
+		<comment>Hack</comment>
+		<description>Marvel Super Heroes EX (Hack, USA RC1)</description>
+		<year>2026</year>
+		<manufacturer>Strygo</manufacturer>
+		<rom name="mshex.03g" size="524288" crc="9a543ebb"/>
+		<rom name="mshex.04g" size="524288" crc="e8daf366"/>
+		<rom name="mshex.05a" size="524288" crc="bf91a894"/>
+		<rom name="mshex.06b" size="524288" crc="97005e2b"/>
+		<rom name="msh.07a" merge="msh.07a" size="524288" crc="c45f8e27"/>
+		<rom name="mshex.08a" size="524288" crc="b2926dcf"/>
+		<rom name="msh.09a" merge="msh.09a" size="524288" crc="82ec27af"/>
+		<rom name="mshex.10b" size="524288" crc="a827956b"/>
+		<rom name="mshex.13m" size="4194304" crc="b7c12f12"/>
+		<rom name="mshex.15m" size="4194304" crc="884f6643"/>
+		<rom name="mshex.17m" size="4194304" crc="581fe6da"/>
+		<rom name="mshex.19m" size="4194304" crc="28820261"/>
+		<rom name="msh.14m" merge="msh.14m" size="4194304" crc="4197973e"/>
+		<rom name="msh.16m" merge="msh.16m" size="4194304" crc="438da4a0"/>
+		<rom name="msh.18m" merge="msh.18m" size="4194304" crc="4db92d94"/>
+		<rom name="msh.20m" merge="msh.20m" size="4194304" crc="a2b0c6c0"/>
+		<rom name="mshex.01" size="131072" crc="04f35a43"/>
+		<rom name="msh.02" merge="msh.02" size="131072" crc="ce67d0d9"/>
+		<rom name="msh.11m" merge="msh.11m" size="2097152" crc="37ac6d30"/>
+		<rom name="msh.12m" merge="msh.12m" size="2097152" crc="de092570"/>
+		<rom name="mshj.key" size="20" crc="888761ac"/>
 		<video type="raster" orientation="horizontal" width="384" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>

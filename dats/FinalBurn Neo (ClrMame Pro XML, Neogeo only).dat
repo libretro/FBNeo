@@ -4049,7 +4049,7 @@
 		<rom name="054-s1.s1" merge="054-s1.s1" size="131072" crc="22e02ddd"/>
 		<rom name="054-c1.c1" merge="054-c1.c1" size="4194304" crc="8221b712"/>
 		<rom name="054-c2.c2" merge="054-c2.c2" size="4194304" crc="d6c6183d"/>
-		<rom name="054-m1rcm.m1" size="131072" crc="67815eda"/>
+		<rom name="054-m1rcm.m1" size="131072" crc="2a491bab"/>
 		<rom name="054-v1rcm.v1" size="2097152" crc="45d86fa5"/>
 		<rom name="sp-s3.sp1" merge="sp-s3.sp1" size="131072" crc="91b64be3"/>
 		<rom name="sp-s2.sp1" merge="sp-s2.sp1" size="131072" crc="9036d879"/>

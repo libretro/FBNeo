@@ -6120,6 +6120,7 @@ DRV		BurnDrvtg_daviscup;
 DRV		BurnDrvmd_daviscupa;
 DRV		BurnDrvmd_daviscup;
 DRV		BurnDrvmd_daviscp2;
+DRV		BurnSpecDawntbots;
 DRV		BurnDrvMSX_dawnpatr;
 DRV		BurnDrvnes_daydredav;
 DRV		BurnSpecDayinthelife;
@@ -9702,6 +9703,7 @@ DRV		BurnDrvmd_vspuyosunj;
 DRV		BurnDrvgba_futaripc;
 DRV		BurnDrvgba_futarimh;
 DRV		BurnDrvmd_futbol;
+DRV		BurnSpecFutbolday;
 DRV		BurnSpecFutbikesim;
 DRV		BurnSpecFutknight;
 DRV		BurnDrvMSX_futknight;
@@ -11357,6 +11359,7 @@ DRV		BurnDrvMSX_hansadv;
 DRV		BurnDrvfds_haokunnofusnata;
 DRV		BurnSpecHaokene;
 DRV		BurnSpecHaokens;
+DRV		BurnSpecHappiest;
 DRV		BurnDrvnes_happilyea;
 DRV		BurnDrvnes_happycamper;
 DRV		BurnDrvgba_happyfet;
@@ -14794,6 +14797,7 @@ DRV		BurnSpecMabusen;
 DRV		BurnSpecMabuses;
 DRV		BurnSpecMabusdxen;
 DRV		BurnSpecMabusdxes;
+DRV		BurnSpecMacadam;
 DRV		BurnDrvMSX_macadam;
 DRV		BurnSpecMach3;
 DRV		BurnDrvMachbrkr;
@@ -14824,6 +14828,7 @@ DRV		BurnDrvnes_madmixgr;
 DRV		BurnDrvsms_madmixgr;
 DRV		BurnDrvMadmotor;
 DRV		BurnDrvMadmotora;
+DRV		BurnSpecMadnurse;
 DRV		BurnDrvMplanetsuk;
 DRV		BurnDrvMplanets;
 DRV		BurnDrvMadshark;
@@ -15382,6 +15387,8 @@ DRV		BurnDrvCpsMshjr1;
 DRV		BurnDrvCpsMshj;
 DRV		BurnDrvCpsMshud;
 DRV		BurnDrvCpsMshu;
+DRV		BurnDrvCpsMshexj;
+DRV		BurnDrvCpsMshex;
 DRV		BurnDrvCpsMshvsfa1;
 DRV		BurnDrvCpsMshvsfa;
 DRV		BurnDrvCpsMshvsfbh;
@@ -17708,6 +17715,7 @@ DRV		BurnDrvsnes_Newsupermarioland;
 DRV		BurnDrvNewtangl;
 DRV		BurnDrvsnes_Newyatterman;
 DRV		BurnDrvnes_newyornya;
+DRV		BurnSpecNywarriors;
 DRV		BurnSpecTnzs;
 DRV		BurnDrvnes_newzeasto;
 DRV		BurnDrvsms_tnzs;
@@ -36948,6 +36956,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_daviscupa,		// Davis Cup World Tour (Euro, USA, 199306)
 	&BurnDrvmd_daviscup,		// Davis Cup World Tour (Euro, USA, 199307)
 	&BurnDrvmd_daviscp2,		// Davis Cup World Tour Tennis 2 (Prototype)
+	&BurnSpecDawntbots,			// Dawn of the Terrorbots (128K) (HB)
 	&BurnDrvMSX_dawnpatr,		// Dawn Patrol (Japan)
 	&BurnDrvnes_daydredav,		// Day Dreamin' Davey (USA)
 	&BurnSpecDayinthelife,		// Day in the Life, A (48K)
@@ -36966,7 +36975,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvDeadconxj,			// Dead Connection (Japan)
 	&BurnDrvDeadconx,			// Dead Connection (World)
 	&BurnDrvsnes_Deaddance,		// Dead Dance (Japan)
-	&BurnSpecDfboy,				// Dead Flesh Boy (128K) (HB)
+	&BurnSpecDfboy,				// Dead Flesh Boy (48K-128K) (HB)
 	&BurnSpecDmdraw,			// Dead Man's Draw (48K) (HB)
 	&BurnDrvtg_deadmoon,		// Dead Moon (USA)
 	&BurnDrvpce_deadmoon,		// Dead Moon: Tsuki Sekai no Akumu (Japan)
@@ -40530,6 +40539,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgba_futaripc,		// Futari wa Pretty Cure - Arienaai! Yume no Sono wa Daimeikyuu (Japan)
 	&BurnDrvgba_futarimh,		// Futari wa Pretty Cure Max Heart - Maji? Maji?! Fight de IN Janai (Japan)
 	&BurnDrvmd_futbol,			// Futbol Argentino 98: Pasion de Multitudes (Unl)
+	&BurnSpecFutbolday,			// Futbolin Day (Spanish) (128K) (HB)
 	&BurnSpecFutbikesim,		// Future Bike Simulator (48K-128K)
 	&BurnSpecFutknight,			// Future Knight (128K)
 	&BurnDrvMSX_futknight,		// Future Knight (Euro)
@@ -41742,8 +41752,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecgreatesc,			// Great Escape, The (48K)
 	&BurnDrva26_greatesc,		// Great Escape
 	&BurnDrvsms_greatftb,		// Great Football (World)
-	&BurnSpecGiana128de,		// Great Giana Sisters, The - German loading screen (128K) (HB)
-	&BurnSpecGiana128uk,		// Great Giana Sisters, The - UK loading screen (128K) (HB)
+	&BurnSpecGiana128de,		// Great Giana Sisters, The - German loading screen (128K) (HB, v1.0.4)
+	&BurnSpecGiana128uk,		// Great Giana Sisters, The - UK loading screen (128K) (HB, v1.0.4)
 	&BurnDrvsms_greatglf,		// Great Golf (Euro, USA) ~ Masters Golf (Japan)
 	&BurnDrvsms_greatglf1,		// Great Golf (Euro, USA, v1.0)
 	&BurnDrvsms_greatglj,		// Great Golf (Japan)
@@ -42185,6 +42195,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvfds_haokunnofusnata,// Hao-kun no Fushigi na Tabi (Japan)
 	&BurnSpecHaokene,			// Haoken (English) (128K) (HB)
 	&BurnSpecHaokens,			// Haoken (Spanish) (128K) (HB)
+	&BurnSpecHappiest,			// Happiest Days of Your Life, The (48K)
 	&BurnDrvnes_happilyea,		// Happily Ever After (USA, Prototype)
 	&BurnDrvnes_happycamper,	// Happy Camper (USA, Prototype)
 	&BurnDrvgba_happyfet,		// Happy Feet (Europe)
@@ -45622,6 +45633,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnSpecMabuses,			// Mabus Mania (Spanish) (48K-128K) (HB)
 	&BurnSpecMabusdxen,			// Mabus Mania Deluxe (English) (48K-128K) (HB)
 	&BurnSpecMabusdxes,			// Mabus Mania Deluxe (Spanish) (48K-128K) (HB)
+	&BurnSpecMacadam,			// Macadam Bumper (48K)
 	&BurnDrvMSX_macadam,		// Macadam Bumper (Euro)
 	&BurnSpecMach3,				// Mach 3 (Spanish) (48K)
 	&BurnDrvMachbrkr,			// Mach Breakers (World, MB2)
@@ -45652,6 +45664,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsms_madmixgr,		// Mad Mix Game R (HB)
 	&BurnDrvMadmotor,			// Mad Motor (prototype, set 1)
 	&BurnDrvMadmotora,			// Mad Motor (prototype, set 2)
+	&BurnSpecMadnurse,			// Mad Nurse (48K)
 	&BurnDrvMplanetsuk,			// Mad Planets (UK)
 	&BurnDrvMplanets,			// Mad Planets
 	&BurnDrvMadshark,			// Mad Shark
@@ -46210,6 +46223,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsMshj,			// Marvel Super Heroes (Japan 951117)
 	&BurnDrvCpsMshud,			// Marvel Super Heroes (USA 951024 Phoenix Edition) (bootleg)
 	&BurnDrvCpsMshu,			// Marvel Super Heroes (USA 951024)
+	&BurnDrvCpsMshexj,			// Marvel Super Heroes EX (Hack, Japan RC1)
+	&BurnDrvCpsMshex,			// Marvel Super Heroes EX (Hack, USA RC1)
 	&BurnDrvCpsMshvsfa1,		// Marvel Super Heroes Vs. Street Fighter (Asia 970620)
 	&BurnDrvCpsMshvsfa,			// Marvel Super Heroes Vs. Street Fighter (Asia 970625)
 	&BurnDrvCpsMshvsfbh,		// Marvel Super Heroes Vs. Street Fighter (Boss Hack)
@@ -48536,6 +48551,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvNewtangl,			// New Tropical Angel
 	&BurnDrvsnes_Newyatterman,	// New Yatterman - Nandai Kandai Yajirobee (Japan)
 	&BurnDrvnes_newyornya,		// New York Nyankies (Japan)
+	&BurnSpecNywarriors,		// New York Warriors (48K-128K)
 	&BurnSpecTnzs,				// New Zealand Story, The (48K-128K)
 	&BurnDrvnes_newzeasto,		// New Zealand Story, The (Euro)
 	&BurnDrvsms_tnzs,			// New Zealand Story, The (Euro)
@@ -54936,7 +54952,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrva26_spitfire,		// Spitfire Attack
 	&BurnDrvCHF_spitfire,		// Spitfire
 	&BurnSpecSpittimage,		// Spitting Image: The Computer Game (48K-128K)
-	&BurnSpecSplash,			// Splash (English/Spanish) (48K-128K) (HB, v2.2)
+	&BurnSpecSplash,			// Splash (English/Spanish) (48K-128K) (HB, v2.3)
 	&BurnDrvMSX_splash,			// Splash (Euro, Spanish)
 	&BurnDrvSplash10,			// Splash! (ver. 1.0, checksum 2FC9AE1D, non North America)
 	&BurnDrvSplash11,			// Splash! (ver. 1.1, checksum 4697D2BF, non North America)
@@ -67744,6 +67760,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "md_daviscupa", "megadrive/d_megadrive.cpp"},
 	{ "md_daviscup", "megadrive/d_megadrive.cpp"},
 	{ "md_daviscp2", "megadrive/d_megadrive.cpp"},
+	{ "spec_dawntbots", "spectrum/d_spectrum.cpp"},
 	{ "msx_dawnpatr", "msx/d_msx.cpp"},
 	{ "nes_daydredav", "nes/d_nes.cpp"},
 	{ "spec_dayinthelife", "spectrum/d_spectrum.cpp"},
@@ -71310,6 +71327,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gba_futaripc", "gba/d_gba.cpp"},
 	{ "gba_futarimh", "gba/d_gba.cpp"},
 	{ "md_futbol", "megadrive/d_megadrive.cpp"},
+	{ "spec_futbolday", "spectrum/d_spectrum.cpp"},
 	{ "spec_futbikesim", "spectrum/d_spectrum.cpp"},
 	{ "spec_futknight", "spectrum/d_spectrum.cpp"},
 	{ "msx_futknight", "msx/d_msx.cpp"},
@@ -72961,6 +72979,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "fds_haokunnofusnata", "nes/d_nes.cpp"},
 	{ "spec_haokene", "spectrum/d_spectrum.cpp"},
 	{ "spec_haokens", "spectrum/d_spectrum.cpp"},
+	{ "spec_happiest", "spectrum/d_spectrum.cpp"},
 	{ "nes_happilyea", "nes/d_nes.cpp"},
 	{ "nes_happycamper", "nes/d_nes.cpp"},
 	{ "gba_happyfet", "gba/d_gba.cpp"},
@@ -76366,6 +76385,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "spec_mabuses", "spectrum/d_spectrum.cpp"},
 	{ "spec_mabusdxen", "spectrum/d_spectrum.cpp"},
 	{ "spec_mabusdxes", "spectrum/d_spectrum.cpp"},
+	{ "spec_macadam", "spectrum/d_spectrum.cpp"},
 	{ "msx_macadam", "msx/d_msx.cpp"},
 	{ "spec_mach3", "spectrum/d_spectrum.cpp"},
 	{ "machbrkr", "pst90s/d_namconb1.cpp"},
@@ -76394,6 +76414,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sms_madmixgr", "sms/d_sms.cpp"},
 	{ "madmotor", "dataeast/d_madmotor.cpp"},
 	{ "madmotora", "dataeast/d_madmotor.cpp"},
+	{ "spec_madnurse", "spectrum/d_spectrum.cpp"},
 	{ "mplanetsuk", "pre90s/d_qbert.cpp"},
 	{ "mplanets", "pre90s/d_qbert.cpp"},
 	{ "madshark", "pst90s/d_seta.cpp"},
@@ -76952,6 +76973,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "mshj", "capcom/d_cps2.cpp"},
 	{ "mshud", "capcom/d_cps2.cpp"},
 	{ "mshu", "capcom/d_cps2.cpp"},
+	{ "mshexj", "capcom/d_cps2.cpp"},
+	{ "mshex", "capcom/d_cps2.cpp"},
 	{ "mshvsfa1", "capcom/d_cps2.cpp"},
 	{ "mshvsfa", "capcom/d_cps2.cpp"},
 	{ "mshvsfbh", "capcom/d_cps2.cpp"},
@@ -79264,6 +79287,7 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "newtangl", "irem/d_m57.cpp"},
 	{ "snes_newyatterman", "snes/d_snes.cpp"},
 	{ "nes_newyornya", "nes/d_nes.cpp"},
+	{ "spec_nywarriors", "spectrum/d_spectrum.cpp"},
 	{ "spec_tnzs", "spectrum/d_spectrum.cpp"},
 	{ "nes_newzeasto", "nes/d_nes.cpp"},
 	{ "sms_tnzs", "sms/d_sms.cpp"},
