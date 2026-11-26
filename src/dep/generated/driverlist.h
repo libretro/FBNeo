@@ -22361,6 +22361,9 @@ DRV		BurnDrvgg_sega4in1;
 DRV		BurnDrvgg_sega4in1p;
 DRV		BurnDrvsms_segagfx;
 DRV		BurnDrvmd_smsbrawl;
+DRV		BurnDrvModel1io2;
+DRV		BurnDrvModel1io;
+DRV		BurnDrvNetmerc;
 DRV		BurnDrvSeganinj;
 DRV		BurnDrvSeganinja;
 DRV		BurnDrvSeganinju;
@@ -24438,6 +24441,8 @@ DRV		BurnDrvnes_starwarst;
 DRV		BurnDrvnes_starwarsjc;
 DRV		BurnDrvnes_starwarsj;
 DRV		BurnDrvmd_starwars;
+DRV		BurnDrvSwaj;
+DRV		BurnDrvSwa;
 DRV		BurnDrvgg_starwarsu;
 DRV		BurnDrvnes_starwars;
 DRV		BurnDrvnes_starwarseasy;
@@ -27902,10 +27907,8 @@ DRV		BurnDrvTokioo;
 DRV		BurnDrvTokiou;
 DRV		BurnDrvnes_tokkyshisolc;
 DRV		BurnDrvnes_tokkyshisolj;
-#if defined FBNEO_DEBUG
-DRV		BurnDrvMahmajn;			// no comment [NOT WORKING]
-DRV		BurnDrvMahmajn2;		// no comment [NOT WORKING]
-#endif
+DRV		BurnDrvMahmajn;
+DRV		BurnDrvMahmajn2;
 DRV		BurnDrvnes_tokorsannomammosemo;
 DRV		BurnDrvJackalj;
 DRV		BurnDrvTndrcadej;
@@ -29156,6 +29159,8 @@ DRV		BurnDrvmd_vf2tek;
 DRV		BurnDrvsms_vfa;
 DRV		BurnDrvgg_vfa;
 DRV		BurnDrvgg_vfmini;
+DRV		BurnDrvVf;
+DRV		BurnDrvVformula;
 DRV		BurnDrvs32x_vhamster;
 DRV		BurnDrvmd_vr;
 DRV		BurnDrvmd_vrj;
@@ -29163,6 +29168,8 @@ DRV		BurnDrvmd_vru;
 DRV		BurnDrvs32x_vrdxe;
 DRV		BurnDrvs32x_vrdxj;
 DRV		BurnDrvs32x_vrdx;
+DRV		BurnDrvVrext;
+DRV		BurnDrvVr;
 DRV		BurnDrvgba_vtennis;
 DRV		BurnDrvgba_vtennisu;
 DRV		BurnDrvsnes_Virtualbart;
@@ -29634,7 +29641,11 @@ DRV		BurnDrvnes_wingmad;
 DRV		BurnDrvWschampb;
 DRV		BurnDrvWschampa;
 DRV		BurnDrvWschamp;
+DRV		BurnDrvWingwarj;
+DRV		BurnDrvWingwaru;
 DRV		BurnDrvcv_wingwar;
+DRV		BurnDrvWingwar;
+DRV		BurnDrvWingwar360;
 DRV		BurnDrvMSX_wingwarrdx;
 DRV		BurnDrvMSX_wingwarr;
 DRV		BurnDrvgg_wingwarriors;
@@ -30609,7 +30620,9 @@ DRV		BurnDrvZeroteamd;
 DRV		BurnDrvZeroteamc;
 DRV		BurnDrvZerotm2k;
 DRV		BurnDrvZeroteams;
-DRV		BurnDrvZeroteamsr;
+#if defined FBNEO_DEBUG
+DRV		BurnDrvZeroteamsr;		// No game code! Black screen normal! [NOT WORKING]
+#endif
 DRV		BurnDrvZteam1v4;
 DRV		BurnDrvZteaml6;
 DRV		BurnDrvZteamymp;
@@ -53197,6 +53210,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvgg_sega4in1p,		// Sega Game Pack 4 in 1 (Euro, Prototype)
 	&BurnDrvsms_segagfx,		// Sega Graphic Board (Japan, Prototype v2.0)
 	&BurnDrvmd_smsbrawl,		// Sega Master System Brawl (HB)
+	&BurnDrvModel1io2,			// Sega Model 1 I/O Board (Advanced) BIOS [BIOS only, NOT WORKING]
+	&BurnDrvModel1io,			// Sega Model 1 I/O Board BIOS [BIOS only, NOT WORKING]
+	&BurnDrvNetmerc,			// Sega NetMerc
 	&BurnDrvSeganinj,			// Sega Ninja (315-5102)
 	&BurnDrvSeganinja,			// Sega Ninja (315-5113) [needs decrypting, NOT WORKING]
 	&BurnDrvSeganinju,			// Sega Ninja (not encrypted)
@@ -55274,6 +55290,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_starwarsjc,		// Star Wars (Namco) (Hack, Spanish)
 	&BurnDrvnes_starwarsj,		// Star Wars (Namco) (Japan)
 	&BurnDrvmd_starwars,		// Star Wars (Russia) (Unl)
+	&BurnDrvSwaj,				// Star Wars (Sega, Japan)
+	&BurnDrvSwa,				// Star Wars (Sega, US)
 	&BurnDrvgg_starwarsu,		// Star Wars (USA)
 	&BurnDrvnes_starwars,		// Star Wars (USA)
 	&BurnDrvnes_starwarseasy,	// Star Wars - Easy (Hack)
@@ -58738,10 +58756,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvTokiou,				// Tokio / Scramble Formation (US)
 	&BurnDrvnes_tokkyshisolc,	// Tokkyuu Shirei Solbrain (Hack, Chinese)
 	&BurnDrvnes_tokkyshisolj,	// Tokkyuu Shirei Solbrain (Japan)
-#if defined FBNEO_DEBUG
-	&BurnDrvMahmajn,			// Tokoro San no MahMahjan (Japan, ROM Based) [no comment, NOT WORKING]
-	&BurnDrvMahmajn2,			// Tokoro San no MahMahjan 2 (Japan, ROM Based) [no comment, NOT WORKING]
-#endif
+	&BurnDrvMahmajn,			// Tokoro San no MahMahjan (Japan, ROM Based)
+	&BurnDrvMahmajn2,			// Tokoro San no MahMahjan 2 (Japan, ROM Based)
 	&BurnDrvnes_tokorsannomammosemo,// Tokoro-san no Mamoru mo Semeru mo (Japan)
 	&BurnDrvJackalj,			// Tokushu Butai Jackal (Japan, 8-way Joystick)
 	&BurnDrvTndrcadej,			// Tokusyu Butai U.A.G. (Japan)
@@ -59992,6 +60008,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvsms_vfa,			// Virtua Fighter Animation (Brazil)
 	&BurnDrvgg_vfa,				// Virtua Fighter Animation (Euro, USA)
 	&BurnDrvgg_vfmini,			// Virtua Fighter Mini (Japan)
+	&BurnDrvVf,					// Virtua Fighter
+	&BurnDrvVformula,			// Virtua Formula
 	&BurnDrvs32x_vhamster,		// Virtua Hamster (USA, Prototype)
 	&BurnDrvmd_vr,				// Virtua Racing (Euro)
 	&BurnDrvmd_vrj,				// Virtua Racing (Japan)
@@ -59999,6 +60017,8 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvs32x_vrdxe,			// Virtua Racing Deluxe (Europe)
 	&BurnDrvs32x_vrdxj,			// Virtua Racing Deluxe (Japan)
 	&BurnDrvs32x_vrdx,			// Virtua Racing Deluxe (USA)
+	&BurnDrvVrext,				// Virtua Racing Extended (v0.4)
+	&BurnDrvVr,					// Virtua Racing
 	&BurnDrvgba_vtennis,		// Virtua Tennis (Europe)
 	&BurnDrvgba_vtennisu,		// Virtua Tennis (USA)
 	&BurnDrvsnes_Virtualbart,	// Virtual Bart (USA)
@@ -60470,7 +60490,11 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvWschampb,			// Wing Shooting Championship V1.00
 	&BurnDrvWschampa,			// Wing Shooting Championship V1.01
 	&BurnDrvWschamp,			// Wing Shooting Championship V2.00
+	&BurnDrvWingwarj,			// Wing War (Japan)
+	&BurnDrvWingwaru,			// Wing War (US)
 	&BurnDrvcv_wingwar,			// Wing War (USA)
+	&BurnDrvWingwar,			// Wing War (World)
+	&BurnDrvWingwar360,			// Wing War R360 (US)
 	&BurnDrvMSX_wingwarrdx,		// Wing Warriors (2020 Version) (HB)
 	&BurnDrvMSX_wingwarr,		// Wing Warriors (HB)
 	&BurnDrvgg_wingwarriors,	// Wing Warriors (HB, v1.00 fix)
@@ -61445,7 +61469,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvZeroteamc,			// Zero Team (Taiwan)
 	&BurnDrvZerotm2k,			// Zero Team 2000
 	&BurnDrvZeroteams,			// Zero Team Selection
-	&BurnDrvZeroteamsr,			// Zero Team Suicide Revival Kit
+#if defined FBNEO_DEBUG
+	&BurnDrvZeroteamsr,			// Zero Team Suicide Revival Kit [No game code! Black screen normal!, NOT WORKING]
+#endif
 	&BurnDrvZteam1v4,			// Zero Team USA (1v4, Hack)
 	&BurnDrvZteaml6,			// Zero Team USA (Camper, Hack)
 	&BurnDrvZteamymp,			// Zero Team USA (Devil Plus, Hack)
@@ -83905,6 +83931,9 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "gg_sega4in1p", "sms/d_sms.cpp"},
 	{ "sms_segagfx", "sms/d_sms.cpp"},
 	{ "md_smsbrawl", "megadrive/d_megadrive.cpp"},
+	{ "model1io2", "sega/d_model1.cpp"},
+	{ "model1io", "sega/d_model1.cpp"},
+	{ "netmerc", "sega/d_model1.cpp"},
 	{ "seganinj", "sega/d_sys1.cpp"},
 	{ "seganinja", "sega/d_sys1.cpp"},
 	{ "seganinju", "sega/d_sys1.cpp"},
@@ -85966,6 +85995,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "nes_starwarsjc", "nes/d_nes.cpp"},
 	{ "nes_starwarsj", "nes/d_nes.cpp"},
 	{ "md_starwars", "megadrive/d_megadrive.cpp"},
+	{ "swaj", "sega/d_model1.cpp"},
+	{ "swa", "sega/d_model1.cpp"},
 	{ "gg_starwarsu", "sms/d_sms.cpp"},
 	{ "nes_starwars", "nes/d_nes.cpp"},
 	{ "nes_starwarseasy", "nes/d_nes.cpp"},
@@ -90646,6 +90677,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "sms_vfa", "sms/d_sms.cpp"},
 	{ "gg_vfa", "sms/d_sms.cpp"},
 	{ "gg_vfmini", "sms/d_sms.cpp"},
+	{ "vf", "sega/d_model1.cpp"},
+	{ "vformula", "sega/d_model1.cpp"},
 	{ "s32x_vhamster", "megadrive/d_sega32x.cpp"},
 	{ "md_vr", "megadrive/d_megadrive.cpp"},
 	{ "md_vrj", "megadrive/d_megadrive.cpp"},
@@ -90653,6 +90686,8 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "s32x_vrdxe", "megadrive/d_sega32x.cpp"},
 	{ "s32x_vrdxj", "megadrive/d_sega32x.cpp"},
 	{ "s32x_vrdx", "megadrive/d_sega32x.cpp"},
+	{ "vrext", "sega/d_model1.cpp"},
+	{ "vr", "sega/d_model1.cpp"},
 	{ "gba_vtennis", "gba/d_gba.cpp"},
 	{ "gba_vtennisu", "gba/d_gba.cpp"},
 	{ "snes_virtualbart", "snes/d_snes.cpp"},
@@ -91116,7 +91151,11 @@ static game_sourcefile_entry sourcefile_table[] = {
 	{ "wschampb", "pst90s/d_seta2.cpp"},
 	{ "wschampa", "pst90s/d_seta2.cpp"},
 	{ "wschamp", "pst90s/d_seta2.cpp"},
+	{ "wingwarj", "sega/d_model1.cpp"},
+	{ "wingwaru", "sega/d_model1.cpp"},
 	{ "cv_wingwar", "coleco/d_coleco.cpp"},
+	{ "wingwar", "sega/d_model1.cpp"},
+	{ "wingwar360", "sega/d_model1.cpp"},
 	{ "msx_wingwarrdx", "msx/d_msx.cpp"},
 	{ "msx_wingwarr", "msx/d_msx.cpp"},
 	{ "gg_wingwarriors", "sms/d_sms.cpp"},

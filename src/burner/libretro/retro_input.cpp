@@ -1984,6 +1984,42 @@ static INT32 GameInpSpecialOne(struct GameInp* pgi, INT32 nPlayer, char* szb, ch
 		}
 	}
 
+	// Virtua Racing
+	if ((parentrom && strcmp(parentrom, "vr") == 0) ||
+		(drvname && strcmp(drvname, "vr") == 0)
+	) {
+		if (strcmp("VR1 (Red)", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_B, description);
+		}
+		if (strcmp("VR2 (Blue)", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_A, description);
+		}
+		if (strcmp("VR3 (Yellow)", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_Y, description);
+		}
+		if (strcmp("VR4 (Green)", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_X, description);
+		}
+		if (strcmp("Shift Up", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_R, description);
+		}
+		if (strcmp("Shift Down", description) == 0) {
+			GameInpDigital2RetroInpKey(pgi, 0, RETRO_DEVICE_ID_JOYPAD_L, description);
+		}
+	}
+
+	// Sega NetMerc
+	if ((parentrom && strcmp(parentrom, "netmerc") == 0) ||
+		(drvname && strcmp(drvname, "netmerc") == 0)
+	) {
+		if (strcmp("Head Yaw", description) == 0) {
+			GameInpAnalog2RetroInpAnalog(pgi, nPlayer, RETRO_DEVICE_ID_ANALOG_X, RETRO_DEVICE_INDEX_ANALOG_RIGHT, description);
+		}
+		if (strcmp("Head Pitch", description) == 0) {
+			GameInpAnalog2RetroInpAnalog(pgi, nPlayer, RETRO_DEVICE_ID_ANALOG_Y, RETRO_DEVICE_INDEX_ANALOG_RIGHT, description);
+		}
+	}
+
 	if (bStreetFighterLayout) {
 		if (strncmp("Buttons 3x Punch", description, 16) == 0)
 			GameInpDigital2RetroInpKey(pgi, nPlayer, RETRO_DEVICE_ID_4TH_COL_TOP, description, RETRO_DEVICE_JOYPAD, GIT_MACRO_AUTO);

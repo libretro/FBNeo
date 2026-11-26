@@ -160685,6 +160685,47 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="netmerc" romof="model1io2" sourcefile="sega/d_model1.cpp">
+		<comment>Sound is incomplete (bad dump of a sample rom)</comment>
+		<description>Sega NetMerc</description>
+		<year>1993</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-18120.ic5" size="524288" crc="de489762"/>
+		<rom name="epr-18122.ic6" size="524288" crc="10581ab3"/>
+		<rom name="epr-18123.ic7" size="524288" crc="27e0d848"/>
+		<rom name="epr-18124.ic8" size="524288" crc="5a0e5618"/>
+		<rom name="epr-18125.ic9" size="524288" crc="bd47284f"/>
+		<rom name="epr-18126.ic10" size="524288" crc="43dc5ca8"/>
+		<rom name="epr-18127.ic11" size="524288" crc="d307a4ca"/>
+		<rom name="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-18121.ic7" size="524288" crc="113285b5"/>
+		<rom name="mpr-18134.ic32" size="2097152" crc="9a4109e5"/>
+		<rom name="mpr-18135.ic33" size="2097152" crc="291d17e4"/>
+		<rom name="mpr-18136.ic4" size="2097152" crc="2a9c0aaf"/>
+		<rom name="mpr-18128.ic26" size="2097152" crc="70d8028c"/>
+		<rom name="mpr-18129.ic27" size="2097152" crc="134feea3"/>
+		<rom name="mpr-18130.ic28" size="2097152" crc="c7aeae3e"/>
+		<rom name="mpr-18131.ic29" size="2097152" crc="32683b33"/>
+		<rom name="mpr-18132.ic30" size="2097152" crc="a17e3ac2"/>
+		<rom name="mpr-18133.ic31" size="2097152" crc="f56354dd"/>
+		<rom name="u1" size="16384" crc="7073a312"/>
+		<rom name="u2" size="16384" crc="c589f428"/>
+		<rom name="netmerc_nvram.bin" size="65536" crc="09866826"/>
+		<rom name="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-16891.6" merge="epr-16891.6" size="65536" crc="a33f84d1"/>
+		<rom name="epr-18021.6" merge="epr-18021.6" size="65536" crc="5551837e"/>
+		<rom name="epr-17181.6" merge="epr-17181.6" size="65536" crc="1add2b82"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="seganinj" sourcefile="sega/d_sys1.cpp">
 		<description>Sega Ninja (315-5102)</description>
 		<year>1985</year>
@@ -172645,6 +172686,88 @@
 		<rom name="cv01" size="2048" crc="8d892ef3"/>
 		<rom name="cv02" size="2048" crc="b44ddde8"/>
 		<video type="raster" orientation="vertical" width="224" height="260" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="swaj" cloneof="swa" romof="swa" sourcefile="sega/d_model1.cpp">
+		<description>Star Wars (Sega, Japan)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16468.14" size="524288" crc="681d03c0"/>
+		<rom name="epr-16469.15" size="524288" crc="6f281f7c"/>
+		<rom name="epr-16467.5" size="524288" crc="605068f5"/>
+		<rom name="315-5711.bin" merge="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-16470.7" merge="epr-16470.7" size="131072" crc="7da18cf7"/>
+		<rom name="mpr-16486.32" merge="mpr-16486.32" size="2097152" crc="7df50533"/>
+		<rom name="mpr-16487.33" merge="mpr-16487.33" size="2097152" crc="31b28dfa"/>
+		<rom name="mpr-16484.4" merge="mpr-16484.4" size="2097152" crc="9d4c334d"/>
+		<rom name="mpr-16485.5" merge="mpr-16485.5" size="2097152" crc="95aadcad"/>
+		<rom name="epr-16471.2" merge="epr-16471.2" size="131072" crc="f4ee84a4"/>
+		<rom name="mpr-16514.57" merge="mpr-16514.57" size="2097152" crc="3175b0be"/>
+		<rom name="mpr-16515.58" merge="mpr-16515.58" size="2097152" crc="3114d748"/>
+		<rom name="mpr-16476.26" merge="mpr-16476.26" size="2097152" crc="d48609ae"/>
+		<rom name="mpr-16477.27" merge="mpr-16477.27" size="2097152" crc="b979b082"/>
+		<rom name="mpr-16478.28" merge="mpr-16478.28" size="2097152" crc="80c780f7"/>
+		<rom name="mpr-16479.29" merge="mpr-16479.29" size="2097152" crc="e43183b3"/>
+		<rom name="mpr-16480.30" merge="mpr-16480.30" size="2097152" crc="3185547a"/>
+		<rom name="mpr-16481.31" merge="mpr-16481.31" size="2097152" crc="ce8d76fe"/>
+		<rom name="mpr-16472.39" merge="mpr-16472.39" size="524288" crc="5a0d7553"/>
+		<rom name="mpr-16473.40" merge="mpr-16473.40" size="524288" crc="876c5399"/>
+		<rom name="mpr-16474.41" merge="mpr-16474.41" size="524288" crc="5864a26f"/>
+		<rom name="mpr-16475.42" merge="mpr-16475.42" size="524288" crc="b9266be9"/>
+		<rom name="opr14742.bin" merge="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" merge="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" merge="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" merge="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" merge="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" merge="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" merge="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" merge="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" merge="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-14869.25" merge="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" merge="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" merge="epr-14869c.25" size="65536" crc="24b68e64"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="swa" romof="model1io" sourcefile="sega/d_model1.cpp">
+		<description>Star Wars (Sega, US)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16669.14" size="524288" crc="52e5e7e4"/>
+		<rom name="epr-16670.15" size="524288" crc="1e7ecabd"/>
+		<rom name="epr-16668.5" size="524288" crc="9e112425"/>
+		<rom name="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-16470.7" size="131072" crc="7da18cf7"/>
+		<rom name="mpr-16486.32" size="2097152" crc="7df50533"/>
+		<rom name="mpr-16487.33" size="2097152" crc="31b28dfa"/>
+		<rom name="mpr-16484.4" size="2097152" crc="9d4c334d"/>
+		<rom name="mpr-16485.5" size="2097152" crc="95aadcad"/>
+		<rom name="epr-16471.2" size="131072" crc="f4ee84a4"/>
+		<rom name="mpr-16514.57" size="2097152" crc="3175b0be"/>
+		<rom name="mpr-16515.58" size="2097152" crc="3114d748"/>
+		<rom name="mpr-16476.26" size="2097152" crc="d48609ae"/>
+		<rom name="mpr-16477.27" size="2097152" crc="b979b082"/>
+		<rom name="mpr-16478.28" size="2097152" crc="80c780f7"/>
+		<rom name="mpr-16479.29" size="2097152" crc="e43183b3"/>
+		<rom name="mpr-16480.30" size="2097152" crc="3185547a"/>
+		<rom name="mpr-16481.31" size="2097152" crc="ce8d76fe"/>
+		<rom name="mpr-16472.39" size="524288" crc="5a0d7553"/>
+		<rom name="mpr-16473.40" size="524288" crc="876c5399"/>
+		<rom name="mpr-16474.41" size="524288" crc="5864a26f"/>
+		<rom name="mpr-16475.42" size="524288" crc="b9266be9"/>
+		<rom name="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-14869.25" merge="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" merge="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" merge="epr-14869c.25" size="65536" crc="24b68e64"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="starfgmc" cloneof="mooncrst" romof="mooncrst" sourcefile="galaxian/d_galaxian.cpp">
@@ -214338,6 +214461,40 @@
 		<video type="raster" orientation="vertical" width="224" height="256" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
+	<game name="mahmajn" sourcefile="sega/d_sys24.cpp">
+		<description>Tokoro San no MahMahjan (Japan, ROM Based)</description>
+		<year>1992</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr14813.bin" size="131072" crc="ea38cf4b"/>
+		<rom name="epr14812.bin" size="131072" crc="5a3cb4a7"/>
+		<rom name="mpr14820.bin" size="524288" crc="8d2a03d3"/>
+		<rom name="mpr14819.bin" size="524288" crc="e84c4827"/>
+		<rom name="mpr14822.bin" size="524288" crc="7c3dcc51"/>
+		<rom name="mpr14821.bin" size="524288" crc="bd8dc543"/>
+		<rom name="mpr14824.bin" size="524288" crc="38311933"/>
+		<rom name="mpr14823.bin" size="524288" crc="4c8d4550"/>
+		<rom name="mpr14826.bin" size="524288" crc="c31b8805"/>
+		<rom name="mpr14825.bin" size="524288" crc="191080a1"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="mahmajn2" sourcefile="sega/d_sys24.cpp">
+		<description>Tokoro San no MahMahjan 2 (Japan, ROM Based)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr16799.bin" size="131072" crc="3a34cf75"/>
+		<rom name="epr16798.bin" size="131072" crc="662923fa"/>
+		<rom name="mpr16801.bin" size="524288" crc="74855a17"/>
+		<rom name="mpr16800.bin" size="524288" crc="6dbc1e02"/>
+		<rom name="mpr16803.bin" size="524288" crc="9b658dd6"/>
+		<rom name="mpr16802.bin" size="524288" crc="b4723225"/>
+		<rom name="mpr16805.bin" size="524288" crc="d15528df"/>
+		<rom name="mpr16804.bin" size="524288" crc="a0de08e2"/>
+		<rom name="mpr16807.bin" size="524288" crc="816188bb"/>
+		<rom name="mpr16806.bin" size="524288" crc="54b353d3"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="jackalj" cloneof="jackal" romof="jackal" sourcefile="konami/d_jackal.cpp">
 		<description>Tokushu Butai Jackal (Japan, 8-way Joystick)</description>
 		<year>1986</year>
@@ -225451,6 +225608,197 @@
 		<video type="raster" orientation="horizontal" width="512" height="240" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="vf" romof="model1io" sourcefile="sega/d_model1.cpp">
+		<description>Virtua Fighter</description>
+		<year>1993</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16082.14" size="524288" crc="b23f22ee"/>
+		<rom name="epr-16083.15" size="524288" crc="d12c77f8"/>
+		<rom name="epr-16080.4" size="131072" crc="3662e1a5"/>
+		<rom name="epr-16081.5" size="131072" crc="6dec06ce"/>
+		<rom name="mpr-16084.6" size="524288" crc="483f453b"/>
+		<rom name="mpr-16085.7" size="524288" crc="5fa01277"/>
+		<rom name="mpr-16086.8" size="524288" crc="deac47a1"/>
+		<rom name="mpr-16087.9" size="524288" crc="7a64daac"/>
+		<rom name="mpr-16088.10" size="524288" crc="fcda2d1e"/>
+		<rom name="mpr-16089.11" size="524288" crc="39befbe0"/>
+		<rom name="mpr-16090.12" size="524288" crc="90c76831"/>
+		<rom name="mpr-16091.13" size="524288" crc="53115448"/>
+		<rom name="315-5724.bin" size="8192" crc="4b4f330e"/>
+		<rom name="epr-16120.7" size="131072" crc="2bff8378"/>
+		<rom name="epr-16121.8" size="131072" crc="ff6723f9"/>
+		<rom name="mpr-16122.32" size="2097152" crc="568bc64e"/>
+		<rom name="mpr-16123.33" size="2097152" crc="15d78844"/>
+		<rom name="mpr-16124.4" size="2097152" crc="45520ba1"/>
+		<rom name="mpr-16125.5" size="2097152" crc="9b4998b6"/>
+		<rom name="mpr-16096.26" size="2097152" crc="a92b0bf3"/>
+		<rom name="mpr-16097.27" size="2097152" crc="0232955a"/>
+		<rom name="mpr-16098.28" size="2097152" crc="cf2e1b84"/>
+		<rom name="mpr-16099.29" size="2097152" crc="20e46854"/>
+		<rom name="mpr-16100.30" size="2097152" crc="e13e983d"/>
+		<rom name="mpr-16101.31" size="2097152" crc="0dbed94d"/>
+		<rom name="mpr-16102.32" size="2097152" crc="4cb41fb6"/>
+		<rom name="mpr-16103.33" size="2097152" crc="526d1c76"/>
+		<rom name="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-14869.25" merge="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" merge="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" merge="epr-14869c.25" size="65536" crc="24b68e64"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vformula" cloneof="vr" romof="vr" sourcefile="sega/d_model1.cpp">
+		<description>Virtua Formula</description>
+		<year>1993</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-15638.14" size="524288" crc="b9db21a2"/>
+		<rom name="epr-15639.15" size="524288" crc="4c3796f5"/>
+		<rom name="epr-15623.4" size="131072" crc="155fa5be"/>
+		<rom name="epr-15622.5" size="131072" crc="18007f6f"/>
+		<rom name="epr-15641.6" size="524288" crc="bf01e4d5"/>
+		<rom name="epr-15640.7" size="524288" crc="3e6d83dc"/>
+		<rom name="mpr-14884.8" merge="mpr-14884.8" size="524288" crc="6cf9c026"/>
+		<rom name="mpr-14885.9" merge="mpr-14885.9" size="524288" crc="f65c9262"/>
+		<rom name="mpr-14886.10" merge="mpr-14886.10" size="524288" crc="92868734"/>
+		<rom name="mpr-14887.11" merge="mpr-14887.11" size="524288" crc="10c7c636"/>
+		<rom name="mpr-14888.12" merge="mpr-14888.12" size="524288" crc="04bfdc5b"/>
+		<rom name="mpr-14889.13" merge="mpr-14889.13" size="524288" crc="c49f0486"/>
+		<rom name="315-5573.bin" merge="315-5573.bin" size="8192" crc="3335a19b"/>
+		<rom name="epr-14870a.7" merge="epr-14870a.7" size="131072" crc="919d9b75"/>
+		<rom name="mpr-14873.32" merge="mpr-14873.32" size="2097152" crc="b1965190"/>
+		<rom name="mpr-14876.4" merge="mpr-14876.4" size="2097152" crc="ba6b2327"/>
+		<rom name="mpr-14890.26" merge="mpr-14890.26" size="2097152" crc="dcbe006b"/>
+		<rom name="mpr-14891.27" merge="mpr-14891.27" size="2097152" crc="25832b38"/>
+		<rom name="mpr-14892.28" merge="mpr-14892.28" size="2097152" crc="5136f3ba"/>
+		<rom name="mpr-14893.29" merge="mpr-14893.29" size="2097152" crc="1c531ada"/>
+		<rom name="mpr-14894.30" merge="mpr-14894.30" size="2097152" crc="830a71bc"/>
+		<rom name="mpr-14895.31" merge="mpr-14895.31" size="2097152" crc="af027ac5"/>
+		<rom name="mpr-14896.32" merge="mpr-14896.32" size="2097152" crc="382091dc"/>
+		<rom name="mpr-14897.33" merge="mpr-14897.33" size="2097152" crc="74873195"/>
+		<rom name="mpr-14898.39" merge="mpr-14898.39" size="524288" crc="61da2bb6"/>
+		<rom name="mpr-14899.40" merge="mpr-14899.40" size="524288" crc="2cd58bee"/>
+		<rom name="mpr-14900.41" merge="mpr-14900.41" size="524288" crc="aa7c017d"/>
+		<rom name="mpr-14901.42" merge="mpr-14901.42" size="524288" crc="175b7a9a"/>
+		<rom name="epr-15624.17" size="131072" crc="9b3ba315"/>
+		<rom name="opr14742.bin" merge="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" merge="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" merge="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" merge="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" merge="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" merge="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" merge="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" merge="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" merge="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-14869.25" merge="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" merge="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" merge="epr-14869c.25" size="65536" crc="24b68e64"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vrext" cloneof="vr" romof="vr" sourcefile="sega/d_model1.cpp">
+		<comment>Hack</comment>
+		<description>Virtua Racing Extended (v0.4)</description>
+		<year>2026</year>
+		<manufacturer>hack (ppeltriaux)</manufacturer>
+		<rom name="vrext-14882.14" size="524288" crc="c54769a9"/>
+		<rom name="vrext-14883.15" size="524288" crc="6135c451"/>
+		<rom name="vrext-14878a.4" size="131072" crc="49af3025"/>
+		<rom name="vrext-14879a.5" size="131072" crc="b8d172ba"/>
+		<rom name="vrext-14880.6" size="524288" crc="1b068638"/>
+		<rom name="vrext-14881.7" size="524288" crc="4608136f"/>
+		<rom name="vrext-14884.8" size="524288" crc="efd48c7a"/>
+		<rom name="vrext-14885.9" size="524288" crc="95fa1bd1"/>
+		<rom name="vrext-14886.10" size="524288" crc="4505638c"/>
+		<rom name="vrext-14887.11" size="524288" crc="6efa188a"/>
+		<rom name="vrext-14888.12" size="524288" crc="762b3bde"/>
+		<rom name="vrext-14889.13" size="524288" crc="41c6488d"/>
+		<rom name="315-5573.bin" merge="315-5573.bin" size="8192" crc="3335a19b"/>
+		<rom name="vrext-14870a.7" size="131072" crc="8c3e6961"/>
+		<rom name="vrext-14873.32" size="2097152" crc="048048be"/>
+		<rom name="vrext-14876.4" size="2097152" crc="239c2bee"/>
+		<rom name="vrext-14890.26" size="2097152" crc="41233f25"/>
+		<rom name="vrext-14891.27" size="2097152" crc="0e8f89f6"/>
+		<rom name="vrext-14892.28" size="2097152" crc="dbf3877a"/>
+		<rom name="vrext-14893.29" size="2097152" crc="470209de"/>
+		<rom name="vrext-14894.30" size="2097152" crc="e19d175c"/>
+		<rom name="vrext-14895.31" size="2097152" crc="1be3c79b"/>
+		<rom name="vrext-14896.32" size="2097152" crc="5759850c"/>
+		<rom name="vrext-14897.33" size="2097152" crc="6ec9f9c4"/>
+		<rom name="vrext-14898.39" size="524288" crc="1c419411"/>
+		<rom name="vrext-14899.40" size="524288" crc="0b936e73"/>
+		<rom name="vrext-14900.41" size="524288" crc="2e11115c"/>
+		<rom name="vrext-14901.42" size="524288" crc="1218eac7"/>
+		<rom name="93c45.bin" merge="93c45.bin" size="128" crc="65aac303"/>
+		<rom name="opr14742.bin" merge="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" merge="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" merge="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" merge="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" merge="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" merge="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" merge="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" merge="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" merge="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-14869.25" merge="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" merge="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" merge="epr-14869c.25" size="65536" crc="24b68e64"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="vr" romof="model1io" sourcefile="sega/d_model1.cpp">
+		<description>Virtua Racing</description>
+		<year>1992</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-14882.14" size="524288" crc="547d75ad"/>
+		<rom name="epr-14883.15" size="524288" crc="6bfad8b1"/>
+		<rom name="epr-14878a.4" size="131072" crc="6d69e695"/>
+		<rom name="epr-14879a.5" size="131072" crc="d45af9dd"/>
+		<rom name="mpr-14880.6" size="524288" crc="adc7c208"/>
+		<rom name="mpr-14881.7" size="524288" crc="e5ab89df"/>
+		<rom name="mpr-14884.8" size="524288" crc="6cf9c026"/>
+		<rom name="mpr-14885.9" size="524288" crc="f65c9262"/>
+		<rom name="mpr-14886.10" size="524288" crc="92868734"/>
+		<rom name="mpr-14887.11" size="524288" crc="10c7c636"/>
+		<rom name="mpr-14888.12" size="524288" crc="04bfdc5b"/>
+		<rom name="mpr-14889.13" size="524288" crc="c49f0486"/>
+		<rom name="315-5573.bin" size="8192" crc="3335a19b"/>
+		<rom name="epr-14870a.7" size="131072" crc="919d9b75"/>
+		<rom name="mpr-14873.32" size="2097152" crc="b1965190"/>
+		<rom name="mpr-14876.4" size="2097152" crc="ba6b2327"/>
+		<rom name="mpr-14890.26" size="2097152" crc="dcbe006b"/>
+		<rom name="mpr-14891.27" size="2097152" crc="25832b38"/>
+		<rom name="mpr-14892.28" size="2097152" crc="5136f3ba"/>
+		<rom name="mpr-14893.29" size="2097152" crc="1c531ada"/>
+		<rom name="mpr-14894.30" size="2097152" crc="830a71bc"/>
+		<rom name="mpr-14895.31" size="2097152" crc="af027ac5"/>
+		<rom name="mpr-14896.32" size="2097152" crc="382091dc"/>
+		<rom name="mpr-14897.33" size="2097152" crc="74873195"/>
+		<rom name="mpr-14898.39" size="524288" crc="61da2bb6"/>
+		<rom name="mpr-14899.40" size="524288" crc="2cd58bee"/>
+		<rom name="mpr-14900.41" size="524288" crc="aa7c017d"/>
+		<rom name="mpr-14901.42" size="524288" crc="175b7a9a"/>
+		<rom name="93c45.bin" size="128" crc="65aac303"/>
+		<rom name="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-14869.25" merge="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" merge="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" merge="epr-14869c.25" size="65536" crc="24b68e64"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="volfiedjo" cloneof="volfied" romof="volfied" sourcefile="taito/d_taitomisc.cpp">
 		<description>Volfied (Japan)</description>
 		<year>1989</year>
@@ -228793,6 +229141,200 @@
 		<rom name="as1004m01.u41" size="8388608" crc="500c0909"/>
 		<rom name="as1005m01.u18" size="4194304" crc="e4b137b8"/>
 		<video type="raster" orientation="horizontal" width="320" height="240" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wingwarj" cloneof="wingwar" romof="wingwar" sourcefile="sega/d_model1.cpp">
+		<description>Wing War (Japan)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16729.14" merge="epr-16729.14" size="524288" crc="7edec2cc"/>
+		<rom name="epr-16730.15" merge="epr-16730.15" size="524288" crc="bab24dee"/>
+		<rom name="epr-16728.4" size="131072" crc="194d58ff"/>
+		<rom name="epr-16727.5" size="131072" crc="430380eb"/>
+		<rom name="mpr-16738.6" merge="mpr-16738.6" size="524288" crc="51518ffa"/>
+		<rom name="mpr-16737.7" merge="mpr-16737.7" size="524288" crc="37b1379c"/>
+		<rom name="mpr-16736.8" merge="mpr-16736.8" size="524288" crc="10b6a025"/>
+		<rom name="mpr-16735.9" merge="mpr-16735.9" size="524288" crc="c82fd198"/>
+		<rom name="mpr-16734.10" merge="mpr-16734.10" size="524288" crc="f76371c1"/>
+		<rom name="mpr-16733.11" merge="mpr-16733.11" size="524288" crc="e105847b"/>
+		<rom name="315-5711.bin" merge="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-16751.7" size="131072" crc="23ba5ebc"/>
+		<rom name="epr-16752.8" merge="epr-16752.8" size="131072" crc="6541c48f"/>
+		<rom name="mpr-16753.32" merge="mpr-16753.32" size="2097152" crc="324a8333"/>
+		<rom name="mpr-16754.33" merge="mpr-16754.33" size="2097152" crc="144f3cf5"/>
+		<rom name="mpr-16755.4" merge="mpr-16755.4" size="2097152" crc="4baaf878"/>
+		<rom name="mpr-16756.5" merge="mpr-16756.5" size="2097152" crc="d9c40672"/>
+		<rom name="mpr-16743.26" merge="mpr-16743.26" size="2097152" crc="a710d33c"/>
+		<rom name="mpr-16744.27" merge="mpr-16744.27" size="2097152" crc="de796e1f"/>
+		<rom name="mpr-16745.28" merge="mpr-16745.28" size="2097152" crc="905b689c"/>
+		<rom name="mpr-16746.29" merge="mpr-16746.29" size="2097152" crc="163b312e"/>
+		<rom name="mpr-16747.30" merge="mpr-16747.30" size="2097152" crc="7353bb12"/>
+		<rom name="mpr-16748.31" merge="mpr-16748.31" size="2097152" crc="8ce98d3a"/>
+		<rom name="mpr-16749.32" merge="mpr-16749.32" size="2097152" crc="0e36dc1a"/>
+		<rom name="mpr-16750.33" merge="mpr-16750.33" size="2097152" crc="e4f0b98d"/>
+		<rom name="mpr-16741.39" merge="mpr-16741.39" size="524288" crc="84b2ffd8"/>
+		<rom name="mpr-16742.40" merge="mpr-16742.40" size="524288" crc="e9cc12bb"/>
+		<rom name="mpr-16739.41" merge="mpr-16739.41" size="524288" crc="6c73e98f"/>
+		<rom name="mpr-16740.42" merge="mpr-16740.42" size="524288" crc="44b31007"/>
+		<rom name="opr14742.bin" merge="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" merge="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" merge="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" merge="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" merge="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" merge="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" merge="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" merge="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" merge="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-16891.6" merge="epr-16891.6" size="65536" crc="a33f84d1"/>
+		<rom name="epr-18021.6" merge="epr-18021.6" size="65536" crc="5551837e"/>
+		<rom name="epr-17181.6" merge="epr-17181.6" size="65536" crc="1add2b82"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wingwaru" cloneof="wingwar" romof="wingwar" sourcefile="sega/d_model1.cpp">
+		<description>Wing War (US)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16729.14" merge="epr-16729.14" size="524288" crc="7edec2cc"/>
+		<rom name="epr-16730.15" merge="epr-16730.15" size="524288" crc="bab24dee"/>
+		<rom name="epr-16951.4" size="131072" crc="fbe12d15"/>
+		<rom name="epr-16950.5" size="131072" crc="841e2195"/>
+		<rom name="mpr-16738.6" merge="mpr-16738.6" size="524288" crc="51518ffa"/>
+		<rom name="mpr-16737.7" merge="mpr-16737.7" size="524288" crc="37b1379c"/>
+		<rom name="mpr-16736.8" merge="mpr-16736.8" size="524288" crc="10b6a025"/>
+		<rom name="mpr-16735.9" merge="mpr-16735.9" size="524288" crc="c82fd198"/>
+		<rom name="mpr-16734.10" merge="mpr-16734.10" size="524288" crc="f76371c1"/>
+		<rom name="mpr-16733.11" merge="mpr-16733.11" size="524288" crc="e105847b"/>
+		<rom name="315-5711.bin" merge="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-16751.7" size="131072" crc="23ba5ebc"/>
+		<rom name="epr-16752.8" merge="epr-16752.8" size="131072" crc="6541c48f"/>
+		<rom name="mpr-16753.32" merge="mpr-16753.32" size="2097152" crc="324a8333"/>
+		<rom name="mpr-16754.33" merge="mpr-16754.33" size="2097152" crc="144f3cf5"/>
+		<rom name="mpr-16755.4" merge="mpr-16755.4" size="2097152" crc="4baaf878"/>
+		<rom name="mpr-16756.5" merge="mpr-16756.5" size="2097152" crc="d9c40672"/>
+		<rom name="mpr-16743.26" merge="mpr-16743.26" size="2097152" crc="a710d33c"/>
+		<rom name="mpr-16744.27" merge="mpr-16744.27" size="2097152" crc="de796e1f"/>
+		<rom name="mpr-16745.28" merge="mpr-16745.28" size="2097152" crc="905b689c"/>
+		<rom name="mpr-16746.29" merge="mpr-16746.29" size="2097152" crc="163b312e"/>
+		<rom name="mpr-16747.30" merge="mpr-16747.30" size="2097152" crc="7353bb12"/>
+		<rom name="mpr-16748.31" merge="mpr-16748.31" size="2097152" crc="8ce98d3a"/>
+		<rom name="mpr-16749.32" merge="mpr-16749.32" size="2097152" crc="0e36dc1a"/>
+		<rom name="mpr-16750.33" merge="mpr-16750.33" size="2097152" crc="e4f0b98d"/>
+		<rom name="mpr-16741.39" merge="mpr-16741.39" size="524288" crc="84b2ffd8"/>
+		<rom name="mpr-16742.40" merge="mpr-16742.40" size="524288" crc="e9cc12bb"/>
+		<rom name="mpr-16739.41" merge="mpr-16739.41" size="524288" crc="6c73e98f"/>
+		<rom name="mpr-16740.42" merge="mpr-16740.42" size="524288" crc="44b31007"/>
+		<rom name="opr14742.bin" merge="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" merge="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" merge="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" merge="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" merge="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" merge="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" merge="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" merge="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" merge="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-16891.6" merge="epr-16891.6" size="65536" crc="a33f84d1"/>
+		<rom name="epr-18021.6" merge="epr-18021.6" size="65536" crc="5551837e"/>
+		<rom name="epr-17181.6" merge="epr-17181.6" size="65536" crc="1add2b82"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wingwar" romof="model1io2" sourcefile="sega/d_model1.cpp">
+		<description>Wing War (World)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16729.14" size="524288" crc="7edec2cc"/>
+		<rom name="epr-16730.15" size="524288" crc="bab24dee"/>
+		<rom name="epr-16953.4" size="131072" crc="c821a920"/>
+		<rom name="epr-16952.5" size="131072" crc="03a3ecc5"/>
+		<rom name="mpr-16738.6" size="524288" crc="51518ffa"/>
+		<rom name="mpr-16737.7" size="524288" crc="37b1379c"/>
+		<rom name="mpr-16736.8" size="524288" crc="10b6a025"/>
+		<rom name="mpr-16735.9" size="524288" crc="c82fd198"/>
+		<rom name="mpr-16734.10" size="524288" crc="f76371c1"/>
+		<rom name="mpr-16733.11" size="524288" crc="e105847b"/>
+		<rom name="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-17126.7" size="131072" crc="50178e40"/>
+		<rom name="epr-16752.8" size="131072" crc="6541c48f"/>
+		<rom name="mpr-16753.32" size="2097152" crc="324a8333"/>
+		<rom name="mpr-16754.33" size="2097152" crc="144f3cf5"/>
+		<rom name="mpr-16755.4" size="2097152" crc="4baaf878"/>
+		<rom name="mpr-16756.5" size="2097152" crc="d9c40672"/>
+		<rom name="mpr-16743.26" size="2097152" crc="a710d33c"/>
+		<rom name="mpr-16744.27" size="2097152" crc="de796e1f"/>
+		<rom name="mpr-16745.28" size="2097152" crc="905b689c"/>
+		<rom name="mpr-16746.29" size="2097152" crc="163b312e"/>
+		<rom name="mpr-16747.30" size="2097152" crc="7353bb12"/>
+		<rom name="mpr-16748.31" size="2097152" crc="8ce98d3a"/>
+		<rom name="mpr-16749.32" size="2097152" crc="0e36dc1a"/>
+		<rom name="mpr-16750.33" size="2097152" crc="e4f0b98d"/>
+		<rom name="mpr-16741.39" size="524288" crc="84b2ffd8"/>
+		<rom name="mpr-16742.40" size="524288" crc="e9cc12bb"/>
+		<rom name="mpr-16739.41" size="524288" crc="6c73e98f"/>
+		<rom name="mpr-16740.42" size="524288" crc="44b31007"/>
+		<rom name="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-16891.6" merge="epr-16891.6" size="65536" crc="a33f84d1"/>
+		<rom name="epr-18021.6" merge="epr-18021.6" size="65536" crc="5551837e"/>
+		<rom name="epr-17181.6" merge="epr-17181.6" size="65536" crc="1add2b82"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="wingwar360" cloneof="wingwar" romof="wingwar" sourcefile="sega/d_model1.cpp">
+		<description>Wing War R360 (US)</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16729.14" merge="epr-16729.14" size="524288" crc="7edec2cc"/>
+		<rom name="epr-16730.15" merge="epr-16730.15" size="524288" crc="bab24dee"/>
+		<rom name="epr-17052.4" size="131072" crc="0f4743e7"/>
+		<rom name="epr-17053.5" size="131072" crc="83af2415"/>
+		<rom name="epr-17056.6" size="524288" crc="5216de4d"/>
+		<rom name="epr-17057.7" size="524288" crc="b21aa2db"/>
+		<rom name="mpr-16736.8" merge="mpr-16736.8" size="524288" crc="10b6a025"/>
+		<rom name="mpr-16735.9" merge="mpr-16735.9" size="524288" crc="c82fd198"/>
+		<rom name="mpr-16734.10" merge="mpr-16734.10" size="524288" crc="f76371c1"/>
+		<rom name="mpr-16733.11" merge="mpr-16733.11" size="524288" crc="e105847b"/>
+		<rom name="315-5711.bin" merge="315-5711.bin" size="8192" crc="6a21f304"/>
+		<rom name="epr-17126.7" merge="epr-17126.7" size="131072" crc="50178e40"/>
+		<rom name="epr-16752.8" merge="epr-16752.8" size="131072" crc="6541c48f"/>
+		<rom name="mpr-16753.32" merge="mpr-16753.32" size="2097152" crc="324a8333"/>
+		<rom name="mpr-16754.33" merge="mpr-16754.33" size="2097152" crc="144f3cf5"/>
+		<rom name="mpr-16755.4" merge="mpr-16755.4" size="2097152" crc="4baaf878"/>
+		<rom name="mpr-16756.5" merge="mpr-16756.5" size="2097152" crc="d9c40672"/>
+		<rom name="mpr-16743.26" merge="mpr-16743.26" size="2097152" crc="a710d33c"/>
+		<rom name="mpr-16744.27" merge="mpr-16744.27" size="2097152" crc="de796e1f"/>
+		<rom name="mpr-16745.28" merge="mpr-16745.28" size="2097152" crc="905b689c"/>
+		<rom name="mpr-16746.29" merge="mpr-16746.29" size="2097152" crc="163b312e"/>
+		<rom name="mpr-16747.30" merge="mpr-16747.30" size="2097152" crc="7353bb12"/>
+		<rom name="mpr-16748.31" merge="mpr-16748.31" size="2097152" crc="8ce98d3a"/>
+		<rom name="mpr-16749.32" merge="mpr-16749.32" size="2097152" crc="0e36dc1a"/>
+		<rom name="mpr-16750.33" merge="mpr-16750.33" size="2097152" crc="e4f0b98d"/>
+		<rom name="mpr-16741.39" merge="mpr-16741.39" size="524288" crc="84b2ffd8"/>
+		<rom name="mpr-16742.40" merge="mpr-16742.40" size="524288" crc="e9cc12bb"/>
+		<rom name="mpr-16739.41" merge="mpr-16739.41" size="524288" crc="6c73e98f"/>
+		<rom name="mpr-16740.42" merge="mpr-16740.42" size="524288" crc="44b31007"/>
+		<rom name="epr-18851.ic22" size="131072" crc="85f75bd7"/>
+		<rom name="epr-18850.ic67" size="32768" crc="45a3e9fc"/>
+		<rom name="opr14742.bin" merge="opr14742.bin" size="131072" crc="446a1085"/>
+		<rom name="opr14743.bin" merge="opr14743.bin" size="131072" crc="e8953554"/>
+		<rom name="opr-14744.58" merge="opr-14744.58" size="131072" crc="730ea9e0"/>
+		<rom name="opr-14745.59" merge="opr-14745.59" size="131072" crc="4c934d96"/>
+		<rom name="opr-14746.62" merge="opr-14746.62" size="131072" crc="2a266cbd"/>
+		<rom name="opr-14747.63" merge="opr-14747.63" size="131072" crc="a4ad5e19"/>
+		<rom name="opr14748.bin" merge="opr14748.bin" size="131072" crc="4a532cb8"/>
+		<rom name="315-5571.bin" merge="315-5571.bin" size="8192" crc="1233db2a"/>
+		<rom name="315-5572.bin" merge="315-5572.bin" size="8192" crc="66785906"/>
+		<rom name="epr-16891.6" merge="epr-16891.6" size="65536" crc="a33f84d1"/>
+		<rom name="epr-18021.6" merge="epr-18021.6" size="65536" crc="5551837e"/>
+		<rom name="epr-17181.6" merge="epr-17181.6" size="65536" crc="1add2b82"/>
+		<video type="raster" orientation="horizontal" width="496" height="384" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
 	<game name="wink" sourcefile="pre90s/d_wink.cpp">
@@ -236976,31 +237518,6 @@
 		<video type="raster" orientation="horizontal" width="320" height="256" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
-	<game name="zeroteamsr" cloneof="zeroteam" romof="zeroteam" sourcefile="pst90s/d_raiden2.cpp">
-		<comment>No game code! Black screen normal!</comment>
-		<description>Zero Team Suicide Revival Kit</description>
-		<year>1993</year>
-		<manufacturer>Seibu Kaihatsu</manufacturer>
-		<rom name="zteam1.u24" size="262144" crc="c531e009"/>
-		<rom name="zteam3.u23" size="262144" crc="1f988808"/>
-		<rom name="zteam2.u25" size="262144" crc="b7234b93"/>
-		<rom name="zteam4.u26" size="262144" crc="c2d26708"/>
-		<rom name="copx-d2.u0313.6n" merge="copx-d2.u0313.6n" size="262144" crc="a6732ff9"/>
-		<rom name="5.5c" merge="seibu__5.u1110.5b" size="65536" crc="7ec1fbc3"/>
-		<rom name="7.u072.5s" merge="seibu__7.u072.5s" size="65536" crc="9f6aa0f0"/>
-		<rom name="8.u077.5r" merge="seibu__8.u077.5r" size="65536" crc="68f7dddc"/>
-		<rom name="musha_back-1.u075.4s" merge="musha_back-1.u075.4s" size="1048576" crc="8b7f9219"/>
-		<rom name="musha_back-2.u0714.2s" merge="musha_back-2.u0714.2s" size="524288" crc="ce61c952"/>
-		<rom name="musha_obj-1.u0811.6f" merge="musha_obj-1.u0811.6f" size="2097152" crc="45be8029"/>
-		<rom name="musha_obj-2.u082.5f" merge="musha_obj-2.u082.5f" size="2097152" crc="cb61c19d"/>
-		<rom name="6.u105.4a" merge="seibu__6.u105.4a" size="262144" crc="48be32b1"/>
-		<rom name="v3c001.pal.u0310" size="648" status="nodump"/>
-		<rom name="v3c002.tibpal16l8-25.u0322" size="648" status="nodump"/>
-		<rom name="v3c003.ami18cv8p-15.u0619" size="648" status="nodump"/>
-		<rom name="v3c004x.ami18cv8pc-25.u0310" size="648" status="nodump"/>
-		<video type="raster" orientation="horizontal" width="320" height="256" aspectx="4" aspecty="3"/>
-		<driver status="good"/>
-	</game>
 	<game name="zteam1v4" cloneof="zeroteam" romof="zeroteam" sourcefile="pst90s/d_raiden2.cpp">
 		<comment>Hack, Unemulated protection</comment>
 		<description>Zero Team USA (1v4, Hack)</description>
@@ -238553,6 +239070,24 @@
 		<rom name="ddp3_bios.u37" size="524288" crc="b3cc5c8f"/>
 		<rom name="bios.u42" size="131072" crc="517cf7a2"/>
 		<rom name="pal.u7" size="279" crc="bfa23d78"/>
+	</game>
+	<game isbios="yes" name="model1io2" sourcefile="sega/d_model1.cpp">
+		<comment>BIOS only</comment>
+		<description>Sega Model 1 I/O Board (Advanced) BIOS</description>
+		<year>1994</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-16891.6" size="65536" crc="a33f84d1"/>
+		<rom name="epr-18021.6" size="65536" crc="5551837e"/>
+		<rom name="epr-17181.6" size="65536" crc="1add2b82"/>
+	</game>
+	<game isbios="yes" name="model1io" sourcefile="sega/d_model1.cpp">
+		<comment>BIOS only</comment>
+		<description>Sega Model 1 I/O Board BIOS</description>
+		<year>1992</year>
+		<manufacturer>Sega</manufacturer>
+		<rom name="epr-14869.25" size="65536" crc="6187cd7a"/>
+		<rom name="epr-14869b.25" size="65536" crc="2d093304"/>
+		<rom name="epr-14869c.25" size="65536" crc="24b68e64"/>
 	</game>
 	<game isbios="yes" name="skns" sourcefile="pst90s/d_suprnova.cpp">
 		<comment>BIOS only</comment>
