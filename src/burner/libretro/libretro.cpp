@@ -515,8 +515,13 @@ void InpDIPSWResetDIPs (void)
 		if (bdi.nFlags == 0xFF)
 		{
 			pgi = GameInp + bdi.nInput + nDIPOffset;
-			if (pgi)
+			if (pgi) {
 				pgi->Input.Constant.nConst = (pgi->Input.Constant.nConst & ~bdi.nMask) | (bdi.nSetting & bdi.nMask);
+				// Drivers can read their dips during BurnDrvInit, before the first InputMake
+				pgi->Input.nVal = pgi->Input.Constant.nConst;
+				if (pgi->Input.pVal)
+					*(pgi->Input.pVal) = pgi->Input.nVal;
+			}
 		}
 		i++;
 	}
